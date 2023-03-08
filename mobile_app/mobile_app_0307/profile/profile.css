@@ -1,0 +1,318 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+li{list-style: none;}
+a{text-decoration: none; color: black;}
+
+.header{
+    height: 100px;
+    background-color: #FFF1DC;
+    position: relative;
+    border: 1px solid #E8D5C4;
+   
+}
+.header h1{
+    color: #967E76;
+    text-align: center;
+    line-height: 100px;
+    
+}
+
+/********lnb_menu********/
+#lnb_chk{display: none;}
+#lnb_chk:checked ~ .lnb_ham_menu{height: 120px;}
+/* #lnb_chk ~ .lnb_ham_menu{display: none;} */
+
+#lnb_chk:checked ~ .label .open_lnb{display: none;}
+#lnb_chk:checked ~ .label .close_lnb{display: block;}
+
+#lnb_chk ~ .label .open_lnb{display: block;}
+#lnb_chk ~ .label .close_lnb{display: none;}
+
+
+
+.label {
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 20px; top: 30px;
+    line-height: 40px;
+}
+.label label {
+    color: #967E76;
+    font-size: 30px;
+}
+
+.lnb_ham_menu li{
+    background-color: #FFF1DC;
+    width: 200px;
+    height: 30px;
+    border: 1px solid #E8D5C4;
+    text-align: center;
+    line-height: 30px;
+}
+.lnb_ham_menu li a{
+    color: #967E76;
+    font-size: 13px;
+    font-weight: 550;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.lnb_ham_menu{
+    height: 0px;
+    overflow: hidden;
+    position: absolute;
+    top: 100px; left: 0;
+    transition: 0.3s;
+    z-index: 100;
+}
+
+
+
+
+.lnb_web_outer{display: none;} /*저해상도 웹에서 display block*/
+
+.lnb_web_menu{
+    overflow: hidden;
+}
+.lnb_web_menu li{
+    width: 25%;
+    float: left;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background-color: #FFFBF5;
+    border: 1px solid #E8D5C4;
+    
+}
+
+.lnb_web_menu li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #967E76;
+    font-size: 13px;
+    font-weight: 550;
+    
+}
+
+/************wrap************/
+.visual_main{
+    width: 100%;
+    height: 350px;
+    border: 1px solid #E8D5C4;
+
+}
+.visual_main img{
+    width: 100%;
+    height: 100%;
+}
+
+
+/*********notice box**************/
+.notice_box{overflow: hidden;}
+.notice_box .notice{
+    background-color: #FFFBF5;
+    border: 1px solid #E8D5C4;
+    box-sizing: border-box;
+    height: 350px;
+    padding-left: 10px;
+    padding-top: 20px;
+    width: 50%;
+    float: left;
+    
+}
+.notice p{
+    color: #967E76;
+    margin-bottom: 10px;
+    font-size: 12px;
+   
+    
+}
+.notice p span{
+    font-weight: 550;
+    font-size: 15px;
+}
+
+.notice .fan_cafe{
+    width: 130px;
+    height: 100px;
+    border: 1px solid #E8D5C4;
+    text-align: center;
+    border-radius: 10px;
+    margin: 70px auto;
+}
+.notice .fan_cafe a{
+    width: 100px;
+    height: 30px;
+    display: block;
+    border: 2px solid #E8D5C4;
+    margin: 10px auto;
+    border-radius: 30px;
+    font-size: 13px;
+    color: #967E76;
+    font-weight: bold;
+    line-height: 30px;
+}
+.notice .fan_cafe i{
+    font-size: 30px;
+    color: #967E76;
+    animation: guitarani 2s  backwards infinite;
+    padding-bottom: 20px;
+}
+@keyframes guitarani{
+    0%{transform: translateY(0px);}
+    
+    50%{transform: translateY(-8px);}
+   
+    90%{transform: translateY(0px);}
+
+
+}
+
+
+
+
+
+
+/*******footer*******/
+
+.footer{
+    height: 70px;
+    background-color: #FFF1DC;
+    color: #967E76;
+    text-align: center;
+    line-height: 70px;
+    border: 1px solid #E8D5C4;
+}
+.footer>div a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    font-size: 30px;
+    color: #967E76;
+}
+
+.footer .instagram{
+    width: 33.3333%;
+    float: left;
+}
+.footer .youtube{
+    width: 33.3333%;
+    float: left;
+}
+.footer .facebook{
+    width: 33.3333%;
+    float: left;
+}
+
+/********home***********/
+.home_btn{
+    width: 50px;
+    height: 50px;
+    border: 2px solid #E8D5C4;
+    position: absolute;
+    bottom: 20px;right: 20px;
+    border-radius: 50px;
+    
+}
+.wrap{
+    position: relative;
+}
+
+.home_btn a{
+    color: #967E76;
+    font-size: 35px;
+    text-align: center;
+    padding-left: 3px;
+   
+}
+
+
+/**********media query**********/
+@media all and (min-width:601px) {
+
+    .visual_main{
+        height: 450px;
+    }
+    .notice_box{
+     
+    }
+    .notice_box .notice{
+        width: 100%;
+        height: 400px;
+       
+    }
+    .notice p{
+        font-size: 15px;
+        text-align: center;
+        margin-top: 10px;
+        line-height: 30px;
+        
+    }
+   
+    .notice_box .concert_img{
+        float: none;
+        margin: 10px auto;
+        
+    }
+    .notice_box .concert_desc{
+        float: none;
+        
+    }
+    .notice_box .concert_desc a{
+        font-size: 13px;
+        text-align: center;
+    }
+    .notice .fan_cafe{
+        width: 400px;
+        height: 250px;
+    }
+    .notice .fan_cafe a{
+        width: 200px;
+        height: 80px;
+        margin: 30px auto;
+        line-height: 80px;
+    }
+}
+
+
+@media all and (min-width:769px) {
+
+    .visual_main{
+        height: 500px;
+    }
+    .notice_box .notice{
+        width: 100%;
+        height: 400px;
+    }
+
+    .header .label, .header .lnb_ham_menu{display: none;}
+
+    .lnb_web_outer{display: block;}
+    
+
+}
+
+@media all and (min-width:1025px){
+    .header, .wrap, .footer, .lnb_web_menu{
+        width: 1024px;
+        margin: 0 auto;
+
+    }
+    .visual_main{
+        height: 550px;
+    }
+    .footer_outer{
+        width: 100%;
+        background-color: #FFF1DC;
+    }
+    .header_ex{
+        width: 100%;
+        background-color: #FFF1DC;
+    }
+    .lnb_web_outer{
+        width: 100%;
+        background-color: #FFFBF5;
+    }
+}

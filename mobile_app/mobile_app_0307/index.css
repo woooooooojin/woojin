@@ -1,0 +1,26 @@
+*{margin: 0; padding: 0;}
+
+
+body{
+    
+    background: url(./img/launcher.jpg) no-repeat;
+    background-size: cover;
+    
+}
+    
+.launcher_icon{
+    width: 50px;
+    height: 50px;
+    border: 1px solid white;
+    position: absolute;
+    top: 41%; left: 50%;
+    transform: translate(-50%);
+    border-radius: 10px;
+    background-color: #F6E1C3;
+    text-align: center;
+}
+.launcher_icon i{
+    font-size: 30px;
+    line-height: 50px;
+    
+}

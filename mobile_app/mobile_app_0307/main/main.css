@@ -1,0 +1,242 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+li{list-style: none;}
+a{text-decoration: none; color: black;}
+
+.header{
+    height: 100px;
+    background-color: #FFF1DC;
+    position: relative;
+    border: 1px solid #E8D5C4;
+   
+}
+.header h1{
+    color: #967E76;
+    text-align: center;
+    line-height: 100px;
+    
+}
+
+/********lnb_menu********/
+#lnb_chk{display: none;}
+#lnb_chk:checked ~ .lnb_ham_menu{height: 120px;}
+/* #lnb_chk ~ .lnb_ham_menu{display: none;} */
+
+#lnb_chk:checked ~ .label .open_lnb{display: none;}
+#lnb_chk:checked ~ .label .close_lnb{display: block;}
+
+#lnb_chk ~ .label .open_lnb{display: block;}
+#lnb_chk ~ .label .close_lnb{display: none;}
+
+
+
+.label {
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 20px; top: 30px;
+    line-height: 40px;
+}
+.label label {
+    color: #967E76;
+    font-size: 30px;
+}
+
+.lnb_ham_menu li{
+    background-color: #FFF1DC;
+    width: 200px;
+    height: 30px;
+    border: 1px solid #E8D5C4;
+    text-align: center;
+    line-height: 30px;
+}
+.lnb_ham_menu li a{
+    color: #967E76;
+    font-size: 13px;
+    font-weight: 550;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.lnb_ham_menu{
+    height: 0px;
+    overflow: hidden;
+    position: absolute;
+    top: 100px; left: 0;
+    transition: 0.3s;
+}
+
+
+
+
+.lnb_web_outer{display: none;} /*저해상도 웹에서 display block*/
+
+.lnb_web_menu{
+    overflow: hidden;
+}
+.lnb_web_menu li{
+    width: 25%;
+    float: left;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background-color: #FFFBF5;
+    border: 1px solid #E8D5C4;
+    
+}
+
+.lnb_web_menu li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #967E76;
+    font-size: 13px;
+    font-weight: 550;
+    
+}
+
+/************wrap************/
+.visual_main{
+    width: 100%;
+    height: 200px;
+    border: 1px solid #E8D5C4;
+
+}
+.visual_main img{
+    width: 100%;
+    height: 100%;
+}
+
+
+/*********notice box**************/
+.notice_box{}
+.notice_box .notice{
+    background-color: #FFFBF5;
+    border: 1px solid #E8D5C4;
+    box-sizing: border-box;
+    height: 100px;
+    line-height: 100px;
+}
+.notice_box .concert{
+    overflow: hidden;
+}
+.notice_box .concert_img{
+    width: 100px;
+    height: 100px;
+    float: left;
+    border: 1px solid #E8D5C4;
+
+}
+.notice_box .concert_desc{
+    float: left;
+    padding-left: 15px;
+    text-align: center;
+    
+}
+.notice_box .concert_desc a{
+    width: 100%;
+    height: 100%;
+    color: #967E76;
+    font-weight: 550;
+    display: block;
+    font-size: 15px;
+
+}
+.notice_box .concert_img img{
+    width: 100%;
+    height: 100%;
+
+}
+
+
+/*******footer*******/
+
+.footer{
+    height: 70px;
+    background-color: #FFF1DC;
+    color: #967E76;
+    text-align: center;
+    line-height: 70px;
+    border: 1px solid #E8D5C4;
+}
+.footer>div a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    font-size: 30px;
+    color: #967E76;
+}
+
+.footer .instagram{
+    width: 33.3333%;
+    float: left;
+}
+.footer .youtube{
+    width: 33.3333%;
+    float: left;
+}
+.footer .facebook{
+    width: 33.3333%;
+    float: left;
+}
+
+
+
+
+/**********media query**********/
+@media all and (min-width:601px) {
+
+    .visual_main{
+        height: 300px;
+    }
+    .notice_box{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .notice_box .notice{
+        width: 50%;
+        height: 200px;
+    }
+    
+   
+    .notice_box .concert_img{
+        float: none;
+        margin: 10px auto;
+        
+    }
+    .notice_box .concert_desc{
+        float: none;
+        
+    }
+    .notice_box .concert_desc a{
+        font-size: 13px;
+        text-align: center;
+    }
+}
+
+
+@media all and (min-width:769px) {
+
+    .visual_main{
+        height: 400px;
+    }
+    .notice_box .notice{
+        width: 25%;
+        height: 200px;
+    }
+
+    .header .label, .header .lnb_ham_menu{display: none;}
+
+    .lnb_web_outer{display: block;}
+    
+
+}
+
+@media all and (min-width:1025px){
+    .header, .wrap, .footer, .lnb_web_menu{
+        width: 1024px;
+        margin: 0 auto;
+
+    }
+    
+}
