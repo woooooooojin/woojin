@@ -1,0 +1,15 @@
+*{margin: 0; padding: 0;}
+
+.wrap{font-size: 14px;}
+.title{
+    font-size: 3em; 
+}
+.txt01{
+    font-size: 2em; /*32px*/
+}
+.txt02{
+    font-size: 1em; /*16px*/
+}
+.txt03{
+    font-size: 16px;
+}
