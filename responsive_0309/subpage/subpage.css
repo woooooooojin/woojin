@@ -5,10 +5,10 @@ a, a:visited{
     color: black;
 }
 
-.container{
+/* .container{
     width: 1070px;
     margin: 0 auto;
-}
+} */
 
 header{
     width: 100%;
@@ -51,7 +51,7 @@ header{
     text-align: center;
     line-height: 70px;
     position: absolute;
-    right: 20px; top: -51px;
+    right: 20px; top: -60px;
 }
 .label label{
     font-size: 20px;
@@ -174,6 +174,7 @@ footer div{
         width: 100%;
         order: 1;
         height: 300px;
+        margin-top: 20px;
     }
     .main{
         width: 100%;
@@ -186,7 +187,11 @@ footer div{
     
 }
 
-@media all and (min-width:1051px){
+@media all and (min-width:1071px){
+    .container{
+        width: 1070px;
+        margin: 0 auto;
+    }
     .header_line{
         width: 100%;
     }
