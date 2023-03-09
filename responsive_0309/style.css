@@ -66,7 +66,7 @@ header{
 
 /************header_line*************/
 .header_line{
-    width: 1070px;
+    width: 100%;
     margin: 0 auto;
     height: 3px;
     background-color: #ccc;
