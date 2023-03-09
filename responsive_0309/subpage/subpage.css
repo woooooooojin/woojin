@@ -19,14 +19,14 @@ header{
     align-items: center;
 }
 .header_ex .logo{
-    width: 30%
+    width: 50%
 }
 .header_ex .logo img{
-    width: 100%;
+    width: 50%;
     
 }
 .header_ex .header_menu{
-    width: 70%;
+    width: 50%;
 }
 .header_ex .header_menu ul{
     display: flex;
@@ -113,8 +113,13 @@ footer div{
         width: 100%;
         
     }
+    .header_ex .logo img{
+    width: 100%;
+    }
     .header_menu{display: none;}
     .mobile_ham{display: block;}
+
+    
     .data_wrap{
         flex-direction: column;
     }
