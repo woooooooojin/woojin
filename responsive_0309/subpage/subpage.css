@@ -72,23 +72,68 @@ header{
     background-color: #ccc;
 }
 
-/***********visual main************/
-main{
-    width: 100%;
+/***********aside main************/
+.cont_wrap{
+    margin-top: 50px;
+    display: flex;
+}
+.aside{
+    width: calc(100% - 70% - 10px);
+    margin-right: 10px;
+    height: 700px;
+    
+}
+.aside .aside_box{
+    width: 250px;
+    border: 3px solid #ccc;
+    margin: 0 auto;
+}
+.aside .aside_box .as_box{
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}
+.aside .aside_box .as_box:last-child{
+    border-bottom: none;
+}
+.main{
+    width: calc(100% - 30% - 10px);
+    height: 700px;
+    
+}
 
-
+.main_wrap{}
+.main_top{}
+.main_tit{
+    margin-top: 20px;
+    overflow: hidden;
+}
+.main_tit .color{
+    width: 20px;
+    height: 50px;
+    background-color: red;
+    float: left;
+}
+.main_tit h2{
+    float: left;
+    line-height: 50px;
+    padding-left: 10px;
 }
 .visual_main{
     width: 100%;
-
+    margin-top: 10px;
 }
 .visual_main img{
     width: 100%;
 }
 
-
-
-
+.visual_desc{
+    margin-top: 10px;
+    color: #777;
+}
+.main_desc{
+    margin-top: 20px;
+    column-count: 2;
+}
 
 
 
@@ -119,38 +164,26 @@ footer div{
     .header_menu{display: none;}
     .mobile_ham{display: block;}
 
+    .cont_wrap{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .aside{
+        width: 100%;
+        order: 1;
+        height: 300px;
+    }
+    .main{
+        width: 100%;
+        height: auto;
+    }
+    .aside .aside_box{
+        width: 100%;
+        height: auto;
+    }
     
-    .data_wrap{
-        flex-direction: column;
-    }
-    .data_wrap .databox{
-        width: 100%;
-    }
-    .data_wrap .databox p:first-child{
-        font-size: 30px;
-    }
-    .data_wrap .databox p:nth-child(2){
-        font-size: 16px;
-        line-height: 40px;
-    }
-    .data_wrap .databox p:nth-child(3){
-        font-size: 14px;
-        line-height: 30px;
-    }
-
-
-    .notice_wrap{
-        flex-direction: column;
-    }
-    .notice_wrap .notice_box{
-        width: 100%;
-    }
-    .notice_wrap .sns_box{
-        width: 100%;
-    }
-    .notice_box div{
-        font-size: 13px;
-    }
 }
 
 @media all and (min-width:1051px){
