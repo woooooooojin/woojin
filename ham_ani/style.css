@@ -1,0 +1,37 @@
+*{margin: 0; padding: 0;}
+
+
+body{
+    width: 1070px;
+    margin: 0 auto;
+}
+
+.line_box{
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    margin: 100px auto;
+    cursor: pointer;
+    
+    
+}
+
+.line{
+    width: 50px;
+    height: 5px;
+    background-color: black;
+    display: block;
+    margin: 20px auto;
+    transition: .3s;
+
+}
+.line_box:hover{cursor: pointer;}
+
+#line_box:hover .line:nth-child(2){opacity: 0;}
+#line_box:hover .line:nth-child(1){
+    transform: translateY(25px) rotate(45deg);
+}
+#line_box:hover .line:nth-child(3){
+    transform: translateY(-25px) rotate(-45deg);
+}
