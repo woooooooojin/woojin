@@ -20,7 +20,7 @@ body{
 .line{
     width: 50px;
     height: 5px;
-    background-color: black;
+    background-color:cadetblue;
     display: block;
     margin: 20px auto;
     transition: .3s;
