@@ -198,7 +198,7 @@ li{list-style: none;}
 
 .main .article{
     width:100%;
-    height: auto;
+    height: 300px;
     padding: 20px;
     background-color: beige;
     margin-top: 30px;
@@ -214,11 +214,16 @@ li{list-style: none;}
 }
 .main .article .article_img_wrap .article_box{
     width: 25%;
+    height: 145px;
     margin-right: 10px;
 }
 .main .article .article_img_wrap .article_box:last-child{margin-right: 0;}
 .main .article .article_img_wrap .article_box img{
     width: 100%;
+    height: 145px;
+}
+.main .article .article_img_wrap .article_box p{
+    
 }
 
 /*********wrap*********/
@@ -238,6 +243,8 @@ li{list-style: none;}
  .aside .issue_article ul{}
  .aside .issue_article ul li{
     font-size: 13px;
+    margin: 10px 0;
+    cursor: pointer;
  }
  .aside .issue_tit{
     margin-bottom: 10px;
@@ -272,8 +279,46 @@ li{list-style: none;}
  }
  .aside .recommand_article .rec_box:hover .rec_anibox{
     top: 0;
+   
  }
 
+.top_article{
+    width: 100%;
+}
+.top_article .top_box{
+    display: flex;
+    border-bottom: 1px dotted #ccc;
+    margin-top: 10px;
+}
+.top_article .top_box .top_img{
+    width: 80px;
+    height: 80px;
+   
+}
+.top_article .top_box .top_img img{
+    width: 100%;
+    height: 100%;
+    
+}
+.top_article .top_box .top_desc{
+    margin-left: 10px;
+}
+.top_article .top_box .top_desc p{
+    font-size: 13px;
+    color: royalblue;
+    margin-bottom: 20px;
+    
+}
+.top_article .top_box .top_desc .gray{
+    color: #777;
+}
+
+
+
+
  
+
+/************mobile*************/
+
 
 
