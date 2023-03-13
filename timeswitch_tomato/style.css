@@ -1,6 +1,10 @@
 *{margin: 0; padding: 0; box-sizing: border-box;}
 li{list-style: none;}
-
+/*주제 컨셉 다르게  모바일 lnb 햄버거 메뉴
+음식 외출 빠른메뉴 버튼
+꽃 내용 제목만 보이다가 내용 보이게 animation
+인기기사 hover scale
+1280 또는 1320 */
 .container{
     
 }
@@ -26,12 +30,77 @@ li{list-style: none;}
 .header .lnb ul li{
     display: inline-block;
     padding: 0 10px;
+    width: 15%;
+    text-align: center;
+    transition: .3s;
+    color: #fff;
+    font-weight: bold;
 }
+.header .lnb ul li:hover{
+    background-color: rgb(168, 226, 228);
+    color: black;
+
+}
+
+
+/*************mobile-hamchk*************/
+#ham_chk{display: none;}
+#ham_chk:checked ~ .ham_list{display: block;}
+#ham_chk ~ .ham_list{display: none;}
+
+#ham_chk:checked ~ .label .ham_open{display: none;}
+#ham_chk:checked ~ .label .ham_close{display: block;}
+
+#ham_chk ~ .label .ham_open{display: block;}
+#ham_chk ~ .label .ham_close{display: none;}
+
+
+.mobile_ham{display: none;}/*모바일에서 block*/
+.header{
+    position: relative;
+}
+.mobile_ham .label label{
+    position: absolute;
+    top: 70%; right: 10px;
+    transform: translateY(-50%);
+}
+.mobile_ham .ham_list{
+    position: absolute;
+    z-index: 9999;
+    margin-top: 10px;
+}
+.mobile_ham label{
+    font-size: 30px;
+
+}
+.ham_list{
+    width: 100%;
+    height: 50px;
+}
+.ham_list ul{
+    display: flex;
+    justify-content: space-around;
+}
+.ham_list ul li{
+    text-align: center;
+    line-height: 50px;
+    border: 1px solid #fff;
+    background-color: cadetblue;
+    width: 16.6666%;
+    color: #fff;
+    transition: .3s;
+    
+}
+.ham_list ul li:hover{
+    background-color: rgb(182, 236, 238);
+    color: black;
+}
+
 
 
 /***********main***************/
 .main{
-    width: 100%;
+    width: 70%;
 }
 .icon{
     margin-top: 30px;
@@ -43,9 +112,14 @@ li{list-style: none;}
     background-color: cadetblue;
     display: inline-block;
     font-size: 11px;
+    cursor: pointer;
+    transition: .3s;
+}
+.icon ul li:hover{
+    background-color: rgb(28, 159, 163);
 }
 
-.main h2{
+.main .main_tit{
     margin-top: 30px;
     margin-left: 10px;
 }
@@ -54,3 +128,152 @@ li{list-style: none;}
     font-size: 13px;
 
 }
+
+.visual_main{
+    width: 100%;
+}
+.visual_main img{
+    width: 100%;
+}
+.visual_main_desc{}
+
+.content{
+    width: 100%;
+}
+.content .visual_tit{
+    overflow: hidden;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+.content .visual_tit h2{
+    float: left;
+    
+}
+.content .visual_tit .line{
+    width: 5px;
+    height: 30px;
+    background-color: cadetblue;
+    float: left;
+    margin-right: 10px;
+}
+.content .visual_tit_desc{}
+
+
+
+.main .sns{
+    width: 100%;
+    display: flex;
+    margin-top: 30px;
+}
+.main .sns .snsbox{
+    width: 33.3333%;
+    height: 30px;
+    text-align: center;
+    color: #fff;
+    line-height: 30px;
+
+}
+
+.main .sns .twit_box{
+    background-color: lightskyblue;
+    transition: .3s;
+}
+.main .sns .twit_box:hover{
+    background-color: rgb(53, 168, 240);
+}
+.main .sns .facebook_box{
+    background-color: royalblue;
+    transition: .3s;
+}
+.main .sns .facebook_box:hover{
+    background-color: rgb(20, 73, 231);
+}
+.main .sns .google_box{
+    background-color: tomato;
+    transition: .3s;
+}
+.main .sns .google_box:hover{
+    background-color: rgb(252, 49, 14);
+}
+
+.main .article{
+    width:100%;
+    height: auto;
+    padding: 20px;
+    background-color: beige;
+    margin-top: 30px;
+}
+
+.main .article .article_inner h2{
+    margin-bottom: 10px;
+    color:burlywood;
+}
+.main .article .article_img_wrap{
+    width: 100%;
+    display: flex;
+}
+.main .article .article_img_wrap .article_box{
+    width: 25%;
+    margin-right: 10px;
+}
+.main .article .article_img_wrap .article_box:last-child{margin-right: 0;}
+.main .article .article_img_wrap .article_box img{
+    width: 100%;
+}
+
+/*********wrap*********/
+.wrap{
+    display: flex;
+}
+/***********aside**************/
+.aside{
+    margin-top: 30px;
+    width: 30%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+ .aside .issue_article{
+    width: 100%;
+ }
+ .aside .issue_article ul{}
+ .aside .issue_article ul li{
+    font-size: 13px;
+ }
+ .aside .issue_tit{
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    font-size: 20px;
+    color: #777;
+ }
+
+ .aside .recommand_article{
+    margin-top: 20px;
+    width: 100%;
+ }
+ .aside .recommand_article .rec_box{
+    width: 100%;
+    height: 177px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;
+ }
+ .aside .recommand_article .rec_box img{
+    width: 100%;
+    height: auto;
+ }
+ .aside .recommand_article .rec_box .rec_anibox{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 177px;
+    position: absolute;
+    left: 0; top: 156px;
+    color: #fff;
+    transition: .3s;
+ }
+ .aside .recommand_article .rec_box:hover .rec_anibox{
+    top: 0;
+ }
+
+ 
+
+
