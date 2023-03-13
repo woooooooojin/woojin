@@ -19,6 +19,7 @@ li{list-style: none;}
 .header .lnb{
     width: 100%;
     height: 50px;
+    background-color: cadetblue;
 }
 .header .lnb ul{
     width: 100%;
@@ -45,8 +46,8 @@ li{list-style: none;}
 
 /*************mobile-hamchk*************/
 #ham_chk{display: none;}
-#ham_chk:checked ~ .ham_list{display: block;}
-#ham_chk ~ .ham_list{display: none;}
+#ham_chk:checked ~ .ham_list{height: 50px;}
+/* #ham_chk ~ .ham_list{display: none;} */
 
 #ham_chk:checked ~ .label .ham_open{display: none;}
 #ham_chk:checked ~ .label .ham_close{display: block;}
@@ -75,7 +76,9 @@ li{list-style: none;}
 }
 .ham_list{
     width: 100%;
-    height: 50px;
+    height: 0px;
+    overflow: hidden;
+    transition: 0.3s;
 }
 .ham_list ul{
     display: flex;
@@ -234,7 +237,7 @@ li{list-style: none;}
 .aside{
     margin-top: 30px;
     width: 30%;
-    margin-left: 10px;
+    margin-left: 5px;
     margin-right: 10px;
 }
  .aside .issue_article{
@@ -315,10 +318,76 @@ li{list-style: none;}
 
 
 
+/**********footer***********/
+footer{
+    margin-top: 20px;
+    width: 100%;
+    border-top: 1px solid #ccc;
 
- 
+}
+footer .copy{
+    color: #777;
+    padding: 10px;
+}
+
+ /*350 ~
+ 601~
+ 769~
+ 1280~
+ */
 
 /************mobile*************/
 
+@media all and (min-width:320px) and (max-width:600px){
+   .main{
+        width: 100%;
+    }
+    .aside{
+        width: 100%;
+    }
+    .wrap{
+        flex-direction: column;
+    }
+    .mobile_ham{display: block;}
+    
+    header .lnb ul{display: none;}
+    .main .sns .snsbox{
+        font-size: 11px;
+    }
+ 
+}
+
+
+@media all and (min-width:601px) and (max-width:780px) {
+    .main{
+        width: 100%;
+    }
+    .aside{
+        width: 100%;
+    }
+    .wrap{
+        flex-direction: column;
+    }
+    .aside_wrap{
+        display: flex;
+    }
+    .issue_wrap{
+        width: 50%;
+    }
+    .top_article{
+        width: 50%;
+        margin-left: 10px;
+    }
+}
+
+
+
+
+@media all and (min-width:1280px) {
+    .wrap{
+        width: 1280px;
+        margin: 0 auto;
+    }
+}
 
 
