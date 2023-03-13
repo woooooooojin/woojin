@@ -13,7 +13,8 @@ li{list-style: none;}
     width: 100%;
     
 }
-.header h1{
+.title h1{
+    width: 100%;
     color: cadetblue;
 }
 .header .lnb{
@@ -62,7 +63,7 @@ li{list-style: none;}
 }
 .mobile_ham .label label{
     position: absolute;
-    top: 70%; right: 10px;
+    top: 45%; right: 10px;
     transform: translateY(-50%);
 }
 .mobile_ham .ham_list{
@@ -207,7 +208,7 @@ li{list-style: none;}
     margin-top: 30px;
 }
 
-.main .article .article_inner h2{
+.main .article h2{
     margin-bottom: 10px;
     color:burlywood;
 }
@@ -217,7 +218,7 @@ li{list-style: none;}
 }
 .main .article .article_img_wrap .article_box{
     width: 25%;
-    height: 145px;
+    
     margin-right: 10px;
 }
 .main .article .article_img_wrap .article_box:last-child{margin-right: 0;}
@@ -237,8 +238,8 @@ li{list-style: none;}
 .aside{
     margin-top: 30px;
     width: 30%;
-    margin-left: 5px;
-    margin-right: 10px;
+    margin-left: 10px;
+    
 }
  .aside .issue_article{
     width: 100%;
@@ -292,10 +293,15 @@ li{list-style: none;}
     display: flex;
     border-bottom: 1px dotted #ccc;
     margin-top: 10px;
+    
+}
+.top_article .top_box:hover .top_img{
+    transform: scale(1.2);
 }
 .top_article .top_box .top_img{
     width: 80px;
     height: 80px;
+    transition: .3s;
    
 }
 .top_article .top_box .top_img img{
@@ -304,7 +310,7 @@ li{list-style: none;}
     
 }
 .top_article .top_box .top_desc{
-    margin-left: 10px;
+    padding-left: 10px;
 }
 .top_article .top_box .top_desc p{
     font-size: 13px;
@@ -354,7 +360,19 @@ footer .copy{
     .main .sns .snsbox{
         font-size: 11px;
     }
- 
+    .article_img_wrap{
+        flex-wrap: wrap;
+        
+    }
+    .main .article .article_img_wrap .article_box{
+        width: 48%;
+    }
+    .main .article .article_img_wrap .article_box:nth-child(2n){
+        margin-right: 0;
+    }
+    .main .article{
+        height: 450px;
+    }
 }
 
 
@@ -377,6 +395,7 @@ footer .copy{
     .top_article{
         width: 50%;
         margin-left: 10px;
+        
     }
 }
 
@@ -388,6 +407,21 @@ footer .copy{
         width: 1280px;
         margin: 0 auto;
     }
+
+   header {
+    width: 100%;
+    background-color: cadetblue;
+   }
+   .header .container{
+    width: 1280px;
+    margin: 0 auto;
+   }
+  .title {
+    width: 1280px;
+    margin: 0 auto;
+  }
+  
+    
 }
 
 
