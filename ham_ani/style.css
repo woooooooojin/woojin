@@ -35,3 +35,31 @@ body{
 #line_box:hover .line:nth-child(3){
     transform: translateY(-25px) rotate(-45deg);
 }
+
+
+
+.ham_line{
+    width: 40px;
+    height: 80px;
+    
+    position: relative;
+    overflow: hidden;
+}
+
+.ham_line .ham{
+    width: 40px;
+    height: 5px;
+    background-color: black;
+    display: block;
+    margin: 15px auto;
+
+}
+.ham_line .ham:last-child{
+    position: absolute;
+    right: -50%; bottom: 0;
+    transform: translateY(-50%);
+    transition: .3s;
+}
+.ham_line:hover .ham:last-child{
+    right: 0;
+}
