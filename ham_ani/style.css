@@ -28,13 +28,84 @@ body{
 }
 .line_box:hover{cursor: pointer;}
 
-#line_box:hover .line:nth-child(2){opacity: 0;}
-#line_box:hover .line:nth-child(1){
+.line_box:hover .line:nth-child(2){opacity: 0;}
+.line_box:hover .line:nth-child(1){
     transform: translateY(25px) rotate(45deg);
 }
-#line_box:hover .line:nth-child(3){
+.line_box:hover .line:nth-child(3){
     transform: translateY(-25px) rotate(-45deg);
 }
+
+/*********line box2********/
+.line_box2{
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    margin: 50px auto;
+    position: relative;
+    line-height: 40px;
+    
+    
+}
+.line_box2 span{
+    font-size: 50px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: .3s;
+   
+}
+.line_box2:hover span{
+    transform: rotate(-45deg);
+}
+
+
+/********line3******/
+#box3chk{display: none;}
+
+#box3chk:checked ~ label .line_box3 span:first-child{
+    transform: rotate(0);
+}
+#box3chk:checked ~ label .ddd{display: block;}
+#box3chk ~ label .ddd{display: none;}
+.line_box3{
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    margin: 50px auto;
+    position: relative;
+    
+
+}
+.line_box3 span{
+    display: block;
+    width: 40px;
+    height: 5px;
+    background-color: black;
+    margin: 20px auto;
+
+}
+.line_box3 span:first-child{
+    transform: rotate(90deg);
+    position: absolute;
+    left: 4px;
+    transition: .3s;
+}
+/* .line_box3:hover span:first-child{
+    transform: rotate(0);
+} */
+.ddd{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+
 
 
 
