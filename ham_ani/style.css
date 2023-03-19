@@ -1,32 +1,36 @@
-*{margin: 0; padding: 0;}
+* {
+    margin: 0;
+    padding: 0;
+}
 
 
-body{
+body {
     width: 1070px;
     margin: 0 auto;
 }
 
-.line_box{
+.line_box {
     width: 100px;
     height: 100px;
     border: 1px solid black;
     box-sizing: border-box;
     margin: 100px auto;
     cursor: pointer;
-    
-    
+
+
 }
 
-.line{
+.line {
     width: 50px;
     height: 5px;
-    background-color:cadetblue;
+    background-color: cadetblue;
     display: block;
     margin: 20px auto;
     transition: .3s;
 
 }
-.line_box:hover{cursor: pointer;}
+
+/* .line_box:hover{cursor: pointer;}
 
 .line_box:hover .line:nth-child(2){opacity: 0;}
 .line_box:hover .line:nth-child(1){
@@ -34,10 +38,31 @@ body{
 }
 .line_box:hover .line:nth-child(3){
     transform: translateY(-25px) rotate(-45deg);
+} */
+
+#linechk {
+    display: none;
+}
+
+#linechk:checked~label .line:nth-child(2) {
+    opacity: 0;
+}
+
+#linechk:checked~label .line:nth-child(1) {
+    transform: translateY(25px) rotate(45deg);
+}
+
+#linechk:checked~label .line:nth-child(3) {
+    transform: translateY(-25px) rotate(-45deg);
+}
+
+.line_wrap {
+    width: 100%;
+    height: 100%;
 }
 
 /*********line box2********/
-.line_box2{
+.line_box2 {
     width: 50px;
     height: 50px;
     border: 1px solid black;
@@ -45,42 +70,54 @@ body{
     margin: 50px auto;
     position: relative;
     line-height: 40px;
-    
-    
+
+
 }
-.line_box2 span{
+
+.line_box2 span {
     font-size: 50px;
     display: block;
     width: 100%;
     height: 100%;
     text-align: center;
     transition: .3s;
-   
+
 }
-.line_box2:hover span{
+
+.line_box2:hover span {
     transform: rotate(-45deg);
 }
 
 
 /********line3******/
-#box3chk{display: none;}
+#box3chk {
+    display: none;
+}
 
-#box3chk:checked ~ label .line_box3 span:first-child{
+#box3chk:checked~label .line_box3 span:first-child {
     transform: rotate(0);
 }
-#box3chk:checked ~ label .ddd{display: block;}
-#box3chk ~ label .ddd{display: none;}
-.line_box3{
+
+#box3chk:checked~label .ddd {
+    display: block;
+}
+
+#box3chk~label .ddd {
+    display: none;
+}
+
+.line_box3 {
     width: 50px;
     height: 50px;
     border: 1px solid black;
     box-sizing: border-box;
     margin: 50px auto;
     position: relative;
-    
+
 
 }
-.line_box3 span{
+
+.line_box3 span {
     display: block;
     width: 40px;
     height: 5px;
@@ -88,16 +125,18 @@ body{
     margin: 20px auto;
 
 }
-.line_box3 span:first-child{
+
+.line_box3 span:first-child {
     transform: rotate(90deg);
     position: absolute;
     left: 4px;
     transition: .3s;
 }
+
 /* .line_box3:hover span:first-child{
     transform: rotate(0);
 } */
-.ddd{
+.ddd {
     width: 100px;
     height: 100px;
     text-align: center;
@@ -109,15 +148,15 @@ body{
 
 
 
-.ham_line{
+.ham_line {
     width: 40px;
     height: 80px;
-    
+
     position: relative;
     overflow: hidden;
 }
 
-.ham_line .ham{
+.ham_line .ham {
     width: 40px;
     height: 5px;
     background-color: black;
@@ -125,13 +164,16 @@ body{
     margin: 15px auto;
 
 }
-.ham_line .ham:last-child{
+
+.ham_line .ham:last-child {
     position: absolute;
-    right: -50%; bottom: 0;
+    right: -50%;
+    bottom: 0;
     transform: translateY(-50%);
     transition: .3s;
 }
-.ham_line:hover .ham:last-child{
+
+.ham_line:hover .ham:last-child {
     right: 0;
 }
 
@@ -139,32 +181,35 @@ body{
 
 
 
-.test{
+.test {
     width: 100px;
     height: 100px;
     border: 1px solid black;
 }
-.test div{
+
+.test div {
     width: 100%;
     height: 100%;
     background-color: aquamarine;
 }
-.test:hover div{
+
+.test:hover div {
     transform: scale(1.1);
     border-radius: 10px;
 }
 
 
-.line_box4{
+.line_box4 {
     width: 60px;
     height: 60px;
     border: 1px solid black;
     margin: 20px auto;
-    
+    position: relative;
+
 
 }
 
-.line_box4 .line4{
+.line_box4 .line4 {
     width: 50px;
     height: 5px;
     display: block;
