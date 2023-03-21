@@ -1,0 +1,176 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+li{list-style: none;}
+a{text-decoration: none; color: black}
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+/* font-family: 'Nanum Gothic', sans-serif; */
+/* font-family: 'Noto Sans KR', sans-serif; */
+
+.contianer{}
+header{
+    height: 80px;
+    border-bottom: 1px solid #ccc;
+}
+header .logo_ex{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+header .logo_ex .logo_L {
+    width: 20%;
+}
+
+header .logo_ex .logo_M{
+    width: 60%;
+    
+}
+header .logo_ex .logo_M img{
+    width: 100%;
+    margin: 10px auto;
+}
+
+header .logo_ex .logo_R{
+    width: 20%;
+    font-size: 1.75rem;
+    font-weight: normal;
+}
+/*ham_chk*/
+#ham_chk{display: none;}
+#ham_chk:checked ~ label .line2{opacity: 0;}
+#ham_chk:checked ~ label .line1{transform: translate(8px,9px); rotate: 45deg;}
+#ham_chk:checked ~ label .line3{transform: translate(8px,-9px); rotate: -45deg;}
+#ham_chk:checked ~ .ham_menu_list{display: block;}
+#ham_chk ~ .ham_menu_list{display: none;}
+
+header .logo_ex .logo_L .line{
+    width: 32px;
+    height: 2px;
+    display: block;
+    background-color: #666;
+    margin: 10px auto;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.ham_menu_list{
+    width: 100vw;
+    position: absolute;
+    top: 80px; left: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    
+}
+
+.ham_menu_list .box1{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    background-color: #67ae3e;
+    
+    
+}
+.ham_menu_list .box1 li{
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    font-family: 'Noto Sans KR', sans-serif;
+    width: 50%;
+    font-size: 18px;
+    text-align: left;
+    
+}
+.ham_menu_list .box1 li i{
+    font-size: 1.5rem;
+    
+}
+.ham_menu_list .box1 li:last-child{
+    text-align: right;
+}
+.ham_menu_list .box2{
+    display: flex;
+}
+.ham_menu_list .box2 li{
+    width: 33.3333%;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #ccc;
+    font-size: 0.875rem;
+
+}
+.ham_menu_list .box2 li:nth-child(1),
+.ham_menu_list .box2 li:nth-child(2){
+    border-right: 0;
+}
+.ham_menu_list .box2 li.box2_login{
+    background-color: #fff4e8;
+}
+
+/*language chk*/
+.ham_menu_list .box2 li.box2_lang{
+    background-color: #7d6a55;
+    color: #fff;
+}
+
+.ham_menu_list .box2 .lang_box .lang_inner{
+    height: 0px;
+    overflow: hidden;
+    transition: .3s;
+}
+.ham_menu_list .box2 .lang_box .lang_inner li{
+    border: 1px solid #ccc;
+    width: 100%;
+    font-size: 0.875rem;
+}
+.ham_menu_list .box2 .lang_box .lang_inner li a{
+    width: 100%;
+    display: block;
+}
+.ham_menu_list .box2 .lang_box .lang_inner li:nth-child(1){
+    border-bottom: 0;
+}
+.ham_menu_list .box2 .lang_box .lang_inner li:nth-child(2){
+    border-bottom: 0;
+}
+#lang_chk{display: none;}
+#lang_chk:checked ~ .lang_box .lang_inner{height: 105px;}
+/* #lang_chk ~ .lang_box .lang_inner{display: none;} */
+
+
+/*나의진료정보*/
+.myinfo{
+    border: 1px solid #ccc;
+    height: 50px;
+    position: relative;
+    
+}
+#myinfo_chk{display: none;}
+#myinfo_chk:checked ~ label.myinfo_open{display: block;}
+#myinfo_chk:checked ~ label.myinfo_close{display: none;}
+#myinfo_chk ~ label.myinfo_open{display: none;}
+#myinfo_chk ~ label.myinfo_close{display: block;}
+
+#myinfo_chk:checked ~ .box3{height: 120px;}
+/* #myinfo_chk ~ .box3{display: none;} */
+
+.myinfo label{
+    width: 100%;
+    
+}
+.box3{
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    transition: .3s;
+}
+.box3 li{
+    border: 1px solid #ccc;
+    height: 30px;
+}
+.box3 li a{
+    display: block;
+    width: 100%;
+}
+.box3{
+    position: absolute;
+    top: 50px;left: 0;
+    z-index: 10;
+}
