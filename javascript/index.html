@@ -28,7 +28,111 @@
         // let userId = prompt('아이디를 입력하세요', 'green2023'); //green2023 생략가능
         // alert(userId);
 
-        let input = confirm('계속 진행하시겠습니까?');
+        // let input = confirm('계속 진행하시겠습니까?');
+
+        //03.22
+        
+
+        //과제 사칙연산과 나머지 연산자
+
+
+        // let num1 = 2;
+        // let num2 = 3;
+        // let result = 0; //초기화 = let result; -> 메모리에 16진수 주소값이 들어있다.
+
+        // result = num1 + num2;
+        // document.write('첫번째 수 : ', num1, '<br />');
+        // document.write('두번째 수 : ', num2, '<br />');
+        // document.write('두수의 합 : ' + result + '<br />');
+
+
+
+        // let kor = parseInt(prompt('국어점수 입력 :')); //parseInt 문자를 숫자로 바꿔줌
+        // let eng = parseInt(prompt('영어점수 입력 :'));
+
+        // let sum = kor + eng;
+        // let ave = sum / 2;
+
+        // document.write('국어점수 :', kor, '<br />');
+        // document.write('영어점수 :', eng, '<br />');
+        // document.write('총점 :', sum, '<br />');
+        // document.write('평균 :', ave, '<br />');
+
+
+
+        //두수를 변수를 할당하여 사칙연산 결과 출력  
+
+        let num3 = 10;
+        let num4 = 15;
+
+        let add = 0;
+        let multiply = 0;
+        let division = 0;
+        let rest = 0;
+
+        add = num3 + num4;
+        multiply = num3 * num4;
+        division = num3 / num4;
+        rest = num3 % num4;
+
+        document.write('첫번째 수 : ', num3, '<br />');
+        document.write('두번째 수 : ', num4, '<br />');
+        document.write('두수의 합 : ', add, '<br />');
+        document.write('두수의 곱 : ', multiply, '<br />');
+        document.write('두수의 나누기 : ', division, '<br />');
+        document.write('나머지 : ', rest, '<br />');
+
+
+        //국어 영어 수학 점수를 프롬프트 입력받아서 총점과 평균을 출력
+
+        let kor = parseInt(prompt('국어점수입력 :'));
+        let eng = parseInt(prompt('영어점수입력 :'));
+        let math = parseInt(prompt('수학점수입력 :'));
+
+        let sum = kor + eng + math;
+        let ave = sum / 3;
+
+        document.write('국어점수 :', kor, '<br />');
+        document.write('영어점수 :', eng, '<br />');
+        document.write('수학점수 :', math, '<br />');
+        document.write('점수의 합 :', sum, '<br />');
+        document.write('점수의 평균 :', ave, '<br />');
+
+        //id와 pw 입력받아 하나의 변수로 출력
+
+        let id = prompt(('아이디입력'));
+        let pw = prompt(('패스워드입력'));
+        
+        document.alert('당신의 아이디는' + id + '입니다.');
+        document.alert('당신의 패스워드는' + pw + '입니다.');
+
+    
+
+       
+
+
+        //반지름을 입력받아 원의 둘레와 넓이를 출력 파이는 const 3.14
+
+        const pi = 3.14; //불변의값
+        let rad = parseInt(prompt('반지름입력 :'));
+        let round = 2 * pi * rad;
+        let area = rad * rad * pi;
+        
+        document.write('원의둘레 :', round, '<br />');
+        document.write('원의너비 :', area, '<br />');
+
+        
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -49,6 +153,11 @@
    <!--0을 제외한 모든 숫자 문자는 true-->
     <!--const = 고유값 절대값 값이변하지않을때
     let = 값이 변할경우 쓴다-->
+
+    <!--문자형 데이터 + 숫자형 데이터 = 문자형데이터
+    문자형 데이터 - 숫자형 데이터 = 숫자형데이터 => +를 제외한 모든 연산자
+    parseInt 문자를 숫자로 바꿔줌-->
+
 
 </body>
 </html>
