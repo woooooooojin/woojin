@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>부민병원</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,7 +45,7 @@
                                 <li>
                                     <ul class="box2">
                                         <li class="box2_login">로그인</li>
-                                        <li>회원가입</li>
+                                        <li class="join">회원가입</li>
                                         <li class="box2_lang">
                                             <input type="checkbox" id="lang_chk">
                                             <label for="lang_chk">language <i class="fas fa-chevron-down"
@@ -166,10 +167,14 @@
                             <div class="reservation">
                                 <div class="res_inner">
                                     <div class="res_online">
-                                        <a href="#!"><p>온라인 예약 <i class="fas fa-mouse-pointer"></i></p></a>
+                                        <a href="#!">
+                                            <p>온라인 예약 <i class="fas fa-mouse-pointer"></i></p>
+                                        </a>
                                     </div>
                                     <div class="res_offline">
-                                       <a href="#!"><p>전화예약 <i class="fas fa-phone"></i></p></a> 
+                                        <a href="#!">
+                                            <p>전화예약 <i class="fas fa-phone"></i></p>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -201,12 +206,195 @@
         <!--container end-->
     </header>
 
-    
+    <div class="visual_main">
+        <div class="container">
+            <div class="visual_slider">
+                <div class="v_img">
+                    <img src="./imges/visual99.jpg" alt="">
+                </div>
+                <div class="v_img">
+                    <img src="./imges/visual100.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <!--container end-->
+    </div>
+    <!--visual_main end-->
+
+    <main>
+        <div class="container">
+            <div class="main_wrap">
+                <div class="main_search">
+                    <h4>진료과 · 의료진검색</h4>
+                    <div class="m_searchbox">
+                        <input type="text">
+                        <i class="fas fa-search"></i>
+                    </div>
+
+                    <div class="m_search_btn">
+                        <div><a href="#!">진료과</a></div>
+                        <div><a href="#!">의료진</a></div>
+                    </div>
+                </div>
+                <!--main_search end-->
+
+                <div class="main_reservation">
+                    <h4>온라인 진료예약</h4>
+                    <div class="m_search_btn">
+                        <div><a href="#!">진료과</a></div>
+                        <div><a href="#!">의료진</a></div>
+                        <div class="msearch_btn_2"><a href="#!">간편전화예약</a></div>
+                    </div>
+
+                </div>
+                <!--main_reservation end-->
+
+                <div class="main_login">
+                    <h4>로그인</h4>
+                    <div class="main_login_box">
+                        <input type="text" placeholder="아이디">
+                        <input type="text" placeholder="패스워드">
+                        <div class="main_join">
+                            <a href="#!">회원가입</a>
+                            <a href="#!">아이디/비밀번호찾기</a>
+
+                        </div>
+                        <button type="submit">로그인</button>
+                    </div>
+                </div>
+                <!--main_login end-->
+            </div>
+            <!--main_wrap end-->
+
+        </div>
+        <!--container end-->
+    </main>
+
+    <section class="section1">
+        <div class="container">
+            <div class="section1_wrap">
+                <div class="section1_box1 s1box">
+                    <h4>진료안내</h4>
+                    <p>대표전화<br /> <span>1670 - 0082</span></p>
+                    <div class="sec1_btn">
+                        <a href="#!">외래안내</a>
+                        <a href="#!">진료시간표</a>
+                    </div>
+                </div>
+                <!--section1 box1 end-->
+
+                <div class="section1_box2 s1box">
+                    <h4>위임장/동의서/증명서</h4>
+                    <p>위임장,동의서,증명서 <br /> 발급안내</p>
+                    <div class="sec1_btn">
+                        <a href="#!">위임장/동의서</a>
+                        <a href="#!">증명서</a>
+                    </div>
+                </div>
+                <div class="section1_box3 s1box">
+                    <h4>고객의 소리</h4>
+                    <p>환자 및 보호자의 소리를<br />경청하고 개선하겠습니다.</p>
+                    <div class="sec1_btn">
+                        <a href="#!">감사합니다.</a>
+                        <a href="#!">건의합니다.</a>
+                    </div>
+                </div>
+                <!--box3 end-->
+                <div class="section1_box4 s1box">
+                    <h4>카카오 챗봇</h4>
+                    <p>실시간 고객과 소통하는<br />일대일 채팅상담</p>
+                    <div class="sec1_btn">
+                        <a href="#!">친구추가</a>
+                    </div>
+                </div>
+                <!--box4 end-->
+            </div>
+        </div>
+        <!--container end-->
+    </section>
+
+    <section class="section2">
+        <div class="container">
+            <div class="section2_wrap">
+
+                <div class="notice_box1">
+                    <h4>공지사항</h4>
+                    <div class="notice_list">
+                        <a href="#!"><i class="fas fa-circle"></i> 대통령 주치의 강대환 병원장 진료개시</a>
+                        <a href="#!"><i class="fas fa-circle"></i> 지하철 2호선 이벤트 공지</a>
+                        <a href="#!"><i class="fas fa-circle"></i> 코로나19 및 독감 예방접종 실시</a>
+                    </div>
+                </div>
+                <!--noticebox1 end-->
+
+                <div class="notice_box2">
+                    <input type="radio" name="tab" id="tab01">
+                    <input type="radio" name="tab" id="tab02">
+                    <input type="radio" name="tab" id="tab03">
+
+                    <div class="notice_label">
+                        <label for="tab01" class="label_01">병원소식</label>
+                        <label for="tab02" class="label_02">언론보도</label>
+                        <label for="tab03" class="label_03">채용</label>
+                    </div>
+
+                    <div class="sheet">
+                        <div class="sheet01">
+                            <div class="sheet_list">
+                                <a href="#!"><i class="fas fa-circle"></i> 행복 오케스트라 정기 연주회 성료</a>
+                                <a href="#!"><i class="fas fa-circle"></i> 국가건강검진 오는 6월까지 한시 연장</a>
+                                <a href="#!"><i class="fas fa-circle"></i> 전담 주치의 1:1 책임 수술제도</a>
+                            </div>
+                        </div>
+                        <div class="sheet02">
+                            <div class="sheet_list">
+                                <a href="#!"><i class="fas fa-circle"></i> 2호선 해운대역 해운대 부민병원역으로 불러주세요</a>
+                                <a href="#!"><i class="fas fa-circle"></i> 해운대 부민병원 응급의료센터장 의학교재 발간</a>
+                                <a href="#!"><i class="fas fa-circle"></i> 제6회 부산의료산업대상 국제의료협력 공로상 수상</a>
+                            </div>
+                        </div>
+                        <div class="sheet03">
+                            <div class="sheet_list">
+                                <a href="#!"><i class="fas fa-circle"></i> 전산실 직원 채용 공고</a>
+                                <a href="#!"><i class="fas fa-circle"></i> 응급실 간호사 채용 공고</a>
+                                <a href="#!"><i class="fas fa-circle"></i> 수술술 간호사 채용 공고</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <!--section2_wrap end-->
+        </div>
+        <!--container end-->
+    </section>
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.visual_slider').slick({
+                dots: true,
+                autoplay: false,
+                fade: true,
+                speed: 900 //setting - name: setting - value
+            });
+        })
+    </script>
 
 </body>
 
