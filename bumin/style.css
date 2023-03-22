@@ -7,6 +7,8 @@ a{text-decoration: none; color: black}
 /* font-family: 'Noto Sans KR', sans-serif; */
 
 .contianer{}
+
+/******************header***********************/
 header{
     height: 80px;
     border-bottom: 1px solid #ccc;
@@ -39,8 +41,8 @@ header .logo_ex .logo_R{
 #ham_chk:checked ~ label .line2{opacity: 0;}
 #ham_chk:checked ~ label .line1{transform: translate(8px,9px); rotate: 45deg;}
 #ham_chk:checked ~ label .line3{transform: translate(8px,-9px); rotate: -45deg;}
-#ham_chk:checked ~ .ham_menu_list{display: block;}
-#ham_chk ~ .ham_menu_list{display: none;}
+#ham_chk:checked ~ .ham_menu_list{height: 580px;}
+/* #ham_chk ~ .ham_menu_list{display: none;} */
 
 header .logo_ex .logo_L .line{
     width: 32px;
@@ -57,6 +59,9 @@ header .logo_ex .logo_L .line{
     position: absolute;
     top: 80px; left: 0;
     font-family: 'Noto Sans KR', sans-serif;
+    height: 0px;
+    overflow: hidden;
+    transition: .3s;
     
 }
 
@@ -114,11 +119,14 @@ header .logo_ex .logo_L .line{
     height: 0px;
     overflow: hidden;
     transition: .3s;
+    position: relative;
+    z-index: 20;
 }
 .ham_menu_list .box2 .lang_box .lang_inner li{
     border: 1px solid #ccc;
     width: 100%;
     font-size: 0.875rem;
+    background-color: #f4f3f3;
 }
 .ham_menu_list .box2 .lang_box .lang_inner li a{
     width: 100%;
@@ -140,7 +148,8 @@ header .logo_ex .logo_L .line{
     border: 1px solid #ccc;
     height: 50px;
     position: relative;
-    
+    text-align: left;
+    padding-left: 5px;
 }
 #myinfo_chk{display: none;}
 #myinfo_chk:checked ~ label.myinfo_open{display: block;}
@@ -160,6 +169,9 @@ header .logo_ex .logo_L .line{
     height: 0px;
     overflow: hidden;
     transition: .3s;
+    position: absolute;
+    top: 50px; left: 0;
+    z-index: 10;
 }
 .box3 li{
     border: 1px solid #ccc;
@@ -167,6 +179,7 @@ header .logo_ex .logo_L .line{
     background-color: #f4f3f3;
     font-size: 14px;
     line-height: 30px;
+    padding-left: 15px;
 }
 .box3 li:nth-child(1),
 .box3 li:nth-child(2),
@@ -177,15 +190,220 @@ header .logo_ex .logo_L .line{
     display: block;
     width: 100%;
 }
-.box3{
-    position: absolute;
-    top: 50px;left: 0;
-    z-index: 10;
+
+
+/*전문센터*/
+#center_chk{display: none;}
+#center_chk:checked ~ .center_label .center_open{display: block;}
+#center_chk:checked ~ .center_label .center_close{display: none;}
+#center_chk ~ .center_label .center_open{display: none;}
+#center_chk ~ .center_label .center_close{display: block;}
+#center_chk:checked ~ .center_box4{height: 420px;}
+/* #center_chk ~ .center_box4{display: none;} */
+
+
+
+.medical_center{
+    border: 1px solid #ccc;
+    height: 50px;
+    position: relative;
+    line-height: 50px;
+    text-align: left;
+    padding-left: 5px;
+    
 }
+
+.center_box4{
+    position: absolute;
+    top: 50px; left: 0;
+    width: 100%;
+    z-index: 9;
+    height: 0px;
+    overflow: hidden;
+    transition: .3s;
+}
+.center_box4 li{
+    height: 30px;
+    border: 1px solid #ccc;
+    background-color: #f4f3f3;
+    font-size: 14px;
+    line-height: 30px;
+    padding-left: 15px;
+}
+.center_box4 li a{
+    width: 100%;
+    display: block;
+}
+
+/*진료안내 medi info*/
+
+#medi_info_chk{display: none;}
+#medi_info_chk:checked ~ .medi_info_label .medi_info_open{display: block;}
+#medi_info_chk:checked ~ .medi_info_label .medi_info_close{display: none;}
+#medi_info_chk ~ .medi_info_label .medi_info_open{display: none;}
+#medi_info_chk ~ .medi_info_label .medi_info_close{display: block;}
+#medi_info_chk:checked ~ .medi_info_box{height: 240px;}
+
+
+.medi_info{
+    border: 1px solid #ccc;
+    height: 50px;
+    line-height: 50px;
+    text-align: left;
+    padding-left: 5px;
+    position: relative;
+}
+.medi_info_box{
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    height: 0px;
+    overflow: hidden;
+    transition: .3s;
+    z-index: 8;
+}
+.medi_info_box li{
+    height: 30px;
+    border: 1px solid #ccc;
+    background-color: #f4f3f3;
+    font-size: 14px;
+    line-height: 30px;
+    padding-left: 15px;
+}
+.medi_info_box li a{
+    width: 100%;
+    display: block;
+}
+
+/*이용안내 use_info*/
+#use_info_chk{display: none;}
+#use_info_chk:checked ~ .use_info_label .use_info_open{display: block;}
+#use_info_chk:checked ~ .use_info_label .use_info_close{display: none;}
+#use_info_chk ~ .use_info_label .use_info_open{display: none;}
+#use_info_chk ~ .use_info_label .use_info_close{display: block;}
+#use_info_chk:checked ~ .use_info_box{height: 240px;}
+
+.use_info{
+    border: 1px solid #ccc;
+    height: 50px;
+    line-height: 50px;
+    text-align: left;
+    padding-left: 5px;
+    position: relative;
+}
+.use_info_box{
+    width: 100%;
+    position: absolute;
+    left: 0; top: 50px;
+    height: 0px;
+    overflow: hidden;
+    transition: .3s;
+    z-index: 7;
+}
+.use_info_box li{
+    height: 30px;
+    border: 1px solid #ccc;
+    background-color: #f4f3f3;
+    font-size: 14px;
+    line-height: 30px;
+    padding-left: 15px;
+}
+.use_info_box li a{
+    width: 100%;
+    display: block;
+}
+
+/*병원소개 intro*/
+#intro_chk{display: none;}
+#intro_chk:checked ~ .intro_label .intro_open{display: block;}
+#intro_chk:checked ~ .intro_label .intro_close{display: none;}
+#intro_chk ~ .intro_label .intro_open{display: none;}
+#intro_chk ~ .intro_label .intro_close{display: block;}
+#intro_chk:checked ~ .intro_box{height: 210px;}
+.intro{
+    border: 1px solid #ccc;
+    height: 50px;
+    line-height: 50px;
+    text-align: left;
+    padding-left: 5px;
+    position: relative;
+}
+.intro_box{
+    width: 100%;
+    position: absolute;
+    top: 50px; left: 0;
+    height: 0px;
+    overflow: hidden;
+    transition: 0.3s;
+    z-index: 6;
+}
+.intro_box li{
+    height: 30px;
+    border: 1px solid #ccc;
+    background-color: #f4f3f3;
+    font-size: 14px;
+    line-height: 30px;
+    padding-left: 15px;
+}
+.intro_box li a{
+    width: 100%;
+    display: block;
+}
+
+
+
+/*reservation*/
+.reservation{
+    width: 100%;
+    
+}
+.reservation .res_inner{
+    
+    width: 100%;
+    display: flex;
+}
+
+.reservation .res_inner .res_online{
+    width: 50%;
+    
+    height: 60px;
+    background-color: #67ae3e;
+    line-height: 60px;
+    border: 1px solid #ccc;
+}
+.reservation .res_inner .res_online a{
+    width: 100%;
+    color: #fff;
+}
+.reservation .res_inner .res_online p{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+}
+.reservation .res_inner .res_online p i{
+    color: #fff;
+}
+
+.reservation .res_inner .res_offline{
+    width: 50%;
+    border: 1px solid #ccc;
+    height: 60px;
+    line-height: 60px;
+}
+.reservation .res_inner .res_offline a{
+    width: 100%;
+    
+}
+.reservation .res_inner .res_offline p{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+}
+.reservation .res_inner .res_offline p i{}
+
 
 /*search box*/
 #search_chk{display: none;}
-#search_chk:checked ~ .mobile_search_box{height: 50px;}
+#search_chk:checked ~ .mobile_search_box{height: 55px;}
 /* #search_chk ~ .mobile_search_box{display: none;} */
 
 .mobile_search_box{
@@ -194,6 +412,7 @@ header .logo_ex .logo_L .line{
     height: 0px;
     overflow: hidden;
     transition: .3s;
+   
     
 
 }
@@ -203,14 +422,19 @@ header .logo_ex .logo_L .line{
     border-radius: 20px;
     outline: none;
     position: relative;
+    border: 1px solid #ccc;
 }
 .mobile_search_box button{
     width: 50px;
     height: 50px;
     position: absolute;
-    top: 0px; right: 0;
+    top: 1px; right: 0;
     border-radius: 0 20px 20px 0 ;
     background-color: #67ae3e;
     color: #fff;
     border: 0;
+    font-weight: 700;
+    border: 1px solid #fff;
 }
+
+/******************************************************/
