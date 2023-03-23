@@ -1259,6 +1259,7 @@ footer{
         width: calc(100% - 50% - 20px);
         
     }
+    .media_01 img{width: 100%; height: 100%;}
     .media_wrap{
         display: flex;
         flex-wrap: wrap;
