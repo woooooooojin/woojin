@@ -10,10 +10,11 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 
 /******************header***********************/
 header{
-    height: 80px;
-    border-bottom: 1px solid #ccc;
+    
+
 }
 header .logo_ex{
+    height: 80px;
     display: flex;
     align-items: center;
     text-align: center;
@@ -43,14 +44,14 @@ header .logo_ex .logo_R{
 #ham_chk:checked ~ label .line2{opacity: 0;}
 #ham_chk:checked ~ label .line1{transform: translate(8px,9px); rotate: 45deg;}
 #ham_chk:checked ~ label .line3{transform: translate(8px,-9px); rotate: -45deg;}
-#ham_chk:checked ~ .ham_menu_list{height: 2000px;}
+#ham_chk:checked ~ .ham_menu_list{height: 2500px;}
 /* #ham_chk ~ .ham_menu_list{display: none;} */
 
 header .logo_ex .logo_L .line{
     width: 28px;
     height: 2px;
     display: block;
-    background-color: #666;
+    background-color: #888;
     margin: 10px auto;
     overflow: hidden;
     transition: .3s;
@@ -155,7 +156,7 @@ header .logo_ex .logo_L .line{
 /*나의진료정보*/
 .myinfo{
     width: 100%;
-    
+    text-align: left;
     background-color: #fff;
     line-height: 50px;
 
@@ -169,6 +170,7 @@ header .logo_ex .logo_L .line{
 /* #myinfo_chk ~ .myinfo_list ul{display: none;} */
 
 .myinfo label{
+    padding-left: 5px;
     height: 50px;
 }
 .myinfo_list{
@@ -185,6 +187,8 @@ header .logo_ex .logo_L .line{
     height: 50px;
     background-color: #f4f3f3;
     border-bottom: 1px solid #ccc;
+    padding-left: 10px;
+    font-size: 0.8rem;
 
 }
 .myinfo_list ul li:first-child{border-top: 1px solid #ccc;}
@@ -199,6 +203,7 @@ header .logo_ex .logo_L .line{
     width: 100%;
     background-color: #fff;
     line-height: 50px;
+    text-align: left;
 }
 #center_chk{display: none;}
 #center_chk:checked ~ label.center_open{display: block;}
@@ -211,6 +216,8 @@ header .logo_ex .logo_L .line{
 .center label{
     height: 50px;
     border-top: 1px solid #ccc;
+    padding-left: 5px;
+    
     
 }
 .center_list{
@@ -227,6 +234,9 @@ header .logo_ex .logo_L .line{
     height: 50px;
     background-color: #f4f3f3;
     border-bottom: 1px solid #ccc;
+    font-size: 0.8rem;
+    padding-left: 10px;
+    line-height: 50px;
 }
 .center_list ul li:first-child{border-top: 1px solid #ccc;}
 
@@ -237,6 +247,7 @@ header .logo_ex .logo_L .line{
     width: 100%;
     background-color: #fff;
     line-height: 50px;
+    text-align: left;
 }
 
 #mediinfo_chk{display: none;}
@@ -248,6 +259,7 @@ header .logo_ex .logo_L .line{
 .medi_info label{
     height: 50px;
     border-top: 1px solid #ccc;
+    padding-left: 5px;
 }
 .mediinfo_list{
     width: 100%;
@@ -263,6 +275,8 @@ header .logo_ex .logo_L .line{
     height: 50px;
     background-color: #f4f3f3;
     border-bottom: 1px solid #ccc;
+    padding-left: 10px;
+    font-size: 0.8rem;
 }
 
 .mediinfo_list ul li:first-child{border-top: 1px solid #ccc;}
@@ -273,6 +287,7 @@ header .logo_ex .logo_L .line{
     width: 100%;
     background-color: #fff;
     line-height: 50px;
+    text-align: left;
 }
 
 #useinfo_chk{display: none;}
@@ -285,6 +300,7 @@ header .logo_ex .logo_L .line{
 .use_info label{
     height: 50px;
     border-top: 1px solid #ccc;
+    padding-left: 5px;
 }
 
 .useinfo_list{
@@ -301,6 +317,8 @@ header .logo_ex .logo_L .line{
     height: 50px;
     background-color: #f4f3f3;
     border-bottom: 1px solid #ccc;
+    padding-left: 10px;
+    font-size: 0.8rem;
 }
 
 .useinfo_list ul li:first-child{border-top: 1px solid #ccc;}
@@ -311,6 +329,8 @@ header .logo_ex .logo_L .line{
     width: 100%;
     background-color: #fff;
     line-height: 50px;
+    text-align: left;
+   
 }
 #intro_chk{display: none;}
 #intro_chk:checked ~ label.intro_open{display: block;}
@@ -322,6 +342,7 @@ header .logo_ex .logo_L .line{
 .intro label{
     height: 50px;
     border-top: 1px solid #ccc;
+    padding-left: 5px;
 }
 
 .intro_list{
@@ -338,6 +359,8 @@ header .logo_ex .logo_L .line{
     height: 50px;
     background-color: #f4f3f3;
     border-bottom: 1px solid #ccc;
+    padding-left: 10px;
+    font-size: 0.8rem;
 }
 .intro_list ul li:first-child{border-top: 1px solid #ccc;}
 
@@ -397,6 +420,7 @@ header .logo_ex .logo_L .line{
 #search_chk{display: none;}
 #search_chk:checked ~ .mobile_search_box{height: 55px;}
 /* #search_chk ~ .mobile_search_box{display: none;} */
+#search_chk:checked ~ label i{transform: scale(1.15);}
 
 .mobile_search_box{
     position: absolute;
@@ -517,7 +541,7 @@ main{
 }
 .main_wrap .main_search h4{
     color: #fff;
-    font-size: 1.1rem;
+    font-size: 1rem;
     text-align: center;
     padding-top: 10px;
 }
@@ -564,6 +588,7 @@ main{
 .main_wrap .m_search_btn a{
     display: block;
     width: 100%; 
+    font-size: 0.9rem;
 }
 
 .main_wrap .main_reservation{
@@ -576,7 +601,7 @@ main{
 }
 .main_wrap .main_reservation h4{
     color: black;
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding-top: 10px;
 }
 .main_wrap .main_reservation .m_search_btn{
@@ -589,6 +614,7 @@ main{
     
 }
 .main_wrap .main_reservation .m_search_btn a{
+    font-size: 0.9rem;
     /* color: #fff; */
 }
 .main_wrap .main_reservation .m_search_btn .msearch_btn_2{
@@ -605,7 +631,7 @@ main{
 }
 .main_wrap .main_login h4{
     color: #fff;
-    font-size: 1.125rem;
+    font-size: 1rem;
     text-align: center;
     padding-top: 10px;
     
@@ -677,10 +703,10 @@ main{
 }
 .s1box h4{
     margin-top: 10px;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 .s1box p{
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     margin-top: 20px;
 }
 .s1box p span{
@@ -793,7 +819,7 @@ main{
     width: 100%;
     border: 1px solid #ccc;
     margin-bottom: 30px;
-    background-color: #f4f3f3; 
+    background-color: #fff4e8; 
     height: 160px;
 }
 .notice_label{
@@ -967,6 +993,7 @@ main{
    
     margin: 0 10px;
     position: relative;
+    margin-bottom: 20px;
 }
 .media_01 .media_img{}
 .media_01 .media_img a{
@@ -975,7 +1002,8 @@ main{
 }
 .media_01 .media_img a img{
     width: 100%;
-    height: auto;
+    height: 100%;
+    /* height: auto; */
     
 }
 
@@ -1007,7 +1035,7 @@ main{
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
     line-height: 35px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 .section5_tit h4{
     font-size: 1.1rem;
@@ -1016,6 +1044,7 @@ main{
 }
 .sns_box_wrap{
     display: flex;
+    flex-wrap: wrap;
     margin: 0 10px;
     
 }
@@ -1023,13 +1052,246 @@ main{
     width: calc(100% - 50% - 10px);
     border: 1px solid black;
     margin-right: 20px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    position: relative;
 }
 .sns_box:nth-child(2){margin-right: 0;}
+.sns_box:nth-child(4){margin-right: 0;}
 .sns_box img{
     width: 100%;
-    height: auto;
+    height: 100%;
+    border-radius: 10px;
 }
 
-.sns_box .sns_logo{}
-.sns_box .sns_logo a{}
+.sns_box .sns_logo{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    position: absolute;
+    top: -30px; right: 50%;
+    transform: translateX(50%);
+    background-color: #Fff;
+}
+.sns_box .sns_logo a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+    border-radius: 50%;
+}
+.sns_box:nth-child(1) .sns_logo a{color: red;} 
+.sns_box:nth-child(2) .sns_logo a{
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    color: #fff;
+} 
+.sns_box:nth-child(3) .sns_logo a{
+    background-color: #67ae3e;
+    color: #fff;
+}
+.sns_box:nth-child(4) .sns_logo a{
+    background-color: royalblue;
+    color: #fff;
+}
 .sns_box .sns_logo a i{}
+
+
+/*footer*/
+footer{
+    width: 100%;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 5px;
+    background-color: #f4f3f3;
+}
+
+.footer_wrap{
+    display: flex;
+    
+}
+.footer_wrap .foot_logo{
+    width: calc(100% - 85% - 10px);
+    margin-right: 10px;
+}
+.footer_wrap .foot_logo img{
+    width: 100%;
+}
+.footer_wrap .foot_desc{
+    width: 70%;
+}
+.footer_wrap .foot_desc p{
+    font-size: 0.5rem;
+}
+.footer_wrap .foot_famsite{
+    width: calc(100% - 85% -10px);
+    margin-left: 10px;
+}
+.footer_wrap .foot_famsite select{
+    width: 80px;
+    font-size: 0.7rem;
+    outline: none;
+    background-color: #fff;
+
+}
+
+
+/*top btn*/
+.top_btn{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    font-size: 0.5rem;
+    line-height: 30px;
+    background-color: #67ae3e;
+    text-align: center;
+    position: fixed;
+    bottom: 105px; right: 0;
+}
+.top_btn a{
+    display: block;
+    color: #fff;
+}
+
+
+/****************media query**************************/
+@media all and (min-width:601px) {
+    header .logo_ex .logo_M img{width: 50%;}
+    .main_wrap{
+        display: flex;
+        top: -30px;
+    }
+    .main_wrap .main_search{
+        width: calc(100% - 66.6666% - 13.3333px);
+        margin: auto;
+        margin-right: 20px;
+        margin-left: 0;
+        border-radius: 10px 0 0 10px;
+        height: 180px;
+    }
+    .main_wrap .main_reservation{
+        width: calc(100% - 66.6666% - 13.3333px);
+        margin: auto;
+        margin-right: 20px;
+        margin-left: 0;
+        height: 180px;
+    }
+    .main_wrap .main_login{
+        width: calc(100% - 66.6666% - 13.3333px);
+        margin-left: 0;
+        margin: auto;
+        border-radius: 0 10px 10px 0;
+        height: 180px;
+    }
+    .main_wrap .main_search .m_searchbox input{
+        margin-top: 40px;
+    }
+    .main_wrap .main_search .m_searchbox i{
+        top: 55%;
+    }
+    .main_wrap .m_search_btn{
+        margin: 30px auto;
+    }
+    .main_wrap .main_login_box .main_join a{
+        font-size: 0.5rem;
+        margin-right: 0;
+    }
+    .main_wrap .main_login_box{
+        margin: 10px auto;    
+    }
+    .main_wrap .main_reservation .m_search_btn .msearch_btn_2{
+        margin-top: 23px;
+    }
+    /* .main_wrap .main_login h4{font-size: 1.2rem;}
+    .main_wrap .main_reservation h4{font-size: 1.2rem;}
+    .main_wrap .main_search h4{font-size: 1.2rem;} */
+
+    .s1box{
+        width: calc(100% - 75% - 15px);
+        margin: 0;
+        
+        margin-right: 20px;
+    }
+    .section1_box4{margin-right: 0;}
+    .s1box:nth-child(2){margin-right: 20px;}
+    .box3_btn{
+        padding-top: 11px;
+    }
+    .box4_btn{
+        padding-top: 11px;
+    }
+    .sec1_btn{font-size: 1rem;}
+    .section2 .section2_wrap .notice_box1{
+        width: calc(100% - 50% - 10px);
+        margin-right: 20px;
+        border-radius: 10px 0 0 10px;
+    }
+    .notice_box2{
+        width: calc(100% - 50% - 10px);
+        border-radius: 0 10px 10px 0;
+    }
+    .section2 .section2_wrap{
+        display: flex;
+    }
+    .center_box{
+        width: calc(100% - 75% - 20px);
+        height: auto;
+    }
+    #sec3_chk:checked ~ .section3_list{height: 420px;}
+    .center_box.beige{
+        background-color: #fff4e8;
+    }
+    .center_box.gray{
+        background-color: #f4f3f3;
+    }
+    .center_box.gray2{
+        background-color: #f4f3f3;
+        color: black;
+    }
+    .center_box.brown{
+        background-color: #7d6a55;
+        color: #fff;
+    }
+    .media02, .media03, .media04, .media05{
+        width: calc(100% - 50% - 20px);
+        
+    }
+    .media_wrap{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .sns_box{
+        width: calc(100% - 75% - 15px);
+        
+    }
+    .sns_box:nth-child(2){
+        margin-right: 20px;
+    }
+    
+    .sns_box_wrap{
+        margin: 0 auto;
+    }
+    .footer_wrap .foot_logo img{
+        width: 60%;
+    }
+    .footer_wrap .foot_logo{
+        margin-right: 0;
+        margin-left: 10px;
+    }
+    .foot_desc p{
+        font-size: 0.8rem;
+    }
+    .top_btn{
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 0.8rem;
+        bottom: 70px;
+    }
+    .visual_main .visual_slider .v_img img{
+        height: 200px;
+    }
+}
