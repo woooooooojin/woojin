@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript 03</title>
+
+
+    <script>
+
+        //03.24.
+        //증감연산자
+        //a++ ++가 뒤에 있으면 선 명령어처리 후 증가
+        //++a ++가 앞에 있으면 선 증가 후 명령어처리
+
+        // let a = 10;
+        // let b = 20;
+        // let c =3;
+
+        // document.write(++a,'<br />'); //a11
+        // document.write(a++,'<br />'); //w11 a12
+        // document.write(c++,'<br />'); // w3 c4
+        // document.write(++a + b++, '<br />');//a13 b21 w33
+        // document.write(++a + ++b, '<br />');//a14 b21 w36
+
+
+
+        //논리 연산자
+        // let a = 10;
+        // let b = 20;
+        // let m = 30;
+        // let n = 40;
+        // let result;
+
+        // result = a>b || b>=m || m>n;
+        // document.write(result, "<br />"); //0 false
+
+        // result = a>b || b>m || m<=n;
+        // document.write(result, "<br />"); //1 true
+
+        // result = a<b && b>=m && m<=n;
+        // document.write(result, '<br />'); //0 false
+
+        // result = a<=b && b<=m && m<=n;
+        // document.write(result, '<br />'); //1 true
+
+        // result = !(a>b);
+        // document.write(result, '<br />'); //1 true
+
+        // || or연산자 하나라도 true가 존재하면 true(1)을 반환
+        // && and 연산자 하나라도 false가 존재하면 false(0)을 반환
+        // ! not 연산자 피연산자의 값이 false 면 true(1), true면 false(0) 반환
+
+
+        //삼항연산자
+        // let a = 10;
+        // let b = 3;
+        // var result = a>b ? 'JavaScript' : 'Hello';
+        //         //  조건식  true 실행문1   false 실행문2
+        // document.write(result,'<br />')        
+            
+
+
+        // //example 
+        // let num1 = parseInt(prompt('첫번째 수 입력 :'));    
+        // let num2 = parseInt(prompt('두번째 수 입력 :'));   
+        // let num3 = parseInt(prompt('세번째 수 입력 :'));   
+        
+        // // num1>num2 ? document.write('큰수는 ' + num1) : document.write('큰수는 :' + num2);
+        
+       
+        // let max = 0;
+        // let min = 0;
+
+        // num1>num2 ? (max=num1, min=num2) : (max=num2, min=num1);
+        
+
+        // document.write('max = ', max);
+        // document.write('min = ', min);
+
+
+
+        // let result = 0;
+        // let result2 = 0;
+       
+
+        // result = num1>num2 ? num1 : num2;
+        // result2 = num1<num2 ? num1 : num2;
+
+        // document.write('result = ', result);
+        // document.write('result : ', result2);
+
+
+        // let max = 0;    
+        // (num1>num2) && (num1>num3) ? max=num1 : ((num2>num1 && num2>num3) ? max = num2 : max = num3 ); 
+
+
+        //하나의 정수를 입력받아 짝수와 홀수를 구분
+        let num1 = parseInt(prompt('숫자 입력 :'));
+        (num1 % 2) === 0 ? document.write('짝수 : ' + num1) : document.write('홀수 : ' + num1); 
+
+        //신장과 체중을 입력받아 적정 체중 판단 (신장 - 100)*0.9 / 그외 체중미달 과체중으로 구분
+        let height = parseInt(prompt('키 입력 :'));
+        let weight = parseInt(prompt('몸무게 입력 :'));
+        let standard = (height -100)*0.9
+
+        standard < weight ? document.write('과체중입니다') : document.write('과체중아닙니다');
+
+
+
+        //학생의 지출내역 교통비(3000) 식비 6000 음료 3000 하루용돈 10000원으로 지출비용 계산 초과일경우 00원초과로 출력
+         
+        let pay = (3000 + 6000 + 3000);
+        let result = pay - 10000;
+
+        pay > 10000 ? document.write(result + '원 초과') : document.write(result + '원 남음');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    <!-- a++ ++가 뒤에 있으면 선명령처리 후 증가
+    ++a ++가앞에있으면 선증가 후명령처리
+
+
+    비교연산자
+
+    왼쪽에 기준 > 비교할 값 ex) a > 200px
+    a==b a와b는 같으나 데이터타입은 다르다
+    a===b a와b도 같고 데이터형식도 같다
+
+    우선순위
+    괄호연산자 > 단항 > 산술 > 비교 > 논리 > 복합 -->
+
+
+
+
+
+</body>
+</html>
