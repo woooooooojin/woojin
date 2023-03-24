@@ -23,6 +23,9 @@
         <div class="container">
             <div class="logo_ex">
                 <div class="logo_L">
+                    <div class="logo_l_img">
+                        <a href="#!"><img src="./imges/fam_logo.png" alt="img"></a>
+                    </div>
                     <div class="mobile_ham">
                         <input type="checkbox" id="ham_chk">
                         <label for="ham_chk">
@@ -203,7 +206,7 @@
 
                     </div>
                     <!--mobile,tablet ham_menu-->
-                    <!--pc 부민의료원 패밀리사이트 넣기-->
+
 
 
                 </div>
@@ -212,8 +215,28 @@
                     <img src="./imges/main_logo.png" alt="mainlogo">
                 </div>
                 <div class="logo_R">
+
+                    <div class="gnb">
+                        <div class="gnb_login"><a href="#!">로그인</a></div>
+                        <div class="gnb_join"><a href="#!">회원가입</a></div>
+                        <div class="gnb_language">
+                            <input type="checkbox" id="gnb_chk">
+                            <label for="gnb_chk" class="gnb_open">language <i class="fas fa-chevron-down"></i></label>
+                            <label for="gnb_chk" class="gnb_close">language <i class="fas fa-chevron-up"></i></label>
+
+                            <div class="gnb_chk_list">
+                                <ul>
+                                    <li>English</li>
+                                    <li>Japan</li>
+                                    <li>China</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
                     <input type="checkbox" id="search_chk">
-                    <label for="search_chk"><i class="fas fa-search" style="color: #888;"></i></label>
+                    <label for="search_chk" class="search_chk_label"><i class="fas fa-search"
+                            style="color: #888;"></i></label>
                     <div class="mobile_search_box">
                         <input type="search" placeholder=" 검색어를 입력해주세요.">
                         <button type="submit">검색</button>
@@ -221,9 +244,85 @@
 
                 </div>
             </div>
+
         </div>
         <!--container end-->
     </header>
+
+    <nav>
+        <div class="contianer">
+            <div class="lnb">
+                <ul class="lnb_tit">
+                    <li><a href="#!">나의진료정보</a>
+                        <ul class="lnb_myinfo">
+                            <li><a href="#!">온라인 진료예약</a></li>
+                            <li><a href="#!">예약현황조회</a></li>
+                            <li><a href="#!">증명서재발급</a></li>
+                            <li><a href="#!">증병서발급내역</a></li>
+
+                        </ul>
+                    </li>
+                    <!--lnb myinfo end-->
+                    <li><a href="#!">전문센터</a>
+                        <ul class="lnb_center_list">
+                            <li><a href="#!">관절센터</a></li>
+                            <li><a href="#!">로봇수술센터</a></li>
+                            <li><a href="#!">척추내시경센터</a></li>
+                            <li><a href="#!">척추변형센터</a></li>
+                            <li><a href="#!">심혈관센터</a></li>
+                            <li><a href="#!">인공신장센터</a></li>
+                            <li><a href="#!">소화기센터</a></li>
+                            <li><a href="#!">건강검진센터</a></li>
+                            <li><a href="#!">재활운동치료센터</a></li>
+                            <li><a href="#!">외상골절센터</a></li>
+                            <li><a href="#!">지역응급의료기관</a></li>
+                            <li><a href="#!">국제진료센터</a></li>
+                            <li><a href="#!">임상시험센터</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#!">진료안내</a>
+                        <ul class="lnb_medi_info">
+                            <li><a href="#!">진료시간표</a></li>
+                            <li><a href="#!">진료과</a></li>
+                            <li><a href="#!">의료진</a></li>
+                            <li><a href="#!">외래진료</a></li>
+                            <li><a href="#!">입/퇴원</a></li>
+                            <li><a href="#!">응급실</a></li>
+                            <li><a href="#!">진료협력센터</a></li>
+                            <li><a href="#!">국제진료센터</a></li>
+                        </ul>
+                    </li>
+                    <!--lnb_medi_info end-->
+                    <li><a href="#!">이용안내</a>
+                        <ul class="lnb_use_info">
+                            <li><a href="#!">진료상담콜센터</a></li>
+                            <li><a href="#!">비급여진료비</a></li>
+                            <li><a href="#!">장비안내</a></li>
+                            <li><a href="#!">층별안내</a></li>
+                            <li><a href="#!">주차안내</a></li>
+                            <li><a href="#!">편의시설</a></li>
+                            <li><a href="#!">오시는길</a></li>
+                        </ul>
+                    </li>
+                    <!--lnb_use_info end-->
+                    <li><a href="#!">병원소개</a>
+                        <ul class="lnb_intro">
+                            <li><a href="#!">병원장인사말</a></li>
+                            <li><a href="#!">비전과핵심가치</a></li>
+                            <li><a href="#!">부민스토리</a></li>
+                            <li><a href="#!">연혁</a></li>
+                            <li><a href="#!">조직도</a></li>
+                            <li><a href="#!">연구교육</a></li>
+                            <li><a href="#!">임상시험센터</a></li>
+                        </ul>
+                    </li>
+                    <!--lnb intro end-->
+                </ul>
+            </div>
+            <!--lnb end-->
+        </div>
+        <!--container end-->
+    </nav>
 
     <div class="visual_main">
         <div class="container">
@@ -487,64 +586,90 @@
                 <div class="section4_tit">
                     <h4>미디어 센터</h4>
                 </div>
-                <div class="media_01">
-                    <div class="media_img">
-                        <a href="#!"><img src="./imges/media01.PNG" alt="img"></a>
+                <div class="media_all_wrap">
+                    <div class="media_01 media_main">
+                        <div class="media_img">
+                            <a href="#!"><img src="./imges/media01.PNG" alt="img"></a>
 
+                        </div>
+                        <div class="media_desc">
+                            <a href="#!">척추관 협착증과 허리디스크를 혼동하고 계시진 않으신가요??<br />
+                                100세 시대에 접어들면서 자연스럽게 '건강'에 대한 관심이 높아지고
+                                있습니다. 하지만 그와 동시에 퇴행성 질환으로 인하여 통증을
+                                호소하시는 분들도 많아지고 있는데요. 그주에서도 가장 흔하게
+                                나타나는것이 바로 허리에서 나타나는 척추관 협착증 증상입니다.
+                                해당질환과 관련된 정보를 자세하게 이야기를 나누어 보도록 하겠습니다.
+                            </a>
+                        </div>
                     </div>
-                    <div class="media_desc">
-                        <a href="#!">척추관 협착증과 허리디스크를 혼동하고 계시진 않으신가요??</a>
+                    <!--media 01 end-->
+
+                    <div class="media_wrap">
+
+                        <div class="media_01 media02">
+                            <div class="media_img">
+                                <a href="#!"><img src="./imges/media20.jpg" alt="img"></a>
+
+                            </div>
+                            <div class="media_desc">
+                                <a href="#!">소아 휜 다리 성장에 문제없을까??<br />
+                                    공부는 늦게라도 할 수 있지만 성장은 성장판이 닫히면 기회는 사라지기 마련입니다.
+                                    우리 아이의 성장, 주기적인 검사를 통해 성장을 저해하는 요인이 무엇인지 정확히 파악하고
+                                    신속하게 치료하는 것이 중요합니다 !
+                                </a>
+                            </div>
+                        </div>
+                        <!--media 01 end-->
+
+                        <div class="media_01 media03">
+                            <div class="media_img">
+                                <a href="#!"><img src="./imges/media40.jpg" alt="img"></a>
+
+                            </div>
+                            <div class="media_desc">
+                                <a href="#!">배가 자주 아프다면??<br />
+                                    갑작스럽게 배가 꾸룩꾸룩 아픈적이 있지 않으셨나요?
+                                    신경을 쓰는 일이 많아지거나 스트레스를 받게 되면 배가
+                                    아파지다가 설사를 하는 경우가 종종 있으셨을 텐데요.
+                                    그런 경우라면 여길 꼭 주목해 주세요 !
+                                </a>
+                            </div>
+                        </div>
+                        <!--media 01 end-->
+
+                        <div class="media_01 media04">
+                            <div class="media_img">
+                                <a href="#!"><img src="./imges/media30.jpg" alt="img"></a>
+
+                            </div>
+                            <div class="media_desc">
+                                <a href="#!">알코올성 간질환 주의!!<br />
+                                    술을 자주 마시면 알코올성 간질환을 유발합니다
+                                    특히 간은 침묵의 장기라는 별명이 있을정도로
+                                    통증에 둔감합니다. 지금부터 간 관리방법과
+                                    알코올성 간질환을 소개해 드리겠습니다.
+                                </a>
+                            </div>
+                        </div>
+                        <!--media 01 end-->
+
+                        <div class="media_01 media05">
+                            <div class="media_img">
+                                <a href="#!"><img src="./imges/media50.jpg" alt="img"></a>
+
+                            </div>
+                            <div class="media_desc">
+                                <a href="#!">명치 위 콕콕?? 담석증의 모든것!!<br />
+                                    '식사를 하고 자리에 앉으면 속이 더부록해요', '윗배 통증이 있어요'
+                                    한번쯤 겪어본 현상 ! 대수롭지 않게 지나갈수 있지만 지속된다면
+                                    담석증을 의심해 보세요 !
+                                </a>
+                            </div>
+                        </div>
+                        <!--media 01 end-->
                     </div>
+                    <!--media wrap end-->
                 </div>
-                <!--media 01 end-->
-
-                <div class="media_wrap">
-
-                    <div class="media_01 media02">
-                        <div class="media_img">
-                            <a href="#!"><img src="./imges/media20.jpg" alt="img"></a>
-
-                        </div>
-                        <div class="media_desc">
-                            <a href="#!">소아 휜 다리 성장에 문제없을까??</a>
-                        </div>
-                    </div>
-                    <!--media 01 end-->
-
-                    <div class="media_01 media03">
-                        <div class="media_img">
-                            <a href="#!"><img src="./imges/media40.jpg" alt="img"></a>
-
-                        </div>
-                        <div class="media_desc">
-                            <a href="#!">배가 자주 아프다면??</a>
-                        </div>
-                    </div>
-                    <!--media 01 end-->
-
-                    <div class="media_01 media04">
-                        <div class="media_img">
-                            <a href="#!"><img src="./imges/media30.jpg" alt="img"></a>
-
-                        </div>
-                        <div class="media_desc">
-                            <a href="#!">알코올성 간질환 주의!!</a>
-                        </div>
-                    </div>
-                    <!--media 01 end-->
-
-                    <div class="media_01 media05">
-                        <div class="media_img">
-                            <a href="#!"><img src="./imges/media50.jpg" alt="img"></a>
-
-                        </div>
-                        <div class="media_desc">
-                            <a href="#!">명치 위 콕콕?? 담석증의 모든것!!</a>
-                        </div>
-                    </div>
-                    <!--media 01 end-->
-                </div>
-                <!--media wrap end-->
 
 
 
