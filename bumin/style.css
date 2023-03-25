@@ -1312,7 +1312,7 @@ main {
 
 .media_01 {
     width: calc(100% - 20px);
-
+    overflow: hidden;
     margin: 0 10px;
     position: relative;
     margin-bottom: 20px;
@@ -1362,6 +1362,7 @@ main {
     border-bottom: 1px solid #ccc;
     line-height: 35px;
     margin-bottom: 50px;
+    
 }
 
 .section5_tit h4 {
