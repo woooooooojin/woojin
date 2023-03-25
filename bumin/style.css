@@ -20,6 +20,9 @@ a {
 body {
     font-family: 'Noto Sans KR', sans-serif;
 }
+footer{
+    font-family: 'Nanum Gothic', sans-serif;
+}
 
 .contianer {}
 
@@ -1506,6 +1509,7 @@ footer {
     color: #fff;
 }
 
+/*******pc ********/
 .logo_l_img img {
     display: none;
 }
@@ -1730,6 +1734,8 @@ footer {
     }
     header .logo_ex .logo_R .search_chk_label{display: none;}
 
+    /********gnb*********/
+
     .gnb{
         width: 100%;
         font-size: 0.8rem;
@@ -1786,6 +1792,8 @@ footer {
         
     }
     .gnb_chk_list ul li:nth-child(2),.gnb_chk_list ul li:nth-child(3){border-top: 0;}
+
+    /********lnb********/
     .lnb{}
     .lnb .lnb_tit{
         display: flex;
@@ -1992,11 +2000,11 @@ footer {
     .main_wrap .main_search h4{font-size: 1.2rem;}
     .main_wrap .main_reservation h4{font-size: 1.2rem;}
     .main_wrap .main_login h4{font-size: 1.2rem;}
-    .section2 .section2_wrap .notice_box1{height: 200px;}
+    .section2 .section2_wrap .notice_box1{height: 200px; margin-left: 20px;}
     .section2 .section2_wrap .notice_box1 .notice_list{height: 130px;}
     .section2 .section2_wrap .notice_box1 .notice_list a{font-size:1rem ; }
     .section2 .section2_wrap .notice_box1 h4{font-size: 1.2rem;}
-    .notice_box2{height: 200px;}
+    .notice_box2{height: 200px; margin-right: 20px;}
     .sheet_list{height: 120px;}
     .sheet01 a, 
     .sheet02 a, 
@@ -2064,7 +2072,17 @@ footer {
     .section4_wrap{margin-bottom: 20px;}
     .visual_slider .slick-prev{left: 5%;}
     .visual_slider .slick-next{right: 5%;}
-   
+    .section4_tit{
+        height: 50px;
+        line-height: 50px;
+       
+    }   
+    .section4_tit h4{
+        font-size: 1.3rem;
+    }
+    .footer_wrap .foot_logo img{width: 40%;}
+    .footer_wrap .foot_desc p{font-size: 0.8rem;}
+
    
     
 }
