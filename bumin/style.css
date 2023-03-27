@@ -915,6 +915,7 @@ main {
 .section1_wrap {
     display: flex;
     flex-wrap: wrap;
+    margin: 0 10px;
 
 }
 
@@ -1010,7 +1011,9 @@ main {
     margin-top: 40px;
 }
 
-.section2 .section2_wrap {}
+.section2 .section2_wrap{
+    margin: 0 10px;
+}
 
 .section2 .section2_wrap .notice_box1 {
     width: 100%;
@@ -1353,7 +1356,9 @@ main {
 /*************section5****************/
 .section5 {}
 
-.section5_wrap {}
+.section5_wrap{
+    margin: 0 10px;
+}
 
 .section5_tit {
     width: 100%;
@@ -1510,12 +1515,15 @@ footer {
     color: #fff;
 }
 
-/*******pc ********/
+/*******pc에서 보이는것 ********/
 .logo_l_img img {
     display: none;
 }
 .gnb{display: none;}
  nav{display: none;}
+ .quick_menu{display: none;}
+ 
+
 
 
 /****************media query**************************/
@@ -2012,7 +2020,7 @@ footer {
     .section2 .section2_wrap .notice_box1 .notice_list{height: 130px;}
     .section2 .section2_wrap .notice_box1 .notice_list a{font-size:1rem ; }
     .section2 .section2_wrap .notice_box1 h4{font-size: 1.2rem;}
-    .notice_box2{height: 200px; margin-right: 20px;}
+    .notice_box2{height: 200px; margin-right: 20px; margin-left: 20px;}
     .sheet_list{height: 120px;}
     .sheet01 a, 
     .sheet02 a, 
@@ -2164,20 +2172,54 @@ footer {
     }
     .top_btn{display: none;}
 
+    /**********quick menu******************/
     .quick_menu{
-        width: 100px;
+        display: block;
+    }
+    .quick_menu{
+        width: 80px;
         text-align: center;
+        border: 1px solid #ccc;
+        position: fixed;
+        top: 250px;
+        right: 10px;
+        
         
     }
     .qbox{
         height: 50px;
         line-height: 50px;
-        border: 1px solid black;
+        border-bottom: 1px solid #ccc;
+        background-color: #fff;
+        
     }
     .q_top, .q_bot{
         height: 30px;
-        /* line-height: 30px; */
-        border: 1px solid black;
+        background-color: #fff;
+        line-height: 30px;
+        
     }
-    
+    .q_top{border-bottom: 1px solid #ccc;}
+    .quick_menu .menu01{
+        background-color: #67ae3e;
+       
+    }
+    .quick_menu .menu01 a{
+        color: #fff;
+    }
+    .quick_menu .menu04{
+        background-color: #7d6a55;
+        
+    }
+    .quick_menu .menu04 a{
+        color: #fff;
+    }
+    .quick_menu .menu06{
+        background-color: #fff4e8;
+    }
+    .quick_menu a{
+        width: 100%;
+        display: block;
+        font-size: 0.85rem;
+    }
 }

@@ -1,0 +1,1285 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+/* font-family: 'Nanum Gothic', sans-serif; */
+/* font-family: 'Noto Sans KR', sans-serif; */
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+footer{
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+.contianer {}
+
+/******************header***********************/
+header {}
+
+header .logo_ex {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+header .logo_ex .logo_L {
+    width: 20%;
+}
+
+header .logo_ex .logo_M {
+    width: 60%;
+
+
+}
+
+header .logo_ex .logo_M img {
+    width: 70%;
+    margin: 15px auto;
+
+}
+header .logo_ex .logo_M a{
+    width: 100%;
+    display: block;
+}
+
+header .logo_ex .logo_R {
+    width: 20%;
+    font-size: 1.75rem;
+    font-weight: normal;
+}
+
+/*ham_chk*/
+#ham_chk {
+    display: none;
+}
+
+#ham_chk:checked~label .line2 {
+    opacity: 0;
+}
+
+#ham_chk:checked~label .line1 {
+    transform: translate(8px, 9px);
+    rotate: 45deg;
+}
+
+#ham_chk:checked~label .line3 {
+    transform: translate(8px, -9px);
+    rotate: -45deg;
+}
+
+#ham_chk:checked~.ham_menu_list {
+    height: 2500px;
+}
+
+/* #ham_chk ~ .ham_menu_list{display: none;} */
+
+header .logo_ex .logo_L .line {
+    width: 28px;
+    height: 2px;
+    display: block;
+    background-color: #888;
+    margin: 10px auto;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.ham_menu_list {
+    width: 100vw;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    height: 0px;
+    overflow: hidden;
+    transition: .3s;
+    z-index: 9998;
+
+}
+
+.ham_menu_list .box1 {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    background-color: #67ae3e;
+
+
+}
+
+.ham_menu_list .box1 li {
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    font-family: 'Noto Sans KR', sans-serif;
+    width: 50%;
+    font-size: 18px;
+    text-align: left;
+
+}
+
+.ham_menu_list .box1 li:nth-child(2) {
+    height: 50px;
+}
+
+.ham_menu_list .box1 li i {
+    font-size: 1.5rem;
+
+}
+
+.ham_menu_list .box1 li:last-child {
+    text-align: right;
+}
+
+.ham_menu_list .box2 {
+    display: flex;
+}
+
+.ham_menu_list .box2 li {
+    width: 33.3333%;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #ccc;
+    font-size: 0.875rem;
+
+}
+
+.ham_menu_list .box2 li:nth-child(1),
+.ham_menu_list .box2 li:nth-child(2) {
+    border-right: 0;
+}
+
+.ham_menu_list .box2 li.join {
+    background-color: #f4f3f3;
+}
+
+.ham_menu_list .box2 li.box2_login {
+    background-color: #fff4e8;
+}
+
+/*language chk*/
+.ham_menu_list .box2 li.box2_lang {
+    background-color: #7d6a55;
+    color: #fff;
+}
+
+.ham_menu_list .box2 .lang_box .lang_inner {
+    height: 0px;
+    overflow: hidden;
+    transition: .3s;
+    position: relative;
+    z-index: 20;
+}
+
+.ham_menu_list .box2 .lang_box .lang_inner li {
+    border: 1px solid #ccc;
+    width: 100%;
+    font-size: 0.875rem;
+    background-color: #f4f3f3;
+}
+
+.ham_menu_list .box2 .lang_box .lang_inner li a {
+    width: 100%;
+    display: block;
+}
+
+.ham_menu_list .box2 .lang_box .lang_inner li:nth-child(1) {
+    border-bottom: 0;
+}
+
+.ham_menu_list .box2 .lang_box .lang_inner li:nth-child(2) {
+    border-bottom: 0;
+}
+
+#lang_chk {
+    display: none;
+}
+
+#lang_chk:checked~.lang_box .lang_inner {
+    height: 105px;
+}
+
+/* #lang_chk ~ .lang_box .lang_inner{display: none;} */
+
+
+/*나의진료정보*/
+.myinfo {
+    width: 100%;
+    text-align: left;
+    background-color: #fff;
+    line-height: 50px;
+
+}
+
+#myinfo_chk {
+    display: none;
+}
+
+#myinfo_chk:checked~label.myinfo_open {
+    display: block;
+}
+
+#myinfo_chk:checked~label.myinfo_close {
+    display: none;
+}
+
+#myinfo_chk~label.myinfo_open {
+    display: none;
+}
+
+#myinfo_chk~label.myinfo_close {
+    display: block;
+}
+
+#myinfo_chk:checked~.myinfo_list ul {
+    height: 200px;
+}
+
+/* #myinfo_chk ~ .myinfo_list ul{display: none;} */
+
+.myinfo label {
+    padding-left: 5px;
+    height: 50px;
+}
+
+.myinfo_list {
+    width: 100%;
+}
+
+.myinfo_list ul {
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.myinfo_list ul li {
+    display: block;
+    height: 50px;
+    background-color: #f4f3f3;
+    border-bottom: 1px solid #ccc;
+    padding-left: 10px;
+    font-size: 0.8rem;
+
+}
+
+.myinfo_list ul li:first-child {
+    border-top: 1px solid #ccc;
+}
+
+
+
+
+
+
+/*전문센터*/
+.center {
+    width: 100%;
+    background-color: #fff;
+    line-height: 50px;
+    text-align: left;
+}
+
+#center_chk {
+    display: none;
+}
+
+#center_chk:checked~label.center_open {
+    display: block;
+}
+
+#center_chk:checked~label.center_close {
+    display: none;
+}
+
+#center_chk~label.center_open {
+    display: none;
+}
+
+#center_chk~label.center_close {
+    display: block;
+}
+
+#center_chk:checked~.center_list ul {
+    height: 700px;
+}
+
+/* #center_chk ~ .center_list ul{display: none;} */
+
+.center label {
+    height: 50px;
+    border-top: 1px solid #ccc;
+    padding-left: 5px;
+
+
+}
+
+.center_list {
+    width: 100%;
+}
+
+.center_list ul {
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.center_list ul li {
+    display: block;
+    height: 50px;
+    background-color: #f4f3f3;
+    border-bottom: 1px solid #ccc;
+    font-size: 0.8rem;
+    padding-left: 10px;
+    line-height: 50px;
+}
+
+.center_list ul li:first-child {
+    border-top: 1px solid #ccc;
+}
+
+
+
+/*진료안내 medi info*/
+.medi_info {
+    width: 100%;
+    background-color: #fff;
+    line-height: 50px;
+    text-align: left;
+}
+
+#mediinfo_chk {
+    display: none;
+}
+
+#mediinfo_chk:checked~label.mediinfo_open {
+    display: block;
+}
+
+#mediinfo_chk:checked~label.mediinfo_close {
+    display: none;
+}
+
+#mediinfo_chk~label.mediinfo_open {
+    display: none;
+}
+
+#mediinfo_chk~label.mediinfo_close {
+    display: block;
+}
+
+#mediinfo_chk:checked~.mediinfo_list ul {
+    height: 400px;
+}
+
+.medi_info label {
+    height: 50px;
+    border-top: 1px solid #ccc;
+    padding-left: 5px;
+}
+
+.mediinfo_list {
+    width: 100%;
+}
+
+.mediinfo_list ul {
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.mediinfo_list ul li {
+    display: block;
+    height: 50px;
+    background-color: #f4f3f3;
+    border-bottom: 1px solid #ccc;
+    padding-left: 10px;
+    font-size: 0.8rem;
+}
+
+.mediinfo_list ul li:first-child {
+    border-top: 1px solid #ccc;
+}
+
+
+/*이용안내 use_info*/
+.use_info {
+    width: 100%;
+    background-color: #fff;
+    line-height: 50px;
+    text-align: left;
+}
+
+#useinfo_chk {
+    display: none;
+}
+
+#useinfo_chk:checked~label.useinfo_open {
+    display: block;
+}
+
+#useinfo_chk:checked~label.useinfo_close {
+    display: none;
+}
+
+#useinfo_chk~label.useinfo_open {
+    display: none;
+}
+
+#useinfo_chk~label.useinfo_close {
+    display: block;
+}
+
+#useinfo_chk:checked~.useinfo_list ul {
+    height: 350px;
+}
+
+.use_info label {
+    height: 50px;
+    border-top: 1px solid #ccc;
+    padding-left: 5px;
+}
+
+.useinfo_list {
+    width: 100%;
+}
+
+.useinfo_list ul {
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.useinfo_list ul li {
+    display: block;
+    height: 50px;
+    background-color: #f4f3f3;
+    border-bottom: 1px solid #ccc;
+    padding-left: 10px;
+    font-size: 0.8rem;
+}
+
+.useinfo_list ul li:first-child {
+    border-top: 1px solid #ccc;
+}
+
+
+/*병원소개 intro*/
+.intro {
+    width: 100%;
+    background-color: #fff;
+    line-height: 50px;
+    text-align: left;
+
+}
+
+#intro_chk {
+    display: none;
+}
+
+#intro_chk:checked~label.intro_open {
+    display: block;
+}
+
+#intro_chk:checked~label.intro_close {
+    display: none;
+}
+
+#intro_chk~label.intro_open {
+    display: none;
+}
+
+#intro_chk~label.intro_close {
+    display: block;
+}
+
+#intro_chk:checked~.intro_list ul {
+    height: 350px;
+}
+
+.intro label {
+    height: 50px;
+    border-top: 1px solid #ccc;
+    padding-left: 5px;
+}
+
+.intro_list {
+    width: 100%;
+}
+
+.intro_list ul {
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.intro_list ul li {
+    display: block;
+    height: 50px;
+    background-color: #f4f3f3;
+    border-bottom: 1px solid #ccc;
+    padding-left: 10px;
+    font-size: 0.8rem;
+}
+
+.intro_list ul li:first-child {
+    border-top: 1px solid #ccc;
+}
+
+
+
+/*reservation*/
+.reservation {
+    width: 100%;
+
+
+}
+
+.reservation .res_inner {
+
+    width: 100%;
+    display: flex;
+}
+
+.reservation .res_inner .res_online {
+    width: 50%;
+
+    height: 60px;
+    background-color: #67ae3e;
+    line-height: 60px;
+    border: 1px solid #ccc;
+}
+
+.reservation .res_inner .res_online a {
+    width: 100%;
+    color: #fff;
+}
+
+.reservation .res_inner .res_online p {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+}
+
+.reservation .res_inner .res_online p i {
+    color: #fff;
+}
+
+.reservation .res_inner .res_offline {
+    width: 50%;
+    border: 1px solid #ccc;
+    height: 60px;
+    line-height: 60px;
+    background-color: #fff;
+}
+
+.reservation .res_inner .res_offline a {
+    width: 100%;
+
+}
+
+.reservation .res_inner .res_offline p {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+}
+
+.reservation .res_inner .res_offline p i {}
+
+
+/*search box*/
+#search_chk {
+    display: none;
+}
+
+#search_chk:checked~.mobile_search_box {
+    height: 55px;
+}
+
+/* #search_chk ~ .mobile_search_box{display: none;} */
+#search_chk:checked~label i {
+    transform: scale(1.15);
+}
+
+.mobile_search_box {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    height: 0px;
+    overflow: hidden;
+    transition: .3s;
+    z-index: 9999;
+
+
+
+}
+
+.mobile_search_box input[type='search'] {
+    width: 100vw;
+    height: 50px;
+    border-radius: 20px;
+    outline: none;
+    position: relative;
+    border: 1px solid #ccc;
+}
+
+.mobile_search_box button {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 3px;
+    right: 0;
+    border-radius: 0 20px 20px 0;
+    background-color: #67ae3e;
+    color: #fff;
+    border: 0;
+    font-weight: 700;
+
+}
+
+
+/***********mobile_nav****************/
+.mobile_nav{
+    width: 100%;
+}
+.m_nav_wrap{
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    display: flex;
+}
+.mobile_nav .home{
+    width: 30px;
+    height: 30px;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    text-align: center;
+    line-height: 30px;
+    
+}
+.mobile_nav .home a{
+    display: block;
+    width: 100%;
+    height: 100%;
+
+}
+.mobile_nav .nav_01{
+    width: 80px;
+    height: 30px;
+    font-size: 0.6rem;
+    line-height: 30px;
+    text-align: center;
+    border-right: 1px solid #ccc;
+}
+.mobile_nav .nav_01 a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/******subpage tit*******/
+.subpage_tit{
+    width: 100%; 
+}
+.s_tit{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #67ae3e;
+}
+.s_tit h4{
+    color: #fff;
+}
+
+/**********subpage desc*****************/
+.subpage_desc{
+    width: 100%;
+}
+.s_desc_wrap{
+    width: 100%;
+    text-align: center;
+}
+.s_desc_wrap p{
+    padding: 0 5px;
+    margin-top: 30px;
+}
+.s_desc_wrap p:first-child{
+    font-size: 0.85rem;
+}
+.s_desc_wrap p:first-child span{
+    color: #67ae3e;
+}
+.s_desc_wrap p:last-child{
+    font-size: 0.7rem;
+    margin-bottom: 30px;
+}
+.s_desc_wrap p:last-child span{
+    color: #67ae3e;
+}
+
+/**************section****************/
+section{width: 100%;}
+.sub01_img{
+    width: 100%;
+    height: 235px;
+}
+.sub01_img img{
+    width: 100%;
+    height: 100%;
+}
+.sub01_txt{
+    width: 100%;
+    height: 235px;
+    padding: 10px;
+}
+.sub01_txt h5{
+    font-size: 0.8rem;
+}
+.sub01_txt h4{
+    font-size: 0.9rem;
+    font-weight: 650;
+}
+.sub01_txt p{
+    font-size: 0.7rem;
+    margin-top: 30px;
+}
+
+
+
+
+
+
+
+
+/*footer*/
+footer {
+    width: 100%;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 5px;
+    background-color: #f4f3f3;
+    margin-top: 50px;
+}
+
+.footer_wrap {
+    display: flex;
+
+}
+
+.footer_wrap .foot_logo {
+    width: calc(100% - 85% - 10px);
+    margin-right: 10px;
+}
+
+.footer_wrap .foot_logo img {
+    width: 100%;
+}
+
+.footer_wrap .foot_desc {
+    width: 70%;
+}
+
+.footer_wrap .foot_desc p {
+    font-size: 0.5rem;
+}
+
+.footer_wrap .foot_famsite {
+    width: calc(100% - 85% -10px);
+    margin-left: 10px;
+}
+
+.footer_wrap .foot_famsite select {
+    width: 80px;
+    font-size: 0.7rem;
+    outline: none;
+    background-color: #fff;
+
+}
+
+
+/*top btn*/
+.top_btn {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    font-size: 0.5rem;
+    line-height: 30px;
+    background-color: #67ae3e;
+    text-align: center;
+    position: fixed;
+    bottom: 105px;
+    right: 0;
+}
+
+.top_btn a {
+    display: block;
+    color: #fff;
+}
+
+/*******pc에서 보이는것 ********/
+.logo_l_img img {
+    display: none;
+}
+.gnb{display: none;}
+ nav{display: none;}
+ .quick_menu{display: none;}
+ 
+
+
+
+/****************media query**************************/
+@media all and (min-width:601px) {
+    header .logo_ex .logo_M img {
+        width: 40%;
+    }
+
+    .sub01_wrap{
+        display: flex;
+    }
+    .sub01_img{
+        width: calc(100% - 50% - 10px);
+        
+    }
+    .sub01_txt{
+        width: calc(100% - 50% - 10px);
+    }
+    .sub02{order: -1;}
+    .sub04{order: -1;}
+    .mr{margin-right: 20px;}
+    .ml{margin-left: 20px;}
+
+    .s_desc_wrap p:first-child{font-size: 1rem;}
+    .s_desc_wrap p:last-child{font-size: 0.9rem;}
+    .sub01_txt p{font-size: 0.8rem;}
+    .mobile_nav .nav_01{width: 100px;}
+    .s_tit h4{font-size: 1.1rem;}
+
+   
+
+    /**************footer******************/
+    .footer_wrap .foot_logo img {
+        width: 60%;
+    }
+
+    .footer_wrap .foot_logo {
+        margin-right: 0;
+        margin-left: 10px;
+    }
+
+    .foot_desc p {
+        font-size: 0.8rem;
+    }
+
+    .top_btn {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 0.8rem;
+        bottom: 70px;
+    }
+
+    
+}
+
+@media all and (min-width:1025px) {
+    nav{display: block;}
+    .mobile_ham {
+        display: none;
+    }
+
+    .logo_l_img img {
+        display: block;
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .logo_l_img a {
+        width: 100%;
+        display: block;
+    }
+
+    .logo_l_img {
+        width: 100%;
+    }
+
+    header .logo_ex .logo_M img {
+        width: 30%;
+    }
+    header .logo_ex .logo_R .search_chk_label{display: none;}
+
+    /********gnb*********/
+
+    .gnb{
+        width: 100%;
+        font-size: 0.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+       
+        
+    }
+    .gnb>div{
+        margin-right: 10px;
+        
+    }
+    
+    #gnb_chk{display: none;}
+    #gnb_chk:checked ~ label.gnb_open{display: block;}
+    #gnb_chk:checked ~ label.gnb_close{display: none;}
+    #gnb_chk ~ label.gnb_open{display: none;}
+    #gnb_chk ~ label.gnb_close{display: block;}
+
+    #gnb_chk:checked ~ .gnb_chk_list ul{height: 90px;}
+    /* #gnb_chk ~ .gnb_chk_list ul{display: none;} */
+
+    .gnb_chk_list{
+        width: 100%;
+    }
+    .gnb{
+        position: relative;  
+        
+    }
+    .gnb_language{
+        display: block;
+    }
+    .gnb_chk_list ul{
+        /* border: 1px solid #ccc; */
+        position: absolute;
+        top: 25px;
+        z-index: 51;
+        height: 0px;
+        overflow: hidden;
+        transition: .3s;
+    }
+    .gnb_chk_list ul li{
+        width: 70px;
+        height: 30px;
+        border: 1px solid #ccc;
+        line-height: 30px;
+        background-color: #f4f3f3;
+        transition: 0.3s;
+        
+    }
+    .gnb_chk_list ul li a{
+        display: block;
+        width: 100%;
+    }
+    .gnb_chk_list ul li:hover{
+        background-color: #67ae3e;
+        
+    }
+    .gnb_chk_list ul li:hover a{
+        color: #fff;
+    }
+    .gnb_chk_list ul li:nth-child(2),.gnb_chk_list ul li:nth-child(3){border-top: 0;}
+
+    /********lnb********/
+    .lnb{}
+    .lnb .lnb_tit{
+        display: flex;
+        
+        
+    }
+    .lnb .lnb_tit li{
+        display: block;
+        width: 20%;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        border: 1px solid #ccc;
+        
+        transition: .3s;
+    }
+    .lnb .lnb_tit>li>a{
+        display: block;
+        width: 100%;
+        font-size: 1.1rem;
+        transition: .3s;
+    }
+    .lnb .lnb_tit li:nth-child(2),
+    .lnb .lnb_tit li:nth-child(3),
+    .lnb .lnb_tit li:nth-child(4),
+    .lnb .lnb_tit li:nth-child(5){
+        border-left: 0;
+    }
+    .lnb .lnb_tit>li:hover{
+        background-color: #67ae3e;
+    }
+    .lnb .lnb_tit>li:hover>a{
+        color: #fff;
+    }
+    .lnb_tit{
+        position: relative;
+    }
+    .lnb .lnb_tit>li:hover .lnb_myinfo{
+        height: 200px;
+    }
+    .lnb_myinfo{
+        height: 0px;
+        overflow: hidden;
+        transition: .3s;
+        width: 100%;
+        position: absolute;
+        left: 0;top: 50px;
+        z-index: 50;
+    }
+    .lnb_myinfo li{
+        width: 100%;
+        height: 50px;
+        background-color: #f4f3f3;
+        transition: .2s;
+    }
+    .lnb_myinfo li:hover{
+        background-color: #ccc8c8;
+        border: 1px solid #67ae3e;
+    }
+    .lnb_myinfo li a{
+        width: 100%;
+        display: block;
+        font-size: 0.9rem;
+    }
+    /***********lnb center list**************/
+
+    .lnb_center_list{
+        width: 100%;
+        position: absolute;
+        z-index: 50;
+        top: 50px;
+        height: 0px;
+        overflow: hidden;
+        transition: .3s;
+
+    }
+    .lnb .lnb_tit>li:hover .lnb_center_list{
+        height: 650px;
+    }
+    .lnb_center_list li{
+        width: 100%;
+        height: 50px;
+        background-color: #f4f3f3;
+    }
+    .lnb_center_list li:hover{
+        background-color: #ccc8c8;
+        border: 1px solid #67ae3e;
+    }
+    .lnb_center_list li a{
+        width: 100%;
+        display: block;
+        font-size: 0.9rem;
+    }
+
+    /**********lnb medi info******************/
+    .lnb_medi_info{
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        z-index: 50;
+        height: 0;
+        overflow: hidden;
+        transition: .3s;
+    }
+    .lnb .lnb_tit>li:hover .lnb_medi_info{
+        height: 400px;
+    }
+    .lnb_medi_info li{
+        width: 100%;
+        height: 50px;
+        background-color: #f4f3f3;
+    }
+     .lnb_medi_info li:hover{
+        background-color: #ccc8c8;
+        border: 1px solid #67ae3e;
+    }
+    .lnb_medi_info li a{
+        width: 100%;
+        display: block;
+        font-size: 0.9rem;
+    }
+
+    /************lnb use info****************/
+    .lnb_use_info{
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        z-index: 50;
+        height: 0;
+        overflow: hidden;
+        transition: .3s;
+    }
+    .lnb .lnb_tit>li:hover .lnb_use_info{
+        height: 350px;
+    }
+    .lnb_use_info li{
+        width: 100%;
+        height: 50px;
+        background-color: #f4f3f3;
+    }
+    .lnb_use_info li:hover{
+        background-color: #ccc8c8;
+        border: 1px solid #67ae3e;
+    }
+    .lnb_use_info li a{
+        width: 100%;
+        display: block;
+        font-size: 0.9rem;
+    }
+    /*************lnb intro*****************/
+    .lnb_intro{
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        z-index: 50;
+        height: 0;
+        overflow: hidden;
+        transition: .3s;
+    }
+    .lnb .lnb_tit>li:hover .lnb_intro{
+        height: 350px;
+    }
+    .lnb_intro li{
+        width: 100%;
+        height: 50px;
+        background-color: #f4f3f3;
+    }
+    .lnb_intro li:hover{
+        background-color: #ccc8c8;
+        border: 1px solid #67ae3e;
+    }
+    .lnb_intro li a{
+        width: 100%;
+        display: block;
+        font-size: 0.9rem;
+    }
+
+    .s_tit h4{
+        font-size: 1.5rem;
+    }
+    .m_nav_wrap{
+        border-top: 0;
+    }
+    .sub01_img{
+        height: 300px;
+    }
+    .s_desc_wrap p:first-child{
+        font-size: 1.4rem;
+    }
+    .s_desc_wrap p:last-child{
+        font-size: 1.1rem;
+        margin-bottom: 50px;
+    }
+    .sub01_txt h5{
+        font-size: 1.1rem;
+    }
+    .sub01_txt h4{
+        font-size: 1.3rem;
+    }
+    .sub01_txt p{
+        font-size: 1rem;
+    }
+    .mobile_nav .nav_01{
+        width: 150px;
+        font-size: 0.8rem;
+    }
+    .mobile_nav .home{
+        width: 50px;
+    }
+
+    /*******footer***********/
+    .footer_wrap .foot_logo img{width: 40%;}
+    .footer_wrap .foot_desc p{font-size: 0.8rem;}
+    .footer_wrap .foot_famsite select{
+        width: 100px;
+        font-size: 0.8rem;
+    }
+
+}
+
+@media all and (min-width:1276px) {
+    .container{
+        width: 1276px;
+        margin: 0 auto;
+    }
+
+    .mobile_nav .nav_01{
+        width: 190px;
+    }
+
+    
+
+    /*******footer*******/
+    .footer_wrap .foot_desc p{
+        line-height: 18px;
+    }
+    .footer_wrap .foot_famsite select{
+       
+        margin-left: 92px;
+    }
+    .top_btn{display: none;}
+
+    /**********quick menu******************/
+    .quick_menu{
+        display: block;
+    }
+    .quick_menu{
+        width: 80px;
+        text-align: center;
+        border: 1px solid #ccc;
+        position: fixed;
+        top: 250px;
+        right: 10px;
+        
+        
+    }
+    .qbox{
+        height: 50px;
+        line-height: 50px;
+        border-bottom: 1px solid #ccc;
+        background-color: #fff;
+        
+    }
+    .q_top, .q_bot{
+        height: 30px;
+        background-color: #fff;
+        line-height: 30px;
+        
+    }
+    .q_top{border-bottom: 1px solid #ccc;}
+    .quick_menu .menu01{
+        background-color: #67ae3e;
+       
+    }
+    .quick_menu .menu01 a{
+        color: #fff;
+    }
+    .quick_menu .menu04{
+        background-color: #7d6a55;
+        
+    }
+    .quick_menu .menu04 a{
+        color: #fff;
+    }
+    .quick_menu .menu06{
+        background-color: #fff4e8;
+    }
+    .quick_menu a{
+        width: 100%;
+        display: block;
+        font-size: 0.85rem;
+    }
+}
