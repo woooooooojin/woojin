@@ -342,6 +342,10 @@ header .logo_ex .logo_L .line {
     padding-left: 10px;
     line-height: 50px;
 }
+.center_list ul li a{
+    width: 100%;
+    display: block;
+}
 
 .center_list ul li:first-child {
     border-top: 1px solid #ccc;
@@ -1231,6 +1235,11 @@ main {
     border-radius: 10px;
     cursor: pointer;
 }
+.center_box a{
+    width: 100%;
+    display: block;
+    color: #fff;
+}
 
 .center_box h4 {
     margin-top: 5px;
@@ -2008,6 +2017,16 @@ footer {
     .main_wrap .main_login_box .main_join a:last-child{
         margin-right: 26px;
     }
+    .main_wrap .m_search_btn div{
+        height: 30px;
+        line-height: 30px;
+    }
+    .main_wrap .main_login_box button{
+        height: 30px;
+    }
+    .main_wrap .main_login_box input{
+        height: 25px;
+    }
     .section1_wrap{margin: 0 20px;}
     .s1box{height: 200px;}
     .s1box h4{font-size: 1.15rem;}
@@ -2115,19 +2134,21 @@ footer {
         width: 100%;
        
     }
-    .visual_main .v_img{
-        height: 250px;
+    .visual_main .visual_slider .v_img img{
+        height: 280px;
     }
     .visual_slider .slick-next{
-        right: 7%;
-        top: 42%;
+        right: 8%;
+        top: 50%;
     }
     .visual_slider .slick-prev{
-        left: 7%;
-        top: 42%;
+        left: 8%;
+        top: 50%;
     }
+    .visual_slider .slick-next::after{font-size: 40px;}
+    .visual_slider .slick-prev::after{font-size: 40px;}
     .main_wrap{
-        top: -85px;
+        top: -50px;
     }
    
     .main_search .m_search_btn{
@@ -2155,7 +2176,7 @@ footer {
         height: 30px;
     }
     .section1{
-        margin-top: -50px;
+        margin-top: -10px;
     }
     .s1box .sec1_btn a{
         height: 40px;

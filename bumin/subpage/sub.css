@@ -882,7 +882,7 @@ footer {
         margin-left: 10px;
     }
 
-    .foot_desc p {
+    .footer_wrap .foot_desc p {
         font-size: 0.8rem;
     }
 
