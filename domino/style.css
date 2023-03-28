@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none
+}
+
+a {
+    text-decoration: none;
+    color: black
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+/*font-family: 'Noto Sans KR', sans-serif;*/
+
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 300;
+}
+.container{
+    width: 1276px;
+    margin: 0 auto;
+}
+
+/****************header************************/
+
+header{
+    width: 100%;
+    margin-top: 10px;
+}
+header .header_wrap{
+    display: flex;
+}
+header .main_logo{
+    width: 33.3333%;
+}
+header .main_logo img{
+    width: 50%;    
+}
+header .head_promotion{
+    width: 33.3333%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+header .head_promotion .line{
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    margin-top: 10px;
+    
+}
+header .head_promotion .line_txt{
+    text-align: center;
+    color: #666;
+    cursor: pointer;
+
+}
+header .gnb{
+    width: 33.3333%;
+    
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-size: 13px;
+}
+header .gnb .gnb_login{
+
+    margin-right: 10px;
+}
+header .gnb .gnb_join{
+    margin-right: 10px;
+}
+header .gnb .gnb_language{
+    position: relative;
+}
+#lang_chk{display: none;}
+#lang_chk:checked ~ label.lang_open{display: none;}
+#lang_chk:checked ~ label.lang_close{display: block;}
+#lang_chk ~ label.lang_close{display: none;}
+#lang_chk ~ label.lang_open{display: block;}
+
+#lang_chk:checked ~ .gnb_lang_list{height: 70px;}
+/*#lang_chk ~ .gnb_lang_list{display: none;}*/
+
+.gnb_lang_list{
+    width: 100%;
+    height: 0px;
+    transition: 0.3s;
+    overflow:hidden;
+    position: absolute;
+    top: 20px;
+}
+.gnb_lang_list a{
+    display: block;
+    height: 25px;
+    text-align: center;
+    width: 100%;
+    line-height: 25px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    color: steelblue;
+    font-weight: normal;
+    margin-top: 3px;
+    
+}
+
+
+
+
