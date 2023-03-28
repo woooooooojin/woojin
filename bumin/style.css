@@ -655,6 +655,7 @@ header .logo_ex .logo_L .line {
 .visual_main {
     width: 100%;
     height: auto;
+    position: relative;
 
 }
 
@@ -733,6 +734,19 @@ header .logo_ex .logo_L .line {
 
 .visual_slider .slick-dots li.slick-active button {
     background-color: #67ae3e;
+}
+
+.visual_main .container .control{
+    position: absolute;
+    top: 7%; right: 20%;
+    font-size: 0.7rem;
+}
+.visual_main .container .control a{
+    margin-right: 5px;
+}
+.visual_main .container .control a i{
+    color: #fff;
+   
 }
 
 
@@ -1763,6 +1777,12 @@ footer {
     .visual_main .visual_slider .v_img img {
         height: 200px;
     }
+    .visual_main .container .control{
+        top: 3.5%;
+        right: 15%;
+        font-size: 0.9rem;
+    }
+    
 }
 
 @media all and (min-width:1025px) {
@@ -2284,4 +2304,19 @@ footer {
         font-size: 0.85rem;
     }
     .pop_up{display: block;}
+
+    .visual_slider .slick-dots {
+        right: 30%;
+    }
+    .visual_main .container .control{
+        right: 35%;
+        top: 2.5%;
+        font-size: 1rem;
+    }
+    .visual_slider .slick-next{
+        right: 20%;
+    }
+    .visual_slider .slick-prev{
+        left: 20%;
+    }
 }
