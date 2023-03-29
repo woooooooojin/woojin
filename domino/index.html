@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Domino</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
@@ -18,11 +19,11 @@
                     <img src="./imges/logo_main.PNG" alt="logo">
                 </div>
                 <div class="head_promotion">
-                   
+
                     <div class="line_txt">
                         <i class="fas fa-mouse-pointer"></i> 주변매장의 프로모션을 확인해보세요!
                     </div>
-                     <div class="line"></div>
+                    <div class="line"></div>
                 </div>
                 <div class="gnb">
                     <div class="gnb_login"><a href="#!">로그인</a></div>
@@ -38,15 +39,16 @@
                         </div>
                     </div>
                 </div>
-            </div><!--header wrap end-->
+            </div>
+            <!--header wrap end-->
         </div>
         <!--container end-->
     </header>
 
     <nav>
-        <div class="container">
+        <div class="container navcont">
             <div class="lnb_wrap">
-                <ul>
+                <ul class="lnb">
                     <li><a href="#!">메뉴</a></li>
                     <li><a href="#!">e-쿠폰</a></li>
                     <li><a href="#!">상품권 선물</a></li>
@@ -57,14 +59,82 @@
                         <input type="checkbox" id="more_chk">
                         <label for="more_chk">더보기 <i class="fas fa-chevron-down"></i></label>
                         <div class="more_list">
-                            
+                            <div class="more_list_wrap">
+                                <div class="more_box">
+                                    <a href="#!">도미노 서비스</a>
+                                    <ul>
+                                        <li><a href="#!">매니아 혜택</a></li>
+                                        <li><a href="#!">도미노 모멘트</a></li>
+                                        <li><a href="#!">퀵오더</a></li>
+                                        <li><a href="#!">단체주문 서비스</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="more_box">
+                                    <a href="#!">고객센터</a>
+                                    <ul>
+                                        <li><a href="#!">자주하는 질문</a></li>
+                                        <li><a href="#!">문의하기</a></li>
+                                        <li><a href="#!">칭찬하기</a></li>
+                                        <li><a href="#!">건의하기</a></li>
+
+                                    </ul>
+                                </div>
+
+                                <div class="more_box">
+                                    <a href="#!">회사소개</a>
+                                    <ul>
+                                        <li><a href="#!">한국도미노피자</a></li>
+                                        <li><a href="#!">광고갤러리</a></li>
+                                        <li><a href="#!">사회공헌활동</a></li>
+                                        <li><a href="#!">가맹점모집</a></li>
+                                        <li><a href="#!">인재채용</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--more list wrap end-->
                         </div>
-                
+                        <!--more_list end-->
+
                     </li>
                 </ul>
-            </div><!--lnb wrap end-->
-        </div><!--container end-->
+            </div>
+            <!--lnb wrap end-->
+        </div>
+        <!--container end-->
     </nav>
+
+    <div class="visual_main">
+        <div class="container visual_cont">
+            <div class="visual_main_wrap">
+                <div class="visual">
+                    <div>
+                        <img src="./imges/visual_main01.jpg" alt="img">
+                    </div>
+                    <div>
+                        <img src="./imges/visual_main02.jpg" alt="img">
+                    </div>
+                    <div>
+                        <img src="./imges/visual_main03.jpg" alt="img">
+                    </div>
+                  </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.visual').slick({
+                // setting-name: setting-value
+            });
+        });
+    </script>
 </body>
 
 </html>
