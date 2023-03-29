@@ -167,11 +167,11 @@ nav{width: 100%; margin-top: 30px;}
     position: absolute;
     left: 0;top: 45px;
     background-color: #fff;
+    z-index: 999;
 }
 .container.navcont{position: relative;}
 .more_list .more_list_wrap{
     display: flex;
-    border: 1px solid #ccc;
 }
 .more_list .more_box{
     width: 33.3333%;
@@ -203,7 +203,13 @@ nav{width: 100%; margin-top: 30px;}
 
 /**************visual_main****************/
 .visual_main{width: 100%;}
-
+.container.visual_cont{
+    width: 100%;
+}
+.visual_main .visual{}
+.visual_main .visual img{
+    width: 100%;
+}
 
 
 
