@@ -216,21 +216,21 @@ nav{width: 100%; margin-top: 30px;}
     height: 350px;
 }
 .visual_main_wrap{position: relative;}
-.slick-slider .slick-arrow{
+.visual.slick-slider .slick-arrow{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     font-size: 0;
     visibility: hidden;
 }
-.slick-slider .slick-prev{
+.visual.slick-slider .slick-prev{
     z-index: 10;
     left: 3%;
 }
-.slick-slider .slick-next{
+.visual.slick-slider .slick-next{
     right: 3%;
 }
-.slick-slider .slick-prev::after{
+.visual.slick-slider .slick-prev::after{
     content: "\f053";
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
@@ -238,7 +238,7 @@ nav{width: 100%; margin-top: 30px;}
     font-size: 50px;
     color: #238ece;
 }
-.slick-slider .slick-next::after{
+.visual.slick-slider .slick-next::after{
     content: "\f054";
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
@@ -246,16 +246,16 @@ nav{width: 100%; margin-top: 30px;}
     font-size: 50px;
     color: #238ece;
 }
-.slick-dots{
+.visual.slick-dotted .slick-dots{
     position: absolute;
     bottom: 20px;right: 50%;
    
 }
-.slick-dots li{
+.visual.slick-dotted .slick-dots li{
     display: inline-block;
     margin-right: 10px;
 }
-.slick-dots li button{
+.visual.slick-dotted li button{
     border: 0;
     width: 15px;
     height: 15px;
@@ -263,7 +263,7 @@ nav{width: 100%; margin-top: 30px;}
     background-color: #fff;
     font-size: 0;
 }
-.slick-dots li.slick-active button{
+.visual.slick-dotted li.slick-active button{
     background-color: #238ece;
 }
 
@@ -495,6 +495,7 @@ main .main_wrap .e_coupon a p{
 .section2{
     width: 100%;
     margin-top: 50px;
+    
 }
 .section2 h4{
     text-align: center;
@@ -509,6 +510,8 @@ main .main_wrap .e_coupon a p{
     height: 300px;
     margin-right: 20px;
     cursor: pointer;
+    height: 380px;
+   
     
 }
 .section2_wrap .new_box:hover img{
@@ -563,3 +566,97 @@ main .main_wrap .e_coupon a p{
     color: #ff143c;
 }
 
+
+/******************section3*********************/
+.section3{
+    width: 100%;
+    margin-top: 50px;
+}
+.section3 .container>h4{
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.section3 .section3_wrap{
+    width: 100%;
+}
+.section3 .section3_wrap .best_seller{
+    width: 100%;
+}
+.section3 .section3_wrap .best_box{
+    width: 100%;
+}
+.section3 .section3_wrap .best_box img{
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+}
+.section3 .section3_wrap .best_desc{
+    width: 100%;
+}
+.section3 .section3_wrap .best_desc h4{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.section3 .section3_wrap .best_desc .best_price_wrap{
+   padding-left: 50px;
+}
+.section3 .section3_wrap .best_desc .best_price{
+    float: left;
+    margin-right: 30px;
+    
+}
+.section3 .section3_wrap .best_desc .best_price2{
+    float: left;
+    
+}
+.section3 .section3_wrap .best_desc p{
+    font-weight: 600;
+    display: inline-block;
+    
+    
+}
+.section3 .section3_wrap .best_desc p span{
+    color: #ff143c;
+    font-weight: 600;
+}
+.best_seller{
+    position: relative;
+}
+.best_seller .slick-arrow{
+    position: absolute;
+    top: -30px; right: 0;
+    font-size: 0;
+    visibility: hidden;
+    
+}
+.best_seller .slick-arrow.slick-next{
+    right: 4px;
+}
+
+.best_seller .slick-arrow.slick-prev{
+    z-index: 10;
+    right: 50px;
+}
+.best_seller .slick-arrow.slick-next::after{
+    content: "\f054";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    visibility: visible;
+    font-size: 25px;
+    color: #fff;
+    padding: 5px;
+    background-color: #ff143c;
+}
+.best_seller .slick-arrow.slick-prev::after{
+    content: "\f053";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    visibility: visible;
+    font-size: 25px;
+    color: #fff;
+    padding: 5px;
+    background-color: #ff143c;
+}
