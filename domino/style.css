@@ -491,4 +491,74 @@ main .main_wrap .e_coupon a p{
     height: 100%;
 }
 
+/***************section2*****************/
+.section2{
+    width: 100%;
+    margin-top: 50px;
+}
+.section2 h4{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.section2 .section2_wrap{
+    display: flex;
+}
+.section2_wrap .new_box{
+    width: calc(100% - 75% - 15px);
+    height: 300px;
+    margin-right: 20px;
+    cursor: pointer;
+    
+}
+.section2_wrap .new_box:hover img{
+    transform: scale(1.1);
+}
+.new_box .img_wrap{overflow: hidden;}
+.section2_wrap .new_box img{
+    width: 100%;
+    height: 100%;
+    transition: .3s;
+}
+.section2_wrap .new_box:last-child{
+    margin-right: 0;
+}
+.section2_wrap .new_box .new_desc{
+    width: 100%;
+    
+}
+.section2_wrap .new_box .new_desc .desc_wrap{
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    height: 40px;
+}
+.section2_wrap .new_box .new_desc .desc_wrap h4{
+    margin-left: 50px;
+    float: left;
+    font-size: 20px;
 
+}
+.section2_wrap .new_box .new_desc .desc_wrap .new{
+    float: left;   
+    background-color: #ff143c;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 11px;
+    height: 15px;
+    line-height: 15px;
+    margin-top: 6px;
+    text-align: center;
+    padding: 0 3px;
+    
+}
+.section2_wrap .new_box .new_desc .price_wrap{
+    display: flex;
+    justify-content: space-around;
+}
+.section2_wrap .new_box .new_desc .price{
+    font-weight: 600;
+}
+.section2_wrap .new_box .new_desc .price span{
+    color: #ff143c;
+}

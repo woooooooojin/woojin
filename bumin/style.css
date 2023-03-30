@@ -2157,6 +2157,11 @@ footer {
     }
     .sns_box img{transition: .3s;}
     .sns_box:hover img {transform: scale(1.1);}
+    .sns_box .img_wrap{
+        border-radius: 10px;
+        overflow: hidden;
+        height: 100%;
+    }
     .sns_box{width: calc(100% - 75% - 25px);}
     .sns_box:nth-child(1){margin-left: 20px;}
     .section5_tit{
