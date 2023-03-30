@@ -947,11 +947,12 @@ main {
     margin-right: 20px;
     margin-bottom: 20px;
     text-align: center;
-    box-shadow: 5px 5px 3px rgb(177, 175, 175);
+    
     transition: .3s;
 }
 .s1box:hover{
     transform: scale(1.03);
+    box-shadow: 5px 5px 3px rgb(177, 175, 175);
 }
 
 .s1box:nth-child(2n) {
