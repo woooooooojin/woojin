@@ -948,6 +948,10 @@ main {
     margin-bottom: 20px;
     text-align: center;
     box-shadow: 5px 5px 3px rgb(177, 175, 175);
+    transition: .3s;
+}
+.s1box:hover{
+    transform: scale(1.03);
 }
 
 .s1box:nth-child(2n) {
@@ -1896,7 +1900,7 @@ footer {
         height: 50px;
         line-height: 50px;
         text-align: center;
-        border: 1px solid #ccc;
+        /* border: 1px solid #ccc; */
         
         transition: .3s;
     }
@@ -1937,7 +1941,8 @@ footer {
         width: 100%;
         height: 50px;
         background-color: #f4f3f3;
-        transition: .2s;
+        border: 1px solid #ccc;
+        transition: .3s;
     }
     .lnb_myinfo li:hover{
         background-color: #ccc8c8;
@@ -1967,6 +1972,7 @@ footer {
         width: 100%;
         height: 50px;
         background-color: #f4f3f3;
+        border: 1px solid #ccc;
     }
     .lnb_center_list li:hover{
         background-color: #ccc8c8;
@@ -1995,6 +2001,7 @@ footer {
         width: 100%;
         height: 50px;
         background-color: #f4f3f3;
+        border: 1px solid #ccc;
     }
      .lnb_medi_info li:hover{
         background-color: #ccc8c8;
@@ -2023,6 +2030,7 @@ footer {
         width: 100%;
         height: 50px;
         background-color: #f4f3f3;
+        border: 1px solid #ccc;
     }
     .lnb_use_info li:hover{
         background-color: #ccc8c8;
@@ -2050,6 +2058,7 @@ footer {
         width: 100%;
         height: 50px;
         background-color: #f4f3f3;
+        border: 1px solid #ccc;
     }
     .lnb_intro li:hover{
         background-color: #ccc8c8;
