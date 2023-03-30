@@ -766,6 +766,7 @@ main {
     height: 150px;
     border-radius: 10px 10px 0 0;
     text-align: center;
+    box-shadow: 5px 5px 3px rgb(177, 175, 175);
 }
 
 .main_wrap .main_search h4 {
@@ -835,6 +836,7 @@ main {
     border: 1px solid #ccc;
     margin-top: 20px;
     text-align: center;
+    box-shadow: 5px 5px 3px rgb(177, 175, 175);
 }
 
 .main_wrap .main_reservation h4 {
@@ -869,6 +871,7 @@ main {
     height: 150px;
     border-radius: 0px 0px 10px 10px;
     margin-top: 20px;
+    box-shadow: 5px 5px 3px rgb(177, 175, 175);
 }
 
 .main_wrap .main_login h4 {
@@ -944,6 +947,7 @@ main {
     margin-right: 20px;
     margin-bottom: 20px;
     text-align: center;
+    box-shadow: 5px 5px 3px rgb(177, 175, 175);
 }
 
 .s1box:nth-child(2n) {
@@ -1041,6 +1045,7 @@ main {
     height: 160px;
     border-radius: 10px;
     margin-bottom: 20px;
+    box-shadow: 5px 5px 3px rgb(177, 175, 175);
 }
 
 .section2 .section2_wrap .notice_box1 h4 {
@@ -1117,6 +1122,7 @@ main {
     margin-bottom: 30px;
     background-color: #f4f3f3;
     height: 160px;
+    box-shadow: 5px 5px 3px rgb(177, 175, 175);
 }
 
 .notice_label {
@@ -1767,9 +1773,9 @@ footer {
     }
 
     .top_btn {
-        width: 40px;
-        height: 40px;
-        line-height: 40px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
         font-size: 0.8rem;
         bottom: 70px;
     }
