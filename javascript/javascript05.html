@@ -37,16 +37,33 @@
         // let min = 0;
 
 
-        // if (a > b) {
-        //     if(a > c){
-        //         max = a;
-        //     }if(b > c){
+        // if (a > b && a > c) {
+        //     max = a;
+        //     if(b > c){
         //         mid = b;
         //         min = c;
-        //     }
-        // } else {
+        //     }else {
         //     mid = c;
         //     min = b;
+        // } 
+        // }else if(b>c){
+        //     max = b;
+        //     if(a>c){
+        //         mid = a;
+        //         min = c;
+        //     }else{
+        //         mid= c;
+        //         min = a;
+        //     }
+        // }else{
+        //     max = c;
+        //     if(a>b){
+        //         mid =a;
+        //         min=b;
+        //     }else{
+        //         mid=b;
+        //         min=a;
+        //     }
         // }
 
         // document.write('큰수는 :' + max + "작은수는 :" + min + "중간 :" + mid);
@@ -145,29 +162,68 @@
         // }
 
         //if 문으로
+        // let menu = prompt('메뉴 선택 : pizza(p), spagetti(s), risotto(r), drink(d)');
+
+        // if( menu === 'p' || menu === 'P'){
+        //     document.write('pizza 주문');  
+        // }else if(menu ==='s' || menu ==='S'){
+        //     documnet.write('spagetti 주문');
+        // }else if(menu === 'r' || menu ==='R'){
+        //     document.write('risotto 주문');
+        // }else if(menu === 'd' || menu ==='D'){
+        //     document.write('drink 주문')
+        // }else{
+        //     document.write('메뉴에없다')
+        // }
         
 
 
 
 
-        // let sum = 253;
+        // let a = parseInt(prompt('a점수 :'));
+        // let b = parseInt(prompt('b점수 :'));
+        // let c = parseInt(prompt('c점수 :'));
+        // let sum = a + b + c;
         // let ave = parseInt(sum / 3);
         // let result = Math.floor(ave / 10); //floor 내림함수 
 
         // switch(result){
         //     case 10 :
         //     case 9 :
-        //     document.write('A'); break;
+        //     document.write('A' + '<br />'); document.write('a점수 :' + a + " b점수 : " + b + ' c점수 :' + c); break;
         //     case 8 :
-        //     document.write('B'); break;
+        //     document.write('B' + '<br />');  document.write('a점수 :' + a + "b점수 : " + b + 'c점수 :' + c); break;
         //     case 7 :
-        //     document.write('C'); break;    
+        //     document.write('C' + '<br />');  document.write('a점수 :' + a + "b점수 : " + b + 'c점수 :' + c); break;    
         //     case 6 :
-        //     document.write('D'); break;  
+        //     document.write('D' + '<br />');  document.write('a점수 :' + a + "b점수 : " + b + 'c점수 :' + c); break;  
         //     default :
-        //     document.write('F');
+        //     document.write('F' + '<br />');  document.write('a점수 :' + a + "b점수 : " + b + 'c점수 :' + c);
 
         // }
+       
+
+        //if 문으로
+
+        // let a = parseInt(prompt('a점수 :'));
+        // let b = parseInt(prompt('b점수 :'));
+        // let c = parseInt(prompt('c점수 :'));
+        // let sum = a + b + c;
+        // let ave = parseInt(sum / 3);
+        // let result = Math.floor(ave / 10); //floor 내림함수 
+
+        // if(result === 10 || result === 9){
+        //     document.write('A');
+        // }else if(result === 8){
+        //     document.write('B');
+        // }else if(result === 7){
+        //     document.write('C');
+        // }else if(result === 6){
+        //     document.write('D');
+        // }else{
+        //     document.write('F');
+        // }
+
 
 
         // let num1 = parseInt(prompt('num1 : '));
@@ -190,6 +246,24 @@
 
 
         // }
+
+        //if문
+        // let num1 = parseInt(prompt('num1 : '));
+        // let num2 = parseInt(prompt('num2 : '));
+        
+        // let math = prompt("연산자를 선택");
+
+        // if(math === '+'){
+        //     document.write(num1 + num2);
+        // }else if(math === '-'){
+        //     document.write(num1 - num2);
+        // }else if(math === '*'){
+        //     document.write(num1 * num2);
+        // }else if(math === '/'){
+        //     document.write(num1 / num2);
+        // }
+
+        
 
 
         // let site = prompt('이동할 사이트 입력:naver, daum, goolge, nate 중 선택');
