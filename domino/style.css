@@ -107,7 +107,12 @@ header .gnb .gnb_language{
     color: steelblue;
     font-weight: normal;
     margin-top: 3px;
+    transition: .3s;
     
+}
+.gnb_lang_list a:hover{
+    background-color: #238ece;
+    color: #fff;
 }
 
 /**************lnb***************/
