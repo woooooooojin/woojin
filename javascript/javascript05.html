@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript05</title>
+
+    <script>
+        //중첩if
+        // const id = 'green';
+        // const pw = '1234'; 
+
+        // let userId = prompt('아이디입력 : ');
+        // let userPw = prompt('패스워드입력 : '); 
+
+        // if(userId === id) { 
+        //     if(userPw === pw){
+        //         alert('환영합니다');
+        //     }else{
+        //         alert('pw확인');
+        //     }
+        // }else{
+        //     alert('일치하는아이디 없음');
+        // }
+
+
+        //세개의수 큰값 중간값 작은값 출력
+
+        // let a = parseInt(prompt('a 입력 : '));
+        // let b = parseInt(prompt('b 입력 : '));
+        // let c = parseInt(prompt('c 입력 : '));
+
+        // let max = 0;
+        // let mid = 0;
+        // let min = 0;
+
+
+        // if (a > b) {
+        //     if(a > c){
+        //         max = a;
+        //     }if(b > c){
+        //         mid = b;
+        //         min = c;
+        //     }
+        // } else {
+        //     mid = c;
+        //     min = b;
+        // }
+
+        // document.write('큰수는 :' + max + "작은수는 :" + min + "중간 :" + mid);
+
+
+
+        //성별 입력 : 주민번호 substr(7,1)
+
+        // let num = prompt('주민번호 7자리 입력 : ', '123456-1');
+        // let result = num.substr(7,1);
+        // let mil = 0;
+
+        // if(result == 1 || result == 3){
+        //     let mil =  prompt("군필입니까? : ",'군필 0 미필 1');
+
+        //         if(mil = '0'){
+        //             alert('군필입니다');
+
+        //         }else{
+        //             alert('미필입니다');
+
+        //     }
+
+
+        // }else if(result == 2 || result == 4){
+        //     alert('여자입니다');
+        // }
+
+
+
+
+
+
+        //switch case
+
+        //break 모듈 블럭을 탈출 
+        //default 무조건 실행하는 기본값  
+
+        // let num = prompt("번호를 선택하세요!");
+        // switch(num) {
+        //     case '1' : document.write("예금조회");
+        //     break;
+        //     case '2' : document.write("예금출금");
+        //     break;
+        //     case '3' : document.write("예금입금");
+        //     break;
+        //     case '4' : document.write("예금이체");
+        //     break;
+        //     default :
+        //     document.write("잘못눌렀음");
+        // }
+
+
+        //if 문으로
+        // let num =  prompt('번호를 입력하세요!') ;
+
+        // if(num == '1'){
+        //     document.write("예금조회");
+        // }else if(num == '2'){
+        //     document.write("예금출금");
+        // }else if(num == '3'){
+        //     document.write("예금입금");
+        // }else if(num == '4'){
+        //     document.write("예금이체");
+        // }else{
+        //     document.write("잘못입력");
+        // }
+
+
+
+
+
+
+
+
+
+
+
+        // let menu = prompt('메뉴 선택 : pizza(p), spagetti(s), risotto(r), drink(d)');
+        // switch(menu){
+        //     case 'P' :
+        //     case 'p' :
+        //     document.write('pizza 주문'); break;
+        //     case 's' :   
+        //     case 'S' :
+        //     document.write('spagetti 주문'); break;
+        //     case 'r' :   
+        //     case 'R' :
+        //     document.write('risotto 주문'); break;
+        //     case 'd' :
+        //     case 'D' :
+        //     document.write('drink 주문'); break;
+        //     default :
+        //     document.write('메뉴에없습니다');
+
+        // }
+
+        //if 문으로
+        
+
+
+
+
+        // let sum = 253;
+        // let ave = parseInt(sum / 3);
+        // let result = Math.floor(ave / 10); //floor 내림함수 
+
+        // switch(result){
+        //     case 10 :
+        //     case 9 :
+        //     document.write('A'); break;
+        //     case 8 :
+        //     document.write('B'); break;
+        //     case 7 :
+        //     document.write('C'); break;    
+        //     case 6 :
+        //     document.write('D'); break;  
+        //     default :
+        //     document.write('F');
+
+        // }
+
+
+        // let num1 = parseInt(prompt('num1 : '));
+        // let num2 = parseInt(prompt('num2 : '));
+
+        // let math = prompt("연산자를 선택");
+
+        // switch(math){
+        //     case '+' : c = num1 + num2
+        //     document.write(num1 + num2); break;
+
+        //     case '-' : c = num1 - num2
+        //     document.write(num1 - num2); break;
+
+        //     case '*' : c = num1 * num2
+        //     document.write(num1 * num2); break;
+
+        //     case '/' : c = num1 / num2
+        //     document.write(num1 / num2); break;
+
+
+        // }
+
+
+        // let site = prompt('이동할 사이트 입력:naver, daum, goolge, nate 중 선택');
+        // let url;
+
+        // switch(site){
+        //     case 'naver' : url='http://www.naver.com'; break;
+        //     case 'daum' : url='http://www.daum.net'; break;
+        //     case 'nate' : url='http://www.nate.com'; break;
+        //     case 'google' : url='http://www.google.com'; break;
+        //     default:
+        //     alert('보기에 없습니다')
+        // }
+
+
+
+
+
+        // let loca = prompt('지역명 입력');
+
+
+        // switch (loca) {
+        //     case '서울':
+        //         document.write('02');
+        //         break;
+        //     case '경기':
+        //         document.write('031');
+        //         break;
+        //     case '부산':
+        //         document.write('051');
+        //         break;
+        //     case '대구':
+        //         document.write('053');
+        //         break;
+        //     case '인천':
+        //         document.write('032');
+        //         break;
+        //     case '광주':
+        //         document.write('062');
+        //         break;
+        //     case '대전':
+        //         document.write('042');
+        //         break;
+        //     case '울산':
+        //         document.write('052');
+        //         break;
+        //     case '전북':
+        //         document.write('063');
+        //         break;
+        //     case '전남':
+        //         document.write('061');
+        //         break;
+        //     case '제주':
+        //         document.write('064');
+        //         break;
+
+        //     default :
+        //     document.write('등록되어있지않습니다');
+        // }
+
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
