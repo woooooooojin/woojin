@@ -116,7 +116,14 @@ header .gnb .gnb_language{
 }
 
 /**************lnb***************/
-nav{width: 100%; margin-top: 30px;}
+nav{
+    width: 100%; margin-top: 30px;
+    position: sticky;
+    z-index: 999;
+    top: 0px;
+    background-color: #238ece;
+    
+}
 .lnb_wrap{
     width: 100%;
 }
@@ -134,16 +141,18 @@ nav{width: 100%; margin-top: 30px;}
     font-size: 18px;
     transition: .3s;
     
+    
 }
 .lnb_wrap>ul>li:hover{
-    background-color: #238ece;
+    background-color: #fff;
 }
 .lnb_wrap>ul>li:hover>a{
-    color: #fff;
+    color: black;
 }
-.lnb_wrap .lnb li a{
+.lnb_wrap .lnb>li>a{
     width: 100%;
     display: block;
+    color: #fff;
     
     
 }
@@ -158,9 +167,10 @@ nav{width: 100%; margin-top: 30px;}
 .lnb_wrap ul li:last-child label{
     display: block;
     width: 100%; 
+    color: #fff;
 }
 .lnb_wrap ul li:last-child:hover label{
-    color: #fff;
+    color: black;
 }
 .lnb_wrap ul li:last-child i{
     transition: .3s;
@@ -193,6 +203,7 @@ nav{width: 100%; margin-top: 30px;}
 }
 .more_list .more_box li a{
     transition: .3s;
+    color: black;
 }
 .more_list .more_box li:hover a{
     color: #238ece;
@@ -669,9 +680,138 @@ main .main_wrap .e_coupon a p{
     padding: 5px;
     background-color: #ff143c;
 }
+/******************section3**************************/
+.section4{
+    width: 100%;
+    margin-top: 100px;
+    
+}
+.section4_tit{
+    width: 100%;
+    position: relative;
+}
+
+.section4_tit h4{
+    font-size: 24px;
+    text-align: center;
+    
+    
+}
+/* .section3_tit .more_click{
+    display: flex;
+    position: absolute;
+    top: 50%; right: 10px;
+    transform: translateY(-50%);
+   
+    
+}
 
 
+.section3 .line_wrap{position: relative;}
 
+ .more_click .line{
+    width: 25px;
+    height: 3px;
+    background-color: #238ece;
+    display: block;
+    position: absolute;
+    top: 0px; right: 10px;
+    transition: .3s;
+}
+.more_click:hover .line:nth-child(2){
+    transform: rotate(90deg);
+} */
+.section4_wrap{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.event_box{
+    width: calc(100% - 50% - 10px);
+    height: 252px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+
+}
+.event_box:nth-child(2n){
+    margin-right: 0;
+}
+.event_box .evnt_img{
+    width: 100%;
+    position: relative;
+}
+.event_box .evnt_img img{
+    width: 100%;
+   
+}
+.event_box .evnt_img .evnt_desc{
+    width: 100%;
+    height: 252px;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0px;
+    text-align: center;
+    padding-top: 108px;
+    opacity: 0;
+    transition: .3s;
+}
+.event_box .evnt_img .evnt_desc a{
+    color: #fff;
+    font-size: 25px;
+    width: 100%;
+    display: block;
+    
+    
+}
+.event_box:hover .evnt_img .evnt_desc{
+    opacity: 1;
+}
+
+
+/************section5*****************/
+.section5{
+    width: 100%;
+    margin-top: 100px;
+}
+.section5 h4{
+    font-size: 24px;
+    text-align: center;
+}
+.section5_wrap{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.section5_wrap .sns_box{
+    width: calc(100% - 75% - 15px);
+    margin-right: 20px;
+    
+}
+.section5_wrap .sns_box:last-child{
+    margin-right: 0;
+}
+.section5_wrap .sns_box .sns_img{
+    width: 100%;
+    font-size: 0;
+    cursor: pointer;
+    
+}
+.section5_wrap .sns_box .sns_img img{
+    width: 100%;
+    
+}
+.section5_wrap .sns_box .sns_desc{
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+.section5_wrap .sns_box .sns_desc p{
+    padding: 5px;
+    font-size: 14px;
+}
+
+/*도미노블로그참고해서 내용수정*/
 
 
 
