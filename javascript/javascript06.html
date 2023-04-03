@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript06</title>
+
+
+    <script>
+    //    let sum = 0; //전역변수       scope : 변수의 생명주기, 적용범위
+
+    //     for(let i = 1; i<=10; i++){
+    //         // let sum = 0 지역변수 중괄호 안에서 선언되는 변수, 블럭 안이 스코프 범위
+    //         sum = sum + i;
+    //         document.write(i, '<br />');
+    //     }
+    //     document.write('sum = ', sum);
+
+   
+
+
+
+        
+        // let sum = 0;
+        // for(let i = 0; i<=100; i+=2){
+        //     sum = sum + i; //sum += i; 같다
+        //     document.write(i, '<br />');
+        // }
+        // document.write(sum);
+
+    
+
+
+
+        //구구단계산
+        // let dan = 2;
+        // let result = 0;
+        // for(let i = 0; i<=10; i++){
+        //     result = dan * i;
+        //     document.write(dan + ' * ' + i + ' = ' + result + '<br />');
+        // }
+
+       
+
+
+
+        //1) 입력한 단 출력하기
+
+            // let dan = parseInt(prompt('단 입력 : '));
+            // let result = 0;
+            // for(let i = 0; i<=100; i++){
+            //     result = dan * i;
+            //     document.write(dan + '*' + i + ' = ' + result + '<br />');
+            // }
+
+          
+        //2) 1에서 100 까지  for 중 if 짝수의 합과 홀수의 합으로 구분해서 출력하기 even홀    odd 짝
+                // let oddsum = 0;
+                // let evensum = 0;
+
+                // for(let i = 0; i<=100; i++){
+                //     if(i % 2 === 0){
+                //         oddsum += i;
+                //     } else if(i % 2 === 1){
+                //         evensum += i;
+                //     }
+                    
+                    
+                // }
+                // document.write('짝수의합 : ', oddsum,'<br />');
+                // document.write('홀수의합 : ', evensum,'<br />');
+
+                
+
+
+        //3) 1에서 100까지 중 5의 배수는 red 7의배수 이면서 5의배수이면 green으로 글자색 출력하기
+
+            //  for(let i = 1; i <= 100; i++){
+                
+            //     if(i % 5 === 0){
+            //         document.write('<font color = "red">' + i + '</font>' + '<br />');
+                   
+            //     }if(i % 7 === 0){
+            //         document.write('<font color = "blue">' + i + '</font>' + '<br />');
+            //     }if(i % 5 === 0 && i % 7 === 0){
+            //         document.write('<font color = "green">' + i + '</font>' + '<br />');
+            //     }
+            //  }
+
+
+
+            //  let color;
+
+            //  for(let i =1; i<=100; i++){
+            //     if(i % 5 == 0 && i % 7 == 0){
+            //         color = 'green'
+            //     }else if(i % 5 == 0){
+            //         color = 'red'
+            //     }else if(i % 7 == 0){
+            //         color = 'blue'
+            //     }else(
+            //         color = 'black'
+            //     )
+            //     document.write('<font color =' + color + '>' + i + '</font><br />');
+            //  }
+
+
+            //1에서 100까지의 합을 계산하는 프로그램 실행중 합이 100보다 커지는 첫번째 수오ㅏ값을 출력하고 for종료
+
+            // let sum = 0;
+            // for(let i = 1; i <= 100; i++){
+            //     sum += i;  
+            //     if(sum>100){
+            //         document.write('i값 : ' + i + '값' + sum);break;
+            //     }
+            // }
+
+            
+                // let sum = 0;
+
+                // for(var i = 1; i<=100; i++){
+                //     sum += i;
+                //     if(sum >= 100) break;
+                // }
+                // document.write('100보다 합이 커지는 수는 ' + i + '이고 합은' + sum);
+                
+
+            //var를 쓰면 document.write를 블럭(루프) 밖으로 빼내어도 값이 출력이 된다.
+
+
+
+
+
+
+
+            //데이터 입력받아 합을 구하는 프로그램 작성(0이 입력되었을때 for종료 합 출력)
+
+            // let sum = 0;
+            
+            // for(;;){
+            //     let i = parseInt( prompt('i 입력 : '));
+            //     sum += i;
+            //     if(i == 0){
+            //         document.write(sum)
+            //         break;
+            //     }
+
+            // }
+
+         
+
+
+
+            // let sum = 0;
+            // let input = 0;
+
+            // for(;;){
+            //     input = parseInt(prompt('정수입력(종료=0) :' ));
+
+            //     if(input === 0 ) break
+            //     sum +=i;
+            
+            // }
+            // document.write('합 : ', sum);
+
+
+
+
+            
+            // let sum = 0;
+            // let input = 0;
+
+            // for(let i=1;; i++){
+            //     input = parseInt(prompt(i+'번째정수입력(종료=0)) :' ));
+
+            //     if(input === 0 ) break
+            //     sum +=input;
+            // }
+            // document.write('합 : ', sum);
+
+
+
+
+
+
+
+            //아이디 패스워드를 입력하고 로그인을 하는 프로그램 작성
+            // 패스워드 입력은 5번의기회 그안애 패스워드 일치하면 for문 종료
+            //그렇지 않으면 은행에 문의하라는 메세지 출력. 
+               
+            // let id = 'green';
+            // let pw = '1234';
+            // let userId = '';
+            // let userPw = '';
+           
+            // userId = prompt('id입력 :');
+            // userPw = prompt('pw입력 :');
+
+            // if(userId === id){
+            //     if(userPw === pw){
+            //         alert('로그인에 성공하셨습니다.')
+            //     }else{
+            //         for(let i =1;;i++){
+            //             userPw = prompt('비밀번호가 틀렸습니다')
+            //             if(userPw == pw){
+            //                 alert('로그인에 성공하셨습니다.'); break;
+            //             }if(i >= 4){
+            //                 alert('비밀번호 5회 틀림 은행문의'); break;
+            //             }
+            //         }
+            //     }
+            // }
+
+
+
+
+
+
+
+
+            
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    <!--
+        const, let 블럭
+        var 함수
+    -->
+</body>
+</html>
