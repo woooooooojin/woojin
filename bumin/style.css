@@ -1709,6 +1709,10 @@ footer {
 
     .sec1_btn {
         font-size: 1rem;
+        margin-top: 24px;
+    }
+    .section1_box2 .sec1_btn{
+        margin-top: 38px;
     }
 
     .section2 .section2_wrap .notice_box1 {
