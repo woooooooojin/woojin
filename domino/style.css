@@ -161,10 +161,13 @@ nav{
 }
 .lnb_wrap{
     width: 100%;
+    height: 50px;
+    
 }
 .lnb_wrap ul{
     width: 100%;
     display: flex;
+    
 }
 .lnb_wrap ul li{
     
@@ -175,7 +178,7 @@ nav{
     text-align: center;
     font-size: 18px;
     transition: .3s;
-    
+    height: 50px;
     
 }
 .lnb_wrap>ul>li:hover{
@@ -188,6 +191,8 @@ nav{
     width: 100%;
     display: block;
     color: #fff;
+    line-height: 50px;
+   
     
     
 }
@@ -203,6 +208,7 @@ nav{
     display: block;
     width: 100%; 
     color: #fff;
+    line-height: 50px;
 }
 .lnb_wrap ul li:last-child:hover label{
     color: black;
@@ -216,7 +222,7 @@ nav{
     overflow: hidden;
     transition: .3s;
     position: absolute;
-    left: 0;top: 40px;
+    left: 0;top: 50px;
     background-color: #fff;
     z-index: 999;
 }
@@ -239,6 +245,7 @@ nav{
 .more_list .more_box li a{
     transition: .3s;
     color: black;
+    
 }
 .more_list .more_box li:hover a{
     color: #238ece;
@@ -764,7 +771,7 @@ main .main_wrap .e_coupon a p{
 }
 .event_box{
     width: calc(100% - 50% - 10px);
-    height: 252px;
+    
     margin-right: 20px;
     margin-bottom: 20px;
 
@@ -782,12 +789,11 @@ main .main_wrap .e_coupon a p{
 }
 .event_box .evnt_img .evnt_desc{
     width: 100%;
-    height: 252px;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
     position: absolute;
     top: 0px;
     text-align: center;
-    padding-top: 108px;
     opacity: 0;
     transition: .3s;
 }
@@ -796,6 +802,9 @@ main .main_wrap .e_coupon a p{
     font-size: 25px;
     width: 100%;
     display: block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
     
     
 }
@@ -1077,3 +1086,70 @@ footer{
     border: 0;
 }
 
+
+
+
+@media all and (min-width:769px) and (max-width:1276px){
+    .container{width: 100%;}
+    header .main_logo img{width: 70%;}
+    header .head_promotion .line_txt{font-size: 14px;}
+    header .gnb{font-size: 12px;}
+    header .head_promotion{justify-content: center;}
+    .lnb_wrap .lnb>li>a{font-size: 15px;}
+    .lnb_wrap ul li:last-child label{font-size: 15px;}
+    .more_list .more_box>a{font-size: 15px;}
+    .more_list .more_box li a{font-size: 13px;}
+    .visual_main .visual img{height: 300px;}
+    .visual.slick-dotted .slick-dots{bottom:70px;}
+    main{margin-top: 0;}
+    main .main_wrap .delivery a h4,
+    main .main_wrap .togo_order h4,
+    main .main_wrap .my_order a h4,
+    main .main_wrap .e_coupon a h4{
+        font-size: 22px;
+    }
+    main .main_wrap .delivery a p,
+    main .main_wrap .togo_order p,
+    main .main_wrap .my_order a p,
+    main .main_wrap .e_coupon a p{
+        font-size: 14px;
+        padding: 5px;
+    }
+    main .main_wrap .delivery,
+    main .main_wrap .togo_order,
+    main .main_wrap .my_order,
+    main .main_wrap .e_coupon{
+        height: 175px;
+    }
+    main .main_wrap .delivery{margin-left: 20px;}
+    .section1 .section1_wrap .sec1_box1{
+        padding: 8px;
+    }
+    .section1 .section1_wrap .sec1_box1 p{
+        font-size: 16px;
+        letter-spacing: 8px;
+    }
+    .section1 .section1_wrap .sec1_box1 .sec1_login{
+        width: 70px;
+        height: 35px;
+        line-height: 35px;
+    }
+    .section1 .section1_wrap .sec1_box1 .sec1_login a{
+        font-size: 14px;
+    }
+    .section1 .section1_wrap .sec1_box2 .box2_01{
+        height: 160px;
+    }
+    .section1 .section1_wrap .sec1_box1{
+        height: 160px;
+    }
+    .section1 .section1_wrap .sec1_box2{
+        height: 160px;
+    }
+    .new_box .img_wrap{
+        height: 230px;
+    }
+    .event_box .evnt_img .evnt_desc a{
+        font-size: 20px;
+    }
+}
