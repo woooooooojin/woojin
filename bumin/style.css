@@ -149,6 +149,7 @@ header .logo_ex .logo_L .line {
     line-height: 35px;
     border: 1px solid #ccc;
     font-size: 0.875rem;
+    cursor: pointer;
 
 }
 
@@ -184,11 +185,20 @@ header .logo_ex .logo_L .line {
     width: 100%;
     font-size: 0.875rem;
     background-color: #f4f3f3;
+    transition: .3ss;
+}
+.ham_menu_list .box2 .lang_box .lang_inner li:hover{
+    background-color: #67ae3e;
+    
+}
+.ham_menu_list .box2 .lang_box .lang_inner li:hover a{
+    color: #fff;
 }
 
 .ham_menu_list .box2 .lang_box .lang_inner li a {
     width: 100%;
     display: block;
+    transition: .3s;
 }
 
 .ham_menu_list .box2 .lang_box .lang_inner li:nth-child(1) {
@@ -845,7 +855,9 @@ main {
     padding-top: 10px;
 }
 
-.main_wrap .main_reservation .m_search_btn {}
+.main_wrap .main_reservation .m_search_btn {
+    margin-top: 38px;
+}
 
 .main_wrap .main_reservation .m_search_btn div {
     margin-top: 10px;
@@ -862,7 +874,7 @@ main {
 .main_wrap .main_reservation .m_search_btn .msearch_btn_2 {
     width: 100%;
     margin: 0 auto;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .main_wrap .main_login {
@@ -1439,6 +1451,10 @@ main {
     height: 100%;
     border-radius: 10px;
 }
+.sns_box .img_wrap{
+    width: 100%;
+    height: 100%;
+}
 
 .sns_box .sns_logo {
     width: 40px;
@@ -1555,11 +1571,11 @@ footer {
 #popup_chk ~ .popup {display: none;}
 
 .popup{
-    width: 300px;
+    width: 200px;
     position: absolute;
-    top: 300px; left: 300px;
-    border: 1px solid #666;
-    z-index: 99999;
+    top: 150px; left: 10px;
+    border: 1px solid #ccc;
+    z-index: 9998;
     
 }
 .popup img{
@@ -1584,6 +1600,7 @@ footer {
     text-align: center;
     font-size: 1.2rem;
     font-weight: 700;
+    margin-bottom: 10px;
 }
 
 
@@ -1594,7 +1611,7 @@ footer {
 .gnb{display: none;}
  nav{display: none;}
  .quick_menu{display: none;}
- .pop_up{display: none;}
+ /* .pop_up{display: none;} */
  
 
 
@@ -1608,6 +1625,7 @@ footer {
     .main_wrap {
         display: flex;
         top: -30px;
+        margin: 0 10px;
     }
 
     .main_wrap .main_search {
@@ -1657,7 +1675,7 @@ footer {
     }
 
     .main_wrap .main_reservation .m_search_btn .msearch_btn_2 {
-        margin-top: 23px;
+        margin-top: 15px;
     }
 
     /* .main_wrap .main_login h4{font-size: 1.2rem;}
@@ -1773,7 +1791,7 @@ footer {
         margin-left: 10px;
     }
 
-    .foot_desc p {
+    .footer_wrap .foot_desc p{
         font-size: 0.8rem;
     }
 
@@ -1793,11 +1811,22 @@ footer {
         right: 15%;
         font-size: 0.9rem;
     }
+
+    .popup{
+        width: 300px;
+        left: 100px;
+    }
     
 }
 
 @media all and (min-width:1025px) {
-    nav{display: block;}
+    nav{
+        display: block;
+        position: sticky;
+        top: 0;
+        z-index: 9999;
+    }
+    nav .lnb{background-color: #fff;}
     .mobile_ham {
         display: none;
     }
@@ -1849,6 +1878,10 @@ footer {
 
     .gnb_chk_list{
         width: 100%;
+        width: 100%;
+        position: relative;
+        z-index: 99999;
+        top: -20px
     }
     .gnb{
         position: relative;  
@@ -2200,7 +2233,7 @@ footer {
         font-size: 1.3rem;
     }
     .footer_wrap .foot_logo img{width: 40%;}
-    .footer_wrap .foot_desc p{font-size: 0.8rem;}
+    .footer_wrap .foot_desc p{font-size: 0.9rem;}
     .pop_up{display: block;}
 
 }
