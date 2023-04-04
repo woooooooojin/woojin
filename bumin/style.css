@@ -771,7 +771,7 @@ main {
 }
 
 .main_wrap .main_search {
-    margin: 0 20px;
+    margin: 0 10px;
     background-color: #67ae3e;
     height: 150px;
     border-radius: 10px 10px 0 0;
@@ -840,7 +840,7 @@ main {
 }
 
 .main_wrap .main_reservation {
-    margin: 0 20px;
+    margin: 0 10px;
     background-color: #f4f3f3;
     height: 150px;
     border: 1px solid #ccc;
@@ -878,7 +878,7 @@ main {
 }
 
 .main_wrap .main_login {
-    margin: 0 20px;
+    margin: 0 10px;
     background-color: #7d6a55;
     height: 150px;
     border-radius: 0px 0px 10px 10px;
@@ -1664,6 +1664,7 @@ footer {
     .main_wrap .m_search_btn {
         margin: 30px auto;
     }
+    
 
     .main_wrap .main_login_box .main_join a {
         font-size: 0.5rem;
@@ -1683,20 +1684,21 @@ footer {
     .main_wrap .main_search h4{font-size: 1.2rem;} */
 
     .s1box {
-        width: calc(100% - 75% - 15px);
+        width: calc(100% - 50% - 10px);
         margin: 0;
-
+        margin-bottom: 20px;
         margin-right: 20px;
     }
-
+    .s1box h4{font-size: 1.1rem;}
+    .s1box p{font-size: 0.9rem;}
+    .s1box:nth-child(2){margin-right: 0;}
+    .s1box:nth-child(4){margin-right: 0;}
+    .s1box .sec1_btn a{font-size: 0.8rem;}
     .section1_box4 {
         margin-right: 0;
     }
 
-    .s1box:nth-child(2) {
-        margin-right: 20px;
-    }
-
+   
     .box3_btn {
         padding-top: 11px;
     }
@@ -2103,7 +2105,10 @@ footer {
         display: block;
         font-size: 0.9rem;
     }
-
+    .main_wrap{
+        margin: 0;
+        margin-bottom: 20px;
+    }
     .main_wrap .main_search{
         width: calc(100% - 66.6666% - 26.6666px);
         margin-left: 20px;
@@ -2136,10 +2141,14 @@ footer {
         height: 25px;
     }
     .section1_wrap{margin: 0 20px;}
+
     .s1box{height: 200px;}
     .s1box h4{font-size: 1.15rem;}
     .s1box p{font-size: 0.9rem;}
     .s1box .sec1_btn a{font-size: 0.8rem;}
+    .s1box{width: calc(100% - 75% - 15px);}
+    .s1box:nth-child(3){margin-left: 20px;}
+
     .main_wrap .main_search h4{font-size: 1.2rem;}
     .main_wrap .main_reservation h4{font-size: 1.2rem;}
     .main_wrap .main_login h4{font-size: 1.2rem;}
@@ -2215,6 +2224,7 @@ footer {
     .center_box:hover{
         border: 1.8px solid #67ae3e;
     }
+    .section2 .section2_wrap{margin: 0;}
     .media_01 .media_desc{transition: .3s;}
     .media_01:hover .media_desc{
         height: 100%;
