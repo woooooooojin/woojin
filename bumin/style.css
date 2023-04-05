@@ -1884,6 +1884,7 @@ footer {
         margin-right: 10px;
         
     }
+    .gnb>div:hover>a{color: #47ae3e;}
     
     #gnb_chk{display: none;}
     #gnb_chk:checked ~ label.gnb_open{display: block;}
