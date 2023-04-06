@@ -26,7 +26,7 @@
         // let theFunc = function(){
         //     i++;
         //     document.write('javascript' + i + '<br />');
-        // } //익명함수
+        // } //익명함수 함수의 이름을 정의하지않음
 
         
         // myFunc()
@@ -123,6 +123,68 @@
         // order()
 
 
+        //풀이
+        // function order(){
+
+        //     let menu = prompt('메뉴선택 : pizza(p), spagetti(s), risotto(r), drink(d)');
+        //     switch(menu){
+        //         case 'p' :
+        //         case 'P' :
+        //         document.write('pizza 주문'); break;
+
+        //         case 's' :
+        //         case 'S' :
+        //         document.write('spagetti 주문'); break;
+
+        //         case 'R' :
+        //         case 'r' :
+        //         document.write('risotto 주문'); break;
+
+        //         case 'd' :
+        //         case 'D' :
+        //         document.write('Drink 주문'); break;
+
+        //         default :
+        //         document.write('메뉴에없습니다.')
+        //     }
+        // }
+        // order()
+        // order()
+        // order()
+
+        //풀이2
+        // function order(i){
+        //     let menu = prompt(i + '번째 메뉴 선택 : pizza, spagetti, risotto, drink');
+        //     switch(menu){
+        //         case 'P':
+        //         case 'p':
+        //         document.write('pizza 주문'); break;
+
+        //         case 'S':
+        //         case 's':
+        //         document.write('spagetti 주문'); break;
+
+        //         case 'R':
+        //         case 'r':
+        //         document.write('risotto 주문'); break;
+
+        //         case 'D':
+        //         case 'd':
+        //         document.write('drink 주문'); break;
+
+        //         default :
+        //         document.write('메뉴에 없습니다.');
+        //     }
+        //     document.write('<br />');
+        // }
+
+        // let cnt = parseInt(prompt('주문횟수입력 : '));
+
+        // for(let i =1; i<=cnt; i++){
+        //     order(i)
+        // }
+
+
 
 
         //두개의 정수를 입력받아 두수중 큰수를 출력하는 함수 프로그램 작성
@@ -146,6 +208,26 @@
         //     document.write('큰 수는 :' + result + '<br />');
         // }
         // max()
+
+        //풀이
+
+        // function max(x,y){
+
+        //     if(x > y){
+        //     alert('max = ' + x);
+        //     } else {
+        //         alert('max = ' + y);
+        //     }
+        // }
+
+        // while(1){
+        //     let num1 = parseInt(prompt('첫번째값 입력(종료 : 0) : '));
+        //     let num2 = parseInt(prompt('두번째값 입력(종료 : 0) : '));
+
+        //     if(num1 === 0 && num2 === 0); break;
+
+        //     max(num1,num2);
+        // }
         
         
 
@@ -171,9 +253,49 @@
         // document.write('수량 :' + ea + '<br />');
         // document.write('총 가격 :' + sum  + '<br />');
 
-        
+
+        //풀이
+        // function total(price, cnt){
+        //     let result = price * cnt;
+        //     return result;
+        // }
+
+        // let productName = prompt('제품명 입력 : ');
+        // let productPrice =parseInt( prompt('제품가격 입력 : '));
+        // let productCnt =parseInt( prompt('제품수량 입력 : '));
+
+        // let productTotal = total(productPrice,productCnt);
+
+        // document.write('제품명 : ' + productName + '<br />');
+        // document.write('제품값 : ' + productPrice + '<br />');
+        // document.write('제품수량 : ' + productCnt + '<br />');
+        // document.write('총 가격 : ' + productTotal + '<br />');
+
+
+
+
+
+
+
+
+
+
+
+
+        // function calc(x){
+        //     let a = parseInt(prompt('숫자1입력 : ')); 
+        //     let b = parseInt(prompt('숫자2입력 : '));
+        //     switch(x){
+        //         case '+' : return (a+b);
+        //         case '-' : return (a-b);
+        //         case '*' : return (a*b);
+        //         case '/' : return (a/b);
+        //     }
+        // }
 
         
+
+      
         
         
 
@@ -185,6 +307,15 @@
     </script>
 </head>
 <body>
-    
+    <!-- var: 함수안에서는 지역변수 문법블럭에서는 전역변수 -->
+
+<!-- 
+    <script language = "javascript">
+        let x, res;
+        x = prompt('연산자입력 :');
+        res = calc(x);
+
+        document.write(res);
+    </script> -->
 </body>
 </html>
