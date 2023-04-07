@@ -2278,7 +2278,7 @@ footer {
        
     }
     .visual_main .visual_slider .v_img img{
-        height: 300px;
+        height: 400px;
     }
     .visual_slider .slick-next{
         right: 8%;
@@ -2290,10 +2290,35 @@ footer {
     }
     .visual_slider .slick-next::after{font-size: 40px;}
     .visual_slider .slick-prev::after{font-size: 40px;}
+    .visual_slider .slick-dots li button {
+        width: 15px;
+        height: 15px;
+        margin-top: 20px;
+    }
     .main_wrap{
         top: -50px;
     }
-   
+    .main_wrap .main_search{
+        height: 230px;
+    }
+    .main_wrap .main_reservation{
+        height: 230px;
+    }
+    .main_wrap .main_login{
+        height: 230px;
+    }
+    .main_wrap .main_search h4{font-size:  1.5rem;}  
+    .main_wrap .main_reservation h4{font-size: 1.5rem;} 
+    .main_wrap .main_login h4{font-size: 1.5rem;}
+    .main_wrap .main_search .m_searchbox input{margin-top: 68px;}
+    .main_wrap .main_search .m_searchbox i{
+        top: 65%;
+        font-size: 24px;
+    }
+    .main_wrap .main_reservation .m_search_btn{margin-top: 60px;}
+    .main_wrap .main_login_box{margin: 35px auto;}
+    
+    
     .main_search .m_search_btn{
         height: 35px;
         line-height: 35px;
@@ -2303,20 +2328,21 @@ footer {
         line-height: 35px;
     }
     .main_wrap .main_reservation .m_search_btn .msearch_btn_2{
-        margin-top: 8px;
+        margin-top: 15px;
     }
     .main_wrap .main_login_box input{
         height: 30px;
     }
     .main_wrap .main_login_box .main_join a{
-        font-size: 0.7rem;
+        font-size: 0.8rem;
     }
     .main_wrap .main_login_box .main_join a:last-child{
-        margin-right: 28px;
+        margin-right: 33px;
     }
     .main_wrap .main_login_box button{
         width: 70px;
         height: 30px;
+        cursor: pointer;
     }
     .section1{
         margin-top: -10px;
@@ -2396,7 +2422,7 @@ footer {
     }
     .visual_main .container .control{
         right: 35%;
-        top: 2.5%;
+        top: 4%;
         font-size: 1rem;
     }
     .visual_slider .slick-next{
