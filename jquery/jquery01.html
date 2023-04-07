@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 01</title>
+
+    <script src="./js/jquery-3.6.4.min.js"></script> <!--jQuery 연동-->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> --> <!-- jQuery cdn-->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> --><!--google cdn-->
+
+    <script>
+
+        $(function(){
+            // $('*').css('border' ,'1px solid black') //전체 선택자
+            // $('#tit').css('border','1px solid red') //id 선택자
+            // $('#tit').css('border','1px solid red').css('color','blue') //체이닝
+            // $('.direct').css('border', '1px solid blue')//class 선택자
+            // $('h3').css('border','1px solid yellow') //요소 선택자
+            // $('h2, h3').css('border', '1px solid blue') //그룹 선택자
+
+        });
+
+        $(function(){
+            // $('.second').parent().css('border','1px solid red') // 부모요소 선택자
+            // $('#wrap li').css('color','green')//하위요소 선택자
+            // $('#wrap>li').css('color', 'red') //자식요소 선택자
+            // $('body').children().css('border','1px solid blue') //자식요소들 선택자
+            // $('.second').prev().css('color','red')//형 요소 선택자
+            // $('.second').next().css('color', 'pink')//동생 요소 선택자
+            // $('.second').siblings().css('color','green')//형제요소들 선택자
+
+
+        });
+      
+    </script>
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+    <h1>제이쿼리</h1>
+    <h2 id="tit">직접 선택자 및 관계 선택자</h2>
+    <h3 class="direct">직접 선택자</h3>
+    <h3>관계 선택자</h3>
+
+    <h1>인접관계선택자</h1>
+    <ul id="wrap">
+        <li>내용1
+            <ul>
+                <li>내용2</li>
+                <li class="second">내용3</li>
+                <li>내용4</li>
+            </ul>
+        </li>
+        
+    </ul>
+
+   
+    
+</body>
+</html>
