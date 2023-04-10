@@ -1309,7 +1309,7 @@ main {
     border: 1px solid #ccc;
     margin: 0 10px;
     margin-top: 10px;
-    
+    height: 250px;
 
 }
 
@@ -1325,7 +1325,7 @@ main {
 }
 .ntc02_desc .ntc02_img{
     width: 100%;
-    margin-top: 20px;
+    margin-top: 10px;
     
 }
 .ntc02_desc .ntc02_img img{
