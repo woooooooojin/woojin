@@ -1077,7 +1077,7 @@ main {
 
     border: 1px solid #ccc;
     background-color: #f4f3f3;
-    height: 250px;
+    height: 300px;
     border-radius: 10px;
     margin-bottom: 20px;
     box-shadow: 5px 5px 3px rgb(177, 175, 175);
@@ -1116,7 +1116,7 @@ main {
     border: 1px solid #ccc;
     margin: 0 10px;
     margin-top: 10px;
-    height: 180px;
+    height: 230px;
 
 }
 .notice_list2 a{
@@ -1131,7 +1131,7 @@ main {
     border: 1px solid #ccc;
     margin: 10px;
     background-color: #fff;
-    height: 180px;
+    height: 230px;
 }
 
 .section2 .section2_wrap .notice_box1 .notice_list a {
@@ -1151,18 +1151,13 @@ main {
 
 
 /*notice tab menu*/
-#tab01,
+
 #tab02,
 #tab03 {
     display: none;
 }
 
-#tab01:checked~.sheet .sheet01 {
-    display: block;
-}
 
-/* #tab01 :checked ~ .sheet .sheet02{display: none;}
-#tab01 :checked ~ .sheet .sheet03{display: none;} */
 
 /* #tab02 :checked ~ .sheet .sheet01{display: none;} */
 #tab02:checked~.sheet .sheet02 {
@@ -1177,9 +1172,7 @@ main {
     display: block;
 }
 
-#tab01:checked~.notice_label .label_01 {
-    border-bottom: 2px solid #67ae3e;
-}
+
 
 #tab02:checked~.notice_label .label_02 {
     border-bottom: 2px solid #67ae3e;
@@ -1196,7 +1189,7 @@ main {
     border: 1px solid #ccc;
     margin-bottom: 30px;
     background-color: #f4f3f3;
-    height: 250px;
+    height: 300px;
     box-shadow: 5px 5px 3px rgb(177, 175, 175);
 }
 
@@ -1217,7 +1210,7 @@ main {
     border: 1px solid #ccc;
     margin: 0 10px;
     margin-top: 10px;
-    height: 180px;
+    height: 230px;
 
 }
 
