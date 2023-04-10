@@ -1319,7 +1319,20 @@ main {
 .ntc_02{
     
 }
-.ntc_02_desc{
+.ntc_02 .ntc_02_logo{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: -10px;
+    right: 6px;
+    
+}
+.ntc_02 .ntc_02_logo img{
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+}
+.ntc02_desc{
     position: relative;
     
 }
@@ -1329,7 +1342,7 @@ main {
     
 }
 .ntc02_desc .ntc02_img img{
-    width: 60%;
+    width: 70%;
     margin: 0 auto;
     border-radius: 10px;
 }
@@ -1340,6 +1353,7 @@ main {
 .ntc02_desc p{
     text-align: center;
     font-size: 0.75rem;
+    margin-top: 10px;
 }
 
 .ntc_02 .slick-arrow {
@@ -1362,7 +1376,7 @@ main {
     font-weight: 900;
     visibility: visible;
     font-size: 25px;
-    color: black;
+    color: #47ae3e;
     
 }
 
@@ -1372,7 +1386,7 @@ main {
     font-weight: 900;
     visibility: visible;
     font-size: 25px;
-    color: black;
+    color: #47ae3e;
     
 }
 
