@@ -1077,7 +1077,7 @@ main {
 
     border: 1px solid #ccc;
     background-color: #f4f3f3;
-    height: 320px;
+    height: 350px;
     border-radius: 10px;
     margin-bottom: 20px;
     box-shadow: 5px 5px 3px rgb(177, 175, 175);
@@ -1102,6 +1102,7 @@ main {
     height: 100%;
     position: relative;
     padding: 10px;
+    height: 270px;
 }
 .ntc_desc .ntc_logo{
     width: 50px;
@@ -1118,11 +1119,12 @@ main {
 .ntc_desc h4{
     margin-bottom: 5px;
     text-align: center;
-    font-size: 1.05rem;
+    font-size: 0.95rem;
 }
 .ntc_desc h5{
     font-weight: 500;
     margin-bottom: 5px;
+    margin-top: 10px;
 }
 .ntc_desc h5 span{
     color: royalblue;
@@ -1199,7 +1201,7 @@ main {
     margin-left: 10px;
     margin-top: 10px;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 .notice_list2 {
     background-color: #fff;
@@ -1288,7 +1290,7 @@ main {
     border: 1px solid #ccc;
     margin-bottom: 30px;
     background-color: #f4f3f3;
-    height: 320px;
+    height: 350px;
     box-shadow: 5px 5px 3px rgb(177, 175, 175);
 }
 
@@ -1309,7 +1311,7 @@ main {
     border: 1px solid #ccc;
     margin: 0 10px;
     margin-top: 10px;
-    height: 250px;
+    height: 270px;
 
 }
 
@@ -1319,41 +1321,31 @@ main {
 .ntc_02{
     
 }
-.ntc_02 .ntc_02_logo{
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    bottom: -10px;
-    right: 6px;
-    
-}
-.ntc_02 .ntc_02_logo img{
-    width: 100%;
-    height: 100%;
-    opacity: 0.2;
-}
+
 .ntc02_desc{
     position: relative;
     
 }
 .ntc02_desc .ntc02_img{
     width: 100%;
-    margin-top: 10px;
+    margin-top: 20px;
     
 }
 .ntc02_desc .ntc02_img img{
-    width: 70%;
+    width: 60%;
     margin: 0 auto;
     border-radius: 10px;
 }
 .ntc02_desc h4{
     text-align: center;
     margin-top: 10px;
+    font-size: 0.95rem;
 }
 .ntc02_desc p{
     text-align: center;
     font-size: 0.75rem;
-    margin-top: 10px;
+    margin-top: 20px;
+    padding: 5px;
 }
 
 .ntc_02 .slick-arrow {
@@ -1408,6 +1400,7 @@ main {
 .notice_label .label_03 {
     border-bottom: 2px solid #ccc;
     transition: .3s;
+    font-size: 1.1rem;
 }
 
 /***************section3 전문진료센터*******************/
