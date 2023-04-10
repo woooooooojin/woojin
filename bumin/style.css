@@ -1077,7 +1077,7 @@ main {
 
     border: 1px solid #ccc;
     background-color: #f4f3f3;
-    height: 300px;
+    height: 320px;
     border-radius: 10px;
     margin-bottom: 20px;
     box-shadow: 5px 5px 3px rgb(177, 175, 175);
@@ -1089,6 +1089,96 @@ main {
 
 #notice02_tab:checked ~ .sheet_notice_box1 .notice_list{display: none;}
 #notice02_tab:checked ~ .sheet_notice_box1 .notice_list2{display: block;}
+
+
+
+
+
+/************notice slick***************/
+
+.ntc_01{width: 100%;}
+.ntc_desc{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 10px;
+}
+.ntc_desc .ntc_logo{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 2%;
+    right: 3%;
+}
+.ntc_desc .ntc_logo img{
+    width: 100%;
+    opacity: 0.1;
+}
+
+.ntc_desc h4{
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 1.05rem;
+}
+.ntc_desc h5{
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.ntc_desc h5 span{
+    color: royalblue;
+}
+.ntc_desc p{
+    font-size: 0.9rem;
+    
+}
+.ntc_desc p span{color: royalblue;}
+
+.ntc_01 .slick-arrow {
+    font-size: 0;
+    visibility: hidden;
+}
+
+.ntc_01 .slick-prev {
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    transform: translateY(-50%);
+    z-index: 10;
+   
+}
+
+.ntc_01 .slick-prev::after {
+    content: "\f053";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    visibility: visible;
+    font-size: 25px;
+    color: #67ae3e;
+    
+}
+
+.ntc_01 .slick-next::after {
+    content: "\f054";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    visibility: visible;
+    font-size: 25px;
+    color: #67ae3e;
+    
+}
+
+.ntc_01 .slick-next {
+    position: absolute;
+    top: 15%;
+    right: 5%;
+    transform: translateY(-50%);
+
+}
+
+
+
+
+
 
 .notice_01_label .label_nt01,
 .notice_01_label .label_nt02 {
@@ -1109,6 +1199,7 @@ main {
     margin-left: 10px;
     margin-top: 10px;
     font-weight: 600;
+    font-size: 1.2rem;
 }
 .notice_list2 {
     background-color: #fff;
@@ -1116,14 +1207,22 @@ main {
     border: 1px solid #ccc;
     margin: 0 10px;
     margin-top: 10px;
-    height: 230px;
+    
 
 }
+.notice_list2 ul{
+    padding: 5px;
+}
+.notice_list2 ul li{
+    border-bottom: 1px solid #ccc;
+    
+}
+.notice_list2 ul li:last-child{border: 0;}
 .notice_list2 a{
     display: block;
     margin-bottom: 10px;
-    padding-left: 10px;
-    font-size: 0.688rem;
+    font-size: 0.75rem;
+    margin-top: 5px;
 }
 
 
@@ -1131,7 +1230,7 @@ main {
     border: 1px solid #ccc;
     margin: 10px;
     background-color: #fff;
-    height: 230px;
+   
 }
 
 .section2 .section2_wrap .notice_box1 .notice_list a {
@@ -1159,14 +1258,14 @@ main {
 
 
 
-/* #tab02 :checked ~ .sheet .sheet01{display: none;} */
+
 #tab02:checked~.sheet .sheet02 {
     display: block;
 }
 
 /* #tab02 :checked ~ .sheet .sheet03{display: none;} */
 
-/* #tab03 :checked ~ .sheet .sheet01{display: none;} */
+
 /* #tab03 :checked ~ .sheet .sheet02{display: none;} */
 #tab03:checked~.sheet .sheet03 {
     display: block;
@@ -1189,7 +1288,7 @@ main {
     border: 1px solid #ccc;
     margin-bottom: 30px;
     background-color: #f4f3f3;
-    height: 300px;
+    height: 320px;
     box-shadow: 5px 5px 3px rgb(177, 175, 175);
 }
 
@@ -1210,32 +1309,85 @@ main {
     border: 1px solid #ccc;
     margin: 0 10px;
     margin-top: 10px;
-    height: 230px;
+    
 
 }
 
 
-.sheet02 a,
-.sheet03 a {
-    display: block;
-    margin-bottom: 10px;
-    padding-left: 10px;
-    font-size: 0.688rem;
+/*******ntc_02 slick**********/
 
-
+.ntc_02{
+    
 }
-
-
-.sheet02 a:first-child,
-.sheet03 a:first-child {
+.ntc_02_desc{
+    position: relative;
+    
+}
+.ntc02_desc .ntc02_img{
+    width: 100%;
+    margin-top: 20px;
+    
+}
+.ntc02_desc .ntc02_img img{
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+.ntc02_desc h4{
+    text-align: center;
     margin-top: 10px;
 }
-
-
-.sheet02 a i,
-.sheet03 a i {
-    font-size: 0.5rem;
+.ntc02_desc p{
+    text-align: center;
+    font-size: 0.75rem;
 }
+
+.ntc_02 .slick-arrow {
+    font-size: 0;
+    visibility: hidden;
+}
+
+.ntc_02 .slick-prev {
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    transform: translateY(-50%);
+    z-index: 10;
+   
+}
+
+.ntc_02 .slick-prev::after {
+    content: "\f053";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    visibility: visible;
+    font-size: 25px;
+    color: black;
+    
+}
+
+.ntc_02 .slick-next::after {
+    content: "\f054";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    visibility: visible;
+    font-size: 25px;
+    color: black;
+    
+}
+
+.ntc_02 .slick-next {
+    position: absolute;
+    top: 15%;
+    right: 5%;
+    transform: translateY(-50%);
+
+}
+
+
+
+
+
 
 
 .notice_label .label_02,
