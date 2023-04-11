@@ -1311,7 +1311,7 @@ main {
     border: 1px solid #ccc;
     margin: 0 10px;
     margin-top: 10px;
-    height: 270px;
+   
 
 }
 
@@ -1327,13 +1327,15 @@ main {
     
 }
 .ntc02_desc .ntc02_img{
-    width: 100%;
+    width: 200px;
+    height: 100px;
+    margin: 0 auto;
     margin-top: 20px;
     
 }
 .ntc02_desc .ntc02_img img{
-    width: 60%;
-    margin: 0 auto;
+    width: 100%;
+   
     border-radius: 10px;
 }
 .ntc02_desc h4{
@@ -1403,24 +1405,42 @@ main {
     font-size: 1.1rem;
 }
 
+.sheet03 ul{
+    padding: 5px;
+}
+.sheet03 ul li{
+    border-bottom: 1px solid #ccc;
+    
+}
+.sheet03 ul li:last-child{border: 0;}
+.sheet03 a{
+    display: block;
+    margin-bottom: 10px;
+    font-size: 0.75rem;
+    margin-top: 5px;
+}
+
+
+
 /***************section3 전문진료센터*******************/
 .section3 {
     width: 100%;
+    margin-top: 50px;
 }
 
 .section3_wrap {}
 
 .section3_wrap .section3_tit {
     width: 100%;
-    height: 35px;
+    height: 50px;
     text-align: center;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
-    line-height: 35px;
+    line-height: 50px;
 }
 
 .section3_wrap .section3_tit h4 {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
 }
 
 #sec3_chk {
@@ -1459,7 +1479,7 @@ main {
 
 .section3_box label {
     position: absolute;
-    top: 5px;
+    top: 11px;
     right: 10px;
 
 
@@ -1552,23 +1572,23 @@ main {
 
 /****************section4****************/
 .section4 {
-    margin-top: 30px;
+    margin-top: 35px;
 }
 
 .section4_wrap {}
 
 .section4_tit {
     width: 100%;
-    height: 35px;
+    height: 50px;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
-    line-height: 35px;
+    line-height: 50px;
     text-align: center;
     margin-bottom: 20px;
 }
 
 .section4_tit h4 {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
 }
 
 .media_01 {
@@ -1627,7 +1647,9 @@ main {
 }
 
 /*************section5****************/
-.section5 {}
+.section5 {
+    margin-top: 35px;
+}
 
 .section5_wrap {
     margin: 0 10px;
@@ -1635,16 +1657,16 @@ main {
 
 .section5_tit {
     width: 100%;
-    height: 35px;
+    height: 50px;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
-    line-height: 35px;
+    line-height: 50px;
     margin-bottom: 50px;
 
 }
 
 .section5_tit h4 {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     text-align: center;
 
 }
@@ -1752,11 +1774,25 @@ footer {
 }
 
 .footer_wrap .foot_desc {
-    width: 70%;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.6rem;
+    
 }
 
-.footer_wrap .foot_desc p {
-    font-size: 0.5rem;
+.footer_wrap .foot_desc ul{
+    margin-right: 5px;
+    
+}
+.footer_wrap .foot_desc ul li{
+    margin-top: 10px;
+   
+}
+.footer_wrap .foot_desc ul li:first-child{
+    font-size: 0.75rem;
+    margin-top: 0;
+    font-weight: 550;
 }
 
 .footer_wrap .foot_famsite {
@@ -1772,6 +1808,36 @@ footer {
 
 }
 
+.foot_txt_wrap{
+    margin-top: 15px;
+    position: relative;
+    
+}
+.foot_txt{
+    font-size: 0.7rem;
+    width: 100%;
+    padding: 5px;
+}
+.foot_txt p{}
+.foot_txt p a{
+    font-weight: 550;
+}
+.foot_sns{
+    text-align: center;
+    position: absolute;
+    top: -30px;
+    right: 0;
+   
+}
+.foot_sns ul{}
+.foot_sns ul li{
+    display: inline-block;
+    padding-right: 5px;
+}
+.foot_sns ul li i{
+    font-size: 1.1rem;
+}
+
 
 /*top btn*/
 .top_btn {
@@ -1784,7 +1850,7 @@ footer {
     background-color: #67ae3e;
     text-align: center;
     position: fixed;
-    bottom: 105px;
+    bottom: 220px;
     right: 0;
 }
 
@@ -1994,18 +2060,28 @@ nav {
     }
 
     .section2 .section2_wrap .notice_box1 {
-        width: calc(100% - 50% - 10px);
+        width: 100%;
         margin-right: 20px;
-        border-radius: 10px 0 0 10px;
+        
     }
 
     .notice_box2 {
-        width: calc(100% - 50% - 10px);
-        border-radius: 0 10px 10px 0;
+        width: 100%;
+        
+    }
+    .ntc02_desc .ntc02_img{
+        height: 135px;
+        width: 250px;
     }
 
     .section2 .section2_wrap {
-        display: flex;
+        
+    }
+    .ntc_desc .ntc_logo{
+        width: 100px;
+        height: 100px;
+        bottom: 5%;
+        right: 5%;
     }
 
     .center_box {
@@ -2034,6 +2110,8 @@ nav {
         background-color: #7d6a55;
         color: #fff;
     }
+
+    
 
     .media02,
     .media03,
@@ -2075,9 +2153,11 @@ nav {
         margin-left: 10px;
     }
 
-    .footer_wrap .foot_desc p {
-        font-size: 0.8rem;
+    .footer_desc ul{}
+    .footer_desc ul li{
+
     }
+    
 
     .top_btn {
         width: 50px;
