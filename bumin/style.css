@@ -2145,7 +2145,7 @@ nav {
     }
 
     .footer_wrap .foot_logo img {
-        width: 60%;
+        width: 80%;
     }
 
     .footer_wrap .foot_logo {
@@ -2164,7 +2164,7 @@ nav {
         height: 50px;
         line-height: 50px;
         font-size: 0.8rem;
-        bottom: 70px;
+        bottom: 195px;
     }
 
     .visual_main .visual_slider .v_img img {
@@ -2180,6 +2180,22 @@ nav {
     .popup {
         width: 80%;
         left: 0px;
+    }
+    .footer_wrap .foot_desc ul li{
+        font-size: 0.75rem;
+    }
+    .footer_wrap .foot_desc ul li:first-child{
+        font-size: 0.9rem;
+    }
+    .footer_wrap .foot_famsite select{
+        width: 100px;
+        height: 25px;
+    }
+    .foot_sns ul li i{
+        font-size: 1.5rem;
+    }
+    .foot_txt{
+        font-size: 0.8rem;
     }
 
 }
@@ -2628,12 +2644,13 @@ nav {
     }
 
     .section2 .section2_wrap .notice_box1 {
-        height: 200px;
+        /* height: 350px; */
         margin-left: 20px;
+        width: calc(100% - 50% - 30px);
     }
 
     .section2 .section2_wrap .notice_box1 .notice_list {
-        height: 130px;
+        height: 280px;
     }
 
     .section2 .section2_wrap .notice_box1 .notice_list a {
@@ -2645,14 +2662,16 @@ nav {
     }
 
     .notice_box2 {
-        height: 200px;
-        margin-right: 20px;
-        margin-left: 20px;
+        width: calc(100% - 50% - 30px);
+        /* margin-right: 20px; */
+        /* margin-left: 20px;  */
     }
 
     .sheet_list {
-        height: 120px;
+        height: 280px;
     }
+    /*****************noticebox 내용 수정 footer수정 미디어센터 수정**********************/
+    
 
     .sheet01 a,
     .sheet02 a,
@@ -2776,6 +2795,7 @@ nav {
 
     .section2 .section2_wrap {
         margin: 0;
+        display: flex;
     }
 
     .media_01 .media_desc {
