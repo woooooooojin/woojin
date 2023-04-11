@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery03</title>
+    <script src="./js/jquery-3.6.4.min.js"></script>
+    <script>
+
+        $(function(){
+        //     $('h2').text('텍스트매서드');
+        //     alert($('h1').text());
+
+        // $('p').text($('h1').css('color'));
+        // $('h2').css('color','red');
+        
+
+        // $('#txt').text($('#wrap img').attr('src')); //id text에 src 입력
+        // $('#wrap img').attr('width','200'); //id wrap width를 200으로 변경
+        // $('#box img').removeAttr('border'); // id box의 img의 border 없애기
+
+
+            
+        // $('#p1').addClass('aqua'); //아쿠아 클래스 추가
+        // $('#p2').removeClass('red'); //red 클래스 제거
+        // $('#p3').toggleClass('green'); // green 토글
+        // $('#p4').toggleClass('green'); // green 토글
+        // $('#p6').text($('#p5').hasClass('yellow')); 
+
+
+        // $('#my_name').val($('#user_name').val());
+
+
+        // $('#st_1').prop('title','단락태그');
+        // $('#txt1').text($('#st_1').prop('title'));
+        // $('#txt2').text($('#st_1').prop('tagName'));
+        // $('#txt3').text($('#sel').prop('selectedIndex'));
+
+        // let w1 = $('#box1').width();
+        // $('#t1').text('너비:'+ w1);
+
+        // let w2 = $('#box1').innerWidth();
+        // $('#t2').text('너비' + w2);
+
+        // let w3 = $('#box1').outerWidth();
+        // $('#t3').text('너비 :'+ w3);
+
+        // $('#box2').width('200').height('50').css('border','3px solid blue');
+
+
+
+        // let top1=$('#box').position().top;
+        // $('#t1').text(top1); //변수top1  #box의 포지션의 탑값을 반환
+
+        // let top2=$('#box').offset().top;
+        // $('#t2').text(top2); //변수 top2 #box의 옵셋 top값을 반환
+
+
+        // let s=$(window).scrollTop(500);
+        // alert($(window).scrollTop());
+
+
+        // $('#myList').before('<li> 새 내용 추가1 </li>');    
+        // $('#myList').before('<li> 새 내용 추가2 </li>');    
+        // $('#myList').after('<li> 새 내용 추가3 </li>'); 
+        
+        
+
+
+        // $("#listZone").append('<li> 새내용 추가 2 </li>');
+        // $("#listZone").prepend('<li> 새내용 추가 3 </li>');
+
+        // $('<li> 새내용 추가 4</li>').prependTo('#listZone');
+        // $('<li> 새내용 추가 5</li>').appendTo('#listZone');
+
+        // $('<li>새내용추가1</li>').insertBefore('#myList');
+        // $('<li>새내용추가2</li>').insertAfter('#myList');
+
+
+
+        // $('#line_1').empty();
+        // $('#line_2').remove();
+
+
+        // $('h2').replaceWith('<h3>replace method</h3>')
+        // $('<h4>내용3</h4>').replaceAll('p');
+
+        $('strong').unwrap();
+        $('.ct1').wrap('<div />'); //ct1을 div로 감싼다
+        $('.ct2').wrapAll('<div />'); //모두 wrap
+        $('li').wrapInner('<h3 />'); //안의 내용물을 감싼다
+
+        });
+
+       
+
+    </script>
+    <!-- <style>
+        .aqua{background-color:aqua;}
+        .red{background-color: red;}
+        .green{background-color: green;}
+        .yellow{background-color: yellow;}
+    </style> -->
+
+    <!-- <style>
+        *{margin: 0; padding: 0;}
+        body{margin: 20px;}
+        #box1{width: 200px; height: 100px; padding: 5px; border: 10px solid red; margin: 10px;}
+    </style> -->
+
+    <!-- <style>
+        *{margin: 0;padding: 0;}
+        #wrap{
+            width: 300px;
+            height: 200px;
+            background-color: #ccc;
+            position: relative;
+            top: 50px;
+            margin: 0 auto;
+        }
+        #box{
+            width: 50px;
+            height: 50px;
+            background-color: aqua;
+            position: absolute;
+            top: 50px;
+            left: 100px;
+        }
+    </style> -->
+
+    <!-- <style>
+        body{
+            height: 4000px;
+        }
+    </style> -->
+
+    <style>
+        div{background-color: aqua;}
+    </style>
+
+
+</head>
+
+
+<body>
+
+    <!-- <h1 style="color:blue">객체 조작 및 생성</h1>
+    <p></p>
+    <h2>css매서드</h2> -->
+
+
+    <!-- <h1>객체 조작 및 생성</h1>
+    <p id="wrap">
+        <img src="./추천코디.PNG" alt="img" width="100" />
+    </p>
+    <p id="txt"></p>
+    <p id="box">
+        <img src="./추천코디.PNG" alt="img" width="100" border = "2"/>
+    </p> -->
+
+    <!-- <p id="p1">내용 1</p>
+    <p id="p2" class="red">내용 2</p>
+    <p id="p3">내용 3</p>
+    <p id="p4" class="green">내용 4</p>
+    <p id="p5" class="yellow">내용 5</p>
+    <p id="p6">내용 6</p> -->
+
+
+    <!-- <p>
+        <input type="text" name="user_name" id="user_name" value="홍길동"/>
+    </p>
+    <p>
+        <input type="text" name="my_name" id="my_name" />
+    </p> -->
+
+
+    <!-- <p id="st_1">내용1</p>
+    <p id="txt1"></p>
+    <p id="txt2"></p>
+    <select id="sel">
+        <option value="naver">네이버</option>
+        <option value="nate" selected>네이트</option>
+        <option value="daum" >다음</option>
+    </select>
+    <p id="txt3"></p> -->
+
+<!-- 
+    <p id="box1">박스1</p>
+    <p id="t1"></p>
+    <p id="t2"></p>
+    <p id="t3"></p>
+    <p id="box2">박스2</p> -->
+
+
+    <!-- <p id="t1"></p>
+    <p id="t2"></p>
+    <div id="wrap">
+        <p id="box">박스1</p>
+    </div> -->
+
+    <!-- <ul>
+        <li id="myList">내용</li>
+    </ul> -->
+
+    <!-- <ul id="listZone">
+        <li>내용</li>
+    </ul> -->
+
+
+    <!-- <ul>
+        <li id="line_1">내용1</li>
+        <li id="line_2">내용2</li>
+    </ul> -->
+
+    <!-- <h2>교체매서드</h2>
+    <p>내용1</p>
+    <p>내용2</p> -->
+
+
+    <h1 id="tit_1"><strong>객체</strong></h1>
+    <p class="ct1">내용1</p>
+    <p class="ct1">내용2</p>
+    <p class="ct2">내용3</p>
+    <p class="ct2">내용4</p>
+    <ul>
+        <li>내용5</li>
+        <li>내용6</li>
+    </ul>
+
+</body>
+
+</html>
