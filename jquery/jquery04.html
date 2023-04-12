@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery04</title>
+    <script src="./js/jquery-3.6.4.min.js"></script>
+
+
+    <script>
+        $(function () {
+
+            $('.btn').click(function () {
+                $('.box').css('background-color', 'green');
+            });
+            // $('.btn_white').click(function(){
+            //     $('.box').css('background-color','#fff');
+            // });
+
+            $('.btn').mouseover(function () {
+                $(this).css('background-color', 'red')
+            })
+            $('.btn').mouseout(function () {
+                $(this).css('background-color', '#ccc')
+            })
+
+            //이벤트를 걸 대상과 이벤트를 받을 대상이 같을때 this 
+
+            let state = 0;
+
+            $('.btn').click(function(){
+                if(state===0){
+                    $('.box').css('background-color','red');
+                    state=1;
+
+                }else{
+                    $('.box').css('background-color','white');
+                    state=0;
+                }
+            });
+            
+
+            
+
+            // if (state === 0) {
+            //     $('.btn').click(function(){
+            //         $('.box').css('background-color','red');
+            //         state = 1;
+            //     })
+            // }else{
+            //     $('.btn').click(function(){
+            //         $('.box').css('background-color','white');
+            //         state = 0;
+            //     })
+            // }
+
+            
+
+
+        });
+
+    </script>
+
+    <style>
+        .box {
+            width: 300px;
+            height: 200px;
+            line-height: 200px;
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <div class="box">jQuery Event Test</div>
+    <button class="btn">click</button>
+    <!-- <button class="btn_white">white btn</button> -->
+
+
+</body>
+
+</html>

@@ -15,51 +15,130 @@
     <script>
 
         $(function(){
-            // $('h2').html('<a href="#">html 매서드</a>');
-            // alert($('h1').html());
+
+            // $('#btn1').click(function(){
+            //     $('p').css('background-color','purple');
+            //     return false; // a 링크 연결해제
+            // })
+
+            // $('#btn2').click(function(e){
+            //     e.preventDefault(); //a 링크 연결해제
+            //     $('p').css('background-color','yellow');
+            // })
+
+            // $('#btn3').click(function(){
+            //     $('p').css('background-color','aqua');
+            // })
 
 
-        // $('h2').text('텍스트 매서드');
-        // alert($('h1').text());
+            // $('.btn1').mouseover(function(){
+            //     $('p').css('background-color','yellow');
+            // })
+            // $('.btn1').mouseout(function(){
+            //     $('p').css('background-color','purple');
+            // })
 
-        // $('p').text($('h1').css('color'));
-        // $('h2').css('color', 'red');
-
-        // $('#txt').text($('#wrap img').attr('src'));
-        // $('#wrap img').attr('width','200');
-        // $('#box img').removeAttr('border');
-
-        // $('#p1').addClass('aqua');
-        // $('#p2').removeClass('red');
-        // $('#p3').toggleClass('green');
-        // $('#p4').toggleClass('green');
-        // $('#p6').text($('#p5').hasClass('yellow'));
-
-        // $('#my_name').val($('#user_name').val());
+            // $('.btn2').hover(function(){
+            //     $('p').css('background-color','yellow');
+               
+            // },function(){
+            //     $('p').css('background-color','green');
+            // })
 
 
-        // $('#st_1').prop('title','단락태그');
-        // $('#txt1').text($('#st_1').prop('title'));
-        // $('#txt2').text($('#st_1').prop('tagName'));
-        // $('#txt3').text($('#sel').prop('selectedIndex'));
+            // $('#wrap').mouseout(function(){
+            //     $('p').css('border','1px solid red');
+            // })
+            
+            // $('#wrap').mouseleave(function(){
+            //     $('p').css('border','2px dashed red');
+            // })
 
+
+            // $(document).mousemove(function(e){
+
+            //     let x = e.pageX;
+            //     let y = e.pageY;
+
+            //     $('p').text('x'+ x + 'y :' + y); //마우스 좌표
+            // })
+
+
+            // $('#user_name').focus();
+            // $('#user_id').focus(function(){
+            //     $(this).val('');
+            // })
+
+            // $('#user_id').blur(function(){
+            //     $(this).val('아이디입력');
+            // })
+
+            // $('#btn1').mouseover(function(){
+            //     alert('good');
+            // })
+
+            // $('#btn2').on("mouseover focus",function(){
+            //     alert('hello');
+            // })
+
+            // $('#user_id').keydown(function(e){
+            //     $(this).css('background-color','purple')
+            //     $('#txt1').text(e.keyCode);
+            // })
+
+            // $('#user_id').keypress(function(e){
+            //     $('#txt2').txt(e.keyCode);
+            // })
+            
+            // $('#user_id').keyup(function(){
+            //     $(this).css('background-color','yellow');
+            // })
+
+
+            // $('#rel_site').change(function(){
+            //     $('#txt').text($(this).val());
+            // }) //선택된 #txt를 텍스트로 반환
+
+
+
+            // $(window).scroll(function(){
+            //     $('#txt').text($(this).scrollTop());
+            // }) //#txt에 텍스트로 스크롤위치 반환
+
+
+            // $('#menu a').mouseover(function(){
+            //     $('#menu a').css('background-color','none');
+
+            //     $(this).css('background','yellow');
+
+            //     let num=$('#menu a').index(this); //변수 num #menu a의 index값 반환
+            //     $('.txt').text(num); // num값을 .txt에 text로 반환
+            // })
+
+
+            // $('h1 a').on({
+            //     'mouseover focus':function(){
+            //         $(this).css('color','red');
+            //     },'mouseout blur':function(){
+            //         $(this).css('color','green')
+            //     }
+
+                
+            // })
+
+            // $('h2 a').on(
+            //     'mouseover focus',function(){
+            //         $(this).css('background-color','red');
+            //     });
             
 
-        // let s = $(window).scrollTop(100);
-        // alert($(window).scrollTop())
+            // $(document).on('mouseout blur','h2 a',function(){
+            //     $(this).css('background-color','aqua')
+            // })
+
+            // $('h2').append('<a herf="#">생성된요소</a>');
 
 
-        // $('#myList').before('<li>새내용1</li>');
-        // $('#myList').after('<li>새내용2</li>');
-
-        // $('#listZone').append("<li> 새내용추가1 </li>");
-        // $('<li>새내용추가2</li>').appendTo('#listZone');
-
-        // $('#listZone').prepend("<li>새내용3</li>");
-        // $('<li>새내용4</li>').prependTo('#listZone');
-
-        // $('<li>새내용추가1</li>').insertBefore('#myList');
-        // $('<li>새내용추가2</li>').insertAfter('#myList');
 
         })
 
@@ -69,78 +148,80 @@
     </script>
 
     <style>
-        /* .aqua{
-            background-color: aqua;
-        }
-        .red{
-            background-color: red;
-        }
-        .green{
-            background-color: green;
+     /* *{margin: 0; padding: 0;}
+     body{margin: 20px;}
+     #wrap{
+        background-color: #ccc;
+        padding: 10px;
+     }
+     p{
+        background-color: #999;
+     } */
+      
+     /* body{
+        height: 3000px;
 
-        }
-        .yellow{
-            background-color: yellow;
-        } */
-        /* body{
-            height: 4000px;
-        } */
+     }
+     #txt{position: fixed; top: 10px; left: 10px;} */
     </style>
 </head>
 <body>
 
-    <!-- <h1>객체 조작 및 생성</h1>
-    <h2>text()</h2>
-     -->
+    <!-- <a href="http://w3.org/" id="btn1">버튼1</a>
+    <a href="http://w3.org/" id="btn2">버튼2</a>
+    <a href="http://w3.org/" id="btn3">버튼3</a>
+    <p>내용</p> -->
 
+    <!-- <button class="btn1">mouseover/out</button>
+    <button class="btn2">hover</button>
+    <p>내용</p> -->
+    
+<!-- 
+    <div id="wrap">
+        <p>내용</p>
+    </div> -->
 
-     <!-- <h1 style="color:blue">객체 조작 및 생성</h1>
-     <p></p>
-     <h2>css 매서드</h2> -->
-
-     <!-- <h1>객제 조작 및 생성</h1>
-     <p id="wrap">
-        <img src="./추천코디.PNG" alt="img" width="100">
-     </p>
-     <p id="txt"></p>
-     <p id="box">
-        <img src="./추천코디.PNG" alt="img" width="100" border="2">
-     </p> -->
-
-     <!-- <p id="p1">내용1</p>
-     <p id="p2" class="red">내용2</p>
-     <p id="p3">내용3</p>
-     <p id="p4" class="green">내용4</p>
-     <p id="p5" class="yellow">내용5</p>
-     <p id="p6">내용6</p> -->
-
-
-     <!-- <p>
-        <input type="text" name="user_name" id="user_name" value="홍길동">
-     </p>
-     <p>
-        <input type="text" name="my_name" id="my_name">
-     </p> -->
-
-     <!-- <p id="st_1">내용1</p>
-     <p id="txt1"></p>
-     <p id="txt2"></p>
-     <select id="sel">
-        <option value="naver">네이버</option>
-        <option value="nate" selected>네이트</option>
-        <option value="daum">다음</option>
-     </select>
-    <p id="txt3">
-
+<!-- 
+    <p>
+        <input type="text" name="user_name" id="user_name">
+    </p>
+    <p>
+        <input type="text" name="user_id" id="user_id" value="아이디입력">
     </p> -->
 
-    <ul>
-        <li id="myList">내용</li>
+
+    <!-- <p><a href="#!" id="btn1">버튼1</a></p>
+    <p><a href="#!" id="btn2">버튼2</a></p> -->
+
+
+    <!-- <p>
+        <input type="text" name="user_id" id="user_id">
+    </p>
+    <p id="txt1"></p>
+    <p id="txt2"></p> -->
+
+    <!-- <select id="rel_site">
+        <option value="">사이트선택</option>
+        <option value="www.naver.com">네이버</option>
+        <option value="www.nate.com">네이트</option>
+        <option value="www.daum.net">다음</option>
+    </select>
+    <p id="txt"></p> -->
+
+
+    <!-- <p id="txt">0</p> -->
+<!-- 
+    <ul id="menu">
+        <li><a href="#!">내용1</a></li>
+        <li><a href="#!">내용2</a></li>
+        <li><a href="#!">내용3</a></li>
+        <li><a href="#!">내용4</a></li>
+
     </ul>
+    <p class="txt"></p> -->
 
 
-
-
-
+    <h1><a href="#!">버튼</a></h1>
+    <h2></h2>
 </body>
 </html>
