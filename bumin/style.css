@@ -966,14 +966,11 @@ main {
     margin-right: 20px;
     margin-bottom: 20px;
     text-align: center;
-
+    box-shadow: 5px 5px 3px rgb(177, 175, 175);
     transition: .3s;
 }
 
-.s1box:hover {
-    transform: scale(1.03);
-    box-shadow: 5px 5px 3px rgb(177, 175, 175);
-}
+
 
 .s1box:nth-child(2n) {
     margin-right: 0;
@@ -1083,12 +1080,26 @@ main {
     box-shadow: 5px 5px 3px rgb(177, 175, 175);
 }
 
-#notice01_tab, #notice02_tab{display: none;}
-#notice01_tab:checked ~ .sheet_notice_box1 .notice_list{display: block;}
-#notice01_tab:checked ~ .sheet_notice_box1 .notice_list2{display: none;}
+#notice01_tab,
+#notice02_tab {
+    display: none;
+}
 
-#notice02_tab:checked ~ .sheet_notice_box1 .notice_list{display: none;}
-#notice02_tab:checked ~ .sheet_notice_box1 .notice_list2{display: block;}
+#notice01_tab:checked~.sheet_notice_box1 .notice_list {
+    display: block;
+}
+
+#notice01_tab:checked~.sheet_notice_box1 .notice_list2 {
+    display: none;
+}
+
+#notice02_tab:checked~.sheet_notice_box1 .notice_list {
+    display: none;
+}
+
+#notice02_tab:checked~.sheet_notice_box1 .notice_list2 {
+    display: block;
+}
 
 
 
@@ -1096,44 +1107,55 @@ main {
 
 /************notice slick***************/
 
-.ntc_01{width: 100%;}
-.ntc_desc{
+.ntc_01 {
+    width: 100%;
+}
+
+.ntc_desc {
     width: 100%;
     height: 100%;
     position: relative;
     padding: 10px;
     height: 270px;
 }
-.ntc_desc .ntc_logo{
+
+.ntc_desc .ntc_logo {
     width: 50px;
     height: 50px;
     position: absolute;
     bottom: 2%;
     right: 3%;
 }
-.ntc_desc .ntc_logo img{
+
+.ntc_desc .ntc_logo img {
     width: 100%;
     opacity: 0.1;
 }
 
-.ntc_desc h4{
+.ntc_desc h4 {
     margin-bottom: 5px;
     text-align: center;
     font-size: 0.95rem;
 }
-.ntc_desc h5{
+
+.ntc_desc h5 {
     font-weight: 500;
     margin-bottom: 5px;
     margin-top: 10px;
 }
-.ntc_desc h5 span{
+
+.ntc_desc h5 span {
     color: royalblue;
 }
-.ntc_desc p{
+
+.ntc_desc p {
     font-size: 0.9rem;
-    
+
 }
-.ntc_desc p span{color: royalblue;}
+
+.ntc_desc p span {
+    color: royalblue;
+}
 
 .ntc_01 .slick-arrow {
     font-size: 0;
@@ -1146,7 +1168,7 @@ main {
     left: 5%;
     transform: translateY(-50%);
     z-index: 10;
-   
+
 }
 
 .ntc_01 .slick-prev::after {
@@ -1156,7 +1178,7 @@ main {
     visibility: visible;
     font-size: 25px;
     color: #67ae3e;
-    
+
 }
 
 .ntc_01 .slick-next::after {
@@ -1166,7 +1188,7 @@ main {
     visibility: visible;
     font-size: 25px;
     color: #67ae3e;
-    
+
 }
 
 .ntc_01 .slick-next {
@@ -1203,24 +1225,31 @@ main {
     font-weight: 600;
     font-size: 1.1rem;
 }
+
 .notice_list2 {
     background-color: #fff;
     display: none;
     border: 1px solid #ccc;
     margin: 0 10px;
     margin-top: 10px;
-    
+
 
 }
-.notice_list2 ul{
+
+.notice_list2 ul {
     padding: 5px;
 }
-.notice_list2 ul li{
+
+.notice_list2 ul li {
     border-bottom: 1px solid #ccc;
-    
+
 }
-.notice_list2 ul li:last-child{border: 0;}
-.notice_list2 a{
+
+.notice_list2 ul li:last-child {
+    border: 0;
+}
+
+.notice_list2 a {
     display: block;
     margin-bottom: 10px;
     font-size: 0.75rem;
@@ -1232,7 +1261,7 @@ main {
     border: 1px solid #ccc;
     margin: 10px;
     background-color: #fff;
-   
+
 }
 
 .section2 .section2_wrap .notice_box1 .notice_list a {
@@ -1311,39 +1340,41 @@ main {
     border: 1px solid #ccc;
     margin: 0 10px;
     margin-top: 10px;
-   
+
 
 }
 
 
 /*******ntc_02 slick**********/
 
-.ntc_02{
-    
+.ntc_02 {}
+
+.ntc02_desc {
+    position: relative;
+
 }
 
-.ntc02_desc{
-    position: relative;
-    
-}
-.ntc02_desc .ntc02_img{
+.ntc02_desc .ntc02_img {
     width: 200px;
     height: 100px;
     margin: 0 auto;
     margin-top: 20px;
-    
+
 }
-.ntc02_desc .ntc02_img img{
+
+.ntc02_desc .ntc02_img img {
     width: 100%;
-   
+
     border-radius: 10px;
 }
-.ntc02_desc h4{
+
+.ntc02_desc h4 {
     text-align: center;
     margin-top: 10px;
     font-size: 0.95rem;
 }
-.ntc02_desc p{
+
+.ntc02_desc p {
     text-align: center;
     font-size: 0.75rem;
     margin-top: 20px;
@@ -1361,7 +1392,7 @@ main {
     left: 5%;
     transform: translateY(-50%);
     z-index: 10;
-   
+
 }
 
 .ntc_02 .slick-prev::after {
@@ -1371,7 +1402,7 @@ main {
     visibility: visible;
     font-size: 25px;
     color: #47ae3e;
-    
+
 }
 
 .ntc_02 .slick-next::after {
@@ -1381,7 +1412,7 @@ main {
     visibility: visible;
     font-size: 25px;
     color: #47ae3e;
-    
+
 }
 
 .ntc_02 .slick-next {
@@ -1405,15 +1436,20 @@ main {
     font-size: 1.1rem;
 }
 
-.sheet03 ul{
+.sheet03 ul {
     padding: 5px;
 }
-.sheet03 ul li{
+
+.sheet03 ul li {
     border-bottom: 1px solid #ccc;
-    
+
 }
-.sheet03 ul li:last-child{border: 0;}
-.sheet03 a{
+
+.sheet03 ul li:last-child {
+    border: 0;
+}
+
+.sheet03 a {
     display: block;
     margin-bottom: 10px;
     font-size: 0.75rem;
@@ -1620,7 +1656,7 @@ main {
     position: absolute;
     bottom: 5px;
     line-height: 30px;
-    
+
 }
 
 .media_01 .media_desc a {
@@ -1629,9 +1665,9 @@ main {
     font-size: 0.8rem;
     color: #fff;
     text-align: center;
-    overflow:hidden;
-    text-overflow:ellipsis;
-    white-space:nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .media02,
@@ -1641,6 +1677,7 @@ main {
     width: calc(100% - 50% - 20px);
 
 }
+
 .media_wrap {
     display: flex;
     flex-wrap: wrap;
@@ -1778,18 +1815,20 @@ footer {
     display: flex;
     justify-content: space-around;
     font-size: 0.6rem;
-    
+
 }
 
-.footer_wrap .foot_desc ul{
+.footer_wrap .foot_desc ul {
     margin-right: 5px;
-    
+
 }
-.footer_wrap .foot_desc ul li{
+
+.footer_wrap .foot_desc ul li {
     margin-top: 10px;
-   
+
 }
-.footer_wrap .foot_desc ul li:first-child{
+
+.footer_wrap .foot_desc ul li:first-child {
     font-size: 0.75rem;
     margin-top: 0;
     font-weight: 550;
@@ -1808,33 +1847,42 @@ footer {
 
 }
 
-.foot_txt_wrap{
+.foot_txt_wrap {
     margin-top: 15px;
     position: relative;
-    
+
 }
-.foot_txt{
+
+.foot_txt {
     font-size: 0.7rem;
     width: 100%;
     padding: 5px;
+    
+   
 }
-.foot_txt p{}
-.foot_txt p a{
+
+
+
+.foot_txt p a {
     font-weight: 550;
 }
-.foot_sns{
+
+.foot_sns {
     text-align: center;
     position: absolute;
     top: -30px;
     right: 0;
-   
+
 }
-.foot_sns ul{}
-.foot_sns ul li{
+
+.foot_sns ul {}
+
+.foot_sns ul li {
     display: inline-block;
     padding-right: 5px;
 }
-.foot_sns ul li i{
+
+.foot_sns ul li i {
     font-size: 1.1rem;
 }
 
@@ -1999,7 +2047,7 @@ nav {
         margin-top: 15px;
     }
 
-   
+
 
     .s1box {
         width: calc(100% - 50% - 10px);
@@ -2060,22 +2108,47 @@ nav {
     .section2 .section2_wrap .notice_box1 {
         width: 100%;
         margin-right: 20px;
-        
+
+    }
+
+    .ntc_desc h4 {
+        font-size: 1.1rem;
+    }
+
+    .ntc_desc h5 {
+        font-size: 0.9rem;
+    }
+
+    .notice_list2 a {
+        font-size: 0.9rem;
+    }
+
+    .ntc02_desc h4 {
+        font-size: 1.1rem;
+    }
+
+    .ntc02_desc p {
+        margin-top: 10px;
+        font-size: 0.85rem;
+    }
+
+    .sheet03 a {
+        font-size: 0.9rem;
     }
 
     .notice_box2 {
         width: 100%;
-        
+
     }
-    .ntc02_desc .ntc02_img{
+
+    .ntc02_desc .ntc02_img {
         height: 135px;
         width: 250px;
     }
 
-    .section2 .section2_wrap {
-        
-    }
-    .ntc_desc .ntc_logo{
+    .section2 .section2_wrap {}
+
+    .ntc_desc .ntc_logo {
         width: 100px;
         height: 100px;
         bottom: 5%;
@@ -2109,7 +2182,7 @@ nav {
         color: #fff;
     }
 
-    
+
 
     .media02,
     .media03,
@@ -2151,11 +2224,10 @@ nav {
         margin-left: 10px;
     }
 
-    .footer_desc ul{}
-    .footer_desc ul li{
+    .footer_desc ul {}
 
-    }
-    
+    .footer_desc ul li {}
+
 
     .top_btn {
         width: 50px;
@@ -2179,21 +2251,27 @@ nav {
         width: 80%;
         left: 0px;
     }
-    .footer_wrap .foot_desc ul li{
+
+    .footer_wrap .foot_desc ul li {
         font-size: 0.75rem;
     }
-    .footer_wrap .foot_desc ul li:first-child{
+
+    .footer_wrap .foot_desc ul li:first-child {
         font-size: 0.9rem;
     }
-    .footer_wrap .foot_famsite select{
+
+    .footer_wrap .foot_famsite select {
         width: 100px;
         height: 25px;
     }
-    .foot_sns ul li i{
+
+    .foot_sns ul li i {
         font-size: 1.5rem;
     }
-    .foot_txt{
+
+    .foot_txt {
         font-size: 0.8rem;
+        line-height: 20px;
     }
 }
 
@@ -2432,6 +2510,8 @@ nav {
         overflow: hidden;
         transition: .3s;
 
+
+
     }
 
     .lnb .lnb_tit>li:hover .lnb_center_list {
@@ -2563,15 +2643,30 @@ nav {
     .main_wrap .main_search {
         width: calc(100% - 66.6666% - 26.6666px);
         margin-left: 20px;
+        transition: .3s;
+    }
+
+    .main_wrap .main_search:hover {
+        transform: scale(1.03);
     }
 
     .main_wrap .main_reservation {
         width: calc(100% - 66.6666% - 26.6666px);
+        transition: .3s;
+    }
+
+    .main_wrap .main_reservation:hover {
+        transform: scale(1.03);
     }
 
     .main_wrap .main_login {
         width: calc(100% - 66.6666% - 26.6666px);
+        transition: .3s;
         margin-right: 20px;
+    }
+
+    .main_wrap .main_login:hover {
+        transform: scale(1.03);
     }
 
     .main_wrap .main_login_box .main_join {
@@ -2606,6 +2701,11 @@ nav {
 
     .s1box {
         height: 200px;
+    }
+
+    .s1box:hover {
+        transform: scale(1.03);
+
     }
 
     .s1box h4 {
@@ -2646,9 +2746,7 @@ nav {
         width: calc(100% - 50% - 30px);
     }
 
-    .section2 .section2_wrap .notice_box1 .notice_list {
-        height: 280px;
-    }
+
 
     .section2 .section2_wrap .notice_box1 .notice_list a {
         font-size: 1rem;
@@ -2664,16 +2762,53 @@ nav {
         /* margin-left: 20px;  */
     }
 
-    .sheet_list {
-        height: 280px;
+    .ntc_desc h5 {
+        font-size: 1rem;
     }
-    /*****************noticebox 내용 수정 footer수정 미디어센터 수정**********************/
+
+    .ntc_desc p {
+        font-size: 1rem;
+    }
+
+    .ntc02_desc .ntc02_img {
+        margin-top: 10px;
+    }
+
+    .ntc02_desc h4 {
+        font-size: 1.2rem;
+    }
+
+    .popup {
+        width: 30%;
+        left: 100px;
+        top: 180px;
+    }
+
+    .media_desc .media_desc_01 {
+        margin: 80px auto;
+        font-size: 0.8rem;
+
+    }
+
+    .media_01 .media_desc a {
+        font-size: 0.9rem;
+    }
+
+    .media_desc p {
+        margin: 10px auto;
+        font-size: 0.8rem;
+
+    }
+
+
+
     
+
 
     .sheet01 a,
     .sheet02 a,
     .sheet03 a {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .notice_label .label_01,
@@ -2688,7 +2823,7 @@ nav {
     }
 
     .section3_wrap .section3_tit h4 {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
 
     .section3_box label {
@@ -2719,7 +2854,11 @@ nav {
 
     .media_main {
         width: calc(100% - 50% - 20px);
-        height: 100%;
+
+    }
+
+    .media_01 .media_desc {
+        bottom: 3px;
     }
 
     .media_wrap {
@@ -2771,7 +2910,7 @@ nav {
     }
 
     .section5_tit h4 {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 
     .center_box img {
@@ -2807,9 +2946,7 @@ nav {
         height: 100%;
     }
 
-    .media_01 {
-        margin-bottom: 0px;
-    }
+
 
     .section4_wrap {
         margin-bottom: 20px;
@@ -2830,7 +2967,7 @@ nav {
     }
 
     .section4_tit h4 {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
 
     .footer_wrap .foot_logo img {
@@ -2844,6 +2981,42 @@ nav {
     .pop_up {
         display: block;
     }
+
+    .footer_wrap .foot_logo {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .footer_wrap .foot_logo img {
+        width: 55%;
+    }
+
+    .footer_wrap .foot_desc ul li:first-child a {
+        font-size: 1rem;
+        transition: .3s;
+    }
+
+    .footer_wrap .foot_desc ul li:first-child:hover a {
+        color: #47ae3e;
+    }
+
+    .footer_wrap .foot_desc ul li {
+        font-size: 0.85rem;
+    }
+
+    .footer_wrap .foot_desc ul li a {
+        transition: .3s;
+    }
+
+    .footer_wrap .foot_desc ul li:hover a {
+        color: #47ae3e;
+    }
+
+    .foot_txt {
+        font-size: 0.9rem;
+        line-height: 25px;
+    }
+   
 
 }
 
