@@ -780,7 +780,10 @@ main .main_wrap .e_coupon a p {
     width: calc(100% - 33.3333% - 26.6666px);
     margin-right: 20px;
     padding: 10px;
+    overflow: hidden;
+    
 }
+
 
 .section1 .section1_wrap .sec1_box2 .box2_01.ml {
     margin-left: 20px;
@@ -789,6 +792,7 @@ main .main_wrap .e_coupon a p {
 .section1 .section1_wrap .sec1_box2 .box2_01 img {
     width: 100%;
     height: 100%;
+    
 }
 
 /***************section2*****************/
@@ -907,13 +911,19 @@ main .main_wrap .e_coupon a p {
 
 .section3 .section3_wrap .best_box {
     width: 100%;
+    
 }
 
 .section3 .section3_wrap .best_box img {
     width: 100%;
     height: 100%;
     padding: 5px;
+    transition: .3s;
+    
 }
+.section3 .section3_wrap .best_box:hover img{
+    rotate: 3deg;
+} 
 
 .section3 .section3_wrap .best_desc {
     width: 100%;
@@ -1129,16 +1139,18 @@ main .main_wrap .e_coupon a p {
     font-size: 0;
     cursor: pointer;
     overflow: hidden;
+    
 
 
 }
 
 .section5_wrap .sns_box .sns_img:hover img {
-    transform: scale(1.1);
+    transform: scale(1);
 }
 
 .section5_wrap .sns_box .sns_img img {
     width: 100%;
+    transform: scale(1.1);
     transition: .3s;
 
 }
@@ -1476,7 +1488,7 @@ footer {
     }
 
     main {
-        margin-top: 0;
+        margin-top: 50px;
     }
 
     main .main_wrap .delivery a h4,
