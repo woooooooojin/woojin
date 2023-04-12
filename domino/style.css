@@ -397,13 +397,13 @@ nav {
     width: 100%;
 }
 
-.visual_main .visual {
+/* .visual_main .visual {
     height: 350px;
-}
+} */
 
 .visual_main .visual img {
     width: 100%;
-    height: 350px;
+    height: 400px;
 }
 
 .visual_main_wrap {
