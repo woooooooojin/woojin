@@ -1986,6 +1986,8 @@ nav {
 
 /****************media query**************************/
 @media all and (min-width:601px) {
+
+    
     header .logo_ex .logo_M img {
         width: 40%;
     }
@@ -2121,7 +2123,11 @@ nav {
 
     .notice_list2 a {
         font-size: 0.9rem;
+        transition: .3s;
     }
+    .notice_list2 li:hover a{
+        color: #47ae3e;
+    } 
 
     .ntc02_desc h4 {
         font-size: 1.1rem;
@@ -2134,7 +2140,11 @@ nav {
 
     .sheet03 a {
         font-size: 0.9rem;
+        transition: .3s;
     }
+     .sheet03 li:hover a{
+        color: #47ae3e;
+     }
 
     .notice_box2 {
         width: 100%;
@@ -2215,6 +2225,7 @@ nav {
         margin: 0 auto;
     }
 
+
     .footer_wrap .foot_logo img {
         width: 80%;
     }
@@ -2238,7 +2249,7 @@ nav {
     }
 
     .visual_main .visual_slider .v_img img {
-        height: 200px;
+        height: 250px;
     }
 
     .visual_main .container .control {
