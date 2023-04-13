@@ -1466,16 +1466,18 @@ main {
 
 .section3_wrap {}
 
-.section3_wrap .section3_tit {
+.section3_tit {
     width: 100%;
     height: 50px;
     text-align: center;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
     line-height: 50px;
+    margin-bottom: 30px;
+    margin-top: 80px;
 }
 
-.section3_wrap .section3_tit h4 {
+.section3_tit h4 {
     font-size: 1.3rem;
 }
 
@@ -1515,8 +1517,8 @@ main {
 
 .section3_box label {
     position: absolute;
-    top: 11px;
-    right: 10px;
+    top: -68px;
+    right: 22px;
 
 
 }
@@ -1621,6 +1623,7 @@ main {
     line-height: 50px;
     text-align: center;
     margin-bottom: 20px;
+    margin-top: 80px;
 }
 
 .section4_tit h4 {
@@ -1632,7 +1635,7 @@ main {
     overflow: hidden;
     margin: 0 10px;
     position: relative;
-    margin-bottom: 20px;
+    
 }
 
 .media_01 .media_img {}
@@ -1699,6 +1702,7 @@ main {
     border-bottom: 1px solid #ccc;
     line-height: 50px;
     margin-bottom: 50px;
+    margin-top: 80px;
 
 }
 
@@ -1794,6 +1798,7 @@ footer {
     border-bottom: 1px solid #ccc;
     padding: 5px;
     background-color: #f4f3f3;
+    
 }
 
 .footer_wrap {
@@ -1886,6 +1891,20 @@ footer {
     font-size: 1.1rem;
 }
 
+.foot_num{
+    position: absolute;
+    text-align: center;
+    top: 30px;
+    right: 10px;
+    font-size: 0.8rem;
+    font-weight: 550;
+    line-height: 20px;
+}
+.footcont{
+    position: relative;
+    
+}
+
 
 /*top btn*/
 .top_btn {
@@ -1908,7 +1927,6 @@ footer {
 }
 
 /********pop up*************/
-/*내용바꾸기*/
 #popup_chk {
     display: none;
 }
@@ -1939,6 +1957,7 @@ footer {
 
 .popup_wrap {
     background-color: #fff;
+    font-size: 0;
 }
 
 .popup label {
@@ -1950,15 +1969,59 @@ footer {
     padding-right: 10px;
     background-color: #f4f3f3;
     color: #666;
+    font-weight: 550;
 }
 
 .popup p {
     text-align: center;
     font-size: 1.2rem;
     font-weight: 700;
-    margin-bottom: 10px;
     background-color: #f4f3f3;
     color: #666;
+}
+
+/************popup2**************/
+#popup02_chk{display: none;}
+#popup02_chk:checked ~ .popup02{display: block;}
+#popup02_chk ~ .popup02{display: none;}
+
+#popup02_chk ~ .pop02_close{display: none;}
+#popup02_chk:checked ~ .pop02_close{display: block;}
+
+
+
+.pop_up02{
+    position: absolute;
+    top: 20px;
+    right: 100px;
+    z-index: 99999;
+    
+    animation: pop02ani 2s infinite linear;
+}
+.popup02{
+    width: 150px;
+    height: 150px;
+    background-color: #67ae3e;
+    border-radius: 50%;
+    text-align: center;
+
+}
+@keyframes pop02ani{
+    0%{top: 20px;}
+    20%{top: 25px;}
+    50%{top: 20px;}
+    70%{top: 25px;}
+    100%{top: 20px;}
+}
+.popup02 p{
+    font-size: 0.9rem;
+    padding-top: 35px;
+    line-height: 35px;
+    color: #fff;
+}
+.pop02_close{
+    text-align: right;
+    font-weight: 600;
 }
 
 
@@ -2238,6 +2301,11 @@ nav {
     .footer_desc ul {}
 
     .footer_desc ul li {}
+    .foot_num{
+        top: 42px;
+        right: 24px;
+        font-size: 0.9rem;
+    }
 
 
     .top_btn {
@@ -2259,7 +2327,7 @@ nav {
     }
 
     .popup {
-        width: 80%;
+        width: 65%;
         left: 0px;
     }
 
@@ -2861,6 +2929,7 @@ nav {
     .media04,
     .media05 {
         width: calc(100% - 50% - 20px);
+        font-size: 0;
     }
 
     .media_main {
@@ -2870,6 +2939,9 @@ nav {
 
     .media_01 .media_desc {
         bottom: 3px;
+    }
+    .media_main .media_desc{
+        bottom: 5px;
     }
 
     .media_wrap {
@@ -2895,11 +2967,19 @@ nav {
 
     .sns_box img {
         transition: .3s;
+        transform: scale(1.1);
     }
 
     .sns_box:hover img {
-        transform: scale(1.1);
+        transform: scale(1);
     }
+    .sns_box:hover .sns_logo i{
+        transform: rotate(360deg);
+    }
+    .sns_box .sns_logo a i{
+        transition: .3s;
+    }
+    
 
     .sns_box .img_wrap {
         border-radius: 10px;
@@ -3026,6 +3106,19 @@ nav {
     .foot_txt {
         font-size: 0.9rem;
         line-height: 25px;
+        padding-left: 44px;
+    }
+    .foot_num{
+        top: 140px;
+        right: 182px;
+        font-size: 1.2rem;
+        line-height: 32px;
+    }
+    .top_btn{
+        bottom: 237px;
+    }
+    .pop_up02{
+        right: 250px;
     }
    
 
@@ -3167,6 +3260,9 @@ nav {
         width: 90px;
         margin-left: 92px;
     }
+    .foot_num {
+        right: 288px;
+    }
 
     .top_btn {
         display: none;
@@ -3262,5 +3358,8 @@ nav {
 
     .visual_slider .slick-prev {
         left: 20%;
+    }
+    .pop_up02{
+        right: 500px;
     }
 }
