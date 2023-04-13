@@ -449,7 +449,7 @@ nav {
     position: absolute;
     bottom: 20px;
     right: 50%;
-
+    transform: translateX(50%);
 }
 
 .visual.slick-dotted .slick-dots li {
@@ -818,12 +818,20 @@ main .main_wrap .e_coupon a p {
     margin-right: 20px;
     cursor: pointer;
     height: 380px;
+    
 
 
 }
 
 .section2_wrap .new_box:hover img {
-    transform: scale(1.2);
+    /* transform: scale(1.2); */
+    animation: newani 0.3s linear;
+}
+@keyframes newani{
+    0%{scale: 1;}
+    50%{scale:1.2}
+    70%{scale:1.1}
+    100%{scale: 1;}
 }
 
 .new_box .img_wrap {
@@ -1025,30 +1033,7 @@ main .main_wrap .e_coupon a p {
 
 }
 
-/* .section3_tit .more_click{
-    display: flex;
-    position: absolute;
-    top: 50%; right: 10px;
-    transform: translateY(-50%);
-   
-    
-}
 
-
-.section3 .line_wrap{position: relative;}
-
- .more_click .line{
-    width: 25px;
-    height: 3px;
-    background-color: #238ece;
-    display: block;
-    position: absolute;
-    top: 0px; right: 10px;
-    transition: .3s;
-}
-.more_click:hover .line:nth-child(2){
-    transform: rotate(90deg);
-} */
 .section4_wrap {
     width: 100%;
     display: flex;
@@ -1071,6 +1056,8 @@ main .main_wrap .e_coupon a p {
 .event_box .evnt_img {
     width: 100%;
     position: relative;
+    overflow: hidden;
+    font-size: 0;
 }
 
 .event_box .evnt_img img {
@@ -1081,29 +1068,42 @@ main .main_wrap .e_coupon a p {
 .event_box .evnt_img .evnt_desc {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.7);
     position: absolute;
     top: 0px;
     text-align: center;
     opacity: 0;
     transition: .3s;
+    cursor: pointer;
+    
 }
+.event_box .evnt_img .evnt_desc a:first-child{
+    position: absolute;
+    top: -50px;
 
+}
+.event_box .evnt_img .evnt_desc a:last-child{
+    position: absolute;
+    top: 500px;
+
+}
 .event_box .evnt_img .evnt_desc a {
     color: #fff;
     font-size: 25px;
     width: 100%;
     display: block;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+    transition: .3s;
+
 
 
 }
 
 .event_box:hover .evnt_img .evnt_desc {
     opacity: 1;
+
 }
+.event_box:hover .evnt_img .evnt_desc a:first-child{top: 20%;}
+.event_box:hover .evnt_img .evnt_desc a:last-child{top: 60%;}
 
 
 /************section5*****************/
@@ -1155,7 +1155,7 @@ main .main_wrap .e_coupon a p {
 
 }
 
-.section5_wrap .sns_box .sns_desc {
+/* .section5_wrap .sns_box .sns_desc {
     border: 1px solid #ccc;
     cursor: pointer;
     height: 140px;
@@ -1165,7 +1165,7 @@ main .main_wrap .e_coupon a p {
     padding: 10px;
     font-size: 14px;
 
-}
+} */
 
 /**************footer****************/
 footer {
@@ -1426,6 +1426,9 @@ footer {
     font-weight: 600;
     margin: 10px 0;
     transition: .3s;
+}
+.quick_menu .quick_wrap .membership p span{
+    color: #ff143c;
 }
 
 .quick_menu .quick_wrap .membership:hover p {
@@ -1696,11 +1699,9 @@ footer {
         font-size: 15px;
     }
     .visual_main .visual img{
-        height: 300px;
+        height: 275px;
     }
-    .visual_main .visual{
-        height: 300px;
-    }
+    
     main .main_wrap{
         flex-wrap: wrap;
     }
