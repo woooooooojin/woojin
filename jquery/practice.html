@@ -16,72 +16,41 @@
 
         $(function(){
 
-        //    $('#btn1').click(function(){
-        //     $('p').css('background-color','yellow');
-        //    })
-        //    $('#btn2').dblclick(function(){
-        //     $('p').css('background-color','purple');
-        //    })
+            // $('#btn1').click(function(){
+            //     $('h1').hide(1000,function(){alert('숨김')})
+            // })
 
-        //    $('#btn2').dblclick();
-
-
-        // $('#btn1').css('background-color','purple');
-        // return false;
-
-        // $('#btn2').click(function(e){
-        //     e.preventDefault();
-        //     $('p').css('background-color','yellow')
-        // })
+            // $('#btn2').click(function(){
+            //     $('h1').show('slow',function(){
+            //         alert('뿅')
+            //     })
+            // })
         
 
-        // $('#btn1').mouseover(function(){
-        //     $('p').css('background-color','yellow')
-        // })
+            // $('#btn1').click(function(){
+            //     $('h1').fadeOut(1000);
+            // })
 
-        // $('#btn1').mouseout(function(){
-        //     $('p').css('background-color','purple')
-        // })
+            // $('#btn2').click(function(){
+            //     $('h1').fadeIn('slow');
+            // })
 
-        // $('#btn2').hover(function(){
-        //     $('p').css('background-color','yellow')
-        // },function(){
-        //     $('p').css('background-color','green')
-        // })
+            // $('#btn3').click(function(){
+            //     $('h1').fadeToggle('fast')
+            // })
 
 
+            $('#btn1').click(function(){
+                $('h1').slideUp(1000);
+            })
+            $('#btn2').click(function(){
+                $('h1').slideDown('slow');
+            })
+            $('#btn3').click(function(){
+                $('h1').slideToggle('fast');
+            })
 
-        // $('#wrap').mouseout(function(){
-        //     $('p').css('border','1px solid red');
-        // })
 
-        // $('#wrap').mouseleave(function(){
-        //     $('p').css('border','2px dotted red');
-        // })
-
-        // $(document).mousemove(function(e){
-        //     let x = e.pageX;
-        //     let y = e.pageY;
-
-        //     $('p').text('x:' + x + 'y:' + y);
-        // })
-
-        // $('#user_id').keydown(function(e){
-        //     $(this).css('background-color','purple')
-        //     $('#txt1').text(e.keyCode);
-        // })
-
-        // $('#user_id').keyup(function(){
-        //     $(this).css('background-color','yellow');
-        // })
-
-        $('#menu a').mouseover(function(){
-            $('#menu a').css('background','none');
-            $(this).css('background','yellow')
-
-            let num = $('#menu a').index(this);
-            $('.txt').text(num);
-        })
 
         })
 
@@ -96,56 +65,19 @@
     </script>
 
     <style>
-    /* *{margin: 0; padding: 0;}
-    body{margin: 20px;}
-    #wrap{background-color: #ccc;
-    padding: 10px;}
-    p{background-color: #999;} */
-
-    /* #user_id{
-        ime-mode:disabled;
-    } */
+        h1{
+            height: 200px;
+            width: 300px;
+            background-color: #ff0;
+        }
     </style>
 </head>
 <body>
 
-   <!-- <button id="btn1">click</button>
-   <button id="btn2">dbclick</button>
-   <p>내용</p> -->
-
-   <!-- <a href="www.w3.org" id="btn1">버튼1</a>
-   <a href="www.w3.org" id="btn2">버튼2</a>
-   <a href="www.w3.org" id="btn3">버튼3</a>
-   <p>내용</p> -->
-
-
-   <!-- <button id="btn1">mouseover/out</button>
-   <button id="btn2">hover</button>
-   <p>내용</p> -->
-
-   <!-- <div id="wrap">
-    <p>내용</p>
-   </div> -->
-
-   <!-- <p></p> -->
-
-
-   <!-- <p>
-    <input type="text" name="user_id" id="user_id">
-   </p>
-
-   <p id="txt1"></p>
-   <p id="txt2"></p> -->
-
-
-   <ul id="menu">
-    <li><a href="#!">asdf1</a></li>
-    <li><a href="#!">asdf2</a></li>
-    <li><a href="#!">asdf3</a></li>
-    <li><a href="#!">asdf4</a></li>
-   </ul>
-
-   <p class="txt"></p>
+  <button id="btn1">slideup</button>
+  <button id="btn2">slidedown</button>
+  <button id="btn3">slide toggle</button>
+  <h1>ddd</h1>
 
 </body>
 </html>
