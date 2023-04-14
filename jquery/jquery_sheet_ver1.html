@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery sheet ver1</title>
+    <script src="./js/jquery-3.6.4.min.js"></script>
+
+
+
+    <script>
+
+
+        //변수선언
+        const tabLi = $('.season .season_tab li');
+        const sheetDiv = $('#season_sheet');
+
+
+        $(function () {
+
+            $('.season .season_tab li').click(function () {
+
+                $('.season .season_tab li').removeClass('on')
+
+                $(this).addClass('on');
+
+            })
+
+
+            $('.tab_spring').click(function () {
+
+                $('#season_sheet').removeClass().addClass('spring');
+
+
+            })
+
+            $('.tab_summer').click(function () {
+
+                $('#season_sheet').removeClass().addClass('summer');
+
+
+            })
+
+            
+            $('.tab_autumn').click(function () {
+
+                $('#season_sheet').removeClass().addClass('autumn');
+
+
+            })
+
+
+            $('.tab_winter').click(function () {
+
+                $('#season_sheet').removeClass().addClass('winter');
+
+
+            })
+
+
+
+        })
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .season {
+            width: 500px;
+            height: 550px;
+            /* border: 1px solid black; */
+            margin: 30px auto;
+        }
+
+        .season .season_tab {
+            overflow: hidden;
+
+        }
+
+        .season .season_tab li {
+            width: 25%;
+            height: 50px;
+            background-color: #eee;
+            border-radius: 10px 10px 0 0;
+            text-align: center;
+            line-height: 50px;
+            float: left;
+            cursor: pointer;
+
+        }
+
+        .season .season_tab li.on {
+            background-color: yellowgreen;
+        }
+
+        .season #season_sheet {
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+        }
+
+
+        .spring {
+            background: url(./images/spring.jpg);
+        }
+
+        .summer {
+            background: url(./images/summer.jpg);
+        }
+
+        .autumn {
+            background: url(./images/autumn.jpg);
+        }
+
+        .winter {
+            background: url(./images/winter.jpg);
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <section class="season">
+        <ul class="season_tab">
+            <li class="tab_spring on">spring</li>
+            <li class="tab_summer">summer</li>
+            <li class="tab_autumn">autumn</li>
+            <li class="tab_winter">winter</li>
+        </ul>
+        <!--tab-->
+
+        <div id="season_sheet" class="spring"></div>
+
+    </section>
+
+
+
+</body>
+
+</html>

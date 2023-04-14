@@ -18,6 +18,11 @@
             width: 600px;
             height: 300px;
         }
+        .swiper-progress-bar{
+            width: 600px;
+            height: 20px;
+        }
+        
 
         
     </style>
@@ -44,6 +49,11 @@
 
         <!-- If we need scrollbar -->
         <div class="swiper-scrollbar"></div>
+
+        <div class="swiper-progress-bar">
+            <div class="progress"></div>
+            <div class="progress-sections"></div>
+        </div>
     </div>
 
 
@@ -72,6 +82,7 @@
                 el: '.swiper-scrollbar',
             },
         });
+        
     </script>
 
 </body>

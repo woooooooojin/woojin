@@ -7,7 +7,7 @@
     
 
 
-    <title>Document</title>
+    <title>jquery sheet tab </title>
     <script src="./js/jquery-3.6.4.min.js"></script>
 
 
@@ -16,41 +16,23 @@
 
         $(function(){
 
-            // $('#btn1').click(function(){
-            //     $('h1').hide(1000,function(){alert('숨김')})
-            // })
-
-            // $('#btn2').click(function(){
-            //     $('h1').show('slow',function(){
-            //         alert('뿅')
-            //     })
-            // })
-        
-
-            // $('#btn1').click(function(){
-            //     $('h1').fadeOut(1000);
-            // })
-
-            // $('#btn2').click(function(){
-            //     $('h1').fadeIn('slow');
-            // })
-
-            // $('#btn3').click(function(){
-            //     $('h1').fadeToggle('fast')
-            // })
-
-
-            $('#btn1').click(function(){
-                $('h1').slideUp(1000);
-            })
-            $('#btn2').click(function(){
-                $('h1').slideDown('slow');
-            })
-            $('#btn3').click(function(){
-                $('h1').slideToggle('fast');
+            $('.season_tab li').click(function(){
+                $('.season_tab li').removeClass('on');
+                $(this).addClass('on')
             })
 
-
+            $('.tab_spring').click(function(){
+                $('#tab_sheet').removeClass().addClass('spring');
+            })
+            $('.tab_summer').click(function(){
+                $('#tab_sheet').removeClass().addClass('summer');
+            })
+            $('.tab_autumn').click(function(){
+                $('#tab_sheet').removeClass().addClass('autumn');
+            })
+            $('.tab_winter').click(function(){
+                $('#tab_sheet').removeClass().addClass('winter');
+            })
 
         })
 
@@ -65,19 +47,85 @@
     </script>
 
     <style>
-        h1{
-            height: 200px;
-            width: 300px;
-            background-color: #ff0;
-        }
+      *{margin: 0; padding: 0; box-sizing: border-box;}
+      li{list-style: none;}
+
+      .section{
+        width: 700px;
+        height: 600px;
+        margin: 50px auto;
+        border: 1px solid black;
+        overflow: hidden;
+      }
+
+      .section .season_tab li{
+        width: 150px;
+        height: 150px;
+        border: 1px solid black;
+        text-align: center;
+        line-height: 150px;
+        
+        
+      }
+      .section .season_tab li.on{
+        background-color: bisque;
+      }
+      .season_tab {
+       float: right;
+      }
+
+      #tab_sheet{
+        float: left;
+        width: 500px;
+        height: 600px;
+        margin-top: 50px;
+        margin-left: 20px;
+        
+      }
+
+      .spring{
+        background: url(./images/spring.jpg) no-repeat;
+        
+      }
+      .summer{
+        background: url(./images/summer.jpg) no-repeat;
+      }
+      .autumn{
+        background: url(./images/autumn.jpg) no-repeat;
+      }
+      .winter{
+        background: url(./images/winter.jpg) no-repeat;
+      }
+      .tab_spring{
+        background: url(./images/spring.jpg);
+        background-size: cover;
+      }
+      .tab_summer{
+        background: url(./images/summer.jpg);
+        background-size: cover;
+      }
+      .tab_autumn{
+        background: url(./images/autumn.jpg);
+        background-size: cover;
+      }
+      .tab_winter{
+        background: url(./images/winter.jpg);
+        background-size: cover;
+      }
+      
     </style>
 </head>
 <body>
 
-  <button id="btn1">slideup</button>
-  <button id="btn2">slidedown</button>
-  <button id="btn3">slide toggle</button>
-  <h1>ddd</h1>
+    <section class="section">
+        <ul class="season_tab">
+            <li class="tab_spring on"></li>
+            <li class="tab_summer"></li>
+            <li class="tab_autumn"></li>
+            <li class="tab_winter"></li>
+        </ul>
+        <div id="tab_sheet" class="spring"></div>
+    </section>
 
 </body>
 </html>
