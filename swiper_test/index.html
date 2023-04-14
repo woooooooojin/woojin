@@ -17,14 +17,48 @@
         .swiper {
             width: 600px;
             height: 300px;
+            position: relative;
         }
-        .swiper-progress-bar{
-            width: 600px;
-            height: 20px;
-        }
-        
 
-        
+        .swiper-scrollbar {
+            display: none;
+        }
+
+        .swiper-horizontal>.swiper-pagination-progressbar,
+        .swiper-pagination-progressbar.swiper-pagination-horizontal {
+            width: 30%;
+
+            top: auto;
+            bottom: 50px;
+
+        }
+
+        .swiper-slide {}
+
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+            background-color: red;
+        }
+
+        .swiper-button-prev {
+            color: #fff;
+        }
+
+        .swiper-button-next {
+            color: #fff;
+        }
+        .swiper-pagination-fraction{
+            color: #fff;
+            font-size: 20px;
+            position: absolute;
+            bottom: 20px;
+            left: -203px;
+        }
+  
     </style>
 
 </head>
@@ -35,10 +69,10 @@
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide">Slide 1</div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
-            ...
+            <div class="swiper-slide"><img src="./images/autumn.jpg" alt="dd"></div>
+            <div class="swiper-slide"><img src="./images/spring.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./images/summer.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./images/winter.jpg" alt=""></div>
         </div>
         <!-- If we need pagination -->
         <div class="swiper-pagination" pagination-type="progressbar"></div>
@@ -49,26 +83,35 @@
 
         <!-- If we need scrollbar -->
         <div class="swiper-scrollbar"></div>
+        <div class="swiper-pagination pagination_bullet"></div>
+        <div class="swiper-pagination pagination_progress"></div>
 
-        <div class="swiper-progress-bar">
+        <!-- <div class="swiper-progress-bar">
             <div class="progress"></div>
             <div class="progress-sections"></div>
-        </div>
+        </div> -->
     </div>
 
 
 
 
     <script>
-        const swiper = new Swiper('.swiper', {
+        const swiper_test = new Swiper('.swiper', {
             // Optional parameters
             direction: 'horizontal',
             loop: true,
 
             // If we need pagination
             pagination: {
-                el: '.swiper-pagination',
+                el: ".pagination_bullet", //페이징 태그 클래스 설정 
+                clickable: true, //버튼 클릭 여부
+                type: 'fraction', //페이징 타입 설정(종류: bullets, fraction, progressbar)   
+                // Bullet Numbering 설정
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '">' + (index + 1) + "</span>";
 
+
+                }
             },
 
             // Navigation arrows
@@ -78,11 +121,21 @@
             },
 
             // And if we need scrollbar
-            scrollbar: {
-                el: '.swiper-scrollbar',
+            // scrollbar: {
+            //     el: '.swiper-scrollbar',
+            // },
+
+
+
+
+        });
+        var pagingSwiper = new Swiper(".swiper", {
+            pagination: {
+                el: ".pagination_progress",
+                type: "progressbar",
             },
         });
-        
+        swiper_test.controller.control = pagingSwiper;
     </script>
 
 </body>

@@ -950,6 +950,7 @@ main {
 /****************section**********************/
 .section1 {
     width: 100%;
+    margin-top: 80px;
 }
 
 .section1_wrap {
@@ -1062,7 +1063,7 @@ main {
 /* 컨텐츠 내용 바꾸기 */
 .section2 {
     width: 100%;
-    margin-top: 40px;
+    margin-top: 100px;
 }
 
 .section2 .section2_wrap {
@@ -1461,7 +1462,7 @@ main {
 /***************section3 전문진료센터*******************/
 .section3 {
     width: 100%;
-    margin-top: 50px;
+    margin-top: 100px;
 }
 
 .section3_wrap {}
@@ -1610,7 +1611,7 @@ main {
 
 /****************section4****************/
 .section4 {
-    margin-top: 35px;
+    margin-top: 80px;
 }
 
 .section4_wrap {}
@@ -1623,7 +1624,7 @@ main {
     line-height: 50px;
     text-align: center;
     margin-bottom: 20px;
-    margin-top: 80px;
+    
 }
 
 .section4_tit h4 {
@@ -1798,6 +1799,7 @@ footer {
     border-bottom: 1px solid #ccc;
     padding: 5px;
     background-color: #f4f3f3;
+    margin-top: 40px;
     
 }
 
@@ -1875,7 +1877,7 @@ footer {
 .foot_sns {
     text-align: center;
     position: absolute;
-    top: -30px;
+    top: -78px;
     right: 0;
 
 }
@@ -1894,7 +1896,7 @@ footer {
 .foot_num{
     position: absolute;
     text-align: center;
-    top: 30px;
+    top: 63px;
     right: 10px;
     font-size: 0.8rem;
     font-weight: 550;
@@ -2302,9 +2304,9 @@ nav {
 
     .footer_desc ul li {}
     .foot_num{
-        top: 42px;
+        top: 92px;
         right: 24px;
-        font-size: 0.9rem;
+        font-size: 1.1rem;
     }
 
 
@@ -2340,7 +2342,7 @@ nav {
     }
 
     .footer_wrap .foot_famsite select {
-        width: 100px;
+        width: 130px;
         height: 25px;
     }
 
@@ -3109,8 +3111,7 @@ nav {
         padding-left: 44px;
     }
     .foot_num{
-        top: 140px;
-        right: 182px;
+        top: 130px;
         font-size: 1.2rem;
         line-height: 32px;
     }
@@ -3257,11 +3258,11 @@ nav {
 
     .footer_wrap .foot_famsite select {
         height: 25px;
-        width: 90px;
-        margin-left: 92px;
+        width: 130px;
+        margin-left: 80px;
     }
     .foot_num {
-        right: 288px;
+        
     }
 
     .top_btn {
