@@ -237,6 +237,8 @@ header .gnb .gnb_language:hover label{
 }
 .mobile_nav ul li a{
     color: #fff;
+    width: 100%;
+    display: block;
 }
 .mobile_nav ul li a span{
     color: #ff143c;
@@ -281,11 +283,12 @@ nav {
 }
 
 .lnb_wrap>ul>li:hover {
-    background-color: #fff;
+    /* background-color: #fff; */
 }
 
 .lnb_wrap>ul>li:hover>a {
-    color: black;
+    font-weight: 550;
+    
 }
 
 .lnb_wrap .lnb>li>a {
@@ -293,10 +296,33 @@ nav {
     display: block;
     color: #fff;
     line-height: 50px;
+    position: relative;
 
 
 
 }
+.lnb_wrap .lnb>li>a::after{
+    content:"";
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    width: 0;
+    height: 4px;
+    background-color: #fff;
+    transition: all .5s;
+}
+.lnb_wrap .lnb>li>a::before{
+    content:"";
+    position: absolute;
+    right: 50%;
+    bottom: 0px;
+    width: 0;
+    height: 4px;
+    background-color: #fff;
+    transition: all .5s;
+}
+.lnb_wrap>ul>li:hover>a:after{width: 50%;}
+.lnb_wrap>ul>li:hover>a:before{width: 50%;}
 
 /**********더보기메뉴***********/
 #more_chk {
@@ -324,7 +350,7 @@ nav {
 }
 
 .lnb_wrap ul li:last-child:hover label {
-    color: black;
+    color: #FFF;
 }
 
 .lnb_wrap ul li:last-child i {
@@ -816,14 +842,11 @@ main .main_wrap .e_coupon a p {
     width: calc(100% - 75% - 15px);
     height: 300px;
     margin-right: 20px;
-    cursor: pointer;
-    height: 380px;
-    
 
 
 }
 
-.section2_wrap .new_box:hover img {
+.section2_wrap .new_box .img_wrap:hover img {
     animation: newani 0.3s linear;
 }
 @keyframes newani{
@@ -843,7 +866,9 @@ main .main_wrap .e_coupon a p {
     width: 100%;
     height: 100%;
     transition: .3s;
+    cursor: pointer;
 }
+
 
 .section2_wrap .new_box:last-child {
     margin-right: 0;
@@ -911,10 +936,30 @@ main .main_wrap .e_coupon a p {
 }
 
 
+.section2_wrap .new_box .new_desc .cart_wrap{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.section2_wrap .new_box .new_desc .cart_wrap .cart{}
+.section2_wrap .new_box .new_desc .cart_wrap .cart i{
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.section2_wrap .new_box .new_desc .cart_wrap .heart{}
+.section2_wrap .new_box .new_desc .cart_wrap .heart i{
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+
+
 /******************section3*********************/
 .section3 {
     width: 100%;
-    margin-top: 100px;
+    margin-top: 180px;
 }
 
 .section3 .container>h4 {
@@ -985,7 +1030,7 @@ main .main_wrap .e_coupon a p {
 }
 
 .section3 .section3_wrap .best_desc .best_price2 {
-    float: left;
+    /* float: left; */
 
 }
 
@@ -999,6 +1044,22 @@ main .main_wrap .e_coupon a p {
 .section3 .section3_wrap .best_desc p span {
     color: #ff143c;
     font-weight: 600;
+}
+.section3 .section3_wrap .best_desc .cart_wrap{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+.section3 .section3_wrap .best_desc .cart_wrap .cart{}
+.section3 .section3_wrap .best_desc .cart_wrap .cart i{
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.section3 .section3_wrap .best_desc .cart_wrap .heart{}
+.section3 .section3_wrap .best_desc .cart_wrap .heart i{
+    font-size: 25px;
+    cursor: pointer;
 }
 
 .best_seller {
@@ -1438,8 +1499,8 @@ footer {
 }
 
 .quick_menu .quick_wrap .membership .q_img {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     margin: 10px auto;
 }
 
@@ -1458,6 +1519,9 @@ footer {
     margin: 10px 0;
     transition: .3s;
 }
+.quick_menu .quick_wrap .membership i{
+    font-size: 27px;
+}
 .quick_menu .quick_wrap .membership p span{
     color: #ff143c;
 }
@@ -1469,6 +1533,38 @@ footer {
 .quick_menu .quick_wrap .membership:last-child {
     border: 0;
 }
+
+.btn_wrap{
+    position: fixed;
+    bottom: 98px;
+    right: 37px;
+}
+
+.btn_wrap .dir_btn{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    margin-bottom: 10px;
+}
+.btn_wrap .dir_btn:first-child{
+    background-color: #238ece;
+}
+.btn_wrap .dir_btn:last-child{
+    background-color: #ff143c;
+}
+.btn_wrap .dir_btn a{
+    width: 100%;
+    display: block;
+    color: #fff;
+}
+.btn_wrap .dir_btn a i{
+    font-size: 18px;
+}
+
+
+
 
 
 
