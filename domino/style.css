@@ -311,7 +311,7 @@ nav {
     width: 0;
     height: 4px;
     background-color: #fff;
-    transition: all .5s;
+    transition: all .3s;
 }
 .lnb_wrap .lnb>li>a::before{
     content:"";
@@ -321,7 +321,7 @@ nav {
     width: 0;
     height: 4px;
     background-color: #fff;
-    transition: all .5s;
+    transition: all .3s;
 }
 .lnb_wrap>ul>li:hover>a:after{width: 50%;}
 .lnb_wrap>ul>li:hover>a:before{width: 50%;}

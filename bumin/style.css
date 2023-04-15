@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+html{scroll-behavior: smooth;}
 li {
     list-style: none;
 }
@@ -2516,7 +2516,6 @@ nav {
         line-height: 50px;
         text-align: center;
         /* border: 1px solid #ccc; */
-
         transition: .3s;
     }
 
@@ -2525,6 +2524,7 @@ nav {
         width: 100%;
         font-size: 1.1rem;
         transition: .3s;
+        
     }
 
     .lnb .lnb_tit li:nth-child(2),
