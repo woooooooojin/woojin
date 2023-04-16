@@ -832,7 +832,7 @@ main .main_wrap .e_coupon a p {
 
 .section2 h4 {
     text-align: center;
-    font-size: 25px;
+    font-size: 28px;
     margin-bottom: 20px;
 }
 
@@ -878,6 +878,7 @@ main .main_wrap .e_coupon a p {
 
 .section2_wrap .new_box .new_desc {
     width: 100%;
+    margin-top: 10px;
 
 }
 
@@ -886,13 +887,20 @@ main .main_wrap .e_coupon a p {
     overflow: hidden;
     text-align: center;
     height: 40px;
+    
 }
 
 .section2_wrap .new_box .new_desc .desc_wrap h4 {
-    margin-left: 50px;
+    padding-left: 75px;
     float: left;
     font-size: 20px;
+    
 
+}
+.section2_wrap .new_box .new_desc .desc_wrap .new_tit{
+    width: 100%;
+    height: 40px;
+    margin: 0 auto;
 }
 
 .section2_wrap .new_box .new_desc .desc_wrap .new {
@@ -906,6 +914,7 @@ main .main_wrap .e_coupon a p {
     margin-top: 6px;
     text-align: center;
     padding: 0 3px;
+    margin-left: 10px;
     animation: new_ani 1s infinite linear;
 
 }
@@ -947,12 +956,20 @@ main .main_wrap .e_coupon a p {
 .section2_wrap .new_box .new_desc .cart_wrap .cart i{
     font-size: 25px;
     cursor: pointer;
+    transition: .3s;
+}
+.section2_wrap .new_box .new_desc .cart_wrap .cart:hover i{
+    color: #238ece;
 }
 
 .section2_wrap .new_box .new_desc .cart_wrap .heart{}
 .section2_wrap .new_box .new_desc .cart_wrap .heart i{
     font-size: 25px;
     cursor: pointer;
+    transition: .3s;
+}
+.section2_wrap .new_box .new_desc .cart_wrap .heart:hover i{
+    color: #ff143c;
 }
 
 
@@ -965,7 +982,7 @@ main .main_wrap .e_coupon a p {
 }
 
 .section3 .container>h4 {
-    font-size: 24px;
+    font-size: 28px;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -1013,12 +1030,13 @@ main .main_wrap .e_coupon a p {
 
 .section3 .section3_wrap .best_desc {
     width: 100%;
+    margin-top: 10px;
 }
 
 .section3 .section3_wrap .best_desc h4 {
     font-size: 20px;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .section3 .section3_wrap .best_desc .best_price_wrap {
@@ -1056,12 +1074,21 @@ main .main_wrap .e_coupon a p {
 .section3 .section3_wrap .best_desc .cart_wrap .cart i{
     font-size: 25px;
     cursor: pointer;
+    transition: .3s;
 }
+.section3 .section3_wrap .best_desc .cart_wrap .cart:hover i{
+    color: #238ece;
+}
+
 
 .section3 .section3_wrap .best_desc .cart_wrap .heart{}
 .section3 .section3_wrap .best_desc .cart_wrap .heart i{
     font-size: 25px;
     cursor: pointer;
+    transition: .3s;
+}
+.section3 .section3_wrap .best_desc .cart_wrap .heart:hover i{
+    color: #ff143c;
 }
 
 .best_seller {
@@ -1121,7 +1148,7 @@ main .main_wrap .e_coupon a p {
 }
 
 .section4_tit h4 {
-    font-size: 24px;
+    font-size: 28px;
     text-align: center;
 
 
@@ -1207,7 +1234,7 @@ main .main_wrap .e_coupon a p {
 }
 
 .section5 h4 {
-    font-size: 24px;
+    font-size: 28px;
     text-align: center;
 }
 
@@ -1263,6 +1290,54 @@ main .main_wrap .e_coupon a p {
     font-size: 14px;
 
 } */
+
+
+/*******section6 *********/
+.section6{
+    margin-top: 100px;
+    width: 100%;
+    
+}
+.section6 .section6_tit{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.section6 .section6_tit h4{
+    font-size: 28px;
+}
+.domino_video{
+    width: 1000px;
+    height: 550px;
+    margin: 10px auto;
+}
+.domino_video iframe{
+    border-radius: 20px;
+    
+}
+.section6_wrap .more_cf_btn{
+    width: 150px;
+    height: 50px;
+    border: 1px solid #fff;
+    margin: 0 auto;
+    line-height: 50px;
+    text-align: center;
+    margin-top: 50px;
+    background-color: #238ece;
+    transition: .3s;
+    
+}
+.section6_wrap .more_cf_btn a{
+    color: #fff;
+    font-size: 20px;
+    width: 100%;
+    display: block;
+    
+}
+.section6_wrap .more_cf_btn:hover{
+    box-shadow: 0 0 10px gray;
+}
+
+
 
 /**************footer****************/
 footer {
@@ -1487,7 +1562,7 @@ footer {
     background-color: #fff;
     border-radius: 10px;
     position: fixed;
-    right: 10px;
+    right: 5px;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
@@ -1541,8 +1616,8 @@ footer {
 
 .btn_wrap{
     position: fixed;
-    bottom: 98px;
-    right: 37px;
+    bottom: 70px;
+    right: 30px;
 }
 
 .btn_wrap .dir_btn{
