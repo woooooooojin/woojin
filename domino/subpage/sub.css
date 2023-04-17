@@ -498,19 +498,19 @@ nav {
 
 #login_chk{display: none;}
 #login_chk:checked ~ .label_chk::before{
-    /* background: url(../imges/check02.webp) no-repeat;
-    background-size: cover;   */
+    background: url(../imges/check02.webp) no-repeat;
+    background-size: cover;  
 }
-#login_chk:checked ~  .box::after{
+/* #login_chk:checked ~  .box::after{
     width: 18px;
 }
 #login_chk:checked ~  .box::before{
     width: 10px;
-}
+} */
 #login_chk:checked ~  .box{
 
 }
-/* .label_chk::before{
+.label_chk::before{
     content: "";
     display: inline-block;
     width: 17px;
@@ -520,8 +520,8 @@ nav {
     margin-right: 10px;
     border-radius: 50%;
     position: relative;
-} */
-.box{
+}
+ /* .box{
     display: inline-block;
     width: 20px;
     height: 20px;
@@ -535,7 +535,7 @@ nav {
     width: 0px;
     height: 2px;
     background-color: black;
-    /* transform: rotate(-45deg); */
+   
     transform: translateY(-10px) translateX(6px)  rotate(-45deg);
     transition: .3s;
     transition-delay: .05s;
@@ -553,7 +553,7 @@ nav {
     bottom: 0; left: 0;
     transform: rotate(-140deg) translateY(7px) translateX(4px);
     transition: .3;
-}
+}  */
 
 
 
