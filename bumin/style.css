@@ -950,7 +950,7 @@ main {
 /****************section**********************/
 .section1 {
     width: 100%;
-    margin-top: 80px;
+    margin-top: 130px;
 }
 
 .section1_wrap {
@@ -1060,10 +1060,10 @@ main {
 
 /*************section2 noticebox*****************/
 
-/* 컨텐츠 내용 바꾸기 */
+
 .section2 {
     width: 100%;
-    margin-top: 100px;
+    margin-top: 140px;
 }
 
 .section2 .section2_wrap {
@@ -1462,7 +1462,7 @@ main {
 /***************section3 전문진료센터*******************/
 .section3 {
     width: 100%;
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
 .section3_wrap {}
@@ -1611,7 +1611,7 @@ main {
 
 /****************section4****************/
 .section4 {
-    margin-top: 80px;
+    margin-top: 150px;
 }
 
 .section4_wrap {}
@@ -1691,7 +1691,7 @@ main {
 
 /*************section5****************/
 .section5 {
-    margin-top: 35px;
+    margin-top: 150px;
 }
 
 .section5_wrap {
@@ -3251,7 +3251,7 @@ nav {
     }
 
     .section1 {
-        margin-top: -10px;
+        margin-top: 100px;
     }
 
     .s1box .sec1_btn a {
