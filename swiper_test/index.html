@@ -10,14 +10,14 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="index.css">
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script defer src="./js/main.js"></script>
 
 
 
 
-    <style>
+    <!-- <style>
         * {
             margin: 0;
             padding: 0;
@@ -109,7 +109,9 @@
             top: -100px;
             left: 500px;
         }
-    </style>
+
+
+    </style> -->
 
 </head>
 
@@ -122,7 +124,16 @@
 
         <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide"><img src="./images/./fila01.jpg" alt="dd"></div>
+            <div class="swiper-slide">
+                <img src="./images/./fila01.jpg" alt="dd">
+                <div class="visual_tit">
+                    <p>
+                        FILA TENNIS COLLECTION
+                    </p>
+                    <a href="#!">컬렉션 보기</a>
+                </div>
+            
+            </div>
             <div class="swiper-slide"><img src="./images/fila02.jpg" alt=""></div>
             <div class="swiper-slide"><img src="./images/fila03.jpg" alt=""></div>
             <div class="swiper-slide"><img src="./images/fila04.jpg" alt=""></div>
@@ -156,9 +167,12 @@
             slidesPerGroup: 1,
             observer: true,
             observeParents: true,
-            autoplay: true,
+            autoplay: {
+                delay:2000
+            },
+           
+           
             
-            // spaceBetween: 10,
 
 
 
