@@ -18,9 +18,15 @@
 
 
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         .swiper {
-            width: 50vw;
-            height: 50vh;
+            width: 100vw;
+            height: 100vh;
             position: relative;
 
 
@@ -32,14 +38,16 @@
 
         .swiper-horizontal>.swiper-pagination-progressbar,
         .swiper-pagination-progressbar.swiper-pagination-horizontal {
-            width: 30%;
+            width: 260px;
             height: 15px;
             top: auto;
-            bottom: 60px;
-            left: 19px
+            bottom: 94px;
+            left: 40px;
         }
 
-        .swiper-slide {}
+        .swiper-slide {
+            font-size: 0;
+        }
 
         .swiper-slide img {
             width: 100%;
@@ -49,15 +57,28 @@
         }
 
         .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
-            background-color: red;
+            background-color: #fff;
         }
 
         .swiper-button-prev {
-            color: red;
+            color: #fff;
+            left: 360px;
+            top: 870px;
+            border: 1px solid #fff;
+            
+        }
+        .swiper-button-prev:after{
+            font-size: 20px;
         }
 
         .swiper-button-next {
-            color: red;
+            color: #fff;
+            left: 420px;
+            top: 870px;
+            border: 1px solid #fff;
+        }
+        .swiper-button-next:after{
+            font-size: 20px;
         }
 
         .swiper-pagination-fraction {
@@ -86,7 +107,7 @@
             visibility: visible;
             position: absolute;
             top: -100px;
-            left: 350px;
+            left: 500px;
         }
     </style>
 
@@ -101,14 +122,11 @@
 
         <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide"><img src="./images/autumn.jpg" alt="dd"></div>
-            <div class="swiper-slide"><img src="./images/spring.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="./images/summer.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="./images/winter.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="./images/autumn.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="./images/spring.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="./images/summer.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="./images/winter.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./images/./fila01.jpg" alt="dd"></div>
+            <div class="swiper-slide"><img src="./images/fila02.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./images/fila03.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./images/fila04.jpg" alt=""></div>
+
         </div>
 
 
