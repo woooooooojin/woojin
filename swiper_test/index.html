@@ -15,9 +15,12 @@
 
     <style>
         .swiper {
-            width: 600px;
+            width: 550px;
             height: 300px;
             position: relative;
+            /* z-index: 9999;
+            overflow: visible; */
+           
         }
 
         .swiper-scrollbar {
@@ -33,11 +36,17 @@
 
         }
 
-        .swiper-slide {}
+        .swiper-slide {
+           
+        }
 
         .swiper-slide img {
-            width: 100%;
-            height: 100%;
+           width: 100%;
+           height: 100%;
+            /* display: block;
+            margin: 0 auto;
+             */
+
         }
 
         .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
@@ -45,20 +54,40 @@
         }
 
         .swiper-button-prev {
-            color: #fff;
+            color: red;
         }
 
         .swiper-button-next {
-            color: #fff;
+            color:red;
         }
-        .swiper-pagination-fraction{
+
+        .swiper-pagination-fraction {
             color: #fff;
             font-size: 20px;
             position: absolute;
             bottom: 20px;
             left: -203px;
         }
-  
+/* 
+        .swiper-wrapper {
+            overflow: visible;
+           
+            
+            
+        }
+
+        .swiper-slide{
+            opacity: 0.4;
+            transition: opacity 0.3s;
+        }
+
+        .swiper-slide-active,
+        .swiper-slide-active+.swiper-slide,
+        .swiper-slide-active+.swiper-slide+.swiper-slide,
+        .swiper-slide-active+.swiper-slide+.swiper-slide+.swiper-slide, 
+        .swiper-slide-active+.swiper-slide+.swiper-slide+.swiper-slide+.swiper-slide { 
+            opacity: 1;
+        } */
     </style>
 
 </head>
@@ -67,13 +96,22 @@
     <!-- Slider main container -->
     <div class="swiper">
         <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide"><img src="./images/autumn.jpg" alt="dd"></div>
-            <div class="swiper-slide"><img src="./images/spring.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="./images/summer.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="./images/winter.jpg" alt=""></div>
-        </div>
+
+
+       
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="./images/autumn.jpg" alt="dd"></div>
+                <div class="swiper-slide"><img src="./images/spring.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./images/summer.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./images/winter.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./images/autumn.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./images/spring.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./images/summer.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./images/winter.jpg" alt=""></div>
+            </div>
+        
+
         <!-- If we need pagination -->
         <div class="swiper-pagination" pagination-type="progressbar"></div>
 
@@ -82,14 +120,16 @@
         <div class="swiper-button-next"></div>
 
         <!-- If we need scrollbar -->
-        <div class="swiper-scrollbar"></div>
-        <div class="swiper-pagination pagination_bullet"></div>
+        <!-- <div class="swiper-scrollbar"></div> -->
+        <div class="swiper-pagination pagination_fraction"></div>
         <div class="swiper-pagination pagination_progress"></div>
 
         <!-- <div class="swiper-progress-bar">
             <div class="progress"></div>
             <div class="progress-sections"></div>
         </div> -->
+
+
     </div>
 
 
@@ -100,18 +140,25 @@
             // Optional parameters
             direction: 'horizontal',
             loop: true,
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            observer: true,
+            observeParents: true,
+            // spaceBetween: 10,
+
+
 
             // If we need pagination
             pagination: {
-                el: ".pagination_bullet", //페이징 태그 클래스 설정 
+                el: ".pagination_progress", //페이징 태그 클래스 설정 
                 clickable: true, //버튼 클릭 여부
-                type: 'fraction', //페이징 타입 설정(종류: bullets, fraction, progressbar)   
+                type: 'progressbar', //페이징 타입 설정(종류: bullets, fraction, progressbar)   
                 // Bullet Numbering 설정
-                renderBullet: function (index, className) {
-                    return '<span class="' + className + '">' + (index + 1) + "</span>";
+                // renderBullet: function (index, className) {
+                //     return '<span class="' + className + '">' + (index + 1) + "</span>";
 
+                // }
 
-                }
             },
 
             // Navigation arrows
@@ -129,13 +176,25 @@
 
 
         });
-        var pagingSwiper = new Swiper(".swiper", {
+
+   
+        let pagingSwiper = new Swiper(".swiper", {
             pagination: {
-                el: ".pagination_progress",
-                type: "progressbar",
+                el: ".pagination_fraction",
+                type: "fraction",
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '">' + (index + 1) + "</span>";
+
+                }
+
+
             },
+
         });
-        swiper_test.controller.control = pagingSwiper;
+        
+        swiper_test.controller.control = pagingSwiper; 
+        swiper_test.pagination.init();
+        
     </script>
 
 </body>
