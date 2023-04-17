@@ -1635,11 +1635,13 @@ main {
     width: calc(100% - 20px);
     overflow: hidden;
     margin: 0 10px;
-    position: relative;
-    
+    /* position: relative; */
+    margin-bottom: 10px;
 }
 
-.media_01 .media_img {}
+.media_01 .media_img {
+    position: relative;
+}
 
 .media_01 .media_img a {
     display: block;
@@ -1648,8 +1650,8 @@ main {
 
 .media_01 .media_img a img {
     width: 100%;
-    height: 100%;
-    /* height: auto; */
+    /* height: 100%; */
+   
 
 }
 
@@ -2880,6 +2882,12 @@ nav {
         font-size: 0.8rem;
 
     }
+    .media02,
+    .media03{
+        margin-bottom: 20px;
+    }
+
+
 
 
 
@@ -2940,7 +2948,7 @@ nav {
     }
 
     .media_01 .media_desc {
-        bottom: 3px;
+        bottom: 0px;
     }
     .media_main .media_desc{
         bottom: 5px;
@@ -3036,7 +3044,7 @@ nav {
     }
 
     .media_01.media_main .media_img a img {
-        height: 100%;
+        
     }
 
 
