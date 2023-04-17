@@ -6,21 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>swiper</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script defer src="./js/main.js"></script>
 
 
 
 
     <style>
         .swiper {
-            width: 550px;
-            height: 300px;
+            width: 50vw;
+            height: 50vh;
             position: relative;
-            /* z-index: 9999;
-            overflow: visible; */
-           
+
+
         }
 
         .swiper-scrollbar {
@@ -30,22 +33,18 @@
         .swiper-horizontal>.swiper-pagination-progressbar,
         .swiper-pagination-progressbar.swiper-pagination-horizontal {
             width: 30%;
-
+            height: 15px;
             top: auto;
-            bottom: 50px;
-
+            bottom: 60px;
+            left: 19px
         }
 
-        .swiper-slide {
-           
-        }
+        .swiper-slide {}
 
         .swiper-slide img {
-           width: 100%;
-           height: 100%;
-            /* display: block;
-            margin: 0 auto;
-             */
+            width: 100%;
+            height: 100%;
+
 
         }
 
@@ -58,36 +57,37 @@
         }
 
         .swiper-button-next {
-            color:red;
+            color: red;
         }
 
         .swiper-pagination-fraction {
             color: #fff;
             font-size: 20px;
             position: absolute;
-            bottom: 20px;
-            left: -203px;
-        }
-/* 
-        .swiper-wrapper {
-            overflow: visible;
-           
-            
-            
+            bottom: 17px;
+            left: -190px;
         }
 
-        .swiper-slide{
-            opacity: 0.4;
-            transition: opacity 0.3s;
+        .pagination_fraction {
+            visibility: hidden;
+            position: relative;
         }
 
-        .swiper-slide-active,
-        .swiper-slide-active+.swiper-slide,
-        .swiper-slide-active+.swiper-slide+.swiper-slide,
-        .swiper-slide-active+.swiper-slide+.swiper-slide+.swiper-slide, 
-        .swiper-slide-active+.swiper-slide+.swiper-slide+.swiper-slide+.swiper-slide { 
-            opacity: 1;
-        } */
+        .pagination_fraction .swiper-pagination-current {
+            font-size: 20px;
+            visibility: visible;
+            position: absolute;
+            top: -100px;
+            left: 210px;
+        }
+
+        .pagination_fraction .swiper-pagination-total {
+            font-size: 20px;
+            visibility: visible;
+            position: absolute;
+            top: -100px;
+            left: 350px;
+        }
     </style>
 
 </head>
@@ -98,19 +98,19 @@
         <!-- Additional required wrapper -->
 
 
-       
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide"><img src="./images/autumn.jpg" alt="dd"></div>
-                <div class="swiper-slide"><img src="./images/spring.jpg" alt=""></div>
-                <div class="swiper-slide"><img src="./images/summer.jpg" alt=""></div>
-                <div class="swiper-slide"><img src="./images/winter.jpg" alt=""></div>
-                <div class="swiper-slide"><img src="./images/autumn.jpg" alt=""></div>
-                <div class="swiper-slide"><img src="./images/spring.jpg" alt=""></div>
-                <div class="swiper-slide"><img src="./images/summer.jpg" alt=""></div>
-                <div class="swiper-slide"><img src="./images/winter.jpg" alt=""></div>
-            </div>
-        
+
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><img src="./images/autumn.jpg" alt="dd"></div>
+            <div class="swiper-slide"><img src="./images/spring.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./images/summer.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./images/winter.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./images/autumn.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./images/spring.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./images/summer.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./images/winter.jpg" alt=""></div>
+        </div>
+
 
         <!-- If we need pagination -->
         <div class="swiper-pagination" pagination-type="progressbar"></div>
@@ -119,15 +119,9 @@
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
 
-        <!-- If we need scrollbar -->
-        <!-- <div class="swiper-scrollbar"></div> -->
+
         <div class="swiper-pagination pagination_fraction"></div>
         <div class="swiper-pagination pagination_progress"></div>
-
-        <!-- <div class="swiper-progress-bar">
-            <div class="progress"></div>
-            <div class="progress-sections"></div>
-        </div> -->
 
 
     </div>
@@ -167,34 +161,38 @@
                 prevEl: '.swiper-button-prev',
             },
 
-            // And if we need scrollbar
-            // scrollbar: {
-            //     el: '.swiper-scrollbar',
-            // },
+
 
 
 
 
         });
 
-   
+
         let pagingSwiper = new Swiper(".swiper", {
+            loop: true,
             pagination: {
                 el: ".pagination_fraction",
                 type: "fraction",
-                renderBullet: function (index, className) {
+                renderCustom: function (index, className) {
                     return '<span class="' + className + '">' + (index + 1) + "</span>";
 
                 }
 
 
+                // type:"custom",
+                // renderCustom: function(swiper, current, total){
+                //     return current + (total - 1);
+                // }
+
+
+
             },
 
         });
-        
-        swiper_test.controller.control = pagingSwiper; 
-        swiper_test.pagination.init();
-        
+
+        swiper_test.controller.control = pagingSwiper;
+        // swiper_test.pagination.init();
     </script>
 
 </body>
