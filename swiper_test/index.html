@@ -73,7 +73,7 @@
 
         .swiper-button-next {
             color: #fff;
-            left: 420px;
+            left: 400px;
             top: 870px;
             border: 1px solid #fff;
         }
@@ -156,6 +156,8 @@
             slidesPerGroup: 1,
             observer: true,
             observeParents: true,
+            autoplay: true,
+            
             // spaceBetween: 10,
 
 
@@ -198,19 +200,12 @@
                 }
 
 
-                // type:"custom",
-                // renderCustom: function(swiper, current, total){
-                //     return current + (total - 1);
-                // }
-
-
 
             },
 
         });
 
         swiper_test.controller.control = pagingSwiper;
-        // swiper_test.pagination.init();
     </script>
 
 </body>
