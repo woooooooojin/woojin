@@ -438,14 +438,16 @@ nav {
     line-height: 60px;
     background-color: #238ece;
 
-    
+
 }
-.section_login .login_wrap li:last-child{
+
+.section_login .login_wrap li:last-child {
     border-left: 0;
     background-color: #ff143c;
-    
+
 }
-.section_login .login_wrap li a{
+
+.section_login .login_wrap li a {
     display: block;
     width: 100%;
     font-weight: 550;
@@ -454,13 +456,15 @@ nav {
 
 
 
-.form_wrap{
+.form_wrap {
     width: 100%;
     text-align: center;
     margin-top: 20px;
 }
-.login_id{}
-.login_id input{
+
+.login_id {}
+
+.login_id input {
     width: 400px;
     height: 35px;
     margin-top: 10px;
@@ -468,25 +472,30 @@ nav {
     border: 1px solid #ccc;
     padding: 0 10px;
 }
-.login_id input:focus{
+
+.login_id input:focus {
     box-shadow: 0 0 5px #238ece;
 }
-.login_chkbox{
+
+.login_chkbox {
     width: 400px;
     margin: 0 auto;
     margin-top: 10px;
     display: flex;
     justify-content: space-between;
-    
+
 }
-.login_chkbox .span_wrap{
+
+.login_chkbox .span_wrap {
     font-size: 13px;
-    
+
 }
-.login_chkbox .span_wrap span a{
-    color:gray;
+
+.login_chkbox .span_wrap span a {
+    color: gray;
 }
-.login_chkbox .span_wrap span:first-child::after{
+
+.login_chkbox .span_wrap span:first-child::after {
     display: inline-block;
     content: '';
     width: 1px;
@@ -496,32 +505,36 @@ nav {
     vertical-align: bottom;
 }
 
-#login_chk{display: none;}
-#login_chk:checked ~ .label_chk::before{
-    background: url(../imges/check02.webp) no-repeat;
-    background-size: cover;  
+#login_chk {
+    display: none;
 }
+
+#login_chk:checked~.label_chk::before {
+    background: url(../imges/check02.webp) no-repeat;
+    background-size: cover;
+}
+
 /* #login_chk:checked ~  .box::after{
     width: 18px;
 }
 #login_chk:checked ~  .box::before{
     width: 10px;
 } */
-#login_chk:checked ~  .box{
+#login_chk:checked~.box {}
 
-}
-.label_chk::before{
+.label_chk::before {
     content: "";
     display: inline-block;
     width: 17px;
     height: 17px;
-    border:1px solid #ccc;
+    border: 1px solid #ccc;
     vertical-align: bottom;
     margin-right: 10px;
     border-radius: 50%;
     position: relative;
 }
- /* .box{
+
+/* .box{
     display: inline-block;
     width: 20px;
     height: 20px;
@@ -557,14 +570,174 @@ nav {
 
 
 
-.label_chk{
+.label_chk {
     color: gray;
     font-size: 14px;
 }
 
+.submit_btn {
+    width: 400px;
+    height: 40px;
+    border: 1px solid #ccc;
+    margin: 10px auto;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    background-color: #eee;
+}
+
+.submit_btn a {
+    width: 100%;
+    display: block;
+}
+
+.sns_ex {
+    margin-top: 20px;
+}
+
+.sns_ex h4 {
+    font-size: 20px;
+}
+
+.sns_ex .sns_inner {
+    display: flex;
+    justify-content: center;
+}
+
+.sns_ex .sns_inner li {
+    margin-top: 20px;
+    margin-right: 20px;
+    width: 50px;
+    height: 50px;
+}
+
+.sns_ex .sns_inner li:last-child {
+    margin-right: 0;
+}
+
+.sns_ex .sns_inner li a img {
+    width: 100%;
+    height: auto;
+}
+
+.sns_ex .sns_inner li a {
+    display: block;
+    width: 100%;
+}
+
+
+/*********jquery control***********/
+.form_wrap {
+    display: none;
+}
 
 
 
+/***********비회원 회원가입****************/
+.not_member_wrap {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.sub_txt {
+    color: #888;
+}
+
+.sub_txt a {
+    text-decoration: underline;
+    color: #238ece;
+    font-weight: 550;
+}
+
+.not_mem_name input {
+    width: 400px;
+    height: 35px;
+    outline: none;
+    border: 1px solid #ccc;
+    padding: 0 10px;
+    margin-top: 20px;
+}
+.not_mem_name input[placeholder]{
+    color: #888;
+}
+
+.form_num{
+    margin-top: 10px;
+}
+.form_num select{
+    width: 84px;
+    height: 35px;
+    text-align: center;
+    color: #888;
+    outline: none;
+    border: 1px solid #ccc;
+    vertical-align: bottom;
+}
+
+.form_num #hp2{
+    width: 89px;
+    height: 35px;
+    outline: none;
+    border: 1px solid #ccc;
+}
+.form_num #hp3{
+    width: 89px;
+    height: 35px;
+    outline: none;
+    border: 1px solid #ccc;
+    
+}
+.form_num a{
+    display: inline-block;
+    width: 120px;
+    height: 35px;
+    border: 1px solid #ccc;
+    text-align: center;
+    line-height: 35px;
+    vertical-align: bottom;
+    background-color: #238ece;
+    color: #fff;
+    
+}
+
+.form_num2{
+    margin-top: 10px;
+}
+.form_num2 #hp4{
+    width: 400px;
+    height: 35px;
+    outline: none;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+.form_num2 input[placeholder]{
+    color: #888;
+}
+
+
+.chk_item{
+    width: 400px;
+    height: 35px;
+    border: 1px solid #ccc;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+    line-height: 35px;
+}
+.chk_item .text_label{}
+.chk_item .text_label::before{
+    content: "";
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    vertical-align: bottom;
+    margin-right: 5px;
+}
+
+
+#text_chk{display: none;}
 
 
 
