@@ -10,28 +10,28 @@
 
     <script>
         $(function () {
-
             const btnOpen = $('.header .lnb .btn_open');
             const btnClose = $('.header .lnb .btn_close');
-            const listMenu = $('.list_menu');
+            const listMenu = $('.list_menu')
 
-            btnOpen.click(function(){
-
-                listMenu.stop().animate({height:300},300)
-
-                btnClose.css('display','block')
-                btnOpen.css('display','none')
-
+            btnOpen.click(function () {
+                listMenu.stop().animate({
+                    height: 300,
+                }, 300)
+                btnOpen.css('display', 'none')
+                btnClose.css('display', 'block')
             })
 
-            btnClose.click(function(){
 
-                listMenu.stop().animate({height:0},300)
 
-                btnClose.css('display','none')
-                btnOpen.css('display','block')
+            btnClose.click(function () {
+                listMenu.stop().animate({
+                    height: 0,
+                }, 300)
+
+                btnOpen.css('display', 'block')
+                btnClose.css('display', 'none')
             })
-
 
         })
     </script>
@@ -47,67 +47,68 @@
             list-style: none;
         }
 
-        .header .lnb{
+        .header .lnb {
             width: 1050px;
             height: 50px;
             line-height: 50px;
-            text-align: center;
-            color: black;
             background-color: blanchedalmond;
             overflow: hidden;
             margin: 0 auto;
         }
-        .header .lnb .btn{
+
+        .header .lnb .btn {
+            float: left;
             width: 50px;
             height: 50px;
             text-align: center;
             line-height: 50px;
-            background-color: cadetblue;
+            background-color: aquamarine;
             cursor: pointer;
-            float: left;
         }
-        .header .lnb .btn_close{display: none;}
-        .header .lnb li{
+
+        .btn_close {
+            display: none;
+        }
+
+        .header .lnb li {
             width: 200px;
             height: 50px;
-            line-height: 50px;
             text-align: center;
+            line-height: 50px;
             float: left;
         }
 
-        .list_menu{
+        .list_menu {
             width: 100%;
             height: 0px;
             font-size: 50px;
-            border: 1px solid black;
+            line-height: 300px;
             text-align: center;
+            border: 1px solid black;
             overflow: hidden;
-        }
 
+        }
     </style>
 </head>
 
 <body>
 
-  <header class="header">
-    <nav class="lnb">
-        <div class="btn_open btn">open</div>
-        <div class="btn_close btn">close</div>
-        <ul>
-            <li>menu01</li>
-            <li>menu02</li>
-            <li>menu03</li>
-            <li>menu04</li>
-            <li>menu05</li>
-        </ul>
-
-    </nav>
-  </header>
-  <div class="list_menu">
-    menulist
-  </div>
-
-
+    <header class="header">
+        <nav class="lnb">
+            <div class="btn_open btn">Open</div>
+            <div class="btn_close btn">Close</div>
+            <ul>
+                <li>menu01</li>
+                <li>menu02</li>
+                <li>menu03</li>
+                <li>menu04</li>
+                <li>menu05</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="list_menu">
+        list menu
+    </div>
 </body>
 
 </html>
