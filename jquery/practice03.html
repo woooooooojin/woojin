@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+    <script src="./js/jquery-3.6.4.min.js"></script>
+
+    <script>
+        $(function () {
+
+            const btnOpen = $('.header .lnb .btn_open');
+            const btnClose = $('.header .lnb .btn_close');
+            const listMenu = $('.list_menu');
+
+            btnOpen.click(function(){
+
+                listMenu.stop().animate({height:300},300)
+
+                btnClose.css('display','block')
+                btnOpen.css('display','none')
+
+            })
+
+            btnClose.click(function(){
+
+                listMenu.stop().animate({height:0},300)
+
+                btnClose.css('display','none')
+                btnOpen.css('display','block')
+            })
+
+
+        })
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .header .lnb{
+            width: 1050px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            color: black;
+            background-color: blanchedalmond;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+        .header .lnb .btn{
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            background-color: cadetblue;
+            cursor: pointer;
+            float: left;
+        }
+        .header .lnb .btn_close{display: none;}
+        .header .lnb li{
+            width: 200px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            float: left;
+        }
+
+        .list_menu{
+            width: 100%;
+            height: 0px;
+            font-size: 50px;
+            border: 1px solid black;
+            text-align: center;
+            overflow: hidden;
+        }
+
+    </style>
+</head>
+
+<body>
+
+  <header class="header">
+    <nav class="lnb">
+        <div class="btn_open btn">open</div>
+        <div class="btn_close btn">close</div>
+        <ul>
+            <li>menu01</li>
+            <li>menu02</li>
+            <li>menu03</li>
+            <li>menu04</li>
+            <li>menu05</li>
+        </ul>
+
+    </nav>
+  </header>
+  <div class="list_menu">
+    menulist
+  </div>
+
+
+</body>
+
+</html>

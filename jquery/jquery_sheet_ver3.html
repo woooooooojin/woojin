@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery sheet ver3</title>
+    <script src="./js/jquery-3.6.4.min.js"></script>
+
+
+    <script>
+        $(function () {
+
+            const tabLi = $('.season .season_tab li');
+            const sheetLi = $('.season .season_sheet li');
+
+            let index = 0;
+
+            tabLi.click(function () {
+
+                tabLi.removeClass('on');
+                $(this).addClass('on');
+
+
+                index = $(this).index(); //내가방금 클릭한것의 인덱스 번호를 찾아내라
+
+                sheetLi.removeClass('sheet_on');
+                sheetLi.eq(index).addClass('sheet_on');
+
+            })
+
+        })
+
+        
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none
+        }
+
+        .season {
+            width: 500px;
+            height: 550px;
+            margin: 20px auto;
+
+        }
+
+        .season .season_tab {
+            overflow: hidden;
+        }
+
+        .season .season_tab li {
+            width: 25%;
+            float: left;
+            height: 50px;
+            background-color: #eee;
+            border-radius: 10px 10px 0 0;
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+        }
+
+        .season .season_tab li.on {
+            background-color: blanchedalmond;
+        }
+
+        .season .season_sheet {
+            width: 500px;
+            height: 500px;
+            position: relative;
+        }
+
+        .season .season_sheet li {
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+
+        .season .season_sheet li img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .season .season_sheet li.sheet_on {
+            display: block;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <section class="season">
+
+        <ul class="season_tab">
+            <li class="on">spring</li>
+            <li>summer</li>
+            <li>autumn</li>
+            <li>winter</li>
+        </ul>
+        <!--season tab-->
+
+        <ul class="season_sheet">
+            <li class="sheet_on"><img src="./images/spring.jpg" alt="img"></li>
+            <li><img src="./images/summer.jpg" alt="img"></li>
+            <li><img src="./images/autumn.jpg" alt="img"></li>
+            <li><img src="./images/winter.jpg" alt="img"></li>
+        </ul>
+        <!--season sheet end-->
+
+
+
+
+    </section>
+
+
+</body>
+
+</html>

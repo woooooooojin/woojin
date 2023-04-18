@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery menu01</title>
+    <script src="./js/jquery-3.6.4.min.js"></script>
+
+
+    <script>
+        $(function () {
+
+            // $('.btn_menu').mouseover(function(){
+            //     $('.list_menu').stop().slideDown(300); 
+            // }).mouseout(function(){ 
+            //     $('.list_menu').stop().slideUp(300);
+            //  })
+
+             //체이닝
+
+            // $('.btn_menu').mouseout(function(){
+            //     $('.list_menu').stop().slideUp(300);
+            // })
+
+            $('.btn_menu').hover(function(){
+                $('.list_menu').stop().slideToggle(300);
+            })
+
+
+        })
+
+        
+    </script>
+
+    <style>
+       *{margin: 0; padding: 0;}
+       li{list-style: none;}
+
+        .lnb{
+            width: 1050px;
+            height: 50px;
+            margin: 0px auto;
+            color: #fff;
+            background-color: black;
+            
+        }
+        .lnb .btn_menu{
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            float: left;
+            background-color: darkblue;
+            
+        }
+        .lnb ul{
+            overflow: hidden;
+        }
+        .lnb li{
+            float: left;
+            width: 200px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+        }
+        .list_menu{
+            width: 1050px;
+            height: 300px;
+            margin: 0 auto;
+            border: 1px solid black;
+            color: black;
+            font-size: 50px;
+            text-align: center;
+            line-height: 300px;
+            display: none;
+        }
+
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <nav class="lnb">
+        <div class="btn_menu">menu</div>
+        <ul>
+            <li>menu01</li>
+            <li>menu02</li>
+            <li>menu03</li>
+            <li>menu04</li>
+            <li>menu05</li>
+        </ul>
+    </nav>
+    <div class="list_menu">
+        full_down_menu
+    </div>
+
+
+
+</body>
+
+</html>
