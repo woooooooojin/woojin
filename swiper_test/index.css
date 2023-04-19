@@ -160,10 +160,11 @@ a{text-decoration: none;}
    width: 1000px;
     height: 600px;
     display: flex;
-    background: #eee;
+    background: royalblue;
+    opacity: 0.3;
     align-items: center;
     justify-content: center;
-    transition: all 0.2s linear;
+    transition: all 0.2s ease-in;
     transform: scale(0.8);
     margin: 0 50px;
     color: black;
@@ -176,6 +177,7 @@ a{text-decoration: none;}
   .swiper_2 .swiper-slide.swiper-slide-active {
     transform: scale(1);
     background: royalblue;
+    opacity: 1;
   }
   
   
