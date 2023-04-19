@@ -18,21 +18,21 @@
     <script>
         $(function () {
 
-           $('.wrap section').mousewheel(function(event, delta){
+          $('.wrap section').mousewheel(function(event, delta){
 
-            if(delta > 0){
+            if(delta>0){
                 let prev = $(this).prev().offset().top
                 $('html, body').stop().animate({
                     scrollTop:prev
                 },300,'easeInOutBack')
-            }else if(delta < 0){
+            }else if(delta<0){
                 let next = $(this).next().offset().top
                 $('html, body').stop().animate({
                     scrollTop:next
                 },300,'easeInOutBack')
             }
-           })
 
+          })
 
         })
         

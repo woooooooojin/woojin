@@ -6,9 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Domino</title>
+
+    <script src="./js/jquery-3.6.4.min.js"></script> <!--jquery-->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script><!--swiper-->
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    
+    
 </head>
 
 <body>
@@ -776,12 +785,31 @@
         <!--contianer end-->
     </section>
 
+
+    <section class="loop_infinite">
+        <div class="loop_container">
+            <div class="swiper my-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./imges/event1.jpg"></div>
+                    <div class="swiper-slide"><img src="./imges/event2.jpg"></div>
+                    <div class="swiper-slide"><img src="./imges/event3.jpg"></div>
+                    <div class="swiper-slide"><img src="./imges/event4.jpg"></div>
+
+                </div>
+            </div>
+        </div>
+        <!--container end-->
+
+    </section>
+
     <section class="section6">
         <div class="container">
             <div class="section6_tit">
                 <h4>도미노 CF</h4>
             </div>
             <!--tit end-->
+
+
             <div class="section6_wrap">
 
                 <div class="domino_video">
@@ -789,7 +817,8 @@
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe>
-                </div>
+                </div><!--video end-->
+
 
                 <div class="more_cf_btn">
                     <a href="#!">더보기</a>
@@ -797,6 +826,8 @@
 
             </div>
             <!--section6 wrap end-->
+
+
         </div>
         <!--container end-->
 
@@ -1032,6 +1063,17 @@
             });
         });
     </script>
+
+<script>
+    const swiper = new Swiper('.my-slider', {
+        loop: true,
+        speed: 5000,
+        slidesPerView: 3,      
+        autoplay: {
+            delay: 0,
+        },
+    })
+</script>
 </body>
 
 </html>
