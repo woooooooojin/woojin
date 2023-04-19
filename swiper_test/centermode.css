@@ -1,0 +1,27 @@
+*{margin: 0; padding: 0;}
+/* 슬라이드 CSS */
+.slider {text-align: center;font-size: 0;max-width: 1180px;margin: 50px auto 0;padding: 0 15px;}
+.slider .inner {overflow: hidden;width: 100%;padding: 75px 0;margin: 0 auto;}
+.slide_list > li {position: relative;width: 20%; height: 150px;text-align: center;background: #ade9ff;margin: 0;font-size: 20px;line-height: 150px;color: #000;transform: scale(1); transition: all 0.3s;z-index: 0;}
+
+/* 영역별 크기 설정 */
+.slide_list > li.swiper-slide-next,
+.slide_list > li.swiper-slide-prev,
+.slide_list > li.swiper-slide-duplicate-next,
+.slide_list > li.swiper-slide-duplicate-prev {transform: scale(1.5);z-index: 50;}
+.slide_list > li.swiper-slide-active,
+.slide_list > li.swiper-slide-duplicate-active {transform: scale(2);z-index: 100;}
+
+/* 영역별 밝기 설정 */
+.slide_list > li:after {position: absolute;content:'';top: 0;left: 0;width: 100%;height: 100%;background:rgba(0,0,0,0.5);transition: all 0.3s;opacity: 0;opacity: 1;}
+.slide_list > li.swiper-slide-next:after,
+.slide_list > li.swiper-slide-prev:after,
+.slide_list > li.swiper-slide-duplicate-next:after,
+.slide_list > li.swiper-slide-duplicate-prev:after {background:rgba(0,0,0,0.3);} 
+.slide_list > li.swiper-slide-active:after,
+.slide_list > li.swiper-slide-duplicate-active:after{opacity: 0;}
+
+/* 화살표 */
+.slider .swiper-prev,
+.slider .swiper-next {display: inline-block;width: 35px;height: 35px;margin:30px 15px 0;background:url('images/arrow.png') center center no-repeat;background-size: cover;text-indent: -999em;cursor: pointer;}
+.slider .swiper-prev {transform: rotateY(180deg);}

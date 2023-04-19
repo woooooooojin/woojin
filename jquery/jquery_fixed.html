@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fixed</title>
+    <script src="./js/jquery-3.6.4.min.js"></script> <!--맨위에-->
+
+    <script>
+
+
+        $(function(){
+
+            $(window).scroll(function(){
+
+                if($(window).scrollTop() >= 200){
+                    $('.lnb').addClass('fixed');
+                }else{
+                    $('.lnb').removeClass('fixed');
+                }
+
+            });//window scroll 
+
+            $('.btn_top').click(function(e){
+
+                e.preventDefault(); //고유기능 삭제
+
+                $('html, body').stop().animate({
+                    scrollTop:0,
+                },500)
+
+
+            })//btn top click
+
+        })
+        
+
+    </script>
+
+
+    <style>
+        *{margin: 0; padding: 0;}
+        li{list-style: none;}
+
+        body{
+            height: 3000px;
+        }
+        .header{
+            width: 100%;
+            height: 200px;
+            background-color: blanchedalmond;
+        }
+
+        .lnb{
+            width: 100%;
+            height: 50px;
+            background-color: cadetblue;
+        }
+        .fixed{
+            position: fixed;
+            top: 0;left: 0;
+        }
+
+        .btn_top{
+            display: block;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            color: #fff;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 50%;
+            line-height: 50px;
+            text-decoration: none;
+            position: fixed;
+            right: 0;
+            bottom: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <header class="header" id="header">
+
+        <h1>header</h1>
+
+    </header>
+
+    <nav class="lnb">
+
+        <h1>lnb</h1>
+
+    </nav>
+
+    <a href="#header" class="btn_top">top</a>
+
+</body>
+</html>
