@@ -17,150 +17,60 @@
 
 
 
-    <!-- <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        .swiper {
-            width: 100vw;
-            height: 100vh;
-            position: relative;
-
-
-        }
-
-        .swiper-scrollbar {
-            display: none;
-        }
-
-        .swiper-horizontal>.swiper-pagination-progressbar,
-        .swiper-pagination-progressbar.swiper-pagination-horizontal {
-            width: 260px;
-            height: 15px;
-            top: auto;
-            bottom: 94px;
-            left: 40px;
-        }
-
-        .swiper-slide {
-            font-size: 0;
-        }
-
-        .swiper-slide img {
-            width: 100%;
-            height: 100%;
-
-
-        }
-
-        .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
-            background-color: #fff;
-        }
-
-        .swiper-button-prev {
-            color: #fff;
-            left: 360px;
-            top: 870px;
-            border: 1px solid #fff;
-            
-        }
-        .swiper-button-prev:after{
-            font-size: 20px;
-        }
-
-        .swiper-button-next {
-            color: #fff;
-            left: 400px;
-            top: 870px;
-            border: 1px solid #fff;
-        }
-        .swiper-button-next:after{
-            font-size: 20px;
-        }
-
-        .swiper-pagination-fraction {
-            color: #fff;
-            font-size: 20px;
-            position: absolute;
-            bottom: 17px;
-            left: -190px;
-        }
-
-        .pagination_fraction {
-            visibility: hidden;
-            position: relative;
-        }
-
-        .pagination_fraction .swiper-pagination-current {
-            font-size: 20px;
-            visibility: visible;
-            position: absolute;
-            top: -100px;
-            left: 210px;
-        }
-
-        .pagination_fraction .swiper-pagination-total {
-            font-size: 20px;
-            visibility: visible;
-            position: absolute;
-            top: -100px;
-            left: 500px;
-        }
-
-
-    </style> -->
 
 </head>
 
 <body>
-    <!-- Slider main container -->
-    <div class="swiper">
-        <!-- Additional required wrapper -->
+
+    <section class="visual_main">
+        <div class="swiper">
 
 
 
-        <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide">
-                <img src="./images/./fila01.jpg" alt="dd">
-                <div class="visual_tit">
-                    <p>
-                        FILA TENNIS COLLECTION
-                    </p>
-                    <a href="#!">컬렉션 보기</a>
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <img src="./images/./fila01.jpg" alt="dd">
+                    <div class="visual_tit">
+                        <p>
+                            FILA TENNIS COLLECTION
+                        </p>
+                        <a href="#!">컬렉션 보기</a>
+                    </div>
+
                 </div>
-            
+                <div class="swiper-slide"><img src="./images/fila02.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./images/fila03.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./images/fila04.jpg" alt=""></div>
+
             </div>
-            <div class="swiper-slide"><img src="./images/fila02.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="./images/fila03.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="./images/fila04.jpg" alt=""></div>
+
+
+
+            <div class="swiper-pagination" pagination-type="progressbar"></div>
+
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+
+            <div class="swiper-pagination pagination_fraction"></div>
+            <div class="swiper-pagination pagination_progress"></div>
+
 
         </div>
+    </section>
 
+    
 
-        <!-- If we need pagination -->
-        <div class="swiper-pagination" pagination-type="progressbar"></div>
-
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-
-
-        <div class="swiper-pagination pagination_fraction"></div>
-        <div class="swiper-pagination pagination_progress"></div>
-
-
-    </div>
 
 
 
 
     <script>
         const swiper_test = new Swiper('.swiper', {
-            // Optional parameters
+
             direction: 'horizontal',
             loop: true,
             slidesPerView: 1,
@@ -168,15 +78,15 @@
             observer: true,
             observeParents: true,
             autoplay: {
-                delay:2000
+                delay: 2000
             },
-           
-           
-            
 
 
 
-            // If we need pagination
+
+
+
+
             pagination: {
                 el: ".pagination_progress", //페이징 태그 클래스 설정 
                 clickable: true, //버튼 클릭 여부

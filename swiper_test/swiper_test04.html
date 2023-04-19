@@ -176,9 +176,10 @@
             // .mySwiper 클래스를 swiper 슬라이더로 만듦
             // 이후에 swiper변수에 할당했기 때문에 스크립트로 제어할 수도 있음.
             let swiper = new Swiper(".mySwiper", {
-                slidesPerView: 'auto',
+                slidesPerView: '1',
                 spaceBetween: 80,
                 loop: true,
+                centeredSlides: true,
 
                 // pagination 기본은 bullet
                 pagination: {

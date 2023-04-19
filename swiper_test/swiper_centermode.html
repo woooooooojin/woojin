@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,95 +11,66 @@
     <script defer src="./js/main.js"></script>
     <link rel="stylesheet" href="centermode.css">
 </head>
+
 <body>
 
-    <div class="slider">
-        <div class="inner">
-            <ul class="swiper-wrapper slide_list">
-                <li class="swiper-slide">slider1</li>
-                <li class="swiper-slide">slider2</li>
-                <li class="swiper-slide">slider3</li>
-                <li class="swiper-slide">slider4</li>
-                <li class="swiper-slide">slider5</li>
-            </ul>
-        </div>
-        <div class="swiper-prev">이전</div>
-        <div class="swiper-next">다음</div>
-    </div>
-    
+
+    <div class="container_swiper">
+        <div class="my_wrap">
+            <div class="swiper_2">
+
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide">Slide 4</div>
+                    <div class="swiper-slide">Slide 5</div>
+                    <div class="swiper-slide">Slide 6</div>
+
+                </div>
+
+                <!-- <div class="swiper-pagination"></div> -->
 
 
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+
+                <!-- <div class="swiper-scrollbar"></div> -->
+            </div><!--swiper_2 end-->
+        </div><!--my wrap end-->
+    </div><!--container swiper-->
 
     <script>
-        $(document).ready(function () {
-    slider();
-})
+        const swiper_2 = new Swiper('.swiper_2', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+            // spaceBetween: 30,
 
-function slider() {
-    var winW = window.innerWidth; //화면 가로사이즈
-    var swiper = undefined;
-    var viewNum = 3; //슬라이드 개수 (옵션)
-    var loopChk = true; //무한반복 체크
-    var slideNum = $('.slider .swiper-slide').length //슬라이드 총 개수
-    var slideInx = 0; //현재 슬라이드 index
-
-    //디바이스 체크
-    var winWChk = ''; 
-    $(window).on('load resize', function () {
-        winW = window.innerWidth;
-        if(winWChk != 'mo' && winW <= 768){ //모바일 버전으로 전환할 때
-            winWChk = 'mo'
-            setTimeout(function() {
-                sliderAct();
-            }, 300);
-        }
-
-        if(winWChk != 'pc' && winW >= 769){ //PC 버전으로 전환할 때
-            winWChk = 'pc'
-            setTimeout(function() {
-                sliderAct();
-            }, 300);
-        }
-    })
-
-    function sliderAct(){
-        //슬라이드 초기화 
-        if (swiper != undefined){ 
-            swiper.destroy();
-            swiper = undefined;
-        }
-
-        //slidesPerView 옵션 설정
-        if (winW > 768){ //PC 버전
-            viewNum = 4;
-        }else{ //mobile 버전
-            viewNum = 2;
-        }
-
-        //loop 옵션 체크
-        if (slideNum > viewNum){
-            loopChk = true;
-        }else{ 
-            loopChk = false;
-        }
-
-        swiper = new Swiper(".slider .inner", {
-            slidesPerView: "auto",
-            initialSlide :slideInx,
-            loop: loopChk,
+            slidesPerView: 3,
+            slidesPerGroup: 1,
             centeredSlides: true,
+            slidesPerView: "auto",
+
+            // If we need pagination
+            // pagination: {
+            //     el: '.swiper-pagination',
+            // },
+
+            // Navigation arrows
             navigation: {
-                nextEl: $('.slider .swiper-next'),
-                prevEl: $('.slider .swiper-prev'),
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
             },
-            on: {
-                activeIndexChange: function () {
-                    slideInx = this.realIndex; //현재 슬라이드 index 갱신
-                }
-            },
+
+            // And if we need scrollbar
+            // scrollbar: {
+            //     el: '.swiper-scrollbar',
+            // },
         });
-    }
-}
     </script>
 </body>
+
 </html>
