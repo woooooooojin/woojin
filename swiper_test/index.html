@@ -62,14 +62,51 @@
         </div>
     </section>
 
-    
+
+    <section class="section2">
+
+        <h2>신제품</h2>
+
+        <div class="container_swiper">
+            <div class="my_wrap">
+                <div class="swiper_2">
+
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">신제품</div>
+                        <div class="swiper-slide">신제품 2</div>
+                        <div class="swiper-slide">신제품 3</div>
+                        <div class="swiper-slide">신제품 4</div>
+                        <div class="swiper-slide">신제품 5</div>
+                        <div class="swiper-slide">신제품 6</div>
+
+                    </div>
+
+                    <!-- <div class="swiper-pagination"></div> -->
+
+
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+
+                    <!-- <div class="swiper-scrollbar"></div> -->
+                </div>
+                <!--swiper_2 end-->
+            </div>
+            <!--my wrap end-->
+        </div>
+        <!--container swiper-->
+
+    </section>
+
+
 
 
 
 
 
     <script>
-        const swiper_test = new Swiper('.swiper', {
+        const swiper_visual = new Swiper('.swiper', {
 
             direction: 'horizontal',
             loop: true,
@@ -90,7 +127,9 @@
             pagination: {
                 el: ".pagination_progress", //페이징 태그 클래스 설정 
                 clickable: true, //버튼 클릭 여부
-                type: 'progressbar', //페이징 타입 설정(종류: bullets, fraction, progressbar)   
+                type: 'progressbar', //페이징 타입 설정(종류: bullets, fraction, progressbar)  
+                
+                
                 // Bullet Numbering 설정
                 // renderBullet: function (index, className) {
                 //     return '<span class="' + className + '">' + (index + 1) + "</span>";
@@ -99,7 +138,7 @@
 
             },
 
-            // Navigation arrows
+            
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
@@ -129,7 +168,40 @@
 
         });
 
-        swiper_test.controller.control = pagingSwiper;
+        swiper_visual.controller.control = pagingSwiper; //controller API
+    </script>
+
+
+    <script>
+        const swiper_2 = new Swiper('.swiper_2', {
+            
+            direction: 'horizontal',
+            loop: true,
+            // spaceBetween: 30,
+            autoplay: {delay:2000},
+            slidesPerView: 3,
+            slidesPerGroup: 1,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            // slidesOffsetBefore: 10, // 슬라이드 시작 부분 여백
+            // slidesOffsetAfter: 10, //슬라이드 끝부분 여백
+
+            // 페이지네이션
+            // pagination: {
+            //     el: '.swiper-pagination',
+            // },
+
+            // 네비게이션
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            //스크롤바
+            // scrollbar: {
+            //     el: '.swiper-scrollbar',
+            // },
+        });
     </script>
 
 </body>
