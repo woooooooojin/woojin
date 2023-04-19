@@ -700,6 +700,9 @@ nav {
     color: #fff;
     
 }
+.form_num a:hover{
+    box-shadow: 0 0 5px gray;
+}
 
 .form_num2{
     margin-top: 10px;
@@ -710,6 +713,7 @@ nav {
     outline: none;
     border: 1px solid #ccc;
     padding: 10px;
+    margin-bottom: 10px;
 }
 .form_num2 input[placeholder]{
     color: #888;
@@ -718,12 +722,12 @@ nav {
 
 .chk_item{
     width: 400px;
-    height: 35px;
-    border: 1px solid #ccc;
-    margin: 10px auto;
+    height: 25px;
+    margin: 0px auto;
+    margin-bottom: 5px;
     display: flex;
     justify-content: space-between;
-    line-height: 35px;
+    line-height: 25px;
 }
 .chk_item .text_label{}
 .chk_item .text_label::before{
@@ -732,12 +736,66 @@ nav {
     height: 17px;
     display: inline-block;
     border: 1px solid #ccc;
-    vertical-align: bottom;
+    vertical-align: text-bottom;
     margin-right: 5px;
+    border-radius: 50%;
+}
+.chk_item a{
+    text-decoration: underline;
+    font-weight: 550;
 }
 
 
 #text_chk{display: none;}
+#text_chk2{display: none;}
+#text_chk3{display: none;}
+#text_chk4{display: none;}
+
+
+#text_chk:checked ~ .text_label::before{
+   background: url(../imges/check01.png) no-repeat;
+   background-size: cover;
+}
+
+#text_chk2:checked ~ .text_label::before{
+   background: url(../imges/check01.png) no-repeat;
+   background-size: cover;
+}
+
+
+#text_chk3:checked ~ .text_label::before{
+   background: url(../imges/check01.png) no-repeat;
+   background-size: cover;
+}
+
+
+#text_chk4:checked ~ .text_label::before{
+   background: url(../imges/check01.png) no-repeat;
+   background-size: cover;
+}
+
+
+.order_chk{
+    width: 400px;
+    height: 50px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    text-align: center;
+    line-height: 50px;
+    margin-top: 20px;
+    background-color: #fff;
+   
+}
+.order_chk:hover{
+    box-shadow: 0 0 10px gray;
+
+}
+.order_chk a{
+    font-weight: 550;
+    width: 100%;
+    display: block; 
+    color: #238ece;
+}
 
 
 
