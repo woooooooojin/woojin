@@ -30,6 +30,8 @@ body {
     width: 1276px;
     margin: 0 auto;
 }
+.quick_menu{display: none;}
+.btn_wrap{display: none;}
 
 /****************header************************/
 

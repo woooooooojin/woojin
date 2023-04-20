@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Domino</title>
 
-    <script src="./js/jquery-3.6.4.min.js"></script> <!--jquery-->
+    <script src="./js/jquery-3.6.4.min.js"></script>
+    <!--jquery-->
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <!--swiper-->
@@ -16,42 +17,42 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    
+
     <script>
         //jquery
-        $(function(){
+        $(function () {
 
-            $('.quick_menu').css('top',$(window).height()/2 - $('.quick_menu').height()/2);
+            $('.quick_menu').css('top', $(window).height() / 2 - $('.quick_menu').height() / 2);
 
-            $(window).scroll(function(){
+            $(window).scroll(function () {
 
-                let point = $(this).scrollTop() + ($(window).height()/2 - $('.quick_menu').height()/2)
+                let point = $(this).scrollTop() + ($(window).height() / 2 - $('.quick_menu').height() /
+                    2)
                 $('.quick_menu').stop().animate({
                     top: point,
-                },300)
+                }, 300)
 
 
-            })//quickmenu scroll event
+            }) //quickmenu scroll event
 
-            $(window).scroll(function(){
+            $(window).scroll(function () {
 
-                if($(window).scrollTop() >= 300){
+                if ($(window).scrollTop() >= 300) {
                     $('.btn_wrap').stop().animate({
                         right: 30,
-                    },300)
-                }else{
+                    }, 300)
+                } else {
                     $('.btn_wrap').stop().animate({
                         right: -100,
-                    },300)
+                    }, 300)
                 }
             }) //btn wrap event
 
 
 
-            
+
 
         })
-
     </script>
 </head>
 
@@ -600,89 +601,46 @@
 
 
     <section class="section4">
-        <div class="container">
+        
             <div class="section4_tit">
 
                 <h4>주목해야 할 이벤트</h4>
+                <section class="loop_infinite">
+
+                    <div class="loop_container">
+                        <div class="swiper my-slider" dir="ltr">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><a href="#!"><img src="./imges/event1.jpg"></a></div>
+                                <div class="swiper-slide"><a href="#!"><img src="./imges/event2.jpg"></a></div>
+                                <div class="swiper-slide"><a href="#!"><img src="./imges/event3.jpg"></a></div>
+                                <div class="swiper-slide"><a href="#!"><img src="./imges/event4.jpg"></a></div>
+
+                            </div>
+                        </div>
+
+                        <div class="swiper my-slider" dir="rtl">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><a href=""><img src="./imges/event90.jpg"></a></div>
+                                <div class="swiper-slide"><a href=""><img src="./imges/event91.jpg"></a></div>
+                                <div class="swiper-slide"><a href=""><img src="./imges/event92.jpg"></a></div>
+                                <div class="swiper-slide"><a href=""><img src="./imges/event94.jpg"></a></div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--loop container end-->
+
+                </section>
 
 
             </div>
             <!--tit end-->
 
-            <div class="section4_wrap">
-                <div class="event_box">
-                    <div class="evnt_img">
-                        <img src="./imges/event1.jpg" alt="img">
-                        <div class="evnt_desc">
-                            <a href="#!">자세히 보고싶으면 ?</a>
-                            <a href="#!">'클릭' 하세요 !</a>
-                        </div>
-                    </div>
-                </div>
-                <!--event box end-->
-
-                <div class="event_box">
-                    <div class="evnt_img">
-                        <img src="./imges/event2.jpg" alt="img">
-                        <div class="evnt_desc">
-                            <a href="#!">자세히 보고싶으면 ?</a>
-                            <a href="#!">'클릭' 하세요 !</a>
-                        </div>
-                    </div>
-                </div>
-                <!--event box end-->
-
-                <div class="event_box">
-                    <div class="evnt_img">
-                        <img src="./imges/event3.jpg" alt="img">
-                        <div class="evnt_desc">
-                            <a href="#!">자세히 보고싶으면 ?</a>
-                            <a href="#!">'클릭' 하세요 !</a>
-                        </div>
-                    </div>
-                </div>
-                <!--event box end-->
-
-                <div class="event_box">
-                    <div class="evnt_img">
-                        <img src="./imges/event4.jpg" alt="img">
-                        <div class="evnt_desc">
-                            <a href="#!">자세히 보고싶으면 ?</a>
-                            <a href="#!">'클릭' 하세요 !</a>
-                        </div>
-                    </div>
-                </div>
-                <!--event box end-->
-
-                <div class="event_box">
-                    <div class="evnt_img">
-                        <img src="./imges/event5.jpg" alt="img">
-                        <div class="evnt_desc">
-                            <a href="#!">자세히 보고싶으면 ?</a>
-                            <a href="#!">'클릭' 하세요 !</a>
-                        </div>
-                    </div>
-                </div>
-                <!--event box end-->
-
-                <div class="event_box">
-                    <div class="evnt_img">
-                        <img src="./imges/event6.jpg" alt="img">
-                        <div class="evnt_desc">
-                            <a href="#!">자세히 보고싶으면 ?</a>
-                            <a href="#!">'클릭' 하세요 !</a>
-                        </div>
-                    </div>
-                </div>
-                <!--event box end-->
-
-            </div>
-            <!--section3 wrap-->
 
 
 
-        </div>
-        <!--container end-->
+
+        
 
     </section>
 
@@ -821,31 +779,7 @@
     </section>
 
 
-    <section class="loop_infinite">
-        <div class="loop_container">
-            <div class="swiper my-slider" dir="ltr">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="./imges/event1.jpg"></div>
-                    <div class="swiper-slide"><img src="./imges/event2.jpg"></div>
-                    <div class="swiper-slide"><img src="./imges/event3.jpg"></div>
-                    <div class="swiper-slide"><img src="./imges/event4.jpg"></div>
 
-                </div>
-            </div>
-
-            <div class="swiper my-slider" dir="rtl">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="./imges/event1.jpg"></div>
-                    <div class="swiper-slide"><img src="./imges/event2.jpg"></div>
-                    <div class="swiper-slide"><img src="./imges/event3.jpg"></div>
-                    <div class="swiper-slide"><img src="./imges/event4.jpg"></div>
-
-                </div>
-            </div>
-        </div>
-        <!--container end-->
-
-    </section>
 
     <section class="section6">
         <div class="container">
@@ -861,22 +795,35 @@
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         <!-- Slides -->
-                        <div class="swiper-slide"> <iframe width="1000" height="600" src="https://www.youtube.com/embed/eCi-OHFTb30"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen></iframe></div>
-                        <div class="swiper-slide"><iframe width="1000" height="600" src="https://www.youtube.com/embed/BlXN5b6XlTc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-                        <div class="swiper-slide"><iframe width="1000" height="600" src="https://www.youtube.com/embed/lpP7_PNdDhs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-                        <div class="swiper-slide"><iframe width="1000" height="600" src="https://www.youtube.com/embed/UX4IxHDpJH4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-            
+                        <div class="swiper-slide"> <iframe width="1000" height="600"
+                                src="https://www.youtube.com/embed/eCi-OHFTb30" title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe></div>
+                        <div class="swiper-slide"><iframe width="1000" height="600"
+                                src="https://www.youtube.com/embed/BlXN5b6XlTc" title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe></div>
+                        <div class="swiper-slide"><iframe width="1000" height="600"
+                                src="https://www.youtube.com/embed/lpP7_PNdDhs" title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe></div>
+                        <div class="swiper-slide"><iframe width="1000" height="600"
+                                src="https://www.youtube.com/embed/UX4IxHDpJH4" title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe></div>
+
                     </div>
                     <!-- If we need pagination -->
                     <!-- <div class="swiper-pagination"></div> -->
-            
+
                     <!-- If we need navigation buttons -->
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
-            
+
                 </div>
             </div>
             <!--section6 wrap end-->
@@ -1118,49 +1065,61 @@
         });
     </script>
 
-<script>
-    const swiper = new Swiper('.my-slider', {
-        loop: true,
-        speed: 10000,
-        slidesPerView: 3,      
-        autoplay: {
-            delay: 0,
-        },
-    })
-</script>
-
-
-<script>
-    const swiper5 = new Swiper('.myswiper4', {
-        // Optional parameters
-        direction: 'horizontal',
-        loop: true,
-        effect: "cube",
-        grabCursor: true,
-        cubeEffect: {
-            shadow: true,
-            slideShadows: true,
-            shadowOffset: 20,
-            shadowScale: 0.94,
-        },
-
-
-        // If we need pagination
-        // pagination: {
-        //     el: '.swiper-pagination',
-        // },
-
-        // Navigation arrows
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
+    <script>
+        const swiper = new Swiper('.my-slider', {
+            loop: true,
+            speed: 10000,
+            slidesPerView: 3,
+            autoplay: {
+                delay: 0,
+            },
 
 
 
 
-    });
-</script>
+        })
+        // $(function () {
+        //     $('.my-slider .swiper-slide').mouseover( function () {
+        //         swiper.autoplay.stop();
+        //     });
+        //     $('.my-slider .swiper-slide').mouseout( function () {
+        //         swiper.autoplay.start();
+        //     });
+        // })
+    </script>
+
+
+    <script>
+        const swiper5 = new Swiper('.myswiper4', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+            effect: "cube",
+            grabCursor: true,
+            cubeEffect: {
+                shadow: true,
+                slideShadows: true,
+                shadowOffset: 20,
+                shadowScale: 0.94,
+            },
+
+
+            // If we need pagination
+            // pagination: {
+            //     el: '.swiper-pagination',
+            // },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+
+
+
+        });
+    </script>
 </body>
 
 </html>

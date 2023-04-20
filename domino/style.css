@@ -1183,7 +1183,7 @@ main .main_wrap .e_coupon a p {
     background-color: #ff143c;
 }
 
-/******************section3**************************/
+/******************section4**************************/
 .section4 {
     width: 100%;
     margin-top: 100px;
@@ -1202,86 +1202,6 @@ main .main_wrap .e_coupon a p {
 
 }
 
-
-.section4_wrap {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-
-.event_box {
-    width: calc(100% - 50% - 10px);
-
-    margin-right: 20px;
-    margin-bottom: 20px;
-
-}
-
-.event_box:nth-child(2n) {
-    margin-right: 0;
-}
-
-.event_box .evnt_img {
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    font-size: 0;
-}
-
-.event_box .evnt_img img {
-    width: 100%;
-
-}
-
-.event_box .evnt_img .evnt_desc {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    position: absolute;
-    top: 0px;
-    text-align: center;
-    opacity: 0;
-    transition: .3s;
-    cursor: pointer;
-
-}
-
-.event_box .evnt_img .evnt_desc a:first-child {
-    position: absolute;
-    top: -50px;
-
-}
-
-.event_box .evnt_img .evnt_desc a:last-child {
-    position: absolute;
-    top: 500px;
-
-}
-
-.event_box .evnt_img .evnt_desc a {
-    color: #fff;
-    font-size: 25px;
-    width: 100%;
-    display: block;
-    transition: .3s;
-
-
-
-}
-
-.event_box:hover .evnt_img .evnt_desc {
-    opacity: 1;
-
-}
-
-.event_box:hover .evnt_img .evnt_desc a:first-child {
-    top: 20%;
-}
-
-.event_box:hover .evnt_img .evnt_desc a:last-child {
-    top: 60%;
-}
 
 
 /************section5*****************/
@@ -1305,6 +1225,7 @@ main .main_wrap .e_coupon a p {
 .section5_wrap .sns_box {
     width: calc(100% - 75% - 15px);
     margin-right: 20px;
+    transition: .3s;
 
 }
 
@@ -1328,6 +1249,10 @@ main .main_wrap .e_coupon a p {
 
 .section5_wrap .sns_box .sns_img:hover img {
     transform: scale(1);
+    
+}
+.section5_wrap .sns_box:hover{
+    box-shadow: 0 0 20px #238ece;
 }
 
 .section5_wrap .sns_box .sns_img img {
@@ -1353,16 +1278,19 @@ main .main_wrap .e_coupon a p {
 
 
 
-/********infinite loop********/
+/********section 4 infinite loop********/
 
 
 .loop_infinite{
-    margin-top: 100px;
+    margin-top: 50px;
 }
 .my-slider {
     height: 200px;
     width: 100%;
     margin-bottom: 20px;
+}
+.my-slider .swiper-slide{
+   margin-right: 20px;
 }
 
 .my-slider img {
@@ -1445,7 +1373,7 @@ main .main_wrap .e_coupon a p {
 /**************footer****************/
 footer {
     width: 100%;
-    margin-top: 50px;
+    margin-top: 100px;
     border-top: 1px solid #ccc;
 
 }
