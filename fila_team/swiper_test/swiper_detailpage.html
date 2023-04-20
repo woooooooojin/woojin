@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+
+
+    <style>
+        .myswiper3 {
+          width: 600px;
+          height: 800px;
+          margin-top: 20px;
+
+        }
+
+        .myswiper3 .swiper-slide {
+            width: 600px;
+            height: 800px;
+            text-align: center;
+
+        }
+
+        .myswiper3 .swiper-slide img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .myswiper2{
+            width: 600px;
+            height: 180px;
+            margin-top: 20px;
+        }
+        .myswiper2 img{
+            
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+</head>
+
+
+
+
+
+<body>
+
+   
+    <div class="swiper myswiper3">
+       
+        <div class="swiper-wrapper">
+          
+            <div class="swiper-slide"><img src="../images/detail1.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="../images/detail2.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="../images/detail3.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="../images/detail4.jpg" alt=""></div>
+
+
+        </div>
+       
+        <div class="swiper-pagination"></div>
+
+        
+    </div>
+
+    <div thumbsSlider="" class="swiper myswiper2">
+        
+        <div class="swiper-wrapper">
+            
+            <div class="swiper-slide"><img src="../images/detail1.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="../images/detail2.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="../images/detail3.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="../images/detail4.jpg" alt=""></div>
+
+
+        </div>
+        
+        <div class="swiper-pagination"></div>
+
+      
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.myswiper2', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            spaceBetween: 10,
+            slidesPerView: 4,
+            freeMode: true,
+            watchSlidesProgress: true,
+
+
+        });
+
+        const swiper2 = new Swiper('.myswiper3', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            thumbs: {
+                swiper: swiper,
+            },
+
+
+        });
+    </script>
+
+
+</body>
+
+</html>

@@ -10,7 +10,7 @@
     <script src="./js/jquery-3.6.4.min.js"></script> <!--jquery-->
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script><!--swiper-->
+    <!--swiper-->
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
@@ -847,18 +847,27 @@
 
             <div class="section6_wrap">
 
-                <div class="domino_video">
-                    <iframe width="1000" height="550" src="https://www.youtube.com/embed/eCi-OHFTb30"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
-                </div><!--video end-->
-
-
-                <div class="more_cf_btn">
-                    <a href="#!">더보기</a>
+                <div class="swiper myswiper4">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide"> <iframe width="1000" height="600" src="https://www.youtube.com/embed/eCi-OHFTb30"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                        <div class="swiper-slide"><iframe width="1000" height="600" src="https://www.youtube.com/embed/BlXN5b6XlTc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                        <div class="swiper-slide"><iframe width="1000" height="600" src="https://www.youtube.com/embed/lpP7_PNdDhs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                        <div class="swiper-slide"><iframe width="1000" height="600" src="https://www.youtube.com/embed/UX4IxHDpJH4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+            
+                    </div>
+                    <!-- If we need pagination -->
+                    <!-- <div class="swiper-pagination"></div> -->
+            
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+            
                 </div>
-
             </div>
             <!--section6 wrap end-->
 
@@ -1078,7 +1087,7 @@
     </div>
 
 
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script>
@@ -1108,6 +1117,39 @@
             delay: 0,
         },
     })
+</script>
+
+
+<script>
+    const swiper5 = new Swiper('.myswiper4', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        effect: "cube",
+        grabCursor: true,
+        cubeEffect: {
+            shadow: true,
+            slideShadows: true,
+            shadowOffset: 20,
+            shadowScale: 0.94,
+        },
+
+
+        // If we need pagination
+        // pagination: {
+        //     el: '.swiper-pagination',
+        // },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+
+
+
+    });
 </script>
 </body>
 
