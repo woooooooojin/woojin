@@ -10,32 +10,53 @@
     <!--맨위에-->
     <script src="./js/jquery.scrollTo.min.js"></script>
     <!--scrollto-->
-    <script src="./js/jquery.easing.min.js"></script><!--easing-->
-    <script src="./js/jquery.mousewheel.min.js"></script><!--mouse wheel-->
+    <script src="./js/jquery.easing.min.js"></script>
+    <!--easing-->
+    <script src="./js/jquery.mousewheel.min.js"></script>
+    <!--mouse wheel-->
 
 
 
     <script>
         $(function () {
 
-          $('.wrap section').mousewheel(function(event, delta){
+            const btn = $('.quick li');
+            const page = $('.contents section');
 
-            if(delta>0){
-                let prev = $(this).prev().offset().top
-                $('html, body').stop().animate({
-                    scrollTop:prev
-                },300,'easeInOutBack')
-            }else if(delta<0){
-                let next = $(this).next().offset().top
-                $('html, body').stop().animate({
-                    scrollTop:next
-                },300,'easeInOutBack')
-            }
+            $('.quick').css('top',$(window).height()/2 - $('.quick').height()/2);
 
-          })
+            $(window).scroll(function(){
+
+                let point = $(this).scrollTop() + ($(window).height()/2 - $('.quick').height()/2);
+                $('.quick').stop().animate({
+                    top: point,
+                },300)
+
+                page.each(function(){
+                    let point = $(window).scrollTop(); //스크롤 위에 위치
+                    let index = $(this).index(); //인덱스값
+
+                    if(point >= $(this).offset().top){
+                        btn.removeClass('on');
+                        btn.eq(index).addClass('on');
+                    }
+                })
+
+            })//window scroll function
+
+            btn.click(function(){
+
+                let = index = $(this).index();
+                let top = page.eq(index).offset().top;
+
+                $('html, body').stop().animate({
+                    scrollTop: top,
+                },300)
+            })
+
+
 
         })
-        
     </script>
 
     <style>
@@ -48,17 +69,57 @@
             list-style: none;
         }
 
-        body, html{overflow-y: hidden;}
+        .quick {
+            position: absolute;
+            right: 0;
 
-        .wrap{}
-        .wrap section{
+
+        }
+
+        .quick li {
+            width: 150px;
+            height: 50px;
+            border: 1px solid black;
+            border-bottom: 0;
+            text-align: center;
+            line-height: 50px;
+            background-color: #fff;
+            cursor: pointer;
+        }
+
+        .quick li:last-child {
+            border: 1px solid black;
+        }
+
+        .quick li.on {
+            color: red;
+            font-weight: 600;
+        }
+
+        .contents section {
             width: 100%;
             height: 100vh;
-            border: 1px solid black;
-            box-sizing: border-box;
-            text-align: center;
-            line-height: 100vh;
             font-size: 50px;
+            line-height: 100vh;
+            text-align: center;
+            border-bottom: 1px solid black;
+            box-sizing: border-box;
+        }
+
+        .contents section:nth-child(1) {
+            background-color: yellowgreen;
+        }
+
+        .contents section:nth-child(2) {
+            background-color: turquoise;
+        }
+
+        .contents section:nth-child(3) {
+            background-color: wheat;
+        }
+
+        .contents section:nth-child(4) {
+            background-color: thistle;
         }
     </style>
 </head>
@@ -66,13 +127,18 @@
 
 <body>
 
-    <div class="wrap">
+    <ul class="quick">
+        <li class="on">menu01</li>
+        <li>menu02</li>
+        <li>menu03</li>
+        <li>menu04</li>
+    </ul>
 
-        <section class="page1">page1</section>
-        <section class="page2">page2</section>
-        <section class="page3">page3</section>
-        <section class="page4">page4</section>
-
+    <div class="contents">
+        <section>page01</section>
+        <section>page02</section>
+        <section>page03</section>
+        <section>page04</section>
     </div>
 
 </body>

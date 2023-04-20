@@ -35,6 +35,18 @@
 
             })
 
+
+            $('.quick_menu').css('top',$(window).height()/2 - $('.quick_menu').height()/2);
+            $(window).scroll(function(){
+
+                let point = $(this).scrollTop() + ($(window).height()/2 - $('.quick_menu').height()/2)
+
+                $('.quick_menu').stop().animate({
+                    top: point,
+                },300)
+
+            })
+
             
         })
     </script>
