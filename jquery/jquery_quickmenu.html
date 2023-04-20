@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quickmenu jquery</title>
+    <script src="./js/jquery-3.6.4.min.js"></script>
+    <!--맨위에-->
+
+    <script>
+        $(function () {
+
+            const btn = $('.quick li');
+            const page = $('.contents section')
+
+            $('.quick').css('top',$(window).height()/2 - $('.quick').height()/2);
+            
+            $(window).scroll(function(){
+
+                let point = $(this).scrollTop() + ($(window).height()/2 - $('.quick').height()/2)
+                $('.quick').stop().animate({
+                    top: point
+                },500)
+
+
+
+
+                page.each(function(){//each 는 for을 대신하는 함수
+                    let point = $(window).scrollTop();
+                    let index = $(this).index();
+
+                    if(point >= $(this).offset().top){
+                        btn.removeClass('on');
+                        btn.eq(index).addClass('on');
+                    }
+                })
+
+                
+
+
+
+            })//window scroll event
+
+            btn.click(function(){
+
+                let index = $(this).index();
+                let top = page.eq(index).offset().top //내가 클릭한 메뉴 버튼의 해당페이지의 제일 위의 좌표
+
+                $('html, body').stop().animate({
+                    scrollTop:top
+                },500)
+
+            })
+
+
+
+
+        })
+    </script>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* html, body{overflow-y: hidden;} */
+        li {
+            list-style: none;
+        }
+
+        .quick {
+            position: absolute;
+            right: 0;
+
+        }
+
+        .quick li {
+            width: 150px;
+            height: 50px;
+            border: 1px solid black;
+            border-bottom: 0;
+            text-align: center;
+            line-height: 50px;
+            background-color: #fff;
+            cursor: pointer;
+        }
+
+        .quick li:last-child {
+            border: 1px solid black;
+        }
+
+        .quick li.on {
+            color: red;
+            font-weight: 600;
+
+        }
+
+        .contents section {
+            width: 100%;
+            height: 100vh;
+            font-size: 50px;
+            line-height: 100vh;
+            text-align: center;
+            border-bottom: 1px solid black;
+            box-sizing: border-box;
+        }
+
+        .contents section:nth-child(1) {
+            background-color: turquoise;
+        }
+
+        .contents section:nth-child(2) {
+            background-color: blanchedalmond;
+        }
+
+        .contents section:nth-child(3) {
+            background-color: cadetblue;
+        }
+
+        .contents section:nth-child(4) {
+            background-color: tomato;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul class="quick">
+        <li class="on">menu01</li>
+        <li>menu02</li>
+        <li>menu03</li>
+        <li>menu04</li>
+    </ul>
+
+    <div class="contents">
+        <section>page01</section>
+        <section>page02</section>
+        <section>page03</section>
+        <section>page04</section>
+    </div>
+
+</body>
+
+</html>
