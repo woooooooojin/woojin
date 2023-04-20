@@ -1648,10 +1648,9 @@ footer {
     box-shadow: 0 2px 4px 0 rgba(138, 149, 158, 0.15);
     background-color: #fff;
     border-radius: 10px;
-    position: fixed;
+    position: absolute;
     right: 5px;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 0;
     cursor: pointer;
     z-index: 9999;
 }
