@@ -823,7 +823,17 @@
 
     <section class="loop_infinite">
         <div class="loop_container">
-            <div class="swiper my-slider">
+            <div class="swiper my-slider" dir="ltr">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./imges/event1.jpg"></div>
+                    <div class="swiper-slide"><img src="./imges/event2.jpg"></div>
+                    <div class="swiper-slide"><img src="./imges/event3.jpg"></div>
+                    <div class="swiper-slide"><img src="./imges/event4.jpg"></div>
+
+                </div>
+            </div>
+
+            <div class="swiper my-slider" dir="rtl">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide"><img src="./imges/event1.jpg"></div>
                     <div class="swiper-slide"><img src="./imges/event2.jpg"></div>
@@ -1111,7 +1121,7 @@
 <script>
     const swiper = new Swiper('.my-slider', {
         loop: true,
-        speed: 5000,
+        speed: 10000,
         slidesPerView: 3,      
         autoplay: {
             delay: 0,
