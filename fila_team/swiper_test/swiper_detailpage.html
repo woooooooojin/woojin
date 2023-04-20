@@ -24,7 +24,13 @@
             text-align: center;
 
         }
-
+        .myswiper2 .swiper-slide.swiper-slide-visible.swiper-slide-thumb-active img{
+          transform: scale(1);
+        
+        }
+        .myswiper2 .swiper-wrapper{
+            /* overflow: hidden; */
+        }
         .myswiper3 .swiper-slide img {
             width: 100%;
             height: 100%;
@@ -36,9 +42,10 @@
             margin-top: 20px;
         }
         .myswiper2 img{
-            
+            transition: .3s;
             width: 100%;
             height: 100%;
+            transform: scale(0.85);
         }
     </style>
 
@@ -68,7 +75,7 @@
         
     </div>
 
-    <div thumbsSlider="" class="swiper myswiper2">
+    <div  class="swiper myswiper2">
         
         <div class="swiper-wrapper">
             
@@ -106,7 +113,7 @@
             watchSlidesProgress: true,
 
 
-        });
+        });//thumnail
 
         const swiper2 = new Swiper('.myswiper3', {
             // Optional parameters
