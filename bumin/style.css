@@ -1235,7 +1235,7 @@ main {
 }
 
 .notice_list2 {
-    background: url(./imges/noticeimg01.jpg) no-repeat;
+    background: url(./imges/gradimg02.jpg) no-repeat;
     background-size: cover;
     display: none;
     border: 1px solid #ccc;
@@ -1353,7 +1353,7 @@ main {
 
 }
 .sheet03{
-    background: url(./imges/noticeimg02.jpg) no-repeat;
+    background: url(./imges/notice_gra01.jpg) no-repeat;
     background-size: cover;
 }
 
