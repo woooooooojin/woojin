@@ -1203,6 +1203,132 @@ main .main_wrap .e_coupon a p {
 }
 
 
+/***********recommand ****************/
+
+.recommand{
+    margin-top: 80px;
+    width: 100%;
+   
+}
+
+.recommand_wrap{
+    display: flex;
+}
+.recommand_left{
+    width: 50%;
+    
+    padding: 10px;
+    padding-left: 100px;
+}
+.recommand_left .left_text h4{
+    font-size: 32px;
+    margin-top: 20px;
+}
+.recommand_left .left_text p{
+    font-size: 20px;
+    font-weight: 700;
+    color: #238ece;
+    margin-top: 30px;
+}
+.recommand_left .left_searchbox{
+    margin: 30px 0;
+    position: relative;
+}
+.recommand_left input{
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-bottom: 3px solid #000;
+    outline: none;
+}
+.recommand_left input[placeholder]{
+    font-size: 16px;
+    color: #888;
+}
+.recommand_left i{
+    font-size: 20px;
+    position: absolute;
+    top: 0;right: 230px;
+    cursor: pointer;
+}
+input::-webkit-search-cancel-button{display: none;}
+/*input x 없애기*/
+
+.recommand_right{
+    width: 50%;
+    
+    position: relative;
+}
+
+.recommand_right .recommand_box{
+    width: 160px;
+    height: 50px;
+    border-radius: 20px 20px 0px 20px;
+    text-align: center;
+    line-height: 50px;
+    position: absolute;
+    top: 20px; left:20px;
+    background-color: #238ece;
+    box-shadow: 0 0 10px gray;
+    transition: .3s;
+   /*  animation: recommand_boxani_1 3s infinite linear; */
+    padding: 0 5px;
+}
+.recommand_right .recommand_box:hover{
+   transform: scale(1.1);
+}
+.recommand_right .recommand_box a{
+    width: 100%;
+    display: block;
+    color: #fff;
+   
+    font-size: 14px;
+}
+.recommand_right .recommand_box:nth-child(2){
+    left: 50px;
+    top: 110px;
+    background-color: #ff143c;
+}
+.recommand_right .recommand_box:nth-child(3){
+    left: auto;
+    right: 20px;
+    top: 100px;
+    background-color:tomato;
+}
+.recommand_right .recommand_box:nth-child(4){
+    left: auto;
+    right: 220px;
+    top: 35px;
+    background-color: #fff;
+
+   
+}
+.recommand_right .recommand_box:nth-child(4) a{
+    color: black;
+    
+}
+.recommand_right .recommand_box:nth-child(5){
+    left: 250px;
+    top: 150px;
+    background-color:lightpink;
+}
+.recommand_right .recommand_box:nth-child(6){
+    left: auto;
+    right: 0;
+    top: 0;
+    background-color:sandybrown;
+}
+
+@keyframes recommand_boxani_1{
+    0%{transform: scale(1);}
+    50%{transform: scale(1.1);}
+    
+    100%{transform: scale(1);}
+}
+
+
+
+
 
 /************section5*****************/
 .section5 {
