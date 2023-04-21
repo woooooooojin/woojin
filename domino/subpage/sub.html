@@ -6,11 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>domino</title>
+    <script src="../js/jquery-3.6.4.min.js"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
     <link rel="stylesheet" href="./sub.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <script>
+        // $('.mem_login').click(function(){
+        //     $('.form_wrap').css('display','block')
+        // })
+        // $('.login_wrap .notmem_login a').click(function(e){
+        //     e.preventDefault();
+        //     $('.not_member_wrap').css('display','block')
+
+
+        // })
+    </script>
 </head>
-</head>
+
 
 <body>
 
@@ -139,136 +153,142 @@
     <section class="section_login">
         <div class="container">
 
+           
+            <input type="radio" id="login_rad" name="tab1" checked>
+            <input type="radio" id="notmem_rad" name="tab1">
+            
+
             <ul class="login_wrap">
-                <li><a href="#!">회원 로그인</a></li>
-                <li><a href="#!">비회원 주문</a></li>
+                <li class="mem_login"><label for="login_rad" class="on">회원 로그인</label></li>
+                <li class="notmem_login"><label for="notmem_rad" class="off">비회원 로그인</label></li>
             </ul>
 
 
+            <div class="form_ex">
+                <div class="form_wrap">
+                    <form action="#!">
+                        <div class="login_id">
+                            <input type="text" placeholder="아이디" id="name">
+                            <label for="name"></label>
+                        </div>
+                        <!--id-->
+                        <div class="login_id">
+                            <input type="text" id="passwd" placeholder="비밀번호">
+                            <label for="passwd"></label>
+                        </div>
+                        <!--passwd-->
+                        <div class="login_chkbox">
+                            <div class="chk_wrap">
+                                <input type="checkbox" id="login_chk">
+                                <div class="box"></div>
+                                <label for="login_chk" class="label_chk">아이디저장</label>
 
-            <div class="form_wrap">
-                <form action="#!">
-                    <div class="login_id">
-                        <input type="text" placeholder="아이디" id="name">
-                        <label for="name"></label>
-                    </div>
-                    <!--id-->
-                    <div class="login_id">
-                        <input type="text" id="passwd" placeholder="비밀번호">
-                        <label for="passwd"></label>
-                    </div>
-                    <!--passwd-->
-                    <div class="login_chkbox">
-                        <div class="chk_wrap">
-                            <input type="checkbox" id="login_chk">
-                            <div class="box"></div>
-                            <label for="login_chk" class="label_chk">아이디저장</label>
+                            </div>
+                            <div class="span_wrap">
+                                <span><a href="#!">아이디 찾기</a></span>
+                                <span><a href="#!">비밀번호 찾기</a></span>
+                            </div>
 
                         </div>
-                        <div class="span_wrap">
-                            <span><a href="#!">아이디 찾기</a></span>
-                            <span><a href="#!">비밀번호 찾기</a></span>
+                        <!--login chk-->
+                    </form>
+                    <!--form end-->
+
+
+                    <div class="submit_btn">
+                        <a href="#!">로그인</a>
+                    </div>
+                    <div class="submit_btn">
+                        <a href="#!">회원가입</a>
+                    </div>
+
+                    <div class="sns_ex">
+                        <h4>소셜 간편 로그인</h4>
+                        <ul class="sns_inner">
+                            <li><a href="#!"><img src="../imges/btn-kakao.png" alt="img"></a></li>
+                            <li><a href="#!"><img src="../imges/btn-naver.png" alt="img"></a></li>
+                            <li><a href="#!"><img src="../imges/btn-t.png" alt="img"></a></li>
+                            <li><a href="#!"><img src="../imges/btn-apple.png" alt="img"></a></li>
+
+                        </ul>
+                    </div>
+
+                </div>
+                <!--form wrap end-->
+
+                <div class="not_member_wrap">
+                    <form action="#!">
+                        <div class="sub_txt">
+                            아직 도미노 회원이 아니세요 ? <a href="#!">회원가입</a>
+                        </div>
+                        <div class="not_mem_name">
+                            <input type="text" placeholder="이름" id="not_member_name">
+                            <label for="not_member_name"></label>
+                        </div>
+                        <div class="form_num">
+                            <select name="hp1" id="hp1">
+                                <option value="010">010</option>
+                                <option value="011">011</option>
+                                <option value="016">016</option>
+                                <option value="017">017</option>
+                                <option value="018">018</option>
+                                <option value="019">019</option>
+                            </select>
+
+                            <input type="text" id="hp2" name="hp2" maxlength="4">
+                            <input type="text" id="hp3" name="hp3" maxlength="4">
+
+                            <a href="#!" class="hp_btn">인증번호</a>
                         </div>
 
-                    </div>
-                    <!--login chk-->
-                </form>
-                <!--form end-->
-
-
-                <div class="submit_btn">
-                    <a href="#!">로그인</a>
-                </div>
-                <div class="submit_btn">
-                    <a href="#!">회원가입</a>
-                </div>
-
-                <div class="sns_ex">
-                    <h4>소셜 간편 로그인</h4>
-                    <ul class="sns_inner">
-                        <li><a href="#!"><img src="../imges/btn-kakao.png" alt="img"></a></li>
-                        <li><a href="#!"><img src="../imges/btn-naver.png" alt="img"></a></li>
-                        <li><a href="#!"><img src="../imges/btn-t.png" alt="img"></a></li>
-                        <li><a href="#!"><img src="../imges/btn-apple.png" alt="img"></a></li>
-
-                    </ul>
-                </div>
-
-            </div>
-            <!--form wrap end-->
-
-            <div class="not_member_wrap">
-                <form action="#!">
-                    <div class="sub_txt">
-                        아직 도미노 회원이 아니세요 ? <a href="#!">회원가입</a>
-                    </div>
-                    <div class="not_mem_name">
-                        <input type="text" placeholder="이름" id="not_member_name">
-                        <label for="not_member_name"></label>
-                    </div>
-                    <div class="form_num">
-                        <select name="hp1" id="hp1">
-                            <option value="010">010</option>
-                            <option value="011">011</option>
-                            <option value="016">016</option>
-                            <option value="017">017</option>
-                            <option value="018">018</option>
-                            <option value="019">019</option>
-                        </select>
-
-                        <input type="text" id="hp2" name="hp2" maxlength="4">
-                        <input type="text" id="hp3" name="hp3" maxlength="4">
-
-                        <a href="#!" class="hp_btn">인증번호</a>
-                    </div>
-
-                    <div class="form_num2">
-                        <input type="text" id="hp4" name="hp4" placeholder="인증번호" autocomplete="off">
-                    </div>
+                        <div class="form_num2">
+                            <input type="text" id="hp4" name="hp4" placeholder="인증번호" autocomplete="off">
+                        </div>
 
 
 
-                    <div class="chk_item">
-                        <input type="checkbox" id="text_chk">
-                        <label for="text_chk" class="text_label">비회원 개인정보 수집 및 이용동의(필수)</label>
-                        <a href="#!" class="a_link">보기</a>
-                    </div>
+                        <div class="chk_item">
+                            <input type="checkbox" id="text_chk">
+                            <label for="text_chk" class="text_label">비회원 개인정보 수집 및 이용동의(필수)</label>
+                            <a href="#!" class="a_link">보기</a>
+                        </div>
 
-                    <div class="chk_item">
-                        <input type="checkbox" id="text_chk2">
-                        <label for="text_chk2" class="text_label">비회원 개인정보 수집 및 이용동의(필수)</label>
-                        <a href="#!" class="a_link2">보기</a>
-                    </div>
+                        <div class="chk_item">
+                            <input type="checkbox" id="text_chk2">
+                            <label for="text_chk2" class="text_label">비회원 개인정보 수집 및 이용동의(필수)</label>
+                            <a href="#!" class="a_link2">보기</a>
+                        </div>
 
-                    <div class="chk_item">
-                        <input type="checkbox" id="text_chk3">
-                        <label for="text_chk3" class="text_label">비회원 개인정보 수집 및 이용동의(필수)</label>
-                        <a href="#!" class="a_link3">보기</a>
-                    </div>
+                        <div class="chk_item">
+                            <input type="checkbox" id="text_chk3">
+                            <label for="text_chk3" class="text_label">비회원 개인정보 수집 및 이용동의(필수)</label>
+                            <a href="#!" class="a_link3">보기</a>
+                        </div>
 
-                    <div class="chk_item">
-                        <input type="checkbox" id="text_chk4">
-                        <label for="text_chk4" class="text_label">비회원 개인정보 수집 및 이용동의(필수)</label>
-                        <a href="#!" class="a_link4">보기</a>
-                    </div>
-
-
-                    <div class="order_chk">
-                        <a href="#!">주문하기</a>
-                    </div>
+                        <div class="chk_item">
+                            <input type="checkbox" id="text_chk4">
+                            <label for="text_chk4" class="text_label">비회원 개인정보 수집 및 이용동의(필수)</label>
+                            <a href="#!" class="a_link4">보기</a>
+                        </div>
 
 
-                </form>
+                        <div class="order_chk">
+                            <a href="#!">주문하기</a>
+                        </div>
 
-                <div class="not_member_desc">
-                    <h4>비회원 주문 시 매니아 및 제휴할인 혜택을 받을 수 없습니다.</h4>
 
-                    <div class="not_member_text">
-                        
+                    </form>
+
+                    <div class="not_member_desc">
+                        <h4>비회원 주문 시 매니아 및 제휴할인 혜택을 받을 수 없습니다.</h4>
+
+                        <div class="not_member_text">
+                            <p>도미노피자의 특별한 매니아 혜택을 누려보세요! <a href="#!">매니아 혜택</a></p>
+                            <p>10대 고객에게만 드리는 특별한 혜택을 마음껏 누려보세요! <a href="#!">틴 매니아</a></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-
+            </div><!--form ex end-->
 
 
 
