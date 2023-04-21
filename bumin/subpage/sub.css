@@ -1396,8 +1396,8 @@ footer {
         width: 80px;
         text-align: center;
         border: 1px solid #ccc;
-        position: fixed;
-        top: 130px;
+        position: absolute;
+        /* top: 130px; */
         right: 10px;
         border-radius: 10px;
         

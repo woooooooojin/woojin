@@ -9,6 +9,7 @@
     <script src="./js/jquery-3.6.4.min.js"></script> 
     <script src="./js/jquery.scrollTo.min.js"></script><!--scrollto-->
 
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
@@ -34,6 +35,16 @@
                 },500)
 
             })
+            $('.quick_menu .q_bot a').click(function(e){
+                e.preventDefault();
+
+                // $(window).scrollTo(this.hash || 0, 300);
+                $('html, body').stop().animate({
+                    scrollTop:3500
+                },500)
+               
+
+            })
 
 
             $('.quick_menu').css('top',$(window).height()/2 - $('.quick_menu').height()/2);
@@ -46,6 +57,7 @@
                 },300)
 
             })
+
 
             
         })

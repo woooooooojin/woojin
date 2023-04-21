@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>부민병원 관절센터</title>
+    <script src="../js/jquery-3.6.4.min.js"></script>
+    <script src="../js/jquery.scrollTo.min.js"></script>
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
     <link rel="stylesheet" href="./sub.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
@@ -14,6 +18,28 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap"
         rel="stylesheet">
+
+
+    <script>
+
+        $('.quick_menu').css('top', $(window).height() / 2 - $('.quick_menu').height() / 2);
+        $(window).scroll(function () {
+
+            let point = $(this).scrollTop() + ($(window).height() / 2 - $('.quick_menu').height() / 2)
+
+            $('.quick_menu').stop().animate({
+                top: point,
+            }, 300)
+
+        })//quick menu
+
+
+        $(window).scroll(function () {
+            if ($(this).scrollTop() === $('section').offset().top) {
+                $('section .sub01_wrap').fadeIn(500)
+            }
+        })
+    </script>
 
 
 </head>
@@ -328,7 +354,7 @@
         <div class="container">
             <div class="m_nav_wrap">
                 <div class="home">
-                   <a href="../index.html"><i class="fas fa-home"></i></a>
+                    <a href="../index.html"><i class="fas fa-home"></i></a>
                 </div>
                 <div class="nav_01">
                     <a href="#!">전문센터 ></a>
@@ -337,16 +363,20 @@
                     <a href="#!">관절센터 ></a>
                 </div>
             </div>
-        </div><!--container end-->
-    </div><!--mobile_nav end-->
+        </div>
+        <!--container end-->
+    </div>
+    <!--mobile_nav end-->
 
     <div class="subpage_tit">
         <div class="container">
             <div class="s_tit">
                 <h4>관절센터</h4>
             </div>
-        </div><!--container end-->
-    </div><!--subpage tit end-->
+        </div>
+        <!--container end-->
+    </div>
+    <!--subpage tit end-->
 
     <div class="subpage_desc">
         <div class="container">
@@ -358,11 +388,14 @@
                 </p>
                 <p>
                     부민병원 관절센터는 정확한 진단을 바탕으로,<br />원인에 맞는 치료방법을 선택하고,<br />
-                   수술은 <span>최소상처수술법(MIS)</span>을 우선으로 합니다.
+                    수술은 <span>최소상처수술법(MIS)</span>을 우선으로 합니다.
                 </p>
-            </div><!--s_desc_wrap end-->
-        </div><!--container end-->
-    </div><!--subpage_desc-->
+            </div>
+            <!--s_desc_wrap end-->
+        </div>
+        <!--container end-->
+    </div>
+    <!--subpage_desc-->
 
     <section>
         <div class="container">
@@ -387,7 +420,8 @@
                     <h5>02.</h5>
                     <h4>최소상처 인공관절수술(MIS)과 네비게이션을 이용한 인공관절 수술을 시행합니다.</h4>
                     <p>
-                        네비게이션을 이용한 최소상처 인공관절수술 (MIS-Minimally Invasive Surgery)은 적은 피부절개를 통해 수술상처의 최소화와 수술시간의 단축, 짧은 입원으로 조기회복이 가능합니다.
+                        네비게이션을 이용한 최소상처 인공관절수술 (MIS-Minimally Invasive Surgery)은 적은 피부절개를 통해 수술상처의 최소화와 수술시간의 단축, 짧은
+                        입원으로 조기회복이 가능합니다.
                     </p>
                 </div>
             </div>
@@ -400,7 +434,8 @@
                     <h5>03.</h5>
                     <h4>풍부한 임상경험(인공관절 수술)을 가진 관절 분야의 전문의가 진료합니다.</h4>
                     <p>
-                        환자에게 선진의료서비스를 제공하기 위해 관절센터는 외국 유명의사들을 초청해 선진의료기술 교류와 한국의 수준 높은 의료기술을 소개하는 심포지엄을 정기적으로 개최해 풍부한 임상경험을 토대로 관절분야의 최소상처치료에 높은 평가를 받고 있습니다.
+                        환자에게 선진의료서비스를 제공하기 위해 관절센터는 외국 유명의사들을 초청해 선진의료기술 교류와 한국의 수준 높은 의료기술을 소개하는 심포지엄을 정기적으로 개최해 풍부한
+                        임상경험을 토대로 관절분야의 최소상처치료에 높은 평가를 받고 있습니다.
                     </p>
                 </div>
             </div>
@@ -413,24 +448,26 @@
                     <h5>04.</h5>
                     <h4>첨단장비와 헤파필터를 이용한 청정수술실을 통해 수술 시 감염발생을 최소화합니다.</h4>
                     <p>
-                        부민병원 청정수술실은 공기 중에 부유하는 극미세먼지까지 제거할 수 있는 고성능 헤파필터(Hepa Filter)와 항온 · 항습 공조시설이 가동되어 보다 쾌적한 환경에서 수술이 시행되므로 수술 시 우려되는 감염우려를 줄여주므로 환자의 빠른 쾌유를 도모합니다.
+                        부민병원 청정수술실은 공기 중에 부유하는 극미세먼지까지 제거할 수 있는 고성능 헤파필터(Hepa Filter)와 항온 · 항습 공조시설이 가동되어 보다 쾌적한 환경에서
+                        수술이 시행되므로 수술 시 우려되는 감염우려를 줄여주므로 환자의 빠른 쾌유를 도모합니다.
                     </p>
                 </div>
             </div>
 
-        </div><!--container end-->
+        </div>
+        <!--container end-->
     </section>
 
 
-    
-   
 
-    
 
-    
-   
-   
-    
+
+
+
+
+
+
+
 
 
 
@@ -495,7 +532,7 @@
                     </select>
                 </div>
 
-                
+
             </div>
             <!--footer wrap end-->
 
@@ -503,11 +540,11 @@
 
                 <div class="foot_txt">
                     <p>상호:의료법인 인당의료재단 해운대 부민병원 사업자변호 : 699-82-00072<br />
-                        주소 : 부산광역시 해운대구 해운대로 584(우동) 
+                        주소 : 부산광역시 해운대구 해운대로 584(우동)
                         <a href="#!">이용약관</a> <a href="#!">개인정보처리방침</a> 대표자 : 정흥태<br />
                         Copyright ⓒ 2020 BUMIN HOSPITAL All Right Reserved.
                     </p>
-                
+
                 </div>
 
                 <div class="foot_sns">

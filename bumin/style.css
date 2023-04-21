@@ -788,6 +788,7 @@ main {
     border-radius: 10px 10px 0 0;
     text-align: center;
     box-shadow: 5px 5px 3px rgb(177, 175, 175);
+    
 }
 
 .main_wrap .main_search h4 {
@@ -858,6 +859,7 @@ main {
     margin-top: 20px;
     text-align: center;
     box-shadow: 5px 5px 3px rgb(177, 175, 175);
+    
 }
 
 .main_wrap .main_reservation h4 {
@@ -895,6 +897,7 @@ main {
     border-radius: 0px 0px 10px 10px;
     margin-top: 20px;
     box-shadow: 5px 5px 3px rgb(177, 175, 175);
+    
 }
 
 .main_wrap .main_login h4 {
@@ -3321,7 +3324,7 @@ nav {
     }
 
     /**********quick menu******************/
-    .quick_menu {}
+    
 
     .quick_menu {
         width: 80px;
@@ -3355,6 +3358,7 @@ nav {
     .q_bot {
         border-radius: 0 0 10px 10px;
     }
+
 
     .q_top {
         border-bottom: 1px solid #ccc;
