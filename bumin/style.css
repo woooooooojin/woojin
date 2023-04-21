@@ -1235,7 +1235,8 @@ main {
 }
 
 .notice_list2 {
-    background-color: #fff;
+    background: url(./imges/noticeimg01.jpg) no-repeat;
+    background-size: cover;
     display: none;
     border: 1px solid #ccc;
     margin: 0 10px;
@@ -1350,6 +1351,10 @@ main {
     margin-top: 10px;
 
 
+}
+.sheet03{
+    background: url(./imges/noticeimg02.jpg) no-repeat;
+    background-size: cover;
 }
 
 
