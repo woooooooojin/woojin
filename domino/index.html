@@ -49,6 +49,29 @@
             }) //btn wrap event
 
 
+            $('.btn_top').click(function(e){
+                e.preventDefault();
+
+                $('html, body').stop().animate({
+                    scrollTop:0,
+                },300)
+            })
+
+            $('.btn_bot').click(function(e){
+                e.preventDefault();
+
+                $('html, body').stop().animate({
+                    scrollTop:5000,
+                },300)
+            })
+
+
+
+
+
+        
+
+
 
 
 
@@ -620,10 +643,10 @@
 
                         <div class="swiper my-slider" dir="rtl">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><a href=""><img src="./imges/event90.jpg"></a></div>
-                                <div class="swiper-slide"><a href=""><img src="./imges/event91.jpg"></a></div>
-                                <div class="swiper-slide"><a href=""><img src="./imges/event92.jpg"></a></div>
-                                <div class="swiper-slide"><a href=""><img src="./imges/event94.jpg"></a></div>
+                                <div class="swiper-slide"><a href="#!"><img src="./imges/event90.jpg"></a></div>
+                                <div class="swiper-slide"><a href="#!"><img src="./imges/event91.jpg"></a></div>
+                                <div class="swiper-slide"><a href="#!"><img src="./imges/event92.jpg"></a></div>
+                                <div class="swiper-slide"><a href="#!"><img src="./imges/event94.jpg"></a></div>
 
                             </div>
                         </div>
@@ -985,10 +1008,10 @@
 
 
     <div class="btn_wrap">
-        <div class="dir_btn">
+        <div class="dir_btn btn_top">
             <a href="#header"><i class="fas fa-arrow-up"></i></a>
         </div>
-        <div class="dir_btn">
+        <div class="dir_btn btn_bot">
             <a href="#footer"><i class="fas fa-arrow-down"></i></a>
         </div>
     </div>
