@@ -58,6 +58,27 @@
 
             })
 
+            $('.top_btn').click(function(e){
+                e.preventDefault();
+
+                $('html, body').stop().animate({
+                    scrollTop:0,
+                },300)
+            })
+
+            $(window).scroll(function(){
+
+                if($(window).scrollTop()>= 200){
+                    $('.top_btn').stop().animate({
+                        right: 0,
+                    },300)
+                }else{
+                    $('.top_btn').stop().animate({
+                        right: - 50,
+                    },300)
+                }
+            })
+
 
 
             

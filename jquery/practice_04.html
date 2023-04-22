@@ -20,50 +20,51 @@
     <script>
         $(function () {
 
-            const page =$('.wrap section')
+          const page = $('.wrap section')
 
-            page.mousewheel(function(event,delta){
-                if(delta>0){
-                    let prev = $(this).prev().offset().top;
-                    $('html, body').stop().animate({
-                        scrollTop: prev,
-                    },300)
-                }else if(delta<0){
-                    let next = $(this).next().offset().top;
-                    $('html, body').stop().animate({
-                        scrollTop:next,
-                    },300)
-                }
-            }) // page
+          page.mousewheel(function(event,delta){
+
+            if(delta > 0 ){
+                let prev = $(this).prev().offset().top;
+                $('html, body').stop().animate({
+                    scrollTop:prev
+                },300)
+            }else if(delta<0){
+                let next = $(this).next().offset().top;
+                $('html, body').stop().animate({
+                    scrollTop:next,
+                },300)
+            }
+
+          })
 
 
-            $(window).scroll(function(){
-
-                if($(this).scrollTop() === $('.page02').offset().top){
-                    $('.page02 .page02_1').slideDown(300)
-                    $('.page02 .page02_2').delay(500).slideDown(300)
-                    $('.page02 .page02_3').delay(1000).slideDown(300)
-                }else{
-                    $('.page02 .sub_box div').fadeOut(500)
-                }//page02
-
-                if($(this).scrollTop() === $('.page03').offset().top){
-                    $('.page03 .page03_1').animate({
-                        left:0,
-                    },500)
-                    $('.page03 .page03_2').delay(500).animate({
-                        left:320,
-                    },500)
-                    $('.page03 .page03_3').delay(1000).animate({
-                        left:640,
-                    },500)
-                }
+          $(window).scroll(function(){
+            if($(this).scrollTop()=== $('.page02').offset().top){
+                $('.page02 .page02_1').fadeIn(500);
+                $('.page02 .page02_2').delay(300).fadeIn(500);
+                $('.page02 .page02_3').delay(600).fadeIn(500);
+            }else{
+                $('.page02 .sub_box div').fadeOut(300)
+            }
+          })
 
 
 
-                
+          $(window).scroll(function(){
+            if($(this).scrollTop()===$('.page03').offset().top){
+                $('.page03 .page03_1').animate({
+                    top: 0
+                },300)
+                $('.page03 .page03_2').delay(300).animate({
+                    top: 0
+                },300)
+                $('.page03 .page03_3').delay(600).animate({
+                    top: 0
+                },300)
+            }
+          })
 
-            })
           
         })
     </script>
@@ -87,52 +88,48 @@
             display: flex;
             justify-content: center;
             align-items: center;
-
         }
-
         .wrap section .sub_box{
             width: 940px;
             height: 300px;
             /* overflow: hidden; */
         }
+
         .wrap section .sub_box div{
             width: 300px;
             height: 300px;
             border: 1px solid black;
             box-sizing: border-box;
-            background-color: blanchedalmond;
+            background-color: cadetblue;
             float: left;
         }
-        .wrap .page01 .sub_box{
-            background-color: aquamarine;
-            text-align: center;
-            line-height: 300px;
-            font-size: 50px;
-            animation: intro 3s;
-        }
-        @keyframes intro{
-            0%{opacity: 0;}
-            100%{opacity: 1;}
-        }
-
-        .wrap .page02 .sub_box .page02_2{
-            margin: 0 20px;
-        }
-        .wrap .page02 .sub_box div{
+        .wrap .page02 .sub_box div {
             display: none;
         }
 
-        .wrap .page03 .sub_box{
+        .wrap .page03 .sub_box {
             position: relative;
         }
-        .wrap .page03 .sub_box div{
+
+        .wrap .page03 .sub_box div {
             position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
+            top: 300px;
         }
-        .wrap .page03 .sub_box .page03_1{}
-        .wrap .page03 .sub_box .page03_2{}
-        .wrap .page03 .sub_box .page03_3{}
+
+        .wrap .page03 .sub_box .page03_1 {
+            left: 0;
+        }
+
+        .wrap .page03 .sub_box .page03_2 {
+            left: 320px;
+        }
+
+        .wrap .page03 .sub_box .page03_3 {
+            left: 640px;
+        }
+        
+
+      
 
         
     </style>
@@ -142,12 +139,13 @@
 <body>
 
     <div class="wrap">
-        <section class="page01 intro">
-            <div class="sub_box">
-                <h1>intro</h1>
-            </div>
-        </section>
 
+        <section class="page01 intro">
+           
+                <h1>intro</h1>
+            
+        </section>
+        
         <section class="page02">
             <div class="sub_box">
                 <div class="page02_1">page02-1</div>
@@ -155,16 +153,16 @@
                 <div class="page02_3">page02-3</div>
             </div>
         </section>
-        
+
         <section class="page03">
             <div class="sub_box">
-                <div class="page03_1">page03-1</div>
-                <div class="page03_2">page03-2</div>
-                <div class="page03_3">page03-3</div>
+                <div class="page03_1">page03_1</div>
+                <div class="page03_2">page03_2</div>
+                <div class="page03_3">page03_3</div>
             </div>
         </section>
-
     </div>
+    
 
 </body>
 

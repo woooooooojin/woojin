@@ -13,26 +13,23 @@
 
     $(function(){
 
-        $('.season .season_tab li').click(function(){
-            $('.season .season_tab li').removeClass('on')
-            $(this).addClass('on');
-        })
+      const tabLi = $('.season .season_tab li');
+      const sheetLi = $('.season .season_sheet li');
 
-        $('.tab_spring').click(function(){
-            $('#season_sheet').removeClass().addClass('spring');
-        })
+      let index = 0;
 
-        $('.tab_summer').click(function(){
-            $('#season_sheet').removeClass().addClass('summer');
-        })
+      tabLi.click(function(){
 
-        $('.tab_autumn').click(function(){
-            $('#season_sheet').removeClass().addClass('autumn');
-        })
+        tabLi.removeClass('on');
+        $(this).addClass('on');
 
-        $('.tab_winter').click(function(){
-            $('#season_sheet').removeClass().addClass('winter');
-        })
+        index = $(this).index();
+
+        sheetLi.removeClass('sheet_on');
+        sheetLi.eq(index).addClass('sheet_on')
+      })
+
+
     })
 
 </script>
@@ -63,30 +60,30 @@
         text-align: center;
         float: left;
         cursor: pointer;
+        
     }
     .season .season_tab li.on{
         background-color: yellowgreen;
     }
 
-    .season #season_sheet{
+    .season .season_sheet{
         width: 500px;
         height: 500px;
         border: 1px solid black;
+    
+    }
+    .season .season_sheet li{
+        display: none;
+    }
+    .season .season_sheet img{
+        width: 100%;
+        height: auto;
+    }
+    .season .season_sheet li.sheet_on{
+        display: block;
     }
 
-    .spring{
-        background: url(./images/spring.jpg);
-
-    }
-    .summer{
-        background: url(./images/summer.jpg);
-    }
-    .autumn{
-        background: url(./images/autumn.jpg);
-    }
-    .winter{
-        background: url(./images/winter.jpg);
-    }
+   
 </style>
 
 
@@ -103,7 +100,12 @@
 
 
         </ul>
-        <div id="season_sheet" class="spring"></div>
+        <ul class="season_sheet">
+            <li class="sheet_on"><img src="./images/spring.jpg" alt=""></li>
+            <li><img src="./images/summer.jpg" alt=""></li>
+            <li><img src="./images/autumn.jpg" alt=""></li>
+            <li><img src="./images/winter.jpg" alt=""></li>
+        </ul>
 
     </section>
 

@@ -16,22 +16,27 @@
 
         $(function(){
 
-            $('.season_tab li').click(function(){
-                $('.season_tab li').removeClass('on');
-                $(this).addClass('on')
+            $('.season .season_tab li').click(function(){
+
+              $('.season .season_tab li').removeClass('on')
+              $(this).addClass('on')
             })
 
+
             $('.tab_spring').click(function(){
-                $('#tab_sheet').removeClass().addClass('spring');
+              $('#tab_sheet').removeClass().addClass('spring')
             })
+
             $('.tab_summer').click(function(){
-                $('#tab_sheet').removeClass().addClass('summer');
+              $('#tab_sheet').removeClass().addClass('summer')
             })
+
             $('.tab_autumn').click(function(){
-                $('#tab_sheet').removeClass().addClass('autumn');
+              $('#tab_sheet').removeClass().addClass('autumn')
             })
+
             $('.tab_winter').click(function(){
-                $('#tab_sheet').removeClass().addClass('winter');
+              $('#tab_sheet').removeClass().addClass('winter')
             })
 
         })
@@ -64,6 +69,7 @@
         border: 1px solid black;
         text-align: center;
         line-height: 150px;
+        border-radius: 50%;
         
         
       }
