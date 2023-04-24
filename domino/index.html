@@ -63,8 +63,20 @@
                 $('html, body').stop().animate({
                     scrollTop: 5000,
                 }, 300)
-            })
+            }) //top button event
 
+
+            $(window).scroll(function(){
+
+                if($(window).scrollTop() >= 100 ){
+                    $('.main_wrap .delivery').fadeIn(300)
+                    $('.main_wrap .togo_order').delay(300).fadeIn(300)
+                    $('.main_wrap .my_order').delay(600).fadeIn(300)
+                    $('.main_wrap .e_coupon').delay(900).fadeIn(300)
+                  
+                }
+
+            }) //main wrap scroll event
 
 
 
@@ -269,13 +281,13 @@
                     </div>
                 </div>
                 <div class="sec1_box2">
-                    <div class="box2_01 ml">
+                    <div class="box2_01 box2_01_1 ml">
                         <img src="./imges/main_card1.png" alt="img">
                     </div>
-                    <div class="box2_01">
+                    <div class="box2_01 box2_01_2">
                         <img src="./imges/main_card2.gif" alt="gif">
                     </div>
-                    <div class="box2_01">
+                    <div class="box2_01 box2_01_3">
                         <img src="./imges/main_card5.png" alt="img">
                     </div>
                 </div>

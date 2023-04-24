@@ -520,11 +520,13 @@ nav {
 main {
     width: 100%;
     margin-top: 100px;
+    height: 160px;
 }
 
 main .main_wrap {
     width: 100%;
     display: flex;
+    
 }
 
 main .main_wrap .delivery {
@@ -533,6 +535,7 @@ main .main_wrap .delivery {
     margin-right: 20px;
     background-color: #238ece;
     border-radius: 10px;
+    display: none;
 
 
 }
@@ -602,6 +605,7 @@ main .main_wrap .togo_order {
     background-color: #f6f7f8;
     border-radius: 10px;
     height: 160px;
+    display: none;
 }
 
 main .main_wrap .togo_order a {
@@ -653,6 +657,7 @@ main .main_wrap .my_order {
     border-radius: 10px;
     margin-right: 20px;
     height: 160px;
+    display: none;
 
 }
 
@@ -719,6 +724,7 @@ main .main_wrap .e_coupon {
     background-color: #f6f7f8;
     border-radius: 10px;
     height: 160px;
+    display: none;
 }
 
 main .main_wrap .e_coupon a {
@@ -819,7 +825,7 @@ main .main_wrap .e_coupon a p {
     height: 240px;
     display: flex;
     cursor: pointer;
-
+   
 }
 
 .section1 .section1_wrap .sec1_box2 .box2_01 {
