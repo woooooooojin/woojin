@@ -130,6 +130,37 @@ a{text-decoration: none;}
 }
 
 
+/********countdown*********/
+.countdown{
+    width: 100%;
+    background-color: #eee;
+    margin-top: 100px;
+}
+.countdown h1{
+    text-align: center;
+}
+.countdown_box{
+    width: 500px;
+    margin: 20px auto;
+}
+.countdown_box .time{
+
+}
+.countdown_box .time p{
+    text-align: center;
+    font-size: 30px;
+}
+
+.countdown_box .count_img{
+    width: 100%;
+    font-size: 0;
+    margin-top: 20px;
+}
+.countdown_box .count_img img{
+    width: 100%;
+    height: auto;
+}
+
 
 /*******new product******/
 
