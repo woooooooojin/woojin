@@ -1273,12 +1273,13 @@ input::-webkit-search-cancel-button{display: none;}
     text-align: center;
     line-height: 50px;
     position: absolute;
-    top: 20px; left:20px;
+    top: 20px; left:2px;
     background-color: #238ece;
     box-shadow: 0 0 10px gray;
     transition: .3s;
    /*  animation: recommand_boxani_1 3s infinite linear; */
     padding: 0 5px;
+  
 }
 .recommand_right .recommand_box:hover{
    transform: scale(1.1);
