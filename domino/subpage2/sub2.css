@@ -441,11 +441,12 @@ nav {
 
 .label_wrap li {
     display: inline-block;
-    width: calc(100% / 7);
+    width: calc(100% / 7 - 8.5714px);
     height: 50px;
     border: 1px solid #ccc;
+    box-shadow: 0 0 5px gray;
     border-bottom: 0;
-    border-radius: 10px 10px 0 0;
+    border-radius: 10px;
     text-align: center;
     line-height: 50px;
     font-weight: 600;
@@ -453,6 +454,10 @@ nav {
     margin-top: 50px;
     font-size: 18px;
     transition: .3s;
+    margin-right: 10px;
+}
+.label_wrap li:last-child{
+    margin-right: 0;
 }
 
 .label_wrap li.on {
@@ -485,6 +490,7 @@ nav {
     transition: .3s;
 }
 
+
 .label_wrap li:hover::after,
 .label_wrap li:hover::before {
     width: 50%;
@@ -502,6 +508,12 @@ nav {
 
 .menu_wrap {
     display: none;
+}
+.menu_wrap h4{
+    text-align: center;
+    font-size: 28px;
+    margin-top: 20px;
+    
 }
 
 .sheet_on {
