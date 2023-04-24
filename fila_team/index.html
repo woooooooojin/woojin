@@ -16,7 +16,7 @@
 
 
     <script>
-        let countDownDate = new Date('May 5, 2024 15:37:25').getTime();
+        let countDownDate = new Date('Aug 25, 2023 15:37:25').getTime();
 
         let x = setInterval(function () {
 
@@ -32,9 +32,9 @@
             ' 초';
 
 
-            if (distance < 0) {
+            if (timeOut < 0) {
                 clearInterval(x);
-                document.getElementById('count_time').innerHTML = '종료';
+                document.getElementById('count_time').innerHTML = '종료된 이벤트 입니다.';
             }
         }, 1000);
     </script>
