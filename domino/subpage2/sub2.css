@@ -534,6 +534,9 @@ nav {
     cursor: pointer;
 
 }
+.menu_box:hover{
+   
+}
 
 .menu_box:nth-child(4n) {
     margin-right: 0;
@@ -560,6 +563,7 @@ nav {
 .menu_box .menu_img:hover .newicon {
     opacity: 1;
     transform: rotate(20deg);
+    
 }
 
 .menu_box .menu_img img {
@@ -568,9 +572,13 @@ nav {
     transform: scale(1.07);
     transition: .3s;
 }
+.menu_box .menu_img:hover{
+    box-shadow: 0 0 10px #238ece;
+}
 
 .menu_box .menu_img:hover img {
     transform: scale(1);
+    
 }
 
 .menu_desc {
