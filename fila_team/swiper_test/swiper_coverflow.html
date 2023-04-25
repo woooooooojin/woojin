@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+
+</head>
+
+
+<script>
+
+
+</script>
+
+<style>
+  body {
+    overflow: hidden;
+  }
+
+  .swiper_newproduct {
+    width: 500px;
+    height: 700px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .swiper_newproduct .swiper-slide{
+    /* margin: 0 20px; */
+  }
+  .swiper_newproduct .swiper-slide img{
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide.swiper-slide-visible.swiper-slide-next{
+    
+  }
+</style>
+
+<body>
+
+
+  <div class="swiper_newproduct">
+
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide"><img src="../img/02. 서브/01.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="../img/02. 서브(작업물)/02.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="../img/02. 서브(작업물)/03.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="../img/02. 서브(작업물)/04.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="../img/02. 서브(작업물)/05.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="../img/02. 서브(작업물)/06.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="../img/02. 서브(작업물)/07.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="../img/02. 서브(작업물)/08.jpg" alt=""></div>
+
+    </div>
+
+    <div class="swiper-pagination"></div>
+
+
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+
+  </div>
+
+
+
+  <script>
+    const swiper_newproduct = new Swiper('.swiper_newproduct', {
+
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      // slidesPerView: 2,
+      // slidesPerGroup: 1,
+      
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      // And if we need scrollbar
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+    });
+  </script>
+</body>
+
+</html>
