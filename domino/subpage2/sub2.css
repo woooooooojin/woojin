@@ -271,7 +271,7 @@ nav {
     content: "";
     position: absolute;
     left: 50%;
-    bottom: 0px;
+    bottom: 7px;
     width: 0;
     height: 4px;
     background-color: #fff;
@@ -282,7 +282,7 @@ nav {
     content: "";
     position: absolute;
     right: 50%;
-    bottom: 0px;
+    bottom: 7px;
     width: 0;
     height: 4px;
     background-color: #fff;
@@ -457,7 +457,8 @@ nav {
     margin-right: 10px;
     cursor: pointer;
 }
-.label_wrap li:last-child{
+
+.label_wrap li:last-child {
     margin-right: 0;
 }
 
@@ -474,7 +475,7 @@ nav {
     height: 3px;
     background-color: #ff143c;
     position: absolute;
-    bottom: 0;
+    bottom: 5px;
     left: 50%;
     transition: .3s;
 
@@ -487,7 +488,7 @@ nav {
     height: 3px;
     background-color: #ff143c;
     position: absolute;
-    bottom: 0;
+    bottom: 5px;
     right: 50%;
     transition: .3s;
 }
@@ -496,7 +497,7 @@ nav {
 .label_wrap li:hover::after,
 .label_wrap li:hover::before {
     width: 48.5%;
-    border-radius: 50px;
+    
 }
 
 
@@ -512,11 +513,12 @@ nav {
 .menu_wrap {
     display: none;
 }
-.menu_wrap h4{
+
+.menu_wrap h4 {
     text-align: center;
     font-size: 28px;
     margin-top: 20px;
-    
+
 }
 
 .sheet_on {
@@ -528,7 +530,7 @@ nav {
 .menu_box {
     width: calc(100% - 75% - 12px);
     margin-right: 15px;
-    margin-top: 25px;
+    margin-top: 35px;
     cursor: pointer;
 
 }
@@ -563,7 +565,7 @@ nav {
 .menu_box .menu_img img {
     width: 100%;
     height: auto;
-    transform: scale(1.1);
+    transform: scale(1.07);
     transition: .3s;
 }
 
@@ -598,23 +600,23 @@ nav {
 
 @keyframes newani {
     0% {
-        transform: translateY(0px);
+        transform:rotate(-3deg);
     }
 
     25% {
-        transform: translateY(-2px);
+        transform:rotate(0deg);
     }
 
     50% {
-        transform: translateY(0px);
+        transform:rotate(3deg);
     }
 
     75% {
-        transform: translateY(2px);
+        transform:rotate(0deg);
     }
 
     100% {
-        transform: translateY(0px);
+        transform:rotate(-3deg);
     }
 }
 
@@ -637,7 +639,30 @@ nav {
     height: 55px;
     /* text-align: center; */
 }
+.menu_desc .menu_text button{
+    width: 30px;
+    height: 30px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    font-size: 18px;
+    cursor: pointer;
+    
+}
+.menu_desc .menu_text input{
+    width: 230px;
+    height: 30px;
+    outline: none;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    text-align: center;
+    font-size: 18px;
 
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 .menu_desc .menu_text p {
     font-size: 14px;
     color: #888;
@@ -666,38 +691,41 @@ nav {
 
 /****************section02*************/
 
-.section02{
+.section02 {
     width: 100%;
     margin-top: 150px;
     border-top: 1px solid #ccc;
-  
+
 }
 
-.section02 .notice_box{
+.section02 .notice_box {
     display: flex;
     margin-top: 50px;
-    
+
 }
-.section02 .notice_box .notice_L{
+
+.section02 .notice_box .notice_L {
     width: 50%;
     font-size: 14px;
     color: #999;
     border-right: 1px solid #ccc;
 }
-.section02 .notice_box .notice_L li:first-child{
+
+.section02 .notice_box .notice_L li:first-child {
     margin-bottom: 20px;
 }
 
 
 
-.section02 .notice_box .notice_R{
+.section02 .notice_box .notice_R {
     width: 50%;
     text-align: center;
     font-size: 14px;
     font-weight: 600;
     color: #999;
 }
-.section02 .notice_box .notice_R .food_info{
+
+.section02 .notice_box .notice_R .food_info {
     width: 300px;
     height: 50px;
     border: 1px solid #ccc;
@@ -708,8 +736,64 @@ nav {
     background-color: #333;
     color: #fff;
     cursor: pointer;
+    transition: .3s;
+}
+.section02 .notice_box .notice_R .food_info:hover{
+    box-shadow: 0 0 10px gray;
 }
 
+
+/*********modal popup******/
+
+.modal_popup {
+    position: fixed;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99999;
+}
+
+.modal_wrap {
+    width: 100%;
+    height: 100%;
+    
+    position: relative;
+}
+
+.modal_text {
+    width: 500px;
+    height: 500px;
+    background-color: #fff;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    transform: translate(50%,50%);
+   
+
+}
+.modal_text img{
+    width: 100%;
+    height: auto;
+}
+.click_hide {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+    text-align: center;
+    line-height: 50px;
+
+}
+.click_hide p{
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+}
 
 
 
@@ -1062,6 +1146,4 @@ footer {
     font-size: 18px;
 }
 
-
-/*********modal popup******/
 
