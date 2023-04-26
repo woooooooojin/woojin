@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery bannerslider</title>
+    <script src="./js/jquery-3.6.4.min.js"></script>
+    <!--jquery 맨위에-->
+    <script src="./bannerslider2.js"></script>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+        
+        .banner_box{
+            width: 660px;
+            height: 200px;
+            padding: 15px 40px;
+            border: 1px solid black;
+            position: relative;
+        }
+        .banner_box .frame{
+            width: 660px;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+        .banner_box .frame ul{
+            width: 880px;
+            height: 200px;
+            position: absolute;
+            top: 0; left: 0;
+        }
+        .banner_box .frame ul li{
+            width: 200px;
+            height: 200px;
+            padding: 0 10px;
+            float: left;
+        }
+
+
+        .banner_box .ctr_btn{
+            position: absolute;
+            top: 5px; right: 5px;
+        }
+        .banner_box .ctr_btn .play{}
+        .banner_box .ctr_btn .stop{}
+
+        .banner_box .btn{}
+        .banner_box .btn .prev{
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            transform: translateY(-50%);
+            /* margin-top: -15px; *//*같음 이미지 높이가 30*/ 
+
+
+        }
+        .banner_box .btn .next{
+            position: absolute;
+            top: 50%;
+            right: 5px;
+            transform: translateY(-50%);
+            /* margin-top: -15px; *//*같음 이미지 높이가 30*/ 
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+    
+    <section class="banner_box">
+
+        <div class="frame">
+
+            <ul>
+                <li><a href="http://www.naver.com"><img src="./images5/autumn_01.jpg" alt="img"></a></li>
+                <li><a href="http://www.naver.com"><img src="./images5/spring_01.jpg" alt="img"></a></li>
+                <li><a href="http://www.naver.com"><img src="./images5/summer_01.jpg" alt="img"></a></li>
+                <li><a href="http://www.naver.com"><img src="./images5/winter_01.jpg" alt="img"></a></li>
+            </ul>
+
+        </div><!--frame-->
+
+        <div class="ctr_btn">
+            <a href="#!" class="play"><img src="./images5/play.jpg" alt="play"></a>
+            <a href="#!" class="stop"><img src="./images5/stop.jpg" alt="stop"></a>
+        </div><!--ctr btn-->
+
+        <div class="btn">
+            <a href="#!" class="prev"><img src="./images5/prev.jpg" alt="prev"></a>
+            <a href="#!" class="next"><img src="./images5/next.jpg" alt="next"></a>
+        </div><!--btn-->
+        
+
+    </section>
+
+
+</body>
+
+</html>
