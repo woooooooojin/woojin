@@ -1784,7 +1784,10 @@ footer {
     margin-right: 10px;
 }
 
-.list_award .awrad_box .award_img {}
+.list_award .awrad_box .award_img a{
+    display: block;
+    width: 100%;
+}
 
 .list_award .award_box .award_img img {}
 
