@@ -97,12 +97,19 @@ body {
     display: block;
     
 }
-.popup2 h4{
+.popup2 h2{
+    text-align: center;
+    background-color: #238ece;
+    color: #fff;
+    padding: 5px 0;
+}
+.popup2 #timer{
     text-align: center;
     font-size: 24px;
     background-color: #fff;
     color: #238ece;
     padding: 10px 0;
+    font-weight: 600;
 }
 .popup2 .popup_box2{
     font-size: 0;
@@ -124,11 +131,6 @@ body {
     display: block;
     opacity: 0.5;
     background-color: black;
-    /* background-image: url(./imges/q32.png);
-    opacity: 0.3;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center; */
     position: absolute;
     top: 0;
 
@@ -140,7 +142,6 @@ body {
     position: relative;
     font-size: 22px;
     font-weight: 600;
-    height: 50px;
    
 }
 .popup2 .popup2_desc p{
@@ -151,6 +152,7 @@ body {
     bottom: 0; right: 0;
     cursor: pointer;
     font-size: 16px;
+    color: #ff143c;
 }
 
 
