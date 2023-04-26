@@ -9,6 +9,7 @@
 
     <script src="./js/jquery-3.6.4.min.js"></script>
     <!--jquery-->
+    <script src="./js/countdown.js"></script>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <!--swiper-->
@@ -17,7 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
+    
     <script>
         //jquery
         $(function () {
@@ -71,16 +72,17 @@
                 if($(window).scrollTop() >= 100 ){
                     $('.main_wrap .delivery').fadeIn(300)
                     $('.main_wrap .togo_order').delay(300).fadeIn(300)
-                    $('.main_wrap .my_order').delay(600).fadeIn(300)
-                    $('.main_wrap .e_coupon').delay(900).fadeIn(300)
+                    $('.main_wrap .my_order').delay(500).fadeIn(300)
+                    $('.main_wrap .e_coupon').delay(700).fadeIn(300)
                   
                 }
 
             }) //main wrap scroll event
 
         
-
-
+            $('.close_btn2 p').click(function(){
+                $('.popup2').css('display','none');
+            })
 
 
         })
@@ -96,6 +98,19 @@
             <div class="popupinner">
                 <img src="./imges/banner-floating.png" alt="img">
                 <label for="popchk"><i class="fas fa-times"></i></label>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup2">
+        <h4 id="timer"></h4>
+        <div class="popup_box2">
+            <img src="./imges/pizzaicon2.jpg" alt="pizza">
+        </div>
+        <div class="popup2_desc">
+            <p>신제품 출시</p>
+            <div class="close_btn2">
+                <p>Ｘ</p>
             </div>
         </div>
     </div>
@@ -302,6 +317,10 @@
                 <div class="new_box">
                     <div class="img_wrap">
                         <img src="./imges/new1.jpg" alt="img">
+                        <div class="newicon">
+                            <img src="./imges/newicon.png" alt="img">
+                        </div>
+                        
                     </div>
                     <div class="new_desc">
                         <div class="desc_wrap">
@@ -330,6 +349,9 @@
                 <div class="new_box">
                     <div class="img_wrap">
                         <img src="./imges/new2.jpg" alt="img">
+                        <div class="newicon">
+                            <img src="./imges/newicon.png" alt="img">
+                        </div>
                     </div>
                     <div class="new_desc">
                         <div class="desc_wrap">
@@ -358,6 +380,9 @@
                 <div class="new_box">
                     <div class="img_wrap">
                         <img src="./imges/new3.jpg" alt="img">
+                        <div class="newicon">
+                            <img src="./imges/newicon.png" alt="img">
+                        </div>
                     </div>
 
                     <div class="new_desc">
@@ -387,6 +412,9 @@
                 <div class="new_box">
                     <div class="img_wrap">
                         <img src="./imges/new4.jpg" alt="img">
+                        <div class="newicon">
+                            <img src="./imges/newicon.png" alt="img">
+                        </div>
                     </div>
                     <div class="new_desc">
                         <div class="desc_wrap">

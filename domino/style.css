@@ -85,6 +85,74 @@ body {
     color: #238ece;
 }
 
+/**************popup2*********************/
+.popup2{
+    width: 400px;
+    /* height: 400px; */
+    border: 1px solid #ccc;
+    position: absolute;
+    top: 100px;
+    left: 200px;
+    z-index: 99999;
+    display: block;
+    
+}
+.popup2 h4{
+    text-align: center;
+    font-size: 24px;
+    background-color: #fff;
+    color: #238ece;
+    padding: 10px 0;
+}
+.popup2 .popup_box2{
+    font-size: 0;
+   position: relative;
+}
+.popup2 .popup_box2 img{
+    width: 100%;
+    height: 100%;
+    
+}
+.popup2 .popup_box2::after{
+    content: "?";
+    line-height: 250px;
+    color: #fff;
+    font-size: 100px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: block;
+    opacity: 0.5;
+    background-color: black;
+    /* background-image: url(./imges/q32.png);
+    opacity: 0.3;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; */
+    position: absolute;
+    top: 0;
+
+}
+
+.popup2 .popup2_desc{
+    text-align: center;
+    background-color: #fff;
+    position: relative;
+    font-size: 22px;
+    font-weight: 600;
+    height: 50px;
+   
+}
+.popup2 .popup2_desc p{
+    padding-top: 10px;
+}
+.popup2 .popup2_desc .close_btn2{
+    position: absolute;
+    bottom: 0; right: 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+
 
 /****************header************************/
 
@@ -449,7 +517,7 @@ nav {
 
 .visual_main .visual img {
     width: 100%;
-    height: 400px;
+    height: 500px;
 }
 
 .visual_main_wrap {
@@ -878,21 +946,39 @@ main .main_wrap .e_coupon a p {
 
 @keyframes newani {
 
-    /* 0%{transform: matrix(0);}
-    50%{transform: matrix(2,1,-1,1.5,30,-45);} */
-    0% {
+
+     0% {
         scale: 1
     }
 
     50% {
         scale: 1.2;
-    }
+    } 
+   
 }
 
 .new_box .img_wrap {
     width: 100%;
     height: 300px;
     overflow: hidden;
+    position: relative;
+}
+.new_box .img_wrap:hover .newicon img{
+    opacity: 1;
+    transform: rotate(20deg);
+}
+.newicon{
+    position: absolute;
+    top: 5px; right: 5px;
+    width: 50px;
+    height: 50px;
+    
+}
+.newicon img{
+    width: 100%;
+    height: 100%;
+    transition: .3s;
+    opacity: 0;
 }
 
 .section2_wrap .new_box img {
