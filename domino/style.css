@@ -167,6 +167,7 @@ header .header_wrap {
 
 header .main_logo {
     width: 33.3333%;
+    cursor: pointer;
 }
 
 header .main_logo img {
