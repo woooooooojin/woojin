@@ -13,15 +13,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
     <script>
-        // $('.mem_login').click(function(){
-        //     $('.form_wrap').css('display','block')
-        // })
-        // $('.login_wrap .notmem_login a').click(function(e){
-        //     e.preventDefault();
-        //     $('.not_member_wrap').css('display','block')
+        $(function () {
+
+            $('.chk_item a').click(function () {
+                $('.popup_modal').css('display', 'block')
+            })
+            $('.close_btn').click(function () {
+                $('.popup_modal').css('display', 'none')
+            })
+
+            // $('.mem_login').click(function(){
+            //     $('.form_wrap').css('display','block')
+            // })
+            // $('.login_wrap .notmem_login a').click(function(e){
+            //     e.preventDefault();
+            //     $('.not_member_wrap').css('display','block')
 
 
-        // })
+            // })
+        })
     </script>
 </head>
 
@@ -153,10 +163,10 @@
     <section class="section_login">
         <div class="container">
 
-           
+
             <input type="radio" id="login_rad" name="tab1" checked>
             <input type="radio" id="notmem_rad" name="tab1">
-            
+
 
             <ul class="login_wrap">
                 <li class="mem_login"><label for="login_rad" class="on">회원 로그인</label></li>
@@ -288,7 +298,8 @@
                         </div>
                     </div>
                 </div>
-            </div><!--form ex end-->
+            </div>
+            <!--form ex end-->
 
 
 
@@ -300,6 +311,17 @@
         <!--container end-->
 
     </section>
+
+
+    <div class="popup_modal">
+        <div class="modal_wrap">
+            <img src="../imges/easteregg.png" alt="img">
+            <div class="close_btn">
+                <p>닫기</p>
+            </div>
+        </div>
+
+    </div>
 
 
 

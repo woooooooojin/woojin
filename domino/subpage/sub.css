@@ -265,7 +265,7 @@ nav {
     content: "";
     position: absolute;
     left: 50%;
-    bottom: 0px;
+    bottom: 5px;
     width: 0;
     height: 4px;
     background-color: #fff;
@@ -276,7 +276,7 @@ nav {
     content: "";
     position: absolute;
     right: 50%;
-    bottom: 0px;
+    bottom: 5px;
     width: 0;
     height: 4px;
     background-color: #fff;
@@ -485,22 +485,22 @@ nav {
 #login_rad:checked ~ .form_ex .not_member_wrap{display: none;}
 #login_rad:checked ~ .login_wrap li label.on::after{
     width: 50%;
-    background-color: #ff143c;
+    background-color: #eee;
 }
 #login_rad:checked ~ .login_wrap li label.on::before{
    width: 50%;
-   background-color: #ff143c;
+   background-color: #eee;
 }
 
 #notmem_rad:checked ~ .form_ex .form_wrap{display: none;}
 #notmem_rad:checked ~ .form_ex .not_member_wrap{display: block;}
 #notmem_rad:checked ~ .login_wrap li label.off::after{
     width: 50%;
-    background-color: #238ece;
+    background-color: #eee;
 }
 #notmem_rad:checked ~ .login_wrap li label.off::before{
    width: 50%;
-   background-color: #238ece;
+   background-color: #eee;
 }
 
 
@@ -521,6 +521,10 @@ nav {
     outline: none;
     border: 1px solid #ccc;
     padding: 0 10px;
+    transition: .3s;
+}
+.login_id input:hover{
+    border: 1px solid black;
 }
 
 .login_id input:focus {
@@ -676,7 +680,7 @@ nav {
 }
 
 
-/*********jquery control***********/
+/***********************/
 .form_wrap {
     display: none;
 }
@@ -711,9 +715,13 @@ nav {
     border: 1px solid #ccc;
     padding: 0 10px;
     margin-top: 20px;
+    transition: .3s;
 }
 .not_mem_name input[placeholder]{
     color: #888;
+}
+.not_mem_name input:hover{
+    border: 1px solid black;
 }
 
 .form_num{
@@ -727,20 +735,31 @@ nav {
     outline: none;
     border: 1px solid #ccc;
     vertical-align: bottom;
+    transition: .3s;
 }
-
+.form_num select:hover{
+    border: 1px solid black;
+}
 .form_num #hp2{
     width: 89px;
     height: 35px;
     outline: none;
     border: 1px solid #ccc;
+    transition: .3s;
+}
+.form_num #hp2:hover{
+    border: 1px solid black;
 }
 .form_num #hp3{
     width: 89px;
     height: 35px;
     outline: none;
     border: 1px solid #ccc;
+    transition: .3s;
     
+}
+.form_num #hp3:hover{
+    border: 1px solid black;
 }
 .form_num a{
     display: inline-block;
@@ -768,6 +787,10 @@ nav {
     border: 1px solid #ccc;
     padding: 10px;
     margin-bottom: 10px;
+    transition: .3s;
+}
+.form_num2 #hp4:hover{
+    border: 1px solid black;
 }
 .form_num2 input[placeholder]{
     color: #888;
@@ -872,6 +895,31 @@ nav {
     color: #238ece;
 }
 
+
+/********popup modal******/
+.popup_modal{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;left: 0;
+    z-index: 99999;
+    display: none;
+}
+.modal_wrap{
+    width: 500px;
+    height: 500px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+}
+.close_btn{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    cursor: pointer;
+}
 
 
 
