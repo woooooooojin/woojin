@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>부민병원</title>
-    <script src="./js/jquery-3.6.4.min.js"></script> 
-    <script src="./js/jquery.scrollTo.min.js"></script><!--scrollto-->
+    <script src="./js/jquery-3.6.4.min.js"></script>
+    <script src="./js/slider.js"></script>
+    <script src="./js/jquery.scrollTo.min.js"></script>
+    <!--scrollto-->
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
@@ -15,75 +17,78 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
     <script>
-        $(function(){
-            $('.top_btn').click(function(e){
+        $(function () {
+            $('.top_btn').click(function (e) {
                 e.preventDefault();
 
                 $('html, body').stop().animate({
-                    scrollTop:0,
-                },300)
+                    scrollTop: 0,
+                }, 300)
             })
 
-            $('.q_top').click(function(e){
+            $('.q_top').click(function (e) {
                 e.preventDefault();
 
                 $('html, body').stop().animate({
-                    scrollTop:0,
-                },500)
+                    scrollTop: 0,
+                }, 500)
 
             })
-            $('.quick_menu .q_bot a').click(function(e){
+            $('.quick_menu .q_bot a').click(function (e) {
                 e.preventDefault();
 
                 // $(window).scrollTo(this.hash || 0, 300);
                 $('html, body').stop().animate({
-                    scrollTop:3500
-                },500)
-               
+                    scrollTop: 3500
+                }, 500)
+
 
             })
 
 
-            $('.quick_menu').css('top',$(window).height()/2 - $('.quick_menu').height()/2);
-            $(window).scroll(function(){
+            $('.quick_menu').css('top', $(window).height() / 2 - $('.quick_menu').height() / 2);
+            $(window).scroll(function () {
 
-                let point = $(this).scrollTop() + ($(window).height()/2 - $('.quick_menu').height()/2)
+                let point = $(this).scrollTop() + ($(window).height() / 2 - $('.quick_menu').height() /
+                    2)
 
                 $('.quick_menu').stop().animate({
                     top: point,
-                },300)
+                }, 300)
 
             })
 
-            $('.top_btn').click(function(e){
+            $('.top_btn').click(function (e) {
                 e.preventDefault();
 
                 $('html, body').stop().animate({
-                    scrollTop:0,
-                },300)
+                    scrollTop: 0,
+                }, 300)
             })
 
-            $(window).scroll(function(){
+            $(window).scroll(function () {
 
-                if($(window).scrollTop()>= 200){
+                if ($(window).scrollTop() >= 200) {
                     $('.top_btn').stop().animate({
                         right: 0,
-                    },300)
-                }else{
+                    }, 300)
+                } else {
                     $('.top_btn').stop().animate({
-                        right: - 50,
-                    },300)
+                        right: -50,
+                    }, 300)
                 }
             })
 
-            
 
 
 
-            
+
+
         })
     </script>
 
@@ -406,13 +411,40 @@
                 </div>
             </div>
             <div class="control">
-                <a href="#!"><i class="fas fa-play"></i></a>
-                <a href="#!"><i class="fas fa-pause"></i></a>
+                <a href="#!"><i class="fas fa-play play"></i></a>
+                <a href="#!"><i class="fas fa-pause stop"></i></a>
             </div>
         </div>
-        <!--container end-->
+
     </div>
-    <!--visual_main end-->
+    <!--visual_main end -->
+
+
+    <!--     <div class="bannerslider">
+        <div class="frame">
+            <ul>
+                <li><a href="./subpage/sub.html"><img src="./imges/visual-100.jpg" alt="img"></a></li>
+                <li><a href="./subpage/sub.html"><img src="./imges/visual-101.jpg" alt="img"></a></li>
+                <li><a href="./subpage/sub.html"><img src="./imges/visual-100.jpg" alt="img"></a></li>
+                <li><a href="./subpage/sub.html"><img src="./imges/visual-101.jpg" alt="img"></a></li>
+            </ul>
+        </div>
+
+        <div class="ctr_btn">
+            <div class="play"><i class="fas fa-play"></i></div>
+            <div class="stop"><i class="fas fa-pause"></i></div>
+        </div>
+
+        <div class="arrow_btn">
+            <div class="prev">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+            <div class="next">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </div>
+    </div> -->
+    <!--banner slider end-->
 
     <main>
         <div class="container">
@@ -1103,8 +1135,15 @@
                 pauseOnHover: true,
                 swipeToSlide: true,
 
+
             });
         })
+        $('.play').click(function () {
+            $('.visual_slider').slick('slickPlay');
+        });
+        $('.stop').click(function () {
+            $('.visual_slider').slick('slickPause');
+        });
 
         $(document).ready(function () {
             $('.ntc_01').slick({
