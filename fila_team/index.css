@@ -22,12 +22,13 @@ header{
     position: fixed;
     top: 0;
     z-index: 10;
+    padding-top: 10px;
 }
 
 .header_wrap{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    
     
 }
 .head_logo{
@@ -36,7 +37,8 @@ header{
 .head_logo .imgwrap{
     width: 90px;
     height: 55px;
-    margin-top: 20px;
+    margin-left: 25px;
+   
 }
 .head_logo .imgwrap img{
     width: 100%;
@@ -80,11 +82,11 @@ header{
     justify-content: flex-end;
 }
 .head_gnb ul li{
-    margin-left: 25px; 
+    margin-right: 25px; 
     position: relative;
 }
 .head_gnb ul li:nth-child(4){
-   
+
 }
 .head_gnb ul li .count{
     width: 20px;
@@ -106,6 +108,42 @@ header{
     font-size: 25px;
     color: #fff;
 }
+
+/********drop down menu*********/
+
+.dropdown_menu{
+    width: 100%;
+    position: absolute;
+    top: 55px;
+    z-index: 10;
+    background-color: #fff;
+
+}
+.drop_menu_wrap{
+    width: 100%;
+    display: flex;
+    
+}
+.dropbox_01{
+    width: 20%;
+    border-right: 1px solid #ccc;
+}
+.dropbox_01 .menu_list{
+    width: 100%;
+}
+.dropbox_01 .menu_list li{
+    height: 20px;
+}
+.dropbox_01 .menu_list li a{
+    display: block;
+    width: 100%;
+}
+.menu_list li:nth-child(1) a{
+    font-size: 18px;
+    font-weight: bold;
+}
+.dropbox_01 .menu_list li{}
+
 
 
 
@@ -296,7 +334,7 @@ header{
     height: 550px;
     background-color: lightsteelblue;
     position: absolute;
-    z-index: 10;
+    z-index: 5;
     top: 50%;
     transform: translateY(-50%);
     
