@@ -51,6 +51,29 @@
                 }, 500)
             }) //bottom btn
 
+            $(window).scroll(function(){
+
+                if($(window).scrollTop() >= $('.subpage_desc').offset().top){
+    
+                    $('.sub_effect1').animate({
+                        opacity:1,
+                    },500)
+                    $('.sub_effect2').delay(300).animate({
+                        opacity:1,
+                    },500)
+                    $('.sub_effect3').delay(600).animate({
+                        opacity:1,
+                    },500)
+                    $('.sub_effect4').delay(900).animate({
+                        opacity:1,
+                    },500)
+
+                }
+
+            })
+
+
+
 
 
 
@@ -414,10 +437,10 @@
     </div>
     <!--subpage_desc-->
 
-    <section>
+    <section class="section1">
         <div class="container">
             <div class="section_inner">
-                <div class="sub01_wrap">
+                <div class="sub01_wrap sub_effect1">
                     <div class="sub01_img mr">
                         <img src="../imges/subimg1.jpg" alt="img">
                     </div>
@@ -430,7 +453,7 @@
                     </div>
                 </div>
 
-                <div class="sub01_wrap">
+                <div class="sub01_wrap sub_effect2">
                     <div class="sub01_img ml">
                         <img src="../imges/subimg2.jpg" alt="img">
                     </div>
@@ -444,7 +467,7 @@
                     </div>
                 </div>
 
-                <div class="sub01_wrap">
+                <div class="sub01_wrap sub_effect3">
                     <div class="sub01_img mr">
                         <img src="../imges/subimg3.jpg" alt="img">
                     </div>
@@ -459,7 +482,7 @@
                     </div>
                 </div>
 
-                <div class="sub01_wrap">
+                <div class="sub01_wrap sub_effect4">
                     <div class="sub01_img ml">
                         <img src="../imges/subimg4.jpg" alt="img">
                     </div>
