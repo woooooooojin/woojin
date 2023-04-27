@@ -85,6 +85,15 @@
             })
 
 
+            $(window).scroll(function(){
+                if($(window).scrollTop() >= $('.section4').offset().top ){
+                    $('.sns_box.box01').fadeIn(500);
+                    $('.sns_box.box02').delay(300).fadeIn(500);
+                    $('.sns_box.box03').delay(600).fadeIn(500);
+                    $('.sns_box.box04').delay(900).fadeIn(500);
+                }
+            })
+
 
 
 
@@ -931,7 +940,7 @@
             <div class="section5_wrap">
 
                 <div class="sns_box_wrap">
-                    <div class="sns_box">
+                    <div class="sns_box box01">
                         <div class="img_wrap">
                             <a href="#!"><img src="./imges/snsimg01.jpg" alt=""></a>
                         </div>
@@ -941,7 +950,7 @@
                         </div>
                     </div>
 
-                    <div class="sns_box">
+                    <div class="sns_box box02">
                         <div class="img_wrap">
                             <a href="#!"><img src="./imges/snsimg02.jpg" alt=""></a>
                         </div>
@@ -950,7 +959,7 @@
                         </div>
                     </div>
 
-                    <div class="sns_box">
+                    <div class="sns_box box03">
                         <div class="img_wrap">
                             <a href="#!"><img src="./imges/snsimg03.jpg" alt=""></a>
                         </div>
@@ -959,7 +968,7 @@
                         </div>
                     </div>
 
-                    <div class="sns_box">
+                    <div class="sns_box box04">
                         <div class="img_wrap">
                             <a href="#!"><img src="./imges/snsimg04.jpg" alt=""></a>
                         </div>

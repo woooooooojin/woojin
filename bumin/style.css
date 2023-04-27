@@ -1800,7 +1800,9 @@ main {
     border-radius: 10px;
     margin-bottom: 50px;
     position: relative;
+    display: none;
 }
+
 
 .sns_box:nth-child(2) {
     margin-right: 0;
