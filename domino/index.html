@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    
+
     <script>
         //jquery
         $(function () {
@@ -67,55 +67,55 @@
             }) //top button event
 
 
-          
 
-        
-            $('.close_btn2 p').click(function(){
-                $('.popup2').css('display','none');
+
+
+            $('.close_btn2 p').click(function () {
+                $('.popup2').css('display', 'none');
             })
 
-            $('.main_logo').click(function(){
-                $(location).attr('href','./index.html')
+            $('.main_logo').click(function () {
+                $(location).attr('href', './index.html')
             })
 
-            $(window).scroll(function(){
+            $(window).scroll(function () {
 
-                if($(window).scrollTop() >= $('.section4').offset().top){
+                if ($(window).scrollTop() >= $('.section4').offset().top) {
                     $('.recommand_right div').stop().animate({
-                        opacity:1,
-                    },300)
+                        opacity: 1,
+                    }, 300)
                 }
             })
 
-            $(window).scroll(function(){
+            $(window).scroll(function () {
 
-                if($(window).scrollTop() >= $('.recommand').offset().top){
-                  $('.sbox01').animate({
-                    opacity : 1,
-                  },500)
-                  $('.sbox02').delay(300).animate({
-                    opacity : 1,
-                  },500)
-                  $('.sbox03').delay(500).animate({
-                    opacity : 1,
-                  },500)
-                  $('.sbox04').delay(700).animate({
-                    opacity : 1,
-                  },500)
-                  $('.sbox05').delay(900).animate({
-                    opacity : 1,
-                  },500)
-                  $('.sbox06').delay(1100).animate({
-                    opacity : 1,
-                  },500)
-                  $('.sbox07').delay(1300).animate({
-                    opacity : 1,
-                  },500)
-                  $('.sbox08').delay(1500).animate({
-                    opacity : 1,
-                  },500)
+                if ($(window).scrollTop() >= $('.recommand').offset().top) {
+                    $('.sbox01').animate({
+                        opacity: 1,
+                    }, 500)
+                    $('.sbox02').delay(300).animate({
+                        opacity: 1,
+                    }, 500)
+                    $('.sbox03').delay(500).animate({
+                        opacity: 1,
+                    }, 500)
+                    $('.sbox04').delay(700).animate({
+                        opacity: 1,
+                    }, 500)
+                    $('.sbox05').delay(900).animate({
+                        opacity: 1,
+                    }, 500)
+                    $('.sbox06').delay(1100).animate({
+                        opacity: 1,
+                    }, 500)
+                    $('.sbox07').delay(1300).animate({
+                        opacity: 1,
+                    }, 500)
+                    $('.sbox08').delay(1500).animate({
+                        opacity: 1,
+                    }, 500)
 
-                  
+
                 }
             })
 
@@ -347,8 +347,9 @@
     </section>
 
     <section class="section2">
+        <h4>NEW</h4>
         <div class="container">
-            <h4>NEW</h4>
+
             <div class="section2_wrap">
                 <div class="new_box">
                     <div class="img_wrap">
@@ -356,7 +357,7 @@
                         <div class="newicon">
                             <img src="./imges/newicon.png" alt="img">
                         </div>
-                        
+
                     </div>
                     <div class="new_desc">
                         <div class="desc_wrap">
@@ -483,9 +484,20 @@
         <!--container end-->
     </section>
 
+
+    <div class="background_fix">
+        <div class="background_img">
+           
+        </div>
+    </div>
+
+
+
+
     <section class="section3">
+        <h4>BEST SELLER</h4>
         <div class="container">
-            <h4>BEST SELLER</h4>
+
             <div class="section3_wrap">
 
                 <div class="best_seller">
@@ -700,7 +712,7 @@
         <div class="section4_tit">
 
             <h4>주목해야 할 이벤트</h4>
-            <section class="loop_infinite">
+            <div class="loop_infinite">
 
                 <div class="loop_container">
                     <div class="swiper my-slider" dir="ltr">
@@ -725,7 +737,7 @@
                 </div>
                 <!--loop container end-->
 
-            </section>
+            </div>
 
 
         </div>
@@ -753,7 +765,7 @@
                         <input type="search" placeholder="먹고싶은 피자를 검색하세요 !">
                         <i class="fas fa-search"></i>
                     </div>
-                
+
 
                 </div>
                 <!--recommand left end-->
@@ -783,11 +795,12 @@
                         <a href="#!"><i class="fas fa-wine-bottle"></i> 음료</a>
                     </div>
 
-                    
+
                 </div>
                 <!--recommand right-->
 
-            </div><!--recommand wrap end-->
+            </div>
+            <!--recommand wrap end-->
 
         </div>
         <!--container end-->
@@ -800,8 +813,9 @@
 
 
     <section class="section5">
+        <h4>도미노 스토리</h4>
         <div class="container">
-            <h4>도미노 스토리</h4>
+
             <div class="section5_wrap">
                 <div class="sns_box sbox01">
                     <div class="sns_img">
@@ -937,10 +951,11 @@
 
 
     <section class="section6">
+        <div class="section6_tit">
+            <h4>도미노 CF</h4>
+        </div>
         <div class="container">
-            <div class="section6_tit">
-                <h4>도미노 CF</h4>
-            </div>
+
             <!--tit end-->
 
 
@@ -1086,7 +1101,8 @@
             <div class="list_award_wrap">
                 <div class="award_box">
                     <div class="award_img">
-                       <a href="https://gorisanson.github.io/pikachu-volleyball/ko/"><img src="./imges/list_awards.png" alt="img"></a> 
+                        <a href="https://gorisanson.github.io/pikachu-volleyball/ko/"><img src="./imges/list_awards.png"
+                                alt="img"></a>
                     </div>
                     <p>식품안전<br /> 경영시스템 인증</p>
                 </div>
