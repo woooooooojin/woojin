@@ -127,12 +127,15 @@ header{
 .dropbox_01{
     width: 20%;
     border-right: 1px solid #ccc;
+    padding-left: 20px;
+    padding-top: 10px;
 }
 .dropbox_01 .menu_list{
     width: 100%;
 }
 .dropbox_01 .menu_list li{
     height: 20px;
+    margin-bottom: 10px;
 }
 .dropbox_01 .menu_list li a{
     display: block;
@@ -141,8 +144,16 @@ header{
 .menu_list li:nth-child(1) a{
     font-size: 18px;
     font-weight: bold;
+    
 }
-.dropbox_01 .menu_list li{}
+.menu_list li:nth-child(1){
+    margin-bottom: 25px;
+}
+.dropbox_01 .menu_list .tit{
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
 
 
 
