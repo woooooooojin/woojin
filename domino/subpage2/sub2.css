@@ -518,7 +518,7 @@ nav {
 .menu_wrap h4 {
     text-align: center;
     font-size: 28px;
-    margin-top: 20px;
+    margin-top: 80px;
 
 }
 
@@ -535,7 +535,7 @@ nav {
     cursor: pointer;
 
 }
-.menu_box:hover{
+.menu_box{
    
 }
 
