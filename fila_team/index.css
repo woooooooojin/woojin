@@ -6,7 +6,14 @@
 
 a {
     text-decoration: none;
+    color: black;
 }
+
+.container {
+    width: 1680px;
+    margin: 0 auto;
+}
+li{list-style: none;}
 
 
 
@@ -150,14 +157,78 @@ a {
 
 /********rank*******/
 
-.rank_section{
+.rank_section {
     width: 100%;
+    margin-top: 100px;
 
 }
-.swiper_3{
-  width: 1000px;
-  height: 500px;
+.rank_section  h1{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 36px;
 }
+
+.container_rank {
+    overflow: hidden;
+}
+
+.swiper_rank {
+    width: 1500px;
+    height: 650px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 50px;
+}
+
+.swiper_rank .swiper-slide {
+    width: 500px;
+    height: 650px;
+    padding: 0 10px;
+    opacity: 0.3;
+    transform: scale(0.8);
+}
+
+.swiper_rank .swiper-slide.swiper-slide-active {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.swiper_rank .swiper-slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.rank_text{
+    width: 450px;
+    height: 550px;
+    background-color: lightsteelblue;
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    
+    
+}
+.rank_text ol{}
+.rank_text ol li{
+    height: 75px;
+    border-bottom: 1px solid black;
+}
+.rank_text ol li:first-child{
+    height: 100px;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 100px;
+    border-bottom: 2px solid black;
+}
+.rank_text ol li a{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
 
 /********countdown*********/
 .countdown {
@@ -199,6 +270,7 @@ a {
 .section2 {
     width: 100%;
     margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 .section2 h2 {
@@ -226,7 +298,7 @@ a {
 .swiper_2 .swiper-slide {
     width: 1000px;
     height: 600px;
-    display: flex;
+    /* display: flex; */
     background: #002053;
     opacity: 0.3;
     align-items: center;
@@ -243,7 +315,7 @@ a {
 
 .swiper_2 .swiper-slide.swiper-slide-active {
     transform: scale(1);
-    background: royalblue;
+    background: lightsteelblue;
     opacity: 1;
 }
 
@@ -276,6 +348,24 @@ a {
     font-size: 50px;
     border: 0;
 }
+.swiper_2 .swiper-slide .new_wrap{
+    display: flex;
+}
+.swiper_2 .swiper-slide .new_wrap .new_img{
+    width: 60%;
+    font-size: 0;
+}
+.swiper_2 .swiper-slide .new_wrap .new_img img{
+    width: 100%;
+    height: auto;
+}
+
+.swiper_2 .swiper-slide .new_wrap .new_text{
+    width: calc(100% - 60% - 20px);
+    margin-left: 20px;
+}
+.swiper_2 .swiper-slide .new_wrap .new_text h4{}
+.swiper_2 .swiper-slide .new_wrap .new_text p{}
 
 
 /************section 3***********/
@@ -295,6 +385,6 @@ a {
 .section3 .background_wrap p {
     text-align: center;
     font-size: 50px;
-    color:#fff;
+    color: #fff;
     line-height: 700px;
 }
