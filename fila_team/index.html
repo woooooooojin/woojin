@@ -16,8 +16,6 @@
 
 
     <script>
-
-
         let countDownDate = new Date('Aug 25, 2023 15:37:25').getTime();
 
         let x = setInterval(function () {
@@ -30,7 +28,8 @@
             let minutes = Math.floor((timeOut % (1000 * 60 * 60)) / (1000 * 60));
             let seconds = Math.floor((timeOut % (1000 * 60)) / 1000);
 
-            document.getElementById('count_time').innerHTML = days + ' 일 ' + hours + ' 시간 ' + minutes + ' 분 ' + seconds + ' 초';
+            document.getElementById('count_time').innerHTML = days + ' 일 ' + hours + ' 시간 ' + minutes + ' 분 ' +
+                seconds + ' 초';
 
 
             if (timeOut < 0) {
@@ -38,10 +37,6 @@
                 document.getElementById('count_time').innerHTML = '종료된 이벤트 입니다.';
             }
         }, 1000); //countdown function
-
-        
-
-
     </script>
 
 
@@ -93,6 +88,12 @@
     </section>
 
 
+
+
+
+
+
+
     <div class="countdown">
         <div class="container">
             <h1>런칭캘린더</h1>
@@ -109,6 +110,44 @@
 
         </div>
     </div>
+
+    <section class="section3">
+
+        <div class="background_wrap">
+            <p>background fixed</p>
+        </div>
+
+    </section>
+
+
+
+
+    <!-- <section class="rank_section">
+        <div class="container">
+            <div class="swiper_3">
+
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+
+                </div>
+
+                <div class="swiper-pagination"></div>
+
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+
+                <div class="swiper-scrollbar"></div>
+            </div>
+        </div>
+    </section> -->
+
+
+
 
 
     <section class="section2">
@@ -146,6 +185,9 @@
         <!--container swiper-->
 
     </section>
+
+
+
 
 
 
@@ -200,6 +242,10 @@
         });
 
 
+
+
+
+
         let pagingSwiper = new Swiper(".swiper", {
             loop: true,
             pagination: {
@@ -217,6 +263,10 @@
         });
 
         swiper_visual.controller.control = pagingSwiper; //controller API
+    </script>
+
+    <script>
+        
     </script>
 
 
