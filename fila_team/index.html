@@ -5,39 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>swiper</title>
+    <title>FILA</title>
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css"> <!--css-->
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-    <script defer src="./js/main.js"></script>
+    <script src="./js/countdown.js"></script><!--countdown js-->
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /><!--fontawesome-->
 
 
-    <script>
-        let countDownDate = new Date('Aug 25, 2023 15:37:25').getTime();
-
-        let x = setInterval(function () {
-
-            let now = new Date().getTime();
-            let timeOut = countDownDate - now;
-
-            let days = Math.floor(timeOut / (1000 * 60 * 60 * 24));
-            let hours = Math.floor((timeOut % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            let minutes = Math.floor((timeOut % (1000 * 60 * 60)) / (1000 * 60));
-            let seconds = Math.floor((timeOut % (1000 * 60)) / 1000);
-
-            document.getElementById('count_time').innerHTML = days + ' 일 ' + hours + ' 시간 ' + minutes + ' 분 ' +
-                seconds + ' 초';
-
-
-            if (timeOut < 0) {
-                clearInterval(x);
-                document.getElementById('count_time').innerHTML = '종료된 이벤트 입니다.';
-            }
-        }, 1000); //countdown function
-    </script>
+   
 
 
 
@@ -46,6 +27,49 @@
 </head>
 
 <body>
+
+
+    <header>
+        <div class="container">
+            <div class="header_wrap">
+
+                <div class="head_logo">
+                    <div class="imgwrap">
+                        <img src="./img/00. LOGO/01(3).png" alt="logo">
+                    </div>
+
+                </div>
+                <!--head logo-->
+
+                <div class="head_lnb">
+                    <ul>
+                        <li class="lnb_women"><a href="#!">WOMEN</a></li>
+                        <li class="lnb_men"><a href="#!">MEN</a></li>
+                        <li class="lnb_kids"><a href="#!">KIDS</a></li>
+                        <li class="lnb_brand"><a href="#!">BRAND</a></li>
+                    </ul>
+                </div>
+                <!--head lnb-->
+
+                <div class="head_gnb">
+                    <ul>
+                        <li><a href="#!"><i class="fas fa-map-marker-alt"></i></a></li>
+                        <li><a href="#!"><i class="fas fa-search"></i></li>
+                        <li><a href="#!"><i class="fas fa-user-alt"></i></li>
+                        <li>
+                            <a href="#!"><i class="fas fa-shopping-basket"></i>
+                            <span class="count">0</span>
+                        </li>
+                    </ul>
+                </div>
+                <!--head gnb-->
+
+            </div><!-- hedaer wrap-->
+        </div>
+        <!--container end-->
+    </header>
+
+
 
     <section class="visual_main">
         <div class="swiper">
@@ -183,7 +207,8 @@
                                     <h4>tit</h4>
                                     <p>textarea</p>
                                 </div>
-                            </div><!--new wrap-->
+                            </div>
+                            <!--new wrap-->
                         </div>
 
                         <div class="swiper-slide">신제품 2</div>
