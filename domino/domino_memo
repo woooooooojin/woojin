@@ -151,3 +151,406 @@
 .event_box:hover .evnt_img .evnt_desc a:last-child {
     top: 60%;
 } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+
+    <div class="section3_wrap">
+
+        <div class="best_seller">
+            <div class="best_box">
+                <div class="best_img_wrap">
+                    <img src="./imges/best1.jpg" alt="best1">
+                </div>
+                <div class="best_desc">
+                    <h4>아보카도 새우</h4>
+                    <div class="best_price_wrap">
+                        <p class="best_price"><span>L</span> 17,900원 ~</p>
+                        <p class="best_price2"><span>M</span> 15,900원 ~</p>
+                    </div>
+                    <div class="cart_wrap">
+                        <div class="cart"><i class="fas fa-shopping-cart"></i></div>
+                        <div class="heart"><i class="far fa-heart"></i></div>
+                    </div>
+                    <!--cart wrap end-->
+                </div>
+
+
+
+
+
+            </div>
+            <!--best box-->
+
+            <div class="best_box">
+                <div class="best_img_wrap">
+                    <img src="./imges/best2.jpg" alt="best1">
+                </div>
+                <div class="best_desc">
+                    <h4>크랩&립 하우스</h4>
+                    <div class="best_price_wrap">
+                        <p class="best_price"><span>L</span> 17,900원 ~</p>
+                        <p class="best_price2"><span>M</span> 15,900원 ~</p>
+                    </div>
+                    <div class="cart_wrap">
+                        <div class="cart"><i class="fas fa-shopping-cart"></i></div>
+                        <div class="heart"><i class="far fa-heart"></i></div>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <!--best box-->
+
+            <div class="best_box">
+                <div class="best_img_wrap">
+                    <img src="./imges/best3.jpg" alt="best1">
+                </div>
+                <div class="best_desc">
+                    <h4>와일드 웨스트 스테이크</h4>
+                    <div class="best_price_wrap">
+                        <p class="best_price"><span>L</span> 17,900원 ~</p>
+                        <p class="best_price2"><span>M</span> 15,900원 ~</p>
+                    </div>
+                    <div class="cart_wrap">
+                        <div class="cart"><i class="fas fa-shopping-cart"></i></div>
+                        <div class="heart"><i class="far fa-heart"></i></div>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <!--best box-->
+
+            <div class="best_box">
+                <div class="best_img_wrap">
+                    <img src="./imges/best4.jpg" alt="best1">
+                </div>
+                <div class="best_desc">
+                    <h4>블랙타이거 슈림프</h4>
+                    <div class="best_price_wrap">
+                        <p class="best_price"><span>L</span> 17,900원 ~</p>
+                        <p class="best_price2"><span>M</span> 15,900원 ~</p>
+                    </div>
+                    <div class="cart_wrap">
+                        <div class="cart"><i class="fas fa-shopping-cart"></i></div>
+                        <div class="heart"><i class="far fa-heart"></i></div>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <!--best box-->
+
+            <div class="best_box">
+                <div class="best_img_wrap">
+                    <img src="./imges/best5.jpg" alt="best1">
+                </div>
+                <div class="best_desc">
+                    <h4>블록버스터4</h4>
+                    <div class="best_price_wrap">
+                        <p class="best_price"><span>L</span> 17,900원 ~</p>
+                        <p class="best_price2"><span>M</span> 15,900원 ~</p>
+                    </div>
+                    <div class="cart_wrap">
+                        <div class="cart"><i class="fas fa-shopping-cart"></i></div>
+                        <div class="heart"><i class="far fa-heart"></i></div>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <!--best box-->
+
+            <div class="best_box">
+                <div class="best_img_wrap">
+                    <img src="./imges/best6.jpg" alt="best1">
+                </div>
+                <div class="best_desc">
+                    <h4>블랙앵거스 스테이크</h4>
+                    <div class="best_price_wrap">
+                        <p class="best_price"><span>L</span> 17,900원 ~</p>
+                        <p class="best_price2"><span>M</span> 15,900원 ~</p>
+                    </div>
+                    <div class="cart_wrap">
+                        <div class="cart"><i class="fas fa-shopping-cart"></i></div>
+                        <div class="heart"><i class="far fa-heart"></i></div>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <!--best box-->
+
+            <div class="best_box">
+                <div class="best_img_wrap">
+                    <img src="./imges/best7.jpg" alt="best1">
+                </div>
+                <div class="best_desc">
+                    <h4>베스트 콰트로</h4>
+                    <div class="best_price_wrap">
+                        <p class="best_price"><span>L</span> 17,900원 ~</p>
+                        <p class="best_price2"><span>M</span> 15,900원 ~</p>
+                    </div>
+                    <div class="cart_wrap">
+                        <div class="cart"><i class="fas fa-shopping-cart"></i></div>
+                        <div class="heart"><i class="far fa-heart"></i></div>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <!--best box-->
+
+            <div class="best_box">
+                <div class="best_img_wrap">
+                    <img src="./imges/best8.jpg" alt="best1">
+                </div>
+                <div class="best_desc">
+                    <h4>우리 고구마</h4>
+                    <div class="best_price_wrap">
+                        <p class="best_price"><span>L</span> 17,900원 ~</p>
+                        <p class="best_price2"><span>M</span> 15,900원 ~</p>
+                    </div>
+                    <div class="cart_wrap">
+                        <div class="cart"><i class="fas fa-shopping-cart"></i></div>
+                        <div class="heart"><i class="far fa-heart"></i></div>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <!--best box-->
+
+            <div class="best_box">
+                <div class="best_img_wrap">
+                    <img src="./imges/best9.jpg" alt="best1">
+                </div>
+                <div class="best_desc">
+                    <h4>슈퍼슈프림</h4>
+                    <div class="best_price_wrap">
+                        <p class="best_price"><span>L</span> 17,900원 ~</p>
+                        <p class="best_price2"><span>M</span> 15,900원 ~</p>
+                    </div>
+                    <div class="cart_wrap">
+                        <div class="cart"><i class="fas fa-shopping-cart"></i></div>
+                        <div class="heart"><i class="far fa-heart"></i></div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+            <!--best box-->
+
+        </div>
+        <!--slick bestseller-->
+
+
+
+
+    </div>
+</div>
+<!--container end-->
+
+
+/******************section3*********************/
+/* .section3 {
+    width: 100%;
+    margin-top: 200px;
+}
+
+.section3>h4 {
+    font-size: 28px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
+    padding: 5px 0;
+    
+}
+
+.section3 .section3_wrap {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.section3 .section3_wrap .best_seller {
+    width: 100%;
+}
+
+.section3 .section3_wrap .best_box {
+    width: 100%;
+
+}
+
+.section3 .section3_wrap .best_box img {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    transition: .3s;
+
+}
+
+.section3 .section3_wrap .best_box:hover img {
+    animation: best_ani 0.5s linear;
+}
+
+@keyframes best_ani {
+    0% {
+        transform: rotate(0);
+    }
+
+    25% {
+        transform: rotate(3deg);
+    }
+
+    50% {
+        transform: rotate(0);
+    }
+
+    80% {
+        transform: rotate(-3deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+
+}
+
+.section3 .section3_wrap .best_desc {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.section3 .section3_wrap .best_desc h4 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.section3 .section3_wrap .best_desc .best_price_wrap {
+    padding-left: 50px;
+}
+
+.section3 .section3_wrap .best_desc .best_price {
+    float: left;
+    margin-right: 30px;
+
+}
+
+
+.section3 .section3_wrap .best_desc p {
+    font-weight: 600;
+    display: inline-block;
+
+
+}
+
+.section3 .section3_wrap .best_desc p span {
+    color: #ff143c;
+    font-weight: 600;
+}
+
+.section3 .section3_wrap .best_desc .cart_wrap {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+.section3 .section3_wrap .best_desc .cart_wrap .cart {}
+
+.section3 .section3_wrap .best_desc .cart_wrap .cart i {
+    font-size: 25px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.section3 .section3_wrap .best_desc .cart_wrap .cart:hover i {
+    color: #238ece;
+}
+
+
+.section3 .section3_wrap .best_desc .cart_wrap .heart {}
+
+.section3 .section3_wrap .best_desc .cart_wrap .heart i {
+    font-size: 25px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.section3 .section3_wrap .best_desc .cart_wrap .heart:hover i {
+    color: #ff143c;
+}
+
+.best_seller {
+    position: relative;
+}
+
+.best_seller .slick-arrow {
+    position: absolute;
+    top: -30px;
+    right: 0;
+    font-size: 0;
+    visibility: hidden;
+
+}
+
+.best_seller .slick-arrow.slick-next {
+    right: 4px;
+}
+
+.best_seller .slick-arrow.slick-prev {
+    z-index: 10;
+    right: 50px;
+}
+
+.best_seller .slick-arrow.slick-next::after {
+    content: "\f054";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    visibility: visible;
+    font-size: 25px;
+    color: #fff;
+    padding: 5px;
+    background-color: #ff143c;
+}
+
+.best_seller .slick-arrow.slick-prev::after {
+    content: "\f053";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    visibility: visible;
+    font-size: 25px;
+    color: #fff;
+    padding: 5px;
+    background-color: #ff143c;
+} */
