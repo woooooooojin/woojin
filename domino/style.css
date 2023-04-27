@@ -122,7 +122,7 @@ body {
 }
 .popup2 .popup_box2::after{
     content: "?";
-    line-height: 250px;
+    line-height: 350px;
     color: #fff;
     font-size: 100px;
     text-align: center;
@@ -606,7 +606,7 @@ main .main_wrap .delivery {
     margin-right: 20px;
     background-color: #238ece;
     border-radius: 10px;
-    display: none;
+
 
 
 }
@@ -676,7 +676,7 @@ main .main_wrap .togo_order {
     background-color: #f6f7f8;
     border-radius: 10px;
     height: 160px;
-    display: none;
+    
 }
 
 main .main_wrap .togo_order a {
@@ -728,7 +728,7 @@ main .main_wrap .my_order {
     border-radius: 10px;
     margin-right: 20px;
     height: 160px;
-    display: none;
+  
 
 }
 
@@ -795,7 +795,7 @@ main .main_wrap .e_coupon {
     background-color: #f6f7f8;
     border-radius: 10px;
     height: 160px;
-    display: none;
+    
 }
 
 main .main_wrap .e_coupon a {

@@ -1,6 +1,6 @@
 
 
-let countDown = new Date('May 20, 2023 12:00:00').getTime();
+let countDown = new Date('Dec 20, 2023 12:00:00').getTime();
 
 let x = setInterval(function(){
 
