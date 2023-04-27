@@ -213,6 +213,10 @@ header .gnb .gnb_login {
     margin-right: 10px;
 
 }
+header .gnb a{
+    font-size: 14px;
+    font-weight: bold;
+}
 
 header .gnb .gnb_login:hover a {
     color: #238ece;
@@ -228,6 +232,8 @@ header .gnb .gnb_join:hover a {
 
 header .gnb .gnb_language {
     position: relative;
+    font-weight: bold;
+    font-size: 14px;
 }
 
 header .gnb .gnb_language:hover label {
@@ -1116,10 +1122,11 @@ main .main_wrap .e_coupon a p {
     
 }
 .background_img{
-    background: url(./imges/back.jpg) fixed no-repeat;
+    background: url(./imges/back4.jpg) fixed no-repeat;
+    background-size: cover;
     background-position: 50% 50%;
     width: 100%;
-    height: 500px;
+    height: 400px;
     display: block;
     
 }
