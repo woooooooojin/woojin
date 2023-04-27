@@ -88,6 +88,47 @@
                 $(location).attr('href','./index.html')
             })
 
+            $(window).scroll(function(){
+
+                if($(window).scrollTop() >= $('.section4').offset().top){
+                    $('.recommand_right div').stop().animate({
+                        opacity:1,
+                    },300)
+                }
+            })
+
+            $(window).scroll(function(){
+
+                if($(window).scrollTop() >= $('.recommand').offset().top){
+                  $('.sbox01').stop().animate({
+                    opacity : 1,
+                  },500)
+                  $('.sbox02').delay(300).animate({
+                    opacity : 1,
+                  },500)
+                  $('.sbox03').delay(500).animate({
+                    opacity : 1,
+                  },500)
+                  $('.sbox04').delay(700).animate({
+                    opacity : 1,
+                  },500)
+                  $('.sbox05').delay(900).animate({
+                    opacity : 1,
+                  },500)
+                  $('.sbox06').delay(1100).animate({
+                    opacity : 1,
+                  },500)
+                  $('.sbox07').delay(1300).animate({
+                    opacity : 1,
+                  },500)
+                  $('.sbox08').delay(1500).animate({
+                    opacity : 1,
+                  },500)
+
+                  
+                }
+            })
+
 
 
         })
@@ -772,7 +813,7 @@
         <div class="container">
             <h4>도미노 스토리</h4>
             <div class="section5_wrap">
-                <div class="sns_box">
+                <div class="sns_box sbox01">
                     <div class="sns_img">
                         <img src="./imges/blog1.png" alt="img">
                     </div>
@@ -787,7 +828,7 @@
                 </div>
                 <!--snsbox-->
 
-                <div class="sns_box">
+                <div class="sns_box sbox02">
                     <div class="sns_img">
                         <img src="./imges/blog2.png" alt="img">
                     </div>
@@ -804,7 +845,7 @@
                 </div>
                 <!--snsbox-->
 
-                <div class="sns_box">
+                <div class="sns_box sbox03">
                     <div class="sns_img">
                         <img src="./imges/blog3.png" alt="img">
                     </div>
@@ -820,7 +861,7 @@
                 </div>
                 <!--snsbox-->
 
-                <div class="sns_box mr">
+                <div class="sns_box mr sbox04">
                     <div class="sns_img">
                         <img src="./imges/blog4.png" alt="img">
                     </div>
@@ -835,7 +876,7 @@
                 </div>
                 <!--snsbox-->
 
-                <div class="sns_box mt">
+                <div class="sns_box mt sbox05">
                     <div class="sns_img">
                         <img src="./imges/story1.png" alt="img">
                     </div>
@@ -850,7 +891,7 @@
                 </div>
                 <!--snsbox-->
 
-                <div class="sns_box mt">
+                <div class="sns_box mt sbox06">
                     <div class="sns_img">
                         <img src="./imges/story2.png" alt="img">
                     </div>
@@ -865,7 +906,7 @@
                 </div>
                 <!--snsbox-->
 
-                <div class="sns_box mt">
+                <div class="sns_box mt sbox07">
                     <div class="sns_img">
                         <img src="./imges/story3.png" alt="img">
                     </div>
@@ -880,7 +921,7 @@
                 </div>
                 <!--snsbox-->
 
-                <div class="sns_box mr mt">
+                <div class="sns_box mr mt sbox08">
                     <div class="sns_img">
                         <img src="./imges/story4.png" alt="img">
                     </div>
