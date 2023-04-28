@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FILA</title>
+    <script src="./js_2/jquery-3.6.4.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
@@ -237,18 +238,20 @@
 
 
 
-                <div class="rank_text">
-                    <ol>
-                        <li> 랭킹 tit</li>
-                        <li><a href="#!">랭킹1</a></li>
-                        <li><a href="#!">랭킹2</a></li>
-                        <li><a href="#!">랭킹3</a></li>
-                        <li><a href="#!">랭킹4</a></li>
-                        <li><a href="#!">랭킹5</a></li>
-                        <li><a href="#!">랭킹6</a></li>
-                    </ol>
-                </div>
 
+
+            </div>
+
+            <div class="rank_text">
+                <ul>
+                    <li class="on_li"><a href="#!">랭킹1</a></li>
+                    <li><a href="#!">랭킹2</a></li>
+                    <li><a href="#!">랭킹3</a></li>
+                    <li><a href="#!">랭킹4</a></li>
+                    <li><a href="#!">랭킹5</a></li>
+                    <li><a href="#!">랭킹6</a></li>
+                    <li><a href="#!">랭킹7</a></li>
+                </ul>
             </div>
         </div>
     </section>
@@ -434,11 +437,55 @@
             centeredSlides: true,
             // slidesPerView: "auto",
 
+            // on: {
+            //     slideChange: function () {
+            //         let i = $('.swiper_rank .swiper-slide.swiper-slide-active').realIndex;
+
+            //         $('.rank_text li').removeClass('on_li'); 
+            //         $('.rank_text li').eq(i).addClass('on_li'); 
+            //     }
+            // }
+
+
+            on: {
+                slideChange: function () {
+                    $('.rank_text li').removeClass('on_li');
+                    $('.rank_text li').eq(this.realIndex).addClass('on_li');
+
+
+                }
+               
+            }
+
 
 
 
         });
+        $(".rank_text li").on("click", function () {
+                    let rank = $(".rank_text li").index();
+
+                    swiper_rank.eq(this.realIndex).slideTo(rank);
+                });
+
+
+        // $('.rank_text li').click(function () {
+        //     let idx = $(this).index();
+        //     swiper.slideTo(idx, 1000);
+        // })
+
+        // swiper.on('slideChange', function () {
+        // let rankList = $('.rank_text li');
+        //     let i = swiper.activeIndex;
+
+        //     rankList.removeClass('on_li');
+        //     rankList.eq(i).addClass('on_li');
+        // });
+        // rankList.click(function () {
+        //     let idx = $(this).index()
+        //     swiper.slideTo(idx, 1000);
+        // });
     </script>
+
     <!--rank swiper-->
 
 
