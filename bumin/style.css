@@ -781,7 +781,7 @@ main {
 }
 
 .main_wrap .main_search {
-    margin: 0 10px;
+    margin: 0 30px;
     background-color: #67ae3e;
     height: 150px;
     border-radius: 10px 10px 0 0;
@@ -851,7 +851,7 @@ main {
 }
 
 .main_wrap .main_reservation {
-    margin: 0 10px;
+    margin: 0 30px;
     background-color: #f4f3f3;
     height: 150px;
     border: 1px solid #ccc;
@@ -890,7 +890,7 @@ main {
 }
 
 .main_wrap .main_login {
-    margin: 0 10px;
+    margin: 0 30px;
     background-color: #7d6a55;
     height: 150px;
     border-radius: 0px 0px 10px 10px;
@@ -956,7 +956,7 @@ main {
 /****************section**********************/
 .section1 {
     width: 100%;
-    margin-top: 130px;
+    margin-top: 90px;
 }
 
 .section1_wrap {
@@ -1069,7 +1069,7 @@ main {
 
 .section2 {
     width: 100%;
-    margin-top: 140px;
+    margin-top: 110px;
 }
 
 .section2 .section2_wrap {
@@ -1473,7 +1473,7 @@ main {
 /***************section3 전문진료센터*******************/
 .section3 {
     width: 100%;
-    margin-top: 150px;
+    margin-top: 120px;
 }
 
 .section3_wrap {}
@@ -1622,7 +1622,7 @@ main {
 
 /****************section4****************/
 .section4 {
-    margin-top: 150px;
+    margin-top: 100px;
 }
 
 .section4_wrap {}
@@ -1702,7 +1702,7 @@ main {
 
 /*************section5****************/
 .section5 {
-    margin-top: 150px;
+    margin-top: 100px;
 }
 
 .section5_wrap {
