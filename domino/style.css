@@ -1062,7 +1062,6 @@ main .main_wrap .e_coupon a p {
 
 .new_box .img_wrap:hover .newicon img {
     opacity: 1;
-    transform: rotate(20deg);
 }
 
 .newicon {
