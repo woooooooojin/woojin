@@ -47,7 +47,7 @@
                 e.preventDefault();
 
                 $('html, body').stop().animate({
-                    scrollTop: 4000,
+                    scrollTop: $(document).height(),
                 }, 500)
             }) //bottom btn
 
@@ -71,6 +71,25 @@
                 }
 
             })
+
+            $('.foot_insta').click(function(){
+                $(location).attr('href','https://www.instagram.com/bumin_hospital/')
+            })
+
+            $('.foot_face').click(function(){
+                $(location).attr('href','https://www.facebook.com/buminhospital')
+
+            })
+
+            $('.foot_youtube').click(function(){
+                $(location).attr('href','https://www.youtube.com/channel/UCTXUOcXH33AxRSMInyVLriA')
+            })
+
+            $('.foot_blog').click(function(){
+                $(location).attr('href','https://post.naver.com/buminseoul?isHome=1')
+            })
+
+            
 
 
 
@@ -592,10 +611,10 @@
 
                 <div class="foot_sns">
                     <ul>
-                        <li><a href="#!"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="#!"><i class="fab fa-facebook-square"></i></a></li>
-                        <li><a href="#!"><i class="fab fa-youtube"></i></a></li>
-                        <li><a href="#!"><i class="fas fa-blog"></i></a></li>
+                        <li><a href="#!"><i class="fab fa-instagram foot_insta"></i></a></li>
+                        <li><a href="#!"><i class="fab fa-facebook-square foot_face"></i></a></li>
+                        <li><a href="#!"><i class="fab fa-youtube foot_youtube"></i></a></li>
+                        <li><a href="#!"><i class="fas fa-blog foot_blog"></i></a></li>
                     </ul>
                 </div>
 
