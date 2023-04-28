@@ -639,6 +639,11 @@ nav {
     line-height: 40px;
     cursor: pointer;
     background-color: #eee;
+    transition: .3s;
+    
+}
+.submit_btn:hover{
+    box-shadow: 0 0 5px gray;
 }
 
 .submit_btn a {
