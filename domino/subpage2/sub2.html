@@ -45,6 +45,18 @@
                 $(location).attr('href','../index.html')
             })
 
+            $('.moreclick .more_open').click(function () {
+                $('.more_list2').slideDown(300);
+                $('.more_open').css('display', 'none');
+                $('.more_close').css('display', 'block');
+
+            })
+            $('.moreclick .more_close').click(function () {
+                $('.more_list2').slideUp(300);
+                $('.more_open').css('display', 'block');
+                $('.more_close').css('display', 'none');
+
+            })
             
 
 
@@ -101,46 +113,21 @@
                     <li><a href="#!">이벤트/제휴</a></li>
                     <li><a href="#!">매장검색</a></li>
                     <li><a href="#!">가맹점 모집</a></li>
-                    <li>
-                        <input type="checkbox" id="more_chk">
-                        <label for="more_chk">더보기 <i class="fas fa-chevron-down"></i></label>
-                        <div class="more_list">
-                            <div class="more_list_wrap">
-                                <div class="more_box">
-                                    <a href="#!">도미노 서비스</a>
-                                    <ul>
-                                        <li><a href="#!">매니아 혜택</a></li>
-                                        <li><a href="#!">도미노 모멘트</a></li>
-                                        <li><a href="#!">퀵오더</a></li>
-                                        <li><a href="#!">단체주문 서비스</a></li>
-                                    </ul>
+                    <li class="moreclick">
+                        <div class="more_wrap">
+                            <div class="more_open">
+                                <div class="spanwrap">
+                                    <span class="line1"></span>
+                                    <span class="line2"></span>
+                                    <span class="line3"></span>
                                 </div>
 
-                                <div class="more_box">
-                                    <a href="#!">고객센터</a>
-                                    <ul>
-                                        <li><a href="#!">자주하는 질문</a></li>
-                                        <li><a href="#!">문의하기</a></li>
-                                        <li><a href="#!">칭찬/건의하기</a></li>
-                                        <li><a href="#!">공지사항</a></li>
-
-                                    </ul>
-                                </div>
-
-                                <div class="more_box">
-                                    <a href="#!">회사소개</a>
-                                    <ul>
-                                        <li><a href="#!">한국도미노피자</a></li>
-                                        <li><a href="#!">광고갤러리</a></li>
-                                        <li><a href="#!">사회공헌활동</a></li>
-                                        <li><a href="#!">가맹점모집</a></li>
-                                        <li><a href="#!">인재채용</a></li>
-                                    </ul>
-                                </div>
                             </div>
-                            <!--more list wrap end-->
+                            <div class="more_close">
+                                <i class="fas fa-times"></i>
+                            </div>
                         </div>
-                        <!--more_list end-->
+                        <!--more wrap end-->
 
                     </li>
                 </ul>
@@ -159,6 +146,43 @@
             </div>
         </div>
         <!--container end-->
+        <div class="more_list2">
+            <div class="more_list2_wrap">
+                <div class="more_box">
+                    <a href="#!">도미노 서비스</a>
+                    <ul>
+                        <li><a href="#!">매니아 혜택</a></li>
+                        <li><a href="#!">도미노 모멘트</a></li>
+                        <li><a href="#!">퀵오더</a></li>
+                        <li><a href="#!">단체주문 서비스</a></li>
+                    </ul>
+                </div>
+
+                <div class="more_box">
+                    <a href="#!">고객센터</a>
+                    <ul>
+                        <li><a href="#!">자주하는 질문</a></li>
+                        <li><a href="#!">문의하기</a></li>
+                        <li><a href="#!">칭찬/건의하기</a></li>
+                        <li><a href="#!">공지사항</a></li>
+
+                    </ul>
+                </div>
+
+                <div class="more_box">
+                    <a href="#!">회사소개</a>
+                    <ul>
+                        <li><a href="#!">한국도미노피자</a></li>
+                        <li><a href="#!">광고갤러리</a></li>
+                        <li><a href="#!">사회공헌활동</a></li>
+                        <li><a href="#!">가맹점모집</a></li>
+                        <li><a href="#!">인재채용</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--more list wrap end-->
+        </div>
+        <!--more_list end-->
     </nav>
 
     <div class="sub_tit">

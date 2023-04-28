@@ -496,6 +496,7 @@ nav {
     background-color: #fff;  
     text-align: center;
     display: none;
+    border-bottom: 1px solid #ccc;
 }
 .more_list2_wrap{
     display: flex;
@@ -1657,17 +1658,7 @@ input::-webkit-search-cancel-button {
 
 }
 
-/* .section5_wrap .sns_box .sns_desc {
-    border: 1px solid #ccc;
-    cursor: pointer;
-    height: 140px;
-}
 
-.section5_wrap .sns_box .sns_desc p {
-    padding: 10px;
-    font-size: 14px;
-
-} */
 
 
 

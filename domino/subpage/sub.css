@@ -292,94 +292,105 @@ nav {
     width: 50%;
 }
 
-/**********더보기메뉴***********/
-#more_chk {
+
+
+/*********morelist2***********/
+.more_list2 {
+    width: 100%;
+    height: 250px;
+    background-color: #fff;  
+    text-align: center;
     display: none;
+    border-bottom: 1px solid #ccc;
 }
-
-#more_chk:checked~label i {
-    transform: rotate(180deg);
+.more_list2_wrap{
+    display: flex;
+    justify-content: space-around;
 }
-
-#more_chk~label i {
-    transform: rotate(0deg);
+.more_list2 .more_box{
+    margin-top: 20px;
+    width: 33.3333%;
+    border-right: 1px solid #ccc;
 }
-
-#more_chk:checked~.more_list {
-    height: 300px;
-}
-
-/* #more_chk ~ .more_list{display: none;} */
-.lnb_wrap ul li:last-child label {
+.more_list2 .more_box:last-child{border: 0;}
+.more_list2 .more_box>a{
+    font-size: 20px;
+    font-weight: bold;
     display: block;
+    margin-bottom: 20px;
+    transition: .3s;
+
+}
+.more_list2 .more_box>a:hover{
+    color: #ff143c;
+}
+.more_list2 .more_box li{
+    margin-bottom: 10px;
+}
+.more_list2 .more_box li a{
+    color: #888;
+    transition: .3s;
+}
+.more_list2 .more_box li:hover a{
+    color: #238ece;
+}
+
+.more_wrap{
+    display: flex;
+}
+.more_open{
     width: 100%;
     color: #fff;
     line-height: 50px;
-}
-
-.lnb_wrap ul li:last-child:hover label {
-    color: #FFF;
-}
-
-.lnb_wrap ul li:last-child i {
+    display: block;
     transition: .3s;
+    cursor: pointer;
 }
-
-.more_list {
-    width: 100%;
-    height: 0px;
-    overflow: hidden;
-    transition: .3s;
-    position: absolute;
-    left: 0;
-    top: 50px;
+.more_open span{
+    display: block;
+    width: 35px;
+    height: 3px;
     background-color: #fff;
-    z-index: 999;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    transition: .3s;
+    
+    
 }
-
-.container.navcont {
+.more_open:hover .line1{
+  
+}
+.more_open:hover .line2{
+   
+}
+.more_open .line3{
+   width: 15px;
+   position: absolute;
+   right: 73.7px;
+   
+}
+.more_open:hover .line3{
+    width: 35px;
+}
+.spanwrap{
+    margin-top: 10px;
     position: relative;
 }
-
-.more_list .more_list_wrap {
-    display: flex;
-}
-
-.more_list .more_box {
-    width: 33.3333%;
-}
-
-.more_list .more_box ul {
-    display: flex;
-    flex-direction: column;
-
-}
-
-.more_list .more_box li {
+.more_close{
     width: 100%;
-    font-size: 15px;
-}
-
-.more_list .more_box li a {
+    color: #fff;
+    line-height: 50px;
+    display: none;
     transition: .3s;
-    color: black;
-
+    cursor: pointer;
 }
-
-.more_list .more_box li:hover a {
-    color: #238ece;
-    font-size: 16px;
-
+.more_close i{
+    font-size: 30px;
+    line-height: 50px;
+    transition: .3s;
 }
-
-.more_list .more_box>a {
-    margin-bottom: 15px;
-    font-size: 18px;
-    font-weight: 550;
-}
-
-.more_list .more_box>a:hover {
-    color: #238ece;
+.more_close:hover i{
+    transform: rotate(90deg);
 }
 
 
