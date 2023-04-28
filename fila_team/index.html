@@ -227,9 +227,9 @@
                     <div class="swiper-slide"><img src="./img/01. 메인/05. 커뮤니티/02.jpg" alt=""></div>
                     <div class="swiper-slide"><img src="./img/01. 메인/05. 커뮤니티/03.jpg" alt=""></div>
                     <div class="swiper-slide"><img src="./img/01. 메인/05. 커뮤니티/04.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="./img/01. 메인/05. 커뮤니티/01.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="./img/01. 메인/05. 커뮤니티/05.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="./img/01. 메인/05. 커뮤니티/04.jpg" alt=""></div>
                     <div class="swiper-slide"><img src="./img/01. 메인/05. 커뮤니티/03.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="./img/01. 메인/05. 커뮤니티/02.jpg" alt=""></div>
 
 
                 </div>
@@ -437,15 +437,6 @@
             centeredSlides: true,
             // slidesPerView: "auto",
 
-            // on: {
-            //     slideChange: function () {
-            //         let i = $('.swiper_rank .swiper-slide.swiper-slide-active').realIndex;
-
-            //         $('.rank_text li').removeClass('on_li'); 
-            //         $('.rank_text li').eq(i).addClass('on_li'); 
-            //     }
-            // }
-
 
             on: {
                 slideChange: function () {
@@ -454,36 +445,43 @@
 
 
                 }
-               
+
             }
 
 
 
 
         });
-        $(".rank_text li").on("click", function () {
-                    let rank = $(".rank_text li").index();
+        let rankText = $('.rank_text li');
+        let swiperIdx = $('.swiper_rank .swiper-slide .swiper-slide-active');
 
-                    swiper_rank.eq(this.realIndex).slideTo(rank);
-                });
-
-
-        // $('.rank_text li').click(function () {
+        // rankText.click(function () {
         //     let idx = $(this).index();
-        //     swiper.slideTo(idx, 1000);
+        //     swiper_rank.slideTo(idx + 1 ,1000,false);
+            
+        // }); // index 값 찾기
+
+        // $('.rank_text li:first').click(function(){
+        //     swiper_rank.slideTo(1);
         // })
-
-        // swiper.on('slideChange', function () {
-        // let rankList = $('.rank_text li');
-        //     let i = swiper.activeIndex;
-
-        //     rankList.removeClass('on_li');
-        //     rankList.eq(i).addClass('on_li');
-        // });
-        // rankList.click(function () {
-        //     let idx = $(this).index()
-        //     swiper.slideTo(idx, 1000);
-        // });
+        // $('.rank_text li:nth-child(2)').click(function(){
+        //     swiper_rank.slideTo(2);
+        // })
+        // $('.rank_text li:nth-child(3)').click(function(){
+        //     swiper_rank.slideTo(3);
+        // })
+        // $('.rank_text li:nth-child(4)').click(function(){
+        //     swiper_rank.slideTo(4);
+        // })
+        // $('.rank_text li:nth-child(5)').click(function(){
+        //     swiper_rank.slideTo(5);
+        // })
+        // $('.rank_text li:nth-child(6)').click(function(){
+        //     swiper_rank.slideTo(6);
+        // })
+        // $('.rank_text li:nth-child(7)').click(function(){
+        //     swiper_rank.slideTo(7);
+        // })
     </script>
 
     <!--rank swiper-->

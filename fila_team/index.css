@@ -23,6 +23,7 @@ header{
     top: 0;
     z-index: 10;
     padding-top: 10px;
+    height: 55px;
 }
 
 .header_wrap{
@@ -182,6 +183,7 @@ header{
     top: auto;
     bottom: 94px;
     left: 60px;
+    background-color: #fff;
 }
 
 .swiper-slide {
@@ -230,7 +232,7 @@ header{
 }
 
 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
-    background-color: #fff;
+    background-color: #002053;
 }
 
 .swiper-button-prev {
