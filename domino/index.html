@@ -314,10 +314,23 @@
                         <img src="./imges/visual_main03.jpg" alt="img">
                     </div>
                 </div>
+
+                <div class="visual_control">
+                    <div class="play">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <div class="stop">
+                        <i class="fas fa-pause"></i>
+                    </div>
+                </div>
+
             </div>
+            <!--wrapping-->
 
         </div>
+        <!--container end-->
     </div>
+    <!--visualmain end-->
 
     <main>
         <div class="container">
@@ -1334,11 +1347,18 @@
         $(document).ready(function () {
             $('.visual').slick({
                 dots: true,
-                autoplay: true, // setting-name: setting-value
+                autoplay: true,
+                speed:500,
+            });
+            $('.play').click(function () {
+                $('.visual').slick('slickPlay');
+            });
+            $('.stop').click(function () {
+                $('.visual').slick('slickPause');
             });
         });
     </script>
-    <script>
+    <!-- <script>
         $(document).ready(function () {
             $('.best_seller').slick({
                 slidesToShow: 4,
@@ -1346,7 +1366,7 @@
                 autoplay: true, // setting-name: setting-value
             });
         });
-    </script>
+    </script> -->
 
     <script>
         const swiper = new Swiper('.my-slider', {
