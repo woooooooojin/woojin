@@ -117,6 +117,7 @@ header{
     top: 55px;
     z-index: 10;
     background-color: #fff;
+    display: none;
 
 }
 .drop_menu_wrap{
