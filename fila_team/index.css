@@ -431,6 +431,7 @@ header{
     border-radius: 10px;
     border-right: 1px solid #ccc;
     margin-top: 10px;
+    cursor: pointer;
 }
 
 .rank_text ul li:first-child{
