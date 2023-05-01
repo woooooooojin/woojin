@@ -119,6 +119,7 @@ header{
     z-index: 100;
     background-color: #fff;
     display: none;
+    padding: 20px;
 
 }
 .drop_menu_wrap{
@@ -267,8 +268,8 @@ header{
 }
 
 .swiper-slide .visual_tit a:hover {
-    background-color: royalblue;
-    box-shadow: 0 0 10px black;
+    background-color: #002053;
+    box-shadow: 0 0 15px black;
 }
 
 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
@@ -465,7 +466,7 @@ header{
     content: '';
     width: 0%;
     height: 2px;
-    background-color: #ccc;
+    background-color: #002053;
     position: absolute;
     bottom: 0; left: 50%;
     transition: .3s;
@@ -475,7 +476,7 @@ header{
     content: '';
     width: 0%;
     height: 2px;
-    background-color: #ccc;
+    background-color: #002053;
     position: absolute;
     bottom: 0; right: 50%;
     transition: .3s;
