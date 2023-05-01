@@ -505,7 +505,51 @@ header{
     overflow: hidden;
 
 }
-.section2 .new_nab
+.section2 .new_nav_wrap{}
+.section2 .new_nav_wrap ul{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.section2 .new_nav_wrap ul li{
+    width: 150px;
+    height: 50px;
+    border: 1px solid #ccc;
+    margin-right: 20px;
+    line-height: 50px;
+    text-align: center;
+    cursor:pointer;
+    transition: .3s;
+    position: relative;
+   border-radius: 10px;
+}
+.section2 .new_nav_wrap ul li:hover{
+    box-shadow: 0 0 10px #002053;
+}
+.section2 .new_nav_wrap ul li:hover::after{width: 47%;}
+.section2 .new_nav_wrap ul li:hover::before{width: 47%;}
+.section2 .new_nav_wrap ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    display: block;
+    background-color: #002053;
+    position: absolute;
+    bottom: 5px; right: 50%;
+    transition: .3s;
+    
+}
+.section2 .new_nav_wrap ul li::before{
+    content: '';
+    width: 0%;
+    height: 2px;
+    display: block;
+    background-color: #002053;
+    position: absolute;
+    bottom: 5px; left: 50%;
+    transition: .3s;
+}
 
 .my_wrap {
     width: 100%;
