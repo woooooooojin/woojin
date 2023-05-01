@@ -40,7 +40,7 @@
         }
         .myswiper2{
             position: relative;
-            top: 0; left: 0;
+            top: -500px; left: 0;
            
         }
     
@@ -52,10 +52,15 @@
             
             
          }
+       
+
          .myswiper2 .swiper-wrapper{
             display: flex;
             flex-direction: column;
             position: absolute;
+         }
+        .swiper-slide-thumb-active{
+            background-color: #002053;
          }
     </style>
 
@@ -110,10 +115,12 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script>
-        const swiper = new Swiper('.myswiper2', {
+        const swiper_thumnail = new Swiper('.myswiper2', {
             // Optional parameters
             direction: 'horizontal',
             loop: true,
+            
+            
 
             // If we need pagination
             pagination: {
@@ -124,13 +131,19 @@
             freeMode: true,
             watchSlidesProgress: true,
 
+         
+
+
 
         });//thumnail
 
-        const swiper2 = new Swiper('.myswiper3', {
+        const swiper_thumMain = new Swiper('.myswiper3', {
             // Optional parameters
             direction: 'horizontal',
             loop: true,
+            autoplay: {
+                delay: 1000
+            },
             
 
             // If we need pagination
@@ -138,8 +151,10 @@
                 el: '.swiper-pagination',
             },
             thumbs: {
-                swiper: swiper,
+                swiper: swiper_thumnail,
             },
+
+           
 
 
         });

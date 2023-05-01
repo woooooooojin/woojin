@@ -219,41 +219,67 @@
     <section class="rank_section">
         <h1>랭킹</h1>
         <div class="container_rank">
-            <div class="swiper_rank">
 
-                <div class="swiper-wrapper">
+            <div class="rank_nav">
+                <ul>
+                    <li>#티셔츠 & 팬츠</li>
+                    <li>#레이플레이드</li>
+                    <li>#헤리티지</li>
+                    <li>#온라인단독</li>
+                    <li>#타르가</li>
+                    <li>#테니스</li>
+                    <li>#런닝화</li>
 
-                    <div class="swiper-slide" id="rank01"><img src="./img/01. 메인/05. 커뮤니티/01.jpg" alt=""></div>
-                    <div class="swiper-slide" id="rank02"><img src="./img/01. 메인/05. 커뮤니티/02.jpg" alt=""></div>
-                    <div class="swiper-slide" id="rank03"><img src="./img/01. 메인/05. 커뮤니티/03.jpg" alt=""></div>
-                    <div class="swiper-slide" id="rank04"><img src="./img/01. 메인/05. 커뮤니티/04.jpg" alt=""></div>
-                    <div class="swiper-slide" id="rank05"><img src="./img/01. 메인/05. 커뮤니티/05.jpg" alt=""></div>
-                    <div class="swiper-slide" id="rank06"><img src="./img/01. 메인/05. 커뮤니티/04.jpg" alt=""></div>
-                    <div class="swiper-slide" id="rank07"><img src="./img/01. 메인/05. 커뮤니티/03.jpg" alt=""></div>
+                </ul>
+            </div>
+            <div class="rank_wrap">
+                <div class="rank_text">
+                    <h4>#티셔츠 & 팬츠</h4>
+                    <ul class="ranklist">
+                        <li class="on_li">01 베이직 리니어 반팔티</li>
+                        <li>02 3D 빅로고 반팔티</li>
+                        <li>03 컴포트핏 인터네셔널 로고 반팔티</li>
+                        <li>04 컴포트핏 인터네셔널 반팔 맨투맨</li>
+                        <li>05 컴포트핏 조거팬츠</li>
+                        <li>06 이지팬츠</li>
+                        
+
+
+                    </ul>
+                </div>
+
+                <div class="swiper_rank">
+
+
+
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide rank_slide"><img src="./img/01. 메인/05. 커뮤니티/01.jpg" alt=""></div>
+                        <div class="swiper-slide rank_slide"><img src="./img/01. 메인/05. 커뮤니티/02.jpg" alt=""></div>
+                        <div class="swiper-slide rank_slide"><img src="./img/01. 메인/05. 커뮤니티/03.jpg" alt=""></div>
+                        <div class="swiper-slide rank_slide"><img src="./img/01. 메인/05. 커뮤니티/04.jpg" alt=""></div>
+                        <div class="swiper-slide rank_slide"><img src="./img/01. 메인/05. 커뮤니티/05.jpg" alt=""></div>
+                        <div class="swiper-slide rank_slide"><img src="./img/01. 메인/05. 커뮤니티/04.jpg" alt=""></div>
+
+
+                    </div>
+
+
+
+
+
 
 
                 </div>
 
 
 
-
-
-
-
             </div>
+            <!--rank wrap-->
 
-            <div class="rank_text">
-                <ol>
-                    <li class="on_li">랭킹1</li>
-                    <li>랭킹2</li>
-                    <li>랭킹3</li>
-                    <li>랭킹4</li>
-                    <li>랭킹5</li>
-                    <li>랭킹6</li>
-                    <li>랭킹7</li>
-                </ol>
-            </div>
         </div>
+
+       
     </section>
 
 
@@ -299,6 +325,15 @@
         <h2>신제품</h2>
 
         <div class="container_swiper">
+            <div class="new_nav_wrap">
+                <ul>
+                    <li>#티셔츠 & 팬츠</li>
+                    <li>#헤리티지</li>
+                    <li>#온라인 단독</li>
+                    <li>#테니스</li>
+                    <li>#신발</li>
+                </ul>
+            </div>
             <div class="my_wrap">
                 <div class="swiper_2">
 
@@ -429,19 +464,23 @@
 
             direction: 'horizontal',
             loop: true,
+            // loopedSlides: swiper_rank.length,
             autoplay: {
                 delay: 1000
             },
             slidesPerView: 3,
+            // spaceBetween: 250,
             slidesPerGroup: 1,
             centeredSlides: true,
             // slidesPerView: "auto",
+            slideToClickedSlide: true,
+            
 
 
             on: {
                 slideChange: function () {
-                    $('.rank_text li').removeClass('on_li');
-                    $('.rank_text li').eq(this.realIndex).addClass('on_li');
+                    $('.rank_text .ranklist li').removeClass('on_li');
+                    $('.rank_text .ranklist li').eq(this.realIndex).addClass('on_li');
 
 
                 }
@@ -451,23 +490,24 @@
 
         });
 
-        $('.rank_text li').click(function () {
-            let idx = $(this).index() //
-            swiper_rank.slideTo(idx, 1000, false); //
+        $('.rank_text ul li').click(function (e) {
+            e.preventDefault();
+            let idx = $(this).index(); //
+            swiper_rank.slideToLoop(idx); //
         });
-        // let rankText = $('.rank_text li');
-        // let swiperIdx = $('.swiper_rank .swiper-slide .swiper-slide-active');
+       
 
         // rankText.click(function () {
         //     let idx = $(this).index();
         //     swiper_rank.slideTo(idx + 1 ,1000,false);
 
         // }); // index 값 찾기
-
-       
     </script>
 
     <!--rank swiper-->
+
+   
+
 
 
 
