@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+
+
+    <style>
+        .myswiper3 {
+          width: 600px;
+          height: 800px;
+          margin-top: 20px;
+
+        }
+
+        .myswiper3 .swiper-slide {
+            width: 600px;
+            height: 800px;
+            text-align: center;
+
+        }
+        .myswiper2 .swiper-slide.swiper-slide-visible.swiper-slide-thumb-active img{
+          transform: scale(1);
+        
+        }
+        .myswiper2 .swiper-wrapper{
+            /* overflow: hidden; */
+        }
+        .myswiper3 .swiper-slide img {
+            width: 100%;
+            height: 100%;
+        }
+        .all_wrap{
+            /* position: relative; */
+        }
+        .myswiper2{
+            position: relative;
+            top: 0; left: 0;
+           
+        }
+    
+         .myswiper2 .swiper-slide{
+            width: 300px;
+            height: 50px;
+            border: 1px solid black;
+            
+            
+            
+         }
+         .myswiper2 .swiper-wrapper{
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+         }
+    </style>
+
+</head>
+
+
+
+
+
+<body>
+<div class="all_wrap">
+   
+    <div class="swiper myswiper3">
+       
+        <div class="swiper-wrapper">
+          
+            <div class="swiper-slide"><img src="../images/detail1.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="../images/detail2.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="../images/detail3.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="../images/detail4.jpg" alt=""></div>
+
+
+        </div>
+       
+        <div class="swiper-pagination"></div>
+
+        
+    </div>
+
+    <div  class="myswiper2">
+        
+        <div class="swiper-wrapper">
+            
+            <div class="swiper-slide">
+                제품1
+            </div>
+            <div class="swiper-slide">제품2</div>
+            <div class="swiper-slide">제품3</div>
+            <div class="swiper-slide">제품4</div>
+
+
+        </div>
+        
+        <div class="swiper-pagination"></div>
+
+      
+    </div>
+
+</div><!-- all wrap-->
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.myswiper2', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            spaceBetween: 10,
+            slidesPerView: 4,
+            freeMode: true,
+            watchSlidesProgress: true,
+
+
+        });//thumnail
+
+        const swiper2 = new Swiper('.myswiper3', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+            
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            thumbs: {
+                swiper: swiper,
+            },
+
+
+        });
+    </script>
+
+
+</body>
+
+</html>

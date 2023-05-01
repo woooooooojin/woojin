@@ -223,13 +223,13 @@
 
                 <div class="swiper-wrapper">
 
-                    <div class="swiper-slide"><img src="./img/01. 메인/05. 커뮤니티/01.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="./img/01. 메인/05. 커뮤니티/02.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="./img/01. 메인/05. 커뮤니티/03.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="./img/01. 메인/05. 커뮤니티/04.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="./img/01. 메인/05. 커뮤니티/05.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="./img/01. 메인/05. 커뮤니티/04.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="./img/01. 메인/05. 커뮤니티/03.jpg" alt=""></div>
+                    <div class="swiper-slide" id="rank01"><img src="./img/01. 메인/05. 커뮤니티/01.jpg" alt=""></div>
+                    <div class="swiper-slide" id="rank02"><img src="./img/01. 메인/05. 커뮤니티/02.jpg" alt=""></div>
+                    <div class="swiper-slide" id="rank03"><img src="./img/01. 메인/05. 커뮤니티/03.jpg" alt=""></div>
+                    <div class="swiper-slide" id="rank04"><img src="./img/01. 메인/05. 커뮤니티/04.jpg" alt=""></div>
+                    <div class="swiper-slide" id="rank05"><img src="./img/01. 메인/05. 커뮤니티/05.jpg" alt=""></div>
+                    <div class="swiper-slide" id="rank06"><img src="./img/01. 메인/05. 커뮤니티/04.jpg" alt=""></div>
+                    <div class="swiper-slide" id="rank07"><img src="./img/01. 메인/05. 커뮤니티/03.jpg" alt=""></div>
 
 
                 </div>
@@ -243,15 +243,15 @@
             </div>
 
             <div class="rank_text">
-                <ul>
-                    <li class="on_li"><a href="#!">랭킹1</a></li>
-                    <li><a href="#!">랭킹2</a></li>
-                    <li><a href="#!">랭킹3</a></li>
-                    <li><a href="#!">랭킹4</a></li>
-                    <li><a href="#!">랭킹5</a></li>
-                    <li><a href="#!">랭킹6</a></li>
-                    <li><a href="#!">랭킹7</a></li>
-                </ul>
+                <ol>
+                    <li class="on_li">랭킹1</li>
+                    <li>랭킹2</li>
+                    <li>랭킹3</li>
+                    <li>랭킹4</li>
+                    <li>랭킹5</li>
+                    <li>랭킹6</li>
+                    <li>랭킹7</li>
+                </ol>
             </div>
         </div>
     </section>
@@ -449,39 +449,22 @@
             }
 
 
-
-
         });
-        let rankText = $('.rank_text li');
-        let swiperIdx = $('.swiper_rank .swiper-slide .swiper-slide-active');
+
+        $('.rank_text li').click(function () {
+            let idx = $(this).index() //
+            swiper_rank.slideTo(idx, 1000, false); //
+        });
+        // let rankText = $('.rank_text li');
+        // let swiperIdx = $('.swiper_rank .swiper-slide .swiper-slide-active');
 
         // rankText.click(function () {
         //     let idx = $(this).index();
         //     swiper_rank.slideTo(idx + 1 ,1000,false);
-            
+
         // }); // index 값 찾기
 
-        // $('.rank_text li:first').click(function(){
-        //     swiper_rank.slideTo(1);
-        // })
-        // $('.rank_text li:nth-child(2)').click(function(){
-        //     swiper_rank.slideTo(2);
-        // })
-        // $('.rank_text li:nth-child(3)').click(function(){
-        //     swiper_rank.slideTo(3);
-        // })
-        // $('.rank_text li:nth-child(4)').click(function(){
-        //     swiper_rank.slideTo(4);
-        // })
-        // $('.rank_text li:nth-child(5)').click(function(){
-        //     swiper_rank.slideTo(5);
-        // })
-        // $('.rank_text li:nth-child(6)').click(function(){
-        //     swiper_rank.slideTo(6);
-        // })
-        // $('.rank_text li:nth-child(7)').click(function(){
-        //     swiper_rank.slideTo(7);
-        // })
+       
     </script>
 
     <!--rank swiper-->
