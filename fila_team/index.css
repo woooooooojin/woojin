@@ -368,14 +368,19 @@ header{
     
     
 }
+.swiper_rank .swiper-wrapper{
+	transition-timing-function:linear;
+    
+}
 
 .swiper_rank .swiper-slide {
 
     width: 500px;
     height: 650px;
     opacity: 0.3;
-    transform: scale(0.8);
+    transform: scale(0.7);
     transition: .3s;
+    
     
 }
 
@@ -388,6 +393,7 @@ header{
 .swiper_rank .swiper-slide img {
     width:500px;
     height: 650px;
+    border-radius: 20px;
 }
 .rank_wrap{
     /* display: flex; */
@@ -417,11 +423,14 @@ header{
 }
 .rank_text ul li{
     height: 60px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #ccc;
     transition: .3s;
     line-height: 60px;
     padding-left: 10px;
     margin-left: 20px;
+    border-radius: 10px;
+    border-right: 1px solid #ccc;
+    margin-top: 10px;
 }
 
 .rank_text ul li:first-child{
@@ -437,6 +446,8 @@ header{
     background-color: #002053;
     color: #fff;
     font-size: 20px;
+    box-shadow: 0 0 10px black;
+    border: black;
 }
 
 .rank_nav{}
