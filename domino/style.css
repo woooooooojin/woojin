@@ -1306,6 +1306,7 @@ main .main_wrap .e_coupon a p {
     margin-top: 80px;
     height: 600px;
     position: relative;
+    
 }
 
 .swiper_2 .swiper-button-next,
@@ -1330,6 +1331,7 @@ main .main_wrap .e_coupon a p {
 
 .container_swiper {
     overflow: hidden;
+    
 }
 
 .swiper_2 .swiper-slide.swiper-slide-active {
