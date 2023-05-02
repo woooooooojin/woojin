@@ -24,35 +24,22 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!--fontawesome-->
-
-<!-- 
-    <script>
-
-        $(function(){
-
-
-
-            $('.lnb_women').click(function(){
-                $('.dropdowm_menu.drop_women').slideToggle(300);
-            })
-           
-           
-            
-
-            $('.lnb_men').click(function(){
-                $('.dropdowm_menu.drop_men').slideToggle(300);
-            })
-
-            $('.lnb_kids').click(function(){
-                $('.dropdowm_menu.drop_kids').slideToggle(300);
-            })
-
-            $('.lnb_brand').click(function(){
-                $('.dropdowm_menu.drop_brand').slideToggle(300);
-            })
-
-        })
-    </script> -->
+   
+    <script src="/jquery_import.25450c07.js"></script> <!--import jquery -->
+    <script>$(function () {
+  $('.lnb_women').click(function () {
+    $('.dropdowm_menu.drop_women').slideToggle(300);
+  });
+  $('.lnb_men').click(function () {
+    $('.dropdowm_menu.drop_men').slideToggle(300);
+  });
+  $('.lnb_kids').click(function () {
+    $('.dropdowm_menu.drop_kids').slideToggle(300);
+  });
+  $('.lnb_brand').click(function () {
+    $('.dropdowm_menu.drop_brand').slideToggle(300);
+  });
+});</script>
 
 
 
@@ -754,18 +741,14 @@ swiper_visual.controller.control = pagingSwiper; //controller API</script>
   slidesPerGroup: 1,
   centeredSlides: true,
   // slidesPerView: "auto",
-  slideToClickedSlide: true
-
-  // on: {
-  //     slideChange: function () {
-  //         $('.rank_text .ranklist li').removeClass('on_li');
-  //         $('.rank_text .ranklist li').eq(this.realIndex).addClass('on_li');
-
-  //     }
-
-  // }
+  slideToClickedSlide: true,
+  on: {
+    slideChange: function slideChange() {
+      $('.rank_text .ranklist li').removeClass('on_li');
+      $('.rank_text .ranklist li').eq(this.realIndex).addClass('on_li');
+    }
+  }
 });
-
 $('.rank_text ul li').click(function (e) {
   e.preventDefault;
   var idx = $(this).index(); //

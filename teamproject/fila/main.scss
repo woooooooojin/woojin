@@ -391,7 +391,7 @@
     }
   
     .swiper-slide {
-      width: 680px;
+      width: 650px;
       opacity: 0.3;
       transform: scale(0.7);
       transition: .3s;
@@ -404,7 +404,7 @@
   
       img {
         width: 680px;
-        height: 780px;
+        height: 700px;
         border-radius: 20px;
       }
     }
@@ -417,12 +417,12 @@
   
   .rank_text {
     width: 550px;
-    height: 650px;
+    height: 600px;
     background-color: #fff;
     padding: 50px;
     margin: 100px auto;
     position: absolute;
-    top: -25px;
+    top: -20px;
     left: 50px;
     z-index: 5;
     border: 1px solid #ccc;
