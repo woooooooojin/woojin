@@ -383,7 +383,7 @@
     width: 100%;
   
     overflow: hidden;
-    margin: 0 auto;
+    // margin: 0 auto;
     margin-top: 50px;
   
     .swiper-wrapper {
@@ -391,10 +391,11 @@
     }
   
     .swiper-slide {
-      width: 650px;
+      width: 550px;
       opacity: 0.3;
       transform: scale(0.7);
       transition: .3s;
+      // margin-left: 10px;
      
   
       &.swiper-slide-active {
@@ -403,8 +404,8 @@
       }
   
       img {
-        width: 680px;
-        height: 700px;
+        width: 550px;
+        height: 650px;
         border-radius: 20px;
       }
     }
@@ -416,14 +417,14 @@
   }
   
   .rank_text {
-    width: 550px;
+    width: 480px;
     height: 600px;
     background-color: #fff;
     padding: 50px;
     margin: 100px auto;
     position: absolute;
-    top: -20px;
-    left: 50px;
+    top: -60px;
+    left: 0px;
     z-index: 5;
     border: 1px solid #ccc;
     border-radius: 20px;
