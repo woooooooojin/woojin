@@ -33,22 +33,22 @@
 
 
             $('.lnb_women').click(function () {
-                $('.dropdowm_menu.drop_women').slideToggle(300);
+                $('.drop_women').slideToggle(300);
             })
 
 
 
 
             $('.lnb_men').click(function () {
-                $('.dropdowm_menu.drop_men').slideToggle(300);
+                $('.drop_men').slideToggle(300);
             })
 
             $('.lnb_kids').click(function () {
-                $('.dropdowm_menu.drop_kids').slideToggle(300);
+                $('.drop_kids').slideToggle(300);
             })
 
             $('.lnb_brand').click(function () {
-                $('.dropdowm_menu.drop_brand').slideToggle(300);
+                $('.drop_brand').slideToggle(300);
             })
 
         })
@@ -641,58 +641,58 @@
     <section class="section2">
 
         <h2>신제품</h2>
+        <div class="container">
+            <div class="container_swiper">
+                <div class="new_nav_wrap">
+                    <ul>
+                        <li>#티셔츠 & 팬츠</li>
+                        <li>#헤리티지</li>
+                        <li>#온라인 단독</li>
+                        <li>#테니스</li>
+                        <li>#신발</li>
+                    </ul>
+                </div>
+                <div class="my_wrap">
+                    <div class="swiper_2">
 
-        <div class="container_swiper">
-            <div class="new_nav_wrap">
-                <ul>
-                    <li>#티셔츠 & 팬츠</li>
-                    <li>#헤리티지</li>
-                    <li>#온라인 단독</li>
-                    <li>#테니스</li>
-                    <li>#신발</li>
-                </ul>
-            </div>
-            <div class="my_wrap">
-                <div class="swiper_2">
+                        <div class="swiper-wrapper">
 
-                    <div class="swiper-wrapper">
-
-                        <div class="swiper-slide">
-                            <div class="new_wrap">
-                                <div class="new_img">
-                                    <img src="./img/02. 서브(작업물)/01.jpg" alt="">
+                            <div class="swiper-slide">
+                                <div class="new_wrap">
+                                    <div class="new_img">
+                                        <img src="./img/02. 서브(작업물)/01.jpg" alt="">
+                                    </div>
+                                    <div class="new_text">
+                                        <h4>tit</h4>
+                                        <p>textarea</p>
+                                    </div>
                                 </div>
-                                <div class="new_text">
-                                    <h4>tit</h4>
-                                    <p>textarea</p>
-                                </div>
+                                <!--new wrap-->
                             </div>
-                            <!--new wrap-->
+
+                            <div class="swiper-slide">신제품 2</div>
+                            <div class="swiper-slide">신제품 3</div>
+                            <div class="swiper-slide">신제품 4</div>
+                            <div class="swiper-slide">신제품 5</div>
+                            <div class="swiper-slide">신제품 6</div>
+
                         </div>
 
-                        <div class="swiper-slide">신제품 2</div>
-                        <div class="swiper-slide">신제품 3</div>
-                        <div class="swiper-slide">신제품 4</div>
-                        <div class="swiper-slide">신제품 5</div>
-                        <div class="swiper-slide">신제품 6</div>
+                        <!-- <div class="swiper-pagination"></div> -->
 
+
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+
+
+                        <!-- <div class="swiper-scrollbar"></div> -->
                     </div>
-
-                    <!-- <div class="swiper-pagination"></div> -->
-
-
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-
-
-                    <!-- <div class="swiper-scrollbar"></div> -->
+                    <!--swiper_2 end-->
                 </div>
-                <!--swiper_2 end-->
+                <!--my wrap end-->
             </div>
-            <!--my wrap end-->
+            <!--container swiper-->
         </div>
-        <!--container swiper-->
-
     </section>
 
 
@@ -783,7 +783,7 @@
 
             direction: 'horizontal',
             loop: true,
-        
+
             autoplay: {
                 delay: 1500
             },
