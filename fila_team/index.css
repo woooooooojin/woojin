@@ -127,17 +127,25 @@ header{
     display: flex;
     
 }
-.dbox{
+.drop_kids .dbox{
     width: 20%;
+}
+.drop_kids .dbox:last-child{
+    border: 0;
+}
+.dbox{
+    width: 16.66667%;
     border-right: 1px solid #ccc;
-    padding-left: 20px;
+    padding-left: 30px;
     padding-top: 10px;
 }
+
 .dbox h4{
-    font-size: 24px;
+    font-size: 22px;
     margin-bottom: 25px;
+    
 }
-.dropbox_05{
+.dropbox_06{
     border-right: 0;
 }
 .menu_list{
@@ -146,6 +154,7 @@ header{
 .menu_list li{
     height: 20px;
     margin-bottom: 20px;
+   
     
 }
 .menu_list li:hover a{
@@ -156,6 +165,7 @@ header{
 .menu_list li a{
     display: block;
     width: 100%;
+    
   
 }
 
@@ -386,7 +396,12 @@ header{
 .swiper_rank .swiper-slide.swiper-slide-active {
     opacity: 1;
     transform: scale(1);
+    visibility: visible;
 }
+.swiper_rank .swiper-slide.swiper-slide-prev{
+    visibility: hidden;
+}
+
 
 
 .swiper_rank .swiper-slide img {
