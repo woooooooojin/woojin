@@ -1,0 +1,68 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+/*$변수*/
+.container_01 {
+  width: 500px;
+  height: 300px;
+  background-color: #ccc;
+  margin: 0 auto;
+}
+.container_01 > h1 {
+  color: blue;
+}
+.container_01 ul h1 {
+  font-size: 20px;
+  color: #8869ed;
+}
+.container_01 ul li {
+  width: 100px;
+  height: 50px;
+  border: 1px solid black;
+  text-align: center;
+  line-height: 50px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.container_01 ul li:nth-child(3) {
+  margin: 5px 0;
+}
+.container_01 ul li.first {
+  color: #8869ed;
+}
+
+.container_03 {
+  width: 620px;
+  height: 200px;
+  border: 1px solid black;
+  background-color: #ccc;
+  display: flex;
+  padding: 10px;
+}
+.container_03 div {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  background-color: #ccc;
+}
+.container_03 div.box02 {
+  margin: 0 10px;
+}
+.container_03 div:nth-child(1) {
+  background-image: url(/img01.5369d01a.jpg);
+}
+.container_03 div:nth-child(2) {
+  background-image: url(/img02.baf0a5d0.jpg);
+}
+.container_03 div:nth-child(3) {
+  background-image: url(/img03.19c34dcf.jpg);
+}
+
+/*# sourceMappingURL=/main.39afc03c.css.map */
