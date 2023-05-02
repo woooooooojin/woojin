@@ -10,7 +10,7 @@ a {
 }
 
 .container {
-    width: 1660px;
+    /* width: 1440px; */
     margin: 0 auto;
 }
 li{list-style: none;}
@@ -22,13 +22,13 @@ header{
     position: fixed;
     top: 0;
     z-index: 10;
-    padding-top: 10px;
     height: 55px;
 }
 
 .header_wrap{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     
     
 }
@@ -39,6 +39,7 @@ header{
     width: 90px;
     height: 55px;
     margin-left: 25px;
+    margin-top: 10px;
    
 }
 .head_logo .imgwrap img{
@@ -55,7 +56,9 @@ header{
 .head_lnb ul li{
     font-size: 20px;
     font-weight: bold;
+    
 }
+
 .head_lnb ul li:nth-child(4){
     position: relative;
 }
@@ -64,15 +67,47 @@ header{
     display: block;
     width: 1px;
     height: 14px;
-    background-color: #eee;
+    background-color: #ccc;
     position: absolute;
-    top: 8px; left: -35px;
+    top: 5px; left: -35px;
     
 }
 .head_lnb ul li a{
     display: block;
     width: 100%;
     color: #fff;
+    position: relative;
+    transition: .3s;
+    
+}
+.head_lnb ul li a:hover{
+    color: #002053;
+}
+.head_lnb ul li a:hover::after{
+    width: 50%;
+}
+.head_lnb ul li a:hover::before{
+    width: 50%;
+}
+.head_lnb ul li a::after{
+    display: block;
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: #002053;
+    position: absolute;
+    bottom: 0; right: 50%;
+    transition: .3s;
+}
+.head_lnb ul li a::before{
+     display: block;
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: #002053;
+    position: absolute;
+    bottom: 0; left: 50%;
+    transition: .3s;
 }
 .head_gnb{
     width: 33.3333%;
@@ -387,11 +422,14 @@ header{
 
     width: 550px;
     opacity: 0.3;
-    transform: scale(0.7);
+    transform: scale(0.75);
     transition: .3s;
+    /* margin-right: 20px; */
+    visibility: hidden;
     
     
 }
+/* .swiper_rank .swiper-slide:last-child{margin: 0;} */
 
 .swiper_rank .swiper-slide.swiper-slide-active {
     opacity: 1;
@@ -401,11 +439,14 @@ header{
 .swiper_rank .swiper-slide.swiper-slide-prev{
     visibility: hidden;
 }
+.swiper_rank .swiper-slide.swiper-slide-next{
+    visibility: visible;
+}
 
 
 
 .swiper_rank .swiper-slide img {
-    width:550px;
+    width: 550px;
     height: 650px;
     border-radius: 20px;
 }
@@ -416,12 +457,12 @@ header{
 }
 .rank_text{
     width: 480px;
-    height:600px;
+    height:550px;
     background-color: #fff;
     padding: 50px;
-    margin: 100px auto;
+    margin-left: 10px;
     position: absolute;
-    top: -60px; left: 0px;
+    top: 50px; left: 0px;
     z-index: 5;
     border: 1px solid #ccc;
     border-radius: 20px;
@@ -462,7 +503,7 @@ header{
 .rank_text ul li.on_li{
     background-color: #002053;
     color: #fff;
-    font-size: 20px;
+    font-size: 18px;
     box-shadow: 0 0 10px black;
     border: black;
 }
@@ -517,35 +558,58 @@ header{
 /********countdown*********/
 .countdown {
     width: 100%;
+    height: 600px;
     background-color: #eee;
     margin-top: 100px;
 }
 
 .countdown h1 {
     text-align: center;
+    font-size: 36px;
+    padding-top: 50px;
 }
 
 .countdown_box {
-    width: 500px;
+    width: 450px;
     margin: 20px auto;
 }
 
-.countdown_box .time {}
+.countdown_box .time {
+   
+}
 
 .countdown_box .time p {
     text-align: center;
-    font-size: 30px;
+    font-size: 26px;
+    margin-top:  50px;
+    color: #002053;
 }
 
 .countdown_box .count_img {
     width: 100%;
     font-size: 0;
     margin-top: 20px;
+   
+   
 }
 
 .countdown_box .count_img img {
     width: 100%;
-    height: auto;
+    height: auto; 
+    animation: new_ani 0.5s ease-in-out;
+    transition: .3s;
+}
+@keyframes new_ani {
+
+    0% {
+        opacity: 0;
+        transform: translateX(-1000px)  rotate(0);
+        
+    }
+   100% {
+        opacity: 1;
+        transform: translateX(0) rotate(360deg);
+    }
 }
 
 
@@ -625,7 +689,7 @@ header{
 }
 
 .swiper_2 .swiper-slide {
-    width: 1000px;
+    width: 800px;
     height: 600px;
     /* display: flex; */
     background: #002053;
@@ -700,6 +764,7 @@ header{
 /************section 3***********/
 
 .section3 {
+    margin-top: 100px;
     width: 100%;
 }
 

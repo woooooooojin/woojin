@@ -46,6 +46,21 @@
                 $('.drop_brand').slideToggle(300);
             })
 
+
+            $(window).scroll(function(){
+                if($(window).scrollTop() > 100){
+                    $('.head_logo .imgwrap img').attr('src','./img/00. LOGO/01(1).png');
+                    $('header').css('backgroundColor','#fff')
+                    $('.head_lnb ul li a').css('color','black')
+                    $('.head_gnb ul li a').css('color','black')
+                }else{
+                    $('.head_logo .imgwrap img').attr('src','./img/00. LOGO/01(3).png')
+                    $('header').css('backgroundColor','')
+                    $('.head_lnb ul li a').css('color','#fff')
+                    $('.head_gnb ul li a').css('color','#fff')
+                }
+            })
+
         })
     </script>
 
@@ -635,11 +650,12 @@
         <h1>런칭캘린더</h1>
 
         <div class="countdown_box">
+           
+            <div class="count_img">
+                <img src="./img/countdownimg2.png" alt="img">
+            </div> 
             <div class="time">
                 <p id="count_time"></p>
-            </div>
-            <div class="count_img">
-                <img src="./img/02. 서브/43.jpg" alt="img">
             </div>
 
         </div>
@@ -816,7 +832,7 @@
                 delay: 1500
             },
             slidesPerView: 3,
-            // spaceBetween: 250,
+            spaceBetween: 20,
             slidesPerGroup: 1,
             centeredSlides: true,
             // slidesPerView: "auto",
