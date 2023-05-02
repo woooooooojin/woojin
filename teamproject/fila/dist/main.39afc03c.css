@@ -356,15 +356,17 @@ header {
 }
 
 .rank_text {
-  width: 500px;
+  width: 550px;
   height: 650px;
   background-color: #fff;
   padding: 50px;
   margin: 100px auto;
   position: absolute;
-  top: -35px;
-  left: 75px;
+  top: -25px;
+  left: 50px;
   z-index: 5;
+  border: 1px solid #ccc;
+  border-radius: 20px;
 }
 .rank_text h4 {
   font-size: 24px;
