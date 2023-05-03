@@ -24,6 +24,13 @@ header{
     z-index: 10;
     height: 55px;
 }
+.head_up{
+    position: absolute;
+ 
+}
+.head_down{
+    position: fixed;
+}
 
 .header_wrap{
     display: flex;
@@ -37,7 +44,6 @@ header{
 }
 .head_logo .imgwrap{
     width: 90px;
-    height: 55px;
     margin-left: 25px;
     margin-top: 10px;
    
@@ -96,7 +102,7 @@ header{
     height: 2px;
     background-color: #002053;
     position: absolute;
-    bottom: 0; right: 50%;
+    bottom: -5px; right: 50%;
     transition: .3s;
 }
 .head_lnb ul li a::before{
@@ -106,7 +112,7 @@ header{
     height: 2px;
     background-color: #002053;
     position: absolute;
-    bottom: 0; left: 50%;
+    bottom: -5px; left: 50%;
     transition: .3s;
 }
 .head_gnb{
@@ -401,7 +407,7 @@ header{
 }
 
 .container_rank {
-    overflow: hidden;
+    /* overflow: hidden; */
     /* position: relative; */
 }
 
@@ -420,12 +426,14 @@ header{
 
 .swiper_rank .swiper-slide {
 
-    width: 550px;
+    width: 570px !important;;
     opacity: 0.3;
     transform: scale(0.75);
     transition: .3s;
     /* margin-right: 20px; */
     visibility: hidden;
+    position: relative;
+    
     
     
 }
@@ -446,10 +454,64 @@ header{
 
 
 .swiper_rank .swiper-slide img {
-    width: 550px;
-    height: 650px;
+    width: 100%;
+    height: 700px;
     border-radius: 20px;
 }
+
+.swiper_rank .swiper-slide:hover .rank_hover_box{
+    opacity: 1;
+}
+
+.swiper_rank .swiper-slide .rank_hover_box{
+   width: 100%;
+   height: 70px;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    position: absolute;
+    bottom: 0;left: 0;
+    border-radius: 0 0 20px 20px;
+    opacity: 0;
+    transition: .3s;
+}
+.swiper_rank .swiper-slide .rank_hover_box .rank_hover_L{
+    width: 70%;
+    padding-top: 12px;
+    padding-left: 20px;
+    cursor: pointer;
+}
+.swiper_rank .swiper-slide .rank_hover_box .rank_hover_L h4{
+    color: #fff;
+    font-size: 18px;
+    
+}
+.swiper_rank .swiper-slide .rank_hover_box .rank_hover_L p{
+    font-size: 16px;
+    margin-top: 5px;
+    color: #fff;
+    
+}
+.swiper_rank .swiper-slide .rank_hover_box .rank_hover_R{
+    width: 30%;
+    font-size: 30px;
+    line-height: 70px;
+     text-align: right;
+}
+.swiper_rank .swiper-slide .rank_hover_box .rank_hover_R i{
+    margin-right: 20px;
+    color: #fff;
+    transition: .3s;
+    cursor: pointer;
+   
+}
+.swiper_rank .swiper-slide .rank_hover_box .rank_hover_R i:first-child:hover{
+    color: red;
+}
+.swiper_rank .swiper-slide .rank_hover_box .rank_hover_R i:nth-child(2):hover{
+    color: #002053;
+}
+
+
 .rank_wrap{
     /* display: flex; */
    position: relative;
@@ -459,8 +521,8 @@ header{
     width: 480px;
     height:550px;
     background-color: #fff;
-    padding: 50px;
-    margin-left: 10px;
+    padding: 30px;
+    margin-left: 70px;
     position: absolute;
     top: 50px; left: 0px;
     z-index: 5;
@@ -557,20 +619,30 @@ header{
 
 /********countdown*********/
 .countdown {
-    width: 100%;
-    height: 600px;
+    width: 400px;
+    height: 550px;
     background-color: #eee;
     margin-top: 100px;
+    position: absolute;
+    z-index: 9999;
+    top: 250px;
+    left: 180px;
+    border-radius: 10px;
+    display: block;
 }
 
 .countdown h1 {
     text-align: center;
-    font-size: 36px;
-    padding-top: 50px;
+    font-size: 28px;
+   
+    padding: 0px 10px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ccc;
 }
 
 .countdown_box {
-    width: 450px;
+    
     margin: 20px auto;
 }
 
@@ -580,9 +652,9 @@ header{
 
 .countdown_box .time p {
     text-align: center;
-    font-size: 26px;
-    margin-top:  50px;
-    color: #002053;
+    font-size: 25px;
+    margin-top: 30px;
+    
 }
 
 .countdown_box .count_img {
@@ -593,11 +665,19 @@ header{
    
 }
 
-.countdown_box .count_img img {
+.countdown_box .count_img video {
     width: 100%;
-    height: auto; 
-    animation: new_ani 0.5s ease-in-out;
-    transition: .3s;
+    height: 350px; 
+    border-radius: 20px;
+  
+}
+.close_btn{
+    text-align: right;
+    font-size: 25px;
+    cursor: pointer;
+}
+.close_btn i{
+    margin-right: 10px;
 }
 @keyframes new_ani {
 
@@ -761,24 +841,37 @@ header{
 .swiper_2 .swiper-slide .new_wrap .new_text p{}
 
 
-/************section 3***********/
+/************back_fix***********/
 
-.section3 {
+.back_fix {
     margin-top: 100px;
     width: 100%;
 }
 
-.section3 .background_wrap {
+.back_fix .background_wrap {
     width: 100%;
-    height: 700px;
+    height: 600px;
     display: block;
-    background: url(./img/visualmain_03.jpg) fixed;
+    background: url(./img/fiximg.jpg) fixed;
+    background-size: cover;
     /* background-attachment: fixed; */
+    position: relative;
 }
 
-.section3 .background_wrap p {
+.back_fix .background_wrap p:nth-child(1) {
     text-align: center;
     font-size: 50px;
     color: #fff;
-    line-height: 700px;
+    line-height: 600px;
+    
+}
+.back_fix .background_wrap p:nth-child(2){
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    writing-mode: vertical-rl;
+    position: absolute;
+    top: 50px;
+    left: 10px;
+
 }

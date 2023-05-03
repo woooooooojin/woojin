@@ -31,6 +31,9 @@
 
             $('.lnb_women').click(function () {
                 $('.drop_women').slideToggle(300);
+                // $('.head_lnb ul li a').css('color','black')
+                // $('.head_logo .imgwrap img').attr('src','./img/LOGO/01(1).png')
+
             })
 
 
@@ -38,14 +41,17 @@
 
             $('.lnb_men').click(function () {
                 $('.drop_men').slideToggle(300);
+                // $('.head_lnb ul li a').css('color','black')
             })
 
             $('.lnb_kids').click(function () {
                 $('.drop_kids').slideToggle(300);
+                // $('.head_lnb ul li a').css('color','black')
             })
 
             $('.lnb_brand').click(function () {
                 $('.drop_brand').slideToggle(300);
+                // $('.head_lnb ul li a').css('color','black')
             })
 
 
@@ -76,13 +82,35 @@
 <body>
 
 
+    <!--popup-->
+    <div class="countdown">
+
+        <h1>런칭캘린더</h1>
+
+        <div class="countdown_box">
+
+            <div class="count_img">
+                <video src="./img/targa.mp4" muted loop playsinline autoplay></video>
+
+            </div>
+            <div class="time">
+                <p id="count_time"></p>
+            </div>
+        </div>
+        <div class="close_btn"><i class="far fa-times-circle"></i></div>
+    </div>
+
+
+
+
+
     <header>
 
         <div class="header_wrap">
 
             <div class="head_logo">
                 <div class="imgwrap">
-                    <img src="./img/LOGO/01(3).png" alt="logo">
+                    <img src="./img/LOGO/01(3).png" alt="logo" class="logoimg">
                 </div>
 
             </div>
@@ -433,7 +461,8 @@
 
                 </div>
                 <!--dropdown menu wrap end-->
-            </div><!--container -->
+            </div>
+            <!--container -->
 
         </div>
         <!--dropdown menu end-->
@@ -614,25 +643,124 @@
 
                         <div class="swiper-wrapper">
 
-                            <div class="swiper-slide rank_slide"><img src="./img/01. 메인/05. 커뮤니티/01.jpg" alt=""></div>
-                            <div class="swiper-slide rank_slide"><img src="./img/01. 메인/05. 커뮤니티/02.jpg" alt=""></div>
-                            <div class="swiper-slide rank_slide"><img src="./img/01. 메인/05. 커뮤니티/03.jpg" alt=""></div>
-                            <div class="swiper-slide rank_slide"><img src="./img/01. 메인/05. 커뮤니티/04.jpg" alt=""></div>
-                            <div class="swiper-slide rank_slide"><img src="./img/01. 메인/05. 커뮤니티/05.jpg" alt=""></div>
-                            <div class="swiper-slide rank_slide"><img src="./img/01. 메인/05. 커뮤니티/04.jpg" alt=""></div>
+                            <div class="swiper-slide rank_slide">
+                                <div class="img_wrap">
+                                    <img src="./img/01. 메인/02. 지금 많이 찾는 상품/01. 티셔츠&팬츠/01.jpg" alt="img">
+                                </div>
+
+                                <div class="rank_hover_box">
+                                    <div class="rank_hover_L">
+                                        <h4>베이직 리니어 반팔티</h4>
+                                        <p>79,000원</p>
+                                    </div>
+                                    <div class="rank_hover_R">
+                                        <i class="fas fa-heart"></i>
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </div>
+                                </div>
+                                <!--rank hover box-->
+                            </div>
+                            <!--slide1-->
+
+
+                            <div class="swiper-slide rank_slide">
+                                <div class="img_wrap">
+                                    <img src="./img/01. 메인/02. 지금 많이 찾는 상품/01. 티셔츠&팬츠/02.jpg" alt="img">
+                                </div>
+
+                                <div class="rank_hover_box">
+                                    <div class="rank_hover_L">
+                                        <h4>3D 빅로고 반팔티</h4>
+                                        <p>119,000원</p>
+                                    </div>
+                                    <div class="rank_hover_R">
+                                        <i class="fas fa-heart"></i>
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </div>
+                                </div>
+                                <!--rank hover box-->
+                            </div>
+
+                            <div class="swiper-slide rank_slide">
+
+                                <div class="img_wrap">
+                                    <img src="./img/01. 메인/02. 지금 많이 찾는 상품/01. 티셔츠&팬츠/03.jpg" alt="img">
+                                </div>
+
+                                <div class="rank_hover_box">
+                                    <div class="rank_hover_L">
+                                        <h4>컴포트핏 인터네셔널 반팔티</h4>
+                                        <p>69,000원</p>
+                                    </div>
+                                    <div class="rank_hover_R">
+                                        <i class="fas fa-heart"></i>
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </div>
+                                </div>
+                                <!--rank hover box-->
+                            </div>
+
+                            <div class="swiper-slide rank_slide">
+                                <div class="img_wrap">
+                                    <img src="./img/01. 메인/02. 지금 많이 찾는 상품/01. 티셔츠&팬츠/04.jpg" alt="img">
+                                </div>
+
+                                <div class="rank_hover_box">
+                                    <div class="rank_hover_L">
+                                        <h4>컴포트핏 인터네셔널 반팔 맨투맨</h4>
+                                        <p>99,000원</p>
+                                    </div>
+                                    <div class="rank_hover_R">
+                                        <i class="fas fa-heart"></i>
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </div>
+                                </div>
+                                <!--rank hover box-->
+                            </div>
+
+                            <div class="swiper-slide rank_slide">
+                                <div class="img_wrap">
+                                    <img src="./img/01. 메인/02. 지금 많이 찾는 상품/01. 티셔츠&팬츠/05.jpg" alt="img">
+                                </div>
+
+                                <div class="rank_hover_box">
+                                    <div class="rank_hover_L">
+                                        <h4>컴포트핏 조거팬츠</h4>
+                                        <p>139,000원</p>
+                                    </div>
+                                    <div class="rank_hover_R">
+                                        <i class="fas fa-heart"></i>
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </div>
+                                </div>
+                                <!--rank hover box-->
+                            </div>
+
+
+                            <div class="swiper-slide rank_slide">
+                                <div class="img_wrap">
+                                    <img src="./img/01. 메인/02. 지금 많이 찾는 상품/01. 티셔츠&팬츠/06.jpg" alt="img">
+                                </div>
+
+                                <div class="rank_hover_box">
+                                    <div class="rank_hover_L">
+                                        <h4>이지팬츠</h4>
+                                        <p>119,000원</p>
+                                    </div>
+                                    <div class="rank_hover_R">
+                                        <i class="fas fa-heart"></i>
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </div>
+                                </div>
+                                <!--rank hover box-->
+
+                            </div>
 
 
                         </div>
 
 
-
-
-
-
-
                     </div>
-
-
 
                 </div>
                 <!--rank wrap-->
@@ -645,35 +773,17 @@
 
 
 
-
-
-    <div class="countdown">
-
-        <h1>런칭캘린더</h1>
-
-        <div class="countdown_box">
-           
-            <div class="count_img">
-                <img src="./img/countdownimg2.png" alt="img">
-            </div> 
-            <div class="time">
-                <p id="count_time"></p>
-            </div>
-
-        </div>
-
-
-    </div>
-
-    <section class="section3">
+    <section class="back_fix">
 
         <div class="background_wrap">
-            <p>background fixed</p>
+
+            <p>WINNING TOGETHER</p>
+            <p>Sustainability</p>
+
         </div>
 
+
     </section>
-
-
 
 
 
@@ -831,10 +941,11 @@
             loop: true,
             // loopedSlides: swiper_rank.length,
             autoplay: {
-                delay: 1500
+                delay: 1500,
+                disableOnInteraction: false,
             },
             slidesPerView: 3,
-            spaceBetween: 20,
+            spaceBetween: 100,
             slidesPerGroup: 1,
             centeredSlides: true,
             // slidesPerView: "auto",
