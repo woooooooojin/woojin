@@ -86,11 +86,11 @@ const headFix = document.querySelector('header');
         headFix.classList.remove("head_up");
         headFix.classList.add("head_down");
 
-    }else if(e.deltaY == 0){//휠업
+    }else if(e.deltaY == 0){
         headFix.classList.add("head_down");
 
 
-    }else if(e.deltaY < -50){
+    }else if(e.deltaY < -100){
         headFix.classList.remove("head_down");
         headFix.classList.add("head_up");
     }
