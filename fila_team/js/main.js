@@ -33,46 +33,74 @@ window.addEventListener('scroll', (e) => {
 })
 
 
-// document.addEventListener('DOMContentLoaded', () => {
-//     const mainLogo = document.querySelectorAll('.logoimg');
-//     const lnbA = document.querySelector('.head_lnb li');
-//     const head = document.querySelector('header');
 
-//     lnbA.addEventListener('click', () => {
+//header lnb mouseover mouseleave event
+window.addEventListener('DOMContentLoaded', () => {
+    const mainLogo = document.querySelector('.logoimg');
+    const lnbA = document.querySelectorAll('.head_lnb li');
+    const head = document.querySelector('header');
+    const aTag = document.querySelectorAll('.head_lnb li a')
+    const gnbI = document.querySelectorAll('.head_gnb li a i')
 
-//         mainLogo.setAttribute('src', 'img/LOGO/01(1).png')
-//         // head.style.backgroundColor = '#fff'
+    head.addEventListener('mouseover', () => {
 
-//     })
+        mainLogo.setAttribute('src', 'img/LOGO/01(1).png')
+        head.style.backgroundColor = '#fff'
+       
+        for (let i = 0; i < aTag.length; i++) {
+            aTag[i].style.color = 'black'
+        }
+        for (let i = 0; i < lnbA.length; i++) {
+            lnbA[i].style.color = 'black'
+        }
+        gnbI.forEach((value)=>{
+            value.style.color = 'black'
+        }) 
+    })
 
-// });
+    head.addEventListener('mouseleave', () => {
+
+        mainLogo.setAttribute('src', 'img/LOGO/01(3).png')
+        head.style.backgroundColor = ''
+       
+        for (let i = 0; i < aTag.length; i++) {
+            aTag[i].style.color = '#fff'
+        }
+        gnbI.forEach((value)=>{
+            value.style.color = '#fff'
+        }) 
+    })
+
+});
 
 
 
 
+//header wheel, add remove class event
+window.addEventListener('wheel',(e) => {
 
-// window.addEventListener('wheel',(e) => {
-
-// const headFix = document.querySelector('header');
-
-
-//     if (e.deltaY > 1) {//휠다운
-//         headFix.classList.remove("head_up");
-//         headFix.classList.add("head_down");
-
-//     }else if(e.deltaY < 1){//휠업
-//         headFix.classList.remove("head_down");
-//         headFix.classList.add("head_up");
+const headFix = document.querySelector('header');
 
 
-//     }
+    if (e.deltaY > 100 && scrollY > 100) {//휠다운
+        headFix.classList.remove("head_up");
+        headFix.classList.add("head_down");
 
-// })
+    }else if(e.deltaY == 0){//휠업
+        headFix.classList.add("head_down");
+
+
+    }else if(e.deltaY < -50){
+        headFix.classList.remove("head_down");
+        headFix.classList.add("head_up");
+    }
+
+})
 
 
 
 
-
+//popup close btn event
 document.addEventListener('DOMContentLoaded', () => {
 
     const closeBtn = document.querySelector('.close_btn')
