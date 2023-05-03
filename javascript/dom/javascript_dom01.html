@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript dom01</title>
+
+    <!-- <script src="./main.js" defer></script> defer 모든 dom들이 실행된 이후 js 실행 해라 -->
+
+
+    <script>
+        // document.getElementById('box01').style.color = 'red' //element들이 브라우저를 통해 객체가 되어야 실행됨, /body 위에 넣음
+
+
+        // window.onload = function(){
+        //     document.getElementById('box01').style.color = 'blue'
+        // }
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+            document.getElementById('box01').style.color = 'green'
+
+            document.getElementById('box01').style.fontSize = '24px'
+            document.getElementById('box01').style.fontWeight = 'bold'
+
+            document.getElementsByClassName('box02')[0].style.color = 'blue'
+            //get elements < s가붙어서 배열처리 해야함 
+
+            document.getElementsByTagName('li')[1].style.color = 'red'
+
+            document.querySelector('#box01').style.backgroundColor = '#ccc'
+            document.querySelector('.box02').style.fontSize = '50px'
+            document.querySelectorAll('.box03 li')[0].style.backgroundColor = '#ccc'
+
+            
+            
+            const li = document.querySelectorAll('.box03 li');
+
+            for(let i = 0; i < li.length; i++){
+                li[i].style.fontSize = '20px'
+            }
+
+
+            li.forEach((value)=>{
+                value.style.color = 'steelblue'
+            }) // foreach 배열함수  객ㅊㅔ안의 각각의 값들을 처리
+
+
+
+
+        })
+
+
+    </script>
+</head>
+
+<body>
+
+
+    <div id="box01">text_box01</div>
+
+    <p class="box02">text_box02</p>
+
+    <ul class="box03">
+        <li>text_box03_1</li>
+        <li>text_box03_2</li>
+        <li>text_box03_3</li>
+    </ul>
+
+    <!-- <script>
+
+        document.getElementById('box01').style.color = 'red'
+
+    </script> -->
+</body>
+
+</html>

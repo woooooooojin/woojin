@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript dom event 04</title>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+
+            const Btn = document.querySelector('.btn');
+            const textBox = document.querySelector('.box');
+
+            let state = false; //상태변수 처음엔 안보임 false
+            
+            Btn.addEventListener('click',()=>{
+
+                if(!state){//상태변화가 일어나지 않았다
+                    textBox.style.display = 'block'
+                    state = true
+                }else if(state){
+                    textBox.style.display = 'none'
+                    state = false
+                }
+
+            })
+
+
+            
+
+           
+
+            
+        })
+
+
+
+
+
+
+    </script>
+
+
+    <style>
+
+        .box{
+            width: 300px;
+            height: 200px;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 200px;
+            background-color: #eee;
+            display: none;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <button class="btn">click</button>
+
+    <div class="box">text_box</div>
+
+
+</body>
+
+</html>
