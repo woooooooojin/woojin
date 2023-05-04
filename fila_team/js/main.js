@@ -72,7 +72,7 @@ window.addEventListener('scroll', (e) => {
     const mainGnb = document.querySelectorAll('.head_gnb ul li a');
     const mainLogo = document.querySelector('.head_logo .imgwrap img');
 
-    if (window.scrollY > 100) {
+    if (window.scrollY > 70) {
         document.querySelector('header').style.backgroundColor = '#fff'
         mainLogo.setAttribute('src', 'img/LOGO/01(1).png')
         for (let i = 0; i < mainLnb.length; i++) {
@@ -82,7 +82,7 @@ window.addEventListener('scroll', (e) => {
             mainGnb[i].style.color = 'black'
         }
 
-    } else if(window.screenY <= 100){
+    } else if(window.screenY <= 70){
         document.querySelector('header').style.backgroundColor = ''
         mainLogo.setAttribute('src', 'img/LOGO/01(3).png')
         for (let i = 0; i < mainLnb.length; i++) {
