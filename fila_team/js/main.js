@@ -1,3 +1,66 @@
+//header lnb mouseover mouseleave event
+window.addEventListener('DOMContentLoaded', () => {
+    const mainLogo = document.querySelector('.logoimg');
+    const lnbA = document.querySelectorAll('.head_lnb li');
+    const head = document.querySelector('header');
+    const aTag = document.querySelectorAll('.head_lnb li a')
+    const gnbI = document.querySelectorAll('.head_gnb li a i')
+
+    head.addEventListener('mouseover', () => {
+
+        mainLogo.setAttribute('src', 'img/LOGO/01(1).png')
+        head.style.backgroundColor = '#fff'
+
+        for (let i = 0; i < aTag.length; i++) {
+            aTag[i].style.color = 'black'
+        }
+        for (let i = 0; i < lnbA.length; i++) {
+            lnbA[i].style.color = 'black'
+        }
+        gnbI.forEach((value) => {
+            value.style.color = 'black'
+        })
+
+
+    })
+
+    head.addEventListener('mouseleave', () => {
+
+        mainLogo.setAttribute('src', 'img/LOGO/01(3).png')
+        head.style.backgroundColor = ''
+
+        for (let i = 0; i < aTag.length; i++) {
+            aTag[i].style.color = '#fff'
+        }
+        gnbI.forEach((value) => {
+            value.style.color = '#fff'
+        })
+
+
+
+        // if(window.scrollY < 100){
+        //     gnbI.forEach((value)=>{
+        //         value.style.color = '#fff'
+        //     })
+        //     for (let i = 0; i < aTag.length; i++) {
+        //         aTag[i].style.color = '#fff'
+        //     }
+        // }else{
+        //     gnbI.forEach((value)=>{
+        //         value.style.color = 'black'
+        //     })
+        //     for (let i = 0; i < aTag.length; i++) {
+        //         aTag[i].style.color = 'black'
+        //     }
+        // }
+
+
+    })
+
+
+
+});
+
 window.addEventListener('scroll', (e) => {
 
 
@@ -5,7 +68,7 @@ window.addEventListener('scroll', (e) => {
     const mainGnb = document.querySelectorAll('.head_gnb ul li a');
     const mainLogo = document.querySelector('.head_logo .imgwrap img');
 
-    if (window.scrollY > 100) {
+    if (window.scrollY > 70) {
         document.querySelector('header').style.backgroundColor = '#fff'
         mainLogo.setAttribute('src', 'img/LOGO/01(1).png')
         for (let i = 0; i < mainLnb.length; i++) {
@@ -15,7 +78,7 @@ window.addEventListener('scroll', (e) => {
             mainGnb[i].style.color = 'black'
         }
 
-    } else {
+    } else if (window.screenY <= 70) {
         document.querySelector('header').style.backgroundColor = ''
         mainLogo.setAttribute('src', 'img/LOGO/01(3).png')
         for (let i = 0; i < mainLnb.length; i++) {
@@ -33,69 +96,26 @@ window.addEventListener('scroll', (e) => {
 })
 
 
-
-//header lnb mouseover mouseleave event
-window.addEventListener('DOMContentLoaded', () => {
-    const mainLogo = document.querySelector('.logoimg');
-    const lnbA = document.querySelectorAll('.head_lnb li');
-    const head = document.querySelector('header');
-    const aTag = document.querySelectorAll('.head_lnb li a')
-    const gnbI = document.querySelectorAll('.head_gnb li a i')
-
-    head.addEventListener('mouseover', () => {
-
-        mainLogo.setAttribute('src', 'img/LOGO/01(1).png')
-        head.style.backgroundColor = '#fff'
-       
-        for (let i = 0; i < aTag.length; i++) {
-            aTag[i].style.color = 'black'
-        }
-        for (let i = 0; i < lnbA.length; i++) {
-            lnbA[i].style.color = 'black'
-        }
-        gnbI.forEach((value)=>{
-            value.style.color = 'black'
-        }) 
-    })
-
-    head.addEventListener('mouseleave', () => {
-
-        mainLogo.setAttribute('src', 'img/LOGO/01(3).png')
-        head.style.backgroundColor = ''
-       
-        for (let i = 0; i < aTag.length; i++) {
-            aTag[i].style.color = '#fff'
-        }
-        gnbI.forEach((value)=>{
-            value.style.color = '#fff'
-        }) 
-    })
-
-});
-
-
-
-
 //header wheel, add remove class event
-window.addEventListener('wheel',(e) => {
+// window.addEventListener('wheel',(e) => {
 
-const headFix = document.querySelector('header');
-
-
-    if (e.deltaY > 100 && scrollY > 100) {//휠다운
-        headFix.classList.remove("head_up");
-        headFix.classList.add("head_down");
-
-    }else if(e.deltaY == 0){//휠업
-        headFix.classList.add("head_down");
+// const headFix = document.querySelector('header');
 
 
-    }else if(e.deltaY < -50){
-        headFix.classList.remove("head_down");
-        headFix.classList.add("head_up");
-    }
+//     if (e.deltaY > 100 && scrollY > 100) {//휠다운
+//         headFix.classList.remove("head_up");
+//         headFix.classList.add("head_down");
 
-})
+//     }else if(e.deltaY == 0){
+//         headFix.classList.add("head_down");
+
+
+//     }else if(e.deltaY < -100){
+//         headFix.classList.remove("head_down");
+//         headFix.classList.add("head_up");
+//     }
+
+// })
 
 
 
@@ -110,5 +130,51 @@ document.addEventListener('DOMContentLoaded', () => {
         popupCount.style.display = 'none'
 
     })
+
+})
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    const newInfoBtn = document.querySelector('.new_info');
+    const newInfoDesc = document.querySelector('.new_info_desc');
+    const newInfoClose = document.querySelector('.new_box_close');
+
+    newInfoBtn.addEventListener('click', () => {
+        newInfoDesc.style.display = 'block'
+    })
+
+    newInfoClose.addEventListener('click', () => {
+        newInfoDesc.style.display = 'none'
+    })
+
+
+
+})
+
+
+//추천상품 circle click event
+document.addEventListener('DOMContentLoaded', () => {
+
+    const circle = document.querySelector('.circle_1');
+    const textBox = document.querySelector('.rectext_01');
+    const lineSpan = document.querySelector('.spanline2');
+
+    let state = false;
+
+    circle.addEventListener('click',()=>{
+
+        if(!state){
+            textBox.style.display = 'block'
+            lineSpan.style.transform = 'rotate(0deg)'
+            state = true
+        }else if(state){
+            textBox.style.display = 'none'
+            lineSpan.style.transform = 'rotate(90deg)'
+            state = false
+        }
+    })
+   
 
 })
