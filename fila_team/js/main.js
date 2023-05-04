@@ -1,7 +1,3 @@
-
-
-
-
 //header lnb mouseover mouseleave event
 window.addEventListener('DOMContentLoaded', () => {
     const mainLogo = document.querySelector('.logoimg');
@@ -14,31 +10,31 @@ window.addEventListener('DOMContentLoaded', () => {
 
         mainLogo.setAttribute('src', 'img/LOGO/01(1).png')
         head.style.backgroundColor = '#fff'
-       
+
         for (let i = 0; i < aTag.length; i++) {
             aTag[i].style.color = 'black'
         }
         for (let i = 0; i < lnbA.length; i++) {
             lnbA[i].style.color = 'black'
         }
-        gnbI.forEach((value)=>{
+        gnbI.forEach((value) => {
             value.style.color = 'black'
-        }) 
+        })
 
-      
+
     })
 
     head.addEventListener('mouseleave', () => {
 
         mainLogo.setAttribute('src', 'img/LOGO/01(3).png')
         head.style.backgroundColor = ''
-       
+
         for (let i = 0; i < aTag.length; i++) {
             aTag[i].style.color = '#fff'
         }
-        gnbI.forEach((value)=>{
+        gnbI.forEach((value) => {
             value.style.color = '#fff'
-        }) 
+        })
 
 
 
@@ -58,7 +54,7 @@ window.addEventListener('DOMContentLoaded', () => {
         //     }
         // }
 
-    
+
     })
 
 
@@ -82,7 +78,7 @@ window.addEventListener('scroll', (e) => {
             mainGnb[i].style.color = 'black'
         }
 
-    } else if(window.screenY <= 70){
+    } else if (window.screenY <= 70) {
         document.querySelector('header').style.backgroundColor = ''
         mainLogo.setAttribute('src', 'img/LOGO/01(3).png')
         for (let i = 0; i < mainLnb.length; i++) {
@@ -139,20 +135,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-document.addEventListener('DOMContentLoaded',()=>{
+document.addEventListener('DOMContentLoaded', () => {
 
     const newInfoBtn = document.querySelector('.new_info');
     const newInfoDesc = document.querySelector('.new_info_desc');
     const newInfoClose = document.querySelector('.new_box_close');
-   
-    newInfoBtn.addEventListener('click',()=>{
+
+    newInfoBtn.addEventListener('click', () => {
         newInfoDesc.style.display = 'block'
     })
 
-    newInfoClose.addEventListener('click',()=>{
+    newInfoClose.addEventListener('click', () => {
         newInfoDesc.style.display = 'none'
     })
-       
-    
+
+
+
+})
+
+
+//추천상품 circle click event
+document.addEventListener('DOMContentLoaded', () => {
+
+    const circle = document.querySelector('.circle_1');
+    const textBox = document.querySelector('.rectext_01');
+    const lineSpan = document.querySelector('.spanline2');
+
+    let state = false;
+
+    circle.addEventListener('click',()=>{
+
+        if(!state){
+            textBox.style.display = 'block'
+            lineSpan.style.transform = 'rotate(0deg)'
+            state = true
+        }else if(state){
+            textBox.style.display = 'none'
+            lineSpan.style.transform = 'rotate(90deg)'
+            state = false
+        }
+    })
+   
 
 })

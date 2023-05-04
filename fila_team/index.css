@@ -872,6 +872,7 @@ header{
 .swiper_2 .swiper-slide .new_wrap .new_text h4{
     text-align: center;
     margin-top: 20px;
+    font-size: 24px;
 }
 .swiper_2 .swiper-slide .new_wrap .new_text .first_p{
     font-size: 15px;
@@ -1024,6 +1025,7 @@ header{
 .magazine_section h1{
     text-align: center;
     margin-bottom: 50px;
+    font-size: 28px;
 }
 .magazine_section .magazine_wrap{
     display: flex;
@@ -1097,3 +1099,110 @@ header{
     opacity: 1;
 }
 
+
+
+/*************recommand section***************/
+
+.recommand_style{
+    width: 100%;
+}
+.recommand_style h1{
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 50px;
+}
+.recommand_style .rec_style_wrap{
+    display: flex;
+}
+.recommand_style .rec_style_wrap .recommand_box{
+    width: calc(100% - 66.6666% - 53.3333px);
+    margin-left: 40px;
+    position: relative;
+    
+}
+.recommand_style .rec_style_wrap .recommand_box:last-child{
+    margin-right: 40px;
+}
+.recommand_style .rec_style_wrap .recommand_box .rec_img_wrap{font-size: 0;}
+.recommand_style .rec_style_wrap .recommand_box .rec_img_wrap img{ 
+    width: 100%;
+    height: auto;
+}
+
+.recommand_style .rec_style_wrap .recommand_box .rec_circle{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #002053;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    right: 220px;
+    top: 330px;
+    
+}
+.recommand_style .rec_style_wrap .recommand_box .circle2{
+   
+    
+    
+}
+.recommand_style .rec_style_wrap .recommand_box .rec_circle span{
+    position: absolute;
+    top: 12px;
+    left: 4px;
+}
+.recommand_style .rec_style_wrap .recommand_box .rec_circle span:nth-child(1){
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #002053;
+}
+.recommand_style .rec_style_wrap .recommand_box .rec_circle span:nth-child(2){
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #002053;
+    transform: rotate(90deg);
+    transition: .3s;
+}
+/* .recommand_style .rec_style_wrap .recommand_box .rec_circle:hover span:nth-child(2){
+    transform: rotate(0deg);
+} */ /*js처리*/
+
+
+.recommand_style .rec_style_wrap .recommand_box .rec_text{
+    width: 180px;
+    position: absolute;
+    top: 370px;
+    right: 50px;
+    background-color: #fff;
+    border-radius: 0 10px 10px 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: none;
+}
+.recommand_style .rec_style_wrap .recommand_box .rec_text .rec_text_tit h4{
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.recommand_style .rec_style_wrap .recommand_box .rec_text .rec_text_desc p{
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: right;
+}
+.recommand_style .rec_style_wrap .recommand_box .rec_text .rec_text_buy{
+    font-size: 25px;
+    text-align: center;
+}
+.recommand_style .rec_style_wrap .recommand_box .rec_text .rec_text_buy i{
+    margin-right: 20px;
+    margin-bottom: 10px;
+    transition: .3s;
+}
+.recommand_style .rec_style_wrap .recommand_box .rec_text .rec_text_buy i:last-child{margin: 0;}
+.recommand_style .rec_style_wrap .recommand_box .rec_text .rec_text_buy i:first-child:hover{
+    color: red;
+}
+.recommand_style .rec_style_wrap .recommand_box .rec_text .rec_text_buy i:last-child:hover{
+    color: #002053;
+}
