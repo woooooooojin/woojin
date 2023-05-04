@@ -704,6 +704,7 @@ header{
     margin-top: 100px;
     margin-bottom: 100px;
     position: relative;
+    
 }
 
 .section2 h2 {
@@ -779,7 +780,7 @@ header{
     /* height: ; */
     /* display: flex; */
     background: #fff;
-    opacity: 0.5;
+    opacity: 0.7;
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease-in;
