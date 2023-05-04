@@ -798,14 +798,12 @@ header{
     transform: scale(1);
     background: #fff;
     opacity: 1;
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
     /* margin-right: 50px; */
    
 }
 
 .swiper_2 .swiper-slide.swiper-slide-prev .new_text{
-    /* display: none; */
-    /* box-shadow: 0px 0px 10px gray ; */
     opacity: 0;
 }
 .swiper_2 .swiper-slide.swiper-slide-prev{
@@ -815,8 +813,7 @@ header{
     transform: translateX(80px);
 }
 .swiper_2 .swiper-slide.swiper-slide-next .new_text{
-    /* display: none; */
-    /* box-shadow: 0px 0px 10px gray ; */
+    
     opacity: 0;
 }
 
