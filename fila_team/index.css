@@ -701,6 +701,7 @@ header{
     width: 100%;
     margin-top: 100px;
     margin-bottom: 100px;
+    position: relative;
 }
 
 .section2 h2 {
@@ -769,22 +770,24 @@ header{
 .swiper_2 {
     position: relative;
 }
-
+.swiper_2 .swiper-wrapper{
+   
+}
 .swiper_2 .swiper-slide {
     width: 750px;
-    /* height: 550px; */
+    /* height: ; */
     /* display: flex; */
     background: #fff;
-    opacity: 0.3;
+    opacity: 0.5;
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease-in;
-    transform: scale(0.85);
+    transform: scale(0.8);
     margin: 0 50px;
     color: black;
     font-size: 30px;
-    box-shadow: 10px 10px 10px gray ;
-
+    
+   
 
 
 }
@@ -793,21 +796,25 @@ header{
     transform: scale(1);
     background: #fff;
     opacity: 1;
+    border: 1px solid #ccc;
+   
 }
 
-/* .swiper_2 .swiper-slide.swiper-slide-prev .new_text{
-    display: none;
+.swiper_2 .swiper-slide.swiper-slide-prev .new_text{
+    /* display: none; */
+    /* box-shadow: 0px 0px 10px gray ; */
 }
 .swiper_2 .swiper-slide.swiper-slide-next .new_text{
-    display: none;
-} */
+    /* display: none; */
+    /* box-shadow: 0px 0px 10px gray ; */
+}
 
 
 .swiper_2 .swiper-button-next {
     top: 50%;
     transform: translateY(-50%);
     left: auto;
-    right: 20%;
+    right: 25%;
     color: black;
     border: 0;
 
@@ -817,19 +824,21 @@ header{
     color: black;
     top: 50%;
     transform: translateY(-50%);
-    left: 20%;
+    left: 25%;
     border: 0;
 
 }
 
 .swiper_2 .swiper-button-next:after {
-    font-size: 50px;
+    font-size: 80px;
     border: 0;
+    color: #002053;
 }
 
 .swiper_2 .swiper-button-prev:after {
-    font-size: 50px;
+    font-size: 80px;
     border: 0;
+    color: #002053;
 }
 .swiper_2 .swiper-slide .new_wrap{
     display: flex;
@@ -845,9 +854,9 @@ header{
 
 .swiper_2 .swiper-slide .new_wrap .new_text{
     width: calc(100% - 60% - 20px);
-    /* margin-left: 10px; */
-    border: 1px solid #eee;
-    border-left: 0;
+    margin-left: 10px;
+    /* border: 1px solid #eee;
+    border-left: 0; */
     padding: 0 10px;
 }
 .swiper_2 .swiper-slide .new_wrap .new_text h4{
@@ -881,10 +890,11 @@ header{
     text-decoration: underline;
     text-align: right;
     margin-top: 20px;
+    cursor: pointer;
 }
 .swiper_2 .swiper-slide .new_wrap .new_text .new_buy{
     text-align: right;
-    margin-top: 120px;
+    margin-top: 70px;
 
 }
 .swiper_2 .swiper-slide .new_wrap .new_text .new_buy i{
@@ -898,6 +908,62 @@ header{
 .swiper_2 .swiper-slide .new_wrap .new_text .new_buy i:nth-child(2):hover{
     color: #002053;
 }
+
+
+
+/********상품정보고시********/
+.new_info_desc{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 150px 0;
+    position: absolute;
+    top: 0; left: 0;
+    display: none;
+    z-index: 9999;
+}
+.new_info_desc .new_desc_wrap{
+    width: 600px;
+    height: 600px;
+    background-color: #fff;
+    margin: 0 auto;
+    position: relative;
+    
+    
+}
+.new_info_desc .new_desc_wrap h4{
+    font-size: 20px;
+    padding: 10px;
+}
+.new_info_desc .new_desc_wrap .new_desc_box{
+}
+.new_info_desc .new_desc_wrap .new_desc_box dl{
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    margin-top: 10px;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 10px;
+    
+}
+.new_info_desc .new_desc_wrap .new_desc_box dl:last-child{border: 0;}
+.new_info_desc .new_desc_wrap .new_desc_box dl dt{
+    width: 200px;
+    font-weight: bold;
+}
+.new_info_desc .new_desc_wrap .new_desc_box dl dd{
+    width: calc(100% - 200px);
+}
+
+.new_box_close{
+    text-align: right;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
 
 
 /************back_fix***********/
@@ -927,7 +993,7 @@ header{
 .back_fix .background_wrap p:nth-child(2){
     color: #fff;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 30px;
     writing-mode: vertical-rl;
     position: absolute;
     top: 50px;

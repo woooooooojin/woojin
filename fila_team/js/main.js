@@ -112,3 +112,23 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
 })
+
+
+
+document.addEventListener('DOMContentLoaded',()=>{
+
+    const newInfoBtn = document.querySelector('.new_info');
+    const newInfoDesc = document.querySelector('.new_info_desc');
+    const newInfoClose = document.querySelector('.new_box_close');
+   
+    newInfoBtn.addEventListener('click',()=>{
+        newInfoDesc.style.display = 'block'
+    })
+
+    newInfoClose.addEventListener('click',()=>{
+        newInfoDesc.style.display = 'none'
+    })
+       
+    
+
+})
