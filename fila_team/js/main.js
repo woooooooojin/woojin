@@ -205,8 +205,8 @@ document.addEventListener('DOMContentLoaded', () => {
 //추천상품 circle click event
 document.addEventListener('DOMContentLoaded', () => {
 
-    const circle = document.querySelector('.circle_1');
-    const textBox = document.querySelector('.rectext_01');
+    const circle = document.querySelector('.rec_circle');
+    const textBox = document.querySelector('.rec_text');
     const lineSpan = document.querySelector('.spanline2');
 
     let state = false;

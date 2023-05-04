@@ -852,15 +852,15 @@ header{
     color: #002053;
 }
 .swiper_2 .swiper-pagination-bullet{
-    width: 20px;
-    height: 20px;
+    width: 95px;
+    height: 7px;
     border-radius: 0;
     margin: 0 15px !important;
     background-color: #ccc;
 }
-.swiper_2 .swiper-pagination-bullet:nth-child(2n){
+/* .swiper_2 .swiper-pagination-bullet:nth-child(2n){
     border-radius: 50%;
-}
+} */
 .swiper_2 .swiper-pagination{
     bottom: -30px;
 }
@@ -1158,13 +1158,13 @@ header{
     border-radius: 50%;
     position: absolute;
     right: 220px;
-    top: 330px;
+    top: 250px;
     
 }
-.recommand_style .rec_style_wrap .recommand_box .circle2{
+.recommand_style .rec_style_wrap .recommand_box .circle_2{
+   top: 150px;
+   right: 20px;
    
-    
-    
 }
 .recommand_style .rec_style_wrap .recommand_box .rec_circle span{
     position: absolute;
@@ -1193,7 +1193,7 @@ header{
 .recommand_style .rec_style_wrap .recommand_box .rec_text{
     width: 180px;
     position: absolute;
-    top: 370px;
+    top: 290px;
     right: 50px;
     background-color: #fff;
     border-radius: 0 10px 10px 10px;
