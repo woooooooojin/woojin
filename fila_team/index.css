@@ -783,6 +783,7 @@ header{
     margin: 0 50px;
     color: black;
     font-size: 30px;
+    box-shadow: 10px 10px 10px gray ;
 
 
 
@@ -794,12 +795,12 @@ header{
     opacity: 1;
 }
 
-.swiper_2 .swiper-slide.swiper-slide-prev .new_text{
+/* .swiper_2 .swiper-slide.swiper-slide-prev .new_text{
     display: none;
 }
 .swiper_2 .swiper-slide.swiper-slide-next .new_text{
     display: none;
-}
+} */
 
 
 .swiper_2 .swiper-button-next {
@@ -883,13 +884,13 @@ header{
 }
 .swiper_2 .swiper-slide .new_wrap .new_text .new_buy{
     text-align: right;
-    margin-top: 50px;
+    margin-top: 120px;
 
 }
 .swiper_2 .swiper-slide .new_wrap .new_text .new_buy i{
     transition: .3s;
     font-size: 40px;
-    margin-left: 15px;
+    margin-right: 50px;
 }
 .swiper_2 .swiper-slide .new_wrap .new_text .new_buy i:nth-child(1):hover{
     color: red;
