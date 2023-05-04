@@ -1112,7 +1112,7 @@
 
                         </div>
 
-                        <!-- <div class="swiper-pagination"></div> -->
+                        <div class="swiper-pagination"></div>
 
 
                         <div class="swiper-button-prev"></div>
@@ -1432,6 +1432,7 @@
 
 
     <script>
+        
         const swiper_2 = new Swiper('.swiper_2', {
 
             direction: 'horizontal',
@@ -1450,9 +1451,12 @@
             roundLengths: true,
 
             // 페이지네이션
-            // pagination: {
-            //     el: '.swiper-pagination',
-            // },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                
+                
+            },
 
             // 네비게이션
             navigation: {
