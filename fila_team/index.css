@@ -1040,7 +1040,7 @@ header{
 .magazine_section{
     width: 100%;
     margin-top: 200px;
-    height: 800px;
+    /* height: 800px; */
    
 }
 .magazine_section h1{
@@ -1126,6 +1126,7 @@ header{
 
 .recommand_style{
     width: 100%;
+    margin-top: 200px;
 }
 .recommand_style h1{
     text-align: center;
