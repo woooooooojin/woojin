@@ -1554,3 +1554,70 @@ header:hover a {
 
 
 
+
+/*********footer********/
+footer{
+    width: 100%;
+}
+
+.footer_wrap{
+    border-top: 1px solid #ccc;
+    background-color: #eee;
+    padding: 20px 10px;
+}
+
+.footer_wrap .footer_box1{
+    display: flex;
+}
+.footer_wrap .footer_box1 .foot_logo{
+    width: 20%;
+}
+.footer_wrap .footer_box1 .foot_logo img{
+    width: 90px;
+    height: 30px;
+}
+
+.footer_wrap .footer_box1 .foot_menu01{
+    width: 20%;
+}
+.footer_wrap .footer_box1 h4{
+    font-size: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.footer_wrap .footer_box1 li{
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.footer_wrap .footer_box1 .foot_menu02{
+    width: 20%;
+}
+.footer_wrap .footer_box1 .foot_menu03{
+    width: 20%;
+}
+.footer_wrap .footer_box1 .foot_menu04{
+    width: 20%;
+}
+
+.footer_wrap .footer_box2{
+    margin-top: 30px;
+}
+.footer_wrap .footer_box2 .foot_menu05{
+    display: flex;
+}
+.footer_wrap .footer_box2 .foot_menu05 li{
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.footer_wrap .footer_box2 .foot_menu05 li.red{color: red;}
+.footer_wrap .footer_box2 .foot_menu05 li.blue{color: blue;}
+.footer_wrap .footer_box2 .foot_menu05_1{
+    width: 20%;
+}
+.footer_wrap .footer_box2 .foot_menu05_1 select{
+    width: 45%;
+    text-align: center;
+    outline: none;
+    background-color: #fff;
+
+}
