@@ -1153,7 +1153,7 @@ header:hover a {
     width: 0px;
     white-space: nowrap;
     overflow: hidden;
-    animation: type 0.35s infinite, typing2 4s infinite steps(35);
+    animation: type 0.35s infinite, typing2 5s infinite steps(35);
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%,-50%);
@@ -1560,6 +1560,7 @@ header:hover a {
 footer{
     width: 100%;
     text-align: center;
+    margin-top: 100px;
 }
 
 .footer_wrap{
@@ -1603,7 +1604,7 @@ footer{
 }
 
 .footer_wrap .footer_box2{
-    margin-top: 30px;
+    margin-top: 50px;
 }
 .footer_wrap .footer_box2 .foot_menu05{
     display: flex;
@@ -1621,6 +1622,80 @@ footer{
     width: 45%;
     text-align: center;
     outline: none;
-    background-color: #fff;
+    background-color: #eee;
+    border: 0;
+    font-size: 16px;
 
 }
+.footer_wrap .footer_box2 .foot_menu05_1 select option:nth-child(1){
+    display: none;
+}
+
+.footer_wrap .footer_box3{
+    width: 100%;
+    margin-top: 50px;
+}
+.footer_wrap .footer_box3 .menu06{
+    display: flex;
+}
+.footer_wrap .footer_box3 .menu06 .menu06_1{
+    width: 50%;
+    text-align: left;
+    margin-left: 90px;
+    
+}
+.footer_wrap .footer_box3 .menu06 .menu06_1 .menu06_desc{}
+.footer_wrap .footer_box3 .menu06 .menu06_1 .menu06_desc p{}
+
+.footer_wrap .footer_box3 .menu06 .menu06_1 .menu06_desc .foot_span01{
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+}
+.footer_wrap .footer_box3 .menu06 .menu06_1 .menu06_desc .foot_span02{
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.footer_wrap .footer_box3 .menu06 .menu06_2{
+    width: 25%;
+    
+    text-align: left;
+    padding-left: 50px;
+}
+.footer_wrap .footer_box3 .menu06 .menu06_2 .cs_box{
+   border: 1px solid black;
+    text-align: center;
+    /* width: 50%; */
+    height: 35px;
+    line-height: 35px;
+    font-size: 22px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+.footer_wrap .footer_box3 .menu06 .menu06_2 h4{
+    margin-top: 10px;
+    font-size: 20px;
+}
+.footer_wrap .footer_box3 .menu06 .menu06_2 p.day{
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.footer_wrap .footer_box3 .menu06 .menu06_3{
+    width: 25%;
+    
+    
+}
+
+.footer_wrap .footer_box3 .menu06 .menu06_3 i{
+    font-size: 35px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+.footer_wrap .footer_box3 .menu06 .menu06_3 i:nth-child(1){
+    margin-left: 0;
+}
+
+
