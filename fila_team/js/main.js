@@ -121,6 +121,28 @@ window.addEventListener('scroll', (e) => {
 })
 
 
+// header wheel, add remove class event
+window.addEventListener('wheel', (e) => {
+
+    const headFix = document.querySelector('header');
+
+
+    if (e.deltaY > 10) { 
+        headFix.classList.remove("head_up");
+        headFix.classList.add("head_down");
+
+    } else if (e.deltaY == 0) { 
+        headFix.classList.add("head_down");
+
+
+    } else if (e.deltaY < -10) {
+        headFix.classList.remove("head_down");
+        headFix.classList.add("head_up");
+    }
+
+})
+
+
 
 
 
