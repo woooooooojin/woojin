@@ -1836,7 +1836,7 @@ footer{
 }
 .quick_menu .quick_wrap .quick_box .quick_icon i{
     font-size: 30px;
-    color: #002053;
+    color:#999;
     transition: .3s;
 }
 .quick_menu .quick_wrap .quick_box .quick_icon .usericon{
@@ -1855,8 +1855,8 @@ footer{
     padding-left: 7px;
     padding-top: 10px;
 }
-.quick_menu .quick_wrap .quick_box .quick_icon:hover i{
-   color:maroon;
+.quick_menu .quick_wrap .quick_box:hover i{
+   color:#002053;
 }
 
 
@@ -1907,5 +1907,5 @@ footer{
     width: 50px;
     height: 50px;
     font-size: 35px;
-    color: tomato;
+    color: red;
 }
