@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom08 05/08</title>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+
+         const btn = document.querySelector('.btn')       
+         const detailBox = document.querySelector('.detail')
+
+         let isOpen = false;
+
+         btn.onclick = detailOpen
+
+         function detailOpen (){
+
+            if(!isOpen){
+                detailBox.style.display = 'block'
+                btn.innerHTML = '닫기'
+                isOpen = true
+            }else if(isOpen){
+                detailBox.style.display = 'none'
+                btn.innerHTML = '상세설명보기'
+                isOpen = false;
+                
+            }
+
+         }
+
+
+
+        })
+    </script>
+
+
+    <style>
+
+       .container{
+        width: 500px;
+        
+       }
+       .container img{
+        width: 100%;
+        display: block;
+       }
+       .container .detail{
+        display: none;
+       }
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <img src="./images/bx_img01.jpg" alt="img">
+
+        <button class="btn">상세설명보기</button>
+
+        <div class="detail">
+            <h3>frontend</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis in voluptatum nobis neque atque, sed dolorum commodi voluptatibus quidem eius consequatur dolores at quisquam suscipit dolor animi accusamus. Neque harum facere consequatur aliquid expedita soluta incidunt quo tempora, eos, animi impedit, et necessitatibus a id earum. Tempora nobis necessitatibus fugit.</p>
+        
+        </div><!--detail-->
+        
+    </div><!--container-->
+
+
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom09 05/08</title>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+
+            const img = document.querySelector('.thumnail img')
+            const idx01 = document.querySelector('.idx01')
+            const idx02 = document.querySelector('.idx02')
+            const idx03 = document.querySelector('.idx03')
+
+            
+            idx01.addEventListener('click',()=>{
+                img.setAttribute('src','./images/spring.jpg')
+            })
+
+            idx02.addEventListener('click',()=>{
+                img.setAttribute('src','./images/summer.jpg')
+            })
+            idx03.addEventListener('click',()=>{
+                img.setAttribute('src','./images/winter.jpg')
+            })
+
+
+
+        })
+    </script>
+
+
+    <style>
+        .thumnail {
+            width: 300px;
+            height: 300px;
+        }
+
+        .thumnail img {
+            display: block;
+            width: 100%;
+        }
+
+        .thumb_index{
+            display: flex;
+            margin-top: 20px;
+        }
+        .index01{
+            width: 100px;
+            height: 100px;
+        }
+        .index01 img{
+            width: 100%;
+            display: block;
+            
+        }
+       
+    </style>
+</head>
+
+<body>
+
+    <div class="thumnail">
+        <img src="./images/spring.jpg" alt="img">
+    </div>
+    
+    <div class="thumb_index">
+        <div class="index01 idx01">
+            <img src="./images/spring.jpg" alt="">
+        </div>
+
+        <div class="index01 idx02">
+            <img src="./images/summer.jpg" alt="">
+        </div>
+
+        <div class="index01 idx03">
+            <img src="./images/winter.jpg" alt="">
+        </div>
+      
+    </div>
+
+
+</body>
+
+</html>

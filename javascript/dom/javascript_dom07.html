@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom07 05/08</title>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+
+         const btnOpen = document.querySelector('.open')       
+         const btnClose = document.querySelector('.close')       
+         const detailBox = document.querySelector('.detail')
+
+
+         btnOpen.onclick = showDetail
+         btnClose.onclick = hiddenDetail
+
+         function showDetail(){
+
+            detailBox.style.display = 'block'
+            btnOpen.style.display = 'none'
+            // this.style.display = 'none'
+
+         }
+
+         function hiddenDetail(){
+
+            detailBox.style.display = 'none'
+            btnOpen.style.display = 'block'
+
+         }
+
+
+
+        })
+    </script>
+
+
+    <style>
+
+       .container{
+        width: 500px;
+        
+       }
+       .container img{
+        width: 100%;
+        display: block;
+       }
+       .container .detail{
+        display: none;
+       }
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <img src="./images/bx_img01.jpg" alt="img">
+
+        <button class="open">상세설명보기</button>
+
+        <div class="detail">
+            <h3>frontend</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis in voluptatum nobis neque atque, sed dolorum commodi voluptatibus quidem eius consequatur dolores at quisquam suscipit dolor animi accusamus. Neque harum facere consequatur aliquid expedita soluta incidunt quo tempora, eos, animi impedit, et necessitatibus a id earum. Tempora nobis necessitatibus fugit.</p>
+        <button class="close">상세설명닫기</button>
+        </div><!--detail-->
+        
+    </div><!--container-->
+
+
+</body>
+
+</html>

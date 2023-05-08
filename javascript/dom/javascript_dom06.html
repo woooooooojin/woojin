@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom06 05/08</title>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const welcome = document.querySelector('.welcome');
+            const bye = document.querySelector('.bye')
+            const text = document.querySelector('.text')
+
+            welcome.addEventListener('click',()=>{
+
+                text.style.color = 'red';
+                // text.innerText = '방문을환영합니다';
+                text.textContent = '방문을 환영합니다'; 
+                //텍스트를 넣을때
+
+            })
+
+            bye.addEventListener('click',()=> {
+
+                text.style.color = 'blue';
+                text.innerHTML = '<a href = "http://www.naver.com">다음에 방문해주세요</a>';
+
+            })
+
+            
+
+
+
+        })
+    </script>
+
+
+    <style>
+
+        .text{
+            width: 500px;
+            height: 300px;
+            border: 1px solid black;
+            line-height: 300px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <button class="welcome">welcome</button>
+    <button class="bye">bye</button>
+
+    <div class="text">버튼을 눌러주세요</div>
+
+
+</body>
+
+</html>

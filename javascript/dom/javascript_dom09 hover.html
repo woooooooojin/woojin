@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom09 05/08</title>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+
+            const img = document.querySelector('.thumnail img')
+
+            // img.onmouseover = overImg
+            // img.onmouseout = outImg
+
+            // function overImg (){
+            //     img.src = './images/new01_on.jpg'
+
+            // }
+            // function outImg(){
+            //     img.src = './images/new01_off.jpg'
+            // }
+
+            
+
+            img.addEventListener('mouseover', () => {
+
+                img.setAttribute('src', './images/new01_on.jpg')
+
+            })
+
+            img.addEventListener('mouseout', () => {
+
+                img.setAttribute('src', './images/new01_off.jpg')
+
+            })
+
+
+
+        })
+    </script>
+
+
+    <style>
+        .thumnail {
+            width: 300px;
+            height: 300px;
+        }
+
+        .thumnail img {
+            display: block;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="thumnail">
+        <img src="./images/new01_off.jpg" alt="img">
+    </div>
+
+
+</body>
+
+</html>
