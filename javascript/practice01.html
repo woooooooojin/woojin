@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,42 +8,122 @@
     <title>Document</title>
 
     <script>
+        document.addEventListener('DOMContentLoaded', () => {
 
-        // let dan = 3;
-        // let gugu = 8;
-        // let string = `${dan} 곱하기 ${gugu} 은 ${dan * gugu} 입니다 `;
-        // document.write(string);
+            let newSection = document.createElement('section')
 
-        // let studentScore = [50, 60 ,70 ,80];
-        // document.write(studentScore[2])
+            let newTit = document.createElement('h1')
+            let newTitTxt = document.createTextNode('title')
 
-        // let studentScore = {
-        //     koreanScore:80,
-        //     englishScore:90,
-        //     mathScore:30,
-        // }
-        // document.write(studentScore.koreanScore);
-        // document.write(studentScore['englishScore'])
+            newTit.setAttribute('class', 'tit')
+            newTit.appendChild(newTitTxt);
+            newSection.appendChild(newTit)
 
-        // let food = 'melon';
-        // switch(food){
-        //     case 'melon':
-        //         document.write('fruit'); break;
 
-        //     case 'apple':
-        //         document.write('fruit'); break;
+            let ul = document.createElement('ul')
+            ul.setAttribute('class', 'list_wrap')
 
-        //     case 'carrot':
-        //         document.write('vegetable'); break;
+            let li = document.createElement('li')
+            li.setAttribute('class', 'list')
 
-        //     default:
-        //         document.write('its not fruit and vegetable')
-        //         break;
-        // }
+            newSection.appendChild(ul)
+            ul.appendChild(li)
+
+
+            let btnWrap = document.createElement('div')
+            btnWrap.setAttribute('class','btn_wrap')
+            newSection.appendChild(btnWrap)
+
+
+            let addBtn = document.createElement('button')
+            addBtn.setAttribute('class','addbtn')
+            let addBtnTxt = document.createTextNode('추가')
+
+            let deleteBtn = document.createElement('button')
+            deleteBtn.setAttribute('class','deletebtn')
+            let deleteBtnTxt = document.createTextNode('삭제')
+
+            newSection.appendChild(addBtn)
+            addBtn.appendChild(addBtnTxt)
+
+            newSection.appendChild(deleteBtn)
+            deleteBtn.appendChild(deleteBtnTxt)
+
+            btnWrap.appendChild(addBtn)
+            btnWrap.appendChild(deleteBtn)
+
+
+           addBtn.addEventListener('click',()=>{
         
+            li.after(li);
+
+           })
+
+           deleteBtn.addEventListener('click',()=>{
+
+            li.remove();
+
+           })
+
+
+
+
+
+            document.body.appendChild(newSection)
+
+
+
+
+        })
     </script>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        section{
+            width: 700px;
+            height: 1000px;
+            border: 1px solid black;
+            margin: 0 auto;
+        }
+        .tit {
+            font-size: 28px;
+            text-align: center;
+        }
+        li{list-style: none;}
+
+        .list_wrap{}
+        .list{
+            width: 600px;
+            height: 50px;
+            margin: 0 auto;
+            border: 1px solid black;
+        }
+
+        .btn_wrap{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+
+        .addbtn{
+            width: 150px;
+            height: 35px;
+           
+        }
+        .deletebtn{
+            width: 150px;
+            height: 35px;
+        }
+        
+    </style>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>

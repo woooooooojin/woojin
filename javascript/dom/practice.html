@@ -8,112 +8,7 @@
 
     <script>
 
-        // window.onload = function(){
-
-        //     let out = '<ol>'
-
-        //         out+= '<li>봄</li>';
-        //         out+= '<li>여름</li>';
-        //         out+= '<li>가을</li>';
-        //         out+= '<li>겨울</li>';
-        //         out+= '</ol>'
-
-            
-        //     document.body.innerHTML = out;
-        //     document.body.innerHTML += '<h1>우리나라 사계절</h1>'
-        // }
-
-            // window.onload = function(){
-            //     let headTag = document.getElementsByTagName('h3');
-            //     headTag[0].style.color = 'blue'
-            // }
-
-        // document.addEventListener('DOMContentLoaded', function(){
-
-        //     document.getElementById('box01').style.color = 'green'
-        //     document.getElementById('box01').style.fontSize ='20px' 
-
-        //     document.getElementsByClassName('box02')[0].style.color = 'blue'
-
-        //     document.getElementsByTagName('li')[2].style.color = 'red'
-
-        //     document.querySelector('#box01').style.backgroundColor = 'lightgray'
-        //     document.querySelector('.box02').style.fontSize = '30px'
-        //     document.querySelectorAll('.box03 li')[0].style.backgroundColor = 'lightpink'
-
-
-        //     const li = document.querySelectorAll('.box03 li');
-
-        //     for(let i = 0; i < li.length; i++){
-        //         li[i].style.fontSize = '20px'
-        //     }
-
-        //     li.forEach((value) => {
-        //         value.style.color = 'pink'
-        //     })
-
-        // })
-
-
-        // function showBox(){
-        //     document.querySelector('.box').style.display = 'block'
-        // }
-        // function hiddenBox(){
-        //     document.querySelector('.box').style.display = 'none'
-        // }
-
-        // document.addEventListener('DOMContentLoaded', () => {
-
-        //     const showBtn = document.querySelector('.show_btn');
-        //     const hiddenBtn = document.querySelector('.hidden_btn');
-        //     const textBox = document.querySelector('.box')
-
-        //     showBtn.onclick = showBox
-        //     hiddenBtn.onclick = hiddenBox
-
-        //     function showBox(){
-        //         textBox.style.display = 'block'
-        //     }
-        //     function hiddenBox(){
-        //         textBox.style.display = 'none'
-        //     }
-
-        // })
-
-
-        // document.addEventListener('DOMContentLoaded', () => {
-
-        //     const showBtn = document.querySelector('.show_btn')
-        //     const hiddenBtn = document.querySelector('.hidden_btn');
-        //     const textBox = document.querySelector('.box');
-
-        //     showBtn.addEventListener('click',function(){
-        //         textBox.style.display = 'block'
-        //     })
-        //     hiddenBtn.addEventListener('click', ()=>{
-        //         textBox.style.display = 'none'
-        //     })
-
-        // })
-
-        document.addEventListener('DOMContentLoaded', () => {
-
-            const Btn = document.querySelector('.btn')
-
-            const textBox = document.querySelector('.box')
-
-            let state = false;
-
-            Btn.addEventListener('click',()=>{
-                if(state === false){
-                    textBox.style.display = 'block'
-                    state = true
-                }else{
-                    textBox.style.display = 'none'
-                    state = false
-                }
-            })
-        })
+       
 
 
 
@@ -122,27 +17,11 @@
 
 <style>
 
-    .box{
-        width: 300px;
-        height: 200px;
-        border: 1px solid black;
-        text-align: center;
-        line-height: 200px;
-        background-color: #eee;
-        display: none;
-        
-    }
-
 </style>
 </head>
 <body>
-    <!-- <h3>좋은날</h3>
-    <h3>행복한날</h3>
-    <h5>즐거운날</h5> -->
-    
-    <button class="btn" >show</button>
    
+    
 
-    <div class="box">text</div>
 </body>
 </html>
