@@ -209,3 +209,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 })
+
+
+
+//gnb search box  click event
+document.addEventListener('DOMContentLoaded',()=>{
+    const searchClose = document.querySelector('.search_close')
+    const searchBox = document.querySelector('.search_box')
+
+    searchClose.addEventListener('click',()=>{
+        searchBox.style.display = 'none';
+    })
+
+    const gnbSearch = document.querySelector('.gnb_search')
+
+    gnbSearch.addEventListener('click',()=> {
+        searchBox.style.display = 'block'
+    })
+})
