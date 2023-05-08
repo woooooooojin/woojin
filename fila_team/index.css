@@ -930,7 +930,7 @@ header:hover a {
     top: 50%;
     transform: translateY(-50%);
     left: auto;
-    right: 320px;
+    right: 3%;
     color: black;
     border: 0;
 
@@ -940,7 +940,7 @@ header:hover a {
     color: black;
     top: 50%;
     transform: translateY(-50%);
-    left: 320px;
+    left: 3%;
     border: 0;
 
 }
