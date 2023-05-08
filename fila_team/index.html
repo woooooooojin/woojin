@@ -27,30 +27,40 @@
     <script>
         $(function () {
 
-
+            //lnb slide toggle function
 
             $('.lnb_women').click(function () {
                 $('.drop_women').slideToggle(300);
+                $('.drop_men').css('display', 'none');
+                $('.drop_kids').css('display', 'none');
+                $('.drop_brand').css('display', 'none');
                 // $('.head_lnb ul li a').css('color','black')
                 // $('.head_logo .imgwrap img').attr('src','./img/LOGO/01(1).png')
 
             })
 
 
-
-
             $('.lnb_men').click(function () {
                 $('.drop_men').slideToggle(300);
+                $('.drop_women').css('display', 'none');
+                $('.drop_kids').css('display', 'none');
+                $('.drop_brand').css('display', 'none');
                 // $('.head_lnb ul li a').css('color','black')
             })
 
             $('.lnb_kids').click(function () {
                 $('.drop_kids').slideToggle(300);
+                $('.drop_women').css('display', 'none');
+                $('.drop_men').css('display', 'none');
+                $('.drop_brand').css('display', 'none');
                 // $('.head_lnb ul li a').css('color','black')
             })
 
             $('.lnb_brand').click(function () {
                 $('.drop_brand').slideToggle(300);
+                $('.drop_women').css('display', 'none');
+                $('.drop_men').css('display', 'none');
+                $('.drop_kids').css('display', 'none');
                 // $('.head_lnb ul li a').css('color','black')
             })
 
@@ -78,7 +88,58 @@
             //     }
             // })
 
+
+
+            //dir btn event
+            $(window).scroll(function () {
+
+                if ($(window).scrollTop() >= 500) {
+                    $('.dir_btn').stop().animate({
+                        right: 0,
+                    }, 500)
+                } else {
+                    $('.dir_btn').stop().animate({
+                        right: -50,
+                    }, 500)
+                }
+            })
+
+            $('.top_btn').click(function (e) {
+                e.preventDefault();
+
+                $('html, body').stop().animate({
+                    scrollTop: 0,
+                }, 300)
+            })
+
+            $('.bot_btn').click(function (e) {
+                e.preventDefault();
+
+                $('html, body').stop().animate({
+                    scrollTop: $(document).height(),
+                }, 300)
+            })
+
+
+
+
+
+
         })
+
+        $(function(){
+            
+            $('.quick_menu').css('top',$(window).height() / 2 - $('.quick_menu').height()/2 );
+            $(window).scroll(function(){
+
+                let point = $(this).scrollTop() + ($(window).height() / 2 - $('.quick_menu').height() / 2)
+
+                $('.quick_menu').stop().animate({
+                    top:point,
+                },300)
+            })
+        }) // quickmenu 
+       
     </script>
 
 
@@ -470,6 +531,8 @@
 
                 </div>
                 <!--dropdown menu wrap end-->
+
+               
             </div>
             <!--container -->
 
@@ -542,6 +605,17 @@
 
 
     </header>
+    
+    <div class="search_box">
+        <div class="search_box_warp">
+
+            <div class="search_input">
+                <input type="search" placeholder="검색어입력">
+            </div>
+
+
+        </div><!--searchbox wrap end-->
+    </div><!--search box-->
 
 
 
@@ -1180,12 +1254,16 @@
                             <div class="mgz_desc">
                                 <h4>FOriginal Tennis OG 1985</h4>
                                 <p>당시 최고의 퍼포먼스 슈즈 <br />FILA 대표 코트 아이템<br />' Original Tennis OG 1985 '</p>
-                            </div><!--mgz desc-->
-                        </div><!--mgz img-->
-                    </div><!--mgz cont-->
+                            </div>
+                            <!--mgz desc-->
+                        </div>
+                        <!--mgz img-->
+                    </div>
+                    <!--mgz cont-->
                     <div class="mgz_tit">
                         <p>Original Tennis OG 1985</p>
-                    </div><!--mgz tit -->
+                    </div>
+                    <!--mgz tit -->
                 </div>
                 <!--mgz box-->
 
@@ -1299,7 +1377,8 @@
                     <div class="sns_desc">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, iste.</p>
                     </div>
-                </div><!--snsbox end-->
+                </div>
+                <!--snsbox end-->
 
                 <div class="sns_box">
                     <div class="sns_img">
@@ -1309,7 +1388,8 @@
                     <div class="sns_desc">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, cupiditate.</p>
                     </div>
-                </div><!--snsbox end-->
+                </div>
+                <!--snsbox end-->
 
                 <div class="sns_box">
                     <div class="sns_img">
@@ -1319,7 +1399,8 @@
                     <div class="sns_desc">
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita, facere!</p>
                     </div>
-                </div><!--snsbox end-->
+                </div>
+                <!--snsbox end-->
 
                 <div class="sns_box">
                     <div class="sns_img">
@@ -1329,7 +1410,8 @@
                     <div class="sns_desc">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, tempore.</p>
                     </div>
-                </div><!--snsbox end-->
+                </div>
+                <!--snsbox end-->
 
                 <div class="sns_box">
                     <div class="sns_img">
@@ -1339,7 +1421,8 @@
                     <div class="sns_desc">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, iste.</p>
                     </div>
-                </div><!--snsbox end-->
+                </div>
+                <!--snsbox end-->
 
                 <div class="sns_box">
                     <div class="sns_img">
@@ -1349,7 +1432,8 @@
                     <div class="sns_desc">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, cupiditate.</p>
                     </div>
-                </div><!--snsbox end-->
+                </div>
+                <!--snsbox end-->
 
                 <div class="sns_box">
                     <div class="sns_img">
@@ -1359,7 +1443,8 @@
                     <div class="sns_desc">
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita, facere!</p>
                     </div>
-                </div><!--snsbox end-->
+                </div>
+                <!--snsbox end-->
 
                 <div class="sns_box">
                     <div class="sns_img">
@@ -1369,12 +1454,15 @@
                     <div class="sns_desc">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, tempore.</p>
                     </div>
-                </div><!--snsbox end-->
+                </div>
+                <!--snsbox end-->
 
 
-            </div><!--sns wrap end-->
+            </div>
+            <!--sns wrap end-->
 
-        </div><!--container end-->
+        </div>
+        <!--container end-->
     </section>
 
 
@@ -1435,7 +1523,8 @@
                         </ul>
                     </div>
 
-                </div><!--footer box 1-->
+                </div>
+                <!--footer box 1-->
 
                 <div class="footer_box2">
 
@@ -1445,28 +1534,32 @@
                                 <li>매장안내</li>
                                 <li>통합회원 이용약관</li>
                             </ul>
-                        </div><!--menu 05_1 end-->
+                        </div>
+                        <!--menu 05_1 end-->
 
                         <div class="foot_menu05_1">
                             <ul>
                                 <li>공지사항</li>
                                 <li class="red">개인정보처리방침</li>
                             </ul>
-                        </div><!--menu 05_1 end-->
+                        </div>
+                        <!--menu 05_1 end-->
 
                         <div class="foot_menu05_1">
                             <ul>
                                 <li>FILA Membership</li>
                                 <li>제보센터</li>
                             </ul>
-                        </div><!--menu 05_1 end-->
+                        </div>
+                        <!--menu 05_1 end-->
 
                         <div class="foot_menu05_1">
                             <ul>
                                 <li>대리점개설문의</li>
                                 <li class="blue">Korea</li>
                             </ul>
-                        </div><!--menu 05_1 end-->
+                        </div>
+                        <!--menu 05_1 end-->
 
                         <div class="foot_menu05_1">
                             <ul>
@@ -1481,13 +1574,16 @@
                                     </select>
                                 </li>
                             </ul>
-                        </div><!--menu 05_1 end-->
+                        </div>
+                        <!--menu 05_1 end-->
 
 
-                        
-                    </div><!--menu 05 end-->
 
-                </div><!--footer box2 end-->
+                    </div>
+                    <!--menu 05 end-->
+
+                </div>
+                <!--footer box2 end-->
 
                 <div class="footer_box3">
 
@@ -1497,25 +1593,30 @@
 
                             <div class="menu06_desc">
                                 <p>
-                                    서울시 강동구 천호대로 1077 이스트센트럴타워 15층 ~ 18층 휠라코리아(주)    대표이사 : 김지헌<br /><br />
-                                    사업자등록번호 : 716-81-01573 <span class="foot_span01">사업자정보확인</span> 통신판매업신고 : 제 2020-서울강동-0160호 개인정보 관리책임자 : 이학우<br />
+                                    서울시 강동구 천호대로 1077 이스트센트럴타워 15층 ~ 18층 휠라코리아(주) 대표이사 : 김지헌<br /><br />
+                                    사업자등록번호 : 716-81-01573 <span class="foot_span01">사업자정보확인</span> 통신판매업신고 : 제
+                                    2020-서울강동-0160호 개인정보 관리책임자 : 이학우<br />
                                     본 사이트의 상품이미지 저작권은 휠라코리아(주)에 있으며, 내용의 무단복제를 금합니다.<br /><br />
                                     콘텐츠산업진흥법에 의한 콘텐츠보호안내 <span class="foot_span02"> 자세히보기 </span><br />
                                 </p>
-                            </div><!--menu06 desc end-->
+                            </div>
+                            <!--menu06 desc end-->
 
-                        </div><!--menu06_1 end-->
+                        </div>
+                        <!--menu06_1 end-->
 
                         <div class="menu06_2">
                             <div class="cs_box">
                                 <p>CS Center</p>
-                            </div><!--cs box end-->
+                            </div>
+                            <!--cs box end-->
 
                             <h4>1577 - 3472</h4>
                             <h4>filaonline@fila.com</h4>
                             <p class="day">평일 월 - 금 : 09시 - 18시 (공휴일 제외)</p>
 
-                        </div><!--menu06_2 end-->
+                        </div>
+                        <!--menu06_2 end-->
 
                         <div class="menu06_3">
                             <div class="snsbox">
@@ -1523,22 +1624,107 @@
                                 <i class="fab fa-facebook-square"></i>
                                 <i class="fab fa-youtube"></i>
                                 <i class="fas fa-comment"></i>
-                            </div><!--snsbox end-->
-                        </div><!--menu06_3 end-->
+                            </div>
+                            <!--snsbox end-->
+                        </div>
+                        <!--menu06_3 end-->
 
-                    </div><!--menu06 end-->
+                    </div>
+                    <!--menu06 end-->
 
-                </div><!--footer box3 end-->
+                </div>
+                <!--footer box3 end-->
 
 
-            </div><!--footer wrap end-->
+            </div>
+            <!--footer wrap end-->
 
 
-        </div><!--container end-->
+        </div>
+        <!--container end-->
 
     </footer>
 
-  
+
+    <div class="quick_menu">
+        <div class="quick_wrap">
+
+            <div class="quick_box">
+                <div class="quick_icon">
+                    <i class="fas fa-user usericon"></i>
+                </div>
+                <!--quick icon-->
+
+                <div class="quick_text">
+                    <a href="#!">로그인</a>
+                </div>
+                <!--quick text-->
+            </div>
+            <!--quick box-->
+
+            <div class="quick_box">
+                <div class="quick_icon">
+                    <i class="fas fa-truck truck"></i>
+                </div>
+                <!--quick icon-->
+
+                <div class="quick_text">
+                    <a href="#!">배송조회</a>
+                </div>
+                <!--quick text-->
+            </div>
+            <!--quick box-->
+
+            <div class="quick_box">
+                <div class="quick_icon">
+                    <i class="fas fa-box-open boxopen"></i>
+                </div>
+                <!--quick icon-->
+
+                <div class="quick_text">
+                    <a href="#!">주문</a>
+                </div>
+                <!--quick text-->
+            </div>
+            <!--quick box-->
+
+            <div class="quick_box">
+                <div class="quick_icon">
+                    <i class="fas fa-search quicksearch"></i>
+                </div>
+                <!--quick icon-->
+
+                <div class="quick_text">
+                    <a href="#!">최근본상품</a>
+                </div>
+                <!--quick text-->
+            </div>
+            <!--quick box-->
+
+
+        </div>
+        <!--quick wrap-->
+    </div>
+    <!--quickmenu end-->
+
+
+    <div class="dir_btn">
+
+        <div class="top_btn">
+            <div class="top_btn_icon">
+                <i class="fas fa-arrow-circle-up"></i>
+            </div>
+        </div>
+
+        <div class="bot_btn">
+            <div class="bot_btn_icon">
+                <i class="fas fa-arrow-circle-down"></i>
+            </div>
+        </div>
+
+    </div>
+
+
 
 
 
@@ -1693,7 +1879,6 @@
 
 
     <script>
-        
         const swiper_2 = new Swiper('.swiper_2', {
 
             direction: 'horizontal',
@@ -1715,8 +1900,8 @@
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
-                
-                
+
+
             },
 
             // 네비게이션

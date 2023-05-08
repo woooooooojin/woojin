@@ -128,25 +128,25 @@ window.addEventListener('scroll', (e) => {
 
 
 //header wheel, add remove class event
-window.addEventListener('wheel', (e) => {
+// window.addEventListener('wheel', (e) => {
 
-    const headFix = document.querySelector('header');
-
-
-    if (e.deltaY > 100 && scrollY > 100) { //휠다운
-        headFix.classList.remove("head_up");
-        headFix.classList.add("head_down");
-
-    } else if (e.deltaY == 0) { //휠업
-        headFix.classList.add("head_down");
+//     const headFix = document.querySelector('header');
 
 
-    } else if (e.deltaY < -50) {
-        headFix.classList.remove("head_down");
-        headFix.classList.add("head_up");
-    }
+//     if (e.deltaY > 100 && scrollY > 100) { 
+//         headFix.classList.remove("head_up");
+//         headFix.classList.add("head_down");
 
-})
+//     } else if (e.deltaY == 0) { 
+//         headFix.classList.add("head_down");
+
+
+//     } else if (e.deltaY < -50) {
+//         headFix.classList.remove("head_down");
+//         headFix.classList.add("head_up");
+//     }
+
+// })
 
 
 

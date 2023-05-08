@@ -97,6 +97,9 @@ li {
 } */
 
 
+/***********search box****************/
+
+
 /*************header*************/
 header {
     width: 100%;
@@ -1158,6 +1161,7 @@ header:hover a {
     top: 50%; left: 50%;
     transform: translate(-50%,-50%);
 
+
 }
 @keyframes type {
 
@@ -1174,7 +1178,7 @@ header:hover a {
     }
 
     100% {
-        width: 920px;
+        width: 55%;
     }
 
 
@@ -1699,3 +1703,113 @@ footer{
 }
 
 
+
+/**********quick menu***************/
+.quick_menu{
+    width: 55px;
+    border: 1px solid #ccc;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 99999;
+    background-color: #fff;
+    transition: .3s;
+}
+.quick_menu:hover{
+    width: 150px;
+}
+.quick_menu .quick_wrap{
+    
+}
+.quick_menu .quick_wrap .quick_box{
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    height: 50px;
+    line-height: 50px;
+    
+}
+.quick_menu .quick_wrap .quick_box:nth-child(4){
+    border-bottom: 0;
+    
+}
+.quick_menu .quick_wrap .quick_box:nth-child(1){
+    
+}
+.quick_menu .quick_wrap .quick_box .quick_icon{
+    width: 30%;
+    text-align: center;
+   
+}
+.quick_menu .quick_wrap .quick_box .quick_icon i{
+    font-size: 30px;
+    color: #002053;
+    transition: .3s;
+}
+.quick_menu .quick_wrap .quick_box .quick_icon .usericon{
+    padding-left: 11px;
+    padding-top: 7px;
+}
+.quick_menu .quick_wrap .quick_box .quick_icon .truck{
+    padding-left: 8px;
+    padding-top: 10px;
+}
+.quick_menu .quick_wrap .quick_box .quick_icon .boxopen{
+    padding-left: 7px;
+    padding-top: 10px;
+}
+.quick_menu .quick_wrap .quick_box .quick_icon .quicksearch{
+    padding-left: 7px;
+    padding-top: 10px;
+}
+.quick_menu .quick_wrap .quick_box .quick_icon:hover i{
+   color:maroon;
+}
+
+
+.quick_menu .quick_wrap .quick_box .quick_text{
+    width: 0%;
+    text-align: center;
+    overflow: hidden;
+    
+}
+.quick_menu .quick_wrap .quick_box .quick_text a{
+    font-size: 16px;
+    display: block;
+    width: 100%;
+}
+.quick_menu .quick_wrap .quick_box .quick_text a:hover{
+    color: #002053;
+    font-weight: bold;
+}
+
+.quick_menu:hover .quick_wrap .quick_box .quick_text{
+    /* display: block; */
+    width: 70%;
+}
+
+
+/*********dir btn*********/
+
+.dir_btn{
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    position: fixed;
+    bottom: 100px;
+    right: 0;
+    cursor: pointer;
+    z-index: 9999;
+}
+.dir_btn .top_btn{
+    width: 50px;
+    height: 50px;
+    font-size: 35px;
+    color: #002053;
+    
+}
+.dir_btn .bot_btn{
+    width: 50px;
+    height: 50px;
+    font-size: 35px;
+    color: tomato;
+}
