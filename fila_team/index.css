@@ -16,8 +16,12 @@ a {
 li {
     list-style: none;
 }
-
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+/* font-family: 'Noto Sans KR', sans-serif; */
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+}
 
 
 /************countdown popup*************/
@@ -1603,9 +1607,10 @@ header:hover a {
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%,-50%);
-    font-size: 20px;
+    font-size: 18px;
     width: 100%;
     padding: 0 10px;
+    /* line-height: 0px; */
    
 }
 
@@ -1888,6 +1893,7 @@ footer{
     right: 0;
     cursor: pointer;
     z-index: 9999;
+    
 }
 .dir_btn .top_btn{
     width: 50px;
@@ -1896,6 +1902,7 @@ footer{
     color: #002053;
     
 }
+
 .dir_btn .bot_btn{
     width: 50px;
     height: 50px;
