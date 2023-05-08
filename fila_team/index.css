@@ -1704,6 +1704,7 @@ footer{
 .footer_wrap .footer_box2 .foot_menu05 li{
     margin-bottom: 30px;
     cursor: pointer;
+    font-weight: bold;
 }
 .footer_wrap .footer_box2 .foot_menu05 li.red{color: red;}
 .footer_wrap .footer_box2 .foot_menu05 li.blue{color: blue;}
