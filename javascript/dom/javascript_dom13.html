@@ -32,8 +32,13 @@
 
 
                 // subjectList.appendChild(newP);
-                subjectList.insertBefore(newP,subjectList.children[0]) //newP를 subjectlist의 첫번째 위에 넣음
+                // subjectList.insertBefore(newP,subjectList.children[0]) //newP를 subjectlist의 첫번째 위에 넣음
                 //insertBefore(추가노드,기준노드)
+
+                if(subject.value == ''){
+                }else{
+                    subjectList.insertBefore(newP,subjectList.children[0])
+                }
 
 
 
@@ -58,7 +63,6 @@
                 //삭제는 자기자신과 상위부모를 삭제할수없다
 
             }); //addbtn click event
-
 
 
         
