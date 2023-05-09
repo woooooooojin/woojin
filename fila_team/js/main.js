@@ -209,50 +209,50 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 //추천상품 circle click event
-document.addEventListener('DOMContentLoaded', () => {
+// document.addEventListener('DOMContentLoaded', () => {
 
-    const circle = document.querySelector('.rec_circle');
-    const textBox = document.querySelector('.rectext_01');
-    const lineSpan = document.querySelector('.spanline2');
+//     const circle = document.querySelector('.rec_circle');
+//     const textBox = document.querySelector('.rectext_01');
+//     const lineSpan = document.querySelector('.spanline2');
 
     
-    let state = false;
+//     let state = false;
 
-    circle.addEventListener('click', () => {
+//     circle.addEventListener('click', () => {
 
-        if (!state) {
-            textBox.style.display = 'block'
-            lineSpan.style.transform = 'rotate(0deg)'
-            state = true
-        } else if (state) {
-            textBox.style.display = 'none'
-            lineSpan.style.transform = 'rotate(90deg)'
-            state = false
-        }
-    })
+//         if (!state) {
+//             textBox.style.display = 'block'
+//             lineSpan.style.transform = 'rotate(0deg)'
+//             state = true
+//         } else if (state) {
+//             textBox.style.display = 'none'
+//             lineSpan.style.transform = 'rotate(90deg)'
+//             state = false
+//         }
+//     })
 
-    const circle2 = document.querySelector('.circle_2')
-    const lineSpan2 = document.querySelector('.spanline3')
-    const textBox2 = document.querySelector('.rectext_02')
+//     const circle2 = document.querySelector('.circle_2')
+//     const lineSpan2 = document.querySelector('.spanline3')
+//     const textBox2 = document.querySelector('.rectext_02')
 
-    let state2 = false;
+//     let state2 = false;
 
-    circle2.addEventListener('click',()=>{
+//     circle2.addEventListener('click',()=>{
 
-        if(!state2){
-            textBox2.style.display = 'block'
-            lineSpan2.style.transform = 'rotate(0deg)'
-            state2 = true
-        }else if(state2){
-            textBox2.style.display = 'none'
-            lineSpan2.style.transform = 'rotate(90deg)'
-            state2 = false
-        }
-    })
+//         if(!state2){
+//             textBox2.style.display = 'block'
+//             lineSpan2.style.transform = 'rotate(0deg)'
+//             state2 = true
+//         }else if(state2){
+//             textBox2.style.display = 'none'
+//             lineSpan2.style.transform = 'rotate(90deg)'
+//             state2 = false
+//         }
+//     })
 
 
 
-})
+// })
 
 
 
