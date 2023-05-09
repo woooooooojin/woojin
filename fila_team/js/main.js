@@ -125,11 +125,12 @@ window.addEventListener('scroll', (e) => {
 window.addEventListener('wheel', (e) => {
 
     const headFix = document.querySelector('header');
-
+    const dropDown = document.querySelector('.dropdown_menu');
 
     if (e.deltaY > 10) { 
         headFix.classList.remove("head_up");
         headFix.classList.add("head_down");
+        
 
     } else if (e.deltaY == 0) { 
         headFix.classList.add("head_down");

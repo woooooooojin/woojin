@@ -122,8 +122,16 @@ body{
     position: relative;
     padding-top: 30px;
 }
+.search_box .search_input .search_icon{
+    width: 50px;
+    height: 50px;
+    font-size: 35px;
+    position: absolute;
+    top: 35px;
+    left: 25px;
+}
 .search_box .search_input input{
-    width: 50%;
+    width: 90%;
     height: 60px;
     margin: 0 auto;
     display: block;
@@ -132,17 +140,18 @@ body{
     border: 2px solid #ccc;
     background-color: #eee;
     font-size: 20px;
-    padding: 0 10px;
+    padding: 0 15px;
+    text-align: center;
 }
 .search_box .search_input input[placeholder]{
-    
+    font-weight: 700;
 }
 .search_box .search_input .search_close{
     width: 50px;
     height: 50px;
-    font-size: 25px;
+    font-size: 30px;
     position: absolute;
-    right: 0; top: 25px;
+    right: 0; top: 35px;
     cursor: pointer;
 }
 .search_box .search_list_wrap{
@@ -185,7 +194,7 @@ header {
     top: 0;
     z-index: 999;
     height: 70px;
-    line-height: 70px;
+   
 }
 
 header:hover {
@@ -238,6 +247,7 @@ header:hover a {
 .head_lnb ul {
     display: flex;
     justify-content: space-around;
+     line-height: 70px;
 }
 
 .head_lnb ul li {
@@ -350,11 +360,11 @@ header:hover a {
 
 }
 
-.header:hover .head_lnb ul li a {
+.header:hover .head_lnb>ul>li>a {
     color: black;
 }
 
-.header:hover .head_gnb ul li a {
+.header:hover .head_gnb>ul>li>a {
     color: black;
 }
 
@@ -368,12 +378,14 @@ header:hover a {
     background-color: #fff;
     display: none;
     padding: 20px;
-
+    border-bottom: 2px solid #ccc;
+   
 }
 
 .drop_menu_wrap {
     width: 100%;
     display: flex;
+
 
 }
 
@@ -388,14 +400,13 @@ header:hover a {
 .dbox {
     width: 16.66667%;
     border-right: 1px solid #ccc;
-    padding-left: 30px;
+    padding-left: 20px;
     padding-top: 10px;
 }
 
 .dbox h4 {
     font-size: 22px;
     margin-bottom: 25px;
-
 }
 
 .dropbox_06 {
@@ -413,16 +424,16 @@ header:hover a {
 
 }
 
-.menu_list li:hover a {
-    color: #002053;
+.menu_list li a:hover{
     font-weight: bold;
+    color: red !important;
+   
 }
 
 .menu_list li a {
     display: block;
     width: 100%;
-
-
+   
 }
 
 .sub_menu {
@@ -430,13 +441,19 @@ header:hover a {
 }
 
 .sub_menu li {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     font-weight: bold;
+    height: 20px;
 }
 
 .sub_menu li a {
     display: block;
     width: 100%;
+    position: relative;
+    
+}
+.sub_menu li:hover a{
+    color: red !important;
 }
 
 .drop_brand .drop_menu_wrap {}

@@ -48,6 +48,7 @@ for (let i = 0; i < subData.length; i++) {
 
 
 
+
     //상품설명
     const itemWrap = document.createElement('div')
     subDiv.appendChild(itemWrap)
