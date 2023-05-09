@@ -29,9 +29,126 @@ body{
 /********sub banner******/
 .sub_banner{
     width: 100%;
+    margin-bottom: 100px;
 }
 .sub_banner .banner_wrap{
     width: 100%;
     height: 200px;
     background-color: lightblue;
 }
+
+
+/**********상품리스트*************/
+.sublist{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.subBox{
+    width: calc(100% - 75% - 25px);
+    margin-left: 20px;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+.subimg_wrap{
+    font-size: 0;
+    position: relative;
+    overflow: hidden;
+    transition: .3s;
+}   
+.subimg_wrap:hover{
+    box-shadow: 0 0 15px black;
+}
+.subimg_wrap:hover .hoverBox{
+    bottom: 0;
+}
+
+.hoverBox{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    position: absolute;
+    bottom: -50px; 
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: .3s;
+}
+.hoverWrap{
+    display: flex;
+   text-align: center;
+   color: #fff;
+}
+.like{
+    width: 50%;
+    font-size: 25px;
+    transition: .3s;
+    cursor: pointer;
+}
+.like:hover{
+    color: red;
+}
+.cart{
+    width: 50%;
+    font-size: 25px;
+    transition: .3s;
+    cursor: pointer;
+}
+.cart:hover{
+    color: #002053;
+}
+
+.subimg{
+    width: 100%;
+
+}
+.subBox:nth-child(4n){
+    margin-right: 0;
+}
+.item_wrap{
+    display: flex;
+}
+.item_desc_wrap{
+    width: 70%;
+}
+.item_category{
+    font-size: 12px;
+    margin: 10px 0;    
+}
+.item_name{
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+.item_price{
+    
+}
+
+.buy_box{
+    width: 30%;
+    text-align: center;
+    position: relative;
+}
+.buy_btn:hover{
+    background-color: #002053;
+    color: #fff;
+    border: #002053;
+    box-shadow: 0 0 10px black;
+}
+.buy_btn{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 30px;
+    border: 1px solid black;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .3s;
+
+}
+
+
+
