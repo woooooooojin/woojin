@@ -212,9 +212,10 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
 
     const circle = document.querySelector('.rec_circle');
-    const textBox = document.querySelector('.rec_text');
+    const textBox = document.querySelector('.rectext_01');
     const lineSpan = document.querySelector('.spanline2');
 
+    
     let state = false;
 
     circle.addEventListener('click', () => {
@@ -229,6 +230,26 @@ document.addEventListener('DOMContentLoaded', () => {
             state = false
         }
     })
+
+    const circle2 = document.querySelector('.circle_2')
+    const lineSpan2 = document.querySelector('.spanline3')
+    const textBox2 = document.querySelector('.rectext_02')
+
+    let state2 = false;
+
+    circle2.addEventListener('click',()=>{
+
+        if(!state2){
+            textBox2.style.display = 'block'
+            lineSpan2.style.transform = 'rotate(0deg)'
+            state2 = true
+        }else if(state2){
+            textBox2.style.display = 'none'
+            lineSpan2.style.transform = 'rotate(90deg)'
+            state2 = false
+        }
+    })
+
 
 
 })
