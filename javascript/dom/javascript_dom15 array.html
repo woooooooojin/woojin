@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom15 array 05/10</title>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            let itemList = []
+
+            const item = document.querySelector('.item')
+            const addBtn = document.querySelector('.add_btn')
+            const itemBox = document.querySelector('.itembox')
+
+            // addBtn.addEventListener('click',function(){
+
+            //     addList()
+
+            // })
+
+            addBtn.addEventListener('click', addList) //위와 같다
+
+
+
+            function addList() {
+
+                if (item.value !== '') {
+
+                    itemList.unshift(item.value) //unshift 앞에 , push는 뒤에 추가
+
+                    item.value = ''
+                    item.focus()
+                }
+                showList()
+
+            } //addlist
+
+
+
+            function showList() {
+
+                let list = '<ul>'
+
+                for (let i = 0; i < itemList.length; i++) {
+                    // list += '<li>' + itemList[i] + '</li>'
+
+                    list += '<li>' + itemList[i] + '<span class = "delete" id=' + i + '> X </span></li>'
+
+                }
+
+                list += '</ul>'
+
+                itemBox.innerHTML = list
+
+
+                let remove = document.querySelectorAll('.delete')
+
+                for(let i=0; i<remove.length; i++){
+                    remove[i].addEventListener('click',removeList)
+                }
+
+            } //showlist
+
+
+
+            function removeList() {
+
+                let id = this.getAttribute('id') //getter 값을 얻을때 setter 값을 부여할때
+                itemList.splice(id,1)
+                showList()
+
+            } //remove list
+
+
+
+        })
+    </script>
+
+
+    <style>
+        li{
+            list-style: none;
+        }
+        .delete {
+            margin-left: 100px;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Item list</h2>
+
+        <form action="">
+
+            <input type="text" class="item" autofocus>
+            <input type="button" class="add_btn" value="추가">
+
+        </form>
+
+        <hr>
+
+        <div class="itembox">
+
+
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
