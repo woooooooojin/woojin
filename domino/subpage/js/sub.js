@@ -7,9 +7,6 @@ document.addEventListener('DOMContentLoaded', function () {
     let randomTxt = document.createTextNode(randomNum)
 
 
-
-  
-
     const hpBtn = document.querySelector('.hp_btn')
     hpBtn.addEventListener('click', function () {
 
