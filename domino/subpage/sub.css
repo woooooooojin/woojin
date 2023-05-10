@@ -833,13 +833,14 @@ nav {
     margin-bottom: 10px;
     cursor: pointer;
     transition: .3s;
+    font-size: 13px;
+    color: #888;
 }
 #hp4_btn:hover{
     background-color: #238ece;
     box-shadow: 0 0 10px black;
     color: #fff;
 }
-
 
 .chk_item{
     width: 400px;
