@@ -813,6 +813,33 @@ nav {
     color: #888;
 }
 
+.form_num3{
+    width: 400px;
+    height: 35px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    transition: .3s;
+    margin: 10px auto;
+}
+
+#hp4_btn{
+    width: 400px;
+    height: 35px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding:10px;
+    margin: 0px auto;
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+#hp4_btn:hover{
+    background-color: #238ece;
+    box-shadow: 0 0 10px black;
+    color: #fff;
+}
+
 
 .chk_item{
     width: 400px;
@@ -844,6 +871,7 @@ nav {
 #text_chk2{display: none;}
 #text_chk3{display: none;}
 #text_chk4{display: none;}
+#text_chk5{display: none;}
 
 
 #text_chk:checked ~ .text_label::before{
