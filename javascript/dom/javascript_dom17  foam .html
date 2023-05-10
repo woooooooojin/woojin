@@ -21,41 +21,79 @@
 
             userId.addEventListener('change', checkId)
             userPw1.addEventListener('change', checkPw)
-            pwBtn.addEventListener('click',comparePw)
-            telSecond.addEventListener('keyup',moveTel)
+            pwBtn.addEventListener('click', comparePw)
+            telSecond.addEventListener('keyup', moveTel)
 
             
-
-            function checkId(){
-
-
-
-            }//checkId ()
-
-
-            function checkPw(){
-
-
-            }//checkpw()
-
-
-            function comparePw(){
-
-            }//comparePw()
-
-            function moveTel(){
-
-            }//moveTel()
-
             
+
+            function checkId() {
+                const idtrue = document.querySelector('.idtrue')
+                const idfalse = document.querySelector('.idfalse')
+                if (userId.value.length < 5 || userId.value.length > 16) {
+                    idtrue.style.display = 'none'
+                    idfalse.style.display = 'inline-block'
+                    
+                    userId.value=''
+                    userId.focus()
+                }else{
+                    idtrue.style.display = 'inline-block'
+                    idfalse.style.display = 'none'
+                }
+
+                
+
+            } //checkId ()
+
+
+            function checkPw() {
+                if (userPw1.value.length < 5) {
+                    // alert('4글자 이상')
+
+                    
+                    // userPw1.value=''
+                    // userPw1.focus()
+                    userPw1.select() //블록으로 범위잡아줌
+                }else{
+                    
+                }
+
+            } //checkpw()
+
+
+            function comparePw() {
+                // pwBtn.addEventListener('click', function () {
+                    if (userPw1.value !== userPw2.value) {
+                        alert('비밀번호 다름')
+                    }
+                // })
+
+            } //comparePw()
+
+            function moveTel() {
+
+                if(telSecond.value.length >= 4){
+                    telThird.focus()
+                }
+
+
+            } //moveTel()
+
+
 
         })
-
-        
     </script>
 
 
     <style>
+        .idtrue{
+            color: blue;
+            display: none;
+        }
+        .idfalse{
+            color: red;
+            display: none;
+        }
 
     </style>
 
@@ -63,45 +101,48 @@
 
 <body>
 
-  <div class="container">
+    <div class="container">
 
-    <h2>회원가입</h2>
+        <h2>회원가입</h2>
 
-    <form action="">
-        <ul>
-            <li>
-                <label for="user_id">아이디</label>
-                <input type="text" id="user_id" placeholder="5~16자 입력" required autofocus>
-            </li>
+        <form action="">
+            <ul>
+                <li>
+                    <label for="user_id">아이디</label>
+                    <input type="text" id="user_id" placeholder="5~16자 입력" required autofocus>
+                    <span class="idtrue">사용가능한 아이디</span>
+                    <span class="idfalse">사용불가한 아이디</span>
+                </li>
 
-            <li>
-                <label for="user_pw1">패스워드</label>
-                <input type="password" id="user_pw1" placeholder="4글자이상입력" required autofocus>
-            </li>
+                <li>
+                    <label for="user_pw1">패스워드</label>
+                    <input type="password" id="user_pw1" placeholder="4글자이상입력" required autofocus>
+                    <span class="pwchecking"></span>
+                </li>
 
-            <li>
-                <label for="user_pw2">비번확인</label>
-                <input type="password" id="user_pw2">
-                <button class="pw_btn">비번확인</button>
-            </li>
+                <li>
+                    <label for="user_pw2">비번확인</label>
+                    <input type="password" id="user_pw2">
+                    <button class="pw_btn">비번확인</button>
+                </li>
 
-            <li>
-                <label for="user_tel">전화번호</label>
-                <select name="" id="tel_first">
-                    <option value="010">010</option>
-                    <option value="011">011</option>
-                </select>
-                <label for="">-</label>
-                <input type="text" id="tel_second" size="8">
-                <label for="">-</label>
-                <input type="text" id="tel_third" size="8">
-            </li>
-            
-        </ul>
+                <li>
+                    <label for="user_tel">전화번호</label>
+                    <select name="" id="tel_first">
+                        <option value="010">010</option>
+                        <option value="011">011</option>
+                    </select>
+                    <label for="">-</label>
+                    <input type="text" id="tel_second" size="8">
+                    <label for="">-</label>
+                    <input type="text" id="tel_third" size="8">
+                </li>
 
-    </form>
+            </ul>
 
-  </div>
+        </form>
+
+    </div>
 
 
 </body>
