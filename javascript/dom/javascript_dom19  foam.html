@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom19 form select 05/11</title>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const totalTerms = document.getElementById('total_terms')
+            const termsEls = document.querySelectorAll('.terms_el')
+            const terms01 = document.getElementById('terms_01')
+            const terms02 = document.getElementById('terms_02')
+            const terms03 = document.getElementById('terms_03')
+
+
+            totalTerms.addEventListener('click', totalCheck)
+            terms01.addEventListener('click', termsCheck)
+            terms02.addEventListener('click', termsCheck)
+            terms03.addEventListener('click', termsCheck)
+
+            function totalCheck() {
+
+            //    if (totalTerms.checked === true) {
+            //        terms01.checked = true
+            //        terms02.checked = true
+            //        terms03.checked = true
+
+            //    } else {
+
+            //        terms01.checked = false
+            //        terms02.checked = false
+            //        terms03.checked = false
+            //    }
+
+
+               if(totalTerms.checked === true){
+
+                termsEls.forEach((termsEl)=>{
+                    termsEl.checked = true
+                }) 
+
+               }else{
+                termsEls.forEach((termsEl)=>{
+                    termsEl.checked = false
+                })
+               }
+
+            } //total chk
+
+
+            
+
+
+            function termsCheck() {
+
+            //    if(terms01.checked === true && terms03.checked === true && terms02.checked === true){
+            //        totalTerms.checked = true
+            //    } else{
+            //        totalTerms.checked = false
+            //    } 
+
+               //같음
+
+                if(terms01.checked && terms03.checked && terms02.checked){
+                    totalTerms.checked = true
+                } else{
+                    totalTerms.checked = false
+                }
+
+
+
+            }
+
+
+
+        })
+    </script>
+
+
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+
+    <form action="">
+        <fieldset>
+            <legend>약관동의</legend>
+
+            <ul>
+                <li>
+                    <input type="checkbox" id="total_terms">
+                    <label for="total_terms">전체약관동의</label>
+                    <!-- <label><input type="checkbox" id="total_terms">전체약관동의</label> -->
+                </li>
+                <li>
+                    <input type="checkbox" id="terms_01" class="terms_el">
+                    <span>첫번째약관</span>
+                </li>
+                <li>
+                    <input type="checkbox" id="terms_02" class="terms_el">
+                    <span>두번째약관</span>
+                </li>
+
+                <li>
+                    <input type="checkbox" id="terms_03" class="terms_el">
+                    <span>세번째약관</span>
+                </li>
+
+
+
+            </ul>
+
+        </fieldset>
+
+    </form>
+
+
+</body>
+
+</html>
