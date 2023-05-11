@@ -14,9 +14,9 @@ document.addEventListener('DOMContentLoaded', function () {
     userId.addEventListener('change', checkId)
     userPw1.addEventListener('change', checkPw)
     userPw2.addEventListener('change', comparePW)
-    phoneSecond.addEventListener('keyup',moveThird)
-    userYear.addEventListener('keyup',moveMonth)
-    userMonth.addEventListener('keyup',moveDay)
+    phoneSecond.addEventListener('keyup', moveThird)
+    userYear.addEventListener('keyup', moveMonth)
+    userMonth.addEventListener('keyup', moveDay)
 
 
 
@@ -24,15 +24,15 @@ document.addEventListener('DOMContentLoaded', function () {
         const idTrue = document.querySelector('.id_true')
         const idFalse = document.querySelector('.id_false')
         const idvalcheck = /^[a-z0-9]+$/
-        //a-z소문자 아무거나 0-9숫자 아무거나 사용할수 있다는 뜻, +는 영소문자,숫자가 한번씩 나와야 한다는 뜻
+        //a-z소문자 0-9숫자  사용할수 있다는 뜻, +는 영소문자,숫자가 한번씩 나와야 한다는 뜻
         const idVal = userId.value
 
-        if (!idvalcheck.test(idVal) || userId.value.length < 6 || userId.value.length > 16 ) {
+        if (!idvalcheck.test(idVal) || userId.value.length < 6 || userId.value.length > 16) {
             idTrue.style.display = 'none'
             idFalse.style.display = 'block'
-            userId.value =''
+            userId.value = ''
             userId.focus()
-        }else{
+        } else {
             idTrue.style.display = 'block'
             idFalse.style.display = 'none'
         }
@@ -49,16 +49,17 @@ document.addEventListener('DOMContentLoaded', function () {
         const pw1False = document.querySelector('.pw1_false')
         const lock01 = document.querySelector('.lock_1')
         const pwvalCheck = /^[a-zA-Z0-9]+$/
+        //a-z소문자 A-Z대문자 0-9숫자 사용할수 있다는 뜻, +는 영소문자,숫자가 한번씩 나와야 한다는 뜻
         const pwVal = userPw1.value
 
-        if(!pwvalCheck.test(pwVal) || userPw1.value.length < 8){
+        if (!pwvalCheck.test(pwVal) || userPw1.value.length < 8) {
             pw1True.style.display = 'none'
             pw1False.style.display = 'block'
             lock01.style.color = 'red'
 
-            userPw1.value=''
+            userPw1.value = ''
             userPw1.focus()
-        }else{
+        } else {
             pw1True.style.display = 'block'
             pw1False.style.display = 'none'
             lock01.style.color = 'blue'
@@ -73,11 +74,11 @@ document.addEventListener('DOMContentLoaded', function () {
         const pw2True = document.querySelector('.pw2_true')
         const pw2False = document.querySelector('.pw2_false')
         const lock02 = document.querySelector('.lock_2')
-        if(userPw1.value !== userPw2.value){
+        if (userPw1.value !== userPw2.value) {
             pw2True.style.display = 'none'
             pw2False.style.display = 'block'
             lock02.style.color = 'red'
-        }else{
+        } else {
             pw2True.style.display = 'block'
             pw2False.style.display = 'none'
             lock02.style.color = 'blue'
@@ -86,27 +87,148 @@ document.addEventListener('DOMContentLoaded', function () {
     } //compare pw()
 
 
-    function moveThird(){
-        if(phoneSecond.value.length>=4){
+    function moveThird() {
+        if (phoneSecond.value.length >= 4) {
             phoneThird.focus()
         }
-    }//movethird
+    } //movethird
 
-    function moveMonth(){
-        if(userYear.value.length>=4){
+    function moveMonth() {
+        if (userYear.value.length >= 4) {
             userMonth.focus()
         }
-    }//movemonth
+    } //movemonth
 
 
-    function moveDay(){
-        if(userMonth.value.length>=2){
+    function moveDay() {
+        if (userMonth.value.length >= 2) {
             userDay.focus()
         }
-    }//moveday
+    } //moveday
 
+
+
+    ///////////////////////////////////////
+
+    const totalTerms = document.getElementById('check01')
+    const termsEles = document.querySelectorAll('.chk_el')
+    const terms02 = document.getElementById('check02')
+    const terms03 = document.getElementById('check03')
+    const terms04 = document.getElementById('check04')
+    const terms05 = document.getElementById('check05')
+    const terms06 = document.getElementById('check06')
+
+    totalTerms.addEventListener('click', allCheck)
+    terms02.addEventListener('click', eachCheck)
+    terms03.addEventListener('click', eachCheck)
+    terms04.addEventListener('click', eachCheck)
+    terms05.addEventListener('click', eachCheck)
+
+
+    function allCheck() {
+        if (totalTerms.checked === true) {
+            termsEles.forEach((termsEl) => {
+                termsEl.checked = true
+                terms06.checked = false
+            })
+        } else {
+            termsEles.forEach((termsEl) => {
+                termsEl.checked = false
+            })
+        }
+    }
+
+    function eachCheck() {
+
+        if (terms02.checked && terms03.checked && terms04.checked && terms05.checked) {
+            totalTerms.checked = true
+        } else {
+            totalTerms.checked = false
+        }
+
+    }
+
+
+
+
+
+    /////////////////////////////
+    const spanClick = document.querySelector('.span02')
+    const spanClick02 = document.querySelector('.span03')
+    const spanClick03 = document.querySelector('.span04')
+    const spanClick04 = document.querySelector('.span05')
+    const spanClick05 = document.querySelector('.span06')
+
+    const popUp01 = document.querySelector('.pop01')
+    const popUp02 = document.querySelector('.pop02')
+    const popUp03 = document.querySelector('.pop03')
+    const popUp04 = document.querySelector('.pop04')
+    const popUp05 = document.querySelector('.pop05')
     
 
+
+    const closePop = document.querySelector('.close01')
+    const closePop02 = document.querySelector('.close02')
+    const closePop03 = document.querySelector('.close03')
+    const closePop04 = document.querySelector('.close04')
+    const closePop05 = document.querySelector('.close05')
+
+
+    spanClick.addEventListener('click', () => {
+
+        popUp01.style.display = 'block'
+
+    })
+    closePop.addEventListener('click', () => {
+
+        popUp01.style.display = 'none'
+
+    })
+
+    spanClick02.addEventListener('click', () => {
+
+        popUp02.style.display = 'block'
+
+    })
+    closePop02.addEventListener('click', () => {
+
+        popUp02.style.display = 'none'
+
+    })
+
+    
+    spanClick03.addEventListener('click', () => {
+
+        popUp03.style.display = 'block'
+
+    })
+    closePop03.addEventListener('click', () => {
+
+        popUp03.style.display = 'none'
+
+    })
+
+    spanClick04.addEventListener('click', () => {
+
+        popUp04.style.display = 'block'
+
+    })
+    closePop04.addEventListener('click', () => {
+
+        popUp04.style.display = 'none'
+
+    })
+
+    spanClick05.addEventListener('click', () => {
+
+        popUp05.style.display = 'block'
+
+    })
+    closePop05.addEventListener('click', () => {
+
+        popUp05.style.display = 'none'
+
+    })
 
 
 
