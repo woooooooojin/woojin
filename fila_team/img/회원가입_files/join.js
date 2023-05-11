@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', function () {
     userYear.addEventListener('keyup', moveMonth)
     userMonth.addEventListener('keyup', moveDay)
     userDay.addEventListener('keyup',userDayTest)
-    phoneThird.addEventListener('keyup',phThirdCheck)
 
 
     function checkId() {
@@ -98,17 +97,6 @@ document.addEventListener('DOMContentLoaded', function () {
             phoneSecond.value=''
         }
     } //movethird
-
-    function phThirdCheck(){
-        const phoneThirdCheck = /[0-9]/
-        const phoneThirdVal = phoneThird.value
-        if(!phoneThirdCheck.test(phoneThirdVal)){
-            alert('숫자만 입력하세요.')
-            phoneThird.value=''
-        }
-
-
-    }
 
     function moveMonth() {
         const yearCheck = /[0-9]/
