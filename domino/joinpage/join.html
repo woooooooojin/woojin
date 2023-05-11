@@ -18,7 +18,7 @@
 <body>
 
     <div class="logo_box">
-
+        <img src="../imges/logo_main2.jpg" alt="logo">
     </div>
 
     <div class="join_tit">
@@ -45,8 +45,9 @@
                     </li>
 
                     <li class="pw1_box">
-                        <label for="user_pw1">비밀번호</label>
+                        <label for="user_pw1" class="user_lock1">비밀번호</label>
                         <input type="password" id="user_pw1" placeholder="6자 ~ 16자 입력" required autofocus>
+                        <i class="fas fa-lock"></i>
                         <p class="pw1_true">사용가능한 비밀번호 입니다.</p>
                         <p class="pw1_false">사용불가한 비밀번호 입니다.</p>
                     </li>
@@ -54,6 +55,7 @@
                     <li class="pw2_box">
                         <label for="user_pw2">비밀번호 재확인</label>
                         <input type="password" id="user_pw2">
+                        <i class="fas fa-lock"></i>
                         <p class="pw2_true">비밀번호가 일치합니다.</p>
                         <p class="pw2_false">비밀번호가 일치하지 않습니다.</p>
                     </li>
@@ -72,24 +74,30 @@
 
                     <li class="gender_box">
                         <label for="user_gender">성별</label>
+                        <select name="user_gender" id="user_gender">
 
-                        <input type="radio" id="user_men" name="user_genders">
-                        <label for="user_men">남자</label>
+                            <option value="">선택하세요</option>
+                            <option value="male">남자</option>
+                            <option value="female">여자</option>
 
-                        <input type="radio" id="user_women" name="user_genders">
-                        <label for="user_women">여자</label>
+                        </select>
+
+
                     </li>
 
                     <li class="phone_box">
                         <label for="user_phone">휴대전화</label>
-                        <select name="phone_first" id="phone_first">
-                            <option value="010">010</option>
-                            <option value="011">011</option>
-                        </select>
-                        <label for="" class="dash">-</label>
-                        <input type="text" id="phone_second">
-                        <label for="" class="dash">-</label>
-                        <input type="text" id="phone_third">
+                        <div class="phone_box_wrap">
+                            <select name="phone_first" id="phone_first">
+                                <option value="010">010</option>
+                                <option value="011">011</option>
+                            </select>
+                            <label for="" class="dash">-</label>
+                            <input type="text" id="phone_second">
+                            <label for="" class="dash">-</label>
+                            <input type="text" id="phone_third">
+                        </div>
+
                     </li>
 
                     <li>
@@ -116,23 +124,24 @@
                         <label for="check05" class="chk_label">이용약관 동의(필수)</label>
                         <span class="chk_see span05">보기</span>
                     </li>
-                    <li>
-                        <input type="checkbox" id="check06">
-                        <label for="check06" class="chk_label">마케팅 정보 이용 동의(선택)</label>
-                        <span class="chk_see span06">보기</span>
-                    </li>
+
 
                     <li>
                         <button type="button" id="log_in" class="login_btn">회원가입</button>
                     </li>
-                   
+
                 </ul>
 
             </form>
 
 
-        </div><!--container end-->
-    </div><!--join form end-->
+        </div>
+        <!--container end-->
+    </div>
+    <!--join form end-->
+
+
+    
 
 </body>
 

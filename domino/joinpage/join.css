@@ -32,15 +32,24 @@ body {
     margin: 0 auto;
 }
 
+.join_form{
+    margin-top: 100px;
+}
 .logo_box{
+    width: 300px;
+    height: 60px;
+    margin: 0 auto;
+    margin-top: 50px;
+
+}
+.logo_box img{
     width: 100%;
-    height: 200px;
-    background-color: #eee;
+    height: auto;
 }
 
 
 .join_tit{
-    margin-top: 100px;
+    margin-top: 30px;
     width: 100%;
 }
 .tit_wrap{
@@ -70,7 +79,7 @@ body {
 .form_wrap li #user_name{
     display: block;
     width: 100%;
-    height: 40px;
+    height: 50px;
     outline: none;
     
 }
@@ -84,9 +93,126 @@ body {
 .pw1_box .pw1_true,
 .pw2_box .pw2_true{
     color: blue;
+    display: none;
 }
 .id_box .id_false,
 .pw1_box .pw1_false,
 .pw2_box .pw2_false{
     color: red;
+    display: none;
+}
+
+.pw1_box{
+    position: relative;
+}
+.pw1_box i{
+    position: absolute;
+    right: 2%;
+    bottom: 15%;
+    
+    font-size: 25px;
+}
+
+.pw2_box{
+    position: relative;
+}
+.pw2_box i{
+    position: absolute;
+    right: 2%;
+    bottom: 15%;
+    font-size: 25px;
+}
+
+#user_year,
+#user_month,
+#user_day{
+    height: 50px;
+    width: 220px;
+}
+#user_month{
+   margin-left: 15px;
+}
+#user_day{
+    margin-left: 15px;
+}
+
+.gender_box {
+    margin-top: 20px;
+}
+.gender_box>label{
+    font-size: 18px;
+}
+.gender_box select{
+    display: block;
+    width: 100%;
+    height: 50px;
+    outline: none;
+    margin-top: 10px;
+}
+.phone_box{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.phone_box>label{
+    font-size: 18px;
+}
+
+.phone_box_wrap{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.phone_box select{
+   
+    width: 200px;
+    height: 50px;
+}
+.phone_box #phone_second{
+    width: 200px;
+    height: 50px;
+}
+.phone_box #phone_third{
+    width: 200px;
+    height: 50px;
+}
+.phone_box .dash{
+    font-size: 25px;
+}
+#check01,
+#check02,
+#check03,
+#check04,
+#check05{
+    margin-top: 10px;
+ 
+   
+}
+.chk_label{
+    display: inline-block;
+    width: 90%;
+    padding-left: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.chk_see{
+    text-align: right;
+    cursor: pointer;
+}
+
+.login_btn{
+    width: 100%;
+    height: 60px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: #238ece;
+    border:0;
+    outline: none;
+    font-size: 24px;
+    color: #fff;
+    transition: .3s;
+    cursor: pointer;
+}
+.login_btn:hover{
+    box-shadow: 0 0 15px black;
+    border: 0;
 }
