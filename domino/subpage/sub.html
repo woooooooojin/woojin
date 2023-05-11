@@ -50,6 +50,10 @@
                 $('.more_close').css('display', 'none');
 
             })
+
+            $('.cbtn').click(function(){
+                $('.pop').css('display','none')
+            })
         })
     </script>
 </head>
@@ -214,7 +218,7 @@
                         </div>
                         <!--id-->
                         <div class="login_id">
-                            <input type="text" id="passwd" placeholder="비밀번호">
+                            <input type="password" id="passwd" placeholder="비밀번호">
                             <label for="passwd"></label>
                         </div>
                         <!--passwd-->
@@ -237,10 +241,10 @@
 
 
                     <div class="submit_btn">
-                        <a href="#!">로그인</a>
+                        <a href="#!" id="login_btn">로그인</a>
                     </div>
                     <div class="submit_btn">
-                        <a href="#!">회원가입</a>
+                        <a href="#!" id="join_btn">회원가입</a>
                     </div>
 
                     <div class="sns_ex">
@@ -614,6 +618,48 @@
 
         </div>
     </div>
+
+
+<!-----------------popup------------------------->
+
+    <div class="login_popup pop">
+        <p>로그인 성공</p>
+        <p class="pop_close cbtn">닫기</p>
+    </div>
+
+    <div class="login_popup2 pop">
+        <p>로그인 실패</p>
+        <p class="pop_close02 cbtn">닫기</p>
+    </div>
+
+    <div class="login_popup3 pop">
+        <p>로그인 5회 실패 고객센터 문의해주세요.</p>
+        <p class="pop_close03 cbtn">닫기</p>
+    </div>
+
+    <div class="login_chkid pop">
+        <p>아이디를 확인하세요.</p>
+        <p class="pop_close03 cbtn">닫기</p>
+    </div>
+
+    <div class="login_chkpw pop">
+        <p>비밀번호를 확인하세요.</p>
+        <p class="pop_close04 cbtn">닫기</p>
+    </div>
+
+    <div class="num_chk pop">
+        <p>인증완료 !</p>
+        <p class="pop_close05 cbtn">닫기</p>
+    </div>
+
+    <div class="num_chk02 pop">
+        <p>인증번호를 확인하세요.</p>
+        <p class="pop_close06 cbtn">닫기</p>
+    </div>
+
+
+
+
 
 </body>
 

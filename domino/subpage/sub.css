@@ -1318,3 +1318,37 @@ footer {
 .btn_wrap .dir_btn a i {
     font-size: 18px;
 }
+
+
+.pop{
+    width: 200px;
+    height: 80px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #eee;
+}
+.pop>p{
+    text-align: center;
+    margin-top: 10px;
+    
+}
+.cbtn{
+    width: 80px;
+    height: 25px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    line-height: 25px;
+    cursor: pointer;
+    background-color: #238ece;
+    color: #fff;
+    transition: .3s;
+}
+.cbtn:hover{
+    box-shadow: 0 0 5px black;
+}
