@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입</title>
-    <script src="./js/join.js"></script>
+    <script src="./js/join.js" defer></script>
     <link rel="stylesheet" href="join.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,13 +41,13 @@
                         <label for="user_id">아이디</label>
                         <input type="text" id="user_id" placeholder="6자 ~ 16자 입력" required autofocus>
                         <p class="id_true">사용가능한 아이디 입니다.</p>
-                        <p class="id_false">사용불가한 아이디 입니다.</p>
+                        <p class="id_false">사용불가한 아이디 입니다. 아이디는 영소문자,숫자로 구성된 6글자 이상으로 입력하세요.</p>
                     </li>
 
                     <li class="pw1_box">
                         <label for="user_pw1" class="user_lock1">비밀번호</label>
                         <input type="password" id="user_pw1" placeholder="6자 ~ 16자 입력" required autofocus>
-                        <i class="fas fa-lock"></i>
+                        <i class="fas fa-lock lock_1"></i>
                         <p class="pw1_true">사용가능한 비밀번호 입니다.</p>
                         <p class="pw1_false">사용불가한 비밀번호 입니다.</p>
                     </li>
@@ -55,7 +55,7 @@
                     <li class="pw2_box">
                         <label for="user_pw2">비밀번호 재확인</label>
                         <input type="password" id="user_pw2">
-                        <i class="fas fa-lock"></i>
+                        <i class="fas fa-lock lock_2"></i>
                         <p class="pw2_true">비밀번호가 일치합니다.</p>
                         <p class="pw2_false">비밀번호가 일치하지 않습니다.</p>
                     </li>
@@ -67,9 +67,9 @@
 
                     <li class="birth_box">
                         <label for="user_birth">생년월일</label>
-                        <input type="text" id="user_year" placeholder="년(4자)">
-                        <input type="text" id="user_month" placeholder="월(2자 (ex)05월)">
-                        <input type="text" id="user_day" placeholder="일(2자 (ex)05일)">
+                        <input type="text" id="user_year" placeholder="년(4자)" maxlength="4">
+                        <input type="text" id="user_month" placeholder="월(2자 (ex)05월)" maxlength="2">
+                        <input type="text" id="user_day" placeholder="일(2자 (ex)05일)" maxlength="2">
                     </li>
 
                     <li class="gender_box">
