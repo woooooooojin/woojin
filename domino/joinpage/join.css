@@ -74,3 +74,19 @@ body {
     outline: none;
     
 }
+
+.id_box>p,
+.pw1_box>p,
+.pw2_box>p{
+    font-size: 12px;
+}
+.id_box .id_true,
+.pw1_box .pw1_true,
+.pw2_box .pw2_true{
+    color: blue;
+}
+.id_box .id_false,
+.pw1_box .pw1_false,
+.pw2_box .pw2_false{
+    color: red;
+}
