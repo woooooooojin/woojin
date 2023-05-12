@@ -110,7 +110,13 @@ body{
 .opt_wrap .opt_box3 .grid_box i{
    margin-left: 20px;
    vertical-align: top;
+   
 }
+.opt_wrap .opt_box3 .grid_01,
+.opt_wrap .opt_box3 .grid_02{
+    cursor: pointer;
+}
+
 .opt_wrap .opt_box3 .grid_01::after{
 
     content: "";
