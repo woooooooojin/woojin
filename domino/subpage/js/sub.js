@@ -53,11 +53,11 @@ document.addEventListener('DOMContentLoaded', function () {
         if (userId.value === 'woojin') {
             if (userPw.value === 'woojin123') {
                 loginPopup.style.display = 'block'
-            }else {
+            } else {
                 loginPopup01.style.display = 'block'
-                errcnt ++
+                errcnt++
             }
-        }else {
+        } else {
             loginPopup2.style.display = 'block'
         }
 
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const idInfo = document.querySelector('.id_pw_info')
     const idInfoClose = document.getElementById('id_info_btn')
 
-    idInfoClose.addEventListener('click',()=>{
+    idInfoClose.addEventListener('click', () => {
 
         idInfo.style.display = 'none'
 
@@ -87,22 +87,83 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const hp2 = document.getElementById('hp2')
     const hp3 = document.getElementById('hp3')
-    const hp2Check = /[0-9]/
-    const hp3Check = /[0-9]/
-
-    
 
 
-    hp2.addEventListener('keyup',moveHp3)
+    hp2.addEventListener('keyup', moveHp3)
 
-    function moveHp3(){
+    function moveHp3() {
 
-        if(hp2.value.length >= 4){
-            
+        if (hp2.value.length >= 4) {
+
             hp3.focus()
+
 
         }
     }
+
+
+
+
+    //비회원 체크박스 
+    const allCheck = document.getElementById('text_chk')
+    const checkEls = document.querySelectorAll('.itemchk')
+    const check2 = document.getElementById('text_chk2')
+    const check3 = document.getElementById('text_chk3')
+    const check4 = document.getElementById('text_chk4')
+    const check5 = document.getElementById('text_chk5')
+    const check6 = document.getElementById('text_chk6')
+
+    allCheck.addEventListener('click', checkAll)
+    check2.addEventListener('click', eachCheck)
+    check3.addEventListener('click', eachCheck)
+    check4.addEventListener('click', eachCheck)
+    check5.addEventListener('click', eachCheck)
+   
+
+    function checkAll(){
+
+        if(allCheck.checked === true){
+            checkEls.forEach((els)=>{
+
+                els.checked = true
+                
+            })
+            
+        }else if(allCheck.checked === false){
+            checkEls.forEach((els) => {
+
+                els.checked = false
+
+            })
+           
+        }
+
+    }
+
+    function eachCheck(){
+        if(check2.checked && check3.checked && check4.checked && check5.checked){
+            allCheck.checked = true
+        }else{
+            allCheck.checked = false
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
