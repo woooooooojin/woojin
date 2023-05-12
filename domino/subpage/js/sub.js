@@ -46,11 +46,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const loginPopup01 = document.querySelector('.login_popup01')
     const loginPopup2 = document.querySelector('.login_popup2')
     const loginPopup3 = document.querySelector('.login_popup3')
-
+    let errcnt = 0
     loginBtn.addEventListener('click', function () {
 
-
-        let errcnt = 0
 
         if (userId.value === 'woojin') {
             if (userPw.value === 'woojin123') {
