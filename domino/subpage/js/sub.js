@@ -71,4 +71,40 @@ document.addEventListener('DOMContentLoaded', function () {
     })
 
 
+
+    //id pw 알려주는 팝업
+
+    const idInfo = document.querySelector('.id_pw_info')
+    const idInfoClose = document.getElementById('id_info_btn')
+
+    idInfoClose.addEventListener('click',()=>{
+
+        idInfo.style.display = 'none'
+
+    })
+
+
+
+    const hp2 = document.getElementById('hp2')
+    const hp3 = document.getElementById('hp3')
+    const hp2Check = /[0-9]/
+    const hp3Check = /[0-9]/
+
+    
+
+
+    hp2.addEventListener('keyup',moveHp3)
+
+    function moveHp3(){
+
+        if(hp2.value.length >= 4){
+            
+            hp3.focus()
+
+        }
+    }
+
+
+
+
 })
