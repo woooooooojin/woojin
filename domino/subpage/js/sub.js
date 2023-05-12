@@ -35,20 +35,42 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-    const myId = 'woojin'
-    const myPw = 'woojin123'
+    // const myId = 'woojin'
+    // const myPw = 'woojin123'
 
     const userId = document.getElementById('name')
     const userPw = document.getElementById('passwd')
     const loginBtn = document.getElementById('login_btn')
     const joinBtn = document.getElementById('join_btn')
     const loginPopup = document.querySelector('.login_popup')
+    const loginPopup01 = document.querySelector('.login_popup01')
     const loginPopup2 = document.querySelector('.login_popup2')
     const loginPopup3 = document.querySelector('.login_popup3')
 
-   
-    
+    loginBtn.addEventListener('click', function () {
 
+
+        let errcnt = 0
+
+        if (userId.value === 'woojin') {
+            if (userPw.value === 'woojin123') {
+                loginPopup.style.display = 'block'
+            }else {
+                loginPopup01.style.display = 'block'
+                errcnt ++
+            }
+        }else {
+            loginPopup2.style.display = 'block'
+        }
+
+        if (errcnt >= 5) {
+            loginPopup3.style.display = 'block'
+        }
+
+
+
+
+    })
 
 
 })
