@@ -30,14 +30,117 @@ body{
 .sub_banner{
     width: 100%;
     margin-bottom: 100px;
+    padding: 0 20px;
 }
 .sub_banner .banner_wrap{
-    height: 250px;
+    height: 285px;
+    position: relative;
 }
 .sub_banner .banner_wrap img{
     width: 100%;
     height: 100%;
 }
+.sub_banner .banner_wrap .background{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0 ,0, 0, 0.5);
+    position: absolute;
+    top: 0;
+}
+.sub_banner .banner_wrap .span_ex{
+    position: absolute;
+    bottom: 40px;
+    left: 25px;
+}
+.sub_banner .banner_wrap .background span{
+    color: #fff;
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.opt_section{
+    width: 100%;
+    padding: 0 20px;
+}
+
+.opt_wrap{
+    display: flex;
+
+}
+.opt_wrap .opt_box1{
+    width: 20%;
+}
+.opt_wrap .opt_box1 label i{
+    font-size: 18px;
+    transition: .3s;
+}
+#optchk{display: none;}
+#optchk:checked ~ .filter_label i{transform: rotate(135deg);}
+#optchk ~ .filter_label i{transform: rotate(360deg);}
+
+
+
+
+.opt_wrap .opt_box2{
+    width: 60%;
+}
+.opt_wrap .opt_box3{
+    width: 20%;
+    display: flex;
+}
+.opt_wrap .opt_box3 .sort_box{
+    width: 50%;
+    
+}
+.opt_wrap .opt_box3 .sort_box select{
+    width: 100%;
+    height: 25px;
+    outline: none;
+    border: 0;
+    
+}
+
+.opt_wrap .opt_box3 .grid_box{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 25px;
+    
+}
+.opt_wrap .opt_box3 .grid_box i{
+   margin-left: 20px;
+   vertical-align: top;
+}
+.opt_wrap .opt_box3 .grid_01::after{
+
+    content: "";
+    display: inline-block;
+    vertical-align: top;
+    width: 1px;
+    height: 25px;
+    margin-left: 20px;
+    background-color: #ccc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /**********상품리스트*************/
