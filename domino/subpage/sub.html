@@ -243,8 +243,8 @@
 
                             </div>
                             <div class="span_wrap">
-                                <span><a href="#!">아이디 찾기</a></span>
-                                <span><a href="#!">비밀번호 찾기</a></span>
+                                <span><a href="#!" class="find_id_open">아이디 찾기</a></span>
+                                <span><a href="#!" class="fpw_open">비밀번호 찾기</a></span>
                             </div>
 
                         </div>
@@ -730,7 +730,7 @@
     </div>
 
 
-    <div class="find find_id">
+    <div class="find find_01">
 
         <div class="find_ex">
 
@@ -741,11 +741,13 @@
                     <h4>아이디 찾기</h4>
                 </div>
 
-                <label for="find_id">이름</label>
-                <input type="text" id="find_id" placeholder="이름 : 우진">
-                <input type="text" id="myid">
+                <label for="findid">이름</label>
+                <input type="text" id="findid" placeholder="이름 : 우진" class="findid">
+                <div class="idbox"></div>
 
-                <button type="button">아이디 찾기</button>
+                <button type="button" id="idbtn">아이디 찾기</button>
+
+                <button type="button" class="findclose findidclose">닫기</button>
 
 
             </div>
@@ -755,7 +757,7 @@
         </div>
     </div>
 
-    <div class="find find_pw">
+    <div class="find find_02">
 
         <div class="find_ex">
 
@@ -766,14 +768,13 @@
                     <h4>비밀번호 찾기</h4>
                 </div>
 
-                <label for="find_id">아이디</label>
-                <input type="text" id="find_id" placeholder="아이디 : woojin">
-                <input type="text" id="mypw">
+                <label for="findpw">아이디</label>
+                <input type="text" id="findpw" placeholder="아이디 : woojin">
+                <div class="idbox pwbox"></div>
 
-                <button type="button">비밀번호 찾기</button>
-                <div class="close_find">
-                    닫기
-                </div>
+                <button type="button" id="pwbtn">비밀번호 찾기</button>
+
+                <button type="button" class="findclose findpwclose">닫기</button>
 
 
             </div>

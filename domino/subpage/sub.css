@@ -1524,7 +1524,17 @@ footer {
 .find {
     width: 100%;
     height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: 99999;
+    
 
+}
+.find_01{
+    display: none;
+}
+.find_02{
+    display: none;
 }
 
 .find_ex {
@@ -1536,7 +1546,7 @@ footer {
 
 .find_inner {
     width: 400px;
-    height: 300px;
+    height: 400px;
 
     background-color: #fff;
     position: absolute;
@@ -1588,4 +1598,17 @@ footer {
 .find_inner button:hover {
     cursor: pointer;
     box-shadow: 0 0 10px black;
+}
+button.findclose{
+    margin-top: 20px;
+}
+
+.idbox{
+    width: 300px;
+    height: 35px;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 35px;
+
 }

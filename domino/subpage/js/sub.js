@@ -118,32 +118,32 @@ document.addEventListener('DOMContentLoaded', function () {
     check3.addEventListener('click', eachCheck)
     check4.addEventListener('click', eachCheck)
     check5.addEventListener('click', eachCheck)
-   
 
-    function checkAll(){
 
-        if(allCheck.checked === true){
-            checkEls.forEach((els)=>{
+    function checkAll() {
+
+        if (allCheck.checked === true) {
+            checkEls.forEach((els) => {
 
                 els.checked = true
-                
+
             })
-            
-        }else if(allCheck.checked === false){
+
+        } else if (allCheck.checked === false) {
             checkEls.forEach((els) => {
 
                 els.checked = false
 
             })
-           
+
         }
 
     }
 
-    function eachCheck(){
-        if(check2.checked && check3.checked && check4.checked && check5.checked){
+    function eachCheck() {
+        if (check2.checked && check3.checked && check4.checked && check5.checked) {
             allCheck.checked = true
-        }else{
+        } else {
             allCheck.checked = false
         }
     }
@@ -157,14 +157,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const loginPw = document.querySelector('.loinpw')
     // const pwInput = document.getElementById('passwd')
 
-    showPw.addEventListener('click',function(){
+    showPw.addEventListener('click', function () {
 
         loginPw.type = 'text'
         hidePw.style.display = 'block'
         showPw.style.display = 'none'
     })
 
-    hidePw.addEventListener('click',function(){
+    hidePw.addEventListener('click', function () {
         loginPw.type = 'password'
         hidePw.style.display = 'none'
         showPw.style.display = 'block'
@@ -172,29 +172,89 @@ document.addEventListener('DOMContentLoaded', function () {
     })
 
 
+    const findInputName = document.getElementById('findid')
+    const findInputId = document.getElementById('findpw')
+    const myId = document.querySelector('.idbox')
+    const myPw = document.querySelector('.pwbox')
+    const idBtn = document.getElementById('idbtn')
+    const pwBtn = document.getElementById('pwbtn')
 
-    
+    idBtn.addEventListener('click', findMyId)
+    pwBtn.addEventListener('click',findMyPw)
 
+    function findMyId() {
+        if (findInputName.value === '우진') {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+            myId.innerHTML = '아이디는 woojin 입니다.'
+        }
 
 
+    }
+    function findMyPw() {
+        if (findInputId.value === 'woojin') {
+
+            myPw.innerHTML = '비밀번호는 woojin123 입니다.'
+        }
+
+
+    }
 
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+})
+
+
+
+
+$(function () {
+    $('.find_id_open').click(function () {
+
+        $('.find_01').css('display', 'block')
+
+    })
+    $('.fpw_open').click(function () {
+
+        $('.find_02').css('display', 'block')
+
+    })
+    $('.findidclose').click(function () {
+        $('.find_01').css('display', 'none')
+
+    })
+    $('.findpwclose').click(function () {
+        $('.find_02').css('display', 'none')
+    })
 })
