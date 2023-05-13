@@ -159,6 +159,7 @@ body {
 
 .filter_box_list {
     width: 100%;
+    height: 350px;
     padding: 0 20px;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;

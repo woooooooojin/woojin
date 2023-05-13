@@ -108,21 +108,21 @@ for (let i = 0; i < subData.length; i++) {
 
 
 
-document.addEventListener('DOMContentLoaded',function(){
+// document.addEventListener('DOMContentLoaded',function(){
 
-    const filterOpen = document.querySelector('.filter_open')
-    const filterClose = document.querySelector('.filter_close')
-    const filterList = document.querySelector('.filter_box_list')
+//     const filterOpen = document.querySelector('.filter_open')
+//     const filterClose = document.querySelector('.filter_close')
+//     const filterList = document.querySelector('.filter_box_list')
 
 
-    filterOpen.addEventListener('click',()=>{
+//     filterOpen.addEventListener('click',()=>{
 
-        filterList.style.display = 'block'
+//         filterList.style.display = 'block'
         
 
-    })
-    filterClose.addEventListener('click',()=>{
-        filterList.style.display = 'none'
-    })
+//     })
+//     filterClose.addEventListener('click',()=>{
+//         filterList.style.display = 'none'
+//     })
 
-})
+// })
