@@ -150,6 +150,35 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+    //비밀번호 보이게 안보이게하기
+
+    const showPw = document.querySelector('.show_pw')
+    const hidePw = document.querySelector('.hide_pw')
+    const loginPw = document.querySelector('.loinpw')
+    // const pwInput = document.getElementById('passwd')
+
+    showPw.addEventListener('click',function(){
+
+        loginPw.type = 'text'
+        hidePw.style.display = 'block'
+        showPw.style.display = 'none'
+    })
+
+    hidePw.addEventListener('click',function(){
+        loginPw.type = 'password'
+        hidePw.style.display = 'none'
+        showPw.style.display = 'block'
+
+    })
+
+
+
+    
+
+
+
+
+
 
 
 

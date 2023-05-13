@@ -9,7 +9,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const userYear = document.getElementById('user_year')
     const userMonth = document.getElementById('user_month')
     const userDay = document.getElementById('user_day')
-
+    const loginBtn = document.getElementById('log_in')
+    const userName = document.getElementById('user_name')
+    const needCheck = document.querySelector('.need')
 
     userId.addEventListener('change', checkId)
     userPw1.addEventListener('change', checkPw)
@@ -19,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
     userMonth.addEventListener('keyup', moveDay)
     userDay.addEventListener('keyup',userDayTest)
     phoneThird.addEventListener('keyup',phThirdCheck)
+    loginBtn.addEventListener('click',loginBtnCheck)
 
 
     function checkId() {
@@ -41,6 +44,36 @@ document.addEventListener('DOMContentLoaded', function () {
 
     } //check id ()
 
+    function loginBtnCheck(){
+    
+        if(userId.value === ''){
+            alert('아이디를 입력하세요')
+        }else if(userPw1.value === ''){
+            alert('비밀번호를 입력하세요')
+        }else if(userPw2.value === ''){
+            alert('비밀번호 확인을 입력하세요')
+        }else if(userName.value ===''){
+            alert('이름을 입력하세요')
+        }else if(userYear.value ===''){
+            alert('생년을 입력하세요')
+        }else if(userMonth.value ===''){
+            alert('생월을 입력하세요')
+        }else if(userDay.value ===''){
+            alert('생일을 입력하세요')
+        }else if(phoneSecond.value ===''){
+            alert('휴대폰번호를 입력하세요')
+        }else if(phoneThird.value ===''){
+            alert('휴대폰번호를 입력하세요')
+        }else if(needCheck.checked === false){
+            alert('필수항목에 체크해주세요')
+        }else{
+            alert('가입완료')
+        }
+
+        
+
+    }
+
 
 
 
@@ -50,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const pw1False = document.querySelector('.pw1_false')
         const lock01 = document.querySelector('.lock_1')
         const pwvalCheck = /^[a-zA-Z0-9]+$/
-        //a-z소문자 A-Z대문자 0-9숫자 사용할수 있다는 뜻, +는 영소문자,숫자가 한번씩 나와야 한다는 뜻
+        //a-z소문자 A-Z대문자 0-9숫자 사용할수 있다는 뜻, +는 영 대,소문자,숫자가 한번씩 나와야 한다는 뜻
         const pwVal = userPw1.value
 
         if (!pwvalCheck.test(pwVal) || userPw1.value.length < 8) {
@@ -114,9 +147,9 @@ document.addEventListener('DOMContentLoaded', function () {
         const yearCheck = /[0-9]/
         const userYearVal = userYear.value
 
-        if (userYear.value.length >= 4 && yearCheck.test(userYear)) {
+        if (userYear.value.length >= 4 && yearCheck.test(userYearVal)) {
             userMonth.focus()
-        }else if(!yearCheck.test(userYear)){
+        }else if(!yearCheck.test(userYearVal)){
             alert('숫자만 입력하세요.')
             userYear.value=''
         }
