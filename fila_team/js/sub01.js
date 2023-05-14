@@ -94,10 +94,11 @@ for (let i = 0; i < subData.length; i++) {
 
 
 
-
-
     subList.appendChild(subDiv)
 
+
+    
+   
 
 
 }
@@ -108,21 +109,51 @@ for (let i = 0; i < subData.length; i++) {
 
 
 
-// document.addEventListener('DOMContentLoaded',function(){
+document.addEventListener('DOMContentLoaded',function(){
 
-//     const filterOpen = document.querySelector('.filter_open')
-//     const filterClose = document.querySelector('.filter_close')
-//     const filterList = document.querySelector('.filter_box_list')
+    // const filterOpen = document.querySelector('.filter_open')
+    // const filterClose = document.querySelector('.filter_close')
+    // const filterList = document.querySelector('.filter_box_list')
 
 
-//     filterOpen.addEventListener('click',()=>{
+    // filterOpen.addEventListener('click',()=>{
 
-//         filterList.style.display = 'block'
+    //     filterList.style.display = 'block'
         
 
-//     })
-//     filterClose.addEventListener('click',()=>{
-//         filterList.style.display = 'none'
-//     })
+    // })
+    // filterClose.addEventListener('click',()=>{
+    //     filterList.style.display = 'none'
+    // })
 
-// })
+    const grid01 = document.querySelector('.grid_01')
+    const grid02 = document.querySelector('.grid_02')
+    const subBox = document.querySelectorAll('.subBox')
+
+    grid01.addEventListener('click',girdChange01)
+    grid02.addEventListener('click',girdChange02)
+
+    function girdChange01(){
+       
+        for(let i = 0; i<subBox.length; i++){
+            subBox[i].style.width =  'calc(100% - 75% - 25px)'
+        }
+        
+
+    }
+
+    function girdChange02(){
+
+        
+        for(let i =0; i < subBox.length; i++){
+            subBox[i].style.width = 'calc(100% - 80% - 24px)'
+           
+        }
+        
+        
+    }
+
+
+   
+
+})
