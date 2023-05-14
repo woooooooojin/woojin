@@ -186,6 +186,8 @@ document.addEventListener('DOMContentLoaded', function () {
         if (findInputName.value === '우진') {
 
             myId.innerHTML = '아이디는 woojin 입니다.'
+        }else{
+            myId.innerHTML = '일치하는 아이디가 없습니다.'
         }
 
 
@@ -194,6 +196,8 @@ document.addEventListener('DOMContentLoaded', function () {
         if (findInputId.value === 'woojin') {
 
             myPw.innerHTML = '비밀번호는 woojin123 입니다.'
+        }else{
+            myPw.innerHTML = '일치하는 비밀번호가 없습니다.'
         }
 
 
