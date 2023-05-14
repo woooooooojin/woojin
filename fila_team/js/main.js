@@ -59,7 +59,7 @@ window.addEventListener('mouseover', () => {
 
         // head.style.backgroundColor = '#fff'
 
-        mainLogo.setAttribute('src', 'img/LOGO/01(1).png')
+        mainLogo.setAttribute('src', 'img/LOGO/logo01.png')
 
 
         // for (let i = 0; i < aTag.length; i++) {
@@ -95,7 +95,7 @@ window.addEventListener('scroll', (e) => {
 
     if (window.scrollY > 100) {
         document.querySelector('header').style.backgroundColor = '#fff'
-        mainLogo.setAttribute('src', 'img/LOGO/01(1).png')
+        mainLogo.setAttribute('src', 'img/LOGO/logo01.png')
         for (let i = 0; i < mainLnb.length; i++) {
             mainLnb[i].style.color = 'black'
         }
@@ -105,7 +105,7 @@ window.addEventListener('scroll', (e) => {
 
     } else if (window.scrollY <= 100) {
         document.querySelector('header').style.backgroundColor = ''
-        mainLogo.setAttribute('src', 'img/LOGO/01(3).png')
+        mainLogo.setAttribute('src', 'img/LOGO/logo03.png')
         for (let i = 0; i < mainLnb.length; i++) {
             mainLnb[i].style.color = '#fff'
         }
