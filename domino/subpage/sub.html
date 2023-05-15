@@ -8,6 +8,8 @@
     <title>domino</title>
     <script src="../js/jquery-3.6.4.min.js"></script>
     <script src="./js/sub.js"></script>
+    <!-- <script type="module" src="./js/membership.js" defer></script> -->
+    <script type="module" src="./js/find.js" defer></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
     <link rel="stylesheet" href="./sub.css">
@@ -742,7 +744,11 @@
                 </div>
 
                 <label for="findid">이름</label>
-                <input type="text" id="findid" placeholder="이름 : 우진" class="findid">
+                <input type="text" id="findid" placeholder="이름 : 최우진" class="findid">
+
+                <label for="findphone01">생년월일</label>
+                <input type="text" id="findnum01" placeholder="생년월일 : 940402" class="findnum">
+
                 <div class="idbox"></div>
 
                 <button type="button" id="idbtn">아이디 찾기</button>
@@ -755,7 +761,9 @@
 
 
         </div>
-    </div>
+    </div><!--find end-->
+
+
 
     <div class="find find_02">
 
@@ -770,7 +778,13 @@
 
                 <label for="findpw">아이디</label>
                 <input type="text" id="findpw" placeholder="아이디 : woojin">
+
+                <label for="findnum02">생년월일</label>
+                <input type="text" id="findnum02" placeholder="생년월일 : 940402" class="findnum">
+                
+                
                 <div class="idbox pwbox"></div>
+
 
                 <button type="button" id="pwbtn">비밀번호 찾기</button>
 

@@ -1,5 +1,7 @@
-document.addEventListener('DOMContentLoaded', function () {
 
+
+document.addEventListener('DOMContentLoaded', function () {
+   
     const numBox = document.querySelector('#hp5')
 
 
@@ -172,64 +174,36 @@ document.addEventListener('DOMContentLoaded', function () {
     })
 
 
-    const findInputName = document.getElementById('findid')
-    const findInputId = document.getElementById('findpw')
-    const myId = document.querySelector('.idbox')
-    const myPw = document.querySelector('.pwbox')
-    const idBtn = document.getElementById('idbtn')
-    const pwBtn = document.getElementById('pwbtn')
+    // const findInputName = document.getElementById('findid')
+    // const findInputId = document.getElementById('findpw')
+    // const myId = document.querySelector('.idbox')
+    // const myPw = document.querySelector('.pwbox')
+    // const idBtn = document.getElementById('idbtn')
+    // const pwBtn = document.getElementById('pwbtn')
 
-    idBtn.addEventListener('click', findMyId)
-    pwBtn.addEventListener('click',findMyPw)
+    // idBtn.addEventListener('click', findMyId)
+    // pwBtn.addEventListener('click',findMyPw)
 
-    function findMyId() {
-        if (findInputName.value === '우진') {
+    // function findMyId() {
+    //     if (findInputName.value === '우진') {
 
-            myId.innerHTML = '아이디는 woojin 입니다.'
-        }else{
-            myId.innerHTML = '일치하는 아이디가 없습니다.'
-        }
-
-
-    }
-    function findMyPw() {
-        if (findInputId.value === 'woojin') {
-
-            myPw.innerHTML = '비밀번호는 woojin123 입니다.'
-        }else{
-            myPw.innerHTML = '일치하는 비밀번호가 없습니다.'
-        }
+    //         myId.innerHTML = '아이디는 woojin 입니다.'
+    //     }else{
+    //         myId.innerHTML = '일치하는 아이디가 없습니다.'
+    //     }
 
 
-    }
+    // }
+    // function findMyPw() {
+    //     if (findInputId.value === 'woojin') {
+
+    //         myPw.innerHTML = '비밀번호는 woojin123 입니다.'
+    //     }else{
+    //         myPw.innerHTML = '일치하는 비밀번호가 없습니다.'
+    //     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    // }
 
 
 
@@ -239,8 +213,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 })
-
-
 
 
 $(function () {
@@ -262,3 +234,8 @@ $(function () {
         $('.find_02').css('display', 'none')
     })
 })
+
+
+
+
+
