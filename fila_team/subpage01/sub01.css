@@ -644,7 +644,8 @@ body {
 }
 
 .subimg_wrap:hover .hoverBox {
-    bottom: 0;
+    /* opacity: 1; */
+    bottom:0;
 }
 
 .hoverBox {
@@ -652,7 +653,9 @@ body {
     height: 50px;
     line-height: 50px;
     position: absolute;
+    z-index: 999;
     bottom: -50px;
+    /* opacity: 0; */
     left: 0;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
