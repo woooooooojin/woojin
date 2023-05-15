@@ -623,6 +623,7 @@ body {
 
 .subBox {
     width: calc(100% - 75% - 25px);
+    /* height: 550px; */
     margin-left: 20px;
     margin-bottom: 50px;
     cursor: pointer;
@@ -700,11 +701,11 @@ body {
 }
 
 .item_wrap {
-    display: flex;
+    /* display: flex; */
 }
 
 .item_desc_wrap {
-    width: 70%;
+    width: 100%;
 }
 
 .item_category {
@@ -720,9 +721,10 @@ body {
 .item_price {}
 
 .buy_box {
-    width: 30%;
+    width: 100%;
     text-align: center;
-    position: relative;
+    margin-top: 10px;
+    /* position: relative; */
 }
 
 .buy_btn:hover {
@@ -737,11 +739,12 @@ body {
     height: 40px;
     line-height: 40px;
     border-radius: 30px;
-    border: 1px solid black;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    border: 1px solid #ccc;
+    background-color: #eee;
+    /* position: absolute; */
+    /* bottom: 0; */
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
     transition: .3s;
 
 }
