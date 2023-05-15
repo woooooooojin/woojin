@@ -37,8 +37,7 @@ body{
 }
 .detail_wrap .detail_box_L{
     width: 70%;
-    height: 900px;
-    border: 1px solid #ccc;
+    /* height: 900px; */
 }
 
 .detail_wrap .detail_box_L .box_L_wrap{
@@ -46,7 +45,6 @@ body{
 }
 .detail_wrap .detail_box_L .box_L_wrap .detail_video{
     width: calc(100% - 50% - 10px);
-    border: 1px solid #ccc;
     margin-right: 20px;
     font-size: 0;
 }
@@ -58,7 +56,6 @@ body{
 
 .detail_wrap .detail_box_L .box_L_wrap .detail_thumb{
     width: calc(100% - 50% - 10px);
-    border: 1px solid #ccc;
 }
 
 
@@ -73,7 +70,7 @@ body{
 }
 .swiper01 .swiper-pagination-bullet{
     width: 16%;
-    height: 110px;
+    height: 100px;
     border-radius: 0;
     background-color: #fff;
     border: 1px solid #ccc;
@@ -128,4 +125,83 @@ body{
     width: 100%;
     height: auto;
 }
+
+.detail_wrap .detail_box_R{
+    width: 30%;
+    height: 900px;
+    border: 1px solid #ccc;
+    padding: 0 10px;
+}
+
+.detail_wrap .detail_box_R .category{}
+.detail_wrap .detail_box_R .category p{
+    display: inline-block;
+    margin-right: 10px;
+}
+.detail_wrap .detail_box_R .category p::after{
+    content: "";
+    width: 1px;
+    height: 15px;
+    display: inline-block;
+    background-color: #999;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+.detail_wrap .detail_box_R .category p:last-child:after{
+    visibility: hidden;
+}
+.category_wrap{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    color: #999;
+}
+.category_02 i{
+    font-size: 23px;
+    cursor: pointer;
+    color: black;
+}
+.box_R_tit{
+    margin-top: 10px;
+}
+
+.box_R_color{}
+.box_R_color .color_wrap{
+    overflow: hidden;
+    margin-top: 30px;
+}
+.swiper02{
+    margin-left: 50px;
+   
+}
+.swiper02 ul li {
+    width: 28% !important;
+    /* height: 150px; */
+    font-size: 0;
+    cursor: pointer;
+}
+.swiper02 li img{
+    width: 100%;
+    height: 100%;
+}
+
+.size_box{
+    margin-top: 50px;
+}
+.size_box .size_wrap{}
+.size_box .size_wrap .size_tit{
+    display: flex;
+    justify-content: space-between;
+}
+.size_box .size_wrap .size_tit h4{
+    font-size: 18px;
+}
+.size_box .size_wrap .size_tit p{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+
+
 
