@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js array 0515 </title>
+
+
+    <script>
+
+        //배열(array): unshift()/ push()/ shift()/ pop()/ splice() => 삭제,수정, 추가
+
+        // const arr = new Array()
+
+        // arr[0] = 23
+        // arr[1] = 2
+        // arr[2] = 124
+        // arr[3] = 34
+        // arr[arr.length] = 50
+        
+        // for(let i =0; i<arr.length; i++){
+        //     document.write(arr[i],'<br />')
+        // }
+
+
+        // const arr = new Array(23, 47, 12, 546, 2125, 235235235)
+
+        // for(let i =0; i<arr.length;i++){
+
+        //     document.write(arr[i],'<br />')
+
+        // }
+
+
+
+        // const arr = [234,23566,17888,2756346,222]
+
+        // for(let i in arr){//index
+
+        //     document.write(arr[i],'<br />')
+
+        // }
+
+        // for(let value of arr){//value
+        //     document.write(value, '<br/ >')
+        // }
+
+
+
+
+
+
+
+        // const fruits = ['apple','banana','mango','orange']
+
+        // for(let i in fruits){
+        //     document.write(fruits[i],'&nbsp;&nbsp;')
+           
+
+
+        // }
+        // document.write('<br /><br />')
+        // // fruits[0]='orange'
+
+
+        // fruits.unshift('orange2')
+
+        // fruits.push('kiwi')
+        // fruits[fruits.length] = 'kiwi2'
+
+        // fruits.shift() //맨앞에 삭제, 메모리를 벗어남
+
+        // fruits.pop()//제일뒤에 삭제, 메모리에서 벗어남
+
+        // // fruits.splice(2,1) //기준이되는 인덱스에서, 1개삭제(2,1)
+
+        // let index = fruits.indexOf('mango') 
+        // // fruits.splice(index,1)
+        // fruits.splice(index, 0,'kiwi') //삽입, 0 = 지우는게 0이다
+
+
+
+        // for(let item of fruits){
+        //     document.write(item,'&nbsp;&nbsp;')
+        // }
+
+
+
+        const str = 'hello javascript!'
+
+        document.write(str,'</br >')
+        document.write(str[4],'<br />')
+        document.write(str[str.length-1],'<br/ >')
+
+        str.push('~')
+        document.write(str,'<br />')
+        //문자열은 배열로 등록되는 데이터, 배열함수는 사용할수 없다
+        
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+
+    
+</body>
+</html>
