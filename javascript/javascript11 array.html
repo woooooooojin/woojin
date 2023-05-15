@@ -52,49 +52,49 @@
 
 
 
-        // const fruits = ['apple','banana','mango','orange']
+        const fruits = ['apple','banana','mango','orange']
 
-        // for(let i in fruits){
-        //     document.write(fruits[i],'&nbsp;&nbsp;')
+        for(let i in fruits){
+            document.write(fruits[i],'&nbsp;&nbsp;')
            
 
 
-        // }
-        // document.write('<br /><br />')
-        // // fruits[0]='orange'
+        }
+        document.write('<br /><br />')
+        // fruits[0]='orange'
 
 
-        // fruits.unshift('orange2')
+        // fruits.unshift('orange2') //unshift = 맨앞에 삽입
 
-        // fruits.push('kiwi')
-        // fruits[fruits.length] = 'kiwi2'
+        // fruits.push('kiwi') // 맨뒤에 삽입
+        // fruits[fruits.length] = 'kiwi2' // 맨뒤에 삽입
 
         // fruits.shift() //맨앞에 삭제, 메모리를 벗어남
 
         // fruits.pop()//제일뒤에 삭제, 메모리에서 벗어남
 
-        // // fruits.splice(2,1) //기준이되는 인덱스에서, 1개삭제(2,1)
+        // fruits.splice(2,1) //기준이되는 인덱스에서, 1개삭제(2,1)
 
-        // let index = fruits.indexOf('mango') 
-        // // fruits.splice(index,1)
-        // fruits.splice(index, 0,'kiwi') //삽입, 0 = 지우는게 0이다
-
-
-
-        // for(let item of fruits){
-        //     document.write(item,'&nbsp;&nbsp;')
-        // }
+        let index = fruits.indexOf('mango') 
+        // fruits.splice(index,1)
+        fruits.splice(index, 0,'kiwi') //삽입, 0 = 지우는게 0이다
 
 
 
-        const str = 'hello javascript!'
+        for(let item of fruits){
+            document.write(item,'&nbsp;&nbsp;')
+        }
 
-        document.write(str,'</br >')
-        document.write(str[4],'<br />')
-        document.write(str[str.length-1],'<br/ >')
 
-        str.push('~')
-        document.write(str,'<br />')
+
+        // const str = 'hello javascript!'
+
+        // document.write(str,'</br >')
+        // document.write(str[4],'<br />')
+        // document.write(str[str.length-1],'<br/ >')
+
+        // str.push('~')
+        // document.write(str,'<br />')
         //문자열은 배열로 등록되는 데이터, 배열함수는 사용할수 없다
         
 

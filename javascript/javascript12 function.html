@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,41 +9,189 @@
 
 
     <script>
-
         //scope : 변수가 존재하는 범위 => const / let vs var
 
         //선언적 함수
-        function func(){
-            document.write('function_1','<br />')
+        // function func(){
+        //     document.write('function_1','<br />')
+        // }
+        // func()
+
+
+        // //익명 함수
+        // const func01 = function(){
+        //     document.write('function_2','<br />')
+        // }
+        // func01()
+
+
+
+        // //화살표 함수
+        // const func02 = ()=>{
+        //     document.write('function_3','<br />')
+        // }
+        // func02()
+
+
+        //단순함수호출
+
+        // function func(){
+        //     let a =2
+        //     let b =3
+        //     let add = a + b
+
+        //     document.write(`add = ${add}`) //templet string
+
+        // }func()
+
+
+        // const func = ()=>{
+        //     let a =5
+        //     let b =3
+        //     let add = a + b
+
+        //     document.write(`add = ${add}`) //templet string
+        // }
+        // func()
+
+
+        //매개변수 전달 함수호출
+
+        // function func(a,b){
+        //     let add = a + b
+        //     document.write(`add = ${add}`)
+
+        // }
+
+        // const func = (a,b) => {
+        //     let add = a + b
+        //     document.write(`add = ${add}`)
+        // }
+        // func(3,9)
+
+
+        //return문
+
+        // function func(a,b){
+        //     let add = a + b
+        //     return add
+
+        // }
+
+        // const func = (a,b) => {
+
+        //     // let add = a + b
+        //     return a + b
+
+        // }
+
+        //
+        // const func = (a,b)=> a + b
+
+        // let result = func(5,2)
+        // document.write(`add = ${result}`)
+
+
+
+        //최소값에서 최대값까지의 누적합 구하기
+
+        // let min = 1
+        // let max = 100
+
+        // let result = sum(min, max)
+        // document.write(`${min}에서 ${max}까지의 합 : ${result}`)
+
+        // function sum(num1,num2){
+        //     let sum =0;
+
+        //     for(let i = num1; i<=num2; i++){
+        //         sum+=i
+        //     }
+        //     return sum
+        // }
+
+
+
+        //세 수중 최대값 구하기
+
+        // function max(a,b,c){
+        //     let max =0
+        //     if(a>b && a>c){
+        //         max = a
+        //     }else if(b>a && b> c){
+        //         max =b
+        //     }else if(c>a && c>b){
+        //         max = c
+        //     }
+
+        //     return max
+        // }
+        // let result = max(35 ,20 ,3)
+        // document.write(`max = ${result}`)
+
+
+
+        //정해진 배열 데이터에서 최대값 구하기
+
+        // const numArray = [25, 1, 92, 46, 10, 104, 75]
+
+
+        // function max(array) {
+        // let max = array[0]
+        // for(let i in array){
+        //     if(array[i]>max){
+        //         max = array[i]
+        //     }
+        // }
+
+        // for(let value of array){
+        //     if(value > max) {
+        //         max = value
+        //     }
+        // }
+        // return max
+        // }
+
+        // document.write(`max = ${max(numArray)}`)
+
+
+
+
+
+        //정해지지않은 가변 데이터에서 최소값 구하기
+
+        //가변 매개변수 함수 = 나머지 매개변수
+        // function func(...items){}
+
+        // function func(...items){
+        //     document.write(items, '<br />')
+        //     console.log(items,'<br />')
+        // }
+        // func(1,2)
+        // func(1,2,3)
+        // func(1,2,5,3)
+
+
+        function min(...items){
+            let min = items[0];
+            for(let item of items){
+                if(item < min){
+                    min = item
+                }
+            }
+            return min
         }
-        func()
-
-
-        //익명 함수
-        const func01 = function(){
-            document.write('function_2','<br />')
-        }
-        func01()
-
-
-
-        //화살표 함수
-        const func02 = ()=>{
-            document.write('function_3','<br />')
-        }
-        func02()
-
-
-
-
+        document.write(min(46,6,83,65,2,59))
 
 
 
     </script>
 </head>
+
 <body>
 
 
-    
+
 </body>
+
 </html>
