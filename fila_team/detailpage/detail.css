@@ -128,7 +128,7 @@ body{
 
 .detail_wrap .detail_box_R{
     width: 30%;
-    height: 900px;
+    /* height: 900px; */
     border: 1px solid #ccc;
     padding: 0 10px;
 }
@@ -171,7 +171,7 @@ body{
     margin-top: 30px;
 }
 .swiper02{
-    margin-left: 50px;
+    margin-left: 30px;
    
 }
 .swiper02 ul li {
@@ -201,7 +201,93 @@ body{
     cursor: pointer;
 }
 
+.size_chkbox{
+    margin-top: 20px;
+}
+.size_chkbox ul{
+    display: flex;
+    justify-content: space-between;
+}
+.size_chkbox ul li{
+    width: calc(100% - 75% - 7.5px);
+    height: 60px;
+    border: 1px solid #ccc;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 10px;
+}
+.size_chkbox ul li label{
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: .3s;
+}
 
+#size_chk01,
+#size_chk02,
+#size_chk03,
+#size_chk04{
+    display: none;
+}
 
+#size_chk01:checked ~ .size_label01,
+#size_chk02:checked ~ .size_label02,
+#size_chk03:checked ~ .size_label03,
+#size_chk04:checked ~ .size_label04{
+    background-color: #002053;
+    color: #fff;
+    border-radius: 10px;
+}
 
+.count_pdc{
+    margin-top: 50px;
+}
+.count_pdc .count_wrap{
+    display: flex;
+    text-align: center;
+    border: 1px solid #ccc;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+.count_pdc .count_wrap .minus_box{
+    width: 25%;
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 10px 0 0 10px;
+}
+.count_pdc .count_wrap .minus_box:hover{
+    color: #fff;
+    background-color: #002053;
+}
+
+.count_pdc .count_wrap .cnt_box{
+    width: 50%;
+
+}
+.count_pdc .count_wrap .plus_box:hover{
+    color: #fff;
+    background-color: #002053;
+}
+.count_pdc .count_wrap .plus_box{
+    width: 25%;
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 0 10px 10px 0;
+}
+
+.price_pdc{
+    margin-top: 30px;
+}
+.price_pdc .price_wrap{
+    display: flex;
+    justify-content: space-between;
+}
+.price_pdc .price_wrap h4{
+    font-size: 20px;
+}
+.price_pdc .price_wrap p{
+    font-size: 20px;
+}
 
