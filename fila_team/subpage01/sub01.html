@@ -28,18 +28,18 @@
         $(function () {
 
             $('.filter_open').click(function () {
-                $('.filter_open').css('display','none')
-                
-                $('.filter_close').css('display','block')
+                $('.filter_open').css('display', 'none')
+
+                $('.filter_close').css('display', 'block')
                 $('.filter_box_list').slideDown(300)
-               
+
 
             })
             $('.filter_close').click(function () {
-                $('.filter_close').css('display','none')
-                
-                $('.filter_open').css('display','block')
-                
+                $('.filter_close').css('display', 'none')
+
+                $('.filter_open').css('display', 'block')
+
                 $('.filter_box_list').slideUp(300)
 
             })
@@ -66,340 +66,340 @@
     <!--banner end-->
 
 
+    <div class="wrap">
+        <div class="opt_section">
+            <div class="opt_wrap">
 
-    <div class="opt_section">
-        <div class="opt_wrap">
-
-            <div class="opt_box1">
-                <input type="checkbox" id="filter_chk">
-                <label for="filter_chk" class="filter_open">필터 <i class="fas fa-plus"></i></label>
-                <label for="filter_chk" class="filter_close">필터 <i class="fas fa-minus"></i></label>
+                <div class="opt_box1">
+                    <input type="checkbox" id="filter_chk">
+                    <label for="filter_chk" class="filter_open">필터 <i class="fas fa-plus"></i></label>
+                    <label for="filter_chk" class="filter_close">필터 <i class="fas fa-minus"></i></label>
 
 
-            </div>
-
-            <div class="opt_box2"></div>
-
-            <div class="opt_box3">
-                <div class="sort_box">
-                    <select name="sort" id="select_sort">
-                        <option value="new">신상품순</option>
-                        <option value="pop">인기순</option>
-                        <option value="expensive">높은가격순</option>
-                        <option value="cheap">낮은가격순</option>
-                    </select>
-                </div>
-                <!--sort box-->
-
-                <div class="grid_box">
-                    <div class="grid_01"><i class="fas fa-th-large"></i></div>
-                    <div class="grid_02"><i class="fas fa-th"></i></div>
                 </div>
 
+                <div class="opt_box2"></div>
+
+                <div class="opt_box3">
+                    <div class="sort_box">
+                        <select name="sort" id="select_sort">
+                            <option value="new">신상품순</option>
+                            <option value="pop">인기순</option>
+                            <option value="expensive">높은가격순</option>
+                            <option value="cheap">낮은가격순</option>
+                        </select>
+                    </div>
+                    <!--sort box-->
+
+                    <div class="grid_box">
+                        <div class="grid_01"><i class="fas fa-th-large"></i></div>
+                        <div class="grid_02"><i class="fas fa-th"></i></div>
+                    </div>
+
+
+
+                </div>
 
 
             </div>
-
-
-        </div>
-        <!--opt wrap-->
-
-
-
-
-    </div>
-    <!--opt section end-->
-
-    <div class="filter_box_list">
-        <div class="filter_wrap">
-
-
-
-            <div class="filter_box fbox_all">
-                <h4>전체</h4>
-
-                <ul>
-                    <li><a href="#!">바람막이/아노락</a></li>
-                    <li><a href="#!">후드티/맨투맨</a></li>
-                    <li><a href="#!">트레이닝 세트</a></li>
-                    <li><a href="#!">니트/스웨터</a></li>
-                    <li><a href="#!">티셔츠</a></li>
-                    <li><a href="#!">팬츠</a></li>
-                    <li><a href="#!">다운/플리스</a></li>
-                    <li><a href="#!">온라인단독</a></li>
-                </ul>
-
-            </div>
-            <!--filter box-->
-
-            <div class="filter_box fbox_sport">
-                <h4>스포츠</h4>
-
-                <ul>
-                    <li>
-                        <input type="checkbox" id="sport_chk1">
-                        <label for="sport_chk1" class="sport_label01">테니스</label>
-                    </li>
-
-                    <li>
-                        <input type="checkbox" id="sport_chk2">
-                        <label for="sport_chk2" class="sport_label01">러닝</label>
-                    </li>
-
-                    <li>
-                        <input type="checkbox" id="sport_chk3">
-                        <label for="sport_chk3" class="sport_label01">라이프스타일</label>
-                    </li>
-
-                    <li>
-                        <input type="checkbox" id="sport_chk4">
-                        <label for="sport_chk4" class="sport_label01">트레이닝</label>
-                    </li>
-
-                    <li>
-                        <input type="checkbox" id="sport_chk5">
-                        <label for="sport_chk5" class="sport_label01">골프</label>
-                    </li>
-                </ul>
-
-
-            </div>
-            <!--filter box-->
-
-            <div class="filter_box fbox_color">
-                <h4>색상</h4>
-
-                <ul>
-                    <li>
-                        <input type="checkbox" id="color_chk01">
-                        <label for="color_chk01" class="color01"></label>
-                    </li>
-
-                    <li>
-                        <input type="checkbox" id="color_chk02">
-                        <label for="color_chk02" class="color02"></label>
-                    </li>
-
-                    <li>
-                        <input type="checkbox" id="color_chk03">
-                        <label for="color_chk03" class="color03"></label>
-                    </li>
-
-                    <li>
-                        <input type="checkbox" id="color_chk04">
-                        <label for="color_chk04" class="color04"></label>
-                    </li>
-
-                    <li>
-                        <input type="checkbox" id="color_chk05">
-                        <label for="color_chk05" class="color05"></label>
-                    </li>
-
-                    <li>
-                        <input type="checkbox" id="color_chk06">
-                        <label for="color_chk06" class="color06"></label>
-                    </li>
-
-                    <br />
-
-                    <li>
-                        <input type="checkbox" id="color_chk07">
-                        <label for="color_chk07" class="color07"></label>
-                    </li>
-
-                    <li>
-                        <input type="checkbox" id="color_chk08">
-                        <label for="color_chk08" class="color08"></label>
-                    </li>
-
-                    <li>
-                        <input type="checkbox" id="color_chk09">
-                        <label for="color_chk09" class="color09"></label>
-                    </li>
-
-                    <li>
-                        <input type="checkbox" id="color_chk10">
-                        <label for="color_chk10" class="color10"></label>
-                    </li>
-
-                    <li>
-                        <input type="checkbox" id="color_chk11">
-                        <label for="color_chk11" class="color11"></label>
-                    </li>
-
-                    <li>
-                        <input type="checkbox" id="color_chk12">
-                        <label for="color_chk12" class="color12"></label>
-                    </li>
-                </ul>
-
-            </div>
-            <!--filter box-->
-
-            <div class="filter_box fbox_size">
-                <h4>사이즈</h4>
-                <ul>
-                    <li>
-                        <input type="checkbox" id="size_chk01">
-                        <label for="size_chk01" class="size01">075</label>
-                    </li>
-
-                    <li>
-                        <input type="checkbox" id="size_chk02">
-                        <label for="size_chk02" class="size02">078</label>
-                    </li>
-
-                    <li>
-                        <input type="checkbox" id="size_chk03">
-                        <label for="size_chk03" class="size03">080</label>
-                    </li>
-
-                    <li>
-                        <input type="checkbox" id="size_chk04">
-                        <label for="size_chk04" class="size04">082</label>
-                    </li>
-
-                    <li>
-                        <input type="checkbox" id="size_chk05">
-                        <label for="size_chk05" class="size05">084</label>
-                    </li>
-
-                    <li>
-                        <input type="checkbox" id="size_chk06">
-                        <label for="size_chk06" class="size06">085</label>
-                    </li>
-
-                    <li>
-                        <input type="checkbox" id="size_chk07">
-                        <label for="size_chk07" class="size07">086</label>
-                    </li>
-
-                    <li>
-                        <input type="checkbox" id="size_chk08">
-                        <label for="size_chk08" class="size08">090</label>
-                    </li>
-
-                    <li>
-                        <input type="checkbox" id="size_chk09">
-                        <label for="size_chk09" class="size09">094</label>
-                    </li>
-
-                    <li>
-                        <input type="checkbox" id="size_chk10">
-                        <label for="size_chk10" class="size10">095</label>
-                    </li>
-
-                    <li>
-                        <input type="checkbox" id="size_chk11">
-                        <label for="size_chk11" class="size11">100</label>
-                    </li>
-
-                    <li>
-                        <input type="checkbox" id="size_chk12">
-                        <label for="size_chk12" class="size12">105</label>
-                    </li>
-
-                    <li>
-                        <input type="checkbox" id="size_chk13">
-                        <label for="size_chk13" class="size13">110</label>
-                    </li>
-
-                    <li>
-                        <input type="checkbox" id="size_chk14">
-                        <label for="size_chk14" class="size14">115</label>
-                    </li>
-
-
-
-
-                </ul>
-
-            </div>
-            <!--filter box-->
-
-
-            <div class="filter_box fbox_price">
-                <h4>가격</h4>
-
-                <ul>
-                    <li>
-                        <input type="checkbox" id="price_chk01">
-                        <label for="price_chk01" class="price01">39,000 이하</label>
-                    </li>
-
-                    <li>
-                        <input type="checkbox" id="price_chk02">
-                        <label for="price_chk02" class="price02">39,000 ~ 49,000</label>
-                    </li>
-
-                    <li>
-                        <input type="checkbox" id="price_chk03">
-                        <label for="price_chk03" class="price03">49,000 ~ 59,000</label>
-                    </li>
-
-                    <li>
-                        <input type="checkbox" id="price_chk04">
-                        <label for="price_chk04" class="price04">59,000 ~ 79,000</label>
-                    </li>
-
-                    <li>
-                        <input type="checkbox" id="price_chk05">
-                        <label for="price_chk05" class="price05">79,000 초과</label>
-                    </li>
-                </ul>
-
-
-            </div>
-            <!--filter box-->
-
-            <div class="filter_box fbox_gender">
-                <h4>성별</h4>
-
-                <ul>
-                    <li>
-                        <input type="checkbox" id="gender_all">
-                        <label for="gender_all" class="gender01">공용</label>
-                    </li>
-
-                    <li>
-                        <input type="checkbox" id="gender_men">
-                        <label for="gender_men" class="gender02">남성</label>
-                    </li>
-
-
-                </ul>
-
-
-            </div>
-            <!--filter box-->
-
-
-
-
-
-
+            <!--opt wrap-->
 
 
 
 
         </div>
-        <!--filter wrap end-->
+        <!--opt section end-->
 
-
-    </div>
-    <!--filter box list end-->
-
-
-    <div class="sublist_wrap">
-        <section class="sublist">
+        <div class="filter_box_list">
+            <div class="filter_wrap">
 
 
 
-        </section>
-    </div>
-    <!--sublist wrap end 상품리스트-->
+                <div class="filter_box fbox_all">
+                    <h4>전체</h4>
+
+                    <ul>
+                        <li><a href="#!">바람막이/아노락</a></li>
+                        <li><a href="#!">후드티/맨투맨</a></li>
+                        <li><a href="#!">트레이닝 세트</a></li>
+                        <li><a href="#!">니트/스웨터</a></li>
+                        <li><a href="#!">티셔츠</a></li>
+                        <li><a href="#!">팬츠</a></li>
+                        <li><a href="#!">다운/플리스</a></li>
+                        <li><a href="#!">온라인단독</a></li>
+                    </ul>
+
+                </div>
+                <!--filter box-->
+
+                <div class="filter_box fbox_sport">
+                    <h4>스포츠</h4>
+
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="sport_chk1">
+                            <label for="sport_chk1" class="sport_label01">테니스</label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="sport_chk2">
+                            <label for="sport_chk2" class="sport_label01">러닝</label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="sport_chk3">
+                            <label for="sport_chk3" class="sport_label01">라이프스타일</label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="sport_chk4">
+                            <label for="sport_chk4" class="sport_label01">트레이닝</label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="sport_chk5">
+                            <label for="sport_chk5" class="sport_label01">골프</label>
+                        </li>
+                    </ul>
 
 
+                </div>
+                <!--filter box-->
+
+                <div class="filter_box fbox_color">
+                    <h4>색상</h4>
+
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="color_chk01">
+                            <label for="color_chk01" class="color01"></label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="color_chk02">
+                            <label for="color_chk02" class="color02"></label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="color_chk03">
+                            <label for="color_chk03" class="color03"></label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="color_chk04">
+                            <label for="color_chk04" class="color04"></label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="color_chk05">
+                            <label for="color_chk05" class="color05"></label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="color_chk06">
+                            <label for="color_chk06" class="color06"></label>
+                        </li>
+
+                        <br />
+
+                        <li>
+                            <input type="checkbox" id="color_chk07">
+                            <label for="color_chk07" class="color07"></label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="color_chk08">
+                            <label for="color_chk08" class="color08"></label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="color_chk09">
+                            <label for="color_chk09" class="color09"></label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="color_chk10">
+                            <label for="color_chk10" class="color10"></label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="color_chk11">
+                            <label for="color_chk11" class="color11"></label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="color_chk12">
+                            <label for="color_chk12" class="color12"></label>
+                        </li>
+                    </ul>
+
+                </div>
+                <!--filter box-->
+
+                <div class="filter_box fbox_size">
+                    <h4>사이즈</h4>
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="size_chk01">
+                            <label for="size_chk01" class="size01">075</label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="size_chk02">
+                            <label for="size_chk02" class="size02">078</label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="size_chk03">
+                            <label for="size_chk03" class="size03">080</label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="size_chk04">
+                            <label for="size_chk04" class="size04">082</label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="size_chk05">
+                            <label for="size_chk05" class="size05">084</label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="size_chk06">
+                            <label for="size_chk06" class="size06">085</label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="size_chk07">
+                            <label for="size_chk07" class="size07">086</label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="size_chk08">
+                            <label for="size_chk08" class="size08">090</label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="size_chk09">
+                            <label for="size_chk09" class="size09">094</label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="size_chk10">
+                            <label for="size_chk10" class="size10">095</label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="size_chk11">
+                            <label for="size_chk11" class="size11">100</label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="size_chk12">
+                            <label for="size_chk12" class="size12">105</label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="size_chk13">
+                            <label for="size_chk13" class="size13">110</label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="size_chk14">
+                            <label for="size_chk14" class="size14">115</label>
+                        </li>
+
+
+
+
+                    </ul>
+
+                </div>
+                <!--filter box-->
+
+
+                <div class="filter_box fbox_price">
+                    <h4>가격</h4>
+
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="price_chk01">
+                            <label for="price_chk01" class="price01">39,000 이하</label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="price_chk02">
+                            <label for="price_chk02" class="price02">39,000 ~ 49,000</label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="price_chk03">
+                            <label for="price_chk03" class="price03">49,000 ~ 59,000</label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="price_chk04">
+                            <label for="price_chk04" class="price04">59,000 ~ 79,000</label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="price_chk05">
+                            <label for="price_chk05" class="price05">79,000 초과</label>
+                        </li>
+                    </ul>
+
+
+                </div>
+                <!--filter box-->
+
+                <div class="filter_box fbox_gender">
+                    <h4>성별</h4>
+
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="gender_all">
+                            <label for="gender_all" class="gender01">공용</label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="gender_men">
+                            <label for="gender_men" class="gender02">남성</label>
+                        </li>
+
+
+                    </ul>
+
+
+                </div>
+                <!--filter box-->
+
+
+
+
+
+
+
+
+
+
+            </div>
+            <!--filter wrap end-->
+
+
+        </div>
+        <!--filter box list end-->
+
+
+        <div class="sublist_wrap">
+            <section class="sublist">
+
+
+
+            </section>
+        </div>
+        <!--sublist wrap end 상품리스트-->
+
+    </div><!--wrap end-->
 </body>
 
 </html>
