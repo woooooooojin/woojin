@@ -16,10 +16,10 @@ pwBtn.addEventListener('click',yourPw)
 function yourId() {
     for (let i = 0; i < membership.length; i++) {
         if (findName.value === membership[i].name && findNum01.value === membership[i].birth) {
-            myId.innerHTML = '아이디는 ' + membership[i].id + ' 입니다.' + membership[i]
+            myId.innerHTML = '아이디는 ' + membership[i].id + ' 입니다.' + membership[i].name
  
         }else{
-            myId.innerHTML = '정보를 확인해 주세요.' + membership[i]
+            myId.innerHTML = '정보를 확인해 주세요.'
         }
 
 
