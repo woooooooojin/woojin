@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js function 0516 </title>
+
+
+    <script>
+        //기본 매개변수  - default 매개변수
+        //디폴트 값은 뒤에 넣어야한다 func(a, b, c, d=2)
+
+        // function func(a,b=2){
+        //     document.write(`${a} and  ${b} <br />`)
+        // }
+        // func(1,1)
+        // func(1)
+        // func()
+
+
+        // function studyTime(name, hours = 8, days = 5){
+
+        //     document.write(`${name}님의 주 수업시간<br />`)
+        //     document.write(`하루수업시간 : ${hours} <br />`)
+        //     document.write(`주수업일수 : ${days}<br />`)
+        //     document.write(`일주일 수업 시수 : ${hours * days}<br />`)
+
+        // }
+        // studyTime("홍길동") 
+        // studyTime("이순신", 7)
+        // studyTime("유관순",7,6)
+
+
+
+        //비동기 프로그램 : 함수의 위치를 고정할 필요가 없고 필요할때 중간에서 만들어서 사용할수 있음
+
+        //콜백함수 : 매개변수로 전달되는 함수
+
+        // function func(callback){
+        //     for(let i =1; i<=10; i++){
+        //         callback(i)
+        //     }
+        // }
+        // function output(index){
+        //     document.write(`${index}번째 <br />`)
+        // }
+
+        // func(output)
+
+
+
+
+
+
+        //배열함수 : forEach(), map(), filter()
+
+        //forEach(function(value, index, array)) : 단순히 배열 내부 요소(콜백함수)를 사용
+
+        // const numbers= [23, 5, 42, 67, 57, 92, 13]
+        // numbers.forEach(function(value,index,array){
+        //     document.write(`${value} - ${index}<br />`)
+        // })
+
+        // numbers.forEach((value,index, numbers)=>{
+        //     document.write(`${value} - ${index}<br />`)
+
+        // })
+
+
+
+
+
+        //map() : 콜백함수에서 리턴하는 값을 이용해 새로운 배열을 생성
+
+        // const numbers = [23, 5, 42, 67, 57, 92, 12]
+
+        // const numbers_01 = numbers.map((value) =>{
+        //     return value * 2
+        // })
+
+        // const numbers_01 = numbers.map((value) => value * 2)
+
+
+        // for(let number of numbers_01){
+        //     document.write(`${number} <br />`)
+        // }
+
+        // numbers_01.forEach((number)=>{
+        //     document.write(`${number} <br />`)
+        // })
+
+
+        // const numbers_01 = numbers.map((value) => value * 2)
+        //                           .forEach((number)=>{
+        //                             document.write(`${number} <br />`)
+        //                         }) //매서드 체이닝 기법
+
+
+
+
+
+
+
+
+        //filter() : 콜백함수에서 리턴되는 값이 true인것을 배열로 생성
+        //           return문 뒤에 조건문 작성 => if문 안됨
+
+        // const numbers = [23, 5, 42, 67, 57, 92, 12]
+
+        // const evenNumbers = numbers.filter((value) => {
+        //     return value % 2 === 0
+        // })
+
+        // evenNumbers.forEach((value) => {
+        //     document.write(`${value} <br />`)
+        // })
+
+
+
+
+
+
+        // 타이머 함수
+
+        //setTimeOut(함수, 시간) : 특정 시간이 지난 후에 함수를 한번만 호출해서 실행
+        //setInterval(함수 , 시간) : 특정시간마다 함수를 호출해서 실행
+        //clearInterval() : setInterval() 함수 실행을 멈춤
+
+        // setTimeout(function () {
+        //     document.write('1초후에 실행', '<br />')
+        // }, 1000)
+
+        // let cnt = 1
+        // let time = setInterval(function(){
+        //     document.write('1초마다 실행','<br />')
+        //     cnt ++
+        //     if(cnt === 5) clearInterval(time)
+        // },1000)
+
+
+        
+
+        // let cnt = 1
+        // let time = setInterval(() => {
+        //     document.write('1초마다 실행', '<br />')
+        //     cnt++
+
+        // },1000)
+
+        // setTimeout(()=>{
+        //     document.write('타이머종료')
+        //     clearInterval(time)
+        // },5000)
+
+        //팝업 응용하기 
+
+
+    </script>
+</head>
+
+<body>
+
+
+
+</body>
+
+</html>
