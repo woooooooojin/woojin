@@ -24,18 +24,6 @@ const membership = [
     birth : '680903',
 },
 {
-    id: "member05",
-    name: "이봉창",
-    pw:"bong1234",
-    birth : '760811',
-},
-{
-    id: "member06",
-    name: "홍범도",
-    pw:"bum1234",
-    birth : '991201',
-},
-{
     id: "woojin",
     name: "최우진",
     pw:"woojin123",
