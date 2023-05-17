@@ -174,6 +174,7 @@ document.addEventListener('DOMContentLoaded', function () {
 //     const sortBox = document.getElementById('sub_sort')
 //     // const sortDatas = _.sortBy(subData,['price01','name'])
 
+
 //     selectBox.addEventListener('change', function () {
 
 //         if (selectBox.value === 'expensive') {
@@ -182,6 +183,7 @@ document.addEventListener('DOMContentLoaded', function () {
 //                 if (itemA.price01 < itemB.price01) return -1;
 //                 return 0;
 //             })
+            
 //         }
 
 //     })
