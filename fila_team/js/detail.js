@@ -4,62 +4,71 @@ document.addEventListener('DOMContentLoaded', function () {
     const infoBox01 = document.querySelector('.infobox_01')
     const infoBox02 = document.querySelector('.infobox_02')
     const infoBox03 = document.querySelector('.infobox_03')
-        pdcInfoLi[0].addEventListener('click', function () {
-            pdcInfoLi[2].classList.remove("on")
-            pdcInfoLi[1].classList.remove("on")
-            pdcInfoLi[0].classList.add("on")
-            infoBox01.style.display = 'block'
-            infoBox02.style.display = 'none'
-            infoBox03.style.display = 'none'
-        })
-        pdcInfoLi[1].addEventListener('click', function () {
-            pdcInfoLi[2].classList.remove("on")
-            pdcInfoLi[0].classList.remove("on")
-            pdcInfoLi[1].classList.add("on")
-            infoBox01.style.display = 'none'
-            infoBox02.style.display = 'block'
-            infoBox03.style.display = 'none'
-        })
-        pdcInfoLi[2].addEventListener('click', function () {
-            pdcInfoLi[0].classList.remove("on")
-            pdcInfoLi[1].classList.remove("on")
-            pdcInfoLi[2].classList.add("on")
-            infoBox01.style.display = 'none'
-            infoBox02.style.display = 'none'
-            infoBox03.style.display = 'block'
-        })
+    pdcInfoLi[0].addEventListener('click', function () {
+        pdcInfoLi[2].classList.remove("on")
+        pdcInfoLi[1].classList.remove("on")
+        pdcInfoLi[0].classList.add("on")
+        infoBox01.style.display = 'block'
+        infoBox02.style.display = 'none'
+        infoBox03.style.display = 'none'
+    })
+    pdcInfoLi[1].addEventListener('click', function () {
+        pdcInfoLi[2].classList.remove("on")
+        pdcInfoLi[0].classList.remove("on")
+        pdcInfoLi[1].classList.add("on")
+        infoBox01.style.display = 'none'
+        infoBox02.style.display = 'block'
+        infoBox03.style.display = 'none'
+    })
+    pdcInfoLi[2].addEventListener('click', function () {
+        pdcInfoLi[0].classList.remove("on")
+        pdcInfoLi[1].classList.remove("on")
+        pdcInfoLi[2].classList.add("on")
+        infoBox01.style.display = 'none'
+        infoBox02.style.display = 'none'
+        infoBox03.style.display = 'block'
+    })
 
 
 
 
 
-        const sizeInfo = document.querySelector('.size_info')
-        const sizeClose = document.querySelector('.size_close')
-        const realSize = document.querySelector('.real_size')
-        sizeInfo.addEventListener('click',()=>{
+    const sizeInfo = document.querySelector('.size_info')
+    const sizeClose = document.querySelector('.size_close')
+    const realSize = document.querySelector('.real_size')
+    sizeInfo.addEventListener('click', () => {
 
-            realSize.style.display = 'block'
+        realSize.style.display = 'block'
 
-        })
-        sizeClose.addEventListener('click',()=>{
-            realSize.style.display = 'none'
+    })
+    sizeClose.addEventListener('click', () => {
+        realSize.style.display = 'none'
 
-        })
+    })
 
 
 
-    
+
+
+
+
     const reviewTab = document.querySelectorAll('.review_tab ul li')
-    
-    reviewTab[0].addEventListener('click',function(){
+    const reviewBox = document.querySelector('.review_box01')
+    const noticeBox = document.querySelector('.notice_box01')
+
+    reviewTab[0].addEventListener('click', function () {
 
         reviewTab[1].classList.remove('on1')
         reviewTab[0].classList.add('on1')
+        reviewBox.style.display = 'block'
+        noticeBox.style.display = 'none'
     })
-    reviewTab[1].addEventListener('click',function(){
+    reviewTab[1].addEventListener('click', function () {
 
         reviewTab[0].classList.remove('on1')
         reviewTab[1].classList.add('on1')
+        reviewBox.style.display = 'none'
+        noticeBox.style.display = 'block'
     })
 
 
