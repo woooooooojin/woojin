@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>dom19 05/17</title>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script> <!--lodash 라이브러리-->
 
     <script>
         // const today = new Date()    
@@ -69,49 +69,253 @@
         //키:키값 = 객체명['키'] or 객체명.키 
         //매서드 : 함수 형태의 객체 데이터
 
-    //     const student = [
-    //         {
-    //         name: '홍길동',
-    //         class:'3-1',
-    //         kor: 100,
-    //         eng:95,
-    //     },
-    //     {
-    //         name: '홍길동2',
-    //         class:'3-2',
-    //         kor: 150,
-    //         eng:953,
-    //     },
-    // ]
-      
-    //     document.write(student[1]['name'], '<br />')
-    //     document.write(student.class, '<br />')
+        //     const student = [
+        //         {
+        //         name: '홍길동',
+        //         class:'3-1',
+        //         kor: 100,
+        //         eng:95,
+        //     },
+        //     {
+        //         name: '홍길동2',
+        //         class:'3-2',
+        //         kor: 150,
+        //         eng:953,
+        //     },
+        // ]
 
-    //     student.mat = 90
-    //     document.write(student.mat, '<br />')
+        //     document.write(student[1]['name'], '<br />')
+        //     document.write(student.class, '<br />')
 
-    //     let sum = student.kor + student.eng + student.mat
-    //     document.write(`sum = ${sum} <br />`)
+        //     student.mat = 90
+        //     document.write(student.mat, '<br />')
 
-    //     // delete student.kor //객체를 삭제할땐 delete
-    //     // document.write(`${kor}`)
+        //     let sum = student.kor + student.eng + student.mat
+        //     document.write(`sum = ${sum} <br />`)
 
-    //     document.write(student, '<br />')
-    //     document.write(JSON.stringify(student[0].name))
-    //     document.write(JSON.stringify(student))
+        //     // delete student.kor //객체를 삭제할땐 delete
+        //     // document.write(`${kor}`)
 
-    //     console.log(JSON.stringify(student,null,2))
+        //     document.write(student, '<br />')
+        //     document.write(JSON.stringify(student[0].name))
+        //     document.write(JSON.stringify(student))
 
-
-
-
-    
+        //     console.log(JSON.stringify(student,null,2))
 
 
 
+        // const classInfo = {
+        //     name: 'front-end',
+        //     hours: 8,
+        //     days: 135,
+        //     info: function(){
+        //         document.write(`${this.name} 클래스는 하루 ${this.hours}시간, ${this.days} 과정이다.`) //this = classInfo
+        //     }
+        // }
+
+        // classInfo.info()
+
+
+        // const tv = {
+        //     name: 'samsung',
+        //     width: '30cm',
+        //     height: '25cm',
+        //     weight: '20kg',
+        //     color: 'red',
+        //     on: function (start) {
+        //         document.write(`${tv.name}을 tv를 ${start}합니다 <br />`)
+        //     },
+        //     //6시가 되면 켜진다
+        //     useTv: function (time) {
+        //         document.write(`현재시간은${time}입니다<br />`)
+
+        //     },
+
+        //     off: function (time, end) {
+        //         document.write(`tv종료`)
+        //     }
+        // }
+
+        // tv.on('시작')
+
+        // let cnt = 6
+        // let time2 = setInterval(function () {
+        //     tv.useTv(cnt)
+        //     cnt++
+        // }, 1000)
+
+        // setTimeout(() => {
+        //     tv.off(`오후 10시`, `종료`)
+        //     clearInterval(time2)
+        // },5000)
 
 
 
+
+
+
+        // function classInfo(name, hours, days){
+        //     this.name = name,
+        //     this.hours = hours,
+        //     this.days = days,
+        //     this.info = function(){
+        //         document.write(`${this.name} 클래스는 하루 ${this.hours}시간, ${this.days} 과정이다. <br />`)
+        //     }
+
+        // }//객체 생성자 함수(정의)
+
+        // const subject01 = new classInfo('fontend', 8, 100)
+        // const subject02 = new classInfo('design',7,76)
+        // const subject03 = new classInfo('uiux', 8 ,87)
+
+        // // document.write(JSON.stringify(subject01), '<br />')
+        // // document.write(JSON.stringify(subject02), '<br />')
+        // // document.write(JSON.stringify(subject03), '<br />')
+
+        // // subject01.info()
+        // // subject02.info()
+        // // subject03.info()
+
+
+        // //for each로 배열처리
+        // const classList = [subject01, subject02, subject03]
+
+        // classList.forEach((item)=>{
+        //     item.info()
+        // })
+
+
+
+
+
+
+        //배열객체데이터 
+
+        // const fruits = ['사과','딸기','망고','오렌지']
+        // for(let fruit of fruits){
+        //     document.write(fruit, '<br />')
+        // }
+        // //sort 정렬 오름차순
+        // const sortFruits = fruits.sort()
+        // for(let fruit of sortFruits){
+        //     document.write(fruit, '<br />')
+        // }
+
+        // //정렬 내림차순
+        // const sortFruits2 = fruits.sort().reverse()
+        // for(let fruit of sortFruits2){
+        //     document.write(fruit, '<br />')
+        // }
+
+
+        // const fruits = [
+        //     {
+        //         name:'사과',
+        //         price:9000,
+        //     },
+        //     {
+        //         name:'딸기',
+        //         price:7000,
+        //     },
+        //     {
+        //         name:'망고',
+        //         price:2000,
+        //     },
+        //     {
+        //         name:'귤',
+        //         price:5000,
+        //     }
+
+        // ]
+
+
+        // for(let fruit of fruits){
+        //     document.write(JSON.stringify(fruit), '<br />')
+        // }
+        // document.write('<br/>')
+
+        // const sortFruits = fruits.sort() //객체는 데이터덩어리 각각을 정렬못함
+
+
+        //숫자기준 정렬,, 오름차순,,  뒤에 -1곱하면 내림차순     (가격순, 인기순 정렬)
+        // const sortFruits = fruits.sort((itemA,itemB) => {
+        //     return (itemA.price - itemB.price) 
+        //     // return (itemA.price - itemB.price) * - 1
+
+        // })
+
+
+        // //문자정렬
+        // const sortFruits = fruits.sort((itemA,itemB)=>{
+
+        //     if(itemA.name < itemB.name) {
+        //         return -1  //내림차순 1
+        //     }else if(itemA.name > itemB.name){
+        //         return 1 //내림차순 -1
+        //     }else{
+        //         return 0
+        //     }
+
+        // })
+
+
+
+        // for(let fruit of fruits){
+        //     document.write(JSON.stringify(fruit), '<br />')
+        // }
+
+
+
+
+        ///////////////////////lodash 라이브러리/////////////////////////////////////
+
+        //lodash utility library
+
+        // _.sortBy(object, 'fieldName')
+        //_.sortBy(object,[fieldName1, fieldName2...]) // 1차정렬 2차정렬
+        //_.sortBy().reverse()
+
+
+        const fruits = [
+            {
+                name: '사과',
+                price: 9000,
+                id : 1, // 기본순으로 정렬할때 id값으로 정렬
+            },
+            {
+                name: '딸기',
+                price: 700,
+                id : 2,
+            },
+            {
+                name: '망고',
+                price: 700,
+                id : 3,
+            },
+            {
+                name: '귤',
+                price: 5000,
+                id : 4,
+            }
+
+        ]
+        for(let fruit of fruits){
+            document.write(JSON.stringify(fruit), '<br />')
+        }
+        document.write('<br/>')
+
+
+
+
+        // const sortFruits = _.sortBy(fruits, 'name').reverse()
+        const sortFruits = _.sortBy(fruits,['price','name']) //가격으로 1차정렬후 같은값은 name으로 2차정렬
+
+        for(let fruit of sortFruits){
+            document.write(JSON.stringify(fruit), '<br />')
+        }
+
+
+        
 
 
 
