@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const reviewName = document.getElementById('rename')//리뷰아이디
     const reviewTxt = document.getElementById('retxt')//리뷰본문
     const R_List = document.querySelector('.R_list')
-
+    
 
     reviewBtn.addEventListener('click',function(){
 
@@ -98,12 +98,16 @@ document.addEventListener('DOMContentLoaded', function () {
         numberBox.appendChild(numberSpan)
 
         let Rcnt =1;
+        const Lis = document.querySelectorAll('.review_inner')
+
         function plusCnt(){
-            
+            for(i=0;i<Lis.length;i++){
                 Rcnt++
-          
+            }
+                
+            numberSpan.innerHTML = Rcnt
             
-        }numberSpan.innerHTML = Rcnt
+        }
         plusCnt()
         
         
