@@ -48,6 +48,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+    
+    const reviewTab = document.querySelectorAll('.review_tab ul li')
+    
+    reviewTab[0].addEventListener('click',function(){
+
+        reviewTab[1].classList.remove('on1')
+        reviewTab[0].classList.add('on1')
+    })
+    reviewTab[1].addEventListener('click',function(){
+
+        reviewTab[0].classList.remove('on1')
+        reviewTab[1].classList.add('on1')
+    })
+
+
 
 
 
