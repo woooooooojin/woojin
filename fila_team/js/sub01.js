@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     const selectBox = document.getElementById('select_sort'); //select box
-    // const optLength = selectBox.options.length; //select box의 option 갯수
+
     const sortData =  subData.sort((itemA, itemB) => {
         
     })
