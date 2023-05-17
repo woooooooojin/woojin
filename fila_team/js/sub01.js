@@ -22,21 +22,21 @@ for (let i = 0; i < subData.length; i++) {
 
     const hoverWrap = document.createElement('div')
     hoverBox.appendChild(hoverWrap)
-    hoverWrap.setAttribute('class','hoverWrap')
+    hoverWrap.setAttribute('class', 'hoverWrap')
 
     const like = document.createElement('div')
     const likeTxt = document.createElement('i')
 
-    likeTxt.setAttribute('class','fas fa-heart')
-    like.setAttribute('class','like')
+    likeTxt.setAttribute('class', 'fas fa-heart')
+    like.setAttribute('class', 'like')
     like.appendChild(likeTxt)
     hoverWrap.appendChild(like)
 
     const cart = document.createElement('div')
     const cartTxt = document.createElement('i')
-    cartTxt.setAttribute('class','fas fa-shopping-cart')
+    cartTxt.setAttribute('class', 'fas fa-shopping-cart')
     cart.appendChild(cartTxt)
-    cart.setAttribute('class','cart')
+    cart.setAttribute('class', 'cart')
     hoverWrap.appendChild(cart)
 
 
@@ -97,8 +97,8 @@ for (let i = 0; i < subData.length; i++) {
     subList.appendChild(subDiv)
 
 
-    
-   
+
+
 
 
 }
@@ -109,7 +109,7 @@ for (let i = 0; i < subData.length; i++) {
 
 
 
-document.addEventListener('DOMContentLoaded',function(){
+document.addEventListener('DOMContentLoaded', function () {
 
     // const filterOpen = document.querySelector('.filter_open')
     // const filterClose = document.querySelector('.filter_close')
@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded',function(){
     // filterOpen.addEventListener('click',()=>{
 
     //     filterList.style.display = 'block'
-        
+
 
     // })
     // filterClose.addEventListener('click',()=>{
@@ -130,30 +130,51 @@ document.addEventListener('DOMContentLoaded',function(){
     const grid02 = document.querySelector('.grid_02')
     const subBox = document.querySelectorAll('.subBox')
 
-    grid01.addEventListener('click',girdChange01)
-    grid02.addEventListener('click',girdChange02)
+    grid01.addEventListener('click', girdChange01)
+    grid02.addEventListener('click', girdChange02)
 
-    function girdChange01(){
-       
-        for(let i = 0; i<subBox.length; i++){
-            subBox[i].style.width =  'calc(100% - 75% - 25px)'
+    function girdChange01() {
+
+        for (let i = 0; i < subBox.length; i++) {
+            subBox[i].style.width = 'calc(100% - 75% - 25px)'
         }
-        
+
 
     }
 
-    function girdChange02(){
+    function girdChange02() {
 
-        
-        for(let i =0; i < subBox.length; i++){
+
+        for (let i = 0; i < subBox.length; i++) {
             subBox[i].style.width = 'calc(100% - 80% - 24px)'
-           
+
         }
-        
-        
+
+
     }
 
 
-   
+
+
+})
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+
+
+
+    const selectBox = document.getElementById('select_sort'); //select box
+    // const optLength = selectBox.options.length; //select box의 option 갯수
+    const sortData =  subData.sort((itemA, itemB) => {
+        
+    })
+       
+    
+
+
+
+
+
 
 })
