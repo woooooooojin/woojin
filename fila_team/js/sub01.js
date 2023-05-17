@@ -8,6 +8,10 @@ for (let i = 0; i < subData.length; i++) {
     const subDiv = document.createElement('div')
     subDiv.setAttribute('class', 'subBox')
 
+    for (let j = 0; j < subData.length; j++) {
+        subDiv.setAttribute('id', 'sub_sort')
+
+    } //아이디값 부여
 
 
     const subImgWrap = document.createElement('div')
@@ -160,21 +164,58 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-document.addEventListener('DOMContentLoaded', function () {
+
+// //정렬 생각해보기
+// document.addEventListener('DOMContentLoaded', function () {
 
 
 
-    const selectBox = document.getElementById('select_sort'); //select box
+//     const selectBox = document.getElementById('select_sort'); //select box
+//     const sortBox = document.getElementById('sub_sort')
+//     // const sortDatas = _.sortBy(subData,['price01','name'])
 
-    const sortData =  subData.sort((itemA, itemB) => {
-        
-    })
-       
-    
+//     selectBox.addEventListener('change', function () {
+
+//         if (selectBox.value === 'expensive') {
+//             subData.sort((itemA, itemB) => {
+//                 if (itemA.price01 > itemB.price01) return 1;
+//                 if (itemA.price01 < itemB.price01) return -1;
+//                 return 0;
+//             })
+//         }
+
+//     })
+
+
+
+
+//     // subData.sort((itemA, itemB) => {
+//     //     if (selectBox.value === 'expensive') {
+//     //         return (itemA.price01 - itemB.price01)
+//     //     }
+//     //     console.log(sortDatas)
+
+//     // })
+
+
+
+
+
+//     // for(let sortdata of sortDatas){
+//     //     if(selectBox.value === 'expensive'){
+//     //         console.log(sortdata)
+//     //     }
+//     // }
 
 
 
 
 
 
-})
+
+
+
+
+
+
+// })
