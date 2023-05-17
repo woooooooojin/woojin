@@ -5,7 +5,7 @@ let x = setInterval(function () {
     let now = new Date().getTime();
     let timeOut = countDownDate - now;
 
-    let days = Math.floor(timeOut / (1000 * 60 * 60 * 24));
+    let days = Math.floor(timeOut / (1000 * 60 * 60 * 24));//Math.floor 내림함수
     let hours = Math.floor((timeOut % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     let minutes = Math.floor((timeOut % (1000 * 60 * 60)) / (1000 * 60));
     let seconds = Math.floor((timeOut % (1000 * 60)) / 1000);
