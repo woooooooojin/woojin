@@ -324,6 +324,11 @@ document.addEventListener('DOMContentLoaded', function () {
         noticeI.setAttribute('class','fas fa-times')
         noticeClose.appendChild(noticeI)
 
+        ////re
+        const noticeRe = document.createElement('div')
+        noticeRe.setAttribute('class','Re_list')
+        noticeLi.appendChild(noticeRe)
+
 
 
 
@@ -336,8 +341,67 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+    const reTxt = document.getElementById('replyTxt')
+    const reBtn = document.getElementById('re_btn')
+    const n_List = document.querySelector('.notice_list')
+    const reClose = document.getElementById('re_close')
+    const rePop = document.querySelector('.re_pop')
 
 
+    
+
+    reBtn.addEventListener('click',function(){
+        const noticeLi = document.querySelector('.Re_list')
+
+
+        const reply = document.createElement('div')
+        reply.setAttribute('class','reply_box')
+
+        const replySpan = document.createElement('span')
+        replySpan.setAttribute('class','reply_span')
+        reply.appendChild(replySpan)
+        replySpan.innerHTML = 'ㄴ> 답글 :'
+
+        const replyTxt = document.createElement('span')
+        replyTxt.setAttribute('class','reply_txt')
+        reply.appendChild(replyTxt)
+        replyTxt.innerHTML = reTxt.value
+
+        const replyDel = document.createElement('span')
+        replyDel.setAttribute('class','reply_del')
+        reply.appendChild(replyDel)
+        replyDel.innerHTML = 'X'
+
+
+        noticeLi.appendChild(reply)
+
+        replyDel.addEventListener('click',function(){
+            noticeLi.removeChild(reply)
+            
+        })
+
+
+
+
+        
+        
+    
+
+
+    })
+
+    n_List.addEventListener('click',function(){
+        
+            rePop.style.display = 'block'
+        
+        
+    })
+    reClose.addEventListener('click',function(){
+        rePop.style.display = 'none'
+    })
+
+    ////답글남기기 버튼만들어서 다시만들기
+  
 
 
 
