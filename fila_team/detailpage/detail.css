@@ -723,11 +723,15 @@ body{
     width: 10%;
 }
 .notice_list .notice_list_wrap .notice .notice_inner .notice_txt{
-    width: 65%;
+    width: 55%;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
     padding:0 20px;
+}
+.notice_list .notice_list_wrap .notice .notice_inner .notice_rebtn{
+    width: 10%;
+    cursor: pointer;
 }
 .notice_list .notice_list_wrap .notice .notice_inner .notice_id{
     width: 10%;

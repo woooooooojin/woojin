@@ -294,9 +294,19 @@ document.addEventListener('DOMContentLoaded', function () {
         textSpan.innerHTML = noticeTxt.value
         noticeTxt.value = ''
 
+        const noticeReBtn = document.createElement('div')
+        noticeReBtn.setAttribute('class','notice_rebtn')
+        noticeLi.appendChild(noticeReBtn)
+
+        const noticeBtnSpan = document.createElement('span')
+        noticeReBtn.appendChild(noticeBtnSpan)
+        noticeBtnSpan.innerHTML = '답글달기'
+
         const noticeId = document.createElement('div')
         noticeId.setAttribute('class','notice_id')
         noticeLi.appendChild(noticeId)
+
+        
 
         const noticeIdSpan = document.createElement('span')
         noticeIdSpan.setAttribute('class','notice_id_span')
@@ -340,6 +350,7 @@ document.addEventListener('DOMContentLoaded', function () {
     })
 
 
+    ////답글 추가
 
     const reTxt = document.getElementById('replyTxt')
     const reBtn = document.getElementById('re_btn')
