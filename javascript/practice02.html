@@ -9,66 +9,47 @@
 
 
     <script>
-       //콜백함수
-        // function func(callback){
-        //     for(let i =1; i<=5; i++){
-        //         callback(i)
-        //     }
-        // }
-        // function output(index){
-        //     document.write(`${index}번째 <br />`)
-        // }
+        
+        class Ractangle{
+            constructor(width, height){
+                this.width = width
+                this.height = height
+            }
+            getPerimeter(){
+                return(this.width + this.height) * 2
+            }
+            getArea(){
+                return(this.width * this.height)
+            }
+        }
 
-        // func(output)
-
-
-        //forEach 함수
-
-        // const numbers = [25, 58, 48, 45,321,15,4]
-        // numbers.forEach(function(value,index,array){
-        //     document.write(`${value} - ${index} <br />`)
-        // })
-
-        // numbers.forEach((value, index)=>{
-        //     document.write(`${value} - ${index} <br />`)
-        // }) //화살표함수로
-
-
-
-        //map() 함수
-        // const numbers = [25, 58, 48, 45,321,15,4]
-
-        // const numbers_01 = numbers.map((value)=>{
-        //     return value * 5
-        // })
-
-        // for(let number of numbers_01){
-        //     document.write(`${number} <br/>`)
-        // }
-
-        // numbers_01.forEach((value)=>{
-        //     document.write(`${value} <br />`)
-        // })
-
-
-
-        //filter() 함수
-        // const numbers = [25, 58, 48, 45,321,15,4]
-
-        // const evenNumbers = numbers.filter((value)=>{
-        //     return value % 2 === 0
-        // })
-
-        // evenNumbers.forEach((value)=>{
-        //     document.write(`${value} <br />`)
-        // })
+        const ractangle = new Ractangle(10,20)
+        document.write(`사각형의 둘레 : ${ractangle.getPerimeter()}<br />`)
+        document.write(`사각형의 너비 : ${ractangle.getArea()}<br />`)
 
         
+        class Square extends Ractangle{
+            constructor(length, color,name){
+                super(length,length)
+
+                this.color = color
+                this.name = name
+            }
+
+            getColor(){
+                return `${this.color}인 정사각형`
+            }
+            getName(){
+                return `${this.name}인 정사각형`
+            }
+        }
 
 
-
-
-
+        const square = new Square(20, 'red','바보')
+        document.write(`정사각형의 둘레 : ${square.getPerimeter()}<br />`)
+        document.write(`정사각형의 너비 : ${square.getArea()}<br />`)
+        document.write(`정사각형의 컬러 : ${square.getColor()}<br />`)
+        document.write(`정사각형의 이름 : ${square.getName()}<br />`)
     </script>
 </head>
 

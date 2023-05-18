@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js class</title>
+
+
+    <script>
+      
+        //클래스 : 객체를 효율적으로 처리하기 위한 방법 => 객체의 추상화
+        //배열 : 객체데이터를 다루기 위한 방법
+
+        // const students = []
+
+        // students.push({name: 'kim', kor:100, eng:70})
+        // students.push({name: 'lee', kor:80, eng:20})
+        // students.push({name: 'park', kor:50, eng:50})
+
+        // console.log(JSON.stringify(students,null,2))
+
+        // let output = 'name\t total\t average\n'
+
+
+        // for(let student of students){
+        //     const sum =student.kor + student.eng 
+        //     const ave = sum / 2
+        //     output += `${student.name}\t\t ${sum}\t ${ave}\n`
+        // }
+
+
+
+        //객체처리함수 : 함수의 기능 분리
+
+        // function getSum(student){
+        //     return student.kor + student.eng
+
+        // }
+        // function getave(student){
+        //     return getSum(student) / 2
+        // }
+
+        // for(let value of students){
+        //     output += `${value.name}\t ${getSum(value)}\t ${getave(value)}\n`
+        // }
+
+
+
+        //객체처리함수 : 객체 내부에서 선언 사용(객체멤버메서드)
+
+        // for(let student of students){
+        //     student.getSum = function(){
+        //         return this.kor + this.eng
+        //     }
+
+        //     student.getAve = function(){
+        //         return this.getSum()/2
+        //     }
+        // }
+
+        // for(let value of students){
+        //     output += `${value.name}\t ${value.getSum()}\t ${value.getAve()}\n`
+        // }
+
+
+        // console.log(output)
+
+
+
+
+
+
+
+        // 객체생성자함수_ 객체데이터의 속성, 메서드. 객체 선언 후 사용
+
+        // function creatStudent(name, kor, eng){
+        //     return{
+        //         name : name,
+        //         kor: kor,
+        //         eng: eng,
+
+        //         getSum(){
+        //             return this.kor + this.eng
+        //         },
+
+        //         getAve(){
+        //             return this.getSum() / 2
+        //         },
+
+        //         toString(){
+        //             return `${this.name}\t ${this.getSum}\t ${this.getAve}\n`
+        //         }
+        //     }
+        // }
+
+        // const students = []
+
+        // students.push(creatStudent('kim',100,95))
+        // students.push(creatStudent('lee',80,35))
+        // students.push(creatStudent('park',50,85))
+
+        // console.log(JSON.stringify(students,null,2))
+
+        // let output = 'name\t total\t average\n'
+        // for(let student of students){
+        //     output += student.toString()
+        // }
+
+        // console.log(output)
+
+
+        
+        //////class.///////
+
+        class Student { //클래스 첫글자 대문자
+            constructor(name, kor, eng){
+                this.name = name
+                this.kor = kor
+                this.eng = eng
+            }
+
+            getSum(){
+                return this.kor + this.eng
+            }
+
+            getAve(){
+                return this.getSum() / 2
+            }
+
+            toString(){
+                return `${this.name}\t ${this.getSum()}\t ${this.getAve()}\n`
+            }
+        }   
+
+
+        const students = []
+
+        students.push(new Student('kim', 100, 95))
+        students.push(new Student('lee', 50, 35))
+        students.push(new Student('park', 90, 65))
+
+        console.log(JSON.stringify(students,null,2))
+
+        let output = 'name\t total\t average\n'
+        for(let student of students){
+            output+= student.toString()
+        }
+        console.log(output)
+
+
+
+        /////class 상속(extends)////
+        class Ractangle{
+            constructor(width, height){
+                this.width = width
+                this.height = height
+            }
+            getPerimeter(){
+                return(this.width + this.height) * 2
+            }
+            getArea(){
+                return(this.width * this.height)
+            }
+            
+        }
+
+        const ractangle = new Ractangle(10, 20)
+        document.write(`사각형의 둘레 : ${ractangle.getPerimeter()}<br />`) 
+        document.write(`사각형의 넓이 : ${ractangle.getArea()}<br />`) 
+
+
+
+
+        // class Square{
+        //     constructor(side){
+        //         this.side = side
+                
+        //     }
+        //     getPerimeter(){
+        //         return this.side * 4
+        //     }
+        //     getArea(){
+        //         return this.side * this.side
+        //     }
+        // }
+
+
+        class Square extends Ractangle{
+            constructor(length , color){
+                super(length,length) //부모의 인수를 어떻게 받을건지
+
+                this.color = color
+            }
+
+            getColor(){
+                return `${this.color}인 정사각형`
+            }
+        }
+
+        const square = new Square(20,'black')
+        document.write(`정사각형 둘레 : ${square.getPerimeter()}<br />`)
+        document.write(`정사각형 너비 : ${square.getArea()}<br />`)
+        document.write(`정사각형 컬러 : ${square.getColor()}<br />`)
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+
+
+</body>
+
+</html>
