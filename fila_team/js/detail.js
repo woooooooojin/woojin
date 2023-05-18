@@ -186,6 +186,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+       
+
+     
+        
         R_List.appendChild(Li)
 
         closeX.addEventListener('click',function(){
@@ -200,6 +204,48 @@ document.addEventListener('DOMContentLoaded', function () {
    
 
 
+
+
+    //주문수량, 가격 event
+
+    const minusBox = document.querySelector('.minus_box')
+    const plusBox = document.querySelector('.plus_box')
+    const cntBox = document.getElementById('cnt_box')
+    const totalPrice = document.querySelector('.total_price span')
+    
+    minusBox.addEventListener('click',function(){
+
+        cntBox.value --
+        if(cntBox.value <= 0 ){
+            cntBox.value = 1
+        }
+        let result = cntBox.value * 119000
+        totalPrice.innerHTML = result.toLocaleString('ko-KR')
+        // totalPrice.innerHTML = cntBox.value * 119000
+    })
+    plusBox.addEventListener('click',function(){
+
+        cntBox.value ++
+        let result = cntBox.value * 119000
+        totalPrice.innerHTML = result.toLocaleString('ko-KR')
+        // totalPrice.innerHTML = cntBox.value * 119000
+
+    })
+
+    cntBox.addEventListener('change',function(){
+        let result = cntBox.value * 119000
+        totalPrice.innerHTML = result.toLocaleString('ko-KR')
+
+        if(cntBox.value <= 0){
+            cntBox.value='1'
+            alert('수량은 1개이상 가능합니다.')
+            totalPrice.innerHTML = '119,000'
+        }
+    })
+
+
+
+    
 
 
 
