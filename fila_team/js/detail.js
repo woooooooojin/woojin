@@ -355,7 +355,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const replyPop = document.querySelector('.re_pop')
 
-        noticeReBtn.addEventListener('click',function(){
+        noticeReBtn.addEventListener('click', function () {
             replyPop.style.display = 'block'
         })
 
@@ -365,7 +365,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     //답글 추가
-  
+
     const reTxt = document.getElementById('replyTxt')
     const n_List = document.querySelector('.notice_list')
     const reClose = document.getElementById('re_close')
@@ -374,42 +374,43 @@ document.addEventListener('DOMContentLoaded', function () {
     const noticefor = document.querySelector('.notice_inner')
 
 
-    registBtn.addEventListener('click',function(){
 
-        
+    registBtn.addEventListener('click', function () {
+
+
         const noticeLi = document.querySelector('.Re_list')
 
 
         const reply = document.createElement('div')
-        reply.setAttribute('class','reply_box')
+        reply.setAttribute('class', 'reply_box')
 
         const replySpan = document.createElement('span')
-        replySpan.setAttribute('class','reply_span')
+        replySpan.setAttribute('class', 'reply_span')
         reply.appendChild(replySpan)
         replySpan.innerHTML = 'ㄴ> 답글 :'
 
         const replyTxt = document.createElement('span')
-        replyTxt.setAttribute('class','reply_txt')
+        replyTxt.setAttribute('class', 'reply_txt')
         reply.appendChild(replyTxt)
         replyTxt.innerHTML = reTxt.value
 
         const replyDel = document.createElement('span')
-        replyDel.setAttribute('class','reply_del')
+        replyDel.setAttribute('class', 'reply_del')
         reply.appendChild(replyDel)
         replyDel.innerHTML = 'X'
 
 
         noticeLi.appendChild(reply)
-        
-        reTxt.value=''
-        
-        
 
 
-    
 
 
-        replyDel.addEventListener('click',function(){
+
+
+
+
+
+        replyDel.addEventListener('click', function () {
             noticeLi.removeChild(reply)
 
         })
@@ -423,17 +424,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
     })
 
-    // reBtn.addEventListener('click',function(){
+    registBtn.addEventListener('click', function () {
+        reTxt.value = ''
+    })
 
-    //         rePop.style.display = 'block'
-
-
-    // })
-
-
-    reClose.addEventListener('click',function(){
+    reClose.addEventListener('click', function () {
         rePop.style.display = 'none'
     })
+
+
 
 
 
