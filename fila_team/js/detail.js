@@ -399,12 +399,11 @@ document.addEventListener('DOMContentLoaded', function () {
         replyDel.innerHTML = 'X'
 
 
-        
         noticeLi.appendChild(reply)
         
         reTxt.value=''
         
-
+        
 
 
     
