@@ -684,6 +684,9 @@ body{
 }
 .review_list .review_list_wrap .review .review_inner .inner_id{
     width: 10%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 .review_list .review_list_wrap .review .review_inner .inner_date{
     width: 7%;
@@ -726,6 +729,9 @@ body{
 }
 .notice_list .notice_list_wrap .notice .notice_inner .notice_id{
     width: 10%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 .notice_list .notice_list_wrap .notice .notice_inner .notice_date{
     width: 10%;
