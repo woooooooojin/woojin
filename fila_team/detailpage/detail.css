@@ -296,6 +296,19 @@ body{
     width: 50%;
 
 }
+.count_pdc .count_wrap .cnt_box input{
+    text-align: center;
+    color: black;
+    border: 0;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    outline: none;
+    
+}
+.count_pdc .count_wrap .cnt_box input[placeholder]{
+    color: black;
+}
 .count_pdc .count_wrap .plus_box:hover{
     color: #fff;
     background-color: #002053;
