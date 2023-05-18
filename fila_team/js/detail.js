@@ -284,18 +284,18 @@ document.addEventListener('DOMContentLoaded', function () {
         plusCnt()
 
         const noticeText = document.createElement('div')
-        noticeText.setAttribute('class','notice_txt')
+        noticeText.setAttribute('class', 'notice_txt')
         noticeLi.appendChild(noticeText)
 
         const textSpan = document.createElement('span')
-        textSpan.setAttribute('class','notice_text_span')
+        textSpan.setAttribute('class', 'notice_text_span')
         noticeText.appendChild(textSpan)
 
         textSpan.innerHTML = noticeTxt.value
         noticeTxt.value = ''
 
         const noticeReBtn = document.createElement('div')
-        noticeReBtn.setAttribute('class','notice_rebtn')
+        noticeReBtn.setAttribute('class', 'notice_rebtn')
         noticeLi.appendChild(noticeReBtn)
 
         const noticeBtnSpan = document.createElement('span')
@@ -303,40 +303,40 @@ document.addEventListener('DOMContentLoaded', function () {
         noticeBtnSpan.innerHTML = '답글달기'
 
         const noticeId = document.createElement('div')
-        noticeId.setAttribute('class','notice_id')
+        noticeId.setAttribute('class', 'notice_id')
         noticeLi.appendChild(noticeId)
 
-        
+
 
         const noticeIdSpan = document.createElement('span')
-        noticeIdSpan.setAttribute('class','notice_id_span')
+        noticeIdSpan.setAttribute('class', 'notice_id_span')
         noticeId.appendChild(noticeIdSpan)
 
         noticeIdSpan.innerHTML = noticeName.value
         noticeName.value = ''
 
         const noticeDate = document.createElement('div')
-        noticeDate.setAttribute('class','notice_date')
+        noticeDate.setAttribute('class', 'notice_date')
         noticeLi.appendChild(noticeDate)
 
         const noticeDateSpan = document.createElement('span')
-        noticeDateSpan.setAttribute('class','notice_date_span')
+        noticeDateSpan.setAttribute('class', 'notice_date_span')
         noticeDate.appendChild(noticeDateSpan)
 
         let nowNoticeDate = new Date().toLocaleDateString();
         noticeDateSpan.innerHTML = nowNoticeDate
 
         const noticeClose = document.createElement('div')
-        noticeClose.setAttribute('class','notice_close')
+        noticeClose.setAttribute('class', 'notice_close')
         noticeLi.appendChild(noticeClose)
 
         const noticeI = document.createElement('i')
-        noticeI.setAttribute('class','fas fa-times')
+        noticeI.setAttribute('class', 'fas fa-times')
         noticeClose.appendChild(noticeI)
 
         ////re
         const noticeRe = document.createElement('div')
-        noticeRe.setAttribute('class','Re_list')
+        noticeRe.setAttribute('class', 'Re_list')
         noticeLi.appendChild(noticeRe)
 
 
@@ -347,21 +347,36 @@ document.addEventListener('DOMContentLoaded', function () {
         noticeClose.addEventListener('click', function () {
             noticeList.removeChild(noticeLi)
         })
+
+
+
+
+
+
+        const replyPop = document.querySelector('.re_pop')
+
+        noticeReBtn.addEventListener('click',function(){
+            replyPop.style.display = 'block'
+        })
+
+
+
     })
 
 
-    ////답글 추가
-
+    //답글 추가
+  
     const reTxt = document.getElementById('replyTxt')
-    const reBtn = document.getElementById('re_btn')
     const n_List = document.querySelector('.notice_list')
     const reClose = document.getElementById('re_close')
     const rePop = document.querySelector('.re_pop')
+    const registBtn = document.getElementById('re_btn')
+    const noticefor = document.querySelector('.notice_inner')
 
 
-    
+    registBtn.addEventListener('click',function(){
 
-    reBtn.addEventListener('click',function(){
+        
         const noticeLi = document.querySelector('.Re_list')
 
 
@@ -384,35 +399,44 @@ document.addEventListener('DOMContentLoaded', function () {
         replyDel.innerHTML = 'X'
 
 
+        
         noticeLi.appendChild(reply)
+        
+        reTxt.value=''
+        
+
+
+
+    
+
 
         replyDel.addEventListener('click',function(){
             noticeLi.removeChild(reply)
-            
+
         })
 
 
 
 
-        
-        
-    
+
+
 
 
     })
 
-    n_List.addEventListener('click',function(){
-        
-            rePop.style.display = 'block'
-        
-        
-    })
+    // reBtn.addEventListener('click',function(){
+
+    //         rePop.style.display = 'block'
+
+
+    // })
+
+
     reClose.addEventListener('click',function(){
         rePop.style.display = 'none'
     })
 
-    ////답글남기기 버튼만들어서 다시만들기
-  
+
 
 
 
