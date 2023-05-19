@@ -118,7 +118,6 @@ madeDiv()
 
 
 const selectBox = document.getElementById('select_sort'); //select box
-let selVal = selectBox.options[selectBox.selectedIndex]
 const sublist = document.querySelector('.sublist')
 
 selectBox.addEventListener('change', function () {
@@ -134,29 +133,44 @@ selectBox.addEventListener('change', function () {
             return (a.price01 - b.price01)
         })
         sublist.innerHTML = ''
-        madeDiv()//낮은가격순
+        madeDiv() //낮은가격순
     } else if (selectBox.value === 'basic') {
         subData.sort((a, b) => {
             return (a.id - b.id)
         })
         sublist.innerHTML = ''
-        madeDiv()//기본순
+        madeDiv() //기본순
     } else if (selectBox.value === 'pop') {
         subData.sort((a, b) => {
             return (a.pop - b.pop)
         })
         sublist.innerHTML = ''
-        madeDiv()//인기순
-    }else if(selectBox.value === 'new'){
+        madeDiv() //인기순
+    } else if (selectBox.value === 'new') {
         subData.sort((a, b) => {
             return new Date(a.day).getTime() - new Date(b.day).getTime()
-        })//신상날짜순
+        }) //신상날짜순
         sublist.innerHTML = ''
-        madeDiv()//신상순
+        madeDiv() //신상순
     }
 
 })
 
+
+//검은색 왜안될까
+
+// const blackColor = document.getElementById('color_chk02')
+// const blacks = subData.map((black) => {
+//     return black.color === 'black' ? black : null;
+// })
+// // console.log(blacks)
+
+// blackColor.addEventListener('click', function () {
+
+//     blacks.forEach((black) => {
+//     })
+
+// })
 
 
 
@@ -177,36 +191,36 @@ const filterOpen = document.querySelector('.filter_open')
 const filterClose = document.querySelector('.filter_close')
 const filterList = document.querySelector('.filter_box_list')
 
+//제이쿼리로 slide up down구현함
+// filterOpen.addEventListener('click', () => {
 
-filterOpen.addEventListener('click', () => {
-
-    filterList.style.display = 'block'
+//     filterList.style.display = 'block'
 
 
-})
-filterClose.addEventListener('click', () => {
-    filterList.style.display = 'none'
-})
+// })
+// filterClose.addEventListener('click', () => {
+//     filterList.style.display = 'none'
+// })
 
 
 
 
 
 const grid01 = document.querySelector('.grid_01')
-const grid02 = document.querySelector('.grid_02') 
+const grid02 = document.querySelector('.grid_02')
 let subBox = document.querySelectorAll('.subBox')
 const wrapping = document.querySelector('.sublist_wrap')
 
-grid01.addEventListener('click',function(){
+grid01.addEventListener('click', function () {
 
     wrapping.classList.add('gridchange02')
     wrapping.classList.remove('gridchange01')
     grid02.style.color = '#ccc'
     grid01.style.color = 'black'
-    
+
 })
 
-grid02.addEventListener('click',function(){
+grid02.addEventListener('click', function () {
     wrapping.classList.add('gridchange01')
     wrapping.classList.remove('gridchange02')
     grid02.style.color = 'black'

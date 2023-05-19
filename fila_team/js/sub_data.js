@@ -7,6 +7,7 @@ const subData = [{
         price01: 119000,
         pop:20,
         day:'2023-05-30',
+        color:'gray',
     },
     {
         id: 2,
@@ -17,6 +18,7 @@ const subData = [{
         price01: 79000,
         pop:5,
         day:'2023-05-29',
+        color:'black',
     },
     {
         id: 3,
@@ -37,6 +39,7 @@ const subData = [{
         price01: 39000,
         pop:2,
         day:'2023-05-27',
+        color:'black',
     },
     {
         id: 5,
@@ -47,6 +50,7 @@ const subData = [{
         price01: 39000,
         pop:1,
         day:'2023-05-26',
+        color:'blue',
     },
     {
         id: 6,
@@ -57,6 +61,7 @@ const subData = [{
         price01: 99000,
         pop:19,
         day:'2023-05-25',
+        color:'brown',
     },
     {
         id: 7,
@@ -67,6 +72,7 @@ const subData = [{
         price01: 99000,
         pop:18,
         day:'2023-05-24',
+        color:'gray',
     },
     {
         id: 8,
@@ -77,6 +83,7 @@ const subData = [{
         price01: 69000,
         pop:15,
         day:'2023-05-23',
+        color:'black',
     },
     {
         id: 9,
@@ -87,6 +94,7 @@ const subData = [{
         price01: 79000,
         pop:13,
         day:'2023-05-22',
+        color:'white',
     },
     {
         id: 10,
@@ -97,6 +105,7 @@ const subData = [{
         price01: 49000,
         pop:14,
         day:'2023-05-21',
+        color:'white',
     },
     {
         id: 11,
@@ -107,6 +116,7 @@ const subData = [{
         price01: 45000,
         pop:5,
         day:'2023-05-20',
+        color:'white',
     },
     {
         id: 12,
@@ -117,6 +127,7 @@ const subData = [{
         price01: 45000,
         pop:10,
         day:'2023-05-19',
+        color:'green',
     },
     {
         id: 13,
@@ -127,6 +138,7 @@ const subData = [{
         price01: 109000,
         pop:9,
         day:'2023-05-18',
+        color:'black',
     },
     {
         id: 14,
@@ -137,6 +149,7 @@ const subData = [{
         price01: 99000,
         pop:6,
         day:'2023-05-17',
+        color:'gray',
     },
     {
         id: 15,
@@ -147,6 +160,7 @@ const subData = [{
         price01: 129000,
         pop:21,
         day:'2023-05-16',
+        color:'red',
     },
     {
         id: 16,
@@ -157,6 +171,7 @@ const subData = [{
         price01: 49000,
         pop:23,
         day:'2023-05-15',
+        color:'black',
     },
     {
         id: 17,
@@ -167,6 +182,7 @@ const subData = [{
         price01: 119000,
         pop:22,
         day:'2023-05-14',
+        color:'gray',
     },
     {
         id: 18,
@@ -177,6 +193,7 @@ const subData = [{
         price01: 45000,
         pop:19,
         day:'2023-05-13',
+        color:'black',
     },
     {
         id: 19,
@@ -187,6 +204,7 @@ const subData = [{
         price01: 87200,
         pop:14,
         day:'2023-05-12',
+        color:'white',
     },
     {
         id: 20,
@@ -197,7 +215,7 @@ const subData = [{
         price01: 119000,
         pop:1,
         day:'2023-05-11',
-       
+        color:'white',
     },
 
 
