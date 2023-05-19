@@ -105,6 +105,10 @@ for (let i = 0; i < subData.length; i++) {
 
 
 
+
+
+
+
 }
 
 
@@ -115,20 +119,20 @@ for (let i = 0; i < subData.length; i++) {
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    // const filterOpen = document.querySelector('.filter_open')
-    // const filterClose = document.querySelector('.filter_close')
-    // const filterList = document.querySelector('.filter_box_list')
+    const filterOpen = document.querySelector('.filter_open')
+    const filterClose = document.querySelector('.filter_close')
+    const filterList = document.querySelector('.filter_box_list')
 
 
-    // filterOpen.addEventListener('click',()=>{
+    filterOpen.addEventListener('click',()=>{
 
-    //     filterList.style.display = 'block'
+        filterList.style.display = 'block'
 
 
-    // })
-    // filterClose.addEventListener('click',()=>{
-    //     filterList.style.display = 'none'
-    // })
+    })
+    filterClose.addEventListener('click',()=>{
+        filterList.style.display = 'none'
+    })
 
     const grid01 = document.querySelector('.grid_01')
     const grid02 = document.querySelector('.grid_02')
@@ -166,53 +170,54 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 // //정렬 생각해보기
-// document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
 
 
 
-//     const selectBox = document.getElementById('select_sort'); //select box
-//     const sortBox = document.getElementById('sub_sort')
-//     // const sortDatas = _.sortBy(subData,['price01','name'])
+    // const selectBox = document.getElementById('select_sort'); //select box
+    // const sortBox = document.getElementById('sub_sort')
+    // // const sortDatas = _.sortBy(subData,['price01','name'])
 
 
-//     selectBox.addEventListener('change', function () {
+    // selectBox.addEventListener('change', function () {
 
-//         if (selectBox.value === 'expensive') {
-//             subData.sort((itemA, itemB) => {
-//                 if (itemA.price01 > itemB.price01) return 1;
-//                 if (itemA.price01 < itemB.price01) return -1;
-//                 return 0;
-//             })
+    //     if (selectBox.value === 'expensive') {
+    //         subData.sort((itemA, itemB) => {
+    //             if (itemA.price01 > itemB.price01) return 1;
+    //             if (itemA.price01 < itemB.price01) return -1;
+    //             return 0;
+    //         })
             
-//         }
+    //     }
 
-//     })
-
-
-
-
-//     // subData.sort((itemA, itemB) => {
-//     //     if (selectBox.value === 'expensive') {
-//     //         return (itemA.price01 - itemB.price01)
-//     //     }
-//     //     console.log(sortDatas)
-
-//     // })
+    // })
 
 
 
 
+    // subData.sort((itemA, itemB) => {
+    //     if (selectBox.value === 'expensive') {
+    //         return (itemA.price01 - itemB.price01)
+    //     }
+    //     console.log(sortDatas)
 
-//     // for(let sortdata of sortDatas){
-//     //     if(selectBox.value === 'expensive'){
-//     //         console.log(sortdata)
-//     //     }
-//     // }
+    // })
 
 
 
 
 
+    // for(let sortdata of sortDatas){
+    //     if(selectBox.value === 'expensive'){
+    //         console.log(sortdata)
+    //     }
+    // }
+
+
+
+
+
+    ////정렬2
 
 
 
@@ -220,4 +225,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-// })
+
+
+})
