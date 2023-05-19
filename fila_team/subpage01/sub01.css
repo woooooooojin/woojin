@@ -621,7 +621,12 @@ body {
 
 
 
-
+.subbox_hidden{
+    display: none;
+}
+.subbox_block{
+    display: block;
+}
 
 
 

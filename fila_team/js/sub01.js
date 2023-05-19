@@ -160,17 +160,31 @@ selectBox.addEventListener('change', function () {
 //검은색 왜안될까 console 에는 뜨는데,,,
 
 // const blackColor = document.getElementById('color_chk02')
+// const itemlist = document.querySelectorAll('.subBox')
 // const blacks = subData.map((black) => {
 //     return black.color === 'black' ? black : null;
 // })
-// console.log(blacks)
 
-// blackColor.addEventListener('click', function () {
 
-//     blacks.forEach((black) => {
-//     })
+// let arrBlack = subData.filter(n=>{return n.color ==='black'})
+// console.log(arrBlack)
+
+
+
+// blackColor.addEventListener('change',function(){
+//     if (blackColor.checked) {
+     
+    
+//     }
+
 
 // })
+
+
+
+
+
+
 
 
 
