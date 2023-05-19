@@ -195,51 +195,52 @@ filterClose.addEventListener('click', () => {
 const grid01 = document.querySelector('.grid_01')
 const grid02 = document.querySelector('.grid_02') 
 let subBox = document.querySelectorAll('.subBox')
+const wrapping = document.querySelector('.sublist_wrap')
 
-// grid01.addEventListener('click',function(){
+grid01.addEventListener('click',function(){
 
-//     subBox.classList.add('gridchange02')
-//     subBox.classList.remove('gridchange01')
-//     grid02.style.color = '#ccc'
-//     grid01.style.color = 'black'
-    
-// })
-
-// grid02.addEventListener('click',function(){
-//     subBox.classList.add('gridchange01')
-//     subBox.classList.remove('gridchange02')
-//     grid02.style.color = 'black'
-//     grid01.style.color = '#ccc'
-
-// })
-
-
-grid01.addEventListener('click', girdChange01)
-grid02.addEventListener('click', girdChange02)
-
-function girdChange01() {
-
-    for (let i = 0; i < subBox.length; i++) {
-        // subBox[i].style.width = 'calc(100% - 75% - 25px)'
-        subBox[i].classList.add('gridchange02')
-        subBox[i].classList.remove('gridchange01')
-    }
-
+    wrapping.classList.add('gridchange02')
+    wrapping.classList.remove('gridchange01')
     grid02.style.color = '#ccc'
     grid01.style.color = 'black'
+    
+})
 
-
-}
-
-function girdChange02() {
-
-    for (let i = 0; i < subBox.length; i++) {
-        // subBox[i].style.width = 'calc(100% - 80% - 24px)'
-        subBox[i].classList.add('gridchange01')
-        subBox[i].classList.remove('gridchange02')
-    }
+grid02.addEventListener('click',function(){
+    wrapping.classList.add('gridchange01')
+    wrapping.classList.remove('gridchange02')
     grid02.style.color = 'black'
     grid01.style.color = '#ccc'
 
+})
 
-}
+
+// grid01.addEventListener('click', girdChange01)
+// grid02.addEventListener('click', girdChange02)
+
+// function girdChange01() {
+
+//     for (let i = 0; i < subBox.length; i++) {
+//         // subBox[i].style.width = 'calc(100% - 75% - 25px)'
+//         subBox[i].classList.add('gridchange02')
+//         subBox[i].classList.remove('gridchange01')
+//     }
+
+//     grid02.style.color = '#ccc'
+//     grid01.style.color = 'black'
+
+
+// }
+
+// function girdChange02() {
+
+//     for (let i = 0; i < subBox.length; i++) {
+//         // subBox[i].style.width = 'calc(100% - 80% - 24px)'
+//         subBox[i].classList.add('gridchange01')
+//         subBox[i].classList.remove('gridchange02')
+//     }
+//     grid02.style.color = 'black'
+//     grid01.style.color = '#ccc'
+
+
+// }
