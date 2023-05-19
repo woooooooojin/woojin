@@ -10,46 +10,155 @@
 
     <script>
         
-        class Ractangle{
-            constructor(width, height){
-                this.width = width
-                this.height = height
-            }
-            getPerimeter(){
-                return(this.width + this.height) * 2
-            }
-            getArea(){
-                return(this.width * this.height)
-            }
-        }
+       document.addEventListener('DOMContentLoaded',function(){
 
-        const ractangle = new Ractangle(10,20)
-        document.write(`사각형의 둘레 : ${ractangle.getPerimeter()}<br />`)
-        document.write(`사각형의 너비 : ${ractangle.getArea()}<br />`)
+        // try{
+        //     let a=1
+        //     let b=2
+        //     let add = a + b
+
+        //     // console.log(`${add}`)
+        //     console.log(`${sum}`)
+
+        // }catch(exception){
+        //     console.log('catch')
+        // }finally{
+        //     console.log('finally')
+        // }
+
 
         
-        class Square extends Ractangle{
-            constructor(length, color,name){
-                super(length,length)
+        // class Square{
+        //     constructor(length){
+        //         if(length <= 0){
+        //             throw '길이는 0보다 크다'
+        //         }
+        //         this.length = length
+        //     }
 
-                this.color = color
+        //     getPerimeter(){
+        //         return this.length * 4
+        //     }
+        //     getArea(){
+        //         return this.length * this.length
+        //     }
+        // }
+        // const square = new Square(10)
+        // document.write(`${square.getPerimeter()}<br/>`)
+        // document.write(`${square.getArea()}<br/>`)
+        // document.write(`${square.length}<br/>`)
+
+        // const square2 = new Square(30)
+        // document.write(`${square2.getPerimeter()}<br/>`)
+        // document.write(`${square2.getArea()}<br/>`)
+        // document.write(`${square2.length}<br/>`)
+
+        // class Square{
+        //     #length
+        //     constructor(length){
+        //         this.setLength(length)
+        //     }
+        //     setLength(value){
+        //         if(value <= 0){
+        //             throw '길이는 0보다 커야함'
+        //         }
+        //         this.#length = value
+        //     }
+
+        //     getLength(value){
+        //         return this.#length
+        //     }
+
+        //     getPerimeter(){
+        //         return this.#length * 4
+        //     }
+        //     getArea(){
+        //         return this.#length * this.#length
+        //     }
+
+        // }
+        // const square = new Square(20)
+        // document.write(`둘레 : ${square.getPerimeter()}<br />`)
+        // document.write(`둘레 : ${square.getArea()}<br />`)
+        // document.write(`length : ${square.getLength()}<br />`)
+
+
+        // class Square{
+        //     #length
+        //     constructor(length){
+        //         this.#length = length
+        //     }
+
+        //     set length(length){
+        //         if(length <= 0){
+        //             throw ' 길이는 0 이상 '
+        //         }
+        //         this.#length = length
+        //     }
+
+        //     get length(){
+        //         return this.#length
+        //     }
+        //     get perimeter(){
+        //         return this.#length * 4
+        //     }
+        //     get area(){
+        //         return this.#length * this.#length
+        //     }
+        // }
+        // const square = new Square(30)
+        // // square.length = 40
+
+        //  document.write(`정사각형의 둘레 : ${square.perimeter}<br />`)
+        // document.write(`정사각형의 넓이 : ${square.area}<br />`)
+        // document.write(`정사각형의 한변의 길이 : ${square.length} <br /> <br />`)
+
+
+
+        class Information{
+            constructor(name){
                 this.name = name
             }
 
-            getColor(){
-                return `${this.color}인 정사각형`
+            myHobby(){
+                document.write(`나 ${this.name}의 취미는 영화감상 <br />`)
             }
-            getName(){
-                return `${this.name}인 정사각형`
+
+            myHealth(){
+                document.write(`나 ${this.name}은 건강함<br />`)
             }
         }
+        const info = new Information('ddd')
+        info.myHealth()
+        info.myHobby()
 
 
-        const square = new Square(20, 'red','바보')
-        document.write(`정사각형의 둘레 : ${square.getPerimeter()}<br />`)
-        document.write(`정사각형의 너비 : ${square.getArea()}<br />`)
-        document.write(`정사각형의 컬러 : ${square.getColor()}<br />`)
-        document.write(`정사각형의 이름 : ${square.getName()}<br />`)
+        class Child extends Information{
+            constructor(name, height, weight){
+                super(name)
+
+                this.height = height
+                this.weight = weight
+
+            }
+
+            myHeight(){
+                document.write(`${this.name}키는 ${this.height}이다 <br />`)
+            }
+            myWeight(){
+                document.write(`${this.name}몸무게는 ${this.weight}이다 <br />`)
+            }
+        }
+        const child = new Child('asdf','ddd234','ddsadfd')
+        child.myHeight()
+        child.myWeight()
+
+        
+
+
+
+       })
+
     </script>
 </head>
 
