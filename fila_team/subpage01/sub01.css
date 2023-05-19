@@ -146,6 +146,17 @@ body {
     cursor: pointer;
 }
 
+/*그리드 너비*/
+.subBox.gridchange01{
+    width: calc(100% - 80% - 24px);
+}
+.subBox.gridchange02{
+    width: calc(100% - 75% - 25px);
+}
+
+
+.opt_wrap .opt_box3 .grid_01{color: black;}
+.opt_wrap .opt_box3 .grid_02{color: #ccc;}
 .opt_wrap .opt_box3 .grid_01::after {
 
     content: "";
@@ -627,6 +638,7 @@ body {
     margin-left: 20px;
     margin-bottom: 50px;
     cursor: pointer;
+    transition: .3s;
 }
 
 .subimg_wrap {

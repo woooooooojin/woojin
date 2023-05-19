@@ -1,162 +1,203 @@
 const subData = [{
-        id: "sub01",
+        id: 1,
         category: "공용 컴포트핏",
         name: "컴포트핏 우븐 후드티",
         price: "119,000원",
         src: "../img/subimg/sub01.jpg",
-        price01: 119000
+        price01: 119000,
+        pop:20,
+        day:'2023-05-30',
     },
     {
-        id: "sub02",
+        id: 2,
         category: "공용",
         name: "스몰로고 카라 티",
         price: "79,000원",
         src: "../img/subimg/sub02.jpg",
-        price01: 79000
+        price01: 79000,
+        pop:5,
+        day:'2023-05-29',
     },
     {
-        id: "sub03",
+        id: 3,
         category: "공용 컴포트핏",
         name: "컴포트핏 플래그 반팔티",
         price: "39,000원",
         src: "../img/subimg/sub03.jpg",
-        price01: 39000
+        price01: 39000,
+        pop:3,
+        day:'2023-05-28',
     },
     {
-        id: "sub04",
+        id: 4,
         category: "공용 컴포트핏",
         name: "컴포트핏 플래그 반팔티",
         price: "39,000원",
         src: "../img/subimg/sub04.jpg",
-        price01: 39000
+        price01: 39000,
+        pop:2,
+        day:'2023-05-27',
     },
     {
-        id: "sub05",
+        id: 5,
         category: "공용 컴포트핏",
         name: "컴포트핏 마인드블로어 반팔티",
         price: "39,000원",
         src: "../img/subimg/sub05.jpg",
-        price01: 39000
+        price01: 39000,
+        pop:1,
+        day:'2023-05-26',
     },
     {
-        id: "sub06",
+        id: 6,
         category: "공용",
         name: "테니스 배색 카라티셔츠",
         price: "99,000원",
         src: "../img/subimg/sub06.jpg",
-        price01: 99000
+        price01: 99000,
+        pop:19,
+        day:'2023-05-25',
     },
     {
-        id: "sub07",
+        id: 7,
         category: "공용 오버핏",
         name: "테잎 오버핏 바람막이 자켓",
         price: "99,000원",
         src: "../img/subimg/sub07.jpg",
-        price01: 99000
+        price01: 99000,
+        pop:18,
+        day:'2023-05-24',
     },
     {
-        id: "sub08",
+        id: 8,
         category: "남성",
         name: "퍼포먼스 경량 4.5부 숏팬츠",
         price: "69,000원",
         src: "../img/subimg/sub08.jpg",
-        price01: 69000
+        price01: 69000,
+        pop:15,
+        day:'2023-05-23',
     },
     {
-        id: "sub09",
+        id: 9,
         category: "공용 오버핏",
         name: "테잎 오버핏 우븐 반바지",
         price: "79,000원",
         src: "../img/subimg/sub09.jpg",
-        price01: 79000
+        price01: 79000,
+        pop:13,
+        day:'2023-05-22',
     },
     {
-        id: "sub10",
+        id: 10,
         category: "공용",
         name: "테니스 퍼포먼스 반팔티",
         price: "49,000원",
         src: "../img/subimg/sub10.jpg",
-        price01: 49000
+        price01: 49000,
+        pop:14,
+        day:'2023-05-21',
     },
     {
-        id: "sub11",
+        id: 11,
         category: "공용",
         name: "라이프 레이어드 반팔티",
         price: "45,000원",
         src: "../img/subimg/sub11.jpg",
-        price01: 45000
+        price01: 45000,
+        pop:5,
+        day:'2023-05-20',
     },
     {
-        id: "sub12",
+        id: 12,
         category: "남성 컴포트핏 테니스",
         name: "테니스 컴포트핏 니트 카라티",
         price: "45,000원",
         src: "../img/subimg/sub12.jpg",
-        price01: 45000
+        price01: 45000,
+        pop:10,
+        day:'2023-05-19',
     },
     {
-        id: "sub13",
+        id: 13,
         category: "공용 컴포트핏 라이프스타일",
         name: "컴포트핏 조거팬츠",
         price: "109,000원",
         src: "../img/subimg/sub13.jpg",
-        price01: 109000
+        price01: 109000,
+        pop:9,
+        day:'2023-05-18',
     },
     {
-        id: "sub14",
+        id: 14,
         category: "공용 오버핏 라이프스타일",
         name: "오버핏 이지팬츠",
         price: "99,000원",
         src: "../img/subimg/sub14.jpg",
-        price01: 99000
+        price01: 99000,
+        pop:6,
+        day:'2023-05-17',
     },
     {
-        id: "sub15",
+        id: 15,
         category: "공용 오버핏 라이프스타일",
         name: "오버핏 스트링 와이드 팬츠",
         price: "129,000원",
         src: "../img/subimg/sub15.jpg",
-        price01: 129000
+        price01: 129000,
+        pop:21,
+        day:'2023-05-16',
     },
     {
-        id: "sub16",
+        id: 16,
         category: "남성",
         name: "스포츠 쿨링 반바지",
         price: "49,000원",
         src: "../img/subimg/sub16.jpg",
-        price01: 49000
+        price01: 49000,
+        pop:23,
+        day:'2023-05-15',
     },
     {
-        id: "sub17",
+        id: 17,
         category: "공용 레귤러핏 라이프스타일",
         name: "스트레치 카고 조거팬츠",
         price: "119,000원",
         src: "../img/subimg/sub17.jpg",
-        price01: 119000
+        price01: 119000,
+        pop:22,
+        day:'2023-05-14',
     },
     {
-        id: "sub18",
+        id: 18,
         category: "공용 라이프스타일",
         name: "클래식킥스 B V3",
         price: "45,000원",
         src: "../img/subimg/sub18.jpg",
-        price01: 45000
+        price01: 45000,
+        pop:19,
+        day:'2023-05-13',
     },
     {
-        id: "sub19",
+        id: 19,
         category: "공용 라이프스타일",
         name: "FILA athletics 아노락",
         price: "87,200원",
         src: "../img/subimg/sub19.jpg",
-        price01: 87200
+        price01: 87200,
+        pop:14,
+        day:'2023-05-12',
     },
     {
-        id: "sub20",
+        id: 20,
         category: "공용 라이프스타일",
         name: "White Line 라켓백",
         price: "119,000원",
         src: "../img/subimg/sub20.jpg",
-        price01: 119000
+        price01: 119000,
+        pop:1,
+        day:'2023-05-11',
+       
     },
 
 
@@ -166,31 +207,7 @@ const subData = [{
 
 ]
 
-// const sortEx = _.sortBy(subData, 'price01').reverse()
 
-// for(let item of sortEx){
-//      console.log(item)
-// }
-
-
-const selectBox = document.getElementById('select_sort'); //select box
-const sortBox = document.getElementById('sub_sort')
-const expensive = document.getElementById('ex')
-
-
-    if (expensive.value == 'expensive') {
-        subData.sort((itemA, itemB) => {
-            return (itemA.price01 - itemB.price01) * -1
-        })
-    }
-
-
-
-// const exSort = subData.sort((itemA, itemB) => {
-//     return (itemA.price01 - itemB.price01) * -1
-// })
-
-// console.log(exSort)
 
 
 export default subData
