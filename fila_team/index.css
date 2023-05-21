@@ -1463,6 +1463,7 @@ header:hover a {
     left: 100px;
     top:150px;
 }
+
 .recommand_style .rec_style_wrap .recommand_box .rec_circle span {
     position: absolute;
     top: 12px;
@@ -1485,11 +1486,11 @@ header:hover a {
     transition: .3s;
 }
 
-.recommand_style .rec_style_wrap .recommand_box .rec_circle:hover span:nth-child(2){
+.recommand_style .rec_style_wrap .recommand_box .span_wrap:hover span:nth-child(2){
     transform: rotate(0deg);
 }
 
-.recommand_style .rec_style_wrap .recommand_box .rec_circle:hover .rec_desc{
+.recommand_style .rec_style_wrap .recommand_box .span_wrap:hover .rec_desc{
     opacity: 1;
 }
 
