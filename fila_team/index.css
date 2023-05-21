@@ -1463,6 +1463,9 @@ header:hover a {
     left: 100px;
     top:150px;
 }
+.span_wrap:nth-child(2){
+    left: 50px;
+}
 
 .recommand_style .rec_style_wrap .recommand_box .rec_circle span {
     position: absolute;
