@@ -1489,6 +1489,48 @@ header:hover a {
     transform: rotate(0deg);
 }
 
+.recommand_style .rec_style_wrap .recommand_box .rec_circle:hover .rec_desc{
+    opacity: 1;
+}
+
+.rec_desc{
+    position: absolute;
+    top: 35px;
+    right: 0;
+    border: 1px solid black;
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #fff;
+    opacity: 0;
+    transition: .3s;
+}
+.rec_desc .rec_tit{
+    text-align: center;
+    font-size: 18px;
+}
+.rec_desc .rec_price{
+    text-align: right;
+    font-size: 14px;
+    margin-top: 10px;
+}
+ .rec_desc .cart_like_wrap{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+.rec_desc .cart_like_wrap i{
+    font-size: 25px;
+    color: #ccc;
+    transition: .3s;
+}
+.rec_desc .cart_like_wrap i:nth-child(1):hover{
+    color: red;
+}
+.rec_desc .cart_like_wrap i:nth-child(2):hover{
+    color: #002053;
+}
 
 
 

@@ -172,10 +172,7 @@ selectBox.addEventListener('change', function () {
 
 
 // blackColor.addEventListener('change',function(){
-//     if (blackColor.checked) {
-     
-    
-//     }
+ 
 
 
 // })
