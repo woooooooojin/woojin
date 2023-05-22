@@ -286,6 +286,8 @@ const rankList = document.querySelectorAll('.ranklist li')
 const tennis = document.getElementById('tennis')
 const running = document.getElementById('running')
 
+const hoverTxt = document.querySelectorAll('.hovertit')
+
 tshirt.addEventListener('click',function(){
 
     slides[0].setAttribute('src','./img/swiper_img/01.jpg')
@@ -300,11 +302,18 @@ tshirt.addEventListener('click',function(){
     for(let i in tarArr){
         for(let i =0; i<rankList.length; i++){
             rankList[i].innerHTML = tarArr[i]
+            
         }
     }
+    
 
+   
+
+    
 
 })
+
+
 targa.addEventListener('click',function(){
 
     slides[0].setAttribute('src','./img/swiper_img/2-01.jpg')
@@ -326,16 +335,16 @@ targa.addEventListener('click',function(){
 
 online.addEventListener('click',function(){
 
-    slides[0].setAttribute('src','./img/swiper_img/3-01.jpg')
-    slides[1].setAttribute('src','./img/swiper_img/3-02.jpg')
-    slides[2].setAttribute('src','./img/swiper_img/3-03.jpg')
-    slides[3].setAttribute('src','./img/swiper_img/3-04.jpg')
-    slides[4].setAttribute('src','./img/swiper_img/3-05.jpg')
-    slides[5].setAttribute('src','./img/swiper_img/3-06.jpg')
+    slides[0].setAttribute('src','./img/swiper_img/3-04.jpg')
+    slides[1].setAttribute('src','./img/swiper_img/3-05.jpg')
+    slides[2].setAttribute('src','./img/swiper_img/3-06.jpg')
+    slides[3].setAttribute('src','./img/swiper_img/3-01.jpg')
+    slides[4].setAttribute('src','./img/swiper_img/3-02.jpg')
+    slides[5].setAttribute('src','./img/swiper_img/3-03.jpg')
     rankTit.innerHTML = '#온라인단독'
 
     
-    const tarArr = ['온라인01','온라인02','온라인03','온라인04','온라인05','온라인06']
+    const tarArr = ['브이 배색 경량자켓','컬러블로킹 아노락','테니스 하프팬츠','스포츠라이프 하프팬츠','세리프 로고 티셔츠','러팅 반팔 티셔츠']
     for(let i in tarArr){
         for(let i =0; i<rankList.length; i++){
             rankList[i].innerHTML = tarArr[i]
@@ -344,12 +353,12 @@ online.addEventListener('click',function(){
 })
 
 tennis.addEventListener('click',function(){
-    slides[0].setAttribute('src','./img/swiper_img/4-01.jpg')
-    slides[1].setAttribute('src','./img/swiper_img/4-02.jpg')
-    slides[2].setAttribute('src','./img/swiper_img/4-03.jpg')
-    slides[3].setAttribute('src','./img/swiper_img/4-04.jpg')
-    slides[4].setAttribute('src','./img/swiper_img/4-05.jpg')
-    slides[5].setAttribute('src','./img/swiper_img/4-06.jpg')
+    slides[0].setAttribute('src','./img/swiper_img/4-04.jpg')
+    slides[1].setAttribute('src','./img/swiper_img/4-05.jpg')
+    slides[2].setAttribute('src','./img/swiper_img/4-06.jpg')
+    slides[3].setAttribute('src','./img/swiper_img/4-01.jpg')
+    slides[4].setAttribute('src','./img/swiper_img/4-02.jpg')
+    slides[5].setAttribute('src','./img/swiper_img/4-03.jpg')
     rankTit.innerHTML = '#테니스'
 
     const tarArr = ['헤리티지 집업','테니스 투어백','뉴 헤리티지 집업','헤리티지 카라티셔츠','엑실러스 T9','테니스 파이핑 자켓']
@@ -362,21 +371,23 @@ tennis.addEventListener('click',function(){
 })
 
 running.addEventListener('click',function(){
-    slides[0].setAttribute('src','./img/swiper_img/5-01.jpg')
-    slides[1].setAttribute('src','./img/swiper_img/5-02.jpg')
-    slides[2].setAttribute('src','./img/swiper_img/5-03.jpg')
-    slides[3].setAttribute('src','./img/swiper_img/5-04.jpg')
-    slides[4].setAttribute('src','./img/swiper_img/5-05.jpg')
-    slides[5].setAttribute('src','./img/swiper_img/5-06.jpg')
+    slides[0].setAttribute('src','./img/swiper_img/5-04.jpg')
+    slides[1].setAttribute('src','./img/swiper_img/5-05.jpg')
+    slides[2].setAttribute('src','./img/swiper_img/5-06.jpg')
+    slides[3].setAttribute('src','./img/swiper_img/5-01.jpg')
+    slides[4].setAttribute('src','./img/swiper_img/5-02.jpg')
+    slides[5].setAttribute('src','./img/swiper_img/5-03.jpg')
     rankTit.innerHTML = '#런닝화'
 
-    const tarArr = ['러닝01','러닝02','러닝03','러닝04','러닝05','러닝06']
+    const tarArr = ['휠라레이서 L7','휠라레이서 L8','휠라레이서 L9','플로트 프라임','플로트 엘리트','플로트 맥시']
     for(let i in tarArr){
         for(let i =0; i<rankList.length; i++){
             rankList[i].innerHTML = tarArr[i]
         }
     }
 })
+
+
 
 
 
