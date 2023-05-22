@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,17 +8,26 @@
     <title>Document</title>
     <link rel="stylesheet" href="./main.css">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script><!--gsap cdn-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollToPlugin.min.js"></script><!--gsap scroll to-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <!--gsap cdn-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollToPlugin.min.js"></script>
+    <!--gsap scroll to-->
+
+
+    <!--swiper-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
 
 
     <script src="./js/main.js" defer></script>
 </head>
+
 <body>
-    
+
     <div class="top_btn">top</div>
 
-    <section class="img_box"> 
+    <section class="img_box">
         <div class="img01">img01</div>
         <div class="img02">img02</div>
         <div class="img03">img03</div>
@@ -30,5 +40,31 @@
         <div class="txt03">txt03</div>
     </section>
 
+
+
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="./img/bx_img01.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./img/bx_img02.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./img/bx_img03.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./img/bx_img04.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./img/bx_img05.jpg" alt=""></div>
+        </div>
+        <div class="swiper-pagination"></div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- <div class="swiper-scrollbar"></div> -->
+    </div>
+
+
+
+
+    <script>
+       
+    </script>
+
 </body>
+
 </html>

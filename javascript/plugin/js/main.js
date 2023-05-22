@@ -53,12 +53,47 @@ window.addEventListener('scroll',()=>{
         gsap.to(txtEls[1],0.5,{
             delay : 0.5,
             opacity:1,
+
         })
         gsap.to(txtEls[2],0.5,{
             delay : 1,
             opacity:1,
+
         })
 
     }
 
 })
+
+
+
+
+
+//swiper
+const swiper = new Swiper('.swiper', {
+    loop: true,
+    centeredSlides:true,
+    slidesPerView: 2,
+    // slidesPerGroup:1,
+    spaceBetween : 10,
+    // loopedSlides: true,
+
+    autoplay:{
+        delay : 2000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable:true,
+    },
+
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    touchEventsTarget:'wrapper'
+    // scrollbar: {
+    //     el: '.swiper-scrollbar',
+    // },
+});
