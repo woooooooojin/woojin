@@ -284,6 +284,7 @@ tshirt.addEventListener('click',function(){
     slides[5].setAttribute('src','./img/swiper_img/06.jpg')
 
     rankTit.innerHTML = '#티셔츠 & 팬츠'
+
     const tarArr = ['컴포트핏 인터네셔널 반팔 맨투맨','컴포트핏 조거팬츠','이지팬츠','베이직 리니어 반팔티','3D 빅로고 반팔티','컴포트핏 인터네셔널 로고 반팔티']
     for(let i in tarArr){
         for(let i =0; i<rankList.length; i++){
@@ -292,7 +293,11 @@ tshirt.addEventListener('click',function(){
         }
     }
     
-
+    const hoverArr = ['베이직 리니어 반팔티','3D 빅로고 반팔티','컴포트핏 인터네셔널 로고 반팔티','컴포트핏 인터네셔널 반팔 맨투맨','컴포트핏 조거팬츠','이지팬츠']
+        for(let i =0; i<hoverTxt.length; i++){
+            hoverTxt[i].innerHTML = hoverArr[i]
+        }
+    
    
 
     
@@ -317,6 +322,11 @@ targa.addEventListener('click',function(){
         }
     }
 
+    const hoverArr = ['타르가클래식','타르가 클럽 LT','타르가 OG 1988','타르가 클럽','타르가 88/22','타르가88/22']
+    for(let i =0; i<hoverTxt.length; i++){
+        hoverTxt[i].innerHTML = hoverArr[i]
+    }
+
 })
 
 online.addEventListener('click',function(){
@@ -336,6 +346,11 @@ online.addEventListener('click',function(){
             rankList[i].innerHTML = tarArr[i]
         }
     }
+
+    const hoverArr = ['스포츠라이프 하프팬츠','세리프 로고 티셔츠','러팅 반팔 티셔츠','브이 배색 경량자켓','컬러블로킹 아노락','테니스 하프팬츠']
+    for(let i =0; i<hoverTxt.length; i++){
+        hoverTxt[i].innerHTML = hoverArr[i]
+    }
 })
 
 tennis.addEventListener('click',function(){
@@ -354,6 +369,11 @@ tennis.addEventListener('click',function(){
         }
     }
 
+    const hoverArr = ['헤리티지 카라티셔츠','엑실러스 T9','테니스 파이핑 자켓','헤리티지 집업','테니스 투어백','뉴 헤리티지 집업']
+    for(let i =0; i<hoverTxt.length; i++){
+        hoverTxt[i].innerHTML = hoverArr[i]
+    }
+
 })
 
 running.addEventListener('click',function(){
@@ -370,6 +390,11 @@ running.addEventListener('click',function(){
         for(let i =0; i<rankList.length; i++){
             rankList[i].innerHTML = tarArr[i]
         }
+    }
+
+    const hoverArr = ['플로트 프라임','플로트 엘리트','플로트 맥시','휠라레이서 L7','휠라레이서 L8','휠라레이서 L9']
+    for(let i =0; i<hoverTxt.length; i++){
+        hoverTxt[i].innerHTML = hoverArr[i]
     }
 })
 
