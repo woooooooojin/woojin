@@ -1431,6 +1431,22 @@ header:hover a {
     right: 50%;
     top: 40%;
 }
+.rec_info_wrap.iw03{
+    right: 50%;
+    top: auto;
+    bottom:30%;
+
+}
+
+.rec_info_wrap.iw04{
+    right: 35%;
+    top: auto;
+    bottom: 35%;
+}
+.rec_info_wrap.iw05{
+    right: 40%;
+    top: 30%;
+}
 .rec_info{
    
 }
