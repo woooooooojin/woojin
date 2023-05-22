@@ -1427,9 +1427,9 @@ header:hover a {
 }
 .rec_info_wrap{
     
-    height: 100%;
     position: absolute;
-    top: 0;
+    right: 50%;
+    top: 40%;
 }
 .rec_info{
    
@@ -1460,8 +1460,8 @@ header:hover a {
     background-color: #fff;
     border-radius: 50%;
     position: absolute;
-    left: 100px;
-    top:150px;
+    left:0px;
+    top: 0px;
 }
 .span_wrap:nth-child(2){
     left: 50px;
@@ -1500,7 +1500,7 @@ header:hover a {
 .rec_desc{
     position: absolute;
     top: 35px;
-    right: 0;
+    right: 15%;
     border: 1px solid black;
     width: 120px;
     height: 120px;
