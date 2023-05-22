@@ -667,15 +667,15 @@ header:hover a {
 
 .swiper_rank .swiper-slide {
 
-    /* width: 30% !important; */
-    /* height: 660px; */
+    width: 500px ;
+    height: 600px;
     opacity: 0.3;
     transform: scale(0.85);
     transition: .3s;
     /* margin-right: 20px; */
     /* visibility: hidden; */
     position: relative;
-
+    
 
 }
 
@@ -695,13 +695,14 @@ header:hover a {
 .swiper_rank .swiper-slide.swiper-slide-next {
     /* visibility: visible; */
     opacity: 0.3;
+    pointer-events: none; 
 }
 
 
 
 .swiper_rank .swiper-slide img {
     width: 100%;
-    height: 700px;
+    height: 600px;
     /* border-radius: 20px; */
     transition: .3s;
 }
@@ -777,18 +778,17 @@ header:hover a {
 }
 
 .rank_text {
-    width: 500px;
-    height: 600px;
+    width: 450px;
+    height: 550px;
     background-color: #fff;
     padding: 30px;
     margin-left: 10px;
     position: absolute;
-    top: 60px;
-    left: 50px;
+    top: 40px;
+    left: 30px;
     z-index: 5;
     border: 1px solid #ccc;
     border-radius: 20px;
-
 
 }
 
@@ -804,10 +804,10 @@ header:hover a {
 }
 
 .rank_text ul li {
-    height: 70px;
+    height: 65px;
     border-bottom: 1px solid #ccc;
     transition: .3s;
-    line-height: 70px;
+    line-height: 65px;
     padding-left: 10px;
     margin-left: 20px;
     border-radius: 10px;
@@ -1034,7 +1034,7 @@ header:hover a {
     top: 50%;
     transform: translateY(-50%);
     left: auto;
-    right: 3%;
+    right: 5%;
     color: black;
     border: 0;
 
@@ -1044,7 +1044,7 @@ header:hover a {
     color: black;
     top: 50%;
     transform: translateY(-50%);
-    left: 3%;
+    left: 5%;
     border: 0;
 
 }
@@ -1067,6 +1067,7 @@ header:hover a {
     border-radius: 0;
     margin: 0 15px !important;
     background-color: #ccc;
+    transition: .3s;
 }
 
 /* .swiper_2 .swiper-pagination-bullet:nth-child(2n){
@@ -1354,7 +1355,7 @@ header:hover a {
 }
 
 .magazine_section .magazine_wrap .mgz_box .mgz_desc h4 {
-    font-size: 28px;
+    font-size: 20px;
     position: absolute;
     top: -10%;
     left: 0;
@@ -1367,7 +1368,7 @@ header:hover a {
 }
 
 .magazine_section .magazine_wrap .mgz_box .mgz_desc p {
-    font-size: 18px;
+    font-size: 16px;
     position: absolute;
     bottom: -10%;
     left: 0;
