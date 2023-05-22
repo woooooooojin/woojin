@@ -1431,6 +1431,11 @@ header:hover a {
     right: 50%;
     top: 40%;
 }
+.rec_info_wrap.iw02{
+    right:40%;
+    top: auto;
+    bottom: 10%;;
+}
 .rec_info_wrap.iw03{
     right: 50%;
     top: auto;
@@ -1472,7 +1477,7 @@ header:hover a {
 .span_wrap{
     width: 30px;
     height: 30px;
-    border: 1px solid #002053;
+    border: 1px solid gray;
     background-color: #fff;
     border-radius: 50%;
     position: absolute;
@@ -1493,42 +1498,47 @@ header:hover a {
     display: block;
     width: 20px;
     height: 2px;
-    background-color: #002053;
+    background-color: gray;
 }
 
 .recommand_style .rec_style_wrap .recommand_box .rec_circle span:nth-child(2) {
     display: block;
     width: 20px;
     height: 2px;
-    background-color: #002053;
+    background-color: gray;
     transform: rotate(90deg);
     transition: .3s;
 }
 
 .recommand_style .rec_style_wrap .recommand_box .span_wrap:hover span:nth-child(2){
     transform: rotate(0deg);
+    background-color: black;
 }
 
 .recommand_style .rec_style_wrap .recommand_box .span_wrap:hover .rec_desc{
-    opacity: 1;
+    display: block;
 }
-
+.rec_desc.rd02{
+    top:auto;
+    bottom: 30px;
+}
 .rec_desc{
     position: absolute;
-    top: 35px;
-    right: 15%;
-    border: 1px solid black;
-    width: 120px;
-    height: 120px;
+    top: 30px;
+    right: 0;
+    border: 1px solid #ccc;
+    width: 200px;
+    height: 130px;
     border-radius: 10px;
     padding: 10px;
     background-color: #fff;
-    opacity: 0;
+    /* opacity: 0; */
+    display: none;
     transition: .3s;
 }
 .rec_desc .rec_tit{
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
 }
 .rec_desc .rec_price{
     text-align: right;
@@ -1538,7 +1548,7 @@ header:hover a {
  .rec_desc .cart_like_wrap{
     display: flex;
     justify-content: space-around;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 .rec_desc .cart_like_wrap i{
     font-size: 25px;
