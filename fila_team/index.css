@@ -931,7 +931,7 @@ header:hover a {
 }
 
 .section2 .new_nav_wrap ul li {
-    width: 150px;
+    width: 200px;
     height: 50px;
     border: 1px solid #ccc;
     margin-right: 20px;
@@ -942,17 +942,23 @@ header:hover a {
     position: relative;
     border-radius: 10px;
 }
-
+.section2 .new_nav_wrap ul li.new_on{
+    background-color: #002053;
+    color: #fff;
+    border: #002053;
+}
 .section2 .new_nav_wrap ul li:hover {
     box-shadow: 0 0 10px #002053;
+    background-color: #002053;
+    color: #fff;
 }
 
 .section2 .new_nav_wrap ul li:hover::after {
-    width: 47%;
+    width: 40%;
 }
 
 .section2 .new_nav_wrap ul li:hover::before {
-    width: 47%;
+    width: 40%;
 }
 
 .section2 .new_nav_wrap ul li::after {
@@ -960,7 +966,7 @@ header:hover a {
     width: 0%;
     height: 2px;
     display: block;
-    background-color: #002053;
+    background-color: #fff;
     position: absolute;
     bottom: 5px;
     right: 50%;
@@ -973,7 +979,7 @@ header:hover a {
     width: 0%;
     height: 2px;
     display: block;
-    background-color: #002053;
+    background-color: #fff;
     position: absolute;
     bottom: 5px;
     left: 50%;
