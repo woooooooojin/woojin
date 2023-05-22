@@ -42,7 +42,7 @@
 // });
 
 
-//마우스오버 이벤트고민좀 하자,,,
+
 
 window.addEventListener('mouseover', () => {
 
@@ -62,23 +62,9 @@ window.addEventListener('mouseover', () => {
         mainLogo.setAttribute('src', 'img/LOGO/logo01.png')
 
 
-        // for (let i = 0; i < aTag.length; i++) {
-        //     aTag[i].style.color = 'black'
-        // }
-        // for (let i = 0; i < lnbA.length; i++) {
-        //     lnbA[i].style.color = 'black'
-        // }
-        // gnbI.forEach((value) => {
-        //     value.style.color = 'black'
-        // })
+        
     }
-    // else if(window.scrollY >= 100){
-    //     for (let i = 0; i < lnbA.length; i++) {
-    //         gnbI[i].style.color = 'black'
-    //     }
-
-    //     mainLogo.setAttribute('src', 'img/LOGO/01(3).png')
-    // }
+    
 
 })
 
