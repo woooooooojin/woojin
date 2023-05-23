@@ -643,8 +643,8 @@ const cart2 = document.querySelectorAll('.fa-shopping-cart')
 const cartCount = document.querySelector('.count')
 let cnt = 0
 
-cart2.forEach((value)=>{
-    value.addEventListener('click',function(){
+cart2.forEach((value) => {
+    value.addEventListener('click', function () {
         cnt++
         cartCount.innerHTML = cnt
     })
@@ -654,8 +654,8 @@ const heart = document.querySelectorAll('.fa-heart')
 const heartCnt = document.querySelector('.heart_cnt')
 let cntheart = 0
 
-heart.forEach((value)=>{
-    value.addEventListener('click',function(){
+heart.forEach((value) => {
+    value.addEventListener('click', function () {
         cntheart++
         heartCnt.innerHTML = cntheart
     })
@@ -671,22 +671,25 @@ const snsEls = document.querySelectorAll('.sns_wrap')
 const mgzEls = document.querySelectorAll('.magazine_wrap')
 
 
-snsEls.forEach((snsEl)=>{
+snsEls.forEach((snsEl) => {
     new ScrollMagic
-    .Scene({
-        triggerElement : snsEl,
-        triggerHook:0.3
-    })
-    .setClassToggle(snsEl,'show')
-    .addTo(new ScrollMagic.Controller)
+        .Scene({
+            triggerElement: snsEl,
+            triggerHook: 0.3
+        })
+        .setClassToggle(snsEl, 'show')
+        .addTo(new ScrollMagic.Controller)
 })
 
-mgzEls.forEach((mgzEl)=>{
+mgzEls.forEach((mgzEl) => {
     new ScrollMagic
-    .Scene({
-        triggerElement : mgzEl,
-        triggerHook:0.5
-    })
-    .setClassToggle(mgzEl,'show')
-    .addTo(new ScrollMagic.Controller)
+        .Scene({
+            triggerElement: mgzEl,
+            triggerHook: 0.5
+        })
+        .setClassToggle(mgzEl, 'show')
+        .addTo(new ScrollMagic.Controller)
 })
+
+
+
