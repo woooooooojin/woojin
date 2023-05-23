@@ -58,9 +58,7 @@ $(function () {
 
     const btn = $('.pagebtn ul li');
     const page = $('section');
-    // btn.click(function(){
-    //     $(window).scrollTo(this.hash || 0,300);
-    // })
+
 
     let index = 0;
     let top = 0; //각페이지의 맨위 좌표
@@ -77,7 +75,9 @@ $(function () {
     })
 
 
-    
+
+
+
     $('.lnb_women').click(function () {
         $('.drop_women').slideToggle(300);
         $('.drop_men').css('display', 'none');
@@ -224,9 +224,28 @@ const cart2 = document.querySelectorAll('.fa-shopping-cart')
 const cartCount = document.querySelector('.count')
 let cnt = 0
 
-cart2.forEach((value)=>{
-    value.addEventListener('click',function(){
+cart2.forEach((value) => {
+    value.addEventListener('click', function () {
         cnt++
         cartCount.innerHTML = cnt
     })
 })
+
+
+
+const bgcChange = document.querySelector('.pagebtn ul li')
+const bgcChangeA = document.querySelectorAll('.pagebtn ul li a')
+
+
+for (let i = 0; i < bgcChangeA.length; i++) {
+    bgcChangeA[i].addEventListener('click', function () {
+        bgcChangeA[0].classList.remove('on')
+        bgcChangeA[1].classList.remove('on')
+        bgcChangeA[2].classList.remove('on')
+        bgcChangeA[3].classList.remove('on')
+        bgcChangeA[i].classList.add('on')
+    })
+
+    
+
+}
