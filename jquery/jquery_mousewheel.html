@@ -10,7 +10,6 @@
     <script src="./js/jquery.scrollTo.min.js"></script><!--scrollto-->
     <script src="./js/jquery.easing.min.js"></script><!--easing-->
     <script src="./js/jquery.mousewheel.min.js"></script><!--mouse wheel-->
-
     <script>
 
 
@@ -20,12 +19,12 @@
 
                 if(delta > 0){//스크롤을 위로 움직임
                     let prev = $(this).prev().offset().top
-                    $('html, body').stop().animate({
+                    $('body').stop().animate({
                         scrollTop: prev
                     },300,'easeInOutBack')
                 }else if(delta < 0){//스크롤을 아래로 움직임
                     let next = $(this).next().offset().top
-                    $('html, body').stop().animate({
+                    $('body').stop().animate({
                         scrollTop: next
                     },300,'easeInOutBack')
                 }
