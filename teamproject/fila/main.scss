@@ -40,6 +40,7 @@ body {
   left: 180px;
   border-radius: 10px;
   display: block;
+  border: 1px solid gray;
 
   h1 {
     text-align: center;
@@ -75,7 +76,7 @@ body {
 
 .close_btn {
   text-align: right;
-  font-size: 25px;
+  font-size: 20px;
   cursor: pointer;
 
   i {
@@ -119,8 +120,17 @@ body {
     position: relative;
     padding-top: 30px;
 
+    .search_icon {
+      width: 50px;
+      height: 50px;
+      font-size: 35px;
+      position: absolute;
+      top: 35px;
+      left: 25px;
+    }
+
     input {
-      width: 50%;
+      width: 90%;
       height: 60px;
       margin: 0 auto;
       display: block;
@@ -129,18 +139,21 @@ body {
       border: 2px solid #ccc;
       background-color: #eee;
       font-size: 20px;
-      padding: 0 10px;
+      padding: 0 15px;
+      text-align: center;
 
-      &[placeholder] {}
+      &[placeholder] {
+        font-weight: 700;
+      }
     }
 
     .search_close {
       width: 50px;
       height: 50px;
-      font-size: 25px;
+      font-size: 30px;
       position: absolute;
       right: 0;
-      top: 25px;
+      top: 35px;
       cursor: pointer;
     }
   }
@@ -193,7 +206,6 @@ header {
   top: 0;
   z-index: 999;
   height: 70px;
-  line-height: 70px;
 
   &:hover {
     background-color: #fff;
@@ -239,6 +251,7 @@ header {
   ul {
     display: flex;
     justify-content: space-around;
+    line-height: 70px;
 
     li {
       font-size: 20px;
@@ -342,7 +355,7 @@ header {
 }
 
 .header:hover {
-  .head_lnb ul li a, .head_gnb ul li a {
+  .head_lnb > ul > li > a, .head_gnb > ul > li > a {
     color: black;
   }
 }
@@ -357,6 +370,7 @@ header {
   background-color: #fff;
   display: none;
   padding: 20px;
+  border-bottom: 2px solid #ccc;
 }
 
 .drop_menu_wrap {
@@ -375,7 +389,7 @@ header {
 .dbox {
   width: 16.66667%;
   border-right: 1px solid #ccc;
-  padding-left: 30px;
+  padding-left: 20px;
   padding-top: 10px;
 
   h4 {
@@ -395,12 +409,12 @@ header {
     height: 20px;
     margin-bottom: 20px;
 
-    &:hover a {
-      color: #002053;
-      font-weight: bold;
-    }
-
     a {
+      &:hover {
+        font-weight: bold;
+        color: red !important;
+      }
+
       display: block;
       width: 100%;
     }
@@ -411,12 +425,18 @@ header {
   margin-top: 50px;
 
   li {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     font-weight: bold;
+    height: 20px;
 
     a {
       display: block;
       width: 100%;
+      position: relative;
+    }
+
+    &:hover a {
+      color: red !important;
     }
   }
 }
@@ -598,22 +618,25 @@ header {
 }
 
 .swiper_rank {
-  width: 100%;
+  width: 1660px;
+  margin: 0 auto;
+  height: 650px;
   overflow: hidden;
   margin-top: 50px;
 
   .swiper-wrapper {
-    transition-timing-function: linear;
+    transition-timing-function: ease-in-out;
   }
 
   .swiper-slide {
-    width: 30% !important;
+    width: 30%;
+    height: 650px;
     opacity: 0.3;
     transform: scale(0.85);
     transition: .3s;
 
     /* margin-right: 20px; */
-    visibility: hidden;
+    /* visibility: hidden; */
     position: relative;
 
     &.swiper-slide-active {
@@ -623,37 +646,47 @@ header {
     }
 
     &.swiper-slide-prev {
-      visibility: hidden;
+      /* visibility: hidden; */
+      opacity: 0;
     }
 
     &.swiper-slide-next {
-      visibility: visible;
+      /* visibility: visible; */
+      opacity: 0.3;
+      pointer-events: none;
     }
 
     img {
       width: 100%;
-      height: 700px;
-      border-radius: 20px;
+      height: 650px;
+
+      /* border-radius: 20px; */
+      transition: .3s;
     }
 
-    &:hover .rank_hover_box {
-      opacity: 1;
+    &:hover {
+      img {}
+
+      .rank_hover_box {
+        opacity: 1;
+      }
     }
 
     .rank_hover_box {
       width: 100%;
-      height: 70px;
+      height: 80px;
       background-color: rgba(0, 0, 0, 0.5);
       display: flex;
       position: absolute;
       bottom: 0;
       left: 0;
-      border-radius: 0 0 20px 20px;
+
+      /* border-radius: 0 0 20px 20px; */
       opacity: 0;
       transition: .3s;
 
       .rank_hover_L {
-        width: 70%;
+        width: 65%;
         padding-top: 12px;
         padding-left: 20px;
         cursor: pointer;
@@ -703,14 +736,14 @@ header {
 }
 
 .rank_text {
-  width: 450px;
-  height: 520px;
+  width: 400px;
+  height: 500px;
   background-color: #fff;
   padding: 30px;
   margin-left: 10px;
   position: absolute;
-  top: 80px;
-  left: 25px;
+  top: 60px;
+  left: 100px;
   z-index: 5;
   border: 1px solid #ccc;
   border-radius: 20px;
@@ -725,10 +758,10 @@ header {
     border-top: 2px solid black;
 
     li {
-      height: 60px;
+      height: 55px;
       border-bottom: 1px solid #ccc;
       transition: .3s;
-      line-height: 60px;
+      line-height: 55px;
       padding-left: 10px;
       margin-left: 20px;
       border-radius: 10px;
@@ -804,6 +837,16 @@ header {
   }
 }
 
+.ranklist {
+  counter-reset: rank;
+
+  li::before {
+    content: "0" counter(rank);
+    counter-increment: rank;
+    margin-right: 5px;
+  }
+}
+
 /*******new product******/
 
 .section2 {
@@ -833,7 +876,7 @@ header {
   margin-bottom: 30px;
 
   li {
-    width: 150px;
+    width: 200px;
     height: 50px;
     border: 1px solid #ccc;
     margin-right: 20px;
@@ -844,11 +887,19 @@ header {
     position: relative;
     border-radius: 10px;
 
+    &.new_on {
+      background-color: #002053;
+      color: #fff;
+      border: #002053;
+    }
+
     &:hover {
       box-shadow: 0 0 10px #002053;
+      background-color: #002053;
+      color: #fff;
 
       &::after, &::before {
-        width: 47%;
+        width: 40%;
       }
     }
 
@@ -857,7 +908,7 @@ header {
       width: 0%;
       height: 2px;
       display: block;
-      background-color: #002053;
+      background-color: #fff;
       position: absolute;
       bottom: 5px;
       right: 50%;
@@ -869,7 +920,7 @@ header {
       width: 0%;
       height: 2px;
       display: block;
-      background-color: #002053;
+      background-color: #fff;
       position: absolute;
       bottom: 5px;
       left: 50%;
@@ -936,7 +987,7 @@ header {
     top: 50%;
     transform: translateY(-50%);
     left: auto;
-    right: 3%;
+    right: 5%;
     color: black;
     border: 0;
   }
@@ -945,7 +996,7 @@ header {
     color: black;
     top: 50%;
     transform: translateY(-50%);
-    left: 3%;
+    left: 5%;
     border: 0;
   }
 
@@ -961,6 +1012,7 @@ header {
     border-radius: 0;
     margin: 0 15px !important;
     background-color: #ccc;
+    transition: .3s;
   }
 
   .swiper-pagination {
@@ -1235,9 +1287,9 @@ header {
         overflow: hidden;
 
         h4 {
-          font-size: 28px;
+          font-size: 20px;
           position: absolute;
-          top: -70px;
+          top: -10%;
           left: 0;
 
           /* transform: translateX(-50%); */
@@ -1248,9 +1300,9 @@ header {
         }
 
         p {
-          font-size: 18px;
+          font-size: 16px;
           position: absolute;
-          bottom: -60px;
+          bottom: -10%;
           left: 0;
 
           /* transform: translateX(-50%); */
@@ -1276,11 +1328,11 @@ header {
 
         .mgz_desc {
           h4 {
-            top: 50px;
+            top: 10%;
           }
 
           p {
-            bottom: 100px;
+            bottom: 10%;
           }
 
           opacity: 1;
@@ -1309,112 +1361,161 @@ header {
       width: calc(100% - 66.6666% - 53.3333px);
       margin-left: 40px;
       position: relative;
-
-      &:last-child {
-        margin-right: 40px;
-      }
-
-      .rec_img_wrap {
-        font-size: 0;
-
-        img {
-          width: 100%;
-          height: auto;
-        }
-      }
-
-      .rec_circle {
-        width: 30px;
-        height: 30px;
-        border: 1px solid #002053;
-        background-color: #fff;
-        border-radius: 50%;
-        position: absolute;
-        right: 220px;
-        top: 250px;
-      }
-
-      .circle_2 {
-        top: 150px;
-        right: 20px;
-      }
-
-      .rec_circle span {
-        position: absolute;
-        top: 12px;
-        left: 4px;
-
-        &:nth-child(1) {
-          display: block;
-          width: 20px;
-          height: 2px;
-          background-color: #002053;
-        }
-
-        &:nth-child(2) {
-          display: block;
-          width: 20px;
-          height: 2px;
-          background-color: #002053;
-          transform: rotate(90deg);
-          transition: .3s;
-        }
-      }
-
-      .rec_text {
-        width: 180px;
-        position: absolute;
-        top: 290px;
-        right: 50px;
-        background-color: #fff;
-        border-radius: 0 10px 10px 10px;
-        border: 1px solid #ccc;
-        padding: 10px;
-        display: none;
-
-        .rec_text_tit h4 {
-          font-size: 20px;
-          margin-bottom: 15px;
-          text-align: center;
-        }
-
-        .rec_text_desc p {
-          font-size: 16px;
-          margin-bottom: 20px;
-          text-align: right;
-        }
-
-        .rec_text_buy {
-          font-size: 25px;
-          text-align: center;
-
-          i {
-            margin-right: 20px;
-            margin-bottom: 10px;
-            transition: .3s;
-
-            &:last-child {
-              margin: 0;
-            }
-
-            &:first-child:hover {
-              color: red;
-            }
-
-            &:last-child:hover {
-              color: #002053;
-            }
-          }
-        }
-      }
     }
   }
 }
 
-/* .recommand_style .rec_style_wrap .recommand_box .rec_circle:hover span:nth-child(2){
-    transform: rotate(0deg);
-} */
-/*js처리*/
+.rec_info_wrap {
+  position: absolute;
+  right: 50%;
+  top: 40%;
+
+  &.iw02 {
+    right: 40%;
+    top: auto;
+    bottom: 10%;
+  }
+
+  &.iw03 {
+    right: 50%;
+    top: auto;
+    bottom: 30%;
+  }
+
+  &.iw04 {
+    right: 35%;
+    top: auto;
+    bottom: 35%;
+  }
+
+  &.iw05 {
+    right: 40%;
+    top: 30%;
+  }
+}
+
+.rec_info {}
+
+.recommand_style .rec_style_wrap .recommand_box {
+  &:last-child {
+    margin-right: 40px;
+  }
+
+  .rec_img_wrap {
+    font-size: 0;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .rec_circle {
+    position: relative;
+  }
+}
+
+.span_wrap {
+  width: 30px;
+  height: 30px;
+  border: 1px solid gray;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+
+  &:nth-child(2) {
+    left: 50px;
+  }
+}
+
+.recommand_style .rec_style_wrap .recommand_box {
+  .rec_circle span {
+    position: absolute;
+    top: 12px;
+    left: 4px;
+
+    &:nth-child(1) {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background-color: gray;
+    }
+
+    &:nth-child(2) {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background-color: gray;
+      transform: rotate(90deg);
+      transition: .3s;
+    }
+  }
+
+  .span_wrap:hover {
+    span:nth-child(2) {
+      transform: rotate(0deg);
+      background-color: black;
+    }
+
+    .rec_desc {
+      display: block;
+    }
+  }
+}
+
+.rec_desc {
+  &.rd02 {
+    top: auto;
+    bottom: 30px;
+  }
+
+  position: absolute;
+  top: 30px;
+  right: 0;
+  border: 1px solid #ccc;
+  width: 200px;
+  height: 130px;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #fff;
+
+  /* opacity: 0; */
+  display: none;
+  transition: .3s;
+
+  .rec_tit {
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .rec_price {
+    text-align: right;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  .cart_like_wrap {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+
+    i {
+      font-size: 25px;
+      color: #ccc;
+      transition: .3s;
+
+      &:nth-child(1):hover {
+        color: red;
+      }
+
+      &:nth-child(2):hover {
+        color: #002053;
+      }
+    }
+  }
+}
 
 /*********section sns**********/
 
@@ -1555,6 +1656,49 @@ header {
 
       opacity: 1;
     }
+  }
+}
+
+.origin {
+  opacity: 0;
+}
+
+.show {
+  .origin {
+    opacity: 1;
+    transition: 1s;
+  }
+
+  .sbox01 {
+    transition-delay: 0s;
+  }
+
+  .sbox02 {
+    transition-delay: .2s;
+  }
+
+  .sbox03 {
+    transition-delay: .4s;
+  }
+
+  .sbox04 {
+    transition-delay: .6s;
+  }
+
+  .sbox05 {
+    transition-delay: .8s;
+  }
+
+  .sbox06 {
+    transition-delay: 1s;
+  }
+
+  .sbox07 {
+    transition-delay: 1.2s;
+  }
+
+  .sbox08 {
+    transition-delay: 1.4s;
   }
 }
 

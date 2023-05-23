@@ -7,28 +7,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FILA</title>
     <script src="/jquery-3.6.4.min.bd92ff19.js"></script>
-    <script src="/jquery01.4eaf1445.js"></script>
-
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
-
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" /> -->
     <link rel="stylesheet" href="/main.39afc03c.css">
     <!--css-->
     <!-- <script src="https://unpkg.com/swiper/swiper-bundle.js"></script> -->
-    <script src="/countdown.dea6023f.js"></script>
+
+    <!--user js-->
+    <script src="/main.fb6bbcaf.js" defer=""></script>
+    <script src="/countdown.dea6023f.js" defer=""></script>
     <!--countdown js-->
+
+
+    <!--scroll magic-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!--fontawesome-->
 
     <script src="/jquery_import.25450c07.js"></script>
-    <!--import jquery -->
+    <!-- import jquery -->
 
-    <script src="/main.fb6bbcaf.js" defer=""></script>
+
     <script>$(function () {
   //lnb slide toggle function
 
@@ -37,25 +46,38 @@
     $('.drop_men').css('display', 'none');
     $('.drop_kids').css('display', 'none');
     $('.drop_brand').css('display', 'none');
+    // $('header').css('backgroundColor','#fff')
+    // $('.head_lnb ul li a').css('color','black')
+    // $('.head_logo .imgwrap img').attr('src','./img/LOGO/01(1).png')
   });
+
   $('.lnb_men').click(function () {
     $('.drop_men').slideToggle(300);
     $('.drop_women').css('display', 'none');
     $('.drop_kids').css('display', 'none');
     $('.drop_brand').css('display', 'none');
+    // $('header').css('backgroundColor','#fff')
+    // $('.head_lnb ul li a').css('color','black')
   });
+
   $('.lnb_kids').click(function () {
     $('.drop_kids').slideToggle(300);
     $('.drop_women').css('display', 'none');
     $('.drop_men').css('display', 'none');
     $('.drop_brand').css('display', 'none');
+    // $('header').css('backgroundColor','#fff')
+    // $('.head_lnb ul li a').css('color','black')
   });
+
   $('.lnb_brand').click(function () {
     $('.drop_brand').slideToggle(300);
     $('.drop_women').css('display', 'none');
     $('.drop_men').css('display', 'none');
     $('.drop_kids').css('display', 'none');
+    // $('header').css('backgroundColor','#fff')
+    // $('.head_lnb ul li a').css('color','black')
   });
+
   $('.new_info').click(function () {
     $('.new_info_desc').css('display', 'block');
   });
@@ -151,7 +173,9 @@ $(function () {
 
             <div class="head_logo">
                 <div class="imgwrap">
-                    <img src="/logo03.87ea252d.png" alt="logo" class="logoimg">
+                    <a href="/index.html">
+                        <img src="/logo03.87ea252d.png" alt="logo" class="logoimg">
+                    </a>
                 </div>
 
             </div>
@@ -182,6 +206,8 @@ $(function () {
 
         </div><!-- hedaer wrap-->
 
+
+        <!--drop down menu-->
         <div class="dropdown_menu drop_women">
             <div class="container">
 
@@ -196,10 +222,10 @@ $(function () {
 
                         </ul>
                         <ul class="sub_menu">
-                            <li><a href="#!">ONLINE EXCLUSIVE</a></li>
-                            <li><a href="#!">TENNIS COLLECTION</a></li>
-                            <li><a href="#!">FLOAT ELITE</a></li>
-                            <li><a href="#!">DAILY SHOES RAYFLIDE</a></li>
+                            <li><a href="/sub_onepage\sub02.html">ONLINE EXCLUSIVE</a></li>
+                            <li><a href="/sub_onepage\sub02.html">TENNIS COLLECTION</a></li>
+                            <li><a href="/sub_onepage\sub02.html">FLOAT ELITE</a></li>
+                            <li><a href="/sub_onepage\sub02.html">DAILY SHOES RAYFLIDE</a></li>
                         </ul>
                     </div>
                     <!--drop box 01 end-->
@@ -207,7 +233,7 @@ $(function () {
                     <div class="dropbox_02 dbox">
                         <h4>의류</h4>
                         <ul class="menu_list">
-                            <li><a href="#!">전체보기</a></li>
+                            <li><a href="/subpage01\sub01.html">전체보기</a></li>
                             <li><a href="#!">바람막이/아노락</a></li>
                             <li><a href="#!">후드티/맨투맨</a></li>
                             <li><a href="#!">트레이닝 세트</a></li>
@@ -227,7 +253,7 @@ $(function () {
                     <div class="dropbox_03 dbox">
                         <h4>신발</h4>
                         <ul class="menu_list">
-                            <li><a href="#!">전체보기</a></li>
+                            <li><a href="/subpage01\sub01.html">전체보기</a></li>
                             <li><a href="#!">라이프스타일</a></li>
                             <li><a href="#!">헤리티지</a></li>
                             <li><a href="#!">테니스</a></li>
@@ -242,7 +268,7 @@ $(function () {
                     <div class="dropbox_04 dbox">
                         <h4>용품</h4>
                         <ul class="menu_list">
-                            <li><a href="#!">전체보기</a></li>
+                            <li><a href="/subpage01\sub01.html">전체보기</a></li>
                             <li><a href="#!">백팩</a></li>
                             <li><a href="#!">메신저백</a></li>
                             <li><a href="#!">숄더백/토트백</a></li>
@@ -259,7 +285,7 @@ $(function () {
                     <div class="dropbox_05 dbox">
                         <h4>언더웨어</h4>
                         <ul class="menu_list">
-                            <li><a href="#!">전체보기</a></li>
+                            <li><a href="/subpage01\sub01.html">전체보기</a></li>
                             <li><a href="#!">온라인 단독</a></li>
                             <li><a href="#!">브라</a></li>
                             <li><a href="#!">팬티</a></li>
@@ -276,7 +302,7 @@ $(function () {
                     <div class="dropbox_06 dbox">
                         <h4>스포츠</h4>
                         <ul class="menu_list">
-                            <li><a href="#!">전체보기</a></li>
+                            <li><a href="/subpage01\sub01.html">전체보기</a></li>
                             <li><a href="#!">테니스</a></li>
                             <li><a href="#!">러닝</a></li>
 
@@ -311,10 +337,10 @@ $(function () {
 
                         </ul>
                         <ul class="sub_menu">
-                            <li><a href="#!">ONLINE EXCLUSIVE</a></li>
-                            <li><a href="#!">TENNIS COLLECTION</a></li>
-                            <li><a href="#!">FLOAT ELITE</a></li>
-                            <li><a href="#!">DAILY SHOES RAYFLIDE</a></li>
+                            <li><a href="/sub_onepage\sub02.html">ONLINE EXCLUSIVE</a></li>
+                            <li><a href="/sub_onepage\sub02.html">TENNIS COLLECTION</a></li>
+                            <li><a href="/sub_onepage\sub02.html">FLOAT ELITE</a></li>
+                            <li><a href="/sub_onepage\sub02.html">DAILY SHOES RAYFLIDE</a></li>
                         </ul>
                     </div>
                     <!--drop box 01 end-->
@@ -322,7 +348,7 @@ $(function () {
                     <div class="dropbox_02 dbox">
                         <h4>의류</h4>
                         <ul class="menu_list">
-                            <li><a href="#!">전체보기</a></li>
+                            <li><a href="/subpage01\sub01.html">전체보기</a></li>
                             <li><a href="#!">바람막이/아노락</a></li>
                             <li><a href="#!">후드티/맨투맨</a></li>
                             <li><a href="#!">트레이닝 세트</a></li>
@@ -342,7 +368,7 @@ $(function () {
                     <div class="dropbox_03 dbox">
                         <h4>신발</h4>
                         <ul class="menu_list">
-                            <li><a href="#!">전체보기</a></li>
+                            <li><a href="/subpage01\sub01.html">전체보기</a></li>
                             <li><a href="#!">라이프스타일</a></li>
                             <li><a href="#!">헤리티지</a></li>
                             <li><a href="#!">테니스</a></li>
@@ -357,7 +383,7 @@ $(function () {
                     <div class="dropbox_04 dbox">
                         <h4>용품</h4>
                         <ul class="menu_list">
-                            <li><a href="#!">전체보기</a></li>
+                            <li><a href="/subpage01\sub01.html">전체보기</a></li>
                             <li><a href="#!">백팩</a></li>
                             <li><a href="#!">메신저백</a></li>
                             <li><a href="#!">숄더백/토트백</a></li>
@@ -374,7 +400,7 @@ $(function () {
                     <div class="dropbox_05 dbox">
                         <h4>언더웨어</h4>
                         <ul class="menu_list">
-                            <li><a href="#!">전체보기</a></li>
+                            <li><a href="/subpage01\sub01.html">전체보기</a></li>
                             <li><a href="#!">온라인 단독</a></li>
                             <li><a href="#!">브라</a></li>
                             <li><a href="#!">팬티</a></li>
@@ -390,7 +416,7 @@ $(function () {
                     <div class="dropbox_06 dbox">
                         <h4>스포츠</h4>
                         <ul class="menu_list">
-                            <li><a href="#!">전체보기</a></li>
+                            <li><a href="/subpage01\sub01.html">전체보기</a></li>
                             <li><a href="#!">테니스</a></li>
                             <li><a href="#!">러닝</a></li>
 
@@ -423,10 +449,10 @@ $(function () {
 
                         </ul>
                         <ul class="sub_menu">
-                            <li><a href="#!">ONLINE EXCLUSIVE</a></li>
-                            <li><a href="#!">TENNIS COLLECTION</a></li>
-                            <li><a href="#!">FLOAT ELITE</a></li>
-                            <li><a href="#!">DAILY SHOES RAYFLIDE</a></li>
+                            <li><a href="/sub_onepage\sub02.html">ONLINE EXCLUSIVE</a></li>
+                            <li><a href="/sub_onepage\sub02.html">>TENNIS COLLECTION</a></li>
+                            <li><a href="/sub_onepage\sub02.html">>FLOAT ELITE</a></li>
+                            <li><a href="/sub_onepage\sub02.html">>DAILY SHOES RAYFLIDE</a></li>
                         </ul>
                     </div>
                     <!--drop box 01 end-->
@@ -434,7 +460,7 @@ $(function () {
                     <div class="dropbox_02 dbox">
                         <h4>의류</h4>
                         <ul class="menu_list">
-                            <li><a href="#!">전체보기</a></li>
+                            <li><a href="/subpage01\sub01.html">전체보기</a></li>
                             <li><a href="#!">바람막이/아노락</a></li>
                             <li><a href="#!">후드티/맨투맨</a></li>
                             <li><a href="#!">트레이닝 세트</a></li>
@@ -454,7 +480,7 @@ $(function () {
                     <div class="dropbox_03 dbox">
                         <h4>신발</h4>
                         <ul class="menu_list">
-                            <li><a href="#!">전체보기</a></li>
+                            <li><a href="/subpage01\sub01.html">전체보기</a></li>
                             <li><a href="#!">라이프스타일</a></li>
                             <li><a href="#!">헤리티지</a></li>
                             <li><a href="#!">테니스</a></li>
@@ -469,7 +495,7 @@ $(function () {
                     <div class="dropbox_04 dbox">
                         <h4>용품</h4>
                         <ul class="menu_list">
-                            <li><a href="#!">전체보기</a></li>
+                            <li><a href="/subpage01\sub01.html">전체보기</a></li>
                             <li><a href="#!">백팩</a></li>
                             <li><a href="#!">메신저백</a></li>
                             <li><a href="#!">숄더백/토트백</a></li>
@@ -483,10 +509,11 @@ $(function () {
                     </div>
                     <!--drop box 01 end-->
 
+
                     <div class="dropbox_05 dbox">
                         <h4>언더웨어</h4>
                         <ul class="menu_list">
-                            <li><a href="#!">전체보기</a></li>
+                            <li><a href="/subpage01\sub01.html">전체보기</a></li>
                             <li><a href="#!">온라인 단독</a></li>
                             <li><a href="#!">브라</a></li>
                             <li><a href="#!">팬티</a></li>
@@ -577,13 +604,20 @@ $(function () {
 
     </header>
 
+
+
+
+
     <div class="search_box">
         <div class="search_box_wrap">
 
             <div class="search_input">
-                <input type="search" placeholder="검색어입력">
+                <input type="search" placeholder="검색어 입력">
                 <div class="search_close">
                     <i class="fas fa-times"></i>
+                </div>
+                <div class="search_icon">
+                    <i class="fas fa-search"></i>
                 </div>
             </div>
 
@@ -715,13 +749,11 @@ $(function () {
 
                 <div class="rank_nav">
                     <ul>
-                        <li>#티셔츠 & 팬츠</li>
-                        <li>#레이플레이드</li>
-                        <li>#헤리티지</li>
-                        <li>#온라인단독</li>
-                        <li>#타르가</li>
-                        <li>#테니스</li>
-                        <li>#런닝화</li>
+                        <li id="tshirt">#티셔츠 & 팬츠</li>
+                        <li id="targa">#타르가</li>
+                        <li id="online">#온라인단독</li>
+                        <li id="tennis">#테니스</li>
+                        <li id="running">#런닝화</li>
 
                     </ul>
                 </div>
@@ -729,12 +761,12 @@ $(function () {
                     <div class="rank_text">
                         <h4>#티셔츠 & 팬츠</h4>
                         <ul class="ranklist">
-                            <li class="on_li">01 베이직 리니어 반팔티</li>
-                            <li>02 3D 빅로고 반팔티</li>
-                            <li>03 컴포트핏 인터네셔널 로고 반팔티</li>
-                            <li>04 컴포트핏 인터네셔널 반팔 맨투맨</li>
-                            <li>05 컴포트핏 조거팬츠</li>
-                            <li>06 이지팬츠</li>
+                            <li class="on_li">컴포트핏 인터네셔널 반팔 맨투맨</li>
+                            <li>컴포트핏 조거팬츠</li>
+                            <li>이지팬츠</li>
+                            <li>베이직 리니어 반팔티</li>
+                            <li>3D 빅로고 반팔티</li>
+                            <li>컴포트핏 인터네셔널 로고 반팔티</li>
 
 
 
@@ -748,18 +780,21 @@ $(function () {
                         <div class="swiper-wrapper">
 
                             <div class="swiper-slide rank_slide">
+
                                 <div class="img_wrap">
-                                    <img src="/01.3946310b.jpg" alt="img">
+                                    <a href="/detailpage\detail.html">
+                                        <img src="/04.861a3217.jpg" alt="img">
+                                    </a>
                                 </div>
 
                                 <div class="rank_hover_box">
                                     <div class="rank_hover_L">
-                                        <h4>베이직 리니어 반팔티</h4>
+                                        <h4 class="hovertit">컴포트핏 인터네셔널 반팔 맨투맨</h4>
                                         <p>79,000원</p>
                                     </div>
                                     <div class="rank_hover_R">
                                         <i class="fas fa-heart"></i>
-                                        <i class="fas fa-shopping-cart"></i>
+                                        <i class="fas fa-shopping-cart" id="cartcnt"></i>
                                     </div>
                                 </div>
                                 <!--rank hover box-->
@@ -769,36 +804,39 @@ $(function () {
 
                             <div class="swiper-slide rank_slide">
                                 <div class="img_wrap">
-                                    <img src="/02.27d24b94.jpg" alt="img">
+                                    <a href="/detailpage\detail.html">
+                                        <img src="/05.ccb6bda6.jpg" alt="img">
+                                    </a>
                                 </div>
 
                                 <div class="rank_hover_box">
                                     <div class="rank_hover_L">
-                                        <h4>3D 빅로고 반팔티</h4>
+                                        <h4 class="hovertit">컴포트핏 조거팬츠</h4>
                                         <p>119,000원</p>
                                     </div>
                                     <div class="rank_hover_R">
                                         <i class="fas fa-heart"></i>
-                                        <i class="fas fa-shopping-cart"></i>
+                                        <i class="fas fa-shopping-cart" id="cartcnt"></i>
                                     </div>
                                 </div>
                                 <!--rank hover box-->
                             </div>
 
                             <div class="swiper-slide rank_slide">
-
                                 <div class="img_wrap">
-                                    <img src="/03.758021fc.jpg" alt="img">
+                                    <a href="/detailpage\detail.html">
+                                        <img src="/06.9ccb28d5.jpg" alt="img">
+                                    </a>
                                 </div>
 
                                 <div class="rank_hover_box">
                                     <div class="rank_hover_L">
-                                        <h4>컴포트핏 인터네셔널 반팔티</h4>
+                                        <h4 class="hovertit">이지팬츠</h4>
                                         <p>69,000원</p>
                                     </div>
                                     <div class="rank_hover_R">
                                         <i class="fas fa-heart"></i>
-                                        <i class="fas fa-shopping-cart"></i>
+                                        <i class="fas fa-shopping-cart" id="cartcnt"></i>
                                     </div>
                                 </div>
                                 <!--rank hover box-->
@@ -806,17 +844,19 @@ $(function () {
 
                             <div class="swiper-slide rank_slide">
                                 <div class="img_wrap">
-                                    <img src="/04.861a3217.jpg" alt="img">
+                                    <a href="/detailpage\detail.html">
+                                        <img src="/01.3946310b.jpg" alt="img">
+                                    </a>
                                 </div>
 
                                 <div class="rank_hover_box">
                                     <div class="rank_hover_L">
-                                        <h4>컴포트핏 인터네셔널 반팔 맨투맨</h4>
+                                        <h4 class="hovertit">베이직 리니어 반팔티</h4>
                                         <p>99,000원</p>
                                     </div>
                                     <div class="rank_hover_R">
                                         <i class="fas fa-heart"></i>
-                                        <i class="fas fa-shopping-cart"></i>
+                                        <i class="fas fa-shopping-cart" id="cartcnt"></i>
                                     </div>
                                 </div>
                                 <!--rank hover box-->
@@ -824,17 +864,19 @@ $(function () {
 
                             <div class="swiper-slide rank_slide">
                                 <div class="img_wrap">
-                                    <img src="/05.ccb6bda6.jpg" alt="img">
+                                    <a href="/detailpage\detail.html">
+                                        <img src="/02.27d24b94.jpg" alt="img">
+                                    </a>
                                 </div>
 
                                 <div class="rank_hover_box">
                                     <div class="rank_hover_L">
-                                        <h4>컴포트핏 조거팬츠</h4>
+                                        <h4 class="hovertit">3D 빅로고 반팔티</h4>
                                         <p>139,000원</p>
                                     </div>
                                     <div class="rank_hover_R">
                                         <i class="fas fa-heart"></i>
-                                        <i class="fas fa-shopping-cart"></i>
+                                        <i class="fas fa-shopping-cart" id="cartcnt"></i>
                                     </div>
                                 </div>
                                 <!--rank hover box-->
@@ -842,18 +884,22 @@ $(function () {
 
 
                             <div class="swiper-slide rank_slide">
+
                                 <div class="img_wrap">
-                                    <img src="/06.9ccb28d5.jpg" alt="img">
+                                    <a href="/detailpage\detail.html">
+                                        <img src="/03.758021fc.jpg" alt="img">
+                                    </a>
+
                                 </div>
 
                                 <div class="rank_hover_box">
                                     <div class="rank_hover_L">
-                                        <h4>이지팬츠</h4>
+                                        <h4 class="hovertit">컴포트핏 인터네셔널 로고 반팔티</h4>
                                         <p>119,000원</p>
                                     </div>
                                     <div class="rank_hover_R">
                                         <i class="fas fa-heart"></i>
-                                        <i class="fas fa-shopping-cart"></i>
+                                        <i class="fas fa-shopping-cart" id="cartcnt"></i>
                                     </div>
                                 </div>
                                 <!--rank hover box-->
@@ -1014,11 +1060,9 @@ $(function () {
             <div class="container_swiper">
                 <div class="new_nav_wrap">
                     <ul>
-                        <li>#티셔츠 & 팬츠</li>
-                        <li>#헤리티지</li>
-                        <li>#온라인 단독</li>
-                        <li>#테니스</li>
-                        <li>#신발</li>
+                        <li class="new_on" id="newTshirt">#티셔츠 & 팬츠</li>
+                        <li id="newTennis">#테니스</li>
+                        <li id="newShoes">#신발</li>
                     </ul>
                 </div>
                 <div class="my_wrap">
@@ -1026,10 +1070,13 @@ $(function () {
 
                         <div class="swiper-wrapper">
 
-                            <div class="swiper-slide">
+                            <div class="swiper-slide newslide">
+
                                 <div class="new_wrap">
                                     <div class="new_img">
-                                        <img src="/new01.58671928.jpg" alt="">
+                                        <a href="/detailpage\detail.html">
+                                            <img src="/new01.58671928.jpg" alt="img">
+                                        </a>
                                     </div>
                                     <div class="new_text">
                                         <h4>테니스 짐백</h4>
@@ -1045,27 +1092,31 @@ $(function () {
 
                                         <div class="new_buy">
                                             <i class="fas fa-heart"></i>
-                                            <i class="fas fa-shopping-cart"></i>
+                                            <i class="fas fa-shopping-cart" id="cartcnt"></i>
                                         </div>
                                     </div>
                                     <!--new_text-->
                                 </div>
                                 <!--new wrap-->
+
                             </div>
 
 
 
 
 
-                            <div class="swiper-slide">
+                            <div class="swiper-slide newslide">
                                 <div class="new_wrap">
                                     <div class="new_img">
-                                        <img src="/new02.dddfc931.jpg" alt="">
+                                        <a href="/detailpage\detail.html">
+                                            <img src="/new02.dddfc931.jpg" alt="">
+                                        </a>
                                     </div>
                                     <div class="new_text">
                                         <h4>휠라 테이퍼 샌들 v3</h4>
                                         <p class="first_p">휠라의 베스트 샌들 중 하나인 테이퍼 샌들의 2023 버전입니다.</p>
-                                        <p class="second_p">벨크로를 사용하여 발등높이에 맞게 조절이 가능하여 착용자의 발에 맞춰 편안하게 착용 가능합니다.</p>
+                                        <p class="second_p">벨크로를 사용하여 발등높이에 맞게 조절이 가능하여 착용자의 발에 맞춰 편안하게 착용 가능합니다.
+                                        </p>
 
                                         <p class="new_detail">
                                             <span>제품소재</span><br>겉감: 폴리에스터 100%<br>안감: 폴리에스터 93%+폴리우레탄 7% <br>
@@ -1077,7 +1128,7 @@ $(function () {
 
                                         <div class="new_buy">
                                             <i class="fas fa-heart"></i>
-                                            <i class="fas fa-shopping-cart"></i>
+                                            <i class="fas fa-shopping-cart" id="cartcnt"></i>
                                         </div>
                                     </div>
                                     <!--new_text-->
@@ -1087,15 +1138,18 @@ $(function () {
 
 
 
-                            <div class="swiper-slide">
+                            <div class="swiper-slide newslide">
                                 <div class="new_wrap">
                                     <div class="new_img">
-                                        <img src="/new03.77ec439d.jpg" alt="">
+                                        <a href="/detailpage\detail.html">
+                                            <img src="/new03.77ec439d.jpg" alt="">
+                                        </a>
                                     </div>
                                     <div class="new_text">
                                         <h4>컴포트핏 인터내셔널<br>우븐 후드티</h4>
                                         <p class="first_p">컴포트 핏으로 트렌디한 실루엣, 편안한 착용감을 주는 우븐 후드 상품입니다.</p>
-                                        <p class="second_p">빅로고 프린트의 디자인 포인트와 등판의 벤틸레이션 기능으로 봄~여름에도 착용이 가능한 상품입니다.</p>
+                                        <p class="second_p">빅로고 프린트의 디자인 포인트와 등판의 벤틸레이션 기능으로 봄~여름에도 착용이 가능한 상품입니다.
+                                        </p>
 
                                         <p class="new_detail">
                                             <span>제품소재</span><br>겉감: 폴리에스터 100%<br> 주머니감: 폴리에스터 100%<br> 해리감:
@@ -1107,7 +1161,7 @@ $(function () {
 
                                         <div class="new_buy">
                                             <i class="fas fa-heart"></i>
-                                            <i class="fas fa-shopping-cart"></i>
+                                            <i class="fas fa-shopping-cart" id="cartcnt"></i>
                                         </div>
                                     </div>
                                     <!--new_text-->
@@ -1117,10 +1171,12 @@ $(function () {
 
 
 
-                            <div class="swiper-slide">
+                            <div class="swiper-slide newslide">
                                 <div class="new_wrap">
                                     <div class="new_img">
-                                        <img src="/new04.174337ad.jpg" alt="">
+                                        <a href="/detailpage\detail.html">
+                                            <img src="/new04.174337ad.jpg" alt="">
+                                        </a>
                                     </div>
                                     <div class="new_text">
                                         <h4>테니스 반바지</h4>
@@ -1137,7 +1193,7 @@ $(function () {
 
                                         <div class="new_buy">
                                             <i class="fas fa-heart"></i>
-                                            <i class="fas fa-shopping-cart"></i>
+                                            <i class="fas fa-shopping-cart" id="cartcnt"></i>
                                         </div>
                                     </div>
                                     <!--new_text-->
@@ -1147,10 +1203,13 @@ $(function () {
 
 
 
-                            <div class="swiper-slide">
+                            <div class="swiper-slide newslide">
+
                                 <div class="new_wrap">
                                     <div class="new_img">
-                                        <img src="/new05.b3cc6cd9.jpg" alt="">
+                                        <a href="/detailpage\detail.html">
+                                            <img src="/new05.b3cc6cd9.jpg" alt="">
+                                        </a>
                                     </div>
                                     <div class="new_text">
                                         <h4>컴포트핏 플래그 반팔티</h4>
@@ -1166,7 +1225,7 @@ $(function () {
 
                                         <div class="new_buy">
                                             <i class="fas fa-heart"></i>
-                                            <i class="fas fa-shopping-cart"></i>
+                                            <i class="fas fa-shopping-cart" id="cartcnt"></i>
                                         </div>
                                     </div>
                                     <!--new_text-->
@@ -1176,10 +1235,12 @@ $(function () {
 
 
 
-                            <div class="swiper-slide">
+                            <div class="swiper-slide newslide">
                                 <div class="new_wrap">
                                     <div class="new_img">
-                                        <img src="/new06.e093bcd0.jpg" alt="">
+                                        <a href="/detailpage\detail.html">
+                                            <img src="/new06.e093bcd0.jpg" alt="">
+                                        </a>
                                     </div>
                                     <div class="new_text">
                                         <h4>WHITE LINE<br>라켓 슬링백</h4>
@@ -1195,7 +1256,7 @@ $(function () {
 
                                         <div class="new_buy">
                                             <i class="fas fa-heart"></i>
-                                            <i class="fas fa-shopping-cart"></i>
+                                            <i class="fas fa-shopping-cart" id="cartcnt"></i>
                                         </div>
                                     </div>
                                     <!--new_text-->
@@ -1236,7 +1297,7 @@ $(function () {
 
             <div class="magazine_wrap">
 
-                <div class="mgz_box">
+                <div class="mgz_box origin mgz01">
                     <div class="mgz-cont">
                         <div class="mgz_img">
                             <img src="/01.7cdf6daf.jpg" alt="img">
@@ -1252,7 +1313,7 @@ $(function () {
                 </div>
                 <!--mgz box-->
 
-                <div class="mgz_box">
+                <div class="mgz_box origin mgz02">
                     <div class="mgz-cont">
                         <div class="mgz_img">
                             <img src="/02.28f3aa4d.jpg" alt="img">
@@ -1268,7 +1329,7 @@ $(function () {
                 </div>
                 <!--mgz box-->
 
-                <div class="mgz_box">
+                <div class="mgz_box origin mgz03">
                     <div class="mgz-cont">
                         <div class="mgz_img">
                             <img src="/03.6fc87536.jpg" alt="img">
@@ -1288,7 +1349,7 @@ $(function () {
                 </div>
                 <!--mgz box-->
 
-                <div class="mgz_box">
+                <div class="mgz_box origin mgz04">
                     <div class="mgz-cont">
                         <div class="mgz_img">
                             <img src="/04.18e7e192.jpg" alt="img">
@@ -1330,39 +1391,169 @@ $(function () {
                     </div>
                     <!--imgwrap-->
 
-                    <div class="rec_circle circle_1">
-                        <span></span>
-                        <span class="spanline2"></span>
-                    </div>
+                    <div class="rec_info_wrap">
+                        <div class="rec_info">
+                            <div class="rec_circle">
+                                <div class="span_wrap">
+                                    <span></span>
+                                    <span class="spanline2"></span>
 
-                    <div class="rec_circle circle_2">
-                        <span></span>
-                        <span class="spanline2"></span>
-                    </div>
-                    <!--circle-->
+                                    <div class="rec_desc">
+                                        <div class="rec_tit">
+                                            <h4>컴포트핏 더블와펜 맨투맨</h4>
+                                        </div>
+                                        <!--rec tit-->
+                                        <div class="rec_price">
+                                            <p>99,000원</p>
+                                        </div>
+                                        <div class="cart_like_wrap">
 
-                    <div class="rec_text rectext_01">
-                        <div class="rec_text_tit">
-                            <h4>상품이름</h4>
+                                            <i class="fas fa-heart"></i>
+                                            <i class="fas fa-shopping-cart"></i>
+
+                                        </div>
+                                    </div>
+                                    <!--rec desc box-->
+                                </div>
+                                <!--span wrap end-->
+
+
+
+                            </div>
+                            <!--rec circle end-->
+
                         </div>
-                        <div class="rec_text_desc">
-                            <p>상품가격</p>
-                        </div>
-                        <div class="rec_text_buy">
-                            <i class="fas fa-heart"></i>
-                            <i class="fas fa-shopping-cart"></i>
-                        </div>
+                        <!--rec info-->
                     </div>
+                    <!--rec info wrap end-->
+
+
+                    <div class="rec_info_wrap iw02">
+                        <div class="rec_info">
+                            <div class="rec_circle">
+                                <div class="span_wrap">
+                                    <span></span>
+                                    <span class="spanline2"></span>
+
+                                    <div class="rec_desc rd02">
+                                        <div class="rec_tit">
+                                            <h4>휠라 레이드 N3 2.0</h4>
+                                        </div>
+                                        <!--rec tit-->
+                                        <div class="rec_price">
+                                            <p>79,000원</p>
+                                        </div>
+                                        <div class="cart_like_wrap">
+
+                                            <i class="fas fa-heart"></i>
+                                            <i class="fas fa-shopping-cart"></i>
+
+                                        </div>
+
+                                    </div>
+                                    <!--rec desc box-->
+                                </div>
+                                <!--span wrap end-->
+
+
+
+                            </div>
+                            <!--rec circle end-->
+
+                        </div>
+                        <!--rec info-->
+                    </div>
+                    <!--rec info wrap end-->
+
+
+
 
 
 
                 </div>
                 <!--rec box end-->
 
-                <div class="recommand_box">
+                <div class="recommand_box ">
                     <div class="rec_img_wrap">
                         <img src="/01.e49b1d8f.jpg" alt="">
                     </div>
+
+                    <div class="rec_info_wrap">
+                        <div class="rec_info">
+                            <div class="rec_circle">
+                                <div class="span_wrap">
+                                    <span></span>
+                                    <span class="spanline2"></span>
+
+                                    <div class="rec_desc">
+                                        <div class="rec_tit">
+                                            <h4>테니스 라이프 카라원피스</h4>
+                                        </div>
+                                        <!--rec tit-->
+                                        <div class="rec_price">
+                                            <p>119,000원</p>
+                                        </div>
+                                        <div class="cart_like_wrap">
+
+                                            <i class="fas fa-heart"></i>
+                                            <i class="fas fa-shopping-cart"></i>
+
+                                        </div>
+
+                                    </div>
+                                    <!--rec desc box-->
+                                </div>
+                                <!--span wrap end-->
+
+
+
+                            </div>
+                            <!--rec circle end-->
+
+                        </div>
+                        <!--rec info-->
+                    </div>
+                    <!--rec info wrap end-->
+
+                    <div class="rec_info_wrap iw03">
+                        <div class="rec_info">
+                            <div class="rec_circle">
+                                <div class="span_wrap">
+                                    <span></span>
+                                    <span class="spanline2"></span>
+
+                                    <div class="rec_desc">
+                                        <div class="rec_tit">
+                                            <h4>휠라 스피드서브 T9</h4>
+                                        </div>
+                                        <!--rec tit-->
+                                        <div class="rec_price">
+                                            <p>159,000원</p>
+                                        </div>
+                                        <div class="cart_like_wrap">
+
+                                            <i class="fas fa-heart"></i>
+                                            <i class="fas fa-shopping-cart"></i>
+
+                                        </div>
+
+                                    </div>
+                                    <!--rec desc box-->
+                                </div>
+                                <!--span wrap end-->
+
+
+
+                            </div>
+                            <!--rec circle end-->
+
+                        </div>
+                        <!--rec info-->
+                    </div>
+                    <!--rec info wrap end-->
+
+
+
 
                 </div>
 
@@ -1370,6 +1561,81 @@ $(function () {
                     <div class="rec_img_wrap">
                         <img src="/24.448235f4.jpg" alt="">
                     </div>
+
+                    <div class="rec_info_wrap iw04">
+                        <div class="rec_info">
+                            <div class="rec_circle">
+                                <div class="span_wrap">
+                                    <span></span>
+                                    <span class="spanline2"></span>
+
+                                    <div class="rec_desc">
+                                        <div class="rec_tit">
+                                            <h4>오버핏 케이블 가디건</h4>
+                                        </div>
+                                        <!--rec tit-->
+                                        <div class="rec_price">
+                                            <p>139,000원</p>
+                                        </div>
+                                        <div class="cart_like_wrap">
+
+                                            <i class="fas fa-heart"></i>
+                                            <i class="fas fa-shopping-cart"></i>
+
+                                        </div>
+
+                                    </div>
+                                    <!--rec desc box-->
+                                </div>
+                                <!--span wrap end-->
+
+
+
+                            </div>
+                            <!--rec circle end-->
+
+                        </div>
+                        <!--rec info-->
+                    </div>
+                    <!--rec info wrap end-->
+
+
+                    <div class="rec_info_wrap iw05">
+                        <div class="rec_info">
+                            <div class="rec_circle">
+                                <div class="span_wrap">
+                                    <span></span>
+                                    <span class="spanline2"></span>
+
+                                    <div class="rec_desc">
+                                        <div class="rec_tit">
+                                            <h4>아치로고 맨투맨</h4>
+                                        </div>
+                                        <!--rec tit-->
+                                        <div class="rec_price">
+                                            <p>69,000원</p>
+                                        </div>
+                                        <div class="cart_like_wrap">
+
+                                            <i class="fas fa-heart"></i>
+                                            <i class="fas fa-shopping-cart"></i>
+
+                                        </div>
+
+                                    </div>
+                                    <!--rec desc box-->
+                                </div>
+                                <!--span wrap end-->
+
+
+
+                            </div>
+                            <!--rec circle end-->
+
+                        </div>
+                        <!--rec info-->
+                    </div>
+                    <!--rec info wrap end-->
 
                 </div>
 
@@ -1390,7 +1656,7 @@ $(function () {
 
             <div class="sns_wrap">
 
-                <div class="sns_box">
+                <div class="sns_box origin  sbox01">
                     <div class="sns_img">
                         <img src="/02.46ee294d.jpg" alt="img">
                     </div>
@@ -1403,7 +1669,7 @@ $(function () {
                 </div>
                 <!--snsbox end-->
 
-                <div class="sns_box">
+                <div class="sns_box origin  sbox02">
                     <div class="sns_img">
                         <img src="/03.500900f7.jpg" alt="img">
                     </div>
@@ -1414,7 +1680,7 @@ $(function () {
                 </div>
                 <!--snsbox end-->
 
-                <div class="sns_box">
+                <div class="sns_box origin  sbox03">
                     <div class="sns_img">
                         <img src="/07.5ca18696.jpg" alt="img">
                     </div>
@@ -1426,7 +1692,7 @@ $(function () {
                 </div>
                 <!--snsbox end-->
 
-                <div class="sns_box">
+                <div class="sns_box origin  sbox04">
                     <div class="sns_img">
                         <img src="/18.8d6b083d.jpg" alt="img">
                     </div>
@@ -1438,7 +1704,7 @@ $(function () {
                 </div>
                 <!--snsbox end-->
 
-                <div class="sns_box">
+                <div class="sns_box origin sbox05">
                     <div class="sns_img">
                         <img src="/19.868896d9.jpg" alt="img">
                     </div>
@@ -1451,7 +1717,7 @@ $(function () {
                 </div>
                 <!--snsbox end-->
 
-                <div class="sns_box">
+                <div class="sns_box origin sbox06">
                     <div class="sns_img">
                         <img src="/10.108dc29d.jpg" alt="img">
                     </div>
@@ -1462,7 +1728,7 @@ $(function () {
                 </div>
                 <!--snsbox end-->
 
-                <div class="sns_box">
+                <div class="sns_box origin  sbox07">
                     <div class="sns_img">
                         <img src="/11-1.8b678c27.jpg" alt="img">
                     </div>
@@ -1476,7 +1742,7 @@ $(function () {
                 </div>
                 <!--snsbox end-->
 
-                <div class="sns_box">
+                <div class="sns_box origin sbox08">
                     <div class="sns_img">
                         <img src="/20-1.353a60d3.jpg" alt="img">
                     </div>
@@ -1720,12 +1986,12 @@ $(function () {
 
             <div class="quick_box">
                 <div class="quick_icon">
-                    <i class="fas fa-history quicksearch"></i>
+                    <i class="fas fa-heart quicksearch"></i>
                 </div>
                 <!--quick icon-->
 
                 <div class="quick_text">
-                    <a href="#!">최근본상품</a>
+                    <a href="#!">찜한 상품<span class="heart_cnt">0</span></a>
                 </div>
                 <!--quick text-->
             </div>
@@ -1829,7 +2095,7 @@ swiper_visual.controller.control = pagingSwiper; //controller API</script>
   loop: true,
   // loopedSlides: swiper_rank.length,
   autoplay: {
-    delay: 1500,
+    delay: 2000,
     disableOnInteraction: false
   },
   slidesPerView: 3,
@@ -1838,6 +2104,8 @@ swiper_visual.controller.control = pagingSwiper; //controller API</script>
   centeredSlides: true,
   // slidesPerView: "auto",
   slideToClickedSlide: true,
+  // touchEventsTarget:'wrapper',
+
   on: {
     slideChange: function slideChange() {
       $('.rank_text .ranklist li').removeClass('on_li');

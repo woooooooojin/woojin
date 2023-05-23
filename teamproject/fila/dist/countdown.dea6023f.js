@@ -122,7 +122,7 @@ var countDownDate = new Date('Aug 25, 2023 15:37:25').getTime();
 var x = setInterval(function () {
   var now = new Date().getTime();
   var timeOut = countDownDate - now;
-  var days = Math.floor(timeOut / (1000 * 60 * 60 * 24));
+  var days = Math.floor(timeOut / (1000 * 60 * 60 * 24)); //Math.floor 내림함수
   var hours = Math.floor(timeOut % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
   var minutes = Math.floor(timeOut % (1000 * 60 * 60) / (1000 * 60));
   var seconds = Math.floor(timeOut % (1000 * 60) / 1000);
@@ -157,7 +157,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58619" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65533" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
