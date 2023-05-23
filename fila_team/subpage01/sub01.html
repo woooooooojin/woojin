@@ -10,7 +10,8 @@
     <script type="module" src="../js/sub01.js" defer></script>
     <!-- <script type="module" src="../js/sub_data.js" defer></script> -->
     <link rel="stylesheet" href="sub01.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script> <!--lodash 라이브러리-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+    <!--lodash 라이브러리-->
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -73,7 +74,7 @@
             <div class="opt_wrap">
 
                 <div class="opt_box1">
-                    <input type="checkbox" id="filter_chk" >
+                    <input type="checkbox" id="filter_chk">
                     <label for="filter_chk" class="filter_open">필터 <i class="fas fa-plus"></i></label>
                     <label for="filter_chk" class="filter_close">필터 <i class="fas fa-minus"></i></label>
 
@@ -187,7 +188,7 @@
                             <label for="color_chk01" class="color01"></label>
                         </li>
 
-                        
+
                         <li>
                             <input type="radio" name="filter_radio" id="color_chk03">
                             <label for="color_chk03" class="color03"></label>
@@ -412,7 +413,20 @@
         </div>
         <!--sublist wrap end 상품리스트-->
 
-    </div><!--wrap end-->
+    </div>
+    <!--wrap end-->
+
+
+
+    <!--popup-->
+    <div class="pop01">
+        <p>black 색상 클릭 필터<br />
+            reset클릭 원래대로<br />
+            select옵션별 정렬
+        </p>
+        <p class="popclose">X</p>
+    </div>
+
 </body>
 
 </html>

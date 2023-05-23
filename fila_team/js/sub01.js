@@ -189,11 +189,10 @@ defaultVal.addEventListener('click',function(){
 
 
 
-blackColor.addEventListener('change', function () {
 
 
 
-})
+
 
 
 
@@ -287,3 +286,12 @@ grid02.addEventListener('click', function () {
 
 
 // }
+
+
+
+
+const popclose = document.querySelector('.popclose')
+const pop01 = document.querySelector('.pop01')
+popclose.addEventListener('click',function(){
+    pop01.style.display = 'none'
+})

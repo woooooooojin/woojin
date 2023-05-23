@@ -771,3 +771,29 @@ body {
     transition: .3s;
 
 }
+
+
+
+/*******popup*******/
+
+.pop01{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #eee;
+    position: absolute;
+    top: 80px;
+    right: 300px;
+    display: block;
+}
+.pop01 p{   
+    text-align: center;
+    font-size: 14px;
+    margin: 40px 10px;
+}
+.pop01 .popclose{
+    font-size: 20px;
+    color: #fff;
+    text-align: right;
+    cursor: pointer;
+}
