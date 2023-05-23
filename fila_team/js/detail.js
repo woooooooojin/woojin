@@ -244,6 +244,9 @@ document.addEventListener('DOMContentLoaded', function () {
             cntBox.value = '1'
             alert('수량은 1개이상 가능합니다.')
             totalPrice.innerHTML = '119,000'
+        }else if(cntBox.value <= 21){
+            cntBox.value = '20'
+            alert('수량은 최대 20개까지 가능합니다.')
         }
     })
 
