@@ -157,29 +157,43 @@ selectBox.addEventListener('change', function () {
 })
 
 
-//검은색 왜안될까 console 에는 뜨는데,,,
+//검은색 필터 기능
 
 const blackColor = document.getElementById('color_chk02')
+const defaultVal = document.getElementById('color_chk14')
 const itemlist = document.querySelectorAll('.subBox')
 
-// const blacks = subData.map((black) => {
-//     return black.color === 'black' ? black : null;
-// })
-// console.log(blacks)
+
+blackColor.addEventListener('click', function () {
+    for (let i = 0; i < subData.length; i++) {
+        if (subData[i].color === 'black') {
+            itemlist[i].style.display = 'block'
+        } else {
+            itemlist[i].style.display = 'none'
+        }
+    }
 
 
-// let arrBlack = subData.filter(n=>{return n.color ==='black'})
-// console.log(arrBlack)
+})
+
+defaultVal.addEventListener('click',function(){
+    sublist.innerHTML = ''
+    madeDiv() 
+
+})
 
 
 
 
 
-// blackColor.addEventListener('change',function(){
- 
 
 
-// })
+
+blackColor.addEventListener('change', function () {
+
+
+
+})
 
 
 

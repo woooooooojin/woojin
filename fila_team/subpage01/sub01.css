@@ -312,7 +312,9 @@ body {
     display: inline-block;
     /* border: 1px solid #ccc; */
     border-radius: 50%;
+    cursor: pointer;
 }
+
 
 #color_chk01:checked~.color01 {
     border: 3px solid #002053;
@@ -361,6 +363,8 @@ body {
 #color_chk12:checked~.color12 {
     border: 3px solid #002053;
 }
+
+
 
 
 .color01 {
@@ -645,6 +649,7 @@ body {
     margin-bottom: 50px;
     cursor: pointer;
     transition: .3s;
+    display: block;
 }
 
 .subimg_wrap {
