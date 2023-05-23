@@ -638,7 +638,7 @@ newShoes.addEventListener('click', function () {
 })
 
 
-
+//장바구니 카트 클릭이벤트
 const cart2 = document.querySelectorAll('.fa-shopping-cart')
 const cartCount = document.querySelector('.count')
 let cnt = 0
