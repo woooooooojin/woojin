@@ -668,6 +668,8 @@ heart.forEach((value)=>{
 
 
 const snsEls = document.querySelectorAll('.sns_wrap')
+const mgzEls = document.querySelectorAll('.magazine_wrap')
+
 
 snsEls.forEach((snsEl)=>{
     new ScrollMagic
@@ -676,5 +678,15 @@ snsEls.forEach((snsEl)=>{
         triggerHook:0.3
     })
     .setClassToggle(snsEl,'show')
+    .addTo(new ScrollMagic.Controller)
+})
+
+mgzEls.forEach((mgzEl)=>{
+    new ScrollMagic
+    .Scene({
+        triggerElement : mgzEl,
+        triggerHook:0.5
+    })
+    .setClassToggle(mgzEl,'show')
     .addTo(new ScrollMagic.Controller)
 })
