@@ -295,3 +295,28 @@ const pop01 = document.querySelector('.pop01')
 popclose.addEventListener('click',function(){
     pop01.style.display = 'none'
 })
+
+
+
+//장바구니 카트 클릭이벤트
+const cart2 = document.querySelectorAll('.fa-shopping-cart')
+const cartCount = document.querySelector('.count')
+let cnt = 0
+
+cart2.forEach((value)=>{
+    value.addEventListener('click',function(){
+        cnt++
+        cartCount.innerHTML = cnt
+    })
+})
+
+const heart = document.querySelectorAll('.fa-heart')
+const heartCnt = document.querySelector('.heart_cnt')
+let cntheart = 0
+
+heart.forEach((value)=>{
+    value.addEventListener('click',function(){
+        cntheart++
+        heartCnt.innerHTML = cntheart
+    })
+})
