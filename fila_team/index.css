@@ -1724,8 +1724,37 @@ header:hover a {
 }
 
 
+.origin{opacity: 0;}
+.show .origin{
+    opacity: 1;
+    transition: 1s;
+}
 
+.show .sbox01{
+    transition-delay: 0s;
+}
 
+.show .sbox02{
+    transition-delay: .2s;
+}
+.show .sbox03{
+    transition-delay: .4s;
+}
+.show .sbox04{
+    transition-delay: .6s;
+}
+.show .sbox05{
+    transition-delay: .8s;
+}
+.show .sbox06{
+    transition-delay: 1s;
+}
+.show .sbox07{
+    transition-delay: 1.2s;
+}
+.show .sbox08{
+    transition-delay: 1.4s;
+}
 /*********footer********/
 footer{
     width: 100%;

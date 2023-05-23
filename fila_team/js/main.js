@@ -661,3 +661,20 @@ heart.forEach((value)=>{
     })
 })
 
+
+
+
+
+
+
+const snsEls = document.querySelectorAll('.sns_wrap')
+
+snsEls.forEach((snsEl)=>{
+    new ScrollMagic
+    .Scene({
+        triggerElement : snsEl,
+        triggerHook:0.3
+    })
+    .setClassToggle(snsEl,'show')
+    .addTo(new ScrollMagic.Controller)
+})
