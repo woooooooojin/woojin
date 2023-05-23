@@ -85,6 +85,7 @@ body{
 
 .close_btn i {
     margin-right: 10px;
+    
 }
 
 /* @keyframes new_ani {
@@ -652,8 +653,9 @@ header:hover a {
 }
 
 .swiper_rank {
-    width: 100%;
-
+    width: 1660px;
+    margin: 0 auto;
+    height: 650px;
     overflow: hidden;
     margin-top: 50px;
 
@@ -667,7 +669,7 @@ header:hover a {
 
 .swiper_rank .swiper-slide {
 
-    width: 500px;
+    width: 30% ;
     height: 650px;
     opacity: 0.3;
     transform: scale(0.85);
@@ -728,7 +730,7 @@ header:hover a {
 }
 
 .swiper_rank .swiper-slide .rank_hover_box .rank_hover_L {
-    width: 70%;
+    width: 65%;
     padding-top: 12px;
     padding-left: 20px;
     cursor: pointer;
@@ -778,14 +780,14 @@ header:hover a {
 }
 
 .rank_text {
-    width: 450px;
-    height: 550px;
+    width: 400px;
+    height: 500px;
     background-color: #fff;
     padding: 30px;
     margin-left: 10px;
     position: absolute;
-    top: 40px;
-    left: 30px;
+    top: 60px;
+    left: 100px;
     z-index: 5;
     border: 1px solid #ccc;
     border-radius: 20px;
@@ -804,10 +806,10 @@ header:hover a {
 }
 
 .rank_text ul li {
-    height: 65px;
+    height: 55px;
     border-bottom: 1px solid #ccc;
     transition: .3s;
-    line-height: 65px;
+    line-height: 55px;
     padding-left: 10px;
     margin-left: 20px;
     border-radius: 10px;
