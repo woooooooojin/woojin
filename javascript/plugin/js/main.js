@@ -97,3 +97,21 @@ const swiper = new Swiper('.swiper', {
     //     el: '.swiper-scrollbar',
     // },
 });
+
+
+
+
+//scroll magic
+
+const notEls = document.querySelectorAll('.notice_box')
+
+notEls.forEach((notEl)=>{
+    new ScrollMagic
+    .Scene({
+        triggerElement: notEl,
+        triggerHook: 0.3})
+    .setClassToggle(notEl,'show')
+    .addTo(new ScrollMagic.Controller)
+})
+
+
