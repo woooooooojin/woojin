@@ -56,23 +56,23 @@ $(function () {
 
 
 
-    const btn = $('.pagebtn ul li');
-    const page = $('section');
+    // const btn = $('.pagebtn ul li');
+    // const page = $('section');
 
 
-    let index = 0;
-    let top = 0; //각페이지의 맨위 좌표
+    // let index = 0;
+    // let top = 0; //각페이지의 맨위 좌표
 
-    btn.click(function () {
+    // btn.click(function () {
 
-        index = $(this).index();
+    //     index = $(this).index();
 
-        top = page.eq(index).offset().top;
+    //     top = page.eq(index).offset().top;
 
-        $('html, body').stop().animate({
-            scrollTop: top
-        }, 1000, 'easeOutBounce');
-    })
+    //     $('html, body').stop().animate({
+    //         scrollTop: top
+    //     }, 1000, 'easeOutBounce');
+    // })
 
 
 
@@ -292,3 +292,50 @@ for (let i = 0; i < bgcChangeA.length; i++) {
     
 
 }
+
+
+
+
+// topBtn.addEventListener('click',()=>{
+//     gsap.to(window,0.3,{
+//         scrollTo: 0,
+//     })
+// })
+
+const btn01 = document.getElementById('btn01')
+const btn02 = document.getElementById('btn02')
+const btn03 = document.getElementById('btn03')
+const btn04 = document.getElementById('btn04')
+const section01 = document.querySelector('.section01')
+const section02 = document.querySelector('.section02')
+const section03 = document.querySelector('.section03')
+const section04 = document.querySelector('.section04')
+
+
+btn01.addEventListener('click',()=>{
+    gsap.to(window,0.3,{
+        scrollTo: section01,
+    })
+
+})
+
+btn02.addEventListener('click',()=>{
+    gsap.to(window,0.3,{
+        scrollTo: section02,
+    })
+
+})
+
+btn03.addEventListener('click',()=>{
+    gsap.to(window,0.3,{
+        scrollTo: section03,
+    })
+
+})
+
+btn04.addEventListener('click',()=>{
+    gsap.to(window,0.3,{
+        scrollTo: section04,
+    })
+
+})
