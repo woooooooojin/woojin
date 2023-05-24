@@ -182,7 +182,7 @@ body {
     }
 
     .recent_search {
-      li:first-child {
+      li.noresearch {
         color: #888;
       }
 
@@ -196,6 +196,11 @@ body {
       }
     }
   }
+}
+
+.lidel {
+  margin-left: 20px;
+  cursor: pointer;
 }
 
 /*************header*************/

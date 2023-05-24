@@ -56,23 +56,23 @@ $(function () {
 
 
 
-    const btn = $('.pagebtn ul li');
-    const page = $('section');
+    // const btn = $('.pagebtn ul li');
+    // const page = $('section');
 
 
-    let index = 0;
-    let top = 0; //각페이지의 맨위 좌표
+    // let index = 0;
+    // let top = 0; //각페이지의 맨위 좌표
 
-    btn.click(function () {
+    // btn.click(function () {
 
-        index = $(this).index();
+    //     index = $(this).index();
 
-        top = page.eq(index).offset().top;
+    //     top = page.eq(index).offset().top;
 
-        $('html, body').stop().animate({
-            scrollTop: top
-        }, 1000, 'easeOutBounce');
-    })
+    //     $('html, body').stop().animate({
+    //         scrollTop: top
+    //     }, 1000, 'easeOutBounce');
+    // })
 
 
 
@@ -216,7 +216,50 @@ document.addEventListener('DOMContentLoaded', () => {
     gnbSearch.addEventListener('click', () => {
         searchBox.style.display = 'block'
     })
+
+    const searchInput = document.getElementById('searchbox')
+    const recentList = document.querySelector('.recent_search ul')
+    const recentNo = document.querySelector('.noresearch')
+
+    //검색창 검색어 추가/삭제
+    searchInput.addEventListener('change',function(){
+        recentNo.style.display = 'none'
+
+        const searchLi = document.createElement('li')
+        searchLi.setAttribute('class','searchli')
+        recentList.appendChild(searchLi)
+        searchLi.innerHTML = searchInput.value
+        searchInput.value = ''
+        searchInput.focus()
+
+        const liDel = document.createElement('span')
+        liDel.setAttribute('class','lidel')
+        searchLi.appendChild(liDel)
+        liDel.innerHTML = 'X'
+
+        liDel.addEventListener('click',function(){
+            recentList.removeChild(searchLi)
+        })
+
+        const researchAllDel = document.querySelector('.delete_history')
+        researchAllDel.addEventListener('click',function(){
+
+            recentList.innerHTML = ''
+            recentNo.style.display = 'block'
+
+        })
+
+        
+    })
+
+
+    
+    
+
+
+
 })
+
 
 
 //장바구니 카트 클릭이벤트
@@ -249,3 +292,50 @@ for (let i = 0; i < bgcChangeA.length; i++) {
     
 
 }
+
+
+
+
+// topBtn.addEventListener('click',()=>{
+//     gsap.to(window,0.3,{
+//         scrollTo: 0,
+//     })
+// })
+
+const btn01 = document.getElementById('btn01')
+const btn02 = document.getElementById('btn02')
+const btn03 = document.getElementById('btn03')
+const btn04 = document.getElementById('btn04')
+const section01 = document.querySelector('.section01')
+const section02 = document.querySelector('.section02')
+const section03 = document.querySelector('.section03')
+const section04 = document.querySelector('.section04')
+
+
+btn01.addEventListener('click',()=>{
+    gsap.to(window,0.3,{
+        scrollTo: section01,
+    })
+
+})
+
+btn02.addEventListener('click',()=>{
+    gsap.to(window,0.3,{
+        scrollTo: section02,
+    })
+
+})
+
+btn03.addEventListener('click',()=>{
+    gsap.to(window,0.3,{
+        scrollTo: section03,
+    })
+
+})
+
+btn04.addEventListener('click',()=>{
+    gsap.to(window,0.3,{
+        scrollTo: section04,
+    })
+
+})

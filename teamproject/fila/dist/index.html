@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FILA</title>
     <script src="/jquery-3.6.4.min.bd92ff19.js"></script>
+    <script src="/jquery_import.25450c07.js"></script><!--jquery import-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
@@ -34,8 +35,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!--fontawesome-->
 
-    <script src="/jquery_import.25450c07.js"></script>
-    <!-- import jquery -->
+    <!-- <script src="./js/jquery_import.js"></script>
+    import jquery -->
 
 
     <script>$(function () {
@@ -612,7 +613,7 @@ $(function () {
         <div class="search_box_wrap">
 
             <div class="search_input">
-                <input type="search" placeholder="검색어 입력">
+                <input type="search" placeholder="검색어 입력" id="searchbox">
                 <div class="search_close">
                     <i class="fas fa-times"></i>
                 </div>
@@ -652,7 +653,7 @@ $(function () {
                 <div class="search_list recent_search">
                     <h4>최근검색어</h4>
                     <ul>
-                        <li>최근 검색어가 없습니다.</li>
+                        <li class="noresearch">최근 검색어가 없습니다.</li>
 
                     </ul>
 

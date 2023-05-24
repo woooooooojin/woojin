@@ -161,7 +161,7 @@ body {
 .search_box .search_list_wrap .search_list li {
   margin-bottom: 15px;
 }
-.search_box .search_list_wrap .recent_search li:first-child {
+.search_box .search_list_wrap .recent_search li.noresearch {
   color: #888;
 }
 .search_box .search_list_wrap .recent_search .delete_history span {
@@ -170,6 +170,11 @@ body {
   text-decoration: underline;
   display: block;
   margin-top: 50px;
+  cursor: pointer;
+}
+
+.lidel {
+  margin-left: 20px;
   cursor: pointer;
 }
 

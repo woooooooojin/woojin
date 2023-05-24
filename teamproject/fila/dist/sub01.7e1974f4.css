@@ -722,12 +722,12 @@ header:hover a {
   margin-right: 5px;
 }
 
-#price_chk01:checked ~ .price01, #price_chk02:checked ~ .price02, #price_chk03:checked ~ .price03, #price_chk04:checked ~ .price04, #price_chk05:checked ~ .price05 {
+#price_chk01:checked ~ .price01, #price_chk02:checked ~ .price02, #price_chk03:checked ~ .price03, #price_chk04:checked ~ .price04, #price_chk05:checked ~ .price05, #price_chk06:checked ~ .price06 {
   color: #002053;
   font-weight: 500;
 }
 
-#price_chk01:checked ~ .price01::before, #price_chk02:checked ~ .price02::before, #price_chk03:checked ~ .price03::before, #price_chk04:checked ~ .price04::before, #price_chk05:checked ~ .price05::before {
+#price_chk01:checked ~ .price01::before, #price_chk02:checked ~ .price02::before, #price_chk03:checked ~ .price03::before, #price_chk04:checked ~ .price04::before, #price_chk05:checked ~ .price05::before, #price_chk06:checked ~ .price06::before {
   background: url(/check01.80033b1c.png);
   background-size: cover;
 }

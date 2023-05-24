@@ -154,18 +154,24 @@ $(function () {
       top: point
     }, 300);
   });
-  var btn = $('.pagebtn ul li');
-  var page = $('section');
-  var index = 0;
-  var top = 0; //각페이지의 맨위 좌표
 
-  btn.click(function () {
-    index = $(this).index();
-    top = page.eq(index).offset().top;
-    $('html, body').stop().animate({
-      scrollTop: top
-    }, 1000, 'easeOutBounce');
-  });
+  // const btn = $('.pagebtn ul li');
+  // const page = $('section');
+
+  // let index = 0;
+  // let top = 0; //각페이지의 맨위 좌표
+
+  // btn.click(function () {
+
+  //     index = $(this).index();
+
+  //     top = page.eq(index).offset().top;
+
+  //     $('html, body').stop().animate({
+  //         scrollTop: top
+  //     }, 1000, 'easeOutBounce');
+  // })
+
   $('.lnb_women').click(function () {
     $('.drop_women').slideToggle(300);
     $('.drop_men').css('display', 'none');
@@ -267,6 +273,32 @@ document.addEventListener('DOMContentLoaded', function () {
   gnbSearch.addEventListener('click', function () {
     searchBox.style.display = 'block';
   });
+  var searchInput = document.getElementById('searchbox');
+  var recentList = document.querySelector('.recent_search ul');
+  var recentNo = document.querySelector('.noresearch');
+
+  //검색창 검색어 추가/삭제
+  searchInput.addEventListener('change', function () {
+    recentNo.style.display = 'none';
+    var searchLi = document.createElement('li');
+    searchLi.setAttribute('class', 'searchli');
+    recentList.appendChild(searchLi);
+    searchLi.innerHTML = searchInput.value;
+    searchInput.value = '';
+    searchInput.focus();
+    var liDel = document.createElement('span');
+    liDel.setAttribute('class', 'lidel');
+    searchLi.appendChild(liDel);
+    liDel.innerHTML = 'X';
+    liDel.addEventListener('click', function () {
+      recentList.removeChild(searchLi);
+    });
+    var researchAllDel = document.querySelector('.delete_history');
+    researchAllDel.addEventListener('click', function () {
+      recentList.innerHTML = '';
+      recentNo.style.display = 'block';
+    });
+  });
 });
 
 //장바구니 카트 클릭이벤트
@@ -293,6 +325,41 @@ var _loop = function _loop(i) {
 for (var i = 0; i < bgcChangeA.length; i++) {
   _loop(i);
 }
+
+// topBtn.addEventListener('click',()=>{
+//     gsap.to(window,0.3,{
+//         scrollTo: 0,
+//     })
+// })
+
+var btn01 = document.getElementById('btn01');
+var btn02 = document.getElementById('btn02');
+var btn03 = document.getElementById('btn03');
+var btn04 = document.getElementById('btn04');
+var section01 = document.querySelector('.section01');
+var section02 = document.querySelector('.section02');
+var section03 = document.querySelector('.section03');
+var section04 = document.querySelector('.section04');
+btn01.addEventListener('click', function () {
+  gsap.to(window, 0.3, {
+    scrollTo: section01
+  });
+});
+btn02.addEventListener('click', function () {
+  gsap.to(window, 0.3, {
+    scrollTo: section02
+  });
+});
+btn03.addEventListener('click', function () {
+  gsap.to(window, 0.3, {
+    scrollTo: section03
+  });
+});
+btn04.addEventListener('click', function () {
+  gsap.to(window, 0.3, {
+    scrollTo: section04
+  });
+});
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -318,7 +385,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52196" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53001" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

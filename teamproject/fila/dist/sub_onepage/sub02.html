@@ -9,9 +9,11 @@
     <script src="/jquery-3.6.4.min.bd92ff19.js"></script>
     <!--jquery-->
 
-    <script src="/jquery_import.25450c07.js" defer=""></script>
-
-
+    <script src="/jquery_import.25450c07.js"></script><!--jquery import-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <!--gsap cdn-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollToPlugin.min.js"></script>
+    <!--gsap scroll to-->
 
     <!--jquery plugin-->
     <script src="/jquery.scrollTo.min.6397268d.js"></script>
@@ -20,7 +22,6 @@
     <!--mouse wheel-->
 
     <script src="/onepage.4d6eef85.js" defer=""></script>
-    <!-- <link rel="stylesheet" href="./sub02.css"> -->
     <link rel="stylesheet" href="/sub02.6271ce12.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,10 +33,10 @@
     <!--swiper  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    
+
 
     <script>
-
+        
     </script>
 
 <script src="/sub02.6271ce12.js"></script></head>
@@ -488,7 +489,7 @@
         <div class="search_box_wrap">
 
             <div class="search_input">
-                <input type="search" placeholder="검색어 입력">
+                <input type="search" placeholder="검색어 입력" id="searchbox">
                 <div class="search_close">
                     <i class="fas fa-times"></i>
                 </div>
@@ -528,7 +529,7 @@
                 <div class="search_list recent_search">
                     <h4>최근검색어</h4>
                     <ul>
-                        <li>최근 검색어가 없습니다.</li>
+                        <li class="noresearch">최근 검색어가 없습니다.</li>
 
                     </ul>
 
@@ -1335,11 +1336,11 @@
 
     <div class="pagebtn">
         <ul>
-            <li><a href="#!" class="on">1</a></li>
-            <li><a href="#!">2</a></li>
-            <li><a href="#!">3</a></li>
-            <li><a href="#!">4</a></li>
-
+            <li><a href="#!" class="on" id="btn01">1</a></li>
+            <li><a href="#!" id="btn02">2</a></li>
+            <li><a href="#!" id="btn03">3</a></li>
+            <li><a href="#!" id="btn04">4</a></li>
+            
         </ul>
         <div class="home"><a href="/index.html"><i class="fas fa-home"></i></a></div>
     </div>

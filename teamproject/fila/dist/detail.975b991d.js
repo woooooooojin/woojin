@@ -169,6 +169,8 @@ window.addEventListener('wheel', function (e) {
     headFix.classList.add("head_up");
   }
 });
+
+//gnb search box  click event
 document.addEventListener('DOMContentLoaded', function () {
   var searchClose = document.querySelector('.search_close');
   var searchBox = document.querySelector('.search_box');
@@ -178,6 +180,32 @@ document.addEventListener('DOMContentLoaded', function () {
   var gnbSearch = document.querySelector('.gnb_search');
   gnbSearch.addEventListener('click', function () {
     searchBox.style.display = 'block';
+  });
+  var searchInput = document.getElementById('searchbox');
+  var recentList = document.querySelector('.recent_search ul');
+  var recentNo = document.querySelector('.noresearch');
+
+  //검색창 검색어 추가/삭제
+  searchInput.addEventListener('change', function () {
+    recentNo.style.display = 'none';
+    var searchLi = document.createElement('li');
+    searchLi.setAttribute('class', 'searchli');
+    recentList.appendChild(searchLi);
+    searchLi.innerHTML = searchInput.value;
+    searchInput.value = '';
+    searchInput.focus();
+    var liDel = document.createElement('span');
+    liDel.setAttribute('class', 'lidel');
+    searchLi.appendChild(liDel);
+    liDel.innerHTML = 'X';
+    liDel.addEventListener('click', function () {
+      recentList.removeChild(searchLi);
+    });
+    var researchAllDel = document.querySelector('.delete_history');
+    researchAllDel.addEventListener('click', function () {
+      recentList.innerHTML = '';
+      recentNo.style.display = 'block';
+    });
   });
 });
 document.addEventListener('DOMContentLoaded', function () {
@@ -511,7 +539,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52196" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53001" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

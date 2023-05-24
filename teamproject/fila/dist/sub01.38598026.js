@@ -383,6 +383,8 @@ function madeDiv() {
       headFix.classList.add("head_up");
     }
   });
+
+  //gnb search box  click event
   document.addEventListener('DOMContentLoaded', function () {
     var searchClose = document.querySelector('.search_close');
     var searchBox = document.querySelector('.search_box');
@@ -392,6 +394,32 @@ function madeDiv() {
     var gnbSearch = document.querySelector('.gnb_search');
     gnbSearch.addEventListener('click', function () {
       searchBox.style.display = 'block';
+    });
+    var searchInput = document.getElementById('searchbox');
+    var recentList = document.querySelector('.recent_search ul');
+    var recentNo = document.querySelector('.noresearch');
+
+    //검색창 검색어 추가/삭제
+    searchInput.addEventListener('change', function () {
+      recentNo.style.display = 'none';
+      var searchLi = document.createElement('li');
+      searchLi.setAttribute('class', 'searchli');
+      recentList.appendChild(searchLi);
+      searchLi.innerHTML = searchInput.value;
+      searchInput.value = '';
+      searchInput.focus();
+      var liDel = document.createElement('span');
+      liDel.setAttribute('class', 'lidel');
+      searchLi.appendChild(liDel);
+      liDel.innerHTML = 'X';
+      liDel.addEventListener('click', function () {
+        recentList.removeChild(searchLi);
+      });
+      var researchAllDel = document.querySelector('.delete_history');
+      researchAllDel.addEventListener('click', function () {
+        recentList.innerHTML = '';
+        recentNo.style.display = 'block';
+      });
     });
   });
 
@@ -517,6 +545,12 @@ selectBox.addEventListener('change', function () {
 var blackColor = document.getElementById('color_chk02');
 var defaultVal = document.getElementById('color_chk14');
 var itemlist = document.querySelectorAll('.subBox');
+var priceChk01 = document.getElementById('price_chk01');
+var priceChk02 = document.getElementById('price_chk02');
+var priceChk03 = document.getElementById('price_chk03');
+var priceChk04 = document.getElementById('price_chk04');
+var priceChk05 = document.getElementById('price_chk05');
+var priceChkDefault = document.getElementById('price_chk06');
 blackColor.addEventListener('click', function () {
   for (var i = 0; i < _sub_data.default.length; i++) {
     if (_sub_data.default[i].color === 'black') {
@@ -530,6 +564,68 @@ defaultVal.addEventListener('click', function () {
   sublist.innerHTML = '';
   madeDiv();
 });
+priceChk01.addEventListener('click', function () {
+  for (var i = 0; i < _sub_data.default.length; i++) {
+    if (_sub_data.default[i].price01 <= 39000) {
+      itemlist[i].style.display = 'block';
+    } else {
+      itemlist[i].style.display = 'none';
+    }
+  }
+});
+priceChk02.addEventListener('click', function () {
+  for (var i = 0; i < _sub_data.default.length; i++) {
+    if (_sub_data.default[i].price01 >= 39000 && _sub_data.default[i].price01 <= 49000) {
+      itemlist[i].style.display = 'block';
+    } else {
+      itemlist[i].style.display = 'none';
+    }
+  }
+});
+priceChk03.addEventListener('click', function () {
+  for (var i = 0; i < _sub_data.default.length; i++) {
+    if (_sub_data.default[i].price01 >= 49000 && _sub_data.default[i].price01 <= 59000) {
+      itemlist[i].style.display = 'block';
+    } else {
+      itemlist[i].style.display = 'none';
+    }
+  }
+});
+priceChk04.addEventListener('click', function () {
+  for (var i = 0; i < _sub_data.default.length; i++) {
+    if (_sub_data.default[i].price01 >= 59000 && _sub_data.default[i].price01 <= 79000) {
+      itemlist[i].style.display = 'block';
+    } else {
+      itemlist[i].style.display = 'none';
+    }
+  }
+});
+priceChk05.addEventListener('click', function () {
+  for (var i = 0; i < _sub_data.default.length; i++) {
+    if (_sub_data.default[i].price01 >= 79000) {
+      itemlist[i].style.display = 'block';
+    } else {
+      itemlist[i].style.display = 'none';
+    }
+  }
+});
+priceChkDefault.addEventListener('click', function () {
+  sublist.innerHTML = '';
+  madeDiv();
+});
+
+// for (let i = 0; i < subData.length; i++) {
+
+//     if (priceChk01.checked) {
+//         if (subData[i].price01 <= 39000) {
+//             itemlist[i].style.display = 'block'
+//         } else {
+//             itemlist[i].style.display = 'none'
+//         }
+//     }
+
+// }
+
 var filterOpen = document.querySelector('.filter_open');
 var filterClose = document.querySelector('.filter_close');
 var filterList = document.querySelector('.filter_box_list');
@@ -639,7 +735,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52196" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53001" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
