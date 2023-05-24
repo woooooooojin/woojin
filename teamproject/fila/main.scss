@@ -97,6 +97,30 @@ body {
     }
 } */
 
+/*******popupinfo**********/
+
+.pop_info {
+  width: 250px;
+  position: absolute;
+  top: 200px;
+  right: 200px;
+  z-index: 99999;
+
+  .poptxt {
+    width: 260px;
+    height: 230px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    background-color: lightsteelblue;
+  }
+}
+
+.close_pop_info {
+  text-align: right;
+  cursor: pointer;
+}
+
+
 /***********search box****************/
 
 .search_box {

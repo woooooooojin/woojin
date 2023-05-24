@@ -739,3 +739,9 @@ mgzEls.forEach((mgzEl) => {
 
 
 
+const closePopInfo = document.querySelector('.close_pop_info')
+const popInfo = document.querySelector('.pop_info')
+
+closePopInfo.addEventListener('click',function(){
+    popInfo.style.display = 'none'
+})

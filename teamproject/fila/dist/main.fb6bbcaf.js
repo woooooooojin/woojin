@@ -159,6 +159,11 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
 // });
 
+var closePopInfo = document.querySelector('.close_pop_info');
+var popInfo = document.querySelector('.pop_info');
+closePopInfo.addEventListener('click', function () {
+  popInfo.style.display = 'none';
+});
 window.addEventListener('mouseover', function () {
   var mainLogo = document.querySelector('.logoimg');
   var lnbA = document.querySelectorAll('.head_lnb li');
@@ -615,7 +620,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53693" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54848" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
