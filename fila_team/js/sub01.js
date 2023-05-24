@@ -320,6 +320,9 @@ selectBox.addEventListener('change', function () {
 //검은색 필터 기능
 
 const blackColor = document.getElementById('color_chk02')
+const whiteColor = document.getElementById('color_chk12')
+const grayColor = document.getElementById('color_chk06')
+
 const defaultVal = document.getElementById('color_chk14')
 const itemlist = document.querySelectorAll('.subBox')
 
@@ -339,7 +342,29 @@ blackColor.addEventListener('click', function () {
             itemlist[i].style.display = 'none'
         }
     }
+    
 
+})
+
+whiteColor.addEventListener('click', function () {
+    for (let i = 0; i < subData.length; i++) {
+        if (subData[i].color === 'white') {
+            itemlist[i].style.display = 'block'
+        } else {
+            itemlist[i].style.display = 'none'
+        }
+    }
+    
+})
+grayColor.addEventListener('click', function () {
+    for (let i = 0; i < subData.length; i++) {
+        if (subData[i].color === 'gray') {
+            itemlist[i].style.display = 'block'
+        } else {
+            itemlist[i].style.display = 'none'
+        }
+    }
+   
 
 })
 
