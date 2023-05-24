@@ -1,5 +1,4 @@
-const membership = [
-    {
+const membership = [{
         id: "member01",
         pw: "hong1234",
         name: "홍길동",
@@ -32,8 +31,6 @@ const membership = [
 
 
 
-
-
 ]
 
 
@@ -50,17 +47,18 @@ idBtn.addEventListener('click', yourId)
 pwBtn.addEventListener('click', yourPw)
 
 function yourId() {
-    for (let i = 0; i < membership.length; i++) { 
-        
+    for (let i = 0; i < membership.length; i++) {
+
         if (findName.value === membership[i].name && findNum01.value === membership[i].birth) {
             alert('아이디는 ' + (JSON.stringify(membership[i].id)) + ' 입니다.')
-        }
-        
+            
+        } 
+
     }
 
-       
-
 }
+
+
 
 function yourPw() {
 
@@ -68,7 +66,7 @@ function yourPw() {
         if (findNum02.value === membership[i].birth && findId.value === membership[i].id) {
             alert('비밀번호는 ' + (JSON.stringify(membership[i].pw)) + ' 입니다.')
         }
-      
+
     }
 
 }
