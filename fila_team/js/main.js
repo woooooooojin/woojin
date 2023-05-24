@@ -269,6 +269,8 @@ document.addEventListener('DOMContentLoaded', () => {
         searchLi.setAttribute('class','searchli')
         recentList.appendChild(searchLi)
         searchLi.innerHTML = searchInput.value
+        searchInput.value = ''
+        searchInput.focus()
 
         const liDel = document.createElement('span')
         liDel.setAttribute('class','lidel')
