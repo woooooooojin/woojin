@@ -900,7 +900,8 @@ header:hover a {
 #price_chk02:checked~.price02,
 #price_chk03:checked~.price03,
 #price_chk04:checked~.price04,
-#price_chk05:checked~.price05 {
+#price_chk05:checked~.price05,
+#price_chk06:checked~.price06 {
     color: #002053;
     font-weight: 500;
 }
@@ -926,6 +927,10 @@ header:hover a {
 }
 
 #price_chk05:checked~.price05::before {
+    background: url(../img/check01.png);
+    background-size: cover;
+}
+#price_chk06:checked~.price06::before {
     background: url(../img/check01.png);
     background-size: cover;
 }

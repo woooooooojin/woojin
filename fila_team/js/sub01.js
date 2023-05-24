@@ -13,34 +13,34 @@ function madeDiv() {
         const head = document.querySelector('header');
         const aTag = document.querySelectorAll('.head_lnb li a')
         const gnbI = document.querySelectorAll('.head_gnb li a i')
-    
-    
-    
-    
+
+
+
+
         if (window.scrollY === 0) {
-    
+
             // head.style.backgroundColor = '#fff'
-    
+
             mainLogo.setAttribute('src', '../img/LOGO/logo01.png')
-    
-    
-    
+
+
+
         }
-    
-    
+
+
     })
-    
-    
-    
-    
-    
+
+
+
+
+
     window.addEventListener('scroll', (e) => {
-    
-    
+
+
         const mainLnb = document.querySelectorAll('.head_lnb ul li a');
         const mainGnb = document.querySelectorAll('.head_gnb ul li a');
         const mainLogo = document.querySelector('.head_logo .imgwrap img');
-    
+
         if (window.scrollY > 100) {
             document.querySelector('header').style.backgroundColor = '#fff'
             mainLogo.setAttribute('src', '../img/LOGO/logo01.png')
@@ -50,7 +50,7 @@ function madeDiv() {
             for (let i = 0; i < mainGnb.length; i++) {
                 mainGnb[i].style.color = 'black'
             }
-    
+
         } else if (window.scrollY <= 100) {
             document.querySelector('header').style.backgroundColor = ''
             mainLogo.setAttribute('src', '../img/LOGO/logo03.png')
@@ -60,54 +60,54 @@ function madeDiv() {
             for (let i = 0; i < mainGnb.length; i++) {
                 mainGnb[i].style.color = '#fff'
             }
-    
+
         }
-    
-    
-    
-    
+
+
+
+
     })
-    
-    
+
+
     // header wheel, add remove class event
     window.addEventListener('wheel', (e) => {
-    
+
         const headFix = document.querySelector('header');
         const dropDown = document.querySelector('.dropdown_menu');
-    
+
         if (e.deltaY > 10) {
             headFix.classList.remove("head_up");
             headFix.classList.add("head_down");
-    
-    
+
+
         } else if (e.deltaY == 0) {
             headFix.classList.add("head_down");
-    
-    
+
+
         } else if (e.deltaY < -10) {
             headFix.classList.remove("head_down");
             headFix.classList.add("head_up");
         }
-    
+
     })
-    
+
     document.addEventListener('DOMContentLoaded', () => {
         const searchClose = document.querySelector('.search_close')
         const searchBox = document.querySelector('.search_box')
-    
+
         searchClose.addEventListener('click', () => {
             searchBox.style.display = 'none';
         })
-    
+
         const gnbSearch = document.querySelector('.gnb_search')
-    
+
         gnbSearch.addEventListener('click', () => {
             searchBox.style.display = 'block'
         })
     })
-    
 
-///////////////////////////////////////////////////////////
+
+    ///////////////////////////////////////////////////////////
 
 
 
@@ -279,6 +279,13 @@ const blackColor = document.getElementById('color_chk02')
 const defaultVal = document.getElementById('color_chk14')
 const itemlist = document.querySelectorAll('.subBox')
 
+const priceChk01 = document.getElementById('price_chk01')
+const priceChk02 = document.getElementById('price_chk02')
+const priceChk03 = document.getElementById('price_chk03')
+const priceChk04 = document.getElementById('price_chk04')
+const priceChk05 = document.getElementById('price_chk05')
+const priceChkDefault = document.getElementById('price_chk06')
+
 
 blackColor.addEventListener('click', function () {
     for (let i = 0; i < subData.length; i++) {
@@ -292,11 +299,92 @@ blackColor.addEventListener('click', function () {
 
 })
 
-defaultVal.addEventListener('click',function(){
+defaultVal.addEventListener('click', function () {
     sublist.innerHTML = ''
-    madeDiv() 
+    madeDiv()
 
 })
+
+priceChk01.addEventListener('click', function () {
+    for (let i = 0; i < subData.length; i++) {
+        if (subData[i].price01 <= 39000) {
+            itemlist[i].style.display = 'block'
+        } else {
+            itemlist[i].style.display = 'none'
+        }
+    }
+
+
+})
+
+priceChk02.addEventListener('click', function () {
+    for (let i = 0; i < subData.length; i++) {
+        if (subData[i].price01 >= 39000 && subData[i].price01 <=49000) {
+            itemlist[i].style.display = 'block'
+        } else {
+            itemlist[i].style.display = 'none'
+        }
+    }
+
+
+})
+
+priceChk03.addEventListener('click', function () {
+    for (let i = 0; i < subData.length; i++) {
+        if (subData[i].price01 >= 49000 && subData[i].price01 <= 59000) {
+            itemlist[i].style.display = 'block'
+        } else {
+            itemlist[i].style.display = 'none'
+        }
+    }
+
+
+})
+
+priceChk04.addEventListener('click', function () {
+    for (let i = 0; i < subData.length; i++) {
+        if (subData[i].price01 >= 59000 && subData[i].price01 <= 79000) {
+            itemlist[i].style.display = 'block'
+        } else {
+            itemlist[i].style.display = 'none'
+        }
+    }
+
+
+})
+
+priceChk05.addEventListener('click', function () {
+    for (let i = 0; i < subData.length; i++) {
+        if (subData[i].price01 >= 79000 ) {
+            itemlist[i].style.display = 'block'
+        } else {
+            itemlist[i].style.display = 'none'
+        }
+    }
+
+
+})
+priceChkDefault.addEventListener('click', function () {
+    sublist.innerHTML = ''
+    madeDiv()
+
+})
+
+
+
+
+// for (let i = 0; i < subData.length; i++) {
+
+//     if (priceChk01.checked) {
+//         if (subData[i].price01 <= 39000) {
+//             itemlist[i].style.display = 'block'
+//         } else {
+//             itemlist[i].style.display = 'none'
+//         }
+//     }
+
+
+// }
 
 
 
@@ -408,7 +496,7 @@ grid02.addEventListener('click', function () {
 
 const popclose = document.querySelector('.popclose')
 const pop01 = document.querySelector('.pop01')
-popclose.addEventListener('click',function(){
+popclose.addEventListener('click', function () {
     pop01.style.display = 'none'
 })
 
@@ -419,8 +507,8 @@ const cart2 = document.querySelectorAll('.fa-shopping-cart')
 const cartCount = document.querySelector('.count')
 let cnt = 0
 
-cart2.forEach((value)=>{
-    value.addEventListener('click',function(){
+cart2.forEach((value) => {
+    value.addEventListener('click', function () {
         cnt++
         cartCount.innerHTML = cnt
     })
@@ -430,8 +518,8 @@ const heart = document.querySelectorAll('.fa-heart')
 const heartCnt = document.querySelector('.heart_cnt')
 let cntheart = 0
 
-heart.forEach((value)=>{
-    value.addEventListener('click',function(){
+heart.forEach((value) => {
+    value.addEventListener('click', function () {
         cntheart++
         heartCnt.innerHTML = cntheart
     })
