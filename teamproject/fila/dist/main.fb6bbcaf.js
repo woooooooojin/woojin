@@ -582,18 +582,42 @@ heart.forEach(function (value) {
   });
 });
 var snsEls = document.querySelectorAll('.sns_wrap');
-var mgzEls = document.querySelectorAll('.magazine_wrap');
+// const mgzEls = document.querySelectorAll('.magazine_wrap')
+
 snsEls.forEach(function (snsEl) {
   new ScrollMagic.Scene({
     triggerElement: snsEl,
     triggerHook: 0.3
   }).setClassToggle(snsEl, 'show').addTo(new ScrollMagic.Controller());
 });
-mgzEls.forEach(function (mgzEl) {
-  new ScrollMagic.Scene({
-    triggerElement: mgzEl,
-    triggerHook: 0.5
-  }).setClassToggle(mgzEl, 'show').addTo(new ScrollMagic.Controller());
+
+// mgzEls.forEach((mgzEl) => {
+//     new ScrollMagic
+//         .Scene({
+//             triggerElement: mgzEl,
+//             triggerHook: 0.5
+//         })
+//         .setClassToggle(mgzEl, 'show')
+//         .addTo(new ScrollMagic.Controller)
+// })
+
+var mgz01 = document.querySelectorAll('.mgz_box');
+var mgzSection = document.querySelector('.magazine_section');
+window.addEventListener('scroll', function () {
+  if (window.scrollY > 3600) {
+    gsap.to(mgz01[0], 0.3, {
+      translateX: 0
+    });
+    gsap.to(mgz01[1], 0.6, {
+      translateX: 0
+    });
+    gsap.to(mgz01[2], 0.9, {
+      translateX: 0
+    });
+    gsap.to(mgz01[3], 1.2, {
+      translateX: 0
+    });
+  }
 });
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -620,7 +644,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54848" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56940" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

@@ -719,7 +719,7 @@ heart.forEach((value) => {
 
 
 const snsEls = document.querySelectorAll('.sns_wrap')
-const mgzEls = document.querySelectorAll('.magazine_wrap')
+// const mgzEls = document.querySelectorAll('.magazine_wrap')
 
 
 snsEls.forEach((snsEl) => {
@@ -732,15 +732,40 @@ snsEls.forEach((snsEl) => {
         .addTo(new ScrollMagic.Controller)
 })
 
-mgzEls.forEach((mgzEl) => {
-    new ScrollMagic
-        .Scene({
-            triggerElement: mgzEl,
-            triggerHook: 0.5
+// mgzEls.forEach((mgzEl) => {
+//     new ScrollMagic
+//         .Scene({
+//             triggerElement: mgzEl,
+//             triggerHook: 0.5
+//         })
+//         .setClassToggle(mgzEl, 'show')
+//         .addTo(new ScrollMagic.Controller)
+// })
+
+
+const mgz01 = document.querySelectorAll('.mgz_box')
+const mgzSection = document.querySelector('.magazine_section')
+
+window.addEventListener('scroll',function(){
+
+    if(window.scrollY > 3600){
+
+        gsap.to(mgz01[0],0.3,{
+            translateX:0,
         })
-        .setClassToggle(mgzEl, 'show')
-        .addTo(new ScrollMagic.Controller)
+        gsap.to(mgz01[1],0.6,{
+            translateX:0,
+
+        })
+        gsap.to(mgz01[2],0.9,{
+            translateX:0,
+
+        })
+        gsap.to(mgz01[3],1.2,{
+            translateX:0,
+
+        })
+
+    }
+
 })
-
-
-

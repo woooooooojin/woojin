@@ -88,7 +88,7 @@ body {
         transform: translateX(0) rotate(360deg);
     }
 } */
-/*******popupinfo**********/
+/**************경로팝업*************/
 .pop_info {
   width: 250px;
   position: absolute;
@@ -565,7 +565,7 @@ header:hover a {
 }
 
 .container_rank {
-  /* overflow: hidden; */
+  overflow: hidden;
   /* position: relative; */
 }
 
@@ -1092,6 +1092,7 @@ header:hover a {
   width: 100%;
   margin-top: 200px;
   /* height: 800px; */
+  overflow: hidden;
 }
 .magazine_section h1 {
   text-align: center;
@@ -1129,7 +1130,6 @@ header:hover a {
   height: 100%;
   opacity: 0;
   transition: 0.3s;
-  overflow: hidden;
 }
 .magazine_section .magazine_wrap .mgz_box .mgz_desc h4 {
   font-size: 20px;
@@ -1171,6 +1171,23 @@ header:hover a {
 }
 .magazine_section .magazine_wrap .mgz_box:hover .mgz_desc p {
   bottom: 10%;
+}
+
+.mgz01 {
+  transition-delay: 0;
+  transform: translateX(-500px);
+}
+
+.mgz02 {
+  transform: translateX(-1000px);
+}
+
+.mgz03 {
+  transform: translateX(-1500px);
+}
+
+.mgz04 {
+  transform: translateX(-2000px);
 }
 
 /*************recommand section***************/
