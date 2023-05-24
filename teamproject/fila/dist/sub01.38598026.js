@@ -540,9 +540,11 @@ selectBox.addEventListener('change', function () {
   }
 });
 
-//검은색 필터 기능
+// 필터 기능
 
 var blackColor = document.getElementById('color_chk02');
+var whiteColor = document.getElementById('color_chk12');
+var grayColor = document.getElementById('color_chk06');
 var defaultVal = document.getElementById('color_chk14');
 var itemlist = document.querySelectorAll('.subBox');
 var priceChk01 = document.getElementById('price_chk01');
@@ -558,6 +560,36 @@ blackColor.addEventListener('click', function () {
     } else {
       itemlist[i].style.display = 'none';
     }
+  }
+  if (!blackColor.checked) {
+    sublist.innerHTML = '';
+    madeDiv();
+  }
+});
+whiteColor.addEventListener('click', function () {
+  for (var i = 0; i < _sub_data.default.length; i++) {
+    if (_sub_data.default[i].color === 'white') {
+      itemlist[i].style.display = 'block';
+    } else {
+      itemlist[i].style.display = 'none';
+    }
+  }
+  if (!whiteColor.checked) {
+    sublist.innerHTML = '';
+    madeDiv();
+  }
+});
+grayColor.addEventListener('click', function () {
+  for (var i = 0; i < _sub_data.default.length; i++) {
+    if (_sub_data.default[i].color === 'gray') {
+      itemlist[i].style.display = 'block';
+    } else {
+      itemlist[i].style.display = 'none';
+    }
+  }
+  if (!grayColor.checked) {
+    sublist.innerHTML = '';
+    madeDiv();
   }
 });
 defaultVal.addEventListener('click', function () {
@@ -735,7 +767,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53065" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53693" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

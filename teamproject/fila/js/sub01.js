@@ -91,64 +91,64 @@ function madeDiv() {
 
     })
 
- //gnb search box  click event
-document.addEventListener('DOMContentLoaded', () => {
-    const searchClose = document.querySelector('.search_close')
-    const searchBox = document.querySelector('.search_box')
+    //gnb search box  click event
+    document.addEventListener('DOMContentLoaded', () => {
+        const searchClose = document.querySelector('.search_close')
+        const searchBox = document.querySelector('.search_box')
 
-    searchClose.addEventListener('click', () => {
-        searchBox.style.display = 'none';
-    })
-
-    const gnbSearch = document.querySelector('.gnb_search')
-
-    gnbSearch.addEventListener('click', () => {
-        searchBox.style.display = 'block'
-    })
-
-    const searchInput = document.getElementById('searchbox')
-    const recentList = document.querySelector('.recent_search ul')
-    const recentNo = document.querySelector('.noresearch')
-
-    //검색창 검색어 추가/삭제
-    searchInput.addEventListener('change',function(){
-        recentNo.style.display = 'none'
-
-        const searchLi = document.createElement('li')
-        searchLi.setAttribute('class','searchli')
-        recentList.appendChild(searchLi)
-        searchLi.innerHTML = searchInput.value
-        searchInput.value = ''
-        searchInput.focus()
-
-        const liDel = document.createElement('span')
-        liDel.setAttribute('class','lidel')
-        searchLi.appendChild(liDel)
-        liDel.innerHTML = 'X'
-
-        liDel.addEventListener('click',function(){
-            recentList.removeChild(searchLi)
+        searchClose.addEventListener('click', () => {
+            searchBox.style.display = 'none';
         })
 
-        const researchAllDel = document.querySelector('.delete_history')
-        researchAllDel.addEventListener('click',function(){
+        const gnbSearch = document.querySelector('.gnb_search')
 
-            recentList.innerHTML = ''
-            recentNo.style.display = 'block'
+        gnbSearch.addEventListener('click', () => {
+            searchBox.style.display = 'block'
+        })
+
+        const searchInput = document.getElementById('searchbox')
+        const recentList = document.querySelector('.recent_search ul')
+        const recentNo = document.querySelector('.noresearch')
+
+        //검색창 검색어 추가/삭제
+        searchInput.addEventListener('change', function () {
+            recentNo.style.display = 'none'
+
+            const searchLi = document.createElement('li')
+            searchLi.setAttribute('class', 'searchli')
+            recentList.appendChild(searchLi)
+            searchLi.innerHTML = searchInput.value
+            searchInput.value = ''
+            searchInput.focus()
+
+            const liDel = document.createElement('span')
+            liDel.setAttribute('class', 'lidel')
+            searchLi.appendChild(liDel)
+            liDel.innerHTML = 'X'
+
+            liDel.addEventListener('click', function () {
+                recentList.removeChild(searchLi)
+            })
+
+            const researchAllDel = document.querySelector('.delete_history')
+            researchAllDel.addEventListener('click', function () {
+
+                recentList.innerHTML = ''
+                recentNo.style.display = 'block'
+
+            })
+
 
         })
 
-        
+
+
+
+
+
+
     })
 
-
-    
-    
-
-
-
-})
-    
 
 
     ///////////////////////////////////////////////////////////
@@ -317,9 +317,12 @@ selectBox.addEventListener('change', function () {
 })
 
 
-//검은색 필터 기능
+// 필터 기능
 
 const blackColor = document.getElementById('color_chk02')
+const whiteColor = document.getElementById('color_chk12')
+const grayColor = document.getElementById('color_chk06')
+
 const defaultVal = document.getElementById('color_chk14')
 const itemlist = document.querySelectorAll('.subBox')
 
@@ -331,6 +334,9 @@ const priceChk05 = document.getElementById('price_chk05')
 const priceChkDefault = document.getElementById('price_chk06')
 
 
+
+
+
 blackColor.addEventListener('click', function () {
     for (let i = 0; i < subData.length; i++) {
         if (subData[i].color === 'black') {
@@ -339,7 +345,39 @@ blackColor.addEventListener('click', function () {
             itemlist[i].style.display = 'none'
         }
     }
+    if (!blackColor.checked) {
+        sublist.innerHTML = ''
+        madeDiv()
+    }
+})
 
+
+whiteColor.addEventListener('click', function () {
+    for (let i = 0; i < subData.length; i++) {
+        if (subData[i].color === 'white') {
+            itemlist[i].style.display = 'block'
+        } else {
+            itemlist[i].style.display = 'none'
+        }
+    }
+    if (!whiteColor.checked) {
+        sublist.innerHTML = ''
+        madeDiv()
+    }
+})
+
+grayColor.addEventListener('click', function () {
+    for (let i = 0; i < subData.length; i++) {
+        if (subData[i].color === 'gray') {
+            itemlist[i].style.display = 'block'
+        } else {
+            itemlist[i].style.display = 'none'
+        }
+    }
+    if (!grayColor.checked) {
+        sublist.innerHTML = ''
+        madeDiv()
+    }
 
 })
 
@@ -363,7 +401,7 @@ priceChk01.addEventListener('click', function () {
 
 priceChk02.addEventListener('click', function () {
     for (let i = 0; i < subData.length; i++) {
-        if (subData[i].price01 >= 39000 && subData[i].price01 <=49000) {
+        if (subData[i].price01 >= 39000 && subData[i].price01 <= 49000) {
             itemlist[i].style.display = 'block'
         } else {
             itemlist[i].style.display = 'none'
@@ -399,7 +437,7 @@ priceChk04.addEventListener('click', function () {
 
 priceChk05.addEventListener('click', function () {
     for (let i = 0; i < subData.length; i++) {
-        if (subData[i].price01 >= 79000 ) {
+        if (subData[i].price01 >= 79000) {
             itemlist[i].style.display = 'block'
         } else {
             itemlist[i].style.display = 'none'
