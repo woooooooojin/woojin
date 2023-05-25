@@ -532,7 +532,7 @@ document.addEventListener('DOMContentLoaded', function () {
         noticeClose.appendChild(noticeI)
 
         ////re
-        const noticeRe = document.createElement('div')
+        const noticeRe = document.createElement('ul')
         noticeRe.setAttribute('class', 'Re_list')
         noticeLi.appendChild(noticeRe)
 
@@ -568,7 +568,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const reClose = document.getElementById('re_close')
     const rePop = document.querySelector('.re_pop')
     const registBtn = document.getElementById('re_btn')
-    
 
 
 
@@ -579,7 +578,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-        const reply = document.createElement('div')
+        const reply = document.createElement('li')
         reply.setAttribute('class', 'reply_box')
 
         const replySpan = document.createElement('span')
