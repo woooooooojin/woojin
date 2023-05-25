@@ -268,7 +268,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const Rstars = document.querySelector('.review_star') //사용자가 누르는 별
         const starBox = document.createElement('div')
-        starBox.setAttribute('class', 'inner_stars')//리뷰에 나오는별
+        starBox.setAttribute('class', 'inner_stars') //리뷰에 나오는별
         Li.appendChild(starBox)
         starBox.innerHTML = Rstars.innerHTML //별점 생성 
 
@@ -362,7 +362,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const reviewStar = document.querySelector('.review_star')
     const ratingStars = [...document.getElementsByClassName("star1")]
     const ratingResult = document.querySelector(".rating_result")
-    const rStar = document.querySelectorAll('.rstar')//dom 별
+    const rStar = document.querySelectorAll('.rstar') //dom 별
 
     printRatingResult(ratingResult)
 
@@ -370,7 +370,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const starClassActive = "star1 fas fa-star"
         const starClassUnactive = "star1 far fa-star"
         const starsLength = stars.length
-        let i
+        let i;
         stars.map((star) => {
             star.onclick = () => {
                 i = stars.indexOf(star)
@@ -390,12 +390,12 @@ document.addEventListener('DOMContentLoaded', function () {
         result.textContent = `${num}/5`
     }
 
-   executeRating(ratingStars, ratingResult)
-   
-  
+    executeRating(ratingStars, ratingResult)
+
+
     ///////////////////////////////////////////////////
-    
-    
+
+
 
 
 
@@ -568,14 +568,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const reClose = document.getElementById('re_close')
     const rePop = document.querySelector('.re_pop')
     const registBtn = document.getElementById('re_btn')
-    const noticefor = document.querySelector('.notice_inner')
+    
+
 
 
 
     registBtn.addEventListener('click', function () {
 
-
         const noticeLi = document.querySelector('.Re_list')
+
 
 
         const reply = document.createElement('div')
@@ -604,15 +605,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-
-
-
         replyDel.addEventListener('click', function () {
+
             noticeLi.removeChild(reply)
 
-        })
-
-
+        }) ///자식제거
 
 
 
@@ -620,6 +617,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     })
+
 
     registBtn.addEventListener('click', function () {
         reTxt.value = ''
