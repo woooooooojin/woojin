@@ -105,39 +105,39 @@ document.addEventListener('DOMContentLoaded', () => {
     const recentNo = document.querySelector('.noresearch')
 
     //검색창 검색어 추가/삭제
-    searchInput.addEventListener('change',function(){
+    searchInput.addEventListener('change', function () {
         recentNo.style.display = 'none'
 
         const searchLi = document.createElement('li')
-        searchLi.setAttribute('class','searchli')
+        searchLi.setAttribute('class', 'searchli')
         recentList.appendChild(searchLi)
         searchLi.innerHTML = searchInput.value
         searchInput.value = ''
         searchInput.focus()
 
         const liDel = document.createElement('span')
-        liDel.setAttribute('class','lidel')
+        liDel.setAttribute('class', 'lidel')
         searchLi.appendChild(liDel)
         liDel.innerHTML = 'X'
 
-        liDel.addEventListener('click',function(){
+        liDel.addEventListener('click', function () {
             recentList.removeChild(searchLi)
         })
 
         const researchAllDel = document.querySelector('.delete_history')
-        researchAllDel.addEventListener('click',function(){
+        researchAllDel.addEventListener('click', function () {
 
             recentList.innerHTML = ''
             recentNo.style.display = 'block'
 
         })
 
-        
+
     })
 
 
-    
-    
+
+
 
 
 
@@ -355,236 +355,193 @@ document.addEventListener('DOMContentLoaded', function () {
     })
 
 
+})
 
 
 
-    //주문수량, 가격 event
+// ////////////////별점 리뷰에 들어가는거////////////////////
 
-    const minusBox = document.querySelector('.minus_box')
-    const plusBox = document.querySelector('.plus_box')
-    const cntBox = document.getElementById('cnt_box')
-    const totalPrice = document.querySelector('.total_price span')
+const ratingStars = [...document.querySelectorAll(".star1")];
+const ratingResult = document.querySelector(".rating__result");
 
-    minusBox.addEventListener('click', function () {
+printRatingResult(ratingResult);
 
-        cntBox.value--
-        if (cntBox.value <= 0) {
-            cntBox.value = 1
-        }
-        let result = cntBox.value * 119000
-        totalPrice.innerHTML = result.toLocaleString('ko-KR')
-        // totalPrice.innerHTML = cntBox.value * 119000
-    })
-    plusBox.addEventListener('click', function () {
+function executeRating(stars, result) {
+    const starClassActive = "rating__star fas fa-star";
+    const starClassUnactive = "rating__star far fa-star";
+    const starsLength = stars.length;
+    let i;
+    stars.map((star) => {
+        star.onclick = () => {
+            i = stars.indexOf(star);
 
-        cntBox.value++
-        if (cntBox.value > 20) {
-            alert('수량은 최대 20개 가능합니다.')
-            cntBox.value = '20'
-        }
-        let result = cntBox.value * 119000
-        totalPrice.innerHTML = result.toLocaleString('ko-KR')
-        // totalPrice.innerHTML = cntBox.value * 119000
-
-    })
-
-    cntBox.addEventListener('change', function () {
-        let result = cntBox.value * 119000
-        totalPrice.innerHTML = result.toLocaleString('ko-KR')
-
-        if (cntBox.value <= 0) {
-            cntBox.value = '1'
-            alert('수량은 1개이상 가능합니다.')
-            totalPrice.innerHTML = '119,000'
-        } else if (cntBox.value <= 21) {
-            cntBox.value = '20'
-            alert('수량은 최대 20개까지 가능합니다.')
-        }
-    })
-
-
-
-
-
-    //상품문의 등록
-    const noticeName = document.getElementById('notice_name')
-    const noticeTxt = document.getElementById('notice_txt')
-    const noticeBtn = document.getElementById('notice_btn')
-    const noticeList = document.querySelector('.N_list')
-
-    noticeBtn.addEventListener('click', function () {
-
-        const noticeLi = document.createElement('li')
-        noticeLi.setAttribute('class', 'notice_inner')
-
-        const noticeNum = document.createElement('div')
-        noticeNum.setAttribute('class', 'notice_num')
-        noticeLi.appendChild(noticeNum)
-
-        const noticeNumSpan = document.createElement('span')
-        noticeNumSpan.setAttribute('class', 'notice_num_span')
-        noticeNum.appendChild(noticeNumSpan)
-
-        let Rcnt = 1;
-        const noLis = document.querySelectorAll('.notice_inner')
-
-        function plusCnt() {
-            for (i = 0; i < noLis.length; i++) {
-                Rcnt++
+            if (star.className.indexOf(starClassUnactive) !== -1) {
+                printRatingResult(result, i + 1);
+                for (i; i >= 0; --i) stars[i].className = starClassActive;
+            } else {
+                printRatingResult(result, i);
+                for (i; i < starsLength; ++i) stars[i].className = starClassUnactive;
             }
+        };
+    });
+}
 
-            noticeNumSpan.innerHTML = Rcnt
+function printRatingResult(result, num = 0) {
+    result.textContent = `${num}/5`;
+}
 
+executeRating(ratingStars, ratingResult);
+
+
+
+
+
+
+
+
+//주문수량, 가격 event
+
+const minusBox = document.querySelector('.minus_box')
+const plusBox = document.querySelector('.plus_box')
+const cntBox = document.getElementById('cnt_box')
+const totalPrice = document.querySelector('.total_price span')
+
+minusBox.addEventListener('click', function () {
+
+    cntBox.value--
+    if (cntBox.value <= 0) {
+        cntBox.value = 1
+    }
+    let result = cntBox.value * 119000
+    totalPrice.innerHTML = result.toLocaleString('ko-KR')
+    // totalPrice.innerHTML = cntBox.value * 119000
+})
+plusBox.addEventListener('click', function () {
+
+    cntBox.value++
+    if (cntBox.value > 20) {
+        alert('수량은 최대 20개 가능합니다.')
+        cntBox.value = '20'
+    }
+    let result = cntBox.value * 119000
+    totalPrice.innerHTML = result.toLocaleString('ko-KR')
+    // totalPrice.innerHTML = cntBox.value * 119000
+
+})
+
+cntBox.addEventListener('change', function () {
+    let result = cntBox.value * 119000
+    totalPrice.innerHTML = result.toLocaleString('ko-KR')
+
+    if (cntBox.value <= 0) {
+        cntBox.value = '1'
+        alert('수량은 1개이상 가능합니다.')
+        totalPrice.innerHTML = '119,000'
+    } else if (cntBox.value <= 21) {
+        cntBox.value = '20'
+        alert('수량은 최대 20개까지 가능합니다.')
+    }
+})
+
+
+
+
+
+//상품문의 등록
+const noticeName = document.getElementById('notice_name')
+const noticeTxt = document.getElementById('notice_txt')
+const noticeBtn = document.getElementById('notice_btn')
+const noticeList = document.querySelector('.N_list')
+
+noticeBtn.addEventListener('click', function () {
+
+    const noticeLi = document.createElement('li')
+    noticeLi.setAttribute('class', 'notice_inner')
+
+    const noticeNum = document.createElement('div')
+    noticeNum.setAttribute('class', 'notice_num')
+    noticeLi.appendChild(noticeNum)
+
+    const noticeNumSpan = document.createElement('span')
+    noticeNumSpan.setAttribute('class', 'notice_num_span')
+    noticeNum.appendChild(noticeNumSpan)
+
+    let Rcnt = 1;
+    const noLis = document.querySelectorAll('.notice_inner')
+
+    function plusCnt() {
+        for (i = 0; i < noLis.length; i++) {
+            Rcnt++
         }
-        plusCnt()
 
-        const noticeText = document.createElement('div')
-        noticeText.setAttribute('class', 'notice_txt')
-        noticeLi.appendChild(noticeText)
+        noticeNumSpan.innerHTML = Rcnt
 
-        const textSpan = document.createElement('span')
-        textSpan.setAttribute('class', 'notice_text_span')
-        noticeText.appendChild(textSpan)
+    }
+    plusCnt()
 
-        textSpan.innerHTML = noticeTxt.value
-        noticeTxt.value = ''
+    const noticeText = document.createElement('div')
+    noticeText.setAttribute('class', 'notice_txt')
+    noticeLi.appendChild(noticeText)
 
-        const noticeReBtn = document.createElement('div')
-        noticeReBtn.setAttribute('class', 'notice_rebtn')
-        noticeLi.appendChild(noticeReBtn)
+    const textSpan = document.createElement('span')
+    textSpan.setAttribute('class', 'notice_text_span')
+    noticeText.appendChild(textSpan)
 
-        const noticeBtnSpan = document.createElement('span')
-        noticeReBtn.appendChild(noticeBtnSpan)
-        noticeBtnSpan.innerHTML = '답글달기'
+    textSpan.innerHTML = noticeTxt.value
+    noticeTxt.value = ''
 
-        const noticeId = document.createElement('div')
-        noticeId.setAttribute('class', 'notice_id')
-        noticeLi.appendChild(noticeId)
+    const noticeReBtn = document.createElement('div')
+    noticeReBtn.setAttribute('class', 'notice_rebtn')
+    noticeLi.appendChild(noticeReBtn)
 
+    const noticeBtnSpan = document.createElement('span')
+    noticeReBtn.appendChild(noticeBtnSpan)
+    noticeBtnSpan.innerHTML = '답글달기'
 
+    const noticeId = document.createElement('div')
+    noticeId.setAttribute('class', 'notice_id')
+    noticeLi.appendChild(noticeId)
 
-        const noticeIdSpan = document.createElement('span')
-        noticeIdSpan.setAttribute('class', 'notice_id_span')
-        noticeId.appendChild(noticeIdSpan)
 
-        noticeIdSpan.innerHTML = noticeName.value
-        noticeName.value = ''
 
-        const noticeDate = document.createElement('div')
-        noticeDate.setAttribute('class', 'notice_date')
-        noticeLi.appendChild(noticeDate)
+    const noticeIdSpan = document.createElement('span')
+    noticeIdSpan.setAttribute('class', 'notice_id_span')
+    noticeId.appendChild(noticeIdSpan)
 
-        const noticeDateSpan = document.createElement('span')
-        noticeDateSpan.setAttribute('class', 'notice_date_span')
-        noticeDate.appendChild(noticeDateSpan)
+    noticeIdSpan.innerHTML = noticeName.value
+    noticeName.value = ''
 
-        let nowNoticeDate = new Date().toLocaleDateString();
-        noticeDateSpan.innerHTML = nowNoticeDate
+    const noticeDate = document.createElement('div')
+    noticeDate.setAttribute('class', 'notice_date')
+    noticeLi.appendChild(noticeDate)
 
-        const noticeClose = document.createElement('div')
-        noticeClose.setAttribute('class', 'notice_close')
-        noticeLi.appendChild(noticeClose)
+    const noticeDateSpan = document.createElement('span')
+    noticeDateSpan.setAttribute('class', 'notice_date_span')
+    noticeDate.appendChild(noticeDateSpan)
 
-        const noticeI = document.createElement('i')
-        noticeI.setAttribute('class', 'fas fa-times')
-        noticeClose.appendChild(noticeI)
+    let nowNoticeDate = new Date().toLocaleDateString();
+    noticeDateSpan.innerHTML = nowNoticeDate
 
-        ////re
-        const noticeRe = document.createElement('div')
-        noticeRe.setAttribute('class', 'Re_list')
-        noticeLi.appendChild(noticeRe)
+    const noticeClose = document.createElement('div')
+    noticeClose.setAttribute('class', 'notice_close')
+    noticeLi.appendChild(noticeClose)
 
+    const noticeI = document.createElement('i')
+    noticeI.setAttribute('class', 'fas fa-times')
+    noticeClose.appendChild(noticeI)
 
+    ////re
+    const noticeRe = document.createElement('div')
+    noticeRe.setAttribute('class', 'Re_list')
+    noticeLi.appendChild(noticeRe)
 
 
-        noticeList.appendChild(noticeLi)
 
-        noticeClose.addEventListener('click', function () {
-            noticeList.removeChild(noticeLi)
-        })
 
+    noticeList.appendChild(noticeLi)
 
-
-
-
-
-        const replyPop = document.querySelector('.re_pop')
-
-        noticeReBtn.addEventListener('click', function () {
-            replyPop.style.display = 'block'
-        })
-
-
-
-    })
-
-
-    //답글 추가
-
-    const reTxt = document.getElementById('replyTxt')
-    const n_List = document.querySelector('.notice_list')
-    const reClose = document.getElementById('re_close')
-    const rePop = document.querySelector('.re_pop')
-    const registBtn = document.getElementById('re_btn')
-    const noticefor = document.querySelector('.notice_inner')
-
-
-
-    registBtn.addEventListener('click', function () {
-
-
-        const noticeLi = document.querySelector('.Re_list')
-
-
-        const reply = document.createElement('div')
-        reply.setAttribute('class', 'reply_box')
-
-        const replySpan = document.createElement('span')
-        replySpan.setAttribute('class', 'reply_span')
-        reply.appendChild(replySpan)
-        replySpan.innerHTML = 'ㄴ> 답글 :'
-
-        const replyTxt = document.createElement('span')
-        replyTxt.setAttribute('class', 'reply_txt')
-        reply.appendChild(replyTxt)
-        replyTxt.innerHTML = reTxt.value
-
-        const replyDel = document.createElement('span')
-        replyDel.setAttribute('class', 'reply_del')
-        reply.appendChild(replyDel)
-        replyDel.innerHTML = 'X'
-
-
-        noticeLi.appendChild(reply)
-
-
-
-
-
-
-
-
-
-        replyDel.addEventListener('click', function () {
-            noticeLi.removeChild(reply)
-
-        })
-
-
-
-
-
-
-
-
-    })
-
-    registBtn.addEventListener('click', function () {
-        reTxt.value = ''
-    })
-
-    reClose.addEventListener('click', function () {
-        rePop.style.display = 'none'
+    noticeClose.addEventListener('click', function () {
+        noticeList.removeChild(noticeLi)
     })
 
 
@@ -592,39 +549,67 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-    
+    const replyPop = document.querySelector('.re_pop')
 
-    //장바구니 카트 클릭이벤트
-    const cart2 = document.querySelectorAll('.cart_box')
-    const cartCount = document.querySelector('.count')
-    let cnt = 0
-
-    cart2.forEach((value) => {
-        value.addEventListener('click', function () {
-            cnt++
-            cartCount.innerHTML = cnt
-        })
-    })
-
-    const heart = document.querySelectorAll('.like_box')
-    const heartCnt = document.querySelector('.heart_cnt')
-    let cntheart = 0
-
-    heart.forEach((value) => {
-        value.addEventListener('click', function () {
-            cntheart++
-            heartCnt.innerHTML = cntheart
-        })
+    noticeReBtn.addEventListener('click', function () {
+        replyPop.style.display = 'block'
     })
 
 
 
+})
+
+
+//답글 추가
+
+const reTxt = document.getElementById('replyTxt')
+const n_List = document.querySelector('.notice_list')
+const reClose = document.getElementById('re_close')
+const rePop = document.querySelector('.re_pop')
+const registBtn = document.getElementById('re_btn')
+const noticefor = document.querySelector('.notice_inner')
+
+
+
+registBtn.addEventListener('click', function () {
+
+
+    const noticeLi = document.querySelector('.Re_list')
+
+
+    const reply = document.createElement('div')
+    reply.setAttribute('class', 'reply_box')
+
+    const replySpan = document.createElement('span')
+    replySpan.setAttribute('class', 'reply_span')
+    reply.appendChild(replySpan)
+    replySpan.innerHTML = 'ㄴ> 답글 :'
+
+    const replyTxt = document.createElement('span')
+    replyTxt.setAttribute('class', 'reply_txt')
+    reply.appendChild(replyTxt)
+    replyTxt.innerHTML = reTxt.value
+
+    const replyDel = document.createElement('span')
+    replyDel.setAttribute('class', 'reply_del')
+    reply.appendChild(replyDel)
+    replyDel.innerHTML = 'X'
+
+
+    noticeLi.appendChild(reply)
 
 
 
 
 
 
+
+
+
+    replyDel.addEventListener('click', function () {
+        noticeLi.removeChild(reply)
+
+    })
 
 
 
@@ -634,3 +619,59 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 })
+
+registBtn.addEventListener('click', function () {
+    reTxt.value = ''
+})
+
+reClose.addEventListener('click', function () {
+    rePop.style.display = 'none'
+})
+
+
+
+
+
+
+
+
+//장바구니 카트 클릭이벤트
+const cart2 = document.querySelectorAll('.cart_box')
+const cartCount = document.querySelector('.count')
+let cnt = 0
+
+cart2.forEach((value) => {
+    value.addEventListener('click', function () {
+        cnt++
+        cartCount.innerHTML = cnt
+    })
+})
+
+const heart = document.querySelectorAll('.like_box')
+const heartCnt = document.querySelector('.heart_cnt')
+let cntheart = 0
+
+heart.forEach((value) => {
+    value.addEventListener('click', function () {
+        cntheart++
+        heartCnt.innerHTML = cntheart
+    })
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// })
