@@ -266,29 +266,30 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-
+        const Rstars = document.querySelector('.review_star') //사용자가 누르는 별
         const starBox = document.createElement('div')
-        starBox.setAttribute('class', 'inner_stars')
+        starBox.setAttribute('class', 'inner_stars')//리뷰에 나오는별
         Li.appendChild(starBox)
+        starBox.innerHTML = Rstars.innerHTML //별점 생성 
 
 
         // 별
-        const star1 = document.createElement('i')
-        star1.setAttribute('class', 'far fa-star')
-        starBox.appendChild(star1)
+        // const star1 = document.createElement('i')
+        // star1.setAttribute('class', 'far fa-star rstar')
+        // starBox.appendChild(star1)
 
-        const star2 = document.createElement('i')
-        star2.setAttribute('class', 'far fa-star')
-        starBox.appendChild(star2)
-        const star3 = document.createElement('i')
-        star3.setAttribute('class', 'far fa-star')
-        starBox.appendChild(star3)
-        const star4 = document.createElement('i')
-        star4.setAttribute('class', 'far fa-star')
-        starBox.appendChild(star4)
-        const star5 = document.createElement('i')
-        star5.setAttribute('class', 'far fa-star')
-        starBox.appendChild(star5)
+        // const star2 = document.createElement('i')
+        // star2.setAttribute('class', 'far fa-star rstar')
+        // starBox.appendChild(star2)
+        // const star3 = document.createElement('i')
+        // star3.setAttribute('class', 'far fa-star rstar')
+        // starBox.appendChild(star3)
+        // const star4 = document.createElement('i')
+        // star4.setAttribute('class', 'far fa-star rstar')
+        // starBox.appendChild(star4)
+        // const star5 = document.createElement('i')
+        // star5.setAttribute('class', 'far fa-star rstar')
+        // starBox.appendChild(star5)
 
 
         const txtBox = document.createElement('div')
@@ -356,41 +357,43 @@ document.addEventListener('DOMContentLoaded', function () {
 
     })
 
-    ////별점 추가 리뷰...
+    ////별점 추가 리뷰
     const innerStar = document.querySelectorAll('.inner_stars')
     const reviewStar = document.querySelector('.review_star')
-    const ratingStars = [...document.getElementsByClassName("star1")];
-    const ratingResult = document.querySelector(".rating__result");
+    const ratingStars = [...document.getElementsByClassName("star1")]
+    const ratingResult = document.querySelector(".rating_result")
+    const rStar = document.querySelectorAll('.rstar')//dom 별
 
-    printRatingResult(ratingResult);
+    printRatingResult(ratingResult)
 
     function executeRating(stars, result) {
-        const starClassActive = "star1 fas fa-star";
-        const starClassUnactive = "star1 far fa-star";
-        const starsLength = stars.length;
-        let i;
+        const starClassActive = "star1 fas fa-star"
+        const starClassUnactive = "star1 far fa-star"
+        const starsLength = stars.length
+        let i
         stars.map((star) => {
             star.onclick = () => {
-                i = stars.indexOf(star);
+                i = stars.indexOf(star)
 
                 if (star.className.indexOf(starClassUnactive) !== -1) {
-                    printRatingResult(result, i + 1);
-                    for (i; i >= 0; --i) stars[i].className = starClassActive;
+                    printRatingResult(result, i + 1)
+                    for (i; i >= 0; --i) stars[i].className = starClassActive
                 } else {
                     printRatingResult(result, i);
-                    for (i; i < starsLength; ++i) stars[i].className = starClassUnactive;
+                    for (i; i < starsLength; ++i) stars[i].className = starClassUnactive
                 }
-            };
-        });
+            }
+        })
     }
 
     function printRatingResult(result, num = 0) {
-        result.textContent = `${num}/5`;
+        result.textContent = `${num}/5`
     }
 
-   executeRating(ratingStars, ratingResult);
-
+   executeRating(ratingStars, ratingResult)
    
+  
+    ///////////////////////////////////////////////////
     
     
 
