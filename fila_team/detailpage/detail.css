@@ -1000,6 +1000,14 @@ header:hover a {
     color: #ccc;
     text-align: center;
     line-height: 35px;
+    position: relative;
+}
+
+.rating__result{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(50px)
 }
 /***************************/
 .review_filter{
