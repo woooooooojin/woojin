@@ -1002,7 +1002,9 @@ header:hover a {
     line-height: 35px;
     position: relative;
 }
-
+.fas.fa-star{
+    color: #002053;
+}
 .rating_result{
     position: absolute;
     top: 0;
@@ -1058,7 +1060,6 @@ header:hover a {
 }
 .review_list .review_list_wrap .review{
     width: 100%;
-    height: 80px;
     line-height: 80px;
     /* border-top: 1px solid #ccc; */
     /* border-bottom: 1px solid #ccc; */
@@ -1107,7 +1108,6 @@ header:hover a {
 }
 .notice_list .notice_list_wrap .notice{
     width: 100%;
-    height: 80px;
     line-height: 80px;
 }
 
