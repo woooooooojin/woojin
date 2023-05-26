@@ -822,3 +822,16 @@ const popInfo = document.querySelector('.pop_info')
 closePopInfo.addEventListener('click',function(){
     popInfo.style.display = 'none'
 })
+
+
+
+////////family site location////////
+const family = document.getElementById('family_site')
+family.addEventListener('change',(event)=>{
+
+    let options = event.currentTarget.options 
+    let index = options.selectedIndex
+
+    location.href = options[index].value
+
+})
