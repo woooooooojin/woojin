@@ -1046,6 +1046,11 @@ header:hover a {
     transition: .3s;
     display: block;
 }
+/* .sub_link{
+    width: 100%;
+    height: 100%;
+    display: block;
+} */
 
 .subimg_wrap {
     font-size: 0;
