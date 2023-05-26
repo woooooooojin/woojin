@@ -175,13 +175,10 @@ function madeDiv() {
         //     subDiv.setAttribute('id', 'sub_sort')
 
         // } //아이디값 부여
-        const linkA = document.createElement('a')
-        subDiv.appendChild(linkA)
-        linkA.setAttribute('href', '../detailpage/detail.html')
-        linkA.setAttribute('class', 'sub_link')
+       
 
         const subImgWrap = document.createElement('div')
-        linkA.appendChild(subImgWrap)
+        subDiv.appendChild(subImgWrap)
         subImgWrap.setAttribute('class', 'subimg_wrap')
 
 
@@ -211,18 +208,24 @@ function madeDiv() {
         hoverWrap.appendChild(cart)
 
 
+        //detail link a tag
+        const linkA = document.createElement('a')
+        linkA.setAttribute('href', '../detailpage/detail.html')
+        linkA.setAttribute('class', 'sub_link')
         //img
         const subImg = document.createElement('img')
         subImg.setAttribute('src', subData[i].src)
-        subImgWrap.appendChild(subImg)
+        subImgWrap.appendChild(linkA)
         subImg.setAttribute('class', 'subimg')
+        linkA.appendChild(subImg)
 
+         
 
 
 
         //상품설명
         const itemWrap = document.createElement('div')
-        linkA.appendChild(itemWrap)
+        subDiv.appendChild(itemWrap)
         itemWrap.setAttribute('class', 'item_wrap')
 
         const itemDescWrap = document.createElement('div')
