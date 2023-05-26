@@ -334,10 +334,13 @@ const priceChk05 = document.getElementById('price_chk05')
 const priceChkDefault = document.getElementById('price_chk06')
 
 
+
+
+
 blackColor.addEventListener('click', function () {
     for (let i = 0; i < subData.length; i++) {
         if (subData[i].color === 'black') {
-            itemlist[i].style.display = 'block'
+            itemlist[i].style.display = ''
         } else {
             itemlist[i].style.display = 'none'
         }
@@ -349,7 +352,7 @@ blackColor.addEventListener('click', function () {
 whiteColor.addEventListener('click', function () {
     for (let i = 0; i < subData.length; i++) {
         if (subData[i].color === 'white') {
-            itemlist[i].style.display = 'block'
+            itemlist[i].style.display = ''
         } else {
             itemlist[i].style.display = 'none'
         }
@@ -359,7 +362,7 @@ whiteColor.addEventListener('click', function () {
 grayColor.addEventListener('click', function () {
     for (let i = 0; i < subData.length; i++) {
         if (subData[i].color === 'gray') {
-            itemlist[i].style.display = 'block'
+            itemlist[i].style.display = ''
         } else {
             itemlist[i].style.display = 'none'
         }
@@ -377,7 +380,7 @@ defaultVal.addEventListener('click', function () {
 priceChk01.addEventListener('click', function () {
     for (let i = 0; i < subData.length; i++) {
         if (subData[i].price01 <= 39000) {
-            itemlist[i].style.display = 'block'
+            itemlist[i].style.display = ''
         } else {
             itemlist[i].style.display = 'none'
         }
@@ -389,7 +392,7 @@ priceChk01.addEventListener('click', function () {
 priceChk02.addEventListener('click', function () {
     for (let i = 0; i < subData.length; i++) {
         if (subData[i].price01 >= 39000 && subData[i].price01 <= 49000) {
-            itemlist[i].style.display = 'block'
+            itemlist[i].style.display = ''
         } else {
             itemlist[i].style.display = 'none'
         }
@@ -401,7 +404,7 @@ priceChk02.addEventListener('click', function () {
 priceChk03.addEventListener('click', function () {
     for (let i = 0; i < subData.length; i++) {
         if (subData[i].price01 >= 49000 && subData[i].price01 <= 59000) {
-            itemlist[i].style.display = 'block'
+            itemlist[i].style.display = ''
         } else {
             itemlist[i].style.display = 'none'
         }
@@ -413,7 +416,7 @@ priceChk03.addEventListener('click', function () {
 priceChk04.addEventListener('click', function () {
     for (let i = 0; i < subData.length; i++) {
         if (subData[i].price01 >= 59000 && subData[i].price01 <= 79000) {
-            itemlist[i].style.display = 'block'
+            itemlist[i].style.display = ''
         } else {
             itemlist[i].style.display = 'none'
         }
@@ -425,7 +428,7 @@ priceChk04.addEventListener('click', function () {
 priceChk05.addEventListener('click', function () {
     for (let i = 0; i < subData.length; i++) {
         if (subData[i].price01 >= 79000) {
-            itemlist[i].style.display = 'block'
+            itemlist[i].style.display = ''
         } else {
             itemlist[i].style.display = 'none'
         }
@@ -613,7 +616,6 @@ for(let i = 1; i <= pageCount; i++){
 }// li 생성
 
 const pageCountBtn = paging.querySelectorAll('a')//페이지네이션 a
-console.log(pageCountBtn)
 
 pageCountBtn.forEach((item,idx)=>{
     item.addEventListener('click',(e)=>{

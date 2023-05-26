@@ -461,11 +461,13 @@ header:hover a {
 
 .opt_wrap {
     display: flex;
+    margin-bottom: 10px;
 
 }
 
 .opt_wrap .opt_box1 {
     width: 20%;
+    font-size: 20px;
 }
 
 #filter_chk{
@@ -510,6 +512,8 @@ header:hover a {
     height: 25px;
     outline: none;
     border: 0;
+    font-size: 16px;
+    font-weight: 600;
 
 }
 
