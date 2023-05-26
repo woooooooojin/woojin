@@ -262,39 +262,39 @@ document.addEventListener('DOMContentLoaded', () => {
     const recentNo = document.querySelector('.noresearch')
 
     //검색창 검색어 추가/삭제
-    searchInput.addEventListener('change',function(){
+    searchInput.addEventListener('change', function () {
         recentNo.style.display = 'none'
 
         const searchLi = document.createElement('li')
-        searchLi.setAttribute('class','searchli')
+        searchLi.setAttribute('class', 'searchli')
         recentList.appendChild(searchLi)
         searchLi.innerHTML = searchInput.value
         searchInput.value = ''
         searchInput.focus()
 
         const liDel = document.createElement('span')
-        liDel.setAttribute('class','lidel')
+        liDel.setAttribute('class', 'lidel')
         searchLi.appendChild(liDel)
         liDel.innerHTML = 'X'
 
-        liDel.addEventListener('click',function(){
+        liDel.addEventListener('click', function () {
             recentList.removeChild(searchLi)
         })
 
         const researchAllDel = document.querySelector('.delete_history')
-        researchAllDel.addEventListener('click',function(){
+        researchAllDel.addEventListener('click', function () {
 
             recentList.innerHTML = ''
             recentNo.style.display = 'block'
 
         })
 
-        
+
     })
 
 
-    
-    
+
+
 
 
 
@@ -311,138 +311,241 @@ document.addEventListener('DOMContentLoaded', () => {
 const tshirt = document.getElementById('tshirt')
 const online = document.getElementById('online')
 const targa = document.getElementById('targa')
+const tennis = document.getElementById('tennis')
+const running = document.getElementById('running')
+
 const slides = document.querySelectorAll('.rank_slide img')
 
 const rankTit = document.querySelector('.rank_text h4')
 const rankList = document.querySelectorAll('.ranklist li')
-const tennis = document.getElementById('tennis')
-const running = document.getElementById('running')
 
 const hoverTxt = document.querySelectorAll('.hovertit')
 
-tshirt.addEventListener('click', function () {
 
-    slides[0].setAttribute('src', './img/swiper_img/01.jpg')
-    slides[1].setAttribute('src', './img/swiper_img/02.jpg')
-    slides[2].setAttribute('src', './img/swiper_img/03.jpg')
-    slides[3].setAttribute('src', './img/swiper_img/04.jpg')
-    slides[4].setAttribute('src', './img/swiper_img/05.jpg')
-    slides[5].setAttribute('src', './img/swiper_img/06.jpg')
+
+
+import {
+    rankSwiperTshirt,
+    rankSwiperTarga,
+    rankSwiperOnline,
+    rankSwiperTennis,
+    rankSwiperRunning
+} from "./rankSwiperData.js"
+
+tshirt.addEventListener('click', () => {
 
     rankTit.innerHTML = '#티셔츠 & 팬츠'
 
-    const tarArr = ['컴포트핏 인터네셔널 반팔 맨투맨', '컴포트핏 조거팬츠', '이지팬츠', '베이직 리니어 반팔티', '3D 빅로고 반팔티', '컴포트핏 인터네셔널 로고 반팔티']
-    for (let i in tarArr) {
-        for (let i = 0; i < rankList.length; i++) {
-            rankList[i].innerHTML = tarArr[i]
-
+    rankSwiperTshirt.forEach((value,index) => {
+        for (let i = 0; i < rankSwiperTshirt.length; i++) {
+            slides[index].setAttribute('src', value.src)
+            rankList[index].innerHTML = value.name
+            hoverTxt[index].innerHTML = value.name
         }
-    }
+        
 
-    const hoverArr = ['베이직 리니어 반팔티', '3D 빅로고 반팔티', '컴포트핏 인터네셔널 로고 반팔티', '컴포트핏 인터네셔널 반팔 맨투맨', '컴포트핏 조거팬츠', '이지팬츠']
-    for (let i = 0; i < hoverTxt.length; i++) {
-        hoverTxt[i].innerHTML = hoverArr[i]
-    }
+    })
 
 
+})//tshirt 클릭이벤트
 
+targa.addEventListener('click', () => {
 
-
-})
-
-
-targa.addEventListener('click', function () {
-
-    slides[0].setAttribute('src', './img/swiper_img/2-01.jpg')
-    slides[1].setAttribute('src', './img/swiper_img/2-02.jpg')
-    slides[2].setAttribute('src', './img/swiper_img/2-03.jpg')
-    slides[3].setAttribute('src', './img/swiper_img/2-04.jpg')
-    slides[4].setAttribute('src', './img/swiper_img/2-05.jpg')
-    slides[5].setAttribute('src', './img/swiper_img/2-06.jpg')
     rankTit.innerHTML = '#타르가'
 
-    const tarArr = ['타르가 클럽', '타르가 88/22', '타르가88/22', '타르가클래식', '타르가 클럽 LT', '타르가 OG 1988']
-    for (let i in tarArr) {
-        for (let i = 0; i < rankList.length; i++) {
-            rankList[i].innerHTML = tarArr[i]
+    rankSwiperTarga.forEach((value,index) => {
+        for (let i = 0; i < rankSwiperTarga.length; i++) {
+            slides[index].setAttribute('src', value.src)
+            rankList[index].innerHTML = value.name
+            hoverTxt[index].innerHTML = value.name
         }
-    }
+        
 
-    const hoverArr = ['타르가클래식', '타르가 클럽 LT', '타르가 OG 1988', '타르가 클럽', '타르가 88/22', '타르가88/22']
-    for (let i = 0; i < hoverTxt.length; i++) {
-        hoverTxt[i].innerHTML = hoverArr[i]
-    }
+    })
 
-})
 
-online.addEventListener('click', function () {
+})//targa 클릭이벤트
 
-    slides[0].setAttribute('src', './img/swiper_img/3-04.jpg')
-    slides[1].setAttribute('src', './img/swiper_img/3-05.jpg')
-    slides[2].setAttribute('src', './img/swiper_img/3-06.jpg')
-    slides[3].setAttribute('src', './img/swiper_img/3-01.jpg')
-    slides[4].setAttribute('src', './img/swiper_img/3-02.jpg')
-    slides[5].setAttribute('src', './img/swiper_img/3-03.jpg')
+
+
+online.addEventListener('click', () => {
+
     rankTit.innerHTML = '#온라인단독'
 
-
-    const tarArr = ['브이 배색 경량자켓', '컬러블로킹 아노락', '테니스 하프팬츠', '스포츠라이프 하프팬츠', '세리프 로고 티셔츠', '러팅 반팔 티셔츠']
-    for (let i in tarArr) {
-        for (let i = 0; i < rankList.length; i++) {
-            rankList[i].innerHTML = tarArr[i]
+    rankSwiperOnline.forEach((value,index) => {
+        for (let i = 0; i < rankSwiperOnline.length; i++) {
+            slides[index].setAttribute('src', value.src)
+            rankList[index].innerHTML = value.name
+            hoverTxt[index].innerHTML = value.name
         }
-    }
+        
 
-    const hoverArr = ['스포츠라이프 하프팬츠', '세리프 로고 티셔츠', '러팅 반팔 티셔츠', '브이 배색 경량자켓', '컬러블로킹 아노락', '테니스 하프팬츠']
-    for (let i = 0; i < hoverTxt.length; i++) {
-        hoverTxt[i].innerHTML = hoverArr[i]
-    }
-})
+    })
 
-tennis.addEventListener('click', function () {
-    slides[0].setAttribute('src', './img/swiper_img/4-04.jpg')
-    slides[1].setAttribute('src', './img/swiper_img/4-05.jpg')
-    slides[2].setAttribute('src', './img/swiper_img/4-06.jpg')
-    slides[3].setAttribute('src', './img/swiper_img/4-01.jpg')
-    slides[4].setAttribute('src', './img/swiper_img/4-02.jpg')
-    slides[5].setAttribute('src', './img/swiper_img/4-03.jpg')
+
+})//online 클릭이벤트
+
+tennis.addEventListener('click', () => {
+
     rankTit.innerHTML = '#테니스'
 
-    const tarArr = ['헤리티지 집업', '테니스 투어백', '뉴 헤리티지 집업', '헤리티지 카라티셔츠', '엑실러스 T9', '테니스 파이핑 자켓']
-    for (let i in tarArr) {
-        for (let i = 0; i < rankList.length; i++) {
-            rankList[i].innerHTML = tarArr[i]
+    rankSwiperTennis.forEach((value,index) => {
+        for (let i = 0; i < rankSwiperTennis.length; i++) {
+            slides[index].setAttribute('src', value.src)
+            rankList[index].innerHTML = value.name
+            hoverTxt[index].innerHTML = value.name
         }
-    }
+        
 
-    const hoverArr = ['헤리티지 카라티셔츠', '엑실러스 T9', '테니스 파이핑 자켓', '헤리티지 집업', '테니스 투어백', '뉴 헤리티지 집업']
-    for (let i = 0; i < hoverTxt.length; i++) {
-        hoverTxt[i].innerHTML = hoverArr[i]
-    }
+    })
 
-})
 
-running.addEventListener('click', function () {
-    slides[0].setAttribute('src', './img/swiper_img/5-04.jpg')
-    slides[1].setAttribute('src', './img/swiper_img/5-05.jpg')
-    slides[2].setAttribute('src', './img/swiper_img/5-06.jpg')
-    slides[3].setAttribute('src', './img/swiper_img/5-01.jpg')
-    slides[4].setAttribute('src', './img/swiper_img/5-02.jpg')
-    slides[5].setAttribute('src', './img/swiper_img/5-03.jpg')
-    rankTit.innerHTML = '#런닝화'
+})//tennis 클릭이벤트
 
-    const tarArr = ['휠라레이서 L7', '휠라레이서 L8', '휠라레이서 L9', '플로트 프라임', '플로트 엘리트', '플로트 맥시']
-    for (let i in tarArr) {
-        for (let i = 0; i < rankList.length; i++) {
-            rankList[i].innerHTML = tarArr[i]
+running.addEventListener('click', () => {
+
+    rankTit.innerHTML = '#러닝'
+
+    rankSwiperRunning.forEach((value,index) => {
+        for (let i = 0; i < rankSwiperRunning.length; i++) {
+            slides[index].setAttribute('src', value.src)
+            rankList[index].innerHTML = value.name
+            hoverTxt[index].innerHTML = value.name
         }
-    }
+        
 
-    const hoverArr = ['플로트 프라임', '플로트 엘리트', '플로트 맥시', '휠라레이서 L7', '휠라레이서 L8', '휠라레이서 L9']
-    for (let i = 0; i < hoverTxt.length; i++) {
-        hoverTxt[i].innerHTML = hoverArr[i]
-    }
-})
+    })
+
+
+})//tennis 클릭이벤트
+
+
+
+//밑에 배열함수와 더러운코드들을 위에 모듈데이터로 생성후 export import 시켜서 foreach 사용하여 처리함.
+
+// tshirt.addEventListener('click', function () {
+
+//     slides[0].setAttribute('src', './img/swiper_img/01.jpg')
+//     slides[1].setAttribute('src', './img/swiper_img/02.jpg')
+//     slides[2].setAttribute('src', './img/swiper_img/03.jpg')
+//     slides[3].setAttribute('src', './img/swiper_img/04.jpg')
+//     slides[4].setAttribute('src', './img/swiper_img/05.jpg')
+//     slides[5].setAttribute('src', './img/swiper_img/06.jpg')
+
+//     rankTit.innerHTML = '#티셔츠 & 팬츠'
+
+//     const tArr = ['컴포트핏 인터네셔널 반팔 맨투맨', '컴포트핏 조거팬츠', '이지팬츠', '베이직 리니어 반팔티', '3D 빅로고 반팔티', '컴포트핏 인터네셔널 로고 반팔티']
+//     for (let i in tArr) {
+//         for (let i = 0; i < rankList.length; i++) {
+//             rankList[i].innerHTML = tArr[i]
+
+//         }
+//     }
+
+//     const hoverArr = ['베이직 리니어 반팔티', '3D 빅로고 반팔티', '컴포트핏 인터네셔널 로고 반팔티', '컴포트핏 인터네셔널 반팔 맨투맨', '컴포트핏 조거팬츠', '이지팬츠']
+//     for (let i = 0; i < hoverTxt.length; i++) {
+//         hoverTxt[i].innerHTML = hoverArr[i]
+//     }
+
+
+
+
+
+// })
+
+
+// targa.addEventListener('click', function () {
+
+//     slides[0].setAttribute('src', './img/swiper_img/2-01.jpg')
+//     slides[1].setAttribute('src', './img/swiper_img/2-02.jpg')
+//     slides[2].setAttribute('src', './img/swiper_img/2-03.jpg')
+//     slides[3].setAttribute('src', './img/swiper_img/2-04.jpg')
+//     slides[4].setAttribute('src', './img/swiper_img/2-05.jpg')
+//     slides[5].setAttribute('src', './img/swiper_img/2-06.jpg')
+//     rankTit.innerHTML = '#타르가'
+
+//     const tarArr = ['타르가 클럽', '타르가 88/22', '타르가88/22', '타르가클래식', '타르가 클럽 LT', '타르가 OG 1988']
+//     for (let i in tarArr) {
+//         for (let i = 0; i < rankList.length; i++) {
+//             rankList[i].innerHTML = tarArr[i]
+//         }
+//     }
+
+//     const hoverArr = ['타르가클래식', '타르가 클럽 LT', '타르가 OG 1988', '타르가 클럽', '타르가 88/22', '타르가88/22']
+//     for (let i = 0; i < hoverTxt.length; i++) {
+//         hoverTxt[i].innerHTML = hoverArr[i]
+//     }
+
+// })
+
+// online.addEventListener('click', function () {
+
+//     slides[0].setAttribute('src', './img/swiper_img/3-04.jpg')
+//     slides[1].setAttribute('src', './img/swiper_img/3-05.jpg')
+//     slides[2].setAttribute('src', './img/swiper_img/3-06.jpg')
+//     slides[3].setAttribute('src', './img/swiper_img/3-01.jpg')
+//     slides[4].setAttribute('src', './img/swiper_img/3-02.jpg')
+//     slides[5].setAttribute('src', './img/swiper_img/3-03.jpg')
+//     rankTit.innerHTML = '#온라인단독'
+
+
+//     const tarArr = ['브이 배색 경량자켓', '컬러블로킹 아노락', '테니스 하프팬츠', '스포츠라이프 하프팬츠', '세리프 로고 티셔츠', '러팅 반팔 티셔츠']
+//     for (let i in tarArr) {
+//         for (let i = 0; i < rankList.length; i++) {
+//             rankList[i].innerHTML = tarArr[i]
+//         }
+//     }
+
+//     const hoverArr = ['스포츠라이프 하프팬츠', '세리프 로고 티셔츠', '러팅 반팔 티셔츠', '브이 배색 경량자켓', '컬러블로킹 아노락', '테니스 하프팬츠']
+//     for (let i = 0; i < hoverTxt.length; i++) {
+//         hoverTxt[i].innerHTML = hoverArr[i]
+//     }
+// })
+
+// tennis.addEventListener('click', function () {
+//     slides[0].setAttribute('src', './img/swiper_img/4-04.jpg')
+//     slides[1].setAttribute('src', './img/swiper_img/4-05.jpg')
+//     slides[2].setAttribute('src', './img/swiper_img/4-06.jpg')
+//     slides[3].setAttribute('src', './img/swiper_img/4-01.jpg')
+//     slides[4].setAttribute('src', './img/swiper_img/4-02.jpg')
+//     slides[5].setAttribute('src', './img/swiper_img/4-03.jpg')
+//     rankTit.innerHTML = '#테니스'
+
+//     const tarArr = ['헤리티지 집업', '테니스 투어백', '뉴 헤리티지 집업', '헤리티지 카라티셔츠', '엑실러스 T9', '테니스 파이핑 자켓']
+//     for (let i in tarArr) {
+//         for (let i = 0; i < rankList.length; i++) {
+//             rankList[i].innerHTML = tarArr[i]
+//         }
+//     }
+
+//     const hoverArr = ['헤리티지 카라티셔츠', '엑실러스 T9', '테니스 파이핑 자켓', '헤리티지 집업', '테니스 투어백', '뉴 헤리티지 집업']
+//     for (let i = 0; i < hoverTxt.length; i++) {
+//         hoverTxt[i].innerHTML = hoverArr[i]
+//     }
+
+// })
+
+// running.addEventListener('click', function () {
+//     slides[0].setAttribute('src', './img/swiper_img/5-04.jpg')
+//     slides[1].setAttribute('src', './img/swiper_img/5-05.jpg')
+//     slides[2].setAttribute('src', './img/swiper_img/5-06.jpg')
+//     slides[3].setAttribute('src', './img/swiper_img/5-01.jpg')
+//     slides[4].setAttribute('src', './img/swiper_img/5-02.jpg')
+//     slides[5].setAttribute('src', './img/swiper_img/5-03.jpg')
+//     rankTit.innerHTML = '#런닝화'
+
+//     const tarArr = ['휠라레이서 L7', '휠라레이서 L8', '휠라레이서 L9', '플로트 프라임', '플로트 엘리트', '플로트 맥시']
+//     for (let i in tarArr) {
+//         for (let i = 0; i < rankList.length; i++) {
+//             rankList[i].innerHTML = tarArr[i]
+//         }
+//     }
+
+//     const hoverArr = ['플로트 프라임', '플로트 엘리트', '플로트 맥시', '휠라레이서 L7', '휠라레이서 L8', '휠라레이서 L9']
+//     for (let i = 0; i < hoverTxt.length; i++) {
+//         hoverTxt[i].innerHTML = hoverArr[i]
+//     }
+// })
 
 
 
@@ -717,49 +820,49 @@ heart.forEach((value) => {
 const snsEls = document.querySelectorAll('.sns_box')
 // const mgzEls = document.querySelectorAll('.magazine_wrap')
 
-window.addEventListener('scroll',function(){
+window.addEventListener('scroll', function () {
 
-    if(window.scrollY > 4900){
+    if (window.scrollY > 4900) {
 
-       
 
-        gsap.to(snsEls[0],0.3,{
-            translateY:0,
+
+        gsap.to(snsEls[0], 0.3, {
+            translateY: 0,
         })
-        gsap.to(snsEls[1],0.6,{
-            translateY:0,
-
-        })
-        gsap.to(snsEls[2],0.9,{
-            translateY:0,
+        gsap.to(snsEls[1], 0.6, {
+            translateY: 0,
 
         })
-        gsap.to(snsEls[3],1.2,{
-            translateY:0,
+        gsap.to(snsEls[2], 0.9, {
+            translateY: 0,
 
         })
-
-        gsap.to(snsEls[4],0.3,{
-            translateY:0,
+        gsap.to(snsEls[3], 1.2, {
+            translateY: 0,
 
         })
 
-        gsap.to(snsEls[5],0.6,{
-            translateY:0,
+        gsap.to(snsEls[4], 0.3, {
+            translateY: 0,
 
         })
 
-        gsap.to(snsEls[6],0.9,{
-            translateY:0,
+        gsap.to(snsEls[5], 0.6, {
+            translateY: 0,
 
         })
 
-        gsap.to(snsEls[7],1.2,{
-            translateY:0,
+        gsap.to(snsEls[6], 0.9, {
+            translateY: 0,
 
         })
 
-       
+        gsap.to(snsEls[7], 1.2, {
+            translateY: 0,
+
+        })
+
+
 
     }
 
@@ -788,25 +891,25 @@ window.addEventListener('scroll',function(){
 const mgz01 = document.querySelectorAll('.mgz_box')
 const mgzSection = document.querySelector('.magazine_section')
 
-window.addEventListener('scroll',function(){
+window.addEventListener('scroll', function () {
 
-    if(window.scrollY > 3600){
+    if (window.scrollY > 3600) {
 
-       
 
-        gsap.to(mgz01[0],0.3,{
-            translateX:0,
+
+        gsap.to(mgz01[0], 0.3, {
+            translateX: 0,
         })
-        gsap.to(mgz01[1],0.6,{
-            translateX:0,
-
-        })
-        gsap.to(mgz01[2],0.9,{
-            translateX:0,
+        gsap.to(mgz01[1], 0.6, {
+            translateX: 0,
 
         })
-        gsap.to(mgz01[3],1.2,{
-            translateX:0,
+        gsap.to(mgz01[2], 0.9, {
+            translateX: 0,
+
+        })
+        gsap.to(mgz01[3], 1.2, {
+            translateX: 0,
 
         })
 
@@ -819,7 +922,7 @@ window.addEventListener('scroll',function(){
 const closePopInfo = document.querySelector('.close_pop_info')
 const popInfo = document.querySelector('.pop_info')
 
-closePopInfo.addEventListener('click',function(){
+closePopInfo.addEventListener('click', function () {
     popInfo.style.display = 'none'
 })
 
@@ -827,9 +930,9 @@ closePopInfo.addEventListener('click',function(){
 
 ////////family site location////////
 const family = document.getElementById('family_site')
-family.addEventListener('change',(event)=>{
+family.addEventListener('change', (event) => {
 
-    let options = event.currentTarget.options 
+    let options = event.currentTarget.options
     let index = options.selectedIndex
 
     location.href = options[index].value

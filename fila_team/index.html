@@ -24,7 +24,7 @@
 
 
     <!--user js-->
-    <script src="./js/main.js" defer></script>
+    <script type="module" src="./js/main.js" defer></script>
     <script src="./js/countdown.js" defer></script>
     <!--countdown js-->
 
@@ -798,12 +798,12 @@
                     <div class="rank_text">
                         <h4>#티셔츠 & 팬츠</h4>
                         <ul class="ranklist">
-                            <li class="on_li">컴포트핏 인터네셔널 반팔 맨투맨</li>
-                            <li>컴포트핏 조거팬츠</li>
-                            <li>이지팬츠</li>
-                            <li>베이직 리니어 반팔티</li>
-                            <li>3D 빅로고 반팔티</li>
-                            <li>컴포트핏 인터네셔널 로고 반팔티</li>
+                            <li class="on_li" id="rankidx">컴포트핏 인터네셔널 반팔 맨투맨</li>
+                            <li id="rankidx">컴포트핏 조거팬츠</li>
+                            <li id="rankidx">이지팬츠</li>
+                            <li id="rankidx">베이직 리니어 반팔티</li>
+                            <li id="rankidx">3D 빅로고 반팔티</li>
+                            <li id="rankidx">컴포트핏 인터네셔널 로고 반팔티</li>
 
 
 
@@ -1902,8 +1902,10 @@
                                         <option>Family Site</option>
                                         <option value="https://www.keds.co.kr/main/main.asp">KEDS 온라인스토어</option>
                                         <option value="zooyork.net/main/main.asp">ZooYork 온라인스토어</option>
-                                        <option value="https://buyer.nicedocu.com/web/buyer/main/index.jsp">FILA 입찰공고</option>
-                                        <option value="https://www.filaholdings.com/kr/main/index.asp">FILA Holdings</option>
+                                        <option value="https://buyer.nicedocu.com/web/buyer/main/index.jsp">FILA 입찰공고
+                                        </option>
+                                        <option value="https://www.filaholdings.com/kr/main/index.asp">FILA Holdings
+                                        </option>
                                     </select>
                                 </li>
                             </ul>
@@ -2064,7 +2066,7 @@
 
             <p>서브페이지(전체상품) 경로 : nav > women, men, kids <br />하위메뉴에서 전체메뉴 클릭 </p><br />
             <p>서브페이지2(onepage) 경로 : nav > new & featured <br />하위메뉴에서 영어로된 제목 클릭 </p><br />
-            <p>디테일페이지 경로 : 메인에서 랭킹 스와이퍼와 신제품 스와이퍼 안의<br/> 상품이미지 클릭</p><br />
+            <p>디테일페이지 경로 : 메인에서 랭킹 스와이퍼와 신제품 스와이퍼 안의<br /> 상품이미지 클릭</p><br />
 
         </div>
         <div class="close_pop_info">
@@ -2196,6 +2198,7 @@
 
 
                 }
+                
 
             }
 
@@ -2208,12 +2211,27 @@
             swiper_rank.slideToLoop(idx); //
         });
 
+        ///나중에 풀기 위에거
+
 
         // rankText.click(function () {
         //     let idx = $(this).index();
         //     swiper_rank.slideTo(idx + 1 ,1000,false);
 
         // }); // index 값 찾기
+        
+
+        
+        // const rankIdx = document.getElementById('rankidx')
+        // const rankList = document.querySelectorAll('.ranklist li')
+        // const slideIdx = document.querySelectorAll('.swiper_rank .swiper-slide')
+        // rankIdx.addEventListener('click', function () {
+
+           
+        //     rankList.forEach((value, idx) => {
+        //         swiper_rank.slideTo(value[idx])
+        //     })
+        // })
     </script>
 
     <!--rank swiper-->
