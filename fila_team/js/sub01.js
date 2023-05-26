@@ -599,8 +599,8 @@ heart.forEach((value) => {
 
 
 //paging
-const showPerPage = 20; 
-const subItems = document.querySelectorAll('.subBox')
+const showPerPage = 20; //화면에 보여질 개수
+const subItems = document.querySelectorAll('.subBox') 
 const numOfContent = subItems.length; // 컨텐츠 개수
 const pageCount = Math.ceil(numOfContent / showPerPage); //페이지 버튼 개수
 
