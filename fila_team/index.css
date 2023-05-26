@@ -1646,7 +1646,9 @@ header:hover a {
     margin-left: 40px;
     position: relative;
     margin-bottom: 40px;
-    /* transition: .5s; */
+    transition: .3s;
+    opacity: 0;
+
 }
 .sns_wrap .sns_box:hover{
     box-shadow: 0 0 20px black;
@@ -1770,29 +1772,29 @@ header:hover a {
 } */
 .sns_wrap{overflow: hidden;}
 .sbox01{
-    transform: translateY(800px);
+    transform: translateY(1000px);
 }
 
 .sbox02{
-    transform: translateY(800px);
+    transform: translateY(1000px);
 }
 .sbox03{
-    transform: translateY(800px);
+    transform: translateY(1000px);
 }
 .sbox04{
-    transform: translateY(800px);
+    transform: translateY(1000px);
 }
 .sbox05{
-    transform: translateY(-800px);
+    transform: translateY(-1000px);
 }
 .sbox06{
-    transform: translateY(-800px);
+    transform: translateY(-1000px);
 }
 .sbox07{
-    transform: translateY(-800px);
+    transform: translateY(-1000px);
 }
 .sbox08{
-    transform: translateY(-800px);
+    transform: translateY(-1000px);
 }
 /*********footer********/
 footer{
