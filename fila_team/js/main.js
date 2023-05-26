@@ -714,18 +714,66 @@ heart.forEach((value) => {
 
 
 
-const snsEls = document.querySelectorAll('.sns_wrap')
+const snsEls = document.querySelectorAll('.sns_box')
 // const mgzEls = document.querySelectorAll('.magazine_wrap')
 
-snsEls.forEach((snsEl) => {
-    new ScrollMagic
-        .Scene({
-            triggerElement: snsEl,
-            triggerHook: 0.3
+window.addEventListener('scroll',function(){
+
+    if(window.scrollY > 4900){
+
+       
+
+        gsap.to(snsEls[0],0.3,{
+            translateY:0,
         })
-        .setClassToggle(snsEl, 'show')
-        .addTo(new ScrollMagic.Controller)
+        gsap.to(snsEls[1],0.6,{
+            translateY:0,
+
+        })
+        gsap.to(snsEls[2],0.9,{
+            translateY:0,
+
+        })
+        gsap.to(snsEls[3],1.2,{
+            translateY:0,
+
+        })
+
+        gsap.to(snsEls[4],0.3,{
+            translateY:0,
+
+        })
+
+        gsap.to(snsEls[5],0.6,{
+            translateY:0,
+
+        })
+
+        gsap.to(snsEls[6],0.9,{
+            translateY:0,
+
+        })
+
+        gsap.to(snsEls[7],1.2,{
+            translateY:0,
+
+        })
+
+       
+
+    }
+
 })
+
+// snsEls.forEach((snsEl) => {
+//     new ScrollMagic
+//         .Scene({
+//             triggerElement: snsEl,
+//             triggerHook: 0.3
+//         })
+//         .setClassToggle(snsEl, 'show')
+//         .addTo(new ScrollMagic.Controller)
+// })
 
 // mgzEls.forEach((mgzEl) => {
 //     new ScrollMagic
@@ -743,6 +791,8 @@ const mgzSection = document.querySelector('.magazine_section')
 window.addEventListener('scroll',function(){
 
     if(window.scrollY > 3600){
+
+       
 
         gsap.to(mgz01[0],0.3,{
             translateX:0,
