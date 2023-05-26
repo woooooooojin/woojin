@@ -514,16 +514,16 @@ const wrapping = document.querySelector('.sublist_wrap')
 
 grid01.addEventListener('click', function () {
 
-    wrapping.classList.add('gridchange02')
-    wrapping.classList.remove('gridchange01')
+    wrapping.classList.add('gridchange01')
+    wrapping.classList.remove('gridchange02')
     grid02.style.color = '#ccc'
     grid01.style.color = 'black'
 
 })
 
 grid02.addEventListener('click', function () {
-    wrapping.classList.add('gridchange01')
-    wrapping.classList.remove('gridchange02')
+    wrapping.classList.add('gridchange02')
+    wrapping.classList.remove('gridchange01')
     grid02.style.color = 'black'
     grid01.style.color = '#ccc'
 
