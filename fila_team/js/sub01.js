@@ -593,3 +593,58 @@ heart.forEach((value) => {
         heartCnt.innerHTML = cntheart
     })
 })
+
+
+
+
+
+//paging
+const showPerPage = 20; 
+const subItems = document.querySelectorAll('.subBox')
+const numOfContent = subItems.length; // 컨텐츠 개수
+const pageCount = Math.ceil(numOfContent / showPerPage); //페이지 버튼 개수
+
+
+
+let paging = document.querySelector('.paging_ex')//page 들어갈곳
+for(let i = 1; i <= pageCount; i++){
+    paging.innerHTML += `<li><a href="#!">${i}</a></li>`
+
+}// li 생성
+
+const pageCountBtn = paging.querySelectorAll('a')//페이지네이션 a
+console.log(pageCountBtn)
+
+pageCountBtn.forEach((item,idx)=>{
+    item.addEventListener('click',(e)=>{
+        e.preventDefault()
+
+        //출력
+        displayItem(idx);
+    })
+
+})
+
+
+function displayItem(idx){
+    let start = idx *  showPerPage  // 20개 기준 idx = 0 * 20 = 0, idx=1 * 20 =20 ,,, 
+    let end = start + showPerPage  // 20개 기준 start = 20, 40 , 60
+    let subArr = [...subItems] //새로운 배열로 만듬 console에 찍히는 nodelist는 slice 못씀
+
+    for(let val of subArr){
+        val.style.display = 'none'
+    }
+
+    let newSub = subArr.slice(start, end) //새로운 배열로 만듬, start ~ end 구간 slice
+
+    for(let val of newSub){
+        val.style.display = ''
+    }
+    for(let value of pageCountBtn){
+        value.classList.remove('active')
+        
+    }
+    pageCountBtn[idx].classList.add('active')
+}//dispay item func
+displayItem(0);
+

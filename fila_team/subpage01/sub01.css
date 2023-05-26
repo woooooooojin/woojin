@@ -1163,6 +1163,35 @@ header:hover a {
 }
 
 
+
+/*********paging************/
+
+.paging_ex{
+    display: flex;
+    width: 500px;
+    height: 30px;
+     margin: 0 auto;
+     justify-content: center;
+}
+
+.paging_ex li{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #ccc;
+    font-size: 18px;
+    text-align: center;
+    margin: 0 5px;
+}
+.paging_ex li a.active{
+    background-color: #002053;
+    color: #fff;
+}
+.paging_ex li a{
+    width: 100%;
+    display: block;
+    transition: .3s;
+}
 /*********footer********/
 footer{
     width: 100%;
