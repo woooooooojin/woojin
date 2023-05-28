@@ -739,13 +739,13 @@ imgBtn.addEventListener('click', () => {
     photoImg.src = URL.createObjectURL(inputFile.files[0])
 
     photoList.appendChild(lis)
+    labelName.textContent = '사진 업로드 click !'
 
 })
 
 inputFile.addEventListener('change', () => {
 
-        if (inputFile.files[0]) {
+        // if (inputFile.files[0]) {
             labelName.textContent = inputFile.files[0].name
-
-        }
+        // }
 })
