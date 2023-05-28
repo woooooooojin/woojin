@@ -707,3 +707,34 @@ document.addEventListener('DOMContentLoaded', function () {
 // }
 
 // executeRating(ratingStars, ratingResult);
+
+
+
+
+
+
+///photo review
+
+
+
+
+const inputFile = document.getElementById('input_file')
+let imgsrc = document.querySelector('.img_wrap img')
+const imgBtn = document.querySelector('.upload')
+const labelName = document.getElementById('label_name')
+const photoLi = document.querySelector('.photolist li')
+
+imgBtn.addEventListener('click', () => {
+    imgsrc.src = URL.createObjectURL(inputFile.files[0])
+    photoLi.style.opacity = 1
+
+})
+
+inputFile.addEventListener('change', () => {
+
+    if (inputFile.files[0]) {
+        labelName.textContent = inputFile.files[0].name
+
+    }
+
+})

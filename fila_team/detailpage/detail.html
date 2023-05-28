@@ -1572,23 +1572,36 @@
             </div>
 
             <form method="post" enctype="multipart/form-data">
-                <input type="file" id="input_file" name="input_file" class="imgfile">
+                <input type="file" accept="image/*" id="input_file" name="input_file" class="imgfile">
 
                 <div class="up_label_wrap">
                     <span>File Name : </span>
-                    <label for="input_file" name="input_file">사진 업로드 click !</label>
-                    <button class="upload">리뷰등록</button>
+                    <label for="input_file" id="label_name" name="input_file">사진 업로드 click !</label>
+                    <button type="button" class="upload">리뷰등록</button>
 
-                </div><!--label wrap-->
+                </div>
+                <!--label wrap-->
 
             </form>
 
+
             <div class="photo_list_wrap">
+
+
+
                 <ul class="photolist">
-                    
+                    <li>
+                        <div class="img_wrap">
+                            <img src="img.jpg" alt="img">
+                        </div>
+
+                    </li>
+
+
                 </ul>
 
-            </div><!--photolist end-->
+            </div>
+            <!--photolist end-->
 
 
         </div>
