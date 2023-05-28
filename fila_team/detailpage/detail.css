@@ -1270,7 +1270,7 @@ header:hover a {
     background-color: #002053;
     color: #fff;
     border-radius: 20px 20px 0 0;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
 }
 .sec04_tit h4{
     text-align: center;
@@ -1283,8 +1283,8 @@ header:hover a {
 .up_label_wrap{
     display: flex;
     justify-content: space-between;
-    border-bottom: 2px solid #ccc;
-    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 50px;
 }
 .up_label_wrap span{
     line-height: 35px;
@@ -1324,7 +1324,8 @@ header:hover a {
     height: 400px;
     border: 1px solid #ccc;
     margin-left: 20px;
-    opacity: 0;
+    margin-bottom: 20px;
+    /* opacity: 0; */
 }
 .photolist li img{
     width: 100%;
@@ -1336,6 +1337,9 @@ header:hover a {
 }
 .photolist li:last-child{
     margin-right: 20px;
+}
+.sec4_wrap{
+    border: 1px solid #ccc;
 }
 
 

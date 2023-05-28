@@ -719,22 +719,33 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 const inputFile = document.getElementById('input_file')
-let imgsrc = document.querySelector('.img_wrap img')
-const imgBtn = document.querySelector('.upload')
-const labelName = document.getElementById('label_name')
-const photoLi = document.querySelector('.photolist li')
+// let imgsrc = document.querySelector('.img_wrap img')
+const imgBtn = document.querySelector('.upload')//버튼
+const labelName = document.getElementById('label_name')//라벨
+// const photoLi = document.querySelector('.photolist li')
 
+const photoList = document.querySelector('.photolist')
 imgBtn.addEventListener('click', () => {
-    imgsrc.src = URL.createObjectURL(inputFile.files[0])
-    photoLi.style.opacity = 1
+        // imgsrc.src = URL.createObjectURL(inputFile.files[0])
+    
+    const lis = document.createElement('li')
+    
+    const imgWrap = document.createElement('div')
+    imgWrap.setAttribute('class','img_wrap')
+    lis.appendChild(imgWrap)
+
+    const photoImg = document.createElement('img')
+    imgWrap.appendChild(photoImg)
+    photoImg.src = URL.createObjectURL(inputFile.files[0])
+
+    photoList.appendChild(lis)
 
 })
 
 inputFile.addEventListener('change', () => {
 
-    if (inputFile.files[0]) {
-        labelName.textContent = inputFile.files[0].name
+        if (inputFile.files[0]) {
+            labelName.textContent = inputFile.files[0].name
 
-    }
-
+        }
 })
