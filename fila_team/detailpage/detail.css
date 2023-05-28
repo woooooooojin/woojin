@@ -1259,7 +1259,66 @@ header:hover a {
 
 
 
+/********section04 사진 리뷰*********/
+.section04{
+    width: 100%;
+    margin-top: 100px;
+}
+.sec04_tit{
+    width: 200px;
+    height: 70px;
+    background-color: #002053;
+    color: #fff;
+    border-radius: 20px 20px 0 0;
+    margin-bottom: 50px;
+}
+.sec04_tit h4{
+    text-align: center;
+    line-height: 70px;
+    font-size: 18px;
+}
+.imgfile{
+    display: none;
+}
+.up_label_wrap{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #ccc;
+    padding: 10px 0;
+}
+.up_label_wrap span{
+    line-height: 35px;
+    font-size: 18px;
+}
+.up_label_wrap label{
+    line-height: 35px;
+    cursor: pointer;
+    font-size: 18px;
+    letter-spacing: 10px;
+}
+.up_label_wrap button{
+    width: 150px;
+    height: 35px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    transition: .3s;
+    border-radius: 20px;
+    font-size: 18px;
+}
+.up_label_wrap button:hover{
+    background-color: #002053;
+    color: #fff;
+    border: 1px solid #002053;
+}
 
+.photolist{
+    display: flex;
+    flex-wrap: wrap;
+}
+.photolist li{
+    width: 20%;
+    margin: 0 2.5%;
+}
 
 /*********footer********/
 footer{
