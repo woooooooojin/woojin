@@ -88,15 +88,15 @@ cart.forEach((value) => {
 })
 
 
-
+//menu 개수 카운트 
 
 const minusBtn = document.querySelectorAll('.minus_btn')
 const plusBtn = document.querySelectorAll('.plus_btn')
 const totalBtn = document.querySelectorAll('.totalbtn')
 
-const mBtn = document.getElementById('minusbtn')
-const pBtn = document.getElementById('plusbtn')
-const tBtn = document.getElementById('total_btn')
+// const mBtn = document.getElementById('minusbtn')
+// const pBtn = document.getElementById('plusbtn')
+// const tBtn = document.getElementById('total_btn')
 const menuBox = document.querySelectorAll('.menu_box')
 let cnt = 0
 
@@ -120,6 +120,16 @@ for (let i = 0; i < menuBox.length; i++) {
         }
     })
 
+    totalBtn[i].addEventListener('change',function(){
+        if ( totalBtn[i].value <= 0) {
+            alert('최소수량은 1개 입니다.')
+            totalBtn[i].value = 1
+        }else if(totalBtn[i].value > 10){
+            alert('최대수량은 10개 입니다.')
+            totalBtn[i].value = 10
+        }
+    })
+
 }
 
 
@@ -129,13 +139,3 @@ for (let i = 0; i < menuBox.length; i++) {
 
 
 
-
-// plusBtn.forEach((val) => {
-//     val.addEventListener('click', function () {
-//         for (let i = 0; i < totalBtn.length; i++) {
-//             cnt++
-//             totalBtn[i].value = cnt
-
-//         }
-//     })
-// })
