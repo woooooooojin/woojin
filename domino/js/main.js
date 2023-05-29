@@ -40,6 +40,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
 })//document
 
+function notice_roll(){
+    $('.rolling li:first').slideUp(function(){
+        $(this).appendTo($('.rolling')).slideDown()
+    })
+}
+setInterval(function(){notice_roll()},3000);
+
 
 
 ///////////jquery//////////
