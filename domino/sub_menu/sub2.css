@@ -4,9 +4,7 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
+
 
 li {
     list-style: none
@@ -32,11 +30,11 @@ body {
 }
 
 .quick_menu {
-    display: none;
+    /* display: none; */
 }
 
 .btn_wrap {
-    display: none;
+    /* display: none; */
 }
 
 /****************header************************/
@@ -1074,12 +1072,12 @@ footer {
     box-shadow: 0 2px 4px 0 rgba(138, 149, 158, 0.15);
     background-color: #fff;
     border-radius: 10px;
-    position: fixed;
+    position: absolute;
     right: 5px;
     top: 50%;
-    transform: translateY(-50%);
+    /* transform: translateY(-50%); */
     cursor: pointer;
-    z-index: 9999;
+    z-index: 99999;
 }
 
 .quick_menu .quick_wrap {

@@ -8,6 +8,8 @@
     <title>Domino menu</title>
     <script src="../js/jquery-3.6.4.min.js"></script>
     
+    <script src="../js/submenu.js" defer></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
     <link rel="stylesheet" href="./sub2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -1865,7 +1867,7 @@
                                 <div class="menu_text">
                                     <div class="menu_btn_wrap">
                                         <button type="button" class="minus_btn">-</button>
-                                        <input type="number" value="1" id="submit_btn">
+                                        <input type="text" value="1" id="total_btn" class="totalbtn">
                                         <button type="button" class="plus_btn">+</button>
                                     </div><!--menu btn wrap-->
                                 </div>
@@ -1905,7 +1907,7 @@
                                 <div class="menu_text">
                                     <div class="menu_btn_wrap">
                                         <button type="button" class="minus_btn">-</button>
-                                        <input type="number" value="1" id="submit_btn">
+                                        <input type="number" value="1" id="total_btn" class="totalbtn">
                                         <button type="button" class="plus_btn">+</button>
                                     </div><!--menu btn wrap-->
                                 </div>
@@ -1945,7 +1947,7 @@
                                 <div class="menu_text">
                                     <div class="menu_btn_wrap">
                                         <button type="button" class="minus_btn">-</button>
-                                        <input type="number" value="1" id="submit_btn">
+                                        <input type="number" value="1" id="total_btn" class="totalbtn">
                                         <button type="button" class="plus_btn">+</button>
                                     </div><!--menu btn wrap-->
                                 </div>
@@ -1985,7 +1987,7 @@
                                 <div class="menu_text">
                                     <div class="menu_btn_wrap">
                                         <button type="button" class="minus_btn">-</button>
-                                        <input type="number" value="1" id="submit_btn">
+                                        <input type="number" value="1" id="total_btn" class="totalbtn">
                                         <button type="button" class="plus_btn">+</button>
                                     </div><!--menu btn wrap-->
                                 </div>
@@ -2025,7 +2027,7 @@
                                 <div class="menu_text">
                                     <div class="menu_btn_wrap">
                                         <button type="button" class="minus_btn">-</button>
-                                        <input type="number" value="1" id="submit_btn">
+                                        <input type="number" value="1" id="total_btn" class="totalbtn">
                                         <button type="button" class="plus_btn">+</button>
                                     </div><!--menu btn wrap-->
                                 </div>
@@ -2065,7 +2067,7 @@
                                 <div class="menu_text">
                                     <div class="menu_btn_wrap">
                                         <button type="button" class="minus_btn">-</button>
-                                        <input type="number" value="1" id="submit_btn">
+                                        <input type="number" value="1" id="total_btn" class="totalbtn">
                                         <button type="button" class="plus_btn">+</button>
                                     </div><!--menu btn wrap-->
                                 </div>
@@ -2105,7 +2107,7 @@
                                 <div class="menu_text">
                                     <div class="menu_btn_wrap">
                                         <button type="button" class="minus_btn">-</button>
-                                        <input type="number" value="1" id="submit_btn">
+                                        <input type="number" value="1" id="total_btn" class="totalbtn">
                                         <button type="button" class="plus_btn">+</button>
                                     </div><!--menu btn wrap-->
                                 </div>
@@ -2145,7 +2147,7 @@
                                 <div class="menu_text">
                                     <div class="menu_btn_wrap">
                                         <button type="button" class="minus_btn">-</button>
-                                        <input type="number" value="1" id="submit_btn">
+                                        <input type="number" value="1" id="total_btn" class="totalbtn">
                                         <button type="button" class="plus_btn">+</button>
                                     </div><!--menu btn wrap-->
                                 </div>
@@ -2185,7 +2187,7 @@
                                 <div class="menu_text">
                                     <div class="menu_btn_wrap">
                                         <button type="button" class="minus_btn">-</button>
-                                        <input type="number" value="1" id="submit_btn">
+                                        <input type="number" value="1" id="total_btn" class="totalbtn">
                                         <button type="button" class="plus_btn">+</button>
                                     </div><!--menu btn wrap-->
                                 </div>
@@ -2225,7 +2227,7 @@
                                 <div class="menu_text">
                                     <div class="menu_btn_wrap">
                                         <button type="button" class="minus_btn">-</button>
-                                        <input type="number" value="1" id="submit_btn">
+                                        <input type="number" value="1" id="total_btn" class="totalbtn">
                                         <button type="button" class="plus_btn">+</button>
                                     </div><!--menu btn wrap-->
                                 </div>
@@ -2265,7 +2267,7 @@
                                 <div class="menu_text">
                                     <div class="menu_btn_wrap">
                                         <button type="button" class="minus_btn">-</button>
-                                        <input type="number" value="1" id="submit_btn">
+                                        <input type="number" value="1" id="total_btn" class="totalbtn">
                                         <button type="button" class="plus_btn">+</button>
                                     </div><!--menu btn wrap-->
                                 </div>
@@ -2574,7 +2576,7 @@
                     <i class="far fa-heart"></i>
                 </div>
 
-                <p>찜</p>
+                <p>찜<span id="likecnt">0</span></p>
             </div>
 
             <div class="membership">
@@ -2582,7 +2584,7 @@
                     <img src="../imges/icon_cart.png" alt="img">
                 </div>
 
-                <p>장바구니<span>0</span></p>
+                <p>장바구니<span id="cartcnt">0</span></p>
             </div>
 
             <div class="membership">
