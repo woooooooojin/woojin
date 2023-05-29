@@ -1,3 +1,14 @@
+///////롤링공지사항
+function notice_roll() {
+    $('.rolling li:first').slideUp(function () {
+        $(this).appendTo($('.rolling')).slideDown()
+    })
+}
+setInterval(function () {
+    notice_roll()
+}, 3000);
+
+
 $(function () {
 
     $('.quick_menu').css('top', $(window).height() / 2 - $('.quick_menu').height() / 2);
@@ -88,54 +99,58 @@ cart.forEach((value) => {
 })
 
 
-//menu 개수 카운트 
-
-const minusBtn = document.querySelectorAll('.minus_btn')
-const plusBtn = document.querySelectorAll('.plus_btn')
-const totalBtn = document.querySelectorAll('.totalbtn')
-
-// const mBtn = document.getElementById('minusbtn')
-// const pBtn = document.getElementById('plusbtn')
-// const tBtn = document.getElementById('total_btn')
-const menuBox = document.querySelectorAll('.menu_box')
-let cnt = 0
-
-
-
-for (let i = 0; i < menuBox.length; i++) {
-    minusBtn[i].addEventListener('click', function () {
-        totalBtn[i].value--
-        if (totalBtn[i].value <= 0) {
-            totalBtn[i].value = 1
-        }
-
-
-    })
-
-    plusBtn[i].addEventListener('click', function () {
-        totalBtn[i].value++
-        if ( totalBtn[i].value > 10) {
-            alert('최대수량은 10개 입니다.')
-            totalBtn[i].value = 10
-        }
-    })
-
-    totalBtn[i].addEventListener('change',function(){
-        if ( totalBtn[i].value <= 0) {
-            alert('최소수량은 1개 입니다.')
-            totalBtn[i].value = 1
-        }else if(totalBtn[i].value > 10){
-            alert('최대수량은 10개 입니다.')
-            totalBtn[i].value = 10
-        }
-    })
-
-}
 
 
 
 
+document.addEventListener('DOMContentLoaded', function () {
+
+    //menu 개수 카운트 
+
+    const minusBtn = document.querySelectorAll('.minus_btn')
+    const plusBtn = document.querySelectorAll('.plus_btn')
+    const totalBtn = document.querySelectorAll('.totalbtn')
+
+    // const mBtn = document.getElementById('minusbtn')
+    // const pBtn = document.getElementById('plusbtn')
+    // const tBtn = document.getElementById('total_btn')
+    const menuBox = document.querySelectorAll('.menu_box')
+    // let cnt = 0
+
+
+
+    for (let i = 0; i < menuBox.length; i++) {
+
+            minusBtn[i].addEventListener('click', function () {
+                totalBtn[i].value --;
+                if (totalBtn[i].value <= 0) {
+                    totalBtn[i].value = 1
+                }
+
+
+            })
 
 
 
 
+        plusBtn[i].addEventListener('click', function () {
+            totalBtn[i].value++
+            if (totalBtn[i].value > 10) {
+                alert('최대수량은 10개 입니다.')
+                totalBtn[i].value = 10
+            }
+        })
+
+        totalBtn[i].addEventListener('change', function () {
+            if (totalBtn[i].value <= 0) {
+                alert('최소수량은 1개 입니다.')
+                totalBtn[i].value = 1
+            } else if (totalBtn[i].value > 10) {
+                alert('최대수량은 10개 입니다.')
+                totalBtn[i].value = 10
+            }
+        })
+
+    }
+
+})

@@ -234,7 +234,13 @@ $(function () {
         $('.find_02').css('display', 'none')
     })
 })
-
+///////롤링공지사항
+function notice_roll(){
+    $('.rolling li:first').slideUp(function(){
+        $(this).appendTo($('.rolling')).slideDown()
+    })
+}
+setInterval(function(){notice_roll()},3000);
 
 
 

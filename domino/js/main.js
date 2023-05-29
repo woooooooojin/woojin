@@ -40,6 +40,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 })//document
 
+
+///////롤링공지사항
 function notice_roll(){
     $('.rolling li:first').slideUp(function(){
         $(this).appendTo($('.rolling')).slideDown()

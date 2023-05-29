@@ -172,7 +172,17 @@ header .gnb .gnb_language:hover label {
     color: #fff;
 }
 
+/*****rolling******/
+.rolling {
+    overflow: hidden;
+    height: 20px;
+}
 
+.rolling li {
+    /* transition: .3s; */
+    height: 20px;
+    font-size: 18px;
+}
 /***********mobile nav************/
 .mobile_nav {
     width: 100%;
