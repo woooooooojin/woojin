@@ -92,30 +92,42 @@ cart.forEach((value) => {
 
 const minusBtn = document.querySelectorAll('.minus_btn')
 const plusBtn = document.querySelectorAll('.plus_btn')
-
 const totalBtn = document.querySelectorAll('.totalbtn')
 
+const mBtn = document.getElementById('minusbtn')
+const pBtn = document.getElementById('plusbtn')
+const tBtn = document.getElementById('total_btn')
+const menuBox = document.querySelectorAll('.menu_box')
 let cnt = 0
 
-// minusBtn.forEach((val) => {
-//     val.addEventListener('click', function () {
-//             cnt--
-//             totalBtn.innerHTML = cnt
 
-//     })
-// })
 
-for (let i = 0; i < minusBtn.length; i++) {
+for (let i = 0; i < menuBox.length; i++) {
     minusBtn[i].addEventListener('click', function () {
-       cnt--
-        for (let i = 0; i < totalBtn.length; i++) { 
-            
-            totalBtn[i].value = cnt
+        totalBtn[i].value--
+        if (totalBtn[i].value <= 0) {
+            totalBtn[i].value = 1
         }
 
 
     })
+
+    plusBtn[i].addEventListener('click', function () {
+        totalBtn[i].value++
+        if ( totalBtn[i].value > 10) {
+            alert('최대수량은 10개 입니다.')
+            totalBtn[i].value = 10
+        }
+    })
+
 }
+
+
+
+
+
+
+
 
 
 // plusBtn.forEach((val) => {
