@@ -101,7 +101,7 @@ cart.forEach((value) => {
 
 
 
-
+//Uncaught TypeError: Cannot read properties of undefined ..????
 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -111,18 +111,18 @@ document.addEventListener('DOMContentLoaded', function () {
     const plusBtn = document.querySelectorAll('.plus_btn')
     const totalBtn = document.querySelectorAll('.totalbtn')
 
-    // const mBtn = document.getElementById('minusbtn')
-    // const pBtn = document.getElementById('plusbtn')
-    // const tBtn = document.getElementById('total_btn')
+    // const mBtn = document.querySelectorAll('#minusbtn')
+    // const pBtn = document.querySelectorAll('#plusbtn')
+    // const tBtn = document.querySelectorAll('#total_btn')
     const menuBox = document.querySelectorAll('.menu_box')
-    // let cnt = 0
 
 
 
     for (let i = 0; i < menuBox.length; i++) {
 
-            minusBtn[i].addEventListener('click', function () {
-                totalBtn[i].value --;
+        minusBtn[i].addEventListener('click', function () {
+                totalBtn[i].value --
+
                 if (totalBtn[i].value <= 0) {
                     totalBtn[i].value = 1
                 }
@@ -133,8 +133,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-        plusBtn[i].addEventListener('click', function () {
-            totalBtn[i].value++
+            plusBtn[i].addEventListener('click', function () {
+            totalBtn[i].value ++
             if (totalBtn[i].value > 10) {
                 alert('최대수량은 10개 입니다.')
                 totalBtn[i].value = 10
