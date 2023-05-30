@@ -659,5 +659,5 @@ function displayItem(idx) {
 
     }
     pageCountBtn[idx].classList.add('active')
-} //dispay item func
+}
 displayItem(0);
