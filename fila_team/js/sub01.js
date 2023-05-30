@@ -155,17 +155,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
 const subList = document.querySelector('.sublist')
+
 
 function madeDiv() {
     for (let i = 0; i < subData.length; i++) {
@@ -278,29 +269,86 @@ function madeDiv() {
 
 
     }
-   
 
-    
+
+
 
 }
 madeDiv()
 
 
-/////////////////////////////////////////////
+////////////////////pagenation/////////////////////////
 
 
+const showPerPage = 20; //화면에 보여질 개수
+const subItems = document.querySelectorAll('.subBox')
+const numOfContent = subItems.length; // 컨텐츠 개수
+const pageCount = Math.ceil(numOfContent / showPerPage); //페이지 버튼 개수
+
+
+
+let paging = document.querySelector('.paging_ex') //page 들어갈곳
+for (let i = 1; i <= pageCount; i++) {
+    paging.innerHTML += `<li><a href="#!">${i}</a></li>`
+
+} // li 생성
+
+const pageCountBtn = paging.querySelectorAll('a') //페이지네이션 a
+
+pageCountBtn.forEach((item, idx) => {
+    item.addEventListener('click', (e) => {
+        e.preventDefault()
+
+        //출력
+        displayItem(idx);
+    })
+
+})
+
+
+function displayItem(idx) {
+    let start = idx * showPerPage // 20개 기준 idx = 0 * 20 = 0, idx=1 * 20 =20 ,,, 
+    let end = start + showPerPage // 20개 기준 start = 20, 40 , 60
+    let subArr = [...subItems] //새로운 배열로 만듬 console에 찍히는 nodelist는 slice 못씀
+
+    for (let val of subArr) {
+        val.style.display = 'none'
+    }
+
+    let newSub = subArr.slice(start, end) //새로운 배열로 만듬, start ~ end 구간 slice
+
+    for (let val of newSub) {
+        val.style.display = ''
+    }
+    for (let value of pageCountBtn) {
+        value.classList.remove('active')
+
+    }
+    pageCountBtn[idx].classList.add('active')
+
+
+
+}
+displayItem(0)
+
+
+
+
+//////////////////select 필터////////////////////////////
 
 const selectBox = document.getElementById('select_sort'); //select box
 const sublist = document.querySelector('.sublist')
 
-selectBox.addEventListener('change', function () {
 
+selectBox.addEventListener('change', function () {
     if (selectBox.value === 'expensive') {
         subData.sort((a, b) => {
             return (a.price01 - b.price01) * -1
         })
         sublist.innerHTML = ''
-        madeDiv() //높은가격순
+        displayItem(0)//높은가격순
+
+
     } else if (selectBox.value === 'cheap') {
         subData.sort((a, b) => {
             return (a.price01 - b.price01)
@@ -458,39 +506,6 @@ priceChkDefault.addEventListener('click', function () {
 
 
 
-// for (let i = 0; i < subData.length; i++) {
-
-//     if (priceChk01.checked) {
-//         if (subData[i].price01 <= 39000) {
-//             itemlist[i].style.display = 'block'
-//         } else {
-//             itemlist[i].style.display = 'none'
-//         }
-//     }
-
-
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -546,35 +561,7 @@ grid02.addEventListener('click', function () {
 })
 
 
-// grid01.addEventListener('click', girdChange01)
-// grid02.addEventListener('click', girdChange02)
 
-// function girdChange01() {
-
-//     for (let i = 0; i < subBox.length; i++) {
-//         // subBox[i].style.width = 'calc(100% - 75% - 25px)'
-//         subBox[i].classList.add('gridchange02')
-//         subBox[i].classList.remove('gridchange01')
-//     }
-
-//     grid02.style.color = '#ccc'
-//     grid01.style.color = 'black'
-
-
-// }
-
-// function girdChange02() {
-
-//     for (let i = 0; i < subBox.length; i++) {
-//         // subBox[i].style.width = 'calc(100% - 80% - 24px)'
-//         subBox[i].classList.add('gridchange01')
-//         subBox[i].classList.remove('gridchange02')
-//     }
-//     grid02.style.color = 'black'
-//     grid01.style.color = '#ccc'
-
-
-// }
 
 
 
@@ -614,51 +601,53 @@ heart.forEach((value) => {
 
 
 
-//paging
-const showPerPage = 20; //화면에 보여질 개수
-const subItems = document.querySelectorAll('.subBox')
-const numOfContent = subItems.length; // 컨텐츠 개수
-const pageCount = Math.ceil(numOfContent / showPerPage); //페이지 버튼 개수
+// //paging
+// const showPerPage = 20; //화면에 보여질 개수
+// const subItems = document.querySelectorAll('.subBox')
+// const numOfContent = subItems.length; // 컨텐츠 개수
+// const pageCount = Math.ceil(numOfContent / showPerPage); //페이지 버튼 개수
 
 
 
-let paging = document.querySelector('.paging_ex') //page 들어갈곳
-for (let i = 1; i <= pageCount; i++) {
-    paging.innerHTML += `<li><a href="#!">${i}</a></li>`
+// let paging = document.querySelector('.paging_ex') //page 들어갈곳
+// for (let i = 1; i <= pageCount; i++) {
+//     paging.innerHTML += `<li><a href="#!">${i}</a></li>`
 
-} // li 생성
+// } // li 생성
 
-const pageCountBtn = paging.querySelectorAll('a') //페이지네이션 a
+// const pageCountBtn = paging.querySelectorAll('a') //페이지네이션 a
 
-pageCountBtn.forEach((item, idx) => {
-    item.addEventListener('click', (e) => {
-        e.preventDefault()
+// pageCountBtn.forEach((item, idx) => {
+//     item.addEventListener('click', (e) => {
+//         e.preventDefault()
 
-        //출력
-        displayItem(idx);
-    })
+//         //출력
+//         displayItem(idx);
+//     })
 
-})
+// })
 
 
-function displayItem(idx) {
-    let start = idx * showPerPage // 20개 기준 idx = 0 * 20 = 0, idx=1 * 20 =20 ,,, 
-    let end = start + showPerPage // 20개 기준 start = 20, 40 , 60
-    let subArr = [...subItems] //새로운 배열로 만듬 console에 찍히는 nodelist는 slice 못씀
+// function displayItem(idx) {
+//     let start = idx * showPerPage // 20개 기준 idx = 0 * 20 = 0, idx=1 * 20 =20 ,,, 
+//     let end = start + showPerPage // 20개 기준 start = 20, 40 , 60
+//     let subArr = [...subItems] //새로운 배열로 만듬 console에 찍히는 nodelist는 slice 못씀
 
-    for (let val of subArr) {
-        val.style.display = 'none'
-    }
+//     for (let val of subArr) {
+//         val.style.display = 'none'
+//     }
 
-    let newSub = subArr.slice(start, end) //새로운 배열로 만듬, start ~ end 구간 slice
+//     let newSub = subArr.slice(start, end) //새로운 배열로 만듬, start ~ end 구간 slice
 
-    for (let val of newSub) {
-        val.style.display = ''
-    }
-    for (let value of pageCountBtn) {
-        value.classList.remove('active')
+//     for (let val of newSub) {
+//         val.style.display = ''
+//     }
+//     for (let value of pageCountBtn) {
+//         value.classList.remove('active')
 
-    }
-    pageCountBtn[idx].classList.add('active')
-}
-displayItem(0);
+//     }
+//     pageCountBtn[idx].classList.add('active')
+
+
+// }
+// displayItem(0)
