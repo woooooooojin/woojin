@@ -549,7 +549,11 @@ running.addEventListener('click', () => {
 
 
 ////////////신제품 스와이퍼 리팩토링////////////////
-import {newSwiperTshirt,newSwiperTennis,newSwiperShoes} from "./NewSwiperData.js"
+import {
+    newSwiperTshirt,
+    newSwiperTennis,
+    newSwiperShoes
+} from "./NewSwiperData.js"
 
 const newTshirt = document.getElementById('newTshirt')
 const newTennis = document.getElementById('newTennis')
@@ -901,45 +905,52 @@ window.addEventListener('scroll', function () {
 
     if (window.scrollY > 5300) {
 
+        // snsEls.forEach((value, index) => {
 
+        //     gsap.to(value, 0.3 * index, {
+        //         translateY: 0,
+        //         opacity: 1
+        //     })
+
+        // })
 
         gsap.to(snsEls[0], 0.3, {
             translateY: 0,
-            opacity:1
+            opacity: 1
         })
         gsap.to(snsEls[1], 0.6, {
             translateY: 0,
-            opacity:1
+            opacity: 1
 
         })
         gsap.to(snsEls[2], 0.9, {
             translateY: 0,
-            opacity:1
+            opacity: 1
 
         })
         gsap.to(snsEls[3], 1.2, {
             translateY: 0,
-            opacity:1
+            opacity: 1
         })
 
         gsap.to(snsEls[4], 0.3, {
             translateY: 0,
-            opacity:1
+            opacity: 1
         })
 
         gsap.to(snsEls[5], 0.6, {
             translateY: 0,
-            opacity:1
+            opacity: 1
         })
 
         gsap.to(snsEls[6], 0.9, {
             translateY: 0,
-            opacity:1
+            opacity: 1
         })
 
         gsap.to(snsEls[7], 1.2, {
             translateY: 0,
-            opacity:1
+            opacity: 1
         })
 
 
@@ -959,19 +970,27 @@ window.addEventListener('scroll', function () {
 
 
 
-        gsap.to(mgz01[0], 0.3, {
-            translateX: 0,
-        })
-        gsap.to(mgz01[1], 0.6, {
-            translateX: 0,
+        // gsap.to(mgz01[0], 0.3, {
+        //     translateX: 0,
+        // })
+        // gsap.to(mgz01[1], 0.6, {
+        //     translateX: 0,
 
-        })
-        gsap.to(mgz01[2], 0.9, {
-            translateX: 0,
+        // })
+        // gsap.to(mgz01[2], 0.9, {
+        //     translateX: 0,
 
-        })
-        gsap.to(mgz01[3], 1.2, {
-            translateX: 0,
+        // })
+        // gsap.to(mgz01[3], 1.2, {
+        //     translateX: 0,
+
+        // })
+        
+        mgz01.forEach((value, index) => {
+
+            gsap.to(value, 0.3 * index, {
+                translateX: 0,
+            })
 
         })
 
