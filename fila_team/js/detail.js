@@ -738,8 +738,19 @@ imgBtn.addEventListener('click', () => {
     imgWrap.appendChild(photoImg)
     photoImg.src = URL.createObjectURL(inputFile.files[0])
 
+    const delPhoto = document.createElement('div')
+    delPhoto.setAttribute('class','photo_del')
+    delPhoto.innerHTML = 'X'
+    lis.appendChild(delPhoto)
+    
+
     photoList.appendChild(lis)
     labelName.textContent = '사진 업로드 click !'
+
+
+    delPhoto.addEventListener('click',()=>{
+        photoList.removeChild(lis)
+    })
 
 })
 

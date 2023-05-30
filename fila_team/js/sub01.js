@@ -316,7 +316,6 @@ function displayItem(idx) {
     }
 
     let newSub = subArr.slice(start, end) //새로운 배열로 만듬, start ~ end 구간 slice
-
     for (let val of newSub) {
         val.style.display = ''
     }
@@ -325,6 +324,7 @@ function displayItem(idx) {
 
     }
     pageCountBtn[idx].classList.add('active')
+
 
 
 
@@ -346,7 +346,7 @@ selectBox.addEventListener('change', function () {
             return (a.price01 - b.price01) * -1
         })
         sublist.innerHTML = ''
-        displayItem(0)//높은가격순
+        madeDiv() //높은가격순
 
 
     } else if (selectBox.value === 'cheap') {
