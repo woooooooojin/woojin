@@ -1175,10 +1175,24 @@ header:hover a {
 
 
 /*********paging************/
+.pagingwrap{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.prev_btn,
+.next_btn{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+    text-align: center;
+    margin: 0 5px;
+    cursor: pointer;
+}
 
 .paging_ex{
     display: flex;
-    width: 500px;
     height: 30px;
      margin: 0 auto;
      justify-content: center;

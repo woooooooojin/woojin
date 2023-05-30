@@ -303,14 +303,24 @@ pageCountBtn.forEach((item, idx) => {
         displayItem(idx);
     })
 
+    const prevBtn = document.querySelector('.prev_btn')
+    const nextBtn = document.querySelector('.next_btn')
+    prevBtn.addEventListener('click', function () {
+        displayItem(0)
+    })
+    nextBtn.addEventListener('click', function () {
+        displayItem(idx)
+    })
+
+
 })
+
 
 
 function displayItem(idx) {
     let start = idx * showPerPage // 20개 기준 idx = 0 * 20 = 0, idx=1 * 20 =20 ,,, 
     let end = start + showPerPage // 20개 기준 start = 20, 40 , 60
     let subArr = [...subItems] //새로운 배열로 만듬 console에 찍히는 nodelist는 slice 못씀
-
     for (let val of subArr) {
         val.style.display = 'none'
     }
@@ -327,7 +337,6 @@ function displayItem(idx) {
 
 
 
-
 }
 displayItem(0)
 
@@ -340,6 +349,7 @@ const selectBox = document.getElementById('select_sort'); //select box
 const sublist = document.querySelector('.sublist')
 
 
+
 selectBox.addEventListener('change', function () {
     if (selectBox.value === 'expensive') {
         subData.sort((a, b) => {
@@ -347,8 +357,6 @@ selectBox.addEventListener('change', function () {
         })
         sublist.innerHTML = ''
         madeDiv() //높은가격순
-
-
     } else if (selectBox.value === 'cheap') {
         subData.sort((a, b) => {
             return (a.price01 - b.price01)

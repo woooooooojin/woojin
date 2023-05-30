@@ -1070,6 +1070,9 @@ header:hover a {
     text-align: center;
     border-top: 1px solid #ccc;
 }
+.review_list .review_list_wrap .review .review_inner:last-child{
+    border-bottom: 1px solid #ccc;
+}
 .review_list .review_list_wrap .review .review_inner .inner_stars{
     width: 15%;
 }
@@ -1116,6 +1119,7 @@ header:hover a {
     border-bottom: 1px solid #ccc;
     flex-wrap: wrap;
 }
+
 .notice_list .notice_list_wrap .notice .notice_inner .notice_num{
     width: 10%;
 }
