@@ -103,54 +103,48 @@ cart.forEach((value) => {
 
 //Uncaught TypeError: Cannot read properties of undefined ..????
 
-document.addEventListener('DOMContentLoaded', function () {
 
-    //menu 개수 카운트 
+//menu 개수 카운트 
 
-    const minusBtn = document.querySelectorAll('.minus_btn')
-    const plusBtn = document.querySelectorAll('.plus_btn')
-    const totalBtn = document.querySelectorAll('.totalbtn')
+const minusBtn = document.querySelectorAll('.minus_btn')
+const plusBtn = document.querySelectorAll('.plus_btn')
+const totalBtn = document.querySelectorAll('.totalbtn')
 
-    // const mBtn = document.querySelectorAll('#minusbtn')
-    // const pBtn = document.querySelectorAll('#plusbtn')
-    // const tBtn = document.querySelectorAll('#total_btn')
-    const menuBox = document.querySelectorAll('.menu_box')
-
+// const mBtn = document.querySelectorAll('#minusbtn')
+// const pBtn = document.querySelectorAll('#plusbtn')
+// const tBtn = document.querySelectorAll('#total_btn')
+const menuBox = document.querySelectorAll('.menu_box')
 
 
-    for (let i = 0; i < menuBox.length; i++) {
+for (let i = 0; i < menuBox.length; i++) {
 
-        minusBtn[i].addEventListener('click', function () {
-                totalBtn[i].value --
+    minusBtn[i].addEventListener('click', () => {
+        totalBtn[i].value--
 
-                if (totalBtn[i].value <= 0) {
-                    totalBtn[i].value = 1
-                }
-
-
-            })
+        if (totalBtn[i].value <= 0) {
+            totalBtn[i].value = 1
+        }
 
 
+    })
 
 
-            plusBtn[i].addEventListener('click', function () {
-            totalBtn[i].value ++
-            if (totalBtn[i].value > 10) {
-                alert('최대수량은 10개 입니다.')
-                totalBtn[i].value = 10
-            }
-        })
+    plusBtn[i].addEventListener('click', () => {
+        totalBtn[i].value++;
+        if (totalBtn[i].value > 10) {
+            alert('최대수량은 10개 입니다.');
+            totalBtn[i].value = 10;
+        }
+    })
 
-        totalBtn[i].addEventListener('change', function () {
-            if (totalBtn[i].value <= 0) {
-                alert('최소수량은 1개 입니다.')
-                totalBtn[i].value = 1
-            } else if (totalBtn[i].value > 10) {
-                alert('최대수량은 10개 입니다.')
-                totalBtn[i].value = 10
-            }
-        })
+    totalBtn[i].addEventListener('change', () => {
+        if (totalBtn[i].value <= 0) {
+            alert('최소수량은 1개 입니다.')
+            totalBtn[i].value = 1
+        } else if (totalBtn[i].value > 10) {
+            alert('최대수량은 10개 입니다.')
+            totalBtn[i].value = 10
+        }
+    })
 
-    }
-
-})
+}
