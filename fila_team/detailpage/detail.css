@@ -1308,6 +1308,7 @@ header:hover a {
     transition: .3s;
     border-radius: 20px;
     font-size: 18px;
+    font-weight: bold;
 }
 .up_label_wrap button:hover{
     background-color: #002053;
