@@ -1005,12 +1005,12 @@ header:hover a {
 .fas.fa-star{
     color: #002053;
 }
-.rating_result{
+/* .rating_result{
     position: absolute;
     top: 0;
     right: 0;
     transform: translateX(50px)
-}
+} */
 /***************************/
 .review_filter{
     width: 100%;
