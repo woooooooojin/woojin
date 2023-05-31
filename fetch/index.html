@@ -50,36 +50,184 @@
         // testB(testC)
 
 
-        // function order(){
-        //     console.log('주문')
-        // }
 
-        // function orderCheck(callback){
+
+
+
+
+       
+
+
+
+
+
+
+
+        // function order(coffee, callback){
+        //     console.log(`${coffee} 주문확인중...` )
         //     setTimeout(()=>{
-        //         console.log('주문확인중')
-        //         callback()
+        //         callback(coffee)
         //     },3000)
         // }
 
-        // function getDrink(){
-        //     console.log('가져가세요')
+        // function display(result){
+        //     console.log(`${result} 주문접수`)
+        // }
+        // order(`아메리카노`, display)
+
+
+        // let orderCoffee = true
+        
+        // const coffee = new Promise((resolve, reject)=>{
+
+        //     if(orderCoffee){
+        //         resolve('커피주문')
+        //     }else{
+        //         reject('커피주문안함')
+        //     }
+
+        // })
+
+        // coffee
+        // .then((result)=>{console.log(result)})
+        // .catch(error=>console.log(error))
+        // .finally(()=>console.log('end'))
+
+
+
+
+
+
+
+
+        // const coffee = ()=>{
+        //     return new Promise((resolve, reject)=>{
+        //         resolve('커피주문')
+        //     })
         // }
 
-        // order()
-        // orderCheck(getDrink)
+        // const order = (message) => {
+        //     console.log(message)
+        // }
+
+        // coffee()
+        // .then(result => order(result))
 
 
-        function order(coffee, callback){
-            console.log(`${coffee} 주문확인중...` )
-            setTimeout(()=>{
-                callback(coffee)
-            },3000)
+
+
+        // function testA(){
+        //     console.log('testA')
+        //     setTimeout(() => {
+        //         console.log('testB')
+        //         setTimeout(() => {
+        //             console.log('testC')
+        //             setTimeout(()=>{
+        //                 console.log('testD')
+        //             },3000)
+        //         }, 1000);
+        //     }, 2000);
+        // }
+
+        // testA()
+
+
+
+
+        // const stepA = (callback)=>{
+        //     setTimeout(()=>{
+        //         console.log('커피주문완료')
+        //         callback()
+        //     },2000)
+        // }
+
+        // const stepB = (callback)=>{
+        //     setTimeout(()=>{
+        //         console.log('커피 컵 준비')
+        //         callback()
+        //     },1000)
+        // }
+
+        // const stepC = (callback)=>{
+        //     setTimeout(() => {
+        //         console.log('커피내리기')
+        //         callback()
+        //     }, 2000);
+        // }
+
+        // console.log('커피를 주문합니다')
+        // stepA(function(){
+        //     stepB(function(){
+        //         stepC(function(){
+        //             console.log('커피가 준비되었습니다.')
+        //         })
+        //     })
+        // })
+
+
+        //////////promise 로 ㅂ바꾸기//////////
+
+        const coffee = () => {
+            return new Promise ((resolve,reject)=>{
+                resolve('커피를 주문합니다.')
+            })
         }
 
-        function display(result){
-            console.log(`${result} 주문접수`)
+        const stepA = (step) => {
+            console.log(step)
+            return new Promise((resolve, reject)=>{
+                setTimeout(()=>{
+                    resolve('커피 컵 준비')
+
+                },1000)
+                
+
+            })
         }
-        order(`아메리카노`, display)
+
+        const stepB = (step) => {
+            console.log(step)
+            return new Promise((resolve, reject)=>{
+                setTimeout(() => {
+                    resolve('커피내리기')
+                }, 3000);
+                
+            })
+
+        }
+
+        const stepC = (step) => {
+            console.log(step)
+            return new Promise((resolve, reject)=>{
+                setTimeout(() => {
+                    resolve('커피 준비 완료')
+                }, 1000);
+            })
+        }
+
+
+        // coffee()
+        // .then(result =>stepA(result))
+        // .then(result =>stepB(result))
+        // .then(result =>stepC(result))
+        // .then(result => console.log(result))
+        // .then(()=>{
+        //     console.log('커피가 준비되었습니다.')
+        // })
+
+
+        coffee()
+        .then(stepA)
+        .then(stepB)
+        .then(stepC)
+        .then(console.log)
+        .then(()=>{
+            console.log('커피가 준비되었습니다.')
+        })
+
+
+
+
 
     </script>
 
