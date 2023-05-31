@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetch_api</title>
+
+    <script>
+        // function testA(){
+        //     console.log('testA')
+        // }
+        // // function testB(){
+        // //     console.log('testB')
+        // // }
+
+        // function testB(){
+        //     setTimeout(() => {
+        //         console.log('testB')
+        //     }, 2000);
+        // }
+
+        // function testC(){
+        //     console.log('testC')
+        // }
+        
+
+        // testA()
+        // testB()
+        // testC()
+       
+       
+       
+        // function testA(){
+        //     console.log('testA')
+        // }
+
+        // function testB(callback){
+        //     setTimeout(() => {
+        //         console.log('testB')
+        //         callback()
+        //     }, 2000);
+        // }
+
+        // function testC(){
+        //     console.log('testC')
+        // }
+
+        // testA()
+        // testB(testC)
+
+
+        // function order(){
+        //     console.log('주문')
+        // }
+
+        // function orderCheck(callback){
+        //     setTimeout(()=>{
+        //         console.log('주문확인중')
+        //         callback()
+        //     },3000)
+        // }
+
+        // function getDrink(){
+        //     console.log('가져가세요')
+        // }
+
+        // order()
+        // orderCheck(getDrink)
+
+
+        function order(coffee, callback){
+            console.log(`${coffee} 주문확인중...` )
+            setTimeout(()=>{
+                callback(coffee)
+            },3000)
+        }
+
+        function display(result){
+            console.log(`${result} 주문접수`)
+        }
+        order(`아메리카노`, display)
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

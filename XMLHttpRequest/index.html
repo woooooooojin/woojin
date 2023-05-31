@@ -55,7 +55,7 @@
 
         // xhr.onreadystatechange = function () {
         //     if (xhr.readyState === 4 && xhr.status === 200) {
-               
+
         //         let sutdents = JSON.parse(xhr.responseText)
         //         // console.log(sutdents)
         //         viewStudents(sutdents)
@@ -83,7 +83,6 @@
         // }
 
 
-            
 
 
 
@@ -91,43 +90,66 @@
 
 
 
-        let xhr = new XMLHttpRequest() //인스턴스(객체변수)
-        xhr.open('GET' , 'https://jsonplaceholder.typicode.com/users')
-        xhr.send()
 
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-               
-                let sutdents = JSON.parse(xhr.responseText)
-                // console.log(sutdents)
-                viewStudents(sutdents)
+        // let xhr = new XMLHttpRequest() //인스턴스(객체변수)
+        // xhr.open('GET' , 'https://jsonplaceholder.typicode.com/users')
+        // xhr.send()
 
-            }
-        }
+        // xhr.onreadystatechange = function () {
+        //     if (xhr.readyState === 4 && xhr.status === 200) {
+
+        //         let sutdents = JSON.parse(xhr.responseText)
+        //         // console.log(sutdents)
+        //         viewStudents(sutdents)
+
+        //     }
+        // }
 
 
 
-        function viewStudents(contents){
+        // function viewStudents(contents){
+        //     let output = ''
+
+        //     for(let content of contents){
+        //         output += `
+        //         <ul>
+        //         <h3>${content.name}</h3>
+        //         <li>닉네임 : ${content.username}</li> 
+        //         <li>이메일 : ${content.email}</li>    
+        //         <li>주소 : ${content.address.street}</li>    
+        //         </ul>
+        //         `
+
+        //     }
+        //     document.getElementById('root').innerHTML = output
+        // }
+
+
+
+
+        /////////////0531/////////////
+
+
+        fetch('students.json')
+        .then(Response => Response.json())
+        .then(student => {
             let output = ''
-
-            for(let content of contents){
-                output += `
-                <ul>
+            student.forEach(content => {
+            output += `
+            <ul>
                 <h3>${content.name}</h3>
-                <li>닉네임 : ${content.username}</li> 
-                <li>이메일 : ${content.email}</li>    
-                <li>주소 : ${content.address.street}</li>    
-                </ul>
-                `
-
-            }
+                <li><img src='${content.img}'</li>    
+                <li>전공 : ${content.major}</li>    
+                <li>학년 : ${content.grade}</li>    
+            </ul>
+            `
+            })
             document.getElementById('root').innerHTML = output
-        }
 
+        }) 
+        .catch(error => console.log(error))
 
-
-
-
+           
     </script>
 
     <style>
