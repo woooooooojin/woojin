@@ -320,18 +320,20 @@ function createPage(val) {
 
         })
 
-
         if (nowPage === idx) {
             pageCountBtn[idx].classList.add('active')
 
 
         }
-        // //맨앞 맨뒤 페이지
+
+
+        // //맨앞 맨뒤 페이지 좀더 고민,,,
         const prevBtn = document.querySelector('.prev_btn')
         const nextBtn = document.querySelector('.next_btn')
 
 
         prevBtn.addEventListener('click', function () {
+
             nowPage = 0
             paging.innerHTML = ''
 
@@ -340,6 +342,7 @@ function createPage(val) {
 
         })
         nextBtn.addEventListener('click', function () {
+
             nowPage = idx
             paging.innerHTML = ''
 
@@ -349,12 +352,16 @@ function createPage(val) {
         })
 
 
+
     })
+
 
 
 
 }
 createPage(subData)
+
+
 
 //////////////////select 필터////////////////////////////
 
