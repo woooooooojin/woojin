@@ -337,10 +337,8 @@ function displayItem(idx) {
     pageCountBtn[idx].classList.add('active')
 
 
-
 }
 displayItem(0)
-
 
 
 
@@ -348,8 +346,6 @@ displayItem(0)
 
 const selectBox = document.getElementById('select_sort'); //select box
 const sublist = document.querySelector('.sublist')
-
-
 
 selectBox.addEventListener('change', function () {
     if (selectBox.value === 'expensive') {
