@@ -308,6 +308,7 @@ function createPage(val) {
                 value.classList.remove('active')
             }
             if (nowPage !== idx) {
+
                 nowPage = idx
                 paging.innerHTML = ''
 
@@ -319,27 +320,34 @@ function createPage(val) {
 
         })
 
-        // //맨앞 맨뒤 페이지
-        const prevBtn = document.querySelector('.prev_btn')
-        const nextBtn = document.querySelector('.next_btn')
-        // const lastpage = pageCount
-        console.log(pageCount)
-        prevBtn.addEventListener('click', function () {
-            nowPage = 0
-            paging.innerHTML = ''
-            sublist.innerHTML = ''
-            createPage(val)
-        })
-        nextBtn.addEventListener('click', function () {
-            nowPage = pageCount - 1
-            paging.innerHTML = ''
-            sublist.innerHTML = ''
-            createPage(val)
-        })
+
         if (nowPage === idx) {
             pageCountBtn[idx].classList.add('active')
 
+
         }
+        // //맨앞 맨뒤 페이지
+        const prevBtn = document.querySelector('.prev_btn')
+        const nextBtn = document.querySelector('.next_btn')
+
+
+        prevBtn.addEventListener('click', function () {
+            nowPage = 0
+            paging.innerHTML = ''
+
+            sublist.innerHTML = ''
+            createPage(val)
+
+        })
+        nextBtn.addEventListener('click', function () {
+            nowPage = idx
+            paging.innerHTML = ''
+
+            sublist.innerHTML = ''
+            createPage(val)
+
+        })
+
 
     })
 
