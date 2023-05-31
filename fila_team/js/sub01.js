@@ -303,6 +303,7 @@ pageCountBtn.forEach((item, idx) => {
         displayItem(idx);
     })
 
+    //맨앞 맨뒤 페이지
     const prevBtn = document.querySelector('.prev_btn')
     const nextBtn = document.querySelector('.next_btn')
     prevBtn.addEventListener('click', function () {
