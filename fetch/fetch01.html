@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetch 0601</title>
+
+    <script>
+        // fetch('students.json')
+        // .then(respons => respons.json())
+        // .then(students =>{
+        //     let output = ''
+        //     students.forEach((student)=>{
+        //         output += `
+        //         <h2>${student.name}</h2>
+        //         <ul>
+        //             <li>전공 : ${student.major}</li>    
+        //             <li>학년 : ${student.grade}</li>    
+        //         </ul>
+        //         `
+        //     })
+        //     document.getElementById('root').innerHTML = output
+        // })
+
+        // .catch(err => console.log(err))
+
+
+        // function order(){
+        //     let menu = 'coffee'
+        //     return new Promise((resolve, reject)=>resolve(menu))
+        // }
+
+        // function display(result){
+        //     return new Promise((resolve,reject) => resolve(`thanks ${result}`))
+        // }
+
+        // order()
+        // .then(display)
+        // .then(console.log)
+
+
+        async function order() {
+            let menu = 'coffee'
+            return menu
+        }
+        async function display(result) {
+            return `thank you ${result}`
+        }
+        order()
+        .then(display)
+        .then(console.log)
+
+        
+
+    </script>
+
+</head>
+
+<body>
+
+    <div id="root"></div>
+
+</body>
+
+</html>

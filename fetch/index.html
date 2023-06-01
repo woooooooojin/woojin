@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,14 +24,14 @@
         // function testC(){
         //     console.log('testC')
         // }
-        
+
 
         // testA()
         // testB()
         // testC()
-       
-       
-       
+
+
+
         // function testA(){
         //     console.log('testA')
         // }
@@ -55,7 +56,7 @@
 
 
 
-       
+
 
 
 
@@ -77,7 +78,7 @@
 
 
         // let orderCoffee = true
-        
+
         // const coffee = new Promise((resolve, reject)=>{
 
         //     if(orderCoffee){
@@ -167,43 +168,43 @@
 
         //////////promise 로 ㅂ바꾸기//////////
 
-        const coffee = () => {
-            return new Promise ((resolve,reject)=>{
-                resolve('커피를 주문합니다.')
-            })
-        }
+        // const coffee = () => {
+        //     return new Promise ((resolve,reject)=>{
+        //         resolve('커피를 주문합니다.')
+        //     })
+        // }
 
-        const stepA = (step) => {
-            console.log(step)
-            return new Promise((resolve, reject)=>{
-                setTimeout(()=>{
-                    resolve('커피 컵 준비')
+        // const stepA = (step) => {
+        //     console.log(step)
+        //     return new Promise((resolve, reject)=>{
+        //         setTimeout(()=>{
+        //             resolve('커피 컵 준비')
 
-                },1000)
-                
+        //         },1000)
 
-            })
-        }
 
-        const stepB = (step) => {
-            console.log(step)
-            return new Promise((resolve, reject)=>{
-                setTimeout(() => {
-                    resolve('커피내리기')
-                }, 3000);
-                
-            })
+        //     })
+        // }
 
-        }
+        // const stepB = (step) => {
+        //     console.log(step)
+        //     return new Promise((resolve, reject)=>{
+        //         setTimeout(() => {
+        //             resolve('커피내리기')
+        //         }, 3000);
 
-        const stepC = (step) => {
-            console.log(step)
-            return new Promise((resolve, reject)=>{
-                setTimeout(() => {
-                    resolve('커피 준비 완료')
-                }, 1000);
-            })
-        }
+        //     })
+
+        // }
+
+        // const stepC = (step) => {
+        //     console.log(step)
+        //     return new Promise((resolve, reject)=>{
+        //         setTimeout(() => {
+        //             resolve('커피 준비 완료')
+        //         }, 1000);
+        //     })
+        // }
 
 
         // coffee()
@@ -216,23 +217,76 @@
         // })
 
 
-        coffee()
-        .then(stepA)
-        .then(stepB)
-        .then(stepC)
-        .then(console.log)
-        .then(()=>{
-            console.log('커피가 준비되었습니다.')
-        })
+        // coffee()
+        // .then(stepA)
+        // .then(stepB)
+        // .then(stepC)
+        // .then(console.log)
+        // .then(()=>{
+        //     console.log('커피가 준비되었습니다.')
+        // })
 
 
 
 
-
+        //////////0601//////////
     </script>
 
+
+    <style>
+
+        .active{
+            text-decoration: line-through;
+            color: #999;
+        }
+        .stop{
+            width: 300px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            background-color: black;
+            color: #fff;
+            font-size: 20px;
+        }
+    </style>
+
 </head>
+
 <body>
-    
+
+    <div class="start"></div>
+    <div class="end"></div>
+
+    <script>
+        const order = new Promise((resolve, reject) => {
+
+            let coffee = prompt('메뉴입력 : ', '아메리카노')
+            if ((coffee != null) && (coffee != '')) {
+                document.querySelector('.start').innerText = `${coffee} 주문접수`
+                setTimeout(() => {
+                    resolve(coffee)
+                }, 3000);
+            } else {
+                reject('커피주문하지않음')
+            }
+
+
+        })
+
+        function display(result) {
+            document.querySelector('.end').textContent = `${result} 준비완료`
+            document.querySelector('.start').classList.add('active')
+            document.querySelector('.end').classList.add('stop')
+        }
+
+        function showErr(err) {
+            console.log(err)
+        }
+        order
+        .then(display)
+        .catch(showErr)
+    </script>
+
 </body>
+
 </html>
