@@ -985,7 +985,7 @@ window.addEventListener('scroll', function () {
         //     translateX: 0,
 
         // })
-        
+
         mgz01.forEach((value, index) => {
 
             gsap.to(value, 0.3 * index, {
@@ -1019,3 +1019,31 @@ family.addEventListener('change', (event) => {
     location.href = options[index].value
 
 })
+
+
+
+
+
+//footer fetch로 가져오기
+//addlistener error
+
+
+// const foot = document.getElementById('footer')
+
+// fetch('footer.html')
+// .then(resolve => resolve.text())
+// .then(data => foot.innerHTML = data)
+
+
+
+//일단은 됨 //애드리쓰너 안뜸
+const foot = document.getElementById('footer')
+
+async function footerGet() {
+    await fetch('./footer.html')
+        .then(resolve => resolve.text())
+        .then(data => foot.innerHTML = data)
+
+
+}
+footerGet()
