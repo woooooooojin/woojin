@@ -263,16 +263,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 //장바구니 카트 클릭이벤트
-const cart2 = document.querySelectorAll('.fa-shopping-cart')
-const cartCount = document.querySelector('.count')
-let cnt = 0
+// const cart2 = document.querySelectorAll('.fa-shopping-cart')
+// const cartCount = document.querySelector('.count')
+// let cnt = 0
 
-cart2.forEach((value) => {
-    value.addEventListener('click', function () {
-        cnt++
-        cartCount.innerHTML = cnt
-    })
-})
+// cart2.forEach((value) => {
+//     value.addEventListener('click', function () {
+//         cnt++
+//         cartCount.innerHTML = cnt
+//     })
+// })
 
 
 
