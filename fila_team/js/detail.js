@@ -273,6 +273,8 @@ document.addEventListener('DOMContentLoaded', function () {
         starBox.innerHTML = Rstars.innerHTML //별점 생성 
 
 
+
+
         // 별
         // const star1 = document.createElement('i')
         // star1.setAttribute('class', 'far fa-star rstar')
@@ -377,10 +379,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 if (star.className.indexOf(starClassUnactive) !== -1) {
                     printRatingResult(result, i + 1)
-                    for (i; i >= 0; --i) stars[i].className = starClassActive
+                    for (i; i >= 0; i--) stars[i].className = starClassActive
+
                 } else {
                     printRatingResult(result, i);
-                    for (i; i < starsLength; ++i) stars[i].className = starClassUnactive
+                    for (i; i < starsLength; i++) stars[i].className = starClassUnactive
                 }
             }
         })
@@ -393,6 +396,7 @@ document.addEventListener('DOMContentLoaded', function () {
     executeRating(ratingStars, ratingResult)
 
 
+    
     ///////////////////////////////////////////////////
 
 
@@ -720,18 +724,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
 const inputFile = document.getElementById('input_file')
 // let imgsrc = document.querySelector('.img_wrap img')
-const imgBtn = document.querySelector('.upload')//버튼
-const labelName = document.getElementById('label_name')//라벨
+const imgBtn = document.querySelector('.upload') //버튼
+const labelName = document.getElementById('label_name') //라벨
 // const photoLi = document.querySelector('.photolist li')
 
 const photoList = document.querySelector('.photolist')
 imgBtn.addEventListener('click', () => {
-        // imgsrc.src = URL.createObjectURL(inputFile.files[0])
-    
+    // imgsrc.src = URL.createObjectURL(inputFile.files[0])
+
     const lis = document.createElement('li')
-    
+
     const imgWrap = document.createElement('div')
-    imgWrap.setAttribute('class','img_wrap')
+    imgWrap.setAttribute('class', 'img_wrap')
     lis.appendChild(imgWrap)
 
     const photoImg = document.createElement('img')
@@ -739,16 +743,16 @@ imgBtn.addEventListener('click', () => {
     photoImg.src = URL.createObjectURL(inputFile.files[0])
 
     const delPhoto = document.createElement('div')
-    delPhoto.setAttribute('class','photo_del')
+    delPhoto.setAttribute('class', 'photo_del')
     delPhoto.innerHTML = 'X'
     lis.appendChild(delPhoto)
-    
+
 
     photoList.appendChild(lis)
     labelName.textContent = '사진 업로드 click !'
 
 
-    delPhoto.addEventListener('click',()=>{
+    delPhoto.addEventListener('click', () => {
         photoList.removeChild(lis)
     })
 
@@ -756,7 +760,7 @@ imgBtn.addEventListener('click', () => {
 
 inputFile.addEventListener('change', () => {
 
-        // if (inputFile.files[0]) {
-            labelName.textContent = inputFile.files[0].name
-        // }
+    // if (inputFile.files[0]) {
+    labelName.textContent = inputFile.files[0].name
+    // }
 })
