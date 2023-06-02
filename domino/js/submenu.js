@@ -61,7 +61,7 @@ $(function () {
 
 
     $('.main_logo').click(function () {
-        $(location).attr('href', './index.html')
+        $(location).attr('href', '../index.html')
     })
 
 
@@ -106,38 +106,42 @@ cart.forEach((value) => {
 
 //menu 개수 카운트 
 
+
+
+// const mBtn = document.getElementById('minusbtn')
+// const pBtn = document.getElementById('plusbtn')
+// const tBtn = document.getElementById('total_btn')
+
+const menuBox = document.querySelectorAll('.menu_box')
 const minusBtn = document.querySelectorAll('.minus_btn')
 const plusBtn = document.querySelectorAll('.plus_btn')
 const totalBtn = document.querySelectorAll('.totalbtn')
 
-// const mBtn = document.querySelectorAll('#minusbtn')
-// const pBtn = document.querySelectorAll('#plusbtn')
-// const tBtn = document.querySelectorAll('#total_btn')
-const menuBox = document.querySelectorAll('.menu_box')
 
+for (let i = 0; i < minusBtn.length; i++) {
+    minusBtn[i].addEventListener('click', function () {
 
-for (let i = 0; i < menuBox.length; i++) {
-
-    minusBtn[i].addEventListener('click', () => {
         totalBtn[i].value--
 
         if (totalBtn[i].value <= 0) {
             totalBtn[i].value = 1
         }
-
-
     })
+}
 
 
-    plusBtn[i].addEventListener('click', () => {
-        totalBtn[i].value++;
+for (let i = 0; i < plusBtn.length; i++) {
+    plusBtn[i].addEventListener('click', function () {
+        totalBtn[i].value++
         if (totalBtn[i].value > 10) {
             alert('최대수량은 10개 입니다.');
             totalBtn[i].value = 10;
         }
     })
+}
 
-    totalBtn[i].addEventListener('change', () => {
+for (let i = 0; i < totalBtn.length; i++) {
+    totalBtn[i].addEventListener('change', function () {
         if (totalBtn[i].value <= 0) {
             alert('최소수량은 1개 입니다.')
             totalBtn[i].value = 1
@@ -145,6 +149,7 @@ for (let i = 0; i < menuBox.length; i++) {
             alert('최대수량은 10개 입니다.')
             totalBtn[i].value = 10
         }
-    })
 
+
+    })
 }

@@ -821,6 +821,16 @@ input::-webkit-inner-spin-button {
     font-size: 18px;
 }
 
+.modal_tit{
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}
+.modal_txt p{
+    font-size: 16px;
+    padding: 10px;
+}
 
 
 
