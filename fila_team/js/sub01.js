@@ -327,7 +327,7 @@ function createPage(val) {
         }
 
 
-        
+
 
         // // //맨앞 맨뒤 페이지 좀더 고민,,,
         const prevBtn = document.querySelector('.prev_btn')
@@ -336,7 +336,7 @@ function createPage(val) {
 
         prevBtn.addEventListener('click', function () {
 
-            
+
             paging.innerHTML = ''
             sublist.innerHTML = ''
             nowPage = 0
@@ -585,6 +585,22 @@ const filterList = document.querySelector('.filter_box_list')
 
 
 
+$('.filter_open').click(function () {
+    $('.filter_open').css('display', 'none')
+
+    $('.filter_close').css('display', 'block')
+    $('.filter_box_list').slideDown(300)
+
+
+})
+$('.filter_close').click(function () {
+    $('.filter_close').css('display', 'none')
+
+    $('.filter_open').css('display', 'block')
+
+    $('.filter_box_list').slideUp(300)
+
+})
 
 
 const grid01 = document.querySelector('.grid_01')
