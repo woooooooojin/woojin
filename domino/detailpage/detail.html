@@ -7,20 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Domino Detail</title>
     <script src="../js/jquery-3.6.4.min.js"></script>
-    
+
     <script src="../js/detail.js" defer></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
     <link rel="stylesheet" href="./detail.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    
+
     <script>
         $(function () {
-           
 
 
-            $('.main_logo').click(function(){
-                $(location).attr('href','../index.html')
+
+            $('.main_logo').click(function () {
+                $(location).attr('href', '../index.html')
             })
 
             $('.moreclick .more_open').click(function () {
@@ -35,14 +35,14 @@
                 $('.more_close').css('display', 'none');
 
             })
-            
+
 
 
 
 
         })
     </script>
-    
+
 </head>
 
 
@@ -196,18 +196,133 @@
                 <div class="left_box">
                     <div class="left_img_wrap">
                         <img src="../imges/menu01.jpg" alt="img">
-                    </div><!--left img wrap-->
-                </div><!--left box-->
+                    </div>
+                    <!--left img wrap-->
+                </div>
+                <!--left box-->
 
 
-                <div class="rightt_box">
+                <div class="right_box">
+                    <div class="right_tit">
+                        <h4>슈퍼 디럭스 히어로</h4>
+                        <p>#[도미노x슈퍼 마리오] 마리오와 루이지의 색감을 닮은 알록달록 히어로 피자!</p>
+                    </div>
+                    <!--right tit-->
 
-                </div><!--right box-->
-            </div><!--section01 wrap-->
+                    <div class="right_size_wrap">
+                        <h4>사이즈 선택</h4>
+                        <div class="right_size">
+
+                            <input type="radio" name="sizebtn" id="sizebtn1" checked>
+                            <label for="sizebtn1" class="size01">L 29,900원</label>
+                            <input type="radio" name="sizebtn" id="sizebtn2">
+                            <label for="sizebtn2" class="size02">M 22,500원</label>
+                        </div>
+                        <!--right size-->
+                    </div><!--right size wrap-->
 
 
-        </div><!--container-->
-    </section><!--section01-->
+                    <div class="right_dow">
+                        <h4>도우 선택</h4>
+                        <ul>
+                            <li>
+                                <input type="radio" name="dowbtn" id="dowbtn01" checked>
+                                <label for="dowbtn01" class="dow01">오리지널 도우</label>
+                                <p class="dow_price">+0</p>
+                            </li>
+
+                            <li>
+                                <input type="radio" name="dowbtn" id="dowbtn02">
+                                <label for="dowbtn02" class="dow02">슈퍼시드 화이버 함유 도우(더블 치즈엣지)</label>
+                                <p class="dow_price">+6000</p>
+                            </li>
+
+                            <li>
+                                <input type="radio" name="dowbtn" id="dowbtn03">
+                                <label for="dowbtn03" class="dow03">오리지널 도우 (더블 치즈엣지)</label>
+                                <p class="dow_price">+3000</p>
+                            </li>
+                        </ul>
+
+
+                    </div><!--rignt dow-->
+
+                    <div class="right_topping">
+                        <h4>토핑 선택</h4>
+                        <ul>
+                            <li>
+                                <div class="topping_img">
+                                    <img src="../imges/topping01.jpeg" alt="img">
+                                </div><!--topping img-->
+
+                                <div class="topping_txt">
+                                    <p>파인애플 8개/40g<br /><span>500</span></p>
+                                </div>
+
+                                <div class="topping_cnt">
+                                    <button type="button" class="minus_btn">-</button>
+                                    <input type="text" id="toppingCnt" class="toppinc_nt" value="0">
+                                    <button type="button" class="plus_btn">+</button>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="topping_img">
+                                    <img src="../imges/topping02.jpeg" alt="img">
+                                </div><!--topping img-->
+
+                                <div class="topping_txt">
+                                    <p>올리브 20g<br /><span>300</span></p>
+                                </div>
+
+                                <div class="topping_cnt">
+                                    <button type="button" class="minus_btn">-</button>
+                                    <input type="text" id="toppingCnt" class="toppinc_nt" value="0">
+                                    <button type="button" class="plus_btn">+</button>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="topping_img">
+                                    <img src="../imges/topping03.jpeg" alt="img">
+                                </div><!--topping img-->
+
+                                <div class="topping_txt">
+                                    <p>파도미노치즈 50g<br /><span>2300</span></p>
+                                </div>
+
+                                <div class="topping_cnt">
+                                    <button type="button" class="minus_btn">-</button>
+                                    <input type="text" id="toppingCnt" class="toppinc_nt" value="0">
+                                    <button type="button" class="plus_btn">+</button>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div><!--right topping end-->
+
+
+                    <div class="pizza_cnt">
+                        <h4>수량 선택</h4>
+
+                        <div class="pizza_cnt_wrap">
+                            <button type="button" id="pizza_minus">-</button>
+                            <input type="text" value="1" id="pizzaCnt" class="pizza_cnt">
+                            <button type="button" id="pizza_plus">+</button>
+                        </div>
+                    </div>
+
+
+                </div>
+                <!--right box-->
+            </div>
+            <!--section01 wrap-->
+
+
+        </div>
+        <!--container-->
+    </section>
+    <!--section01-->
 
 
 

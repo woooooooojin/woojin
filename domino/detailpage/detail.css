@@ -451,8 +451,9 @@ nav {
     display: flex;
 }
 .section01 .section01_wrap .left_box{
-    width: 50%;
-    height: 5000px;
+    width: 45%;
+    margin-right: 5%;
+    height: 2000px;
 
 }
 .section01 .section01_wrap .left_box .left_img_wrap{
@@ -469,12 +470,206 @@ nav {
 
 
 .section01 .section01_wrap .right_box{
-    width: 50%;
+    width: 45%;
+}
+
+.section01_wrap .right_box .right_tit{
+    
+}
+.section01_wrap .right_box .right_tit h4{
+    font-size: 26px;
+    text-align: center;
+}
+.section01_wrap .right_box .right_tit p{
+    font-size: 18px;
+    color: #888;
+    margin-top: 20px;
+}
+
+
+.right_box .right_size_wrap{
+    margin-top: 50px;
+    border-top: 2px solid black;
+}
+
+.right_box .right_size_wrap h4{
+    font-size: 20px;
+    margin-top: 10px;
+}
+.right_box .right_size{
+    margin-top: 20px;
+    display: flex;
+}
+.right_box .right_size input{
+    display: none;
+}
+.right_box .right_size label{
+    display: block;
+    width: 250px;
+    height: 60px;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+    border-radius: 30px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+#sizebtn1:checked ~ .size01,
+#sizebtn2:checked ~ .size02{
+    background-color: #238ece;
+    color: #fff;
+}
+
+
+.right_dow{
+    margin-top: 50px;
+    border-top: 2px solid black;
+}
+.right_dow h4{
+    font-size: 20px;
+    margin-top: 10px;
+}
+.right_dow ul{
+    margin-top: 20px;
+}
+.right_dow ul li{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.right_dow ul li input{display: none;}
+
+.right_dow ul li label::before{
+    display: inline-block;
+    content: "";
+    width: 13px;
+    height: 13px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    background-color:#eee;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+#dowbtn01:checked ~ .dow01::before,
+#dowbtn02:checked ~ .dow02::before,
+#dowbtn03:checked ~ .dow03::before{
+    background: url(../imges/check01.png) center center;
+    background-size: cover;
+    
+}
+#dowbtn01:checked ~ .dow01,
+#dowbtn02:checked ~ .dow02,
+#dowbtn03:checked ~ .dow03{
+    color: #ff143c;
+}
+#dowbtn01:checked ~ .dow_price,
+#dowbtn02:checked ~ .dow_price,
+#dowbtn03:checked ~ .dow_price{
+    color: #ff143c;
 }
 
 
 
 
+.right_topping{
+    margin-top: 50px;
+    border-top: 2px solid black;
+}
+.right_topping h4{
+    margin-top: 10px;
+    font-size: 20px;
+}
+.right_topping ul{
+    margin-top: 20px;
+}
+.right_topping ul li{
+    display: flex;
+    align-items: center;
+}
+.right_topping ul li .topping_img{
+    width: 15%;
+}
+.right_topping ul li .topping_img img{
+    width: 100%;
+    height: 100%;
+}
+.right_topping ul li .topping_txt{
+    width: 50%;
+    padding: 0 10px;
+}
+.right_topping ul li .topping_txt p{}
+.right_topping ul li .topping_txt span{
+    font-weight: bold;
+}
+
+.right_topping ul li .topping_cnt{
+    width: 35%;
+    text-align: right;
+    font-size: 0;
+}
+.right_topping ul li .topping_cnt button{
+    width: 25px;
+    height: 25px;
+    background-color: #238ece;
+    color: #fff;
+    border: 0;
+    font-size: 16px;
+    cursor: pointer;
+    vertical-align: bottom;
+}
+.right_topping ul li .topping_cnt input{
+    width: 70px;
+    height: 25px;
+    outline: none;
+    text-align: center;
+    border: 1px solid #ccc;
+    
+}
+
+
+.pizza_cnt{
+    margin-top: 50px;
+    border-top: 2px solid black;
+}
+.pizza_cnt h4{
+    margin-top: 10px;
+    font-size: 20px;
+}
+.pizza_cnt_wrap{
+    text-align: center;
+    font-size: 0;
+}
+.pizza_cnt_wrap button{
+    width: 60px;
+    height: 60px;
+    border: 0;
+    outline: none;
+    background-color: #238ece;
+    color: #fff;
+    font-size: 24px;
+    vertical-align: bottom;
+}
+#pizza_minus{
+    border-radius: 30px 0 0 30px;
+    border-right: 0;
+}
+#pizza_plus{
+    border-radius: 0 30px 30px 0;
+    border-left: 0;
+}
+.pizza_cnt_wrap input{ 
+    width: 350px;
+    height: 60px;
+    border: 1px solid #ccc;
+    text-align: center;
+    border-right: 0;
+    border-left: 0;
+    font-size: 22px;
+}
 
 
 
