@@ -453,7 +453,7 @@ nav {
 .section01 .section01_wrap .left_box{
     width: 45%;
     margin-right: 5%;
-    height: 2000px;
+    height: 2300px;
 
 }
 .section01 .section01_wrap .left_box .left_img_wrap{
@@ -701,7 +701,7 @@ nav {
 
 .side_dish ul li .side_txt{
     width: 50%;
-    padding: 10px;
+    padding: 0 10px;
 }
 .side_dish ul li .side_txt p{}
 .side_dish ul li .side_txt span{
@@ -734,7 +734,72 @@ nav {
 
 
 
+.drink_etc{
+    margin-top: 50px;
+    border-top: 2px solid black;
+}
+.drink_etc h4{
+    margin-top: 20px;
+    font-size: 20px;
+}
 
+.drink_etc ul{
+    margin-top: 30px;
+}
+.drink_etc ul li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.drink_etc ul li .drink_img{
+    width: 15%;
+}
+.drink_etc ul li .drink_img img{
+    width: 100%;
+    height: 100%;
+}
+
+.drink_etc ul li .drink_txt{
+    width: 50%;
+    padding:0 10px;
+}
+.drink_etc ul li .drink_txt p{}
+.drink_etc ul li .drink_txt span{
+    font-weight: bold;
+}
+
+.drink_etc ul li .drink_cnt{
+    width: 35%;
+    text-align: right;
+    font-size: 0;
+}
+.drink_etc ul li .drink_cnt button{
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    border: 0;
+    outline: none;
+    background-color: #238ece;
+    color: #fff;
+    cursor: pointer;
+}
+.drink_etc ul li .drink_cnt input{
+    width: 70px;
+    height: 30px;
+    text-align: center;
+    font-size: 16px;
+    outline: none;
+    border: 1px solid #ccc;
+}
+
+
+.total_order{
+    width: 100%;
+    height: 120px;
+    background-color: #eee;
+    position: fixed;
+    bottom: 0;
+}
 
 
 
