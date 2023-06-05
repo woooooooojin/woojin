@@ -466,13 +466,31 @@ const price05 = subData.filter((a) => {
 })
 
 
+const bkprice01 = subData.filter((a) => {
+    return a.color === 'black' && a.price01 <= 39000
+})
+const bkprice02 = subData.filter((a) => {
+    return a.color === 'black' && a.price01 >= 39000 && a.price01 <= 49000
+})
+const bkprice03 = subData.filter((a) => {
+    return a.color === 'black' && a.price01 >= 59000 && a.price01 <= 79000
+})
+const bkprice04 = subData.filter((a) => {
+    return a.color === 'black' && a.price01 >= 79000
+})
+
+console.log(bkprice01)
+console.log(bkprice02)
+console.log(bkprice03)
+console.log(bkprice04)
+
+
 
 blackColor.addEventListener('click', function () {
     sublist.innerHTML = ''
     paging.innerHTML = ''
     nowPage = 0
     createPage(bk)
-
 
 })
 
