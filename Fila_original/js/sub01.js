@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const subList = document.querySelector('.sublist')
 
 
-
+//DOM 생성 SUBITEM 
 function madeDiv(val) {
     for (let i = 0; i < val.length; i++) {
 
