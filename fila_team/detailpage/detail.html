@@ -14,13 +14,13 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" /> -->
 
-
-    <link rel="stylesheet" href="detail.css">
+    <!--css-->
+    <link rel="stylesheet" href="./detail.css">
     <link rel="stylesheet" href="../foot_head/footer.css">
     <link rel="stylesheet" href="../foot_head/header.css">
 
 
-    <!--css-->
+
     <script src="../js/jquery_import.js"></script>
     <!--jquery import-->
 
@@ -43,7 +43,7 @@
 
 
 
-    
+
 </head>
 
 <body>
@@ -51,7 +51,9 @@
 
     <div id="header">
         <script src="../js/load.js"></script>
-        <script>loadHTML("../foot_head/header2.html");</script>
+        <script>
+            loadHTML("../foot_head/header2.html");
+        </script>
     </div>
 
 
@@ -776,6 +778,9 @@
                                     </div>
 
 
+
+
+
                                     <div class="review_star">
                                         <span class="rating_result"></span>
                                         <i class="far fa-star star1"></i>
@@ -788,6 +793,18 @@
 
                                 </div>
                                 <!--review info-->
+
+                                <form method="post" enctype="multipart/form-data">
+                                    <input type="file" accept="image/*" id="input_file" name="input_file"
+                                        class="imgfile">
+
+                                    <div class="up_label_wrap">
+                                        <label for="input_file" id="label_name" name="input_file">사진 업로드 click !
+                                            (필수)</label>
+                                    </div>
+                                    <!--label wrap-->
+
+                                </form>
 
                                 <div class="review_txtbox">
                                     <textarea name="retxt" id="retxt" cols="30" rows="10"
@@ -839,7 +856,7 @@
 
                                 <ul class="R_list">
 
-                                    
+
 
                                 </ul>
 
@@ -905,7 +922,7 @@
                             <div class="notice">
 
                                 <ul class="N_list">
-                                   
+
 
 
 
@@ -937,7 +954,7 @@
     </section>
 
 
-    <section class="section04">
+    <!-- <section class="section04">
         <div class="container">
 
             <div class="sec04_tit">
@@ -954,7 +971,6 @@
                         <button type="button" class="upload">리뷰등록</button>
 
                     </div>
-                    <!--label wrap-->
 
                 </form>
 
@@ -965,15 +981,11 @@
 
                     <ul class="photolist">
 
-                    </ul><!--photilist end-->
 
                 </div>
-                <!--photolist end-->
-            </div><!--se4 wrap end-->
         </div>
-        <!--container end-->
 
-    </section>
+    </section> -->
 
 
 
@@ -981,7 +993,9 @@
 
     <div id="footer">
         <script src="../js/load.js"></script>
-        <script>loadHTML("../foot_head/footer2.html");</script>
+        <script>
+            loadHTML("../foot_head/footer2.html");
+        </script>
     </div>
 
 

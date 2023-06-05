@@ -329,7 +329,7 @@ function createPage(val) {
 
         
 
-        // // //맨앞 맨뒤 페이지 좀더 고민,,,
+        //맨뒤 맨앞 페이지구현
         const prevBtn = document.querySelector('.prev_btn')
         const nextBtn = document.querySelector('.next_btn')
 
@@ -422,7 +422,7 @@ selectBox.addEventListener('change', function () {
 })
 
 
-//검은색 필터 기능
+//색상별, 가격별 필터 기능
 
 const blackColor = document.getElementById('color_chk02')
 const whiteColor = document.getElementById('color_chk12')
@@ -585,8 +585,7 @@ const filterList = document.querySelector('.filter_box_list')
 
 
 
-
-
+//화면에 보일 상품개수 
 const grid01 = document.querySelector('.grid_01')
 const grid02 = document.querySelector('.grid_02')
 let subBox = document.querySelectorAll('.subBox')

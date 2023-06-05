@@ -466,14 +466,33 @@ const price05 = subData.filter((a) => {
 })
 
 
+const bkprice01 = subData.filter((a) => {
+    return a.color === 'black' && a.price01 <= 39000
+})
+const bkprice02 = subData.filter((a) => {
+    return a.color === 'black' && a.price01 >= 39000 && a.price01 <= 49000
+})
+const bkprice03 = subData.filter((a) => {
+    return a.color === 'black' && a.price01 >= 59000 && a.price01 <= 79000
+})
+const bkprice04 = subData.filter((a) => {
+    return a.color === 'black' && a.price01 >= 79000
+})
+
+console.log(bkprice01)
+console.log(bkprice02)
+console.log(bkprice03)
+console.log(bkprice04)
+
+
 
 blackColor.addEventListener('click', function () {
+
     sublist.innerHTML = ''
     paging.innerHTML = ''
     nowPage = 0
     createPage(bk)
-
-
+  
 })
 
 whiteColor.addEventListener('click', function () {
@@ -501,56 +520,56 @@ defaultVal.addEventListener('click', function () {
 
 })
 
-priceChk01.addEventListener('click', function () {
-    sublist.innerHTML = ''
-    paging.innerHTML = ''
-    nowPage = 0
-    createPage(price01)
+// priceChk01.addEventListener('click', function () {
+//     sublist.innerHTML = ''
+//     paging.innerHTML = ''
+//     nowPage = 0
+//     createPage(price01)
 
 
-})
+// })
 
-priceChk02.addEventListener('click', function () {
-    sublist.innerHTML = ''
-    paging.innerHTML = ''
-    nowPage = 0
-    createPage(price02)
-
-
-})
-
-priceChk03.addEventListener('click', function () {
-    sublist.innerHTML = ''
-    paging.innerHTML = ''
-    nowPage = 0
-    createPage(price03)
-
-})
-
-priceChk04.addEventListener('click', function () {
-    sublist.innerHTML = ''
-    paging.innerHTML = ''
-    nowPage = 0
-    createPage(price04)
+// priceChk02.addEventListener('click', function () {
+//     sublist.innerHTML = ''
+//     paging.innerHTML = ''
+//     nowPage = 0
+//     createPage(price02)
 
 
-})
+// })
 
-priceChk05.addEventListener('click', function () {
-    sublist.innerHTML = ''
-    paging.innerHTML = ''
-    nowPage = 0
-    createPage(price05)
+// priceChk03.addEventListener('click', function () {
+//     sublist.innerHTML = ''
+//     paging.innerHTML = ''
+//     nowPage = 0
+//     createPage(price03)
+
+// })
+
+// priceChk04.addEventListener('click', function () {
+//     sublist.innerHTML = ''
+//     paging.innerHTML = ''
+//     nowPage = 0
+//     createPage(price04)
 
 
-})
-priceChkDefault.addEventListener('click', function () {
-    sublist.innerHTML = ''
-    paging.innerHTML = ''
-    nowPage = 0
-    createPage(subData)
+// })
 
-})
+// priceChk05.addEventListener('click', function () {
+//     sublist.innerHTML = ''
+//     paging.innerHTML = ''
+//     nowPage = 0
+//     createPage(price05)
+
+
+// })
+// priceChkDefault.addEventListener('click', function () {
+//     sublist.innerHTML = ''
+//     paging.innerHTML = ''
+//     nowPage = 0
+//     createPage(subData)
+
+// })
 
 
 
