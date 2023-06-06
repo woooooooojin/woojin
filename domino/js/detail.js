@@ -91,6 +91,7 @@ $(function () {
 })
 
 
+const rightBox = document.querySelector('.right_box')
 //가격표시란
 const pizzaPrice = document.querySelector('.pizza_desc')
 const dowPrice = document.querySelector('.dow_desc')
@@ -108,68 +109,59 @@ const pizzaSize = document.querySelector('.right_size')
 //피자 도우 선택
 const dowBtns = document.getElementsByName('dowbtn')
 const dowWrap = document.querySelector('.dowwrap')
+const dowBtn01 = document.getElementById('dowbtn01')
+const dowBtn02 = document.getElementById('dowbtn02')
+const dowBtn03 = document.getElementById('dowbtn03')
+let total = 0
+let result = 0
 
 
 
-pizzaSize.addEventListener('change', () => {
-    if (pizzaChk01.checked) {
-        pizzaPrice.innerHTML = ''
-        pizzaPrice.innerHTML = '슈퍼디럭스히어로 L 29,900원'
-        totalPrice.innerHTML = `${LargeCnt} 원`
+if (pizzaChk01.checked) {
+    pizzaPrice.innerHTML = ''
+    pizzaPrice.innerHTML = '슈퍼디럭스히어로 L 29,900원'
+    total = 29900
+    totalPrice.innerHTML = `${total} 원`
 
-    }
-    if (pizzaChk02.checked) {
-        pizzaPrice.innerHTML = ''
-        pizzaPrice.innerHTML = '슈퍼디럭스히어로 M 22,500원'
-        totalPrice.innerHTML = `${MediumCnt} 원`
-    }
+}
 
 
 
 
-})
-
-dowWrap.addEventListener('change', () => {
+rightBox.addEventListener('change', () => {
     for (let i = 0; i < dowBtns.length; i++) {
         if (dowBtns[0].checked) {
             dowPrice.innerHTML = ''
             dowPrice.innerHTML = '오리지널 도우'
 
-            if (pizzaChk01.checked) {
-                totalPrice.innerHTML = ''
-                totalPrice.innerHTML = `${(LargeCnt + 0)} 원`
-            }
+            totalPrice.innerHTML = ''
+            totalPrice.innerHTML = `${total} 원`
 
-            if (pizzaChk02.checked) {
-                totalPrice.innerHTML = ''
-                totalPrice.innerHTML = `${(MediumCnt + 0)} 원`
-            }
+
 
         } else if (dowBtns[1].checked) {
             dowPrice.innerHTML = ''
             dowPrice.innerHTML = '슈퍼시드 화이버 함유 도우(더블 치즈엣지) + 6000원'
-            if (pizzaChk01.checked) {
-                totalPrice.innerHTML = ''
-                totalPrice.innerHTML = `${(LargeCnt + 6000)} 원`
+            totalPrice.innerHTML = ''
+            result = total + 6000
+            totalPrice.innerHTML = `${result} 원`
 
-            }
-            if (pizzaChk02.checked) {
-                totalPrice.innerHTML = ''
-                totalPrice.innerHTML = `${(MediumCnt + 6000)} 원`
-            }
+
         } else if (dowBtns[2].checked) {
             dowPrice.innerHTML = ''
             dowPrice.innerHTML = '오리지널 도우 (더블 치즈엣지) + 3000원'
-            if (pizzaChk01.checked) {
-                totalPrice.innerHTML = ''
-                totalPrice.innerHTML = `${(LargeCnt + 3000)} 원`
+            totalPrice.innerHTML = ''
+            result = total + 3000
+            totalPrice.innerHTML = `${result} 원`
 
-            }
-            if (pizzaChk02.checked) {
-                totalPrice.innerHTML = ''
-                totalPrice.innerHTML = `${(MediumCnt + 3000)} 원`
-            }
+
         }
+
+
     }
+
+
+    //토핑선택 ㄱㄱ
+
 
 })
