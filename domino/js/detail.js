@@ -112,7 +112,7 @@ const dowWrap = document.querySelector('.dowwrap')
 const dowBtn01 = document.getElementById('dowbtn01')
 const dowBtn02 = document.getElementById('dowbtn02')
 const dowBtn03 = document.getElementById('dowbtn03')
-let total = 0
+let total = 29900
 let result = 0
 
 
@@ -120,8 +120,9 @@ let result = 0
 if (pizzaChk01.checked) {
     pizzaPrice.innerHTML = ''
     pizzaPrice.innerHTML = '슈퍼디럭스히어로 L 29,900원'
-    total = 29900
     totalPrice.innerHTML = `${total} 원`
+
+
 
 }
 
@@ -133,9 +134,8 @@ rightBox.addEventListener('change', () => {
         if (dowBtns[0].checked) {
             dowPrice.innerHTML = ''
             dowPrice.innerHTML = '오리지널 도우'
-
-            totalPrice.innerHTML = ''
-            totalPrice.innerHTML = `${total} 원`
+            result = total + 0
+            totalPrice.innerHTML = `${result} 원`
 
 
 
@@ -160,9 +160,32 @@ rightBox.addEventListener('change', () => {
 
     }
 
-    
 
-    //토핑선택 ㄱㄱ
+
+    //토핑선택 
+
+    const minusBtn = document.querySelectorAll('.minus_btn')
+    const plusBtn = document.querySelectorAll('.plus_btn')
+    const toppingCnt = document.querySelectorAll('#toppingCnt')
+
+    for (let i = 0; i < minusBtn.length; i++) {
+        minusBtn[0].addEventListener('click', function () {
+            toppingCnt[0].value--
+            totalPrice.innerHTML = `${result + (500 * toppingCnt[0].value)} 원`
+        })
+
+        
+    }
+    for (let i = 0; i < plusBtn.length; i++) {
+        plusBtn[0].addEventListener('click', function () {
+            toppingCnt[0].value++
+            totalPrice.innerHTML = `${result + (500 * toppingCnt[0].value)} 원`
+
+        })
+
+    }
+
+
 
 
 })
