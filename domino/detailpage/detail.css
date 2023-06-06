@@ -498,7 +498,6 @@ nav {
 }
 .right_box .right_size{
     margin-top: 20px;
-    display: flex;
 }
 .right_box .right_size input{
     display: none;
@@ -518,8 +517,7 @@ nav {
     transition: .3s;
 }
 
-#sizebtn1:checked ~ .size01,
-#sizebtn2:checked ~ .size02{
+#sizebtn1:checked ~ .size01{
     background-color: #238ece;
     color: #fff;
 }
