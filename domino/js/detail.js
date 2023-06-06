@@ -1,10 +1,12 @@
 ///////롤링공지사항
-function notice_roll(){
-    $('.rolling li:first').slideUp(function(){
+function notice_roll() {
+    $('.rolling li:first').slideUp(function () {
         $(this).appendTo($('.rolling')).slideDown()
     })
 }
-setInterval(function(){notice_roll()},3000);
+setInterval(function () {
+    notice_roll()
+}, 3000);
 
 
 ///////////jquery//////////
@@ -62,9 +64,9 @@ $(function () {
         $(location).attr('href', '../index.html')
     })
 
-   
 
-    
+
+
 
     $('.close_btn3').click(function () {
         $('.popup3').css('display', 'none');
@@ -85,5 +87,89 @@ $(function () {
 
 
 
+
+})
+
+
+//가격표시란
+const pizzaPrice = document.querySelector('.pizza_desc')
+const dowPrice = document.querySelector('.dow_desc')
+const totalPrice = document.querySelector('.total_desc')
+let LargeCnt = 29900
+let MediumCnt = 22500
+
+//피자 사이즈 선택
+const pizzaChk01 = document.getElementById('sizebtn1')
+const pizzaChk01Label = document.querySelector('.size01')
+const pizzaChk02 = document.getElementById('sizebtn2')
+const pizzaChk02Label = document.querySelector('.size02')
+const pizzaSize = document.querySelector('.right_size')
+
+//피자 도우 선택
+const dowBtns = document.getElementsByName('dowbtn')
+const dowWrap = document.querySelector('.dowwrap')
+
+
+
+pizzaSize.addEventListener('change', () => {
+    if (pizzaChk01.checked) {
+        pizzaPrice.innerHTML = ''
+        pizzaPrice.innerHTML = '슈퍼디럭스히어로 L 29,900원'
+        totalPrice.innerHTML = `${LargeCnt} 원`
+
+    }
+    if (pizzaChk02.checked) {
+        pizzaPrice.innerHTML = ''
+        pizzaPrice.innerHTML = '슈퍼디럭스히어로 M 22,500원'
+        totalPrice.innerHTML = `${MediumCnt} 원`
+    }
+
+
+
+
+})
+
+dowWrap.addEventListener('change', () => {
+    for (let i = 0; i < dowBtns.length; i++) {
+        if (dowBtns[0].checked) {
+            dowPrice.innerHTML = ''
+            dowPrice.innerHTML = '오리지널 도우'
+
+            if (pizzaChk01.checked) {
+                totalPrice.innerHTML = ''
+                totalPrice.innerHTML = `${(LargeCnt + 0)} 원`
+            }
+
+            if (pizzaChk02.checked) {
+                totalPrice.innerHTML = ''
+                totalPrice.innerHTML = `${(MediumCnt + 0)} 원`
+            }
+
+        } else if (dowBtns[1].checked) {
+            dowPrice.innerHTML = ''
+            dowPrice.innerHTML = '슈퍼시드 화이버 함유 도우(더블 치즈엣지) + 6000원'
+            if (pizzaChk01.checked) {
+                totalPrice.innerHTML = ''
+                totalPrice.innerHTML = `${(LargeCnt + 6000)} 원`
+
+            }
+            if (pizzaChk02.checked) {
+                totalPrice.innerHTML = ''
+                totalPrice.innerHTML = `${(MediumCnt + 6000)} 원`
+            }
+        } else if (dowBtns[2].checked) {
+            dowPrice.innerHTML = ''
+            dowPrice.innerHTML = '오리지널 도우 (더블 치즈엣지) + 3000원'
+            if (pizzaChk01.checked) {
+                totalPrice.innerHTML = ''
+                totalPrice.innerHTML = `${(LargeCnt + 3000)} 원`
+
+            }
+            if (pizzaChk02.checked) {
+                totalPrice.innerHTML = ''
+                totalPrice.innerHTML = `${(MediumCnt + 3000)} 원`
+            }
+        }
+    }
 
 })
