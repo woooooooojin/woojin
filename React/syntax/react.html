@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>react01</title>
+
+    <!-- react -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- babel ; jsx 문법 사용 -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+    <!-- Your custom script here -->
+    <script type="text/babel" defer>
+
+        // const rootElement = document.getElementById('root')
+
+        // const h1 = document.createElement('h1')
+        // h1.setAttribute('className','title')
+        // h1.textContent = 'Hello React'
+        // rootElement.appendChild(h1)
+
+
+        const rootElement = document.getElementById('root')
+        
+        //React.createElement(component, props, ...children)
+        //1)React.createElement('component',{children})
+        // const element = React.createElement('h1', {children:'hello react'})
+
+        //2) React.createElement('component', props, 'children')
+        // const element = React.createElement('h1', null, 'react!!')
+
+        //3)React.createElement('component',props,['children', 'children'])
+        // const element = React.createElement('h1',null,['hello',' react!',' hahaha'])
+
+        // const element = React.createElement(
+        //     'h1',
+        //     {
+        //         className: 'title',
+        //         // children: 'Hello, React!'
+        //         children:['hello, react!',' bye, javascript!']
+        //     }
+        // )
+
+        // ReactDOM.render(element, rootElement) //element를 root에 뿌린다
+
+
+
+        //rendering은 최종 dom 하나만 추가됨 (=> Fragment 사용하면 해결)
+        // const element01 = React.createElement('div', null, 'hello react!')
+        // const element02 = React.createElement('p', null, 'bye javascript!')
+
+        // ReactDOM.render(element01, rootElement)
+        // ReactDOM.render(element02, rootElement)
+
+
+
+        //JSX 자바스크립트 확장 문법 => babel compiler(transpiler)
+
+        // const element = <h1 className = 'title'>hello, react!</h1>
+
+        const text = 'hello react!!'
+        const userClassName = 'title'
+
+        // const element = <h1 className = {userClassName}>{text}</h1>
+        // const element = <h1 className={userClassName} children ={text}></h1>
+        // const element = <h1 className ={userClassName} children={text} />
+
+
+
+        const props = {
+            className : userClassName,
+            children: text
+        }
+        // const element = <h1 className={props.className} children={props.children} />
+        const element = <h1 {...props}/> //props(속성) 여러개일때는 스프레드연산자...로 받을수 있다
+
+        ReactDOM.render(element, rootElement)
+
+
+
+    </script>
+
+
+
+</head>
+
+<body>
+
+    <div id="root"></div>
+
+</body>
+
+</html>
