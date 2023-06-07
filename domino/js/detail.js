@@ -159,82 +159,95 @@ rightBox.addEventListener('change', () => {
 
 
     }
-
-
-
-    //토핑선택 
-
-    const minusBtn = document.querySelectorAll('.minus_btn')
-    const plusBtn = document.querySelectorAll('.plus_btn')
-    const toppingCnt = document.querySelectorAll('#toppingCnt')
-    const toppingValue1 = document.querySelector('.topping_cnt1')
-    const toppingValue2 = document.querySelector('.topping_cnt2')
-
-    for (let i = 0; i < toppingCnt.length; i++) {
-        minusBtn[i].addEventListener('click', function () {
-            toppingCnt[i].value--
-            totalPrice.innerHTML = `${result + toppingValue1.value * 500 + toppingValue2.value * 300} 원`
-        })
-
-        plusBtn[i].addEventListener('click', function () {
-            toppingCnt[i].value++
-            totalPrice.innerHTML = `${result + toppingValue1.value * 500 + toppingValue2.value * 300} 원`
-
-        })
-
-
-
-
-    }
-
-    //사이드 선택
-    const sideMinus = document.querySelectorAll('.side_minus')
-    const sidePlus = document.querySelectorAll('.side_plus')
-    const sideCnt = document.querySelectorAll('#sideCnt')
-    const sideValue1 = document.querySelector('.side_cnt1')
-    const sideValue2 = document.querySelector('.side_cnt2')
-    const sideValue3 = document.querySelector('.side_cnt3')
-    const sideValue4 = document.querySelector('.side_cnt4')
-    const sideTxt = document.querySelector('.side_desc')
-
-    for (let i = 0; i < sideCnt.length; i++) {
-        sideMinus[i].addEventListener('click', () => {
-            sideCnt[i].value--
-            totalPrice.innerHTML = `${result + sideValue1.value * 9800 + sideValue2.value * 9800 + sideValue3.value * 4600 + sideValue4.value * 9800} 원`
-            
-        })
-        sidePlus[i].addEventListener('click', () => {
-            sideCnt[i].value++
-            totalPrice.innerHTML = `${result + sideValue1.value * 9800 + sideValue2.value * 9800 + sideValue3.value * 4600 + sideValue4.value * 9800} 원`
-            if(sideValue1){
-                sideTxt.innerHTML = `<p>아보카도 크림 파스타</p>`
-            }else{
-                sideTxt.innerHTML = ``
-            }
-        })
-
-
-    }
-
-
-
-
-
-   
-    
-
-
-
-
-
 })
 
-// const sideVal1 = document.querySelector('.side_cnt1').value
-// const sideVal2 = document.querySelector('.side_cnt2').value
-// const sideVal3 = document.querySelector('.side_cnt3').value
-// const sideVal4 = document.querySelector('.side_cnt4').value
-// const sideTxt = document.querySelector('.side_desc').value
 
-// if(sideVal1){
-//     sideTxt.innerHTML = 'ddd'
-// }
+
+//토핑선택 
+
+const minusBtn = document.querySelectorAll('.minus_btn')
+const plusBtn = document.querySelectorAll('.plus_btn')
+const toppingCnt = document.querySelectorAll('#toppingCnt')
+const toppingValue1 = document.querySelector('.topping_cnt1')
+const toppingValue2 = document.querySelector('.topping_cnt2')
+
+for (let i = 0; i < toppingCnt.length; i++) {
+    minusBtn[i].addEventListener('click', function () {
+        toppingCnt[i].value--
+        totalPrice.innerHTML = `${result + toppingValue1.value * 500 + toppingValue2.value * 300} 원`
+    })
+
+    plusBtn[i].addEventListener('click', function () {
+        toppingCnt[i].value++
+        totalPrice.innerHTML = `${result + toppingValue1.value * 500 + toppingValue2.value * 300} 원`
+
+    })
+
+
+
+
+}
+
+//사이드 선택
+const sideMinus = document.querySelectorAll('.side_minus')
+const sidePlus = document.querySelectorAll('.side_plus')
+const sideCnt = document.querySelectorAll('#sideCnt')
+const sideValue1 = document.querySelector('.side_cnt1')
+const sideValue2 = document.querySelector('.side_cnt2')
+const sideValue3 = document.querySelector('.side_cnt3')
+const sideValue4 = document.querySelector('.side_cnt4')
+const sideTxt = document.querySelector('.side_desc')
+
+for (let i = 0; i < sideCnt.length; i++) {
+    sideMinus[i].addEventListener('click', () => {
+        sideCnt[i].value--
+        totalPrice.innerHTML = `${result + sideValue1.value * 9800 + sideValue2.value * 9800 + sideValue3.value * 4600 + sideValue4.value * 9800} 원`
+        sideTxt.innerHTML = `<p>아보카도 크림 파스타 * ${sideValue1.value}</p> <p>체다 치즈 치킨 * ${sideValue2.value}</p> <p>치킨 체다 더티 프라이즈 * ${sideValue3.value}</p> <p>칙볼(치킨볼) 파스타 * ${sideValue4.value}</p>`
+    })
+    sidePlus[i].addEventListener('click', () => {
+        sideCnt[i].value++
+        totalPrice.innerHTML = `${result + sideValue1.value * 9800 + sideValue2.value * 9800 + sideValue3.value * 4600 + sideValue4.value * 9800} 원`
+        sideTxt.innerHTML = `<p>아보카도 크림 파스타 * ${sideValue1.value}</p> <p>체다 치즈 치킨 * ${sideValue2.value}</p> <p>치킨 체다 더티 프라이즈 * ${sideValue3.value}</p> <p>칙볼(치킨볼) 파스타 * ${sideValue4.value}</p>`
+
+    })
+
+
+}
+
+
+const drinkMinus = document.querySelectorAll('.drink_minus')
+const drinkPlus = document.querySelectorAll('.drink_plus')
+const drinkCnt = document.querySelectorAll('#drinkCnt')
+
+const drinkValue1 = document.querySelector('.drink_cnt1')
+const drinkValue2 = document.querySelector('.drink_cnt2')
+const drinkValue3 = document.querySelector('.drink_cnt3')
+const drinkValue4 = document.querySelector('.drink_cnt4')
+const drinkTxt = document.querySelector('.drink_desc')
+for (let i = 0; i < drinkCnt.length; i++) {
+    drinkMinus[i].addEventListener('click', () => {
+        drinkCnt[i].value--
+        totalPrice.innerHTML = `${result + drinkValue1.value * 2300 + drinkValue2.value * 2400 + drinkValue3.value * 800 + drinkValue4.value * 200} 원`
+        drinkTxt.innerHTML = `<p>코카콜라 1.25L * ${drinkValue1.value}</p> <p>스프라이트 1.5L * ${drinkValue2.value}</p> <p>우리피클 * ${drinkValue3.value}</p> <p>갈릭 디핑 소스 15g * ${drinkValue4.value}</p>`
+    })
+    drinkPlus[i].addEventListener('click', () => {
+        drinkCnt[i].value++
+        totalPrice.innerHTML = `${result + drinkValue1.value * 2300 + drinkValue2.value * 2400 + drinkValue3.value * 800 + drinkValue4.value * 200} 원`
+
+        drinkTxt.innerHTML = `<p>코카콜라 1.25L * ${drinkValue1.value}</p> <p>스프라이트 1.5L * ${drinkValue2.value}</p> <p>우리피클 * ${drinkValue3.value}</p> <p>갈릭 디핑 소스 15g * ${drinkValue4.value}</p>`
+    })
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
