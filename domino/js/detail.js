@@ -201,15 +201,15 @@ rightBox.addEventListener('change', () => {
         sideMinus[i].addEventListener('click', () => {
             sideCnt[i].value--
             totalPrice.innerHTML = `${result + sideValue1.value * 9800 + sideValue2.value * 9800 + sideValue3.value * 4600 + sideValue4.value * 9800} 원`
-            if(sideValue1 <= 0){
-                sideTxt.innerHTML = ''
-            }
+            
         })
         sidePlus[i].addEventListener('click', () => {
             sideCnt[i].value++
             totalPrice.innerHTML = `${result + sideValue1.value * 9800 + sideValue2.value * 9800 + sideValue3.value * 4600 + sideValue4.value * 9800} 원`
             if(sideValue1){
                 sideTxt.innerHTML = `<p>아보카도 크림 파스타</p>`
+            }else{
+                sideTxt.innerHTML = ``
             }
         })
 
