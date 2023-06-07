@@ -167,25 +167,74 @@ rightBox.addEventListener('change', () => {
     const minusBtn = document.querySelectorAll('.minus_btn')
     const plusBtn = document.querySelectorAll('.plus_btn')
     const toppingCnt = document.querySelectorAll('#toppingCnt')
+    const toppingValue1 = document.querySelector('.topping_cnt1')
+    const toppingValue2 = document.querySelector('.topping_cnt2')
 
-    for (let i = 0; i < minusBtn.length; i++) {
-        minusBtn[0].addEventListener('click', function () {
-            toppingCnt[0].value--
-            totalPrice.innerHTML = `${result + (500 * toppingCnt[0].value)} 원`
+    for (let i = 0; i < toppingCnt.length; i++) {
+        minusBtn[i].addEventListener('click', function () {
+            toppingCnt[i].value--
+            totalPrice.innerHTML = `${result + toppingValue1.value * 500 + toppingValue2.value * 300} 원`
         })
 
-        
-    }
-    for (let i = 0; i < plusBtn.length; i++) {
-        plusBtn[0].addEventListener('click', function () {
-            toppingCnt[0].value++
-            totalPrice.innerHTML = `${result + (500 * toppingCnt[0].value)} 원`
+        plusBtn[i].addEventListener('click', function () {
+            toppingCnt[i].value++
+            totalPrice.innerHTML = `${result + toppingValue1.value * 500 + toppingValue2.value * 300} 원`
 
         })
 
+
+
+
     }
+
+    //사이드 선택
+    const sideMinus = document.querySelectorAll('.side_minus')
+    const sidePlus = document.querySelectorAll('.side_plus')
+    const sideCnt = document.querySelectorAll('#sideCnt')
+    const sideValue1 = document.querySelector('.side_cnt1')
+    const sideValue2 = document.querySelector('.side_cnt2')
+    const sideValue3 = document.querySelector('.side_cnt3')
+    const sideValue4 = document.querySelector('.side_cnt4')
+    const sideTxt = document.querySelector('.side_desc')
+
+    for (let i = 0; i < sideCnt.length; i++) {
+        sideMinus[i].addEventListener('click', () => {
+            sideCnt[i].value--
+            totalPrice.innerHTML = `${result + sideValue1.value * 9800 + sideValue2.value * 9800 + sideValue3.value * 4600 + sideValue4.value * 9800} 원`
+            if(sideValue1 <= 0){
+                sideTxt.innerHTML = ''
+            }
+        })
+        sidePlus[i].addEventListener('click', () => {
+            sideCnt[i].value++
+            totalPrice.innerHTML = `${result + sideValue1.value * 9800 + sideValue2.value * 9800 + sideValue3.value * 4600 + sideValue4.value * 9800} 원`
+            if(sideValue1){
+                sideTxt.innerHTML = `<p>아보카도 크림 파스타</p>`
+            }
+        })
+
+
+    }
+
+
+
+
+
+   
+    
+
 
 
 
 
 })
+
+// const sideVal1 = document.querySelector('.side_cnt1').value
+// const sideVal2 = document.querySelector('.side_cnt2').value
+// const sideVal3 = document.querySelector('.side_cnt3').value
+// const sideVal4 = document.querySelector('.side_cnt4').value
+// const sideTxt = document.querySelector('.side_desc').value
+
+// if(sideVal1){
+//     sideTxt.innerHTML = 'ddd'
+// }

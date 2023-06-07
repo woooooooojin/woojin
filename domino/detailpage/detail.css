@@ -818,6 +818,7 @@ nav {
 .total_side p,
 .total_side p{
     margin-top: 10px;
+    font-size: 14px;
 }
 .total_side{
     width: 25%;
