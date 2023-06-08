@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>react02</title>
+
+    <!-- react -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- babel ; jsx 문법 사용 -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+    <!-- Your custom script here -->
+    <script type="text/babel" defer>
+
+        const rootElement = document.getElementById('root')
+        
+        // const element = <h1 className = 'title'>hi</h1>
+        // const element = <h1 className='title' children='hello' />
+
+        //객체로 처리
+        // const userClassName = 'title'
+        // const text = 'hello react'
+        
+        // const props = {
+        //     className : userClassName,
+        //     children : text
+        // }
+        // const element = <h1 className={props.className} children={props.children} />
+
+
+        // const element = <h1 className='title' children={React.createElement('span',null,'hello react')}/>
+        
+        
+        // const element = (
+        //     <div
+        //         className='title'
+        //         children={[
+        //             // React.createElement('span',null,'hello,react'),
+        //             // React.createElement('br'),
+        //             // React.createElement('span',null,'bye, javascript'),
+
+        //             //jsx 문법으로
+        //             <span className='txt'>Hello react</span>,
+        //             <br />,
+        //             <span children='bye js'/>
+        //         ]}
+        //     />
+        // )
+
+
+        // const element = (
+        // <React.Fragment
+        //     children={[
+        //         <span className='txt'>Hello react</span>,
+        //         <br />,
+        //         <span children='bye js'/>
+               
+        //      ]}
+
+        //  />
+        // )
+
+
+
+        //fragment 배열아님 동등한 레벨의 태그들
+        // const element = (
+        //     <React.Fragment>
+        //     <span className='txt'>Hello react!</span>
+        //     <br />
+        //     <span children='bye js'/>
+        //     </React.Fragment>
+        // )
+
+
+        //fragment 다른방법
+        const element = (
+            <>
+            <span className='txt'>Hello react!</span>
+            <br />
+            <span children='bye js'/>
+            </>
+        )
+        
+
+
+
+
+
+
+        
+
+        ReactDOM.render(element, rootElement)
+
+
+
+    </script>
+
+    <style>
+        /* .title{
+            color: steelblue;
+        } */
+    </style>
+
+</head>
+
+<body>
+
+    <div id="root"></div>
+
+</body>
+
+</html>
