@@ -261,31 +261,7 @@ rightBox.addEventListener('change', () => {
     }
 
 
-    // const drinkMinus = document.querySelectorAll('.drink_minus')
-    // const drinkPlus = document.querySelectorAll('.drink_plus')
-    // const drinkCnt = document.querySelectorAll('#drinkCnt')
-
-    // const drinkValue1 = document.querySelector('.drink_cnt1')
-    // const drinkValue2 = document.querySelector('.drink_cnt2')
-    // const drinkValue3 = document.querySelector('.drink_cnt3')
-    // const drinkValue4 = document.querySelector('.drink_cnt4')
-    // const drinkTxt = document.querySelector('.drink_desc')
-    // for (let i = 0; i < drinkCnt.length; i++) {
-    //     drinkMinus[i].addEventListener('click', () => {
-    //         drinkCnt[i].value--
-    //         totalPrice.innerHTML = `${result + (drinkValue1.value * 2300) + (drinkValue2.value * 2400) + (drinkValue3.value * 800) + (drinkValue4.value * 200)} 원`
-    //         drinkTxt.innerHTML = `<p>코카콜라 1.25L * ${drinkValue1.value}</p> <p>스프라이트 1.5L * ${drinkValue2.value}</p> <p>우리피클 * ${drinkValue3.value}</p> <p>갈릭 디핑 소스 15g * ${drinkValue4.value}</p>`
-    //         console.log(result)
-    //     })
-    //     drinkPlus[i].addEventListener('click', () => {
-    //         drinkCnt[i].value++
-    //         totalPrice.innerHTML = `${result + (drinkValue1.value * 2300) + (drinkValue2.value * 2400) + (drinkValue3.value * 800) + (drinkValue4.value * 200)} 원`
-    //         drinkTxt.innerHTML = `<p>코카콜라 1.25L * ${drinkValue1.value}</p> <p>스프라이트 1.5L * ${drinkValue2.value}</p> <p>우리피클 * ${drinkValue3.value}</p> <p>갈릭 디핑 소스 15g * ${drinkValue4.value}</p>`
-    //         console.log(result)
-    //     })
-
-    // }
-
+    
 
 
 
