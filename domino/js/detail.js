@@ -111,12 +111,16 @@ const dowWrap = document.querySelector('.dowwrap')
 const dowBtn01 = document.getElementById('dowbtn01')
 const dowBtn02 = document.getElementById('dowbtn02')
 const dowBtn03 = document.getElementById('dowbtn03')
+const sideTxt2 = document.querySelector('.side_desc')
+const drinkTxt2 = document.querySelector('.drink_desc')
+
 let total = 29900
 let result
 
 
 
 if (pizzaChk01.checked) {
+  
     pizzaPrice.innerHTML = ''
     pizzaPrice.innerHTML = '슈퍼디럭스히어로 L 29,900원'
     totalPrice.innerHTML = `${total} 원`
@@ -135,6 +139,8 @@ rightBox.addEventListener('change', () => {
             dowPrice.innerHTML = '오리지널 도우'
             result = total + 0
             totalPrice.innerHTML = `${result} 원`
+            sideTxt2.innerHTML = ''
+            drinkTxt2.innerHTML=''
 
 
 
@@ -144,6 +150,8 @@ rightBox.addEventListener('change', () => {
             totalPrice.innerHTML = ''
             result = total + 6000
             totalPrice.innerHTML = `${result} 원`
+            sideTxt2.innerHTML = ''
+            drinkTxt2.innerHTML=''
 
 
         } else if (dowBtns[2].checked) {
@@ -152,6 +160,8 @@ rightBox.addEventListener('change', () => {
             totalPrice.innerHTML = ''
             result = total + 3000
             totalPrice.innerHTML = `${result} 원`
+            sideTxt2.innerHTML = ''
+            drinkTxt2.innerHTML=''
 
 
         }
