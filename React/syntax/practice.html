@@ -18,39 +18,121 @@
 
         const rootElement = document.getElementById('root')
 
-        // const element = React.createElement('h1',{children:'hello react'})
-        // const element = React.createElement('h1',null,'react!!')
-        // const element = React.createElement('h1',null,['hello','react','hahaha'])
+        // const element = <h1 className = 'title'>hi</h1>
+        // const element = <h1 className = 'title' children='hello' />
 
-        // const element = React.createElement(
-        //     'h1',
-        //     {
-        //         className: 'title',
-        //         children:['hello,react!','bye,javascript']
-        //     }
+        //객체로
+        // const userClassName = 'title'
+        // const text = 'hello react'
+
+        // const props = {
+        //     className : userClassName,
+        //     children : text
+        // }
+
+        // const element = <h1 className={props.className} children={props.children} />
+
+        // const element = (
+        //     <div 
+        //         className = 'title'
+        //         children={[
+        //             // React.createElement('span',null,'hello react'),
+        //             // React.createElement('br'),
+        //             // React.createElement('span',null,'bye js')
+
+        //             //jsx
+        //             <span className = 'title' children ='hello react'/>,
+        //             <br />,
+        //             <span children = 'bye js !'/>
+        //         ]}
+            
+        //     />
+        // )
+
+        // const element = (
+        //     <React.Fragment
+        //         children={[
+        //             <span className = 'txt' children = 'hello react' />,
+        //             <br />,
+        //             <span children = 'bye js'/>
+        //         ]}
+            
+        //     />
+
+        // )
+
+        // const element = (
+        //     <React.Fragment>
+        //         <span className = 'title' children = 'hello react'/>
+        //         <br />
+        //         <span children = 'bye js'/>
+        //     </React.Fragment>
         // )
 
 
-        // const element01 = React.createElement('div',null,'hello react!')
-        // const element02 = React.createElement('p',null,'bye,javascript!')
+        // const element = (
+        //     <>
+        //     <span className = 'txt' children ='hello react'/>
+        //     <br />
+        //     <span children = 'bye bye'/>
+        //     </>
+        // )
 
-        // ReactDOM.render(element01,rootElement)
-        // ReactDOM.render(element02,rootElement)
 
-        //jsx문법
-        const text = 'hello react!'
-        const userClassName = 'title'
+        // const FrontEnd = function(){
+        //     return(
+        //         <>
+        //             <h3>react</h3>
+        //             <div>function</div>
+        //         </>
+        //     )
+        // }
+        // const element = FrontEnd()
+        // const element = (
+        //     <>
+        //     {FrontEnd()}
+        //     {FrontEnd()}
+        //     {FrontEnd()}
+        //     </>
+        // )
 
-        // const element = <h1 className = {userClassName}>{text}</h1>
-        // const element = <h1 className ={userClassName} children = {text}></h1>
-        // const element = <h1 className = {userClassName} children = {text} />
+        // const FrontEnd = (subject, syntax) => 
 
-        const props = {
-            className : userClassName,
-            children : text
-        }
-        // const element = <h1 className={props.className} children={props.children} />
-        const element = <h1 {...props}/>
+            
+        //         <>
+        //         <h3>{subject}</h3>
+        //         <div>{syntax}</div>
+        //         </>
+            
+
+        
+        // // const element = FrontEnd('react','componetnt')
+        // const element = (
+        //     <>
+        //     {FrontEnd('html5','tag')}
+        //     {FrontEnd('css','ddd')}
+        //     {FrontEnd('js','asdf')}
+        //     </>
+        // )
+
+
+        const FrontEnd = ({subject, syntax}) => (
+            <>
+                <h3 className = 'title'>{subject}</h3>
+                <div>{syntax}</div>
+            </>
+        )
+
+        const element = (
+            <>
+            <FrontEnd subject = 'html5' syntax = 'tag'/>
+            <FrontEnd subject = 'htasef' syntax = 'd'/>
+            <FrontEnd subject = 'htmqwer' syntax = 'tasdfag'/>
+
+            </>
+        )
+        
+
 
 
         ReactDOM.render(element,rootElement)
