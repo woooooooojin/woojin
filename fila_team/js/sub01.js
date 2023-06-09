@@ -373,7 +373,7 @@ const selectBox = document.getElementById('select_sort'); //select box
 const sublist = document.querySelector('.sublist')
 let paging = document.querySelector('.paging_ex')
 selectBox.addEventListener('change', function () {
-    if (selectBox.value === 'expensive') {
+    if (selectBox.value === 'expensive') { //가격높은순
         let exp = subData.sort((a, b) => {
             return (a.price01 - b.price01) * -1
         })
@@ -383,7 +383,7 @@ selectBox.addEventListener('change', function () {
         createPage(exp)
 
 
-    } else if (selectBox.value === 'cheap') {
+    } else if (selectBox.value === 'cheap') { //가격낮은순
         let cheap = subData.sort((a, b) => {
             return (a.price01 - b.price01)
         })
@@ -392,7 +392,7 @@ selectBox.addEventListener('change', function () {
         nowPage = 0
         createPage(cheap)
         //낮은가격순
-    } else if (selectBox.value === 'basic') {
+    } else if (selectBox.value === 'basic') { //기본순
         let basic = subData.sort((a, b) => {
             return (a.id - b.id)
         })
@@ -401,28 +401,28 @@ selectBox.addEventListener('change', function () {
         nowPage = 0
         createPage(basic)
         // 기본
-    } else if (selectBox.value === 'pop') {
+    } else if (selectBox.value === 'pop') { //인기순
         let pop = subData.sort((a, b) => {
             return (a.pop - b.pop)
         })
         sublist.innerHTML = ''
         paging.innerHTML = ''
         nowPage = 0
-        createPage(pop) //인기순
-    } else if (selectBox.value === 'new') {
+        createPage(pop) 
+    } else if (selectBox.value === 'new') {//신상순
         let newarrival = subData.sort((a, b) => {
             return new Date(a.day).getTime() - new Date(b.day).getTime()
         }) //신상날짜순
         sublist.innerHTML = ''
         paging.innerHTML = ''
         nowPage = 0
-        createPage(newarrival) //신상순
+        createPage(newarrival) 
     }
 
 })
 
 
-//검은색 필터 기능
+//색상별 필터 기능
 
 const blackColor = document.getElementById('color_chk02')
 const whiteColor = document.getElementById('color_chk12')
@@ -438,6 +438,7 @@ const priceChk04 = document.getElementById('price_chk04')
 const priceChk05 = document.getElementById('price_chk05')
 const priceChkDefault = document.getElementById('price_chk06')
 
+//색상별 필터값을 변수에 담는다,,
 const bk = subData.filter((a) => {
     return a.color === 'black'
 })
@@ -466,23 +467,6 @@ const price05 = subData.filter((a) => {
 })
 
 
-const bkprice01 = subData.filter((a) => {
-    return a.color === 'black' && a.price01 <= 39000
-})
-const bkprice02 = subData.filter((a) => {
-    return a.color === 'black' && a.price01 >= 39000 && a.price01 <= 49000
-})
-const bkprice03 = subData.filter((a) => {
-    return a.color === 'black' && a.price01 >= 59000 && a.price01 <= 79000
-})
-const bkprice04 = subData.filter((a) => {
-    return a.color === 'black' && a.price01 >= 79000
-})
-
-console.log(bkprice01)
-console.log(bkprice02)
-console.log(bkprice03)
-console.log(bkprice04)
 
 
 
