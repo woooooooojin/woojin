@@ -165,11 +165,6 @@ function madeDiv(val) {
         const subDiv = document.createElement('div')
         subDiv.setAttribute('class', 'subBox')
 
-        // for (let j = 0; j < subData.length; j++) {
-        //     subDiv.setAttribute('id', 'sub_sort')
-
-        // } //아이디값 부여
-
 
         const subImgWrap = document.createElement('div')
         subDiv.appendChild(subImgWrap)
@@ -265,14 +260,7 @@ function madeDiv(val) {
         subList.appendChild(subDiv)
 
 
-
-
-
-
     }
-
-
-
 
 }
 // madeDiv(subData)
