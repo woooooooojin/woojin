@@ -317,7 +317,7 @@ function createPage(val) {
 
 
 
-        // // //맨앞 맨뒤 페이지 좀더 고민,,,
+        //맨앞 맨뒤
         const prevBtn = document.querySelector('.prev_btn')
         const nextBtn = document.querySelector('.next_btn')
 
