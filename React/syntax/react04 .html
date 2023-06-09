@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>react04</title>
+
+    <!-- react -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- babel ; jsx 문법 사용 -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+    <!-- Your custom script here -->
+    <script type="text/babel" defer>
+
+
+
+        const rootElement = document.getElementById('root')
+        
+        const Greet = ({first, second, children}) => (
+            <>
+            <h1>{first}</h1>
+            <h2>{second}</h2>
+            {children}
+            </>
+        )
+        // const element = (
+        //     <>
+        //     <Greet first = 'good' second ='morning'>hi</Greet>
+
+        //     <Greet first = 'bad' second = 'afternoon!'>
+        //         <span>hello</span>    
+        //     </Greet>
+
+        //     <Greet first = 'happy' second = 'evening'>
+        //         <div>night</div>
+        //         <div>night</div>
+        //         <div>night</div>
+        //         <div>night</div>
+        //     </Greet>
+
+        //     <Greet first = 'deep' second = 'sleeping'>
+        //         <Greet first = 'dream' second = 'world'></Greet>    
+        //     </Greet>
+        //     </>
+        // )
+
+        const Good = () => <h3 className = 'good'>good</h3>
+
+        const element  = (
+            <>
+                <Greet first = 'good' second = 'morning'>
+                <Good />    
+                <Good />    
+                <Good />    
+                </Greet>
+            </>
+
+        )
+
+
+
+
+        ReactDOM.render(element, rootElement)
+
+    </script>
+
+    <style>
+        /* .title{
+            color: steelblue;
+        } */
+    </style>
+
+</head>
+
+<body>
+
+    <div id="root"></div>
+
+</body>
+
+</html>
