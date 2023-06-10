@@ -1,8 +1,8 @@
-document.addEventListener('DOMContentLoaded', function () {
+// document.addEventListener('DOMContentLoaded', function () {
 
 
 
-//장바구니 찜  카운트증가 
+    //장바구니 찜  카운트증가 
     const heart = document.querySelectorAll('.fa-heart')
     const likeCnt = document.getElementById('likecnt')
 
@@ -38,16 +38,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-})//document
+// }) //document
 
 
 ///////롤링공지사항
-function notice_roll(){
-    $('.rolling li:first').slideUp(function(){
+function notice_roll() {
+    $('.rolling li:first').slideUp(function () {
         $(this).appendTo($('.rolling')).slideDown()
     })
 }
-setInterval(function(){notice_roll()},3000);
+setInterval(function () {
+    notice_roll()
+}, 3000);
 
 
 
