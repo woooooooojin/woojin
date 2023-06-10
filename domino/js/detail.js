@@ -120,7 +120,7 @@ let result
 
 
 if (pizzaChk01.checked) {
-  
+
     pizzaPrice.innerHTML = ''
     pizzaPrice.innerHTML = '슈퍼디럭스히어로 L 29,900원'
     totalPrice.innerHTML = `${total} 원`
@@ -140,7 +140,7 @@ rightBox.addEventListener('change', () => {
             result = total + 0
             totalPrice.innerHTML = `${result} 원`
             sideTxt2.innerHTML = ''
-            drinkTxt2.innerHTML=''
+            drinkTxt2.innerHTML = ''
 
 
 
@@ -151,7 +151,7 @@ rightBox.addEventListener('change', () => {
             result = total + 6000
             totalPrice.innerHTML = `${result} 원`
             sideTxt2.innerHTML = ''
-            drinkTxt2.innerHTML=''
+            drinkTxt2.innerHTML = ''
 
 
         } else if (dowBtns[2].checked) {
@@ -161,7 +161,7 @@ rightBox.addEventListener('change', () => {
             result = total + 3000
             totalPrice.innerHTML = `${result} 원`
             sideTxt2.innerHTML = ''
-            drinkTxt2.innerHTML=''
+            drinkTxt2.innerHTML = ''
 
 
         }
@@ -181,8 +181,14 @@ rightBox.addEventListener('change', () => {
 
     for (let i = 0; i < toppingCnt.length; i++) {
         minusBtn[i].addEventListener('click', function () {
-            toppingCnt[i].value--
-            totalPrice.innerHTML = `${result + toppingValue1.value * 500 + toppingValue2.value * 300} 원`
+
+            if (toppingCnt[i].value <= 0) {
+                toppingCnt[i].value = '0'
+
+            } else {
+                toppingCnt[i].value--
+                totalPrice.innerHTML = `${result + toppingValue1.value * 500 + toppingValue2.value * 300} 원`
+            }
         })
 
         plusBtn[i].addEventListener('click', function () {
@@ -190,6 +196,8 @@ rightBox.addEventListener('change', () => {
             totalPrice.innerHTML = `${result + toppingValue1.value * 500 + toppingValue2.value * 300} 원`
 
         })
+
+
 
 
     }
@@ -213,8 +221,12 @@ rightBox.addEventListener('change', () => {
 
     for (let i = 0; i < sideCnt.length; i++) {
         sideMinus[i].addEventListener('click', () => {
-            sideCnt[i].value--
-            totalPrice.innerHTML = `
+
+            if (sideCnt[i].value <= 0) {
+                sideCnt[i].value = '0'
+            } else {
+                sideCnt[i].value--
+                totalPrice.innerHTML = `
             ${result + (sideValue1.value * 9800) + 
                 (sideValue2.value * 9800) + 
                 (sideValue3.value * 4600) + 
@@ -225,19 +237,21 @@ rightBox.addEventListener('change', () => {
                 (sideValue8.value * 200)} 
                 원`
 
-            sideTxt.innerHTML = `
+                sideTxt.innerHTML = `
             <p>아보카도 크림 파스타 * ${sideValue1.value}</p> 
             <p>체다 치즈 치킨 * ${sideValue2.value}</p> 
             <p>치킨 체다 더티 프라이즈 * ${sideValue3.value}</p> 
             <p>칙볼(치킨볼) 파스타 * ${sideValue4.value}</p>
             `
 
-            drinkTxt.innerHTML = `
+                drinkTxt.innerHTML = `
             <p>코카콜라 1.25L * ${sideValue5.value}</p>
             <p>스프라이트 1.5L * ${sideValue6.value}</p>
             <p>우리피클 * ${sideValue7.value}</p>
             <p>갈릭디핑소스 * ${sideValue8.value}</p>
             `
+            }
+
         })
         sidePlus[i].addEventListener('click', () => {
             sideCnt[i].value++
@@ -271,7 +285,7 @@ rightBox.addEventListener('change', () => {
     }
 
 
-    
+
 
 
 
