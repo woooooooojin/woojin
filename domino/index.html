@@ -9,7 +9,8 @@
     <script src="./js/jquery-3.6.4.min.js"></script>
     <!--jquery-->
 
-    <script src="./js/main.js" defer></script><!--user js-->
+    <script src="./js/main.js" defer></script>
+    <!--user js-->
     <script src="./js/countdown.js"></script>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
@@ -37,35 +38,35 @@
 
         //     }) //quickmenu scroll event
 
-            // $(window).scroll(function () {
+        // $(window).scroll(function () {
 
-            //     if ($(window).scrollTop() >= 300) {
-            //         $('.btn_wrap').stop().animate({
-            //             right: 30,
-            //         }, 300)
-            //     } else {
-            //         $('.btn_wrap').stop().animate({
-            //             right: -100,
-            //         }, 300)
-            //     }
-            // }) //btn wrap event
+        //     if ($(window).scrollTop() >= 300) {
+        //         $('.btn_wrap').stop().animate({
+        //             right: 30,
+        //         }, 300)
+        //     } else {
+        //         $('.btn_wrap').stop().animate({
+        //             right: -100,
+        //         }, 300)
+        //     }
+        // }) //btn wrap event
 
 
-            // $('.btn_top').click(function (e) {
-            //     e.preventDefault();
+        // $('.btn_top').click(function (e) {
+        //     e.preventDefault();
 
-            //     $('html, body').stop().animate({
-            //         scrollTop: 0,
-            //     }, 300)
-            // })
+        //     $('html, body').stop().animate({
+        //         scrollTop: 0,
+        //     }, 300)
+        // })
 
-            // $('.btn_bot').click(function (e) {
-            //     e.preventDefault();
+        // $('.btn_bot').click(function (e) {
+        //     e.preventDefault();
 
-            //     $('html, body').stop().animate({
-            //         scrollTop: $(document).height(),
-            //     }, 300)
-            // }) //top button event
+        //     $('html, body').stop().animate({
+        //         scrollTop: $(document).height(),
+        //     }, 300)
+        // }) //top button event
 
 
 
@@ -955,7 +956,7 @@
                     <div class="sns_img">
                         <img src="./imges/blog1.png" alt="img">
                     </div>
-                
+
                 </div>
                 <!--snsbox-->
 
@@ -963,7 +964,7 @@
                     <div class="sns_img">
                         <img src="./imges/blog2.png" alt="img">
                     </div>
-                   
+
                 </div>
                 <!--snsbox-->
 
@@ -971,7 +972,7 @@
                     <div class="sns_img">
                         <img src="./imges/blog3.png" alt="img">
                     </div>
-                    
+
                 </div>
                 <!--snsbox-->
 
@@ -979,7 +980,7 @@
                     <div class="sns_img">
                         <img src="./imges/blog4.png" alt="img">
                     </div>
-                    
+
                 </div>
                 <!--snsbox-->
 
@@ -987,7 +988,7 @@
                     <div class="sns_img">
                         <img src="./imges/story1.png" alt="img">
                     </div>
-                   
+
                 </div>
                 <!--snsbox-->
 
@@ -995,7 +996,7 @@
                     <div class="sns_img">
                         <img src="./imges/story2.png" alt="img">
                     </div>
-                    
+
                 </div>
                 <!--snsbox-->
 
@@ -1003,7 +1004,7 @@
                     <div class="sns_img">
                         <img src="./imges/story3.png" alt="img">
                     </div>
-                    
+
                 </div>
                 <!--snsbox-->
 
@@ -1011,7 +1012,7 @@
                     <div class="sns_img">
                         <img src="./imges/story4.png" alt="img">
                     </div>
-                    
+
                 </div>
                 <!--snsbox-->
 
@@ -1245,19 +1246,23 @@
     <div class="quick_menu">
         <div class="quick_wrap">
             <div class="membership">
-                <div class="q_img">
-                    <img src="./imges/membership.png" alt="img">
-                </div>
+                <a href="./order_info/order.html" target="_blank">
+                    <div class="q_img">
+                        <img src="./imges/membership.png" alt="img">
+                    </div>
 
-                <p>내정보</p>
+                    <p>내정보</p>
+                </a>
             </div>
 
             <div class="membership">
-                <div class="q_img">
-                    <img src="./imges/orderlist.png" alt="img">
-                </div>
+                <a href="./order_info/order.html" target="_blank">
+                    <div class="q_img">
+                        <img src="./imges/orderlist.png" alt="img">
+                    </div>
 
-                <p>주문내역</p>
+                    <p>주문내역</p>
+                </a>
             </div>
 
             <div class="membership">
@@ -1298,7 +1303,7 @@
             $('.visual').slick({
                 dots: true,
                 autoplay: true,
-                speed:500,
+                speed: 500,
             });
             $('.play').click(function () {
                 $('.visual').slick('slickPlay');
