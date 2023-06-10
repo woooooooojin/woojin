@@ -101,7 +101,6 @@ cart.forEach((value) => {
 
 
 
-//Uncaught TypeError: Cannot read properties of undefined ..????
 
 
 //menu 개수 카운트 
