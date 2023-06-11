@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,100 +10,193 @@
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 
-     <!-- babel ; jsx 문법 사용 -->
-     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- babel ; jsx 문법 사용 -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
 
-     
-     <script type="text/babel" defer>
+
+    <script type="text/babel" defer>
 
         const rootElement = document.getElementById('root')
 
-        // const Greet = ({first, second, children})=>(
+        // const element = <h1 className = 'title'>hi</h1>
+        // const element = <h1 className = 'title' children = 'hello' />
+
+        //객체로
+        // const userClassName = 'title'
+        // const text = 'hello react'
+
+        // const props = {
+        //     ClassName : userClassName,
+        //     children : text
+        // }
+        // // const element = <h1 ClassName={props.ClassName} children = {props.children}/>
+        // // const element = <h1 className = 'title' children={React.createElement('span', null,'hello react')}/>
+
+        // const element = (
+        //     <div
+        //         className='title'
+        //         children = {[
+        //             // React.createElement('span',null,'hello react'),
+        //             // React.createElement('br'),
+        //             // React.createElement('span',null,'bye js')
+
+        //             //jsx
+        //             <span className='txt'>hello react</span>,
+        //             <br />,
+        //             <span children='bye js' />
+        //         ]} 
+        //     />
+        // )
+
+
+        // const element = (
+        //     <React.Fragment
+        //         children={[
+        //             <span className='txt'>hello react</span>,
+        //             <br />,
+        //             <span children='bye js'/>
+        //         ]}
+            
+        //     />
+        // )
+
+
+        // const element = (
+        //     <React.Fragment>
+        //         <span className='txt'>hello react</span>
+        //         <br />
+        //         <span children = 'bye js!' />
+                
+        //     </React.Fragment>
+        // )
+
+        // const element = (
+        //     <>
+        //     <span className = 'txt' children='hello react'/>
+        //     <br />
+        //     <span children='bye js ~'/>
+        //     </>
+        // )
+
+        // const FrontEnd = function(){
+        //     return(
+        //         <>
+        //         <h3>react</h3>
+        //         <div>function</div>
+        //         </>
+        //     )
+        // }
+        // const element = FrontEnd()
+        // const element = (
+        //     <>
+        //     {FrontEnd()}
+        //     {FrontEnd()}
+        //     {FrontEnd()}
+        //     </>
+        // )
+
+        // const FrontEnd = (subject, syntax)=>
+            
+        //         <>
+        //         <h3>{subject}</h3>
+        //         <div>{syntax}</div>
+        //         </>
+            
+        
+        // const element = FrontEnd('react','component')
+        // const element = (
+        //     <>
+        //     {FrontEnd('html5','tag')}
+        //     {FrontEnd('csss','tag')}
+        //     {FrontEnd('react','tag')}
+        //     </>
+        // )
+
+        // const FrontEnd = ({subject, syntax})=>(
+        //     <>
+        //     <h3 className = 'title'>{subject}</h3>
+        //     <div>{syntax}</div>
+        //     </>
+        // )
+
+        // const element = (
+        //     <>
+        //     <FrontEnd subject = 'html5' syntax = 'tag'/>
+        //     <FrontEnd subject = 'css' syntax = 'style'/>
+        //     <FrontEnd subject = 'react' syntax = 'js'/>
+        //     </>
+        // )
+
+        // const Greet = ({first,second,children})=>(
         //     <>
         //     <h1>{first}</h1>
         //     <h2>{second}</h2>
         //     {children}
         //     </>
         // )
-
         // const element = (
         //     <>
-        //     <Greet first = 'good' second ='moring'>hi</Greet>
-
-        //     <Greet first = 'bad' second = 'afternoon'>
-        //         <span>hi</span>
+        //     <Greet first = 'good' second = 'moring'>hi</Greet>
+        //     <Greet first = 'bad' second = 'today'>
+        //         <span>hello</span>
         //     </Greet>
-
-        //     <Greet first = 'happy' second = 'evening'>
-        //         <div>night</div>
-        //         <div>night</div>
-        //         <div>night</div>
-        //         <div>night</div>
-        //     </Greet>
-
         //     <Greet first = 'deep' second = 'sleeping'>
         //         <Greet first = 'dream' second = 'world'></Greet>
         //     </Greet>
         //     </>
         // )
-
-        // const Good = ()=><h3 className = 'good' children = 'good' />
-
+        //     const Good = ()=>
+        //         <h3 className = 'good'>good</h3>
+            
         // const element = (
         //     <>
-        //     <Greet first = 'good' second = 'moring'>
-        //         <Good />
-        //         <Good />
-        //         <Good />
-        //         <Good />
+        //     <Greet first = 'good' second = 'morning'>
+        //     <Good />
+        //     <Good />
+        //     <Good />
+            
         //     </Greet>
         //     </>
         // )
 
-
-        // const MyComponent = (props) =>{
-        //     return (
+        // const MyComponent = (props) => {
+        //     return(
         //         <div>
-        //             지금 배우는 과정은 {props.subject} 입니다
+        //             지금 배우는 과목은 {props.subject} 입니다.
         //         </div>
-
         //     )
         // }
-
         // const element = (
         //     <MyComponent subject = 'react'/>
         // )
-        
         // MyComponent.defaultProps = {
         //     subject : 'frontend'
         // }
 
-        // const MyComponent = ({myClass, subject}) =>{
-        const MyComponent = (props) =>{
-            const{myClass, subject} = props
 
-            // const myClass = props.myClass
-            // const subject = props.subject
+        const MyComponent = (props) => {
+            const {myClass, subject} = props
 
             return(
                 <div>
-                    지금 배우는 과정은 {myClass} 이고 <br />
+                    지금 배우는 과정은{myClass}이고, <br />
                     과목은 {subject} 입니다.
                 </div>
             )
-
         }
 
-        // MyComponent.defaultProps = {
-        //     myClass : 'frontend',
-        //     subject : 'react'
+        MyComponent.defaultProps = {
+            myClass : 'frontend',
+            subject : 'react'
+        }
 
-        // }
 
 
-        ReactDOM.render(<MyComponent myClass = 'frontend' subject = 'react' />,rootElement)
-        // ReactDOM.render(<MyComponent />,rootElement)
+
+
+        ReactDOM.render(<MyComponent />, rootElement)
+        // ReactDOM.render(<MyComponent subject = 'react' myClass = 'FE'/>, rootElement)
 
 
 
@@ -110,9 +204,11 @@
 
      </script>
 </head>
+
 <body>
 
     <div id="root"></div>
 
 </body>
+
 </html>
