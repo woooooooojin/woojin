@@ -173,7 +173,6 @@ main h2{}
 }
 @keyframes star{
     0%{
-        /* opacity: 0; */
     }
     50%{
         opacity: 0;
@@ -195,7 +194,7 @@ main h2{}
 @keyframes star4{
     0%{}
     100%{
-        transform: translate(-200px,800px);
+        transform: translate(-600px,800px);
     }
 }
 /*****section about*****/
