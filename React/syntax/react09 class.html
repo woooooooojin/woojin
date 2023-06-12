@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>react09 class</title>
+
+    <!-- react -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- babel ; jsx 문법 사용 -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+    <!-- Your custom script here -->
+    <script type="text/babel" defer>
+
+
+
+        const rootElement = document.getElementById('root')
+    
+        // function MyComponent (){
+        //     const name = 'react'
+        //     return<div className = 'title' children = {name}/>
+        // }
+        
+        //->클래스로
+        // class MyComponent extends React.Component{
+        //     render(){
+        //         const name = 'javascript'
+        //         return <div className = 'title' children = {name}/>
+        //     }
+        // }
+
+        // class MyComponent extends React.Component{
+        //     render(){
+
+        //         const {myClass, subject, name} = this.props //destructuring
+
+        //         return(
+        //             <div>
+        //                 교육과정 : {myClass}<br />
+        //                 교육과목 : {subject}<br />
+        //                 교육생 : {name}
+        //             </div>
+        //         )
+        //     }
+
+        //     static defaultProps = {
+        //         myClass : 'FE',
+        //         subject : 'react',
+        //         name : 'student'
+        //     }
+        // }
+
+
+        // // ReactDOM.render(<MyComponent myClass = 'FE' subject = 'react' name='lee'/>, rootElement) 
+        // ReactDOM.render(<MyComponent/>, rootElement) 
+
+        //state : 수정, 변경 //자식이 변경할수있는 props
+        // class Counter extends React.Component{
+
+        //     constructor(props){
+        //         super(props)
+        //         this.state = {
+        //             count : 0,
+        //             count02 : 1
+        //         }
+        //     }
+
+        //     render(){
+        //         const {count, count02} = this.state
+                
+        //         return(
+        //             <div>
+        //                 <h1>{count}</h1>
+        //                 <h1>{count02}</h1>
+        //                 <button onClick = {()=>{
+        //                     this.setState({count: count + 1}) // state를 수정할수 있는함수
+        //                 }}>click</button>
+
+        //                 <button onClick={()=>{
+        //                     this.setState({count02:count02 + 1})
+        //                 }}>click2</button>
+        //             </div>
+        //         )
+        //     }
+
+        // }//counter component
+
+
+        // ReactDOM.render(<Counter />,rootElement)
+
+
+
+
+        
+        // class MyEvent extends React.Component{
+
+        //     state = {
+        //         message : ''
+        //     }//객체
+
+        //     handleChange = (e)=>{
+        //         this.setState({
+        //             message: e.target.value
+        //         })
+        //     }
+
+        //     handleClick = ()=>{
+        //         alert(this.state.message)
+        //         this.setState({
+        //             message : ''
+        //         })
+        //     } 
+            
+        //     render(){
+        //         return(
+        //             <div>
+        //                 <h1>event message</h1>
+        //                 <input type="text" name='message' placeholder='텍스트입력' value={this.state.message} onChange={this.handleChange} />
+        //                 <button onClick={this.handleClick}>click</button>
+        //             </div>
+        //          )
+        //     }
+
+        // }
+
+        // ReactDOM.render(<MyEvent/> , rootElement)
+
+       
+
+
+        class MyEvent extends React.Component{
+            state = {
+                userId : '',
+                message : ''
+            }
+
+            handleChange = (e)=>{
+                this.setState({
+                    [e.target.value]:e.target.value
+                    //[]로 감싸면 내부 값이 가리키는 실제 값 key값이 key가 된다.
+                })
+
+                /*
+                const name = 'key' 
+                const object = {
+                    [name] : value   만들어진 값을 키로 받겠다. => []
+                }// 실제결과 {key : value}
+                */
+            }//handle change
+
+
+            handleClick = ()=>{
+                alert(this.state.userId + ' : ' + this.state.message)
+                this.setState({
+                    userId :'',
+                    message:''
+                })
+            }//handle click
+
+
+            render(){
+                
+                return(
+                    <div>
+                        <input type="text" name ='userId' placeholder='아이디' value={this.state.userId} onChange={this.handleChange} />
+                        <input type="text" name ='message' placeholder ='텍스트입력' value={this.state.message} onChange={this.handleChange}/>
+                        <button onClick={this.handleClick}>click</button>
+                    </div>
+                )
+            }
+
+
+        }
+
+        ReactDOM.render(<MyEvent/>,rootElement)
+
+
+    </script>
+
+    <style>
+        /* .title{
+            color: steelblue;
+        } */
+    </style>
+
+</head>
+
+<body>
+
+    <div id="root"></div>
+
+</body>
+
+</html>
