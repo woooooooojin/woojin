@@ -1,18 +1,29 @@
-*{margin: 0; padding: 0; box-sizing: border-box;}
-li{list-style: none;}
-a, a:link, a:visited{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a,
+a:link,
+a:visited {
     color: inherit;
     text-decoration: none;
 }
 
 
 
-.container{
+.container {
     width: 1280px;
     margin: 0 auto;
     /* padding: 20px; */
 }
-header{
+
+header {
     position: fixed;
     color: white;
     top: 0;
@@ -20,47 +31,59 @@ header{
     width: 100%;
     padding: 15px;
 }
-header.active{
+
+header.active {
     background-color: #000;
     animation: fadeIn .5s ease-in-out;
 }
-@keyframes fadeIn{
-    0%{opacity: 0;}
-    100%{opacity: 1;}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
-header .container{
+
+header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 }
-header nav ul{
+
+header nav ul {
     display: flex;
 }
-header nav ul li{
+
+header nav ul li {
     padding: 10px;
 }
-header button{
+
+header button {
     background-color: transparent;
     border: 0;
     cursor: pointer;
 }
 
-header h1 button{
+header h1 button {
     font-size: 30px;
     font-weight: bold;
     color: white;
 }
-header nav ul li button{
+
+header nav ul li button {
     font-size: 18px;
     color: white;
 }
 
-main{
+main {
     width: 100%;
     height: 100vh;
     color: white;
-    background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,1));
+    background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -68,21 +91,24 @@ main{
     text-align: center;
 }
 
-main h4{
+main h4 {
     font-size: 30px;
 }
-main h2{
+
+main h2 {
     font-size: 50px;
     letter-spacing: 5px;
-    
+
 }
-main p{
+
+main p {
     width: 500px;
     margin: 0 auto;
     margin-top: 100px;
     font-size: 30px;
 }
-main button.download{
+
+main button.download {
     background-color: transparent;
     border: 3px solid white;
     border-radius: 20px;
@@ -96,6 +122,7 @@ main button.download{
     transform: translateX(50%);
     z-index: 10;
 }
+
 /* main .mouse{
     background-color: transparent;
     border: none;
@@ -109,19 +136,21 @@ main button.download{
     cursor: pointer;
 } */
 
-@keyframes upDown{
-    0%{
+@keyframes upDown {
+    0% {
         right: 10%;
     }
-    50%{
+
+    50% {
         right: 45%;
     }
-    100%{
+
+    100% {
         right: 10%;
     }
 }
 
-main h2 span::after{
+main h2 span::after {
     content: "";
     height: 40px;
     width: 3px;
@@ -129,138 +158,171 @@ main h2 span::after{
     display: inline-block;
     animation: blink .7s ease-in-out infinite;
 }
-@keyframes blink{   
-    0%{opacity: 1;}
-    100%{opacity: 0;}
-    
-}
-main h2{}
 
-.stars_wrap{
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
+
+main h2 {}
+
+.stars_wrap {
     position: absolute;
     top: 50px;
     width: 100%;
     overflow: hidden;
 
 }
-.stars{
+
+.stars {
     width: 3px;
     height: 3px;
     border-radius: 50%;
     background-color: #fff;
     animation: star 2s infinite ease-in-out;
 }
-.stars:nth-child(2n){
+
+.stars:nth-child(2n) {
     animation: star2 4s infinite linear;
 }
-.stars:nth-child(5n){
+
+.stars:nth-child(5n) {
     animation: star3 5s infinite linear;
 }
-.stars:nth-child(10){
+
+.stars:nth-child(10) {
     animation: star4 3s infinite ease-in-out;
 }
-.stars:nth-child(20){
+
+.stars:nth-child(20) {
     animation: star4 1.5s infinite ease-in-out;
 }
-.stars:nth-child(30){
-    animation: star4 1s  ease-in-out;
+
+.stars:nth-child(30) {
+    animation: star4 1s ease-in-out;
 }
-.stars:nth-child(40){
-    animation: star4 3s  ease-in-out;
+
+.stars:nth-child(40) {
+    animation: star4 3s ease-in-out;
 }
-.stars:nth-child(50n){
-    animation: star4 2.5s  ease-in-out;
+
+.stars:nth-child(50n) {
+    animation: star4 2.5s ease-in-out;
 }
-@keyframes star{
-    0%{
-    }
-    50%{
+
+@keyframes star {
+    0% {}
+
+    50% {
         opacity: 0;
     }
 }
 
-@keyframes star2{
-    0%{}
-    30%{
+@keyframes star2 {
+    0% {}
+
+    30% {
         opacity: 0;
     }
 }
-@keyframes star3{
-    0%{}
-    80%{
+
+@keyframes star3 {
+    0% {}
+
+    80% {
         opacity: 0;
     }
 }
-@keyframes star4{
-    0%{}
-    100%{
-        transform: translate(-600px,800px);
+
+@keyframes star4 {
+    0% {}
+
+    100% {
+        transform: translate(-600px, 800px);
     }
 }
+
 /*****section about*****/
-.about{
+.about {
     width: 100%;
     /* height: 100vh; */
     padding: 80px 0;
 
 }
-section:nth-child(2){
+
+section:nth-child(2) {
     background-color: #f8f8f8;
 }
 
-section .title{
+section .title {
     margin-top: 30px;
 }
-section .title h4{
+
+section .title h4 {
     font-size: 24px;
     color: steelblue;
 }
-section .title h2{
+
+section .title h2 {
     font-size: 40px;
 }
-section .title p{
+
+section .title p {
     font-size: 18px;
 }
 
-section .about_self{
+section .about_self {
     display: flex;
     justify-content: space-between;
 }
-section .about_self .left{
+
+section .about_self .left {
     width: 45%;
     height: 650px;
     border: 1px solid #ccc;
 }
-section .about_self .left img{
+
+section .about_self .left img {
     width: 100%;
     height: 100%;
-   
+
 }
 
-section .about_self .right{
+section .about_self .right {
     width: 45%;
     /* padding: 0 50px; */
     height: 650px;
     border: 1px solid #ccc;
 }
-section .about_self .right h3{
+
+section .about_self .right h3 {
     font-size: 35px;
     margin-bottom: 15px;
 }
-section .about_self .right h3 strong{
+
+section .about_self .right h3 strong {
     color: steelblue;
 
 }
-section .about_self .right p{
+
+section .about_self .right p {
     font-size: 18px;
     margin: 20px 0;
 }
-section .about_self .right .social a{
+
+section .about_self .right .social a {
     font-size: 35px;
     margin-right: 10px;
     cursor: pointer;
 }
-section .about_self .right .social{
+
+section .about_self .right .social {
     text-align: center;
 }
 
@@ -309,32 +371,38 @@ section .about_self .right .social{
 
 
 /********cardflip*******/
-.cardflip{
+.cardflip {
     width: 100%;
     margin-top: 100px;
     border-top: 1px solid #ccc;
 }
-.cardflip ul{
+
+.cardflip ul {
     margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
 }
-.cardflip ul li{
+
+.cardflip ul li {
     width: calc(100% - 75% - 25px);
     height: 300px;
     margin-right: 20px;
     margin-bottom: 20px;
 }
-.cardflip ul li:nth-child(1){
+
+.cardflip ul li:nth-child(1) {
     margin-left: 20px;
 }
-.cardflip ul li:nth-child(5){
+
+.cardflip ul li:nth-child(5) {
     margin-left: 20px;
 }
-.cardflip ul li:nth-child(4n){
+
+.cardflip ul li:nth-child(4n) {
     margin-right: 0;
 }
-.cardflip ul li .card_wrap{
+
+.cardflip ul li .card_wrap {
     width: 100%;
     height: 100%;
     border: 1px solid #ccc;
@@ -343,10 +411,12 @@ section .about_self .right .social{
     transition: transform 0.5s;
     transform-style: preserve-3d;
 }
-.cardflip ul li:hover .card_wrap{
+
+.cardflip ul li:hover .card_wrap {
     transform: rotateY(180deg);
 }
-.cardflip ul li .card_front{
+
+.cardflip ul li .card_front {
     width: 100%;
     height: 100%;
     padding: 10px;
@@ -357,15 +427,18 @@ section .about_self .right .social{
     position: absolute;
     backface-visibility: hidden;
 }
-.cardflip ul li .card_front .front_img{
+
+.cardflip ul li .card_front .front_img {
     width: 100%;
     /* height: 100%; */
 }
-.cardflip ul li .card_front .front_img img{
+
+.cardflip ul li .card_front .front_img img {
     width: 100%;
     height: auto;
 }
-.cardflip ul li .card_back{
+
+.cardflip ul li .card_back {
     width: 100%;
     height: 100%;
     padding: 10px;
@@ -379,25 +452,29 @@ section .about_self .right .social{
     backface-visibility: hidden;
 }
 
-.progress_wrap{
+.progress_wrap {
     position: relative;
-    
+
 }
+
 #progress {
     appearance: none;
 }
+
 #progress::-webkit-progress-bar {
-    background:#f0f0f0;
-    border-radius:10px;
+    background: #f0f0f0;
+    border-radius: 10px;
     box-shadow: inset 3px 3px 10px #ccc;
     height: 20px;
 }
+
 #progress::-webkit-progress-value {
-    border-radius:10px;
+    border-radius: 10px;
     background: #719ece;
-    
+
 }
-.progress_wrap .span01{
+
+.progress_wrap .span01 {
     position: absolute;
     left: 5px;
     top: 50%;
@@ -405,7 +482,8 @@ section .about_self .right .social{
     font-size: 14px;
     color: #fff;
 }
-.progress_wrap .span02{
+
+.progress_wrap .span02 {
     position: absolute;
     right: 5px;
     top: 50%;
@@ -418,29 +496,45 @@ section .about_self .right .social{
 
 /**********portfolio*************/
 
-.portfolio{
+.portfolio {
     width: 100%;
     margin-top: 100px;
     border-top: 1px solid #ccc;
 }
 
-.portfolio_wrap{
+.portfolio_wrap {
     display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
 }
-.portfolio_wrap .portfolio_box{
+
+.portfolio_wrap .portfolio_box {
     width: calc(33.3333% - 26.6666px);
+    margin-right: 20px;
+    margin-bottom: 50px;
+    position: relative;
+    cursor: pointer;
 }
-.portfolio_wrap .portfolio_box .p_img{
+
+.portfolio_wrap .portfolio_box:nth-child(1),
+.portfolio_wrap .portfolio_box:nth-child(4) {
+    margin-left: 20px;
+}
+
+.portfolio_wrap .portfolio_box .p_img {
     width: 100%;
     position: relative;
+    font-size: 0;
 }
-.portfolio_wrap .portfolio_box .p_img img{
+
+.portfolio_wrap .portfolio_box .p_img img {
     width: 100%;
     height: auto;
     border-radius: 10px;
     border: 1px solid #ccc;
 }
-.portfolio_wrap .portfolio_box .p_img .maingif{
+
+.portfolio_wrap .portfolio_box .p_img .maingif {
     position: absolute;
     width: 97%;
     height: 200px;
@@ -450,40 +544,76 @@ section .about_self .right .social{
     border-radius: 0;
     border: 0;
 }
-.portfolio_wrap .portfolio_box .portfolio_tag{}
-.portfolio_wrap .portfolio_box .portfolio_tag ul{
-    display: flex;
+
+.portfolio_wrap .portfolio_box .portfolio_tag {
+    position: relative;
 }
-.portfolio_wrap .portfolio_box .portfolio_tag ul li{
+
+.portfolio_wrap .portfolio_box .portfolio_tag ul {
+    display: flex;
+    position: absolute;
+    top: -15px;
+    left: 10px;
+}
+
+.portfolio_wrap .portfolio_box .portfolio_tag ul li {
     height: 25px;
     line-height: 25px;
-    border: 1px solid #ccc;
+    /* border: 1px solid #eee; */
     font-size: 13px;
     margin-right: 5px;
     padding: 0 5px;
-    background-color:#2d74c5;
+    background-color: #002053;
     color: #fff;
 }
 
+.portfolio_wrap .portfolio_box .hover_box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+
+}
+
+.portfolio_wrap .portfolio_box .hover_box .hover_wrap {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    transition: .3s;
+    opacity: 0;
+
+
+}
+
+.portfolio_wrap .portfolio_box .hover_box .hover_wrap h4 {}
+
+.portfolio_wrap .portfolio_box .hover_box .hover_wrap p {}
+
+.pbox_wrap:hover .hover_box .hover_wrap {
+    opacity: 1;
+}
 
 /***********contact**************/
 
-.contact{
+.contact {
     width: 100%;
     /* height: 100vh; */
     margin-top: 100px;
     border-top: 1px solid #ccc;
 }
+
 section.contact .contact_me {
     margin-top: 50px;
 }
-section.contact .contact_me .left{
+
+section.contact .contact_me .left {
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
-section.contact .contact_me .left .card{
+section.contact .contact_me .left .card {
     border: 1px solid #ccc;
     padding: 15px;
     display: flex;
@@ -491,18 +621,16 @@ section.contact .contact_me .left .card{
     margin-bottom: 20px;
     width: 30%;
 }
-section.contact .contact_me .left .card .icon i{
+
+section.contact .contact_me .left .card .icon i {
     font-size: 2rem;
     margin-right: 15px;
 }
 
 
-section.contact .contact_me .right{
+section.contact .contact_me .right {
     width: 100%;
     border: 1px solid #ccc;
     padding: 15px;
     margin-top: 20px;
 }
-
-
-
