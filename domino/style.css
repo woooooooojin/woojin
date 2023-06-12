@@ -4,9 +4,7 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
+
 
 li {
     list-style: none
@@ -23,7 +21,7 @@ a {
 
 body {
     font-family: 'Noto Sans KR', sans-serif;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .container {
@@ -269,7 +267,7 @@ header .head_promotion {
 header .head_promotion .line {
     width: 100%;
     height: 2px;
-    background-color: black;
+    background-color: #999;
     margin-top: 10px;
 
 }
@@ -299,7 +297,6 @@ header .gnb .gnb_login {
 
 header .gnb a {
     font-size: 14px;
-    font-weight: bold;
 }
 
 header .gnb .gnb_login:hover a {
@@ -316,7 +313,6 @@ header .gnb .gnb_join:hover a {
 
 header .gnb .gnb_language {
     position: relative;
-    font-weight: bold;
     font-size: 14px;
 }
 
@@ -381,7 +377,7 @@ header .gnb .gnb_language:hover label {
 
 
 /***********mobile nav************/
-.mobile_nav {
+/* .mobile_nav {
     width: 100%;
     display: none;
 }
@@ -417,7 +413,7 @@ header .gnb .gnb_language:hover label {
     color: #ff143c;
     font-weight: 600;
     font-size: 13px;
-}
+} */
 
 /**************lnb***************/
 nav {
@@ -780,7 +776,7 @@ nav {
 /****************main****************/
 main {
     width: 100%;
-    margin-top: 150px;
+    margin-top: 200px;
     height: 160px;
 }
 
@@ -1039,7 +1035,7 @@ main .main_wrap .e_coupon a p {
 /**************section 1******************/
 .section1 {
     width: 100%;
-    margin-top: 150px;
+    margin-top: 200px;
     background-color: #f6f7f8;
 }
 
@@ -1064,7 +1060,10 @@ main .main_wrap .e_coupon a p {
 .section1 .section1_wrap .sec1_box1 p span {
     color: #238ece;
     font-weight: 600;
+    animation: wave 1.5s ease-in-out;
 }
+
+
 
 .section1 .section1_wrap .sec1_box1 .sec1_login {
     width: 90px;
@@ -1072,8 +1071,21 @@ main .main_wrap .e_coupon a p {
     text-align: center;
     line-height: 40px;
     border-radius: 30px;
-    background-color: #222222;
+    /* background-color: #222222; */
     margin-top: 30px;
+    animation: btncolor 1.5s infinite;
+}
+
+@keyframes btncolor{
+    0%{
+        background-color: #238ece;
+    }
+    50%{
+        background-color: #ff143c;
+    }
+    100%{
+        background-color: #238ece;
+    }
 }
 
 .section1 .section1_wrap .sec1_box1 .sec1_login a {
@@ -1111,7 +1123,7 @@ main .main_wrap .e_coupon a p {
 /***************section2*****************/
 .section2 {
     width: 100%;
-    margin-top: 150px;
+    margin-top: 200px;
 
 }
 
@@ -1124,6 +1136,7 @@ main .main_wrap .e_coupon a p {
     padding: 5px 0;
 }
 
+
 .section2 .section2_wrap {
     display: flex;
     margin-top: 50px;
@@ -1133,8 +1146,6 @@ main .main_wrap .e_coupon a p {
     width: calc(100% - 75% - 15px);
     /* height: 300px; */
     margin-right: 20px;
-
-
 
 
 }
@@ -1467,7 +1478,7 @@ main .main_wrap .e_coupon a p {
 /******************section4**************************/
 .section4 {
     width: 100%;
-    margin-top: 100px;
+    margin-top: 150px;
 
 }
 
@@ -1647,7 +1658,7 @@ input::-webkit-search-cancel-button {
 /************section5*****************/
 .section5 {
     width: 100%;
-    margin-top: 150px;
+    margin-top: 200px;
 }
 
 .section5>h4 {
@@ -1742,7 +1753,7 @@ input::-webkit-search-cancel-button {
 
 /*******section6 *********/
 .section6 {
-    margin-top: 150px;
+    margin-top: 200px;
     width: 100%;
 
 }
