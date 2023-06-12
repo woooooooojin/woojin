@@ -54,6 +54,7 @@ window.addEventListener('scroll', function () {
 
 const starWrap = document.querySelector('.stars_wrap')
 const main = document.getElementById('main')
+
 function createStar() {
     const el = document.createElement('div')
     el.classList.add('stars')
@@ -61,9 +62,13 @@ function createStar() {
     starWrap.appendChild(el)
 }
 
-function randomposition(){
+function randomposition() {
     return Math.floor(Math.random() * window.innerWidth);
 }
-for(let i =0; i<300;i++){
+for (let i = 0; i < 300; i++) {
     createStar()
 }
+
+
+
+

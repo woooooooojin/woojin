@@ -8,7 +8,7 @@ a, a:link, a:visited{
 
 
 .container{
-    width: 1140px;
+    width: 1280px;
     margin: 0 auto;
     /* padding: 20px; */
 }
@@ -16,7 +16,7 @@ header{
     position: fixed;
     color: white;
     top: 0;
-    z-index: 1;
+    z-index: 999;
     width: 100%;
     padding: 15px;
 }
@@ -416,6 +416,56 @@ section .about_self .right .social{
 
 
 
+/**********portfolio*************/
+
+.portfolio{
+    width: 100%;
+    margin-top: 100px;
+    border-top: 1px solid #ccc;
+}
+
+.portfolio_wrap{
+    display: flex;
+}
+.portfolio_wrap .portfolio_box{
+    width: calc(33.3333% - 26.6666px);
+}
+.portfolio_wrap .portfolio_box .p_img{
+    width: 100%;
+    position: relative;
+}
+.portfolio_wrap .portfolio_box .p_img img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+.portfolio_wrap .portfolio_box .p_img .maingif{
+    position: absolute;
+    width: 97%;
+    height: 200px;
+    top: 53%;
+    left: 1.5%;
+    transform: translateY(-50%);
+    border-radius: 0;
+    border: 0;
+}
+.portfolio_wrap .portfolio_box .portfolio_tag{}
+.portfolio_wrap .portfolio_box .portfolio_tag ul{
+    display: flex;
+}
+.portfolio_wrap .portfolio_box .portfolio_tag ul li{
+    height: 25px;
+    line-height: 25px;
+    border: 1px solid #ccc;
+    font-size: 13px;
+    margin-right: 5px;
+    padding: 0 5px;
+    background-color:#2d74c5;
+    color: #fff;
+}
+
+
 /***********contact**************/
 
 .contact{
@@ -452,49 +502,6 @@ section.contact .contact_me .right{
     border: 1px solid #ccc;
     padding: 15px;
     margin-top: 20px;
-}
-
-section.contact .contact_me .right .form_group{
-    margin-bottom: 20px;
-}
-
-section.contact .contact_me .right .form_group label{
-    display: block;
-    margin-bottom: 10px;
-}
-section.contact .contact_me .right .form_group input{
-    padding: 10px;
-    width: 100%;
-    outline: none;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-}
-
-section.contact .contact_me .right .form_group input:focus{
-    border: 1px solid #719ece;
-    box-shadow: 0 0 10px #719ece;
-}
-section.contact .contact_me .right .form_group textarea{
-    height: 200px;
-    width: 100%;
-    resize: none;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-}
-section.contact .contact_me .right .form_group textarea:focus{
-    border: 1px solid #719ece;
-    outline: none;
-    box-shadow: 0 0 10px #719ece;
-}
-section.contact .contact_me .right button{
-    width: 100%;
-    padding: 10px;
-    background-color: steelblue;
-    border: none;
-    color: #fff;
-    border-radius: 10px;
-    font-size: 20px;
-    margin-top: 10px;
 }
 
 
