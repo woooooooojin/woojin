@@ -19,24 +19,44 @@
 
         const rootElement = document.getElementById('root')
 
-       class Counter extends React.Component{
-            state = {
-               count:0
+          const Season = ()=>{
+
+            const [names, setNames] = React.useState([
+                {id:1, season:'spring'},
+                {id:2, season:'summer'},
+                {id:3, season:'autumn'},
+                {id:4, season:'winter'},
+            ])
+
+            const [nextId, setNextId] = React.useState(5)
+            const [input, setInput] = React.useState('')
+
+            const handleChange = (e)=>setInput(e.target.value)
+            const handleClick = ()=>{
+                const nextNames = names.concat({
+                    id:nextId,
+                    season:input
+                })
+
+                setNextId(nextId +1)
+                setNames(nextNames)
+                setInput('')
             }
 
-            render(){
-                return(
-                    <>
-                        <h1>{this.state.count}</h1>
-                        <button onClick = {
-                            ()=>this.setState({count : this.state.count+1})
-                        }>click</button>
-                    </>
-                )
-            }
-       }
+            const nameList = names.map(name => <li key={name.id}>{name.season}</li>)
 
-        ReactDOM.render(<Counter />, rootElement)
+            return(
+                <>
+                    <input type="text" value={input} onChange={handleChange}/>
+                    <button onClick={handleClick}>추가</button>
+                    <ul>{nameList}</ul>
+                </>
+            )
+          }  
+        
+
+
+        ReactDOM.render(<Season />, rootElement)
         // ReactDOM.render(<MyComponent subject = 'react' myClass = 'FE'/>, rootElement)
 
 
