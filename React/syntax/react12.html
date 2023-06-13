@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>react12</title>
+
+    <!-- react -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- babel ; jsx 문법 사용 -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+    <!-- Your custom script here -->
+    <script type="text/babel" defer>
+
+        const rootElement = document.getElementById('root')
+
+        const Season = ()=>{
+            const names = ['spring','summer','autumn','winter']
+            const nameList = names.map((name,index)=>{  //map key값이 있어야함
+                return <li key={index}>{name}</li>
+
+            })
+
+        return <ul>{nameList}</ul>
+
+        }
+       
+
+        ReactDOM.render(<Season />,rootElement) 
+
+
+
+
+    </script>
+
+    <script>
+        // const numbers = [1,2,3,4,5]
+
+        // const result = numbers.map((number, index)=>number * 2)
+        // console.log(result)
+
+
+        // const result = numbers.filter((number)=>number > 3)
+        // const result = numbers.filter((number)=>{
+        //     return number > 3
+        // })
+        // console.log(result)
+    </script>
+
+    <style>
+        /* .title{
+            color: steelblue;
+        } */
+    </style>
+
+</head>
+
+<body>
+
+    <div id="root"></div>
+
+</body>
+
+</html>
