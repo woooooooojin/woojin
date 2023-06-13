@@ -455,21 +455,27 @@ const price05 = subData.filter((a) => {
 })
 
 
-//////////////////검색필터./////////////////////
+//////////////////검색필터/////////////////////
 const searchInputVal = document.getElementById('searchbox')
+const searchBox2 = document.querySelector('.search_box')
 
 searchInputVal.addEventListener('change', () => {
     const searchRes = subData.filter((e) => {
-        return e.name == searchInputVal.value
+        return (e.name.includes(searchInputVal.value))
     })
-   
+    console.log(searchRes)
 
 
+    
     sublist.innerHTML = ''
     paging.innerHTML = ''
     nowPage = 0
     createPage(searchRes)
+    searchBox2.style.display = 'none'
+
+   
 })
+
 
 /////////////////////////////////////////////////////
 
