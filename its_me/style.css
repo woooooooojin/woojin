@@ -52,6 +52,7 @@ header .container {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    padding: 0 30px;
 }
 
 header nav ul {
@@ -280,11 +281,13 @@ section .title p {
 section .about_self {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
 }
 
 section .about_self .left {
-    width: 45%;
-    height: 650px;
+    width: 35%;
+    height: 500px;
     border: 1px solid #ccc;
 }
 
@@ -295,78 +298,43 @@ section .about_self .left img {
 }
 
 section .about_self .right {
-    width: 45%;
-    /* padding: 0 50px; */
-    height: 650px;
+    width: 60%;
+    padding: 10px 20px;
+    height: 500px;
     border: 1px solid #ccc;
 }
 
-section .about_self .right h3 {
-    font-size: 35px;
-    margin-bottom: 15px;
-}
-
-section .about_self .right h3 strong {
-    color: steelblue;
-
-}
-
-section .about_self .right p {
-    font-size: 18px;
-    margin: 20px 0;
-}
-
-section .about_self .right .social a {
-    font-size: 35px;
-    margin-right: 10px;
-    cursor: pointer;
-}
-
-section .about_self .right .social {
-    text-align: center;
-}
-
-
-
-
-
-/*******skills*******/
-/* .skills{
-    width: 100%;
-    height: 100vh;
-    margin-top: 100px;
-}
-
-.skills-me{
-    display: flex;
-    flex-wrap: wrap;
-}
-.skills-inner{
-    width: calc(25% - 20px) ;
-    margin-right: 5%;
-    padding: 15px 15px 25px 15px;
-    background-color: #f8f8f8;
-    border: 1px solid #ccc;
-    margin-bottom: 20px;
-    margin-right: 20px;
-
-}
-.skills-inner:last-child{
-    margin-right: 0;
-}
-.skills-inner img{
-    width: 100%;
-
-} 
-.skills-inner strong{
-    color: steelblue;
-    margin: 10px 0;
-    display: block;
-
-}
-.skills-inner h3{
+section .about_self .right h4{
     font-size: 24px;
-} */
+}
+
+.right_box_wrap{
+    display: flex;
+}
+.about_left{
+    width: 50%;
+}
+.about_left ul{
+    margin-top: 10px;
+}
+.about_left li{
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+.about_left li span{
+    font-size: 20px;
+}
+.about_right{
+    width: 50%;
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -578,17 +546,30 @@ section .about_self .right .social {
 .portfolio_wrap .portfolio_box .hover_box .hover_wrap {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
     transition: .3s;
     opacity: 0;
-
-
+    position: relative;
+    color: #fff;
 }
 
-.portfolio_wrap .portfolio_box .hover_box .hover_wrap h4 {}
+.portfolio_wrap .portfolio_box .hover_box .hover_wrap h4 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 28px;
+}
 
-.portfolio_wrap .portfolio_box .hover_box .hover_wrap p {}
+.portfolio_wrap .portfolio_box .hover_box .hover_wrap p {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 22px;
+    
+}
 
 .pbox_wrap:hover .hover_box .hover_wrap {
     opacity: 1;
@@ -601,15 +582,17 @@ section .about_self .right .social {
     /* height: 100vh; */
     margin-top: 100px;
     border-top: 1px solid #ccc;
+    margin-bottom: 100px; /*나중에지우기*/
 }
 
 section.contact .contact_me {
     margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
 }
 
 section.contact .contact_me .left {
-    width: 100%;
-    display: flex;
+    width: 40%;
     justify-content: space-between;
 }
 
@@ -618,19 +601,25 @@ section.contact .contact_me .left .card {
     padding: 15px;
     display: flex;
     align-items: center;
+    width: 100%;
     margin-bottom: 20px;
-    width: 30%;
 }
-
-section.contact .contact_me .left .card .icon i {
-    font-size: 2rem;
+section.contact .contact_me .left .card:last-child{
+    margin-bottom: 0;
+}
+section.contact .contact_me .left .card .icon{
+    width: 50px;
+    height: 50px;
     margin-right: 15px;
+}
+section.contact .contact_me .left .card .icon img {   
+    width: 100%;
+    height: 100%;
 }
 
 
 section.contact .contact_me .right {
-    width: 100%;
+    width: 50%;
     border: 1px solid #ccc;
     padding: 15px;
-    margin-top: 20px;
 }
