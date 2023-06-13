@@ -624,8 +624,8 @@ section.contact .contact_me .right {
 }
 
 section.contact .contact_me .right .swiper{
-    width: 300px;
-    height: 400px;
+    width: 350px;
+    height: 450px;
 }
 section.contact .contact_me .right .swiper .swiper-slide{
     border-radius: 20px;
@@ -657,7 +657,7 @@ section.contact .contact_me .right .swiper img{
     background-color: #002053;
 }
 .swiper .swiper-pagination-bullet.swiper-pagination-bullet-active{
-    width: 30px;
+    width: 35px;
     height: 15px;
     border-radius: 20px;
 }
