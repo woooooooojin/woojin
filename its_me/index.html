@@ -70,7 +70,7 @@
                     <img src="./img/codemonkey.jpg" alt="img">
                 </div>
                 <div class="right">
-                    
+
                     <div class="right_box_wrap">
                         <div class="about_left">
                             <h4>Who Am I</h4>
@@ -108,8 +108,10 @@
 
                         </div>
                         <!--about right-->
-                    </div><!--right box wrap-->
-                </div><!--right-->
+                    </div>
+                    <!--right box wrap-->
+                </div>
+                <!--right-->
 
             </div>
         </div>
@@ -549,7 +551,7 @@
                         </div>
 
                         <div class="info_text">
-                            <h3>phone</h3>
+                            <h3>Phone</h3>
                             <p>010-1111-2222</p>
                         </div>
                     </div>
@@ -561,7 +563,7 @@
                         </div>
 
                         <div class="info_text">
-                            <h3>e-mail</h3>
+                            <h3>E-Mail</h3>
                             <p>kevin2205@naver.com</p>
                         </div>
                     </div>
@@ -573,7 +575,7 @@
                         </div>
 
                         <div class="info_text">
-                            <h3>address</h3>
+                            <h3>Address</h3>
                             <p>Haeundae-gu, Busan, Republic of Korea</p>
                         </div>
                     </div>
@@ -590,13 +592,42 @@
                         </div>
                     </div>
                     <!--card end-->
+
+                    <div class="card">
+                        <div class="icon">
+                            <img src="./img/github01.png" alt="img">
+                        </div>
+
+                        <div class="info_text">
+                            <h3>감사합니다</h3>
+                            <p>ㅇㅇㅇㅇㅇ</p>
+                        </div>
+                    </div>
+                    <!--card end-->
                 </div>
                 <!--left end-->
 
 
                 <div class="right">
 
-                    
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="./img/codemonkey.jpg" alt="img">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./img/codemonkey.jpg" alt="img">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./img/codemonkey.jpg" alt="img">
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+
+                    </div>
 
 
                 </div>
@@ -611,7 +642,22 @@
 
 
 
+    <script>
+        const swiper = new Swiper('.swiper', {
+            effect: "cards",
+            grabCursor: true,
+            pagination: {
+                el: '.swiper-pagination',
+            },
 
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+
+        });
+    </script>
 
 </body>
 
