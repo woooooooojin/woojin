@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>react14 hooks</title>
+
+    <!-- react -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- babel ; jsx 문법 사용 -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+    <!-- Your custom script here -->
+    <script type="text/babel" defer>
+
+        const rootElement = document.getElementById('root')
+
+        const Info = ()=>{
+            // const [name, setName] = React.useState('')
+            // const [age, setAge] = React.useState('')
+
+            // const handleChangeName = (e)=>{
+            //     setName(e.target.value)
+            // }//입력된 값으로 이름을 바꾸겠다
+
+            // const handleChangeAge = (e)=>{
+            //     setAge(e.target.value)
+            // }
+
+            // return (
+            //     <>
+            //         <div>
+            //            name: <input type="text" value={name} onChange={handleChangeName} /> <br/>
+            //            age: <input type="text" value={age} onChange={handleChangeAge} /> <br/>
+            //         </div>
+
+            //         <h1>Name : {name}</h1>
+            //         <h2>Age : {age}</h2>
+            //     </>
+            // )
+
+
+
+            
+            //ver2
+            const [state, setState] = React.useState({name : '', age : ''})
+            return(
+                <>
+                    <div>
+                        name : <input type="text" value={state.name} onChange={(e)=>setState({...state, name: e.target.value})} />
+                        age : <input type="text" value={state.age} onChange={(e)=>setState({...state, age: e.target.value})} />
+                    </div>
+                
+
+                    <h1>Name:{state.name}</h1>
+                    <h2>age:{state.age}</h2>
+                </>
+            )
+
+
+
+        }//info component
+       
+        ReactDOM.render(<Info />,rootElement) 
+
+
+
+
+
+
+
+    </script>
+
+    <script>
+        // const numbers = [1,2,3,4,5]
+
+        // const result = numbers.map((number, index)=>number * 2)
+        // console.log(result)
+
+
+        // const result = numbers.filter((number)=>number > 3)
+        // const result = numbers.filter((number)=>{
+        //     return number > 3
+        // })
+        // console.log(result)
+    </script>
+
+    <style>
+        /* .title{
+            color: steelblue;
+        } */
+
+        .btn{
+            width: 100px;
+            height: 50px;
+            border: 0;
+            font-size: 20px;
+            line-height: 50px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="root"></div>
+
+</body>
+
+</html>

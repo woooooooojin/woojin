@@ -434,7 +434,7 @@ section .about_self .right .social {
 }
 
 .cardflip ul li .card_front .front_img img {
-    width: 100%;
+    width: 40%;
     height: auto;
 }
 

@@ -41,20 +41,63 @@
 
 
         //useState 상태관리
-        const Counter = ()=>{
-            const [count, setCount] = React.useState(0) // [현재상태,상태변경setter함수] = React.useState(0) ; 상태관리hook(초기값)
-            const handleClick = () => setCount(count + 1)
+        // const Counter = ()=>{
+        //     const [count, setCount] = React.useState(0) // [현재상태,상태변경setter함수] = React.useState(0) ; 상태관리hook(초기값)
+        //     const handleClick = () => setCount(count + 1)
+
+        //     return(
+        //         <>
+        //             <h1> {count}</h1>
+        //             <button onClick = {handleClick}>click</button>
+        //         </>
+        //     )
+
+        // }
+
+        // ReactDOM.render(<Counter />,rootElement) 
+
+
+
+        //증가 감소
+        // const Counter = ()=>{
+        //     const [count,setCount]=React.useState(0)
+        //     return(
+        //         <div>
+        //             <h1>{count}</h1>
+        //             <button onClick = {()=>{setCount(count + 1)}}>증가</button>
+        //             <button onClick = {()=>{setCount(count - 1)}}>감소</button>
+        //         </div>
+        //     )
+        // }
+
+        
+        // ReactDOM.render(<Counter />,rootElement) 
+
+
+
+
+
+        const Intro = ()=>{
+            const [message,setMessage] = React.useState('홍길동의 누리집입니다.')
+            const handleEnter = () => setMessage('방문을 환영합니다.')
+            const handleLeave = () => setMessage('다음에 다시 방문해주세요.')
+
+            const [color,setColor] = React.useState('black')
 
             return(
-                <>
-                    <h1> {count}</h1>
-                    <button onClick = {handleClick}>click</button>
-                </>
+                <div>
+                    <button onClick = {handleEnter}>입장</button>
+                    <button onClick = {handleLeave}>퇴장</button>
+                    <h1 style={{color}}>{message}</h1> 
+
+                    <button className = 'btn' style={{backgroundColor : 'red', color : '#fff'}} onClick = {()=>setColor('red')}>red</button>
+                    <button className = 'btn' style={{backgroundColor : 'steelblue', color : '#fff'}} onClick = {()=>setColor('steelBlue')}>blue</button>
+                    <button className = 'btn'  style={{backgroundColor : 'lightGreen', color : '#fff'}} onClick = {()=>setColor('lightGreen')}>green</button>
+                </div>
             )
-
         }
-
-        ReactDOM.render(<Counter />,rootElement) 
+        //style은 객체로받는다
+        ReactDOM.render(<Intro />,rootElement) 
 
 
 
@@ -82,6 +125,14 @@
         /* .title{
             color: steelblue;
         } */
+
+        .btn{
+            width: 100px;
+            height: 50px;
+            border: 0;
+            font-size: 20px;
+            line-height: 50px;
+        }
     </style>
 
 </head>
