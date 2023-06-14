@@ -285,12 +285,15 @@ section .about_self {
     justify-content: space-between;
     align-items: center;
     margin-top: 30px;
+    overflow: hidden;
 }
 
 section .about_self .left {
     width: 35%;
     height: 500px;
     border: 1px solid #ccc;
+    transform: translateY(-800px);
+    opacity: 0;
 }
 
 section .about_self .left img {
@@ -304,6 +307,8 @@ section .about_self .right {
     padding: 10px 20px;
     height: 500px;
     border: 1px solid #ccc;
+    transform: translateY(800px);
+    opacity: 0;
 }
 
 section .about_self .right h4{
@@ -361,6 +366,8 @@ section .about_self .right h4{
     margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
+    overflow: hidden;
+    /* padding: 30px; */
 }
 
 .cardflip ul li {
@@ -368,7 +375,16 @@ section .about_self .right h4{
     height: 300px;
     margin-right: 20px;
     margin-bottom: 20px;
+    opacity: 0;
 }
+.cardflip ul li:nth-child(1){transform: translateX(-700px);}
+.cardflip ul li:nth-child(2){transform: translateX(-900px);}
+.cardflip ul li:nth-child(3){transform: translateX(-1200px);}
+.cardflip ul li:nth-child(4){transform: translateX(-1400px);}
+.cardflip ul li:nth-child(5){transform: translateX(1400px);}
+.cardflip ul li:nth-child(6){transform: translateX(1200px);}
+.cardflip ul li:nth-child(7){transform: translateX(900px);}
+.cardflip ul li:nth-child(8){transform: translateX(700px);}
 
 .cardflip ul li:nth-child(1) {
     margin-left: 20px;
@@ -595,7 +611,6 @@ section .about_self .right h4{
     /* height: 100vh; */
     margin-top: 100px;
     border-top: 1px solid #ccc;
-    margin-bottom: 100px; /*나중에지우기*/
 }
 
 section.contact .contact_me {
@@ -674,4 +689,16 @@ section.contact .contact_me .right .swiper img{
     width: 35px;
     height: 15px;
     border-radius: 20px;
+}
+
+
+
+
+/********footer*********/
+footer{
+    margin-top: 100px;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    padding: 5px 0;
 }

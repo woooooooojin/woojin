@@ -84,36 +84,74 @@ const section04 = document.getElementById('portfolio')
 const section05 = document.getElementById('contact')
 
 
-btn01.addEventListener('click',()=>{
-    gsap.to(window,0.3,{
+btn01.addEventListener('click', () => {
+    gsap.to(window, 0.3, {
         scrollTo: section01,
     })
 
 })
 
-btn02.addEventListener('click',()=>{
-    gsap.to(window,0.3,{
+btn02.addEventListener('click', () => {
+    gsap.to(window, 0.3, {
         scrollTo: section02,
     })
 
 })
 
-btn03.addEventListener('click',()=>{
-    gsap.to(window,0.3,{
+btn03.addEventListener('click', () => {
+    gsap.to(window, 0.3, {
         scrollTo: section03,
     })
 
 })
 
-btn04.addEventListener('click',()=>{
-    gsap.to(window,0.3,{
+btn04.addEventListener('click', () => {
+    gsap.to(window, 0.3, {
         scrollTo: section04,
     })
 
 })
-btn05.addEventListener('click',()=>{
-    gsap.to(window,0.3,{
+btn05.addEventListener('click', () => {
+    gsap.to(window, 0.3, {
         scrollTo: section05,
     })
 
+})
+
+
+const aboutLeft = document.querySelector('.about_self .left')
+const aboutRight = document.querySelector('.about_self .right')
+const cardLis = document.querySelectorAll('.gsap01')
+
+
+//about animation
+window.addEventListener('scroll', function () {
+    if (window.scrollY > 500) {
+
+        gsap.to(aboutLeft, 0.5, {
+            translateY: 0,
+            opacity: 1
+        })
+
+        gsap.to(aboutRight, 0.5, {
+            translateY: 0,
+            opacity: 1
+        })
+
+    }
+
+})
+
+
+//skills card animation
+window.addEventListener('scroll',function(){
+    if(window.scrollY > 1300){
+        cardLis.forEach((value,index)=>{
+            gsap.to(value, 0.8,{
+                translateX :0,
+                rotate:360,
+                opacity:1,
+            })
+        })
+    }
 })
