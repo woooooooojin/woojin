@@ -259,7 +259,7 @@ main h2 {}
 
 }
 
-section:nth-child(2) {
+body {
     background-color: #f8f8f8;
 }
 
@@ -267,18 +267,12 @@ section .title {
     margin-top: 30px;
 }
 
-section .title h4 {
-    font-size: 24px;
-    color: steelblue;
-}
 
 section .title h2 {
     font-size: 40px;
 }
 
-section .title p {
-    font-size: 18px;
-}
+
 
 section .about_self {
     display: flex;
@@ -322,11 +316,9 @@ section .about_self .right h4{
     width: 50%;
 }
 .about_left ul{
-    margin-top: 10px;
 }
 .about_left li{
     margin-top: 30px;
-    font-size: 20px;
 }
 .about_left li span{
     font-size: 20px;
