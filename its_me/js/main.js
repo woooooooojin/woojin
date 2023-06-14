@@ -38,9 +38,8 @@
 
 const headerEl = document.querySelector('header');
 window.addEventListener('scroll', function () {
-    const screenScrollY = window.pageYOffset;
 
-    if (screenScrollY > 0) {
+    if (window.scrollY > 0) {
         headerEl.classList.add('active')
     } else {
         headerEl.classList.remove('active')
