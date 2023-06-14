@@ -230,6 +230,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //리뷰 등록
 
+
+
+
+    //리뷰 등록
+
     const reviewBtn = document.getElementById('review_btn') //리뷰버튼
     const reviewName = document.getElementById('rename') //리뷰아이디
     const reviewTxt = document.getElementById('retxt') //리뷰본문
@@ -263,6 +268,21 @@ document.addEventListener('DOMContentLoaded', function () {
         plusCnt()
 
 
+        //이미지넣기 
+        const inputFile = document.getElementById('input_file')
+        const labelName = document.getElementById('label_name')
+
+        const imgbox = document.createElement('div')
+        imgbox.setAttribute('class', 'R_imgbox')
+        Li.appendChild(imgbox)
+
+        const imgboxImg = document.createElement('img')
+        imgbox.appendChild(imgboxImg)
+
+        imgboxImg.src = URL.createObjectURL(inputFile.files[0])
+        labelName.textContent = '사진 업로드 click ! (필수)'
+        inputFile.value = ''
+
 
 
 
@@ -271,7 +291,6 @@ document.addEventListener('DOMContentLoaded', function () {
         starBox.setAttribute('class', 'inner_stars') //리뷰에 나오는별
         Li.appendChild(starBox)
         starBox.innerHTML = Rstars.innerHTML //별점 생성 
-
 
 
 
@@ -358,6 +377,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     })
+   
+
+     //포토리뷰 이미지추가 라벨 text
+     const inputFile2 = document.getElementById('input_file')
+        const labelName2 = document.getElementById('label_name')
+
+     inputFile2.addEventListener('change', () => {
+        labelName2.textContent = inputFile2.files[0].name
+    })
+    
+
+
 
     ////별점 추가 리뷰
     const innerStar = document.querySelectorAll('.inner_stars')
@@ -395,8 +426,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     executeRating(ratingStars, ratingResult)
 
-
-    
     ///////////////////////////////////////////////////
 
 
@@ -637,130 +666,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-    //장바구니 카트 클릭이벤트
-    // const cart2 = document.querySelectorAll('.cart_box')
-    // const cartCount = document.querySelector('.count')
-    // let cnt = 0
 
-    // cart2.forEach((value) => {
-    //     value.addEventListener('click', function () {
-    //         cnt++
-    //         cartCount.innerHTML = cnt
-    //     })
-    // })
+})
 
-    // const heart = document.querySelectorAll('.like_box')
-    // const heartCnt = document.querySelector('.heart_cnt')
-    // let cntheart = 0
+const family = document.getElementById('family_site')
+family.addEventListener('change', (event) => {
 
-    // heart.forEach((value) => {
-    //     value.addEventListener('click', function () {
-    //         cntheart++
-    //         heartCnt.innerHTML = cntheart
-    //     })
-    // })
+    let options = event.currentTarget.options
+    let index = options.selectedIndex
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    location.href = options[index].value
 
 })
 
 
 
 
-// const ratingStars = [...document.getElementsByClassName("star1")];
-// const ratingResult = document.querySelector(".rating__result");
-
-// printRatingResult(ratingResult);
-
-// function executeRating(stars, result) {
-//    const starClassActive = "star1 fas fa-star";
-//    const starClassUnactive = "star1 far fa-star";
-//    const starsLength = stars.length;
-//    let i;
-//    stars.map((star) => {
-//       star.onclick = () => {
-//          i = stars.indexOf(star);
-
-//          if (star.className.indexOf(starClassUnactive) !== -1) {
-//             printRatingResult(result, i + 1);
-//             for (i; i >= 0; --i) stars[i].className = starClassActive;
-//          } else {
-//             printRatingResult(result, i);
-//             for (i; i < starsLength; ++i) stars[i].className = starClassUnactive;
-//          }
-//       };
-//    });
-// }
-
-// function printRatingResult(result, num = 0) {
-//    result.textContent = `${num}/5`;
-// }
-
-// executeRating(ratingStars, ratingResult);
 
 
-
-
-
-
-///photo review
-
-
-
-
-const inputFile = document.getElementById('input_file')
-// let imgsrc = document.querySelector('.img_wrap img')
-const imgBtn = document.querySelector('.upload') //버튼
-const labelName = document.getElementById('label_name') //라벨
-// const photoLi = document.querySelector('.photolist li')
-
-const photoList = document.querySelector('.photolist')
-imgBtn.addEventListener('click', () => {
-    // imgsrc.src = URL.createObjectURL(inputFile.files[0])
-
-    const lis = document.createElement('li')
-
-    const imgWrap = document.createElement('div')
-    imgWrap.setAttribute('class', 'img_wrap')
-    lis.appendChild(imgWrap)
-
-    const photoImg = document.createElement('img')
-    imgWrap.appendChild(photoImg)
-    photoImg.src = URL.createObjectURL(inputFile.files[0])
-
-    const delPhoto = document.createElement('div')
-    delPhoto.setAttribute('class', 'photo_del')
-    delPhoto.innerHTML = 'X'
-    lis.appendChild(delPhoto)
-
-
-    photoList.appendChild(lis)
-    labelName.textContent = '사진 업로드 click !'
-
-
-    delPhoto.addEventListener('click', () => {
-        photoList.removeChild(lis)
-    })
-
-})
-
-inputFile.addEventListener('change', () => {
-
-    // if (inputFile.files[0]) {
-    labelName.textContent = inputFile.files[0].name
-    // }
-})

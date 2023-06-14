@@ -384,3 +384,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+const family = document.getElementById('family_site')
+family.addEventListener('change', (event) => {
+
+    let options = event.currentTarget.options
+    let index = options.selectedIndex
+
+    location.href = options[index].value
+
+})
