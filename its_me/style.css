@@ -307,7 +307,7 @@ section .about_self .right {
 }
 
 section .about_self .right h4{
-    font-size: 24px;
+    font-size: 22px;
 }
 
 .right_box_wrap{
@@ -328,6 +328,16 @@ section .about_self .right h4{
 }
 .about_right{
     width: 50%;
+}
+.about_right ul{}
+.about_right ul.certif{
+    margin-top: 20px;
+}
+.about_right ul li{
+    margin-top: 10px;
+}
+.about_right ul li span{
+    font-size: 20px;
 }
 
 
