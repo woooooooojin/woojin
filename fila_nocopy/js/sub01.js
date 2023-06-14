@@ -553,7 +553,32 @@ priceChkDefault.addEventListener('click', function () {
 })
 
 
+//////////////////검색필터/////////////////////
+const searchInputVal = document.getElementById('searchbox')
+const searchBox2 = document.querySelector('.search_box')
 
+searchInputVal.addEventListener('change', () => {
+    const searchRes = subData.filter((e) => {
+        return (e.name.includes(searchInputVal.value))
+    })
+    // console.log(searchRes)
+
+
+    // window.open('sub01.html')
+
+    // localStorage.setItem('val',JSON.stringify(searchRes))
+
+    sublist.innerHTML = ''
+    paging.innerHTML = ''
+    nowPage = 0
+    createPage(searchRes)
+    searchBox2.style.display = 'none'
+
+   
+})
+
+
+/////////////////////////////////////////////////////
 
 
 
