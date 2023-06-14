@@ -1,19 +1,19 @@
-const swiper = new Swiper('.swiper01', {
-    loop: false,
-    slidesPerView: 3,
-    // slidesPerGroup:1,
-    spaceBetween: 20,
+// const swiper = new Swiper('.swiper01', {
+//     loop: false,
+//     slidesPerView: 3,
+//     // slidesPerGroup:1,
+//     spaceBetween: 20,
 
 
-});
-const swiper2 = new Swiper('.swiper02', {
-    loop: false,
-    slidesPerView: 3,
-    // slidesPerGroup:1,
-    spaceBetween: 20,
+// });
+// const swiper2 = new Swiper('.swiper02', {
+//     loop: false,
+//     slidesPerView: 3,
+//     // slidesPerGroup:1,
+//     spaceBetween: 20,
 
 
-});
+// });
 
 
 const radio01 = document.getElementById('radio01')
