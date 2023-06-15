@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="./js/jquery-3.6.4.min.js"></script>
+
+
     <script src="./js/main.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
@@ -14,12 +17,29 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <!--gsap cdn-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollToPlugin.min.js"></script>
     <!--gsap scroll to-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollTrigger.min.js"></script>
+    <!--gsap scroll trigger-->
 
+    <!--counter up library-->
+    <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script> -->
+    <!-- <script src="js/jquery.counterup.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script> -->
+    <!-- <script src="js/jquery.counterup.min.js"></script> -->
+
+
+
+    <script>
+        // $(function () {
+        //     $('.counter').counterUp({
+        //         delay: 10,
+        //         time: 1500,
+        //     });
+        // })
+    </script>
 
 </head>
 
@@ -142,8 +162,9 @@
                             <!--img-->
                             <div class="progress_wrap">
                                 <progress value="0" max="100" id="progress"></progress>
+                                
                                 <span class="span01">0%</span>
-                                <span class="span02" id="skill01"></span>
+                                <span class="span02 counter" id="skill01"></span>
                             </div>
                         </div>
                         <div class="card_back">
@@ -235,7 +256,7 @@
                             <div class="progress_wrap">
                                 <progress value="0" max="100" id="progress"></progress>
                                 <span class="span01">0%</span>
-                                <span class="span02" id="skill05"></span>
+                                <span class="span02 counter" id="skill05"></span>
                             </div>
                         </div>
                         <div class="card_back">
@@ -258,7 +279,7 @@
                             <div class="progress_wrap">
                                 <progress value="0" max="100" id="progress"></progress>
                                 <span class="span01">0%</span>
-                                <span class="span02" id="skill06"></span>
+                                <span class="span02 counter" id="skill06"></span>
                             </div>
                         </div>
                         <div class="card_back">
@@ -280,7 +301,7 @@
                             <div class="progress_wrap">
                                 <progress value="0" max="100" id="progress"></progress>
                                 <span class="span01">0%</span>
-                                <span class="span02" id="skill07"></span>
+                                <span class="span02 counter" id="skill07"></span>
                             </div>
                         </div>
                         <div class="card_back">
