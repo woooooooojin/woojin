@@ -123,7 +123,6 @@ const aboutLeft = document.querySelector('.about_self .left')
 const aboutRight = document.querySelector('.about_self .right')
 const cardLis = document.querySelectorAll('.gsap01')
 
-
 //about animation
 window.addEventListener('scroll', function () {
     if (window.scrollY > 500) {
@@ -142,16 +141,79 @@ window.addEventListener('scroll', function () {
 
 })
 
+// const progress = document.getElementsByTagName('progress')
 
 //skills card animation
-window.addEventListener('scroll',function(){
-    if(window.scrollY > 1300){
-        cardLis.forEach((value,index)=>{
-            gsap.to(value, 0.8,{
-                translateX :0,
-                rotate:360,
-                opacity:1,
+window.addEventListener('scroll', function () {
+    if (window.scrollY > 1300) {
+        cardLis.forEach((value) => {
+            gsap.to(value, 0.8, {
+                translateX: 0,
+                rotate: 360,
+                opacity: 1,
             })
         })
+
+
+        // for(let i =0; i<progress.length;i++){
+        //     progress[0].value = 100
+        //     progress[1].value = 100
+        //     progress[2].value = 90
+        //     progress[3].value = 50
+        //     progress[4].value = 80
+        //     progress[5].value = 70
+        //     progress[6].value = 70
+        //     progress[7].value = 80
+        // }
+
+
     }
 })
+
+
+
+
+
+
+let countBox = document.getElementById('skill01') //html
+let countBox2 = document.getElementById('skill02') //css
+let countBox3 = document.getElementById('skill03') //js
+let count = 0;
+
+let counting = setInterval(function () {
+    if (count == 100) {
+        clearInterval(counting);
+        return false;
+    }
+    count += 1
+    countBox.innerHTML = count
+    countBox2.innerHTML = count
+    countBox3.innerHTML = count - 10
+
+        
+}, 20);
+
+
+
+
+const progress = document.getElementsByTagName('progress')
+
+let cnt=0;
+let progressCnt = setInterval(() => {
+    
+    if(cnt == 100){
+        clearInterval(progressCnt);
+        return false;
+    }
+    cnt += 1
+
+    progress[0].value = cnt
+    progress[1].value = cnt
+    progress[2].value = cnt - 10
+
+}, 20);
+
+
+
+
+

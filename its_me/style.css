@@ -472,7 +472,7 @@ section .about_self .right h4{
     top: 50%;
     transform: translateY(-50%);
     font-size: 14px;
-    color: #fff;
+    font-weight: bold;
 }
 
 .progress_wrap .span02 {
@@ -481,7 +481,8 @@ section .about_self .right h4{
     top: 50%;
     transform: translateY(-50%);
     font-size: 14px;
-    color: #fff;
+    color: black;
+    font-weight: bold;
 }
 
 
