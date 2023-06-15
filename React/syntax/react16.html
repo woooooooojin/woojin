@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>react16 hooks</title>
+
+    <!-- react -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- babel ; jsx 문법 사용 -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+    <!-- Your custom script here -->
+    <script type="text/babel" defer>
+
+        const rootElement = document.getElementById('root')
+
+            //useEffect : 컴포넌트가 랜더링 될 때마다 특정 작업을 수행하도록 하는 훅
+            // => 매번, 초기 한번만, 특정값이 변경될 때 실행
+            // componenetDidMount(), componentDidUpdate()
+
+            const Info =()=>{
+                const [name, setName] = React.useState('')
+                const [age, setAge] = React.useState(0)
+
+                React.useEffect(()=>{
+                    console.log('랜더링 완료')
+                    console.log(
+                        name,
+                        age
+                    )
+                // })//useEffect : 매번 랜더링 될때마다
+                // },[]) //최초 한번만 랜더링 하고싶을때
+                },[age]) //특정값이 변경될때 랜더링
+
+                const handleChangeName = (e)=>{
+                    setName(e.target.value)
+                }
+
+                const handleChangeAge = (e)=>{
+                    setAge(e.target.value)
+                }
+
+                return(
+                    <>
+                        <div>
+                            name : <input type="text" value={name} onChange={handleChangeName}/> <br/>
+                            age : <input type="text" value={age} onChange={handleChangeAge}/> <br/>
+                        </div>
+
+                        <h1>name : {name}</h1>
+                        <h1>age : {age}</h1>
+                    </>
+                )
+
+            }
+        
+        ReactDOM.render(<Info />,rootElement) 
+
+
+
+
+
+
+
+    </script>
+
+    
+
+    <style>
+        /* .title{
+            color: steelblue;
+        } */
+
+        .btn {
+            width: 100px;
+            height: 50px;
+            border: 0;
+            font-size: 20px;
+            line-height: 50px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="root"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+
+/* mycomponent */
+
+.lnb{
+    color: red;
+    display: flex;
+}
+.lnb li{
+    list-style: none;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
