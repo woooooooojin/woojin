@@ -280,7 +280,7 @@ section .about_self {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 80px;
     overflow: hidden;
 }
 
@@ -290,12 +290,13 @@ section .about_self .left {
     border: 1px solid #ccc;
     transform: translateY(-800px);
     opacity: 0;
+    border-radius: 20px;
 }
 
 section .about_self .left img {
     width: 100%;
     height: 100%;
-
+    border-radius: 20px;
 }
 
 section .about_self .right {
@@ -305,6 +306,7 @@ section .about_self .right {
     border: 1px solid #ccc;
     transform: translateY(800px);
     opacity: 0;
+    border-radius: 20px;
 }
 
 section .about_self .right h4{
@@ -359,7 +361,7 @@ section .about_self .right h4{
 }
 
 .cardflip ul {
-    margin-top: 50px;
+    margin-top: 80px;
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
@@ -507,7 +509,7 @@ section .about_self .right h4{
 .portfolio_wrap {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 50px;
+    margin-top: 80px;
 }
 
 .portfolio_wrap .portfolio_box {
@@ -624,7 +626,7 @@ section .about_self .right h4{
 }
 
 section.contact .contact_me {
-    margin-top: 50px;
+    margin-top: 80px;
     display: flex;
     justify-content: center;
 }
@@ -717,4 +719,5 @@ footer{
     background-color: #000;
     color: #fff;
     padding: 5px 0;
+   
 }
