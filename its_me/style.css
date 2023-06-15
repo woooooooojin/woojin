@@ -271,6 +271,7 @@ section .title {
 
 section .title h2 {
     font-size: 40px;
+    text-shadow: 20px 10px 10px black;
 }
 
 
@@ -369,7 +370,7 @@ section .about_self .right h4{
     width: calc(100% - 75% - 25px);
     height: 300px;
     margin-right: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     opacity: 0;
 }
 .cardflip ul li:nth-child(1){transform: translateX(-700px);}
@@ -396,12 +397,14 @@ section .about_self .right h4{
 .cardflip ul li .card_wrap {
     width: 100%;
     height: 100%;
-    border: 1px solid #ccc;
+    border: 1px solid #eee;
     position: relative;
     text-align: center;
     transition: .5s;
     transform-style: preserve-3d;
     border-radius: 50%;
+    /* box-shadow: 5px 5px 10px 5px #ccc inset; */
+    box-shadow: -20px -10px 20px 5px #ccc inset;
 }
 
 .cardflip ul li:hover .card_wrap {
@@ -414,19 +417,20 @@ section .about_self .right h4{
     padding: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     position: absolute;
     backface-visibility: hidden;
 }
 
 .cardflip ul li .card_front .front_img {
-    width: 100%;
+    width: 40%;
+    margin-bottom: 20px;
     /* height: 100%; */
 }
 
 .cardflip ul li .card_front .front_img img {
-    width: 40%;
+    width: 100%;
     height: auto;
 }
 
@@ -445,8 +449,6 @@ section .about_self .right h4{
 }
 
 .progress_wrap {
-    position: relative;
-
 }
 
 #progress {
@@ -457,27 +459,26 @@ section .about_self .right h4{
     background: #f0f0f0;
     border-radius: 10px;
     box-shadow: inset 3px 3px 10px #ccc;
-    height: 20px;
-    transition: .2s;
+    height: 15px;
+    transition: .3s;
 }
 
 #progress::-webkit-progress-value {
     border-radius: 10px;
     background: #719ece;
-    transition: .2s;
 
 }
 
-.progress_wrap .span01 {
+/* .progress_wrap .span01 {
     position: absolute;
     left: 5px;
     top: 50%;
     transform: translateY(-50%);
     font-size: 14px;
     font-weight: bold;
-}
+} */
 
-.progress_wrap .span02 {
+/* .progress_wrap .span02 {
     position: absolute;
     right: 5px;
     top: 50%;
@@ -485,6 +486,11 @@ section .about_self .right h4{
     font-size: 14px;
     color: black;
     font-weight: bold;
+} */
+
+.counter{
+    font-size: 25px;
+    margin-bottom: 20px;
 }
 
 
@@ -513,7 +519,7 @@ section .about_self .right h4{
 }
 
 .portfolio_wrap .portfolio_box:nth-child(1),
-.portfolio_wrap .portfolio_box:nth-child(4) {
+.portfolio_wrap .portfolio_box:nth-child(4){
     margin-left: 20px;
 }
 
@@ -522,12 +528,15 @@ section .about_self .right h4{
     position: relative;
     font-size: 0;
 }
-
+.portfolio_wrap .portfolio_box .p_img img:nth-child(1){
+    box-shadow: 10px 10px 30px black;
+}
 .portfolio_wrap .portfolio_box .p_img img {
     width: 100%;
     height: auto;
     border-radius: 10px;
     border: 1px solid #ccc;
+
 }
 
 .portfolio_wrap .portfolio_box .p_img .maingif {
@@ -616,7 +625,7 @@ section .about_self .right h4{
 section.contact .contact_me {
     margin-top: 50px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 section.contact .contact_me .left {
@@ -632,6 +641,12 @@ section.contact .contact_me .left .card {
     width: 100%;
     margin-bottom: 20px;
     border-radius: 20px;
+    box-shadow: inset 0 0 10px #888;
+    transition: .3s;
+
+}
+section.contact .contact_me .left .card:hover{
+    box-shadow: inset 0 0 10px steelblue;
 }
 section.contact .contact_me .left .card:last-child{
     margin-bottom: 0;

@@ -163,60 +163,101 @@ cardLis.forEach((value) => {
 
 
 
+//숫자하고 프로그레스바 올라가는거 
+
+// window.addEventListener('scroll', function () {
+
+//     if (window.pageYOffset>= 1500  ) {
+
+// let countBox = document.getElementById('skill01') //html
+// let countBox2 = document.getElementById('skill02') //css
+// let countBox3 = document.getElementById('skill03') //js
+// let count = 0;
+
+// let counting = setInterval(function () {
+//     if (count == 100) {
+//         clearInterval(counting);
+//         return false;
+//     }
+//     count += 1
+//     countBox.innerHTML = count + '%'
+//     countBox2.innerHTML = count + '%'
+//     countBox3.innerHTML = (count - 10) + '%'
 
 
-window.addEventListener('scroll', function () {
-
-    if (window.scrollY >= 1500) {
-
-        let countBox = document.getElementById('skill01') //html
-        let countBox2 = document.getElementById('skill02') //css
-        let countBox3 = document.getElementById('skill03') //js
-        let count = 0;
-
-        let counting = setInterval(function () {
-            if (count == 100) {
-                clearInterval(counting);
-                return false;
-            }
-            count += 1
-            countBox.innerHTML = count + '%'
-            countBox2.innerHTML = count + '%'
-            countBox3.innerHTML = (count - 10) + '%'
-
-
-        }, 20);
-
-
-
-
-        const progress = document.getElementsByTagName('progress')
-
-        let cnt = 0;
-        let progressCnt = setInterval(() => {
-
-            if (cnt == 100) {
-                clearInterval(progressCnt);
-                return false;
-            }
-            cnt += 1
-
-            progress[0].value = cnt
-            progress[1].value = cnt
-            progress[2].value = cnt - 10
-
-        }, 20);
+// }, 25);
 
 
 
+
+// const progress = document.getElementsByTagName('progress')
+
+// let cnt = 0;
+// let progressCnt = setInterval(() => {
+
+//     if (cnt == 100) {
+//         clearInterval(progressCnt);
+//         return false;
+//     }
+//     cnt += 1
+
+//     progress[0].value = cnt
+//     progress[1].value = cnt
+//     progress[2].value = cnt - 10
+// }, 25);
+
+
+
+//     }//if
+// }) //window scroll
+
+
+
+
+//progress value 올라가는거
+const progress = document.getElementsByTagName('progress')
+
+let cnt = 0;
+let progressCnt = setInterval(() => {
+
+    if (cnt == 100) {
+        clearInterval(progressCnt);
+        return false;
     }
-}) //window scroll
+    cnt += 1
+
+    progress[0].value = cnt
+    progress[1].value = cnt
+    progress[2].value = cnt - 10
+}, 25);
+
+
+
+
+//숫자 카운트올라가는거 gsap으로
+
+const num = document.querySelectorAll('.span02')
+gsap.from(num, {
+    textContent: 0,
+    duration: 4,
+    scrollTrigger: {
+        trigger: section02,
+        start: 'bottom',
+    },
+    stagger: {
+        onUpdate: function () {
+            this.targets()[0].innerHTML = Math.ceil(this.targets()[0].textContent) + '%';
+        }
+    }
+})
 
 
 
 
 
 
+
+///contact event
 
 const cards = document.querySelectorAll('.card')
 const contactRight = document.querySelector('.contact .right')
