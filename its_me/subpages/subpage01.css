@@ -134,14 +134,11 @@ main{
     position: relative;
     margin-right: 20px;
 }
-/* .main_wrap .first_box .first_left img{
-    width: 100%;
-    height: auto;
-} */
+
 .main_wrap .first_box .first_left img:nth-child(2){
     width: 98%;
     height: auto;
-    margin: 0 auto;
+    /* margin: 0 auto; */
 }
 .main_wrap .first_box .first_left img:nth-child(1){
     position: absolute;
@@ -265,6 +262,7 @@ main{
     margin-top: 80px;
 }
 
+
 /********footer*********/
 footer{
     margin-top: 100px;
@@ -277,3 +275,23 @@ footer{
 
 
 
+.codes{
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+}
+.codes_wrap{
+    position: relative;
+}
+.codes_wrap img:nth-child(1){
+    width: 100%;
+    height: 100%;
+}
+.codes_wrap img:nth-child(2){
+    width: 60%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
