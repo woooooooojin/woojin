@@ -126,22 +126,30 @@ const aboutRight = document.querySelector('.about_self .right')
 const cardLis = document.querySelectorAll('.gsap01')
 
 //about animation
-window.addEventListener('scroll', function () {
-    if (window.scrollY >= 700) {
+// window.addEventListener('scroll', function () {
+//     if (window.scrollY >= 700) {
 
-        gsap.to(aboutLeft, 0.5, {
-            translateY: 0,
-            opacity: 1
-        })
-
-        gsap.to(aboutRight, 0.5, {
-            translateY: 0,
-            opacity: 1
-        })
-
-    }
-
+gsap.to(aboutLeft, 0.5, {
+    scrollTrigger: {
+        trigger: section01,
+        start: 'bottom 50%',
+    },
+    translateY: 0,
+    opacity: 1
 })
+
+gsap.to(aboutRight, 0.5, {
+    scrollTrigger: {
+        trigger: section01,
+        start: 'bottom 50%',
+    },
+    translateY: 0,
+    opacity: 1
+})
+
+//     }
+
+// })
 
 
 //skills card animation
@@ -151,7 +159,7 @@ cardLis.forEach((value) => {
     gsap.to(value, 0.8, {
         scrollTrigger: {
             trigger: section02,
-            start: 'bottom',
+            start: 'bottom 50%',
         },
         translateX: 0,
         rotate: 360,
@@ -242,7 +250,7 @@ gsap.from(num, {
     duration: 4,
     scrollTrigger: {
         trigger: section02,
-        start: 'bottom',
+        start: 'bottom 50%',
     },
     stagger: {
         onUpdate: function () {
@@ -267,7 +275,7 @@ cards.forEach((val, idx) => {
     gsap.from(val, 0.3, {
         scrollTrigger: {
             trigger: section04,
-            start: 'bottom',
+            start: 'bottom 50%',
         },
         y: 50,
         opacity: 0,
@@ -279,7 +287,7 @@ cards.forEach((val, idx) => {
 gsap.from(contactRight, 0.3, {
     scrollTrigger: {
         trigger: section04,
-        start: 'bottom',
+        start: 'bottom 50%',
     },
     y: -200,
     opacity: 0,
