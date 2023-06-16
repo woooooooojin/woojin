@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
 const Wrap = styled.div`
     background-color:#ccc;
@@ -46,6 +46,45 @@ const LinkButton = styled(Button)`
 `
 
 
+const Input = styled.input`
+    padding:8px;
+    margin:10px;
+    background-color:yellow;
+    border-radius: 5px;
+    color: ${(props)=>props.inputColor? props.inputColor : 'blue'};
+    color: ${(props)=> props.inputColor || 'blue'}
+
+
+`
+
+const FirstInput = styled.input.attrs((props) => ({
+
+    type : 'text',
+    size : props.size || '16px'
+
+}))`
+    color: blue;
+    font-size : ${(props)=>props.size} ;   
+`
+
+
+
+const rotate = keyframes`
+    0% {
+        transform: rotate(0deg);
+    }    
+    100% {
+        transform: rotate(360deg);
+    }    
+
+`
+const Rotate = styled.div`
+    animation: ${rotate} 0.5s infinite;
+    padding: 30px;
+    font-size: 100px;
+    display: inline-block;
+`
+
 
 export default function StyledComponents(){
     return(
@@ -57,6 +96,12 @@ export default function StyledComponents(){
             <Button enter>button_enter</Button>
             <FirstButton>button</FirstButton>
             <LinkButton as='a' href='http://www.naver.com'>btn</LinkButton>
+            <br />
+
+            <Input type='text' defaultValue={'input_txt'} inputColor='red'></Input><br/>
+            <Input type='text' defaultValue={'input_txt'} inputColor=''></Input><br/>
+            <FirstInput></FirstInput>
+            <Rotate> * </Rotate>
         </>
     )
 }
