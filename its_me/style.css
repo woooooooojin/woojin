@@ -35,9 +35,11 @@ header.active {
     background-color: #000;
     animation: fadeIn .5s ease-in-out;
 }
-header.active nav ul li{
+
+header.active nav ul li {
     display: block;
 }
+
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -271,10 +273,27 @@ section .title {
 
 section .title h2 {
     font-size: 40px;
-    text-shadow: 20px 10px 10px black;
+    /* text-shadow: 20px 10px 10px black; */
 }
 
+section .title span {
+    position: relative;
+}
 
+section .title span::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: calc(50% + 5px);
+    left: -10px;
+    width: calc(100% + 20px);
+    height: 30%;
+    transform: translateY(-50%);
+    z-index: -1;
+    background-color: #AFD3E2;
+}
+
+section .title span::before {}
 
 
 section .about_self {
@@ -310,35 +329,43 @@ section .about_self .right {
     border-radius: 20px;
 }
 
-section .about_self .right h4{
+section .about_self .right h4 {
     font-size: 24px;
 }
 
-.right_box_wrap{
+.right_box_wrap {
     display: flex;
 }
-.about_left{
+
+.about_left {
     width: 50%;
 }
-.about_left ul{
-}
-.about_left li{
+
+.about_left ul {}
+
+.about_left li {
     margin-top: 30px;
 }
-.about_left li span{
+
+.about_left li span {
     font-size: 20px;
 }
-.about_right{
+
+.about_right {
     width: 50%;
 }
-.about_right ul{}
-.about_right ul.certif{
+
+.about_right ul {}
+
+.about_right ul.certif {
     margin-top: 20px;
 }
-.about_right ul li{
+
+.about_right ul li {
     margin-top: 10px;
 }
-.about_right ul li span{
+
+.about_right ul li span {
     font-size: 20px;
 }
 
@@ -355,7 +382,7 @@ section .about_self .right h4{
 /********cardflip*******/
 .cardflip {
     width: 100%;
-    padding: 50px 0 ;
+    padding: 50px 0;
     margin-top: 100px;
     border-top: 1px solid #ccc;
     /* height: 100vh; */
@@ -376,14 +403,38 @@ section .about_self .right h4{
     margin-bottom: 50px;
     opacity: 0;
 }
-.cardflip ul li:nth-child(1){transform: translateX(-700px);}
-.cardflip ul li:nth-child(2){transform: translateX(-900px);}
-.cardflip ul li:nth-child(3){transform: translateX(-1200px);}
-.cardflip ul li:nth-child(4){transform: translateX(-1400px);}
-.cardflip ul li:nth-child(5){transform: translateX(1400px);}
-.cardflip ul li:nth-child(6){transform: translateX(1200px);}
-.cardflip ul li:nth-child(7){transform: translateX(900px);}
-.cardflip ul li:nth-child(8){transform: translateX(700px);}
+
+.cardflip ul li:nth-child(1) {
+    transform: translateX(-700px);
+}
+
+.cardflip ul li:nth-child(2) {
+    transform: translateX(-900px);
+}
+
+.cardflip ul li:nth-child(3) {
+    transform: translateX(-1200px);
+}
+
+.cardflip ul li:nth-child(4) {
+    transform: translateX(-1400px);
+}
+
+.cardflip ul li:nth-child(5) {
+    transform: translateX(1400px);
+}
+
+.cardflip ul li:nth-child(6) {
+    transform: translateX(1200px);
+}
+
+.cardflip ul li:nth-child(7) {
+    transform: translateX(900px);
+}
+
+.cardflip ul li:nth-child(8) {
+    transform: translateX(700px);
+}
 
 .cardflip ul li:nth-child(1) {
     margin-left: 20px;
@@ -400,16 +451,13 @@ section .about_self .right h4{
 .cardflip ul li .card_wrap {
     width: 100%;
     height: 100%;
-    border: 1px solid #ccc;
+    border: 1px solid #eee;
     position: relative;
     text-align: center;
     transition: .5s;
     transform-style: preserve-3d;
-    /* border-radius: 50%; */
     border-radius: 20px;
-    box-shadow: 0px 0px 10px inset #ccc;
-    /* box-shadow: -20px -10px 20px 5px #ccc inset; */
-    /* box-shadow: -20px -10px 20px 5px #ccc inset; */
+    box-shadow: 0px 0px 20px -2px #ccc
 }
 
 .cardflip ul li:hover .card_wrap {
@@ -453,8 +501,7 @@ section .about_self .right h4{
     backface-visibility: hidden;
 }
 
-.progress_wrap {
-}
+.progress_wrap {}
 
 #progress {
     appearance: none;
@@ -493,7 +540,7 @@ section .about_self .right h4{
     font-weight: bold;
 } */
 
-.counter{
+.counter {
     font-size: 25px;
     margin-bottom: 20px;
 }
@@ -524,7 +571,7 @@ section .about_self .right h4{
 }
 
 .portfolio_wrap .portfolio_box:nth-child(1),
-.portfolio_wrap .portfolio_box:nth-child(4){
+.portfolio_wrap .portfolio_box:nth-child(4) {
     margin-left: 20px;
 }
 
@@ -533,9 +580,11 @@ section .about_self .right h4{
     position: relative;
     font-size: 0;
 }
-.portfolio_wrap .portfolio_box .p_img img:nth-child(1){
+
+.portfolio_wrap .portfolio_box .p_img img:nth-child(1) {
     box-shadow: 10px 10px 30px black;
 }
+
 .portfolio_wrap .portfolio_box .p_img img {
     width: 100%;
     height: auto;
@@ -611,7 +660,7 @@ section .about_self .right h4{
     left: 50%;
     transform: translateX(-50%);
     font-size: 22px;
-    
+
 }
 
 .pbox_wrap:hover .hover_box .hover_wrap {
@@ -652,18 +701,22 @@ section.contact .contact_me .left .card {
     transition: .3s;
 
 }
-section.contact .contact_me .left .card:hover{
+
+section.contact .contact_me .left .card:hover {
     box-shadow: inset 0 0 10px steelblue;
 }
-section.contact .contact_me .left .card:last-child{
+
+section.contact .contact_me .left .card:last-child {
     margin-bottom: 0;
 }
-section.contact .contact_me .left .card .icon{
+
+section.contact .contact_me .left .card .icon {
     width: 50px;
     height: 50px;
     margin-right: 15px;
 }
-section.contact .contact_me .left .card .icon img {   
+
+section.contact .contact_me .left .card .icon img {
     width: 100%;
     height: 100%;
 }
@@ -674,40 +727,48 @@ section.contact .contact_me .right {
     padding: 15px;
 }
 
-section.contact .contact_me .right .swiper{
+section.contact .contact_me .right .swiper {
     width: 350px;
     height: 450px;
 }
-section.contact .contact_me .right .swiper .swiper-slide{
+
+section.contact .contact_me .right .swiper .swiper-slide {
     border-radius: 20px;
 }
-section.contact .contact_me .right .swiper img{
+
+section.contact .contact_me .right .swiper img {
     width: 100%;
     height: 100%;
 }
-.swiper .swiper-button-next{
+
+.swiper .swiper-button-next {
     right: -100px;
 }
-.swiper .swiper-button-prev{
+
+.swiper .swiper-button-prev {
     left: -100px;
 }
+
 .swiper .swiper-button-next:after,
 .swiper .swiper-button-prev:after {
     font-size: 70px;
     color: #002053;
 }
-.swiper .swiper-pagination.swiper-pagination-bullets{
-    top: auto;    
-    bottom: -50px;  
+
+.swiper .swiper-pagination.swiper-pagination-bullets {
+    top: auto;
+    bottom: -50px;
     /* transition: .3s;   */
 }
-.swiper .swiper-pagination-bullet{
+
+.swiper .swiper-pagination-bullet {
     width: 15px;
     height: 15px;
     transition: .3s;
     background-color: #002053;
 }
-.swiper .swiper-pagination-bullet.swiper-pagination-bullet-active{
+
+.swiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
     width: 35px;
     height: 15px;
     border-radius: 20px;
@@ -717,22 +778,19 @@ section.contact .contact_me .right .swiper img{
 
 
 /********footer*********/
-footer{
+footer {
     margin-top: 100px;
     text-align: center;
     background-color: #000;
     color: #fff;
     padding: 5px 0;
-   
+
 }
 
 
 
 /***************popup***************/
 
-.popup{
-    
-}
-.popup .popup_wrap{
+.popup {}
 
-}
+.popup .popup_wrap {}

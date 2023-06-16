@@ -100,9 +100,24 @@ main{
     font-size: 36px;
 }
 .box_tit h4{
-    font-size: 22px;
+    font-size: 24px;
     text-align: center;
     margin-bottom: 20px;
+}
+.box_tit h4 span{
+    position: relative;
+}
+.box_tit h4 span::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: calc(50%);
+    left: -10px;
+    width: calc(100% + 20px);
+    height: 40%;
+    transform: translateY(-50%);
+    z-index: -1;
+    background-color: #AFD3E2;
 }
 
 
@@ -263,11 +278,3 @@ footer{
 
 
 
-/***************popup***************/
-
-.popup{
-    
-}
-.popup .popup_wrap{
-
-}
