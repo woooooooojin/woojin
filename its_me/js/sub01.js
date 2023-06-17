@@ -9,58 +9,61 @@ window.addEventListener('scroll', function () {
 })
 
 
-// const btn01 = document.getElementById('btn01')
-// const btn02 = document.getElementById('btn02')
-// const btn03 = document.getElementById('btn03')
-// const btn04 = document.getElementById('btn04')
-// const btn05 = document.getElementById('btn05')
-// const section01 = document.getElementById('main')
-// const section02 = document.getElementById('about')
-// const section03 = document.getElementById('cardflip')
-// const section04 = document.getElementById('portfolio')
-// const section05 = document.getElementById('contact')
+
+////////////섹션별 gsap애니메이션/////////////
+
+const skillsTools = document.querySelector('.skills_tools')
+const sortBox = document.querySelector('.sortbox')
+const filterBox = document.querySelector('.filterbox')
+const reviewBox = document.querySelector('.reviewbox')
+const noticeBox = document.querySelector('.noticebox')
+
+
+
+gsap.from(sortBox, 0.3, {
+    scrollTrigger: {
+        trigger: skillsTools,
+        start: 'bottom 50%',
+    },
+    y: 50,
+    opacity: 0,
+    
+})
+
+gsap.from(filterBox, 0.3, {
+    scrollTrigger: {
+        trigger: sortBox,
+        start: 'bottom 50%',
+    },
+    y: 50,
+    opacity: 0,
+    
+})
+gsap.from(reviewBox, 0.3, {
+    scrollTrigger: {
+        trigger: filterBox,
+        start: 'bottom 50%',
+    },
+    y: 50,
+    opacity: 0,
+    
+})
+gsap.from(noticeBox, 0.3, {
+    scrollTrigger: {
+        trigger: reviewBox,
+        start: 'bottom 50%',
+    },
+    y: 50,
+    opacity: 0,
+    
+})
 
 
 
 
-// btn01.addEventListener('click', () => {
-//     gsap.to(window, 0.3, {
-//         scrollTo: section01,
-//     })
-
-// })
-
-// btn02.addEventListener('click', () => {
-//     gsap.to(window, 0.3, {
-//         scrollTo: section02,
-//     })
-
-// })
-
-// btn03.addEventListener('click', () => {
-//     gsap.to(window, 0.3, {
-//         scrollTo: section03,
-//     })
-
-// })
-
-// btn04.addEventListener('click', () => {
-//     gsap.to(window, 0.3, {
-//         scrollTo: section04,
-//     })
-
-// })
-// btn05.addEventListener('click', () => {
-//     gsap.to(window, 0.3, {
-//         scrollTo: section05,
-//     })
-
-// })
 
 
-
-
-//code popup 
+//////code popup//////// 
 
 const popup01 = document.querySelector('.popup_01')
 const popup01Btn = document.querySelector('.btn01')
