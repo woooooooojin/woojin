@@ -56,3 +56,21 @@ window.addEventListener('scroll', function () {
 //     })
 
 // })
+
+
+
+
+//code popup 
+
+const popup01 = document.querySelector('.popup_01')
+const popup01Btn = document.querySelector('.btn01')
+const closeBtn = document.querySelector('.close_btn')
+
+popup01Btn.addEventListener('click',()=>{
+
+    popup01.style.display = 'block'
+    
+})
+closeBtn.addEventListener('click',()=>{
+    popup01.style.display='none'
+})
