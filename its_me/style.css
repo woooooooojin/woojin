@@ -330,11 +330,12 @@ section .about_self .right {
 }
 
 section .about_self .right h4 {
-    font-size: 24px;
+    font-size: 28px;
 }
 
 .right_box_wrap {
     display: flex;
+    padding: 10px;
 }
 
 .about_left {
@@ -344,11 +345,13 @@ section .about_self .right h4 {
 .about_left ul {}
 
 .about_left li {
-    margin-top: 30px;
+    margin-top: 20px;
+    font-size: 18px;
 }
 
 .about_left li span {
     font-size: 20px;
+    font-weight: bold;
 }
 
 .about_right {
