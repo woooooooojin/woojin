@@ -138,18 +138,16 @@ main{
 
 .main_wrap .first_box .first_left img:nth-child(2){
     width: 98%;
-    height: auto;
-    padding-top: 25px;
-    /* margin: 0 auto; */
+    height: 320px;
+
+    position: absolute;
+    top: 54%;
+    left: 7px;
+    transform: translateY(-50%);
 }
 .main_wrap .first_box .first_left img:nth-child(1){
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
     border-radius: 15px;
     border: 1px solid #ccc;
-    z-index: -1;
     width: 100%;
     height: auto;
 }
