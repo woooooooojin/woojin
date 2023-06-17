@@ -139,6 +139,7 @@ main{
 .main_wrap .first_box .first_left img:nth-child(2){
     width: 98%;
     height: auto;
+    padding-top: 25px;
     /* margin: 0 auto; */
 }
 .main_wrap .first_box .first_left img:nth-child(1){
