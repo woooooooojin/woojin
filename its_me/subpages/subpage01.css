@@ -127,7 +127,7 @@ main{
 }
 .main_wrap .first_box .first_left{
     width: 50%;
-    height: 400px;
+    height: 450px;
     /* border: 1px solid #ccc; */
     display: flex;
     justify-content: center;
@@ -149,15 +149,14 @@ main{
     border-radius: 15px;
     border: 1px solid #ccc;
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 
 .main_wrap .first_box .first_right{
     width: 50%;
     /* border: 1px solid #ccc; */
-    /* padding: 10px; */
-    height: 400px;
+    height: 450px;
 }
 .main_wrap .first_box .first_right .box_desc{}
 .main_wrap .first_box .first_right .box_desc p{
@@ -170,7 +169,7 @@ main{
 
 /***********링크버튼************/
 .link_btn{
-    margin-top: 50px;
+    margin-top: 80px;
 }
 .link_btn ul{
     display: flex;
