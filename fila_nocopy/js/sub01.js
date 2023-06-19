@@ -151,13 +151,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-///////////////////////////////////////////////////////////
-
-
+//////////////////////////동적 DOM생성/////////////////////////////////
 
 const subList = document.querySelector('.sublist')
-
-
 
 function madeDiv(val) {
     for (let i = 0; i < val.length; i++) {
@@ -165,16 +161,10 @@ function madeDiv(val) {
         const subDiv = document.createElement('div')
         subDiv.setAttribute('class', 'subBox')
 
-        // for (let j = 0; j < subData.length; j++) {
-        //     subDiv.setAttribute('id', 'sub_sort')
-
-        // } //아이디값 부여
-
 
         const subImgWrap = document.createElement('div')
         subDiv.appendChild(subImgWrap)
         subImgWrap.setAttribute('class', 'subimg_wrap')
-
 
 
         // hover likes and cart
@@ -265,13 +255,7 @@ function madeDiv(val) {
         subList.appendChild(subDiv)
 
 
-
-
-
-
     }
-
-
 
 
 }

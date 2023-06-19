@@ -197,9 +197,6 @@ rightBox.addEventListener('change', () => {
 
         })
 
-
-
-
     }
 
 
@@ -283,17 +280,6 @@ rightBox.addEventListener('change', () => {
         })
 
     }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
