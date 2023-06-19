@@ -68,14 +68,17 @@ gsap.from(noticeBox, 0.3, {
 const popup01 = document.querySelector('.popup_01')
 const popup02 = document.querySelector('.popup_02')
 const popup03 = document.querySelector('.popup_03')
+const popup04 = document.querySelector('.popup_04')
 
 const popup01Btn = document.querySelector('.btn01')
 const popup02Btn = document.querySelector('.btn02')
 const popup03Btn = document.querySelector('.btn03')
+const popup04Btn = document.querySelector('.btn04')
 
 const closeBtn01 = document.querySelector('.cbtn01')
 const closeBtn02 = document.querySelector('.cbtn02')
 const closeBtn03 = document.querySelector('.cbtn03')
+const closeBtn04 = document.querySelector('.cbtn04')
 
 popup01Btn.addEventListener('click',()=>{
     popup01.style.display = 'block'
@@ -84,7 +87,6 @@ closeBtn01.addEventListener('click',()=>{
     popup01.style.display='none'
 })
 
-
 popup02Btn.addEventListener('click',()=>{
     popup02.style.display = 'block'
 })
@@ -92,10 +94,16 @@ closeBtn02.addEventListener('click',()=>{
     popup02.style.display='none'
 })
 
-
 popup03Btn.addEventListener('click',()=>{
     popup03.style.display='block'
 })
 closeBtn03.addEventListener('click',()=>{
     popup03.style.display = 'none'
+})
+
+popup04Btn.addEventListener('click',()=>{
+    popup04.style.display='block'
+})
+closeBtn04.addEventListener('click',()=>{
+    popup04.style.display = 'none'
 })

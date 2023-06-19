@@ -426,7 +426,7 @@ const priceChk04 = document.getElementById('price_chk04')
 const priceChk05 = document.getElementById('price_chk05')
 const priceChkDefault = document.getElementById('price_chk06')
 
-//색상별 필터값을 변수에 담는다,,
+//색상별 필터링값을 변수에 담는다
 const bk = subData.filter((a) => {
     return a.color === 'black'
 })
@@ -463,12 +463,6 @@ searchInputVal.addEventListener('change', () => {
     const searchRes = subData.filter((e) => {
         return (e.name.includes(searchInputVal.value))
     })
-    // console.log(searchRes)
-
-
-    // window.open('sub01.html')
-
-    // localStorage.setItem('val',JSON.stringify(searchRes))
 
     sublist.innerHTML = ''
     paging.innerHTML = ''
@@ -488,7 +482,6 @@ blackColor.addEventListener('click', function () {
     paging.innerHTML = ''
     nowPage = 0
     createPage(bk)
-
 })
 
 whiteColor.addEventListener('click', function () {
@@ -496,16 +489,12 @@ whiteColor.addEventListener('click', function () {
     paging.innerHTML = ''
     nowPage = 0
     createPage(wht)
-
-
 })
 grayColor.addEventListener('click', function () {
     sublist.innerHTML = ''
     paging.innerHTML = ''
     nowPage = 0
     createPage(gr)
-
-
 })
 
 defaultVal.addEventListener('click', function () {
@@ -513,7 +502,6 @@ defaultVal.addEventListener('click', function () {
     paging.innerHTML = ''
     nowPage = 0
     createPage(subData)
-
 })
 
 priceChk01.addEventListener('click', function () {
@@ -521,8 +509,6 @@ priceChk01.addEventListener('click', function () {
     paging.innerHTML = ''
     nowPage = 0
     createPage(price01)
-
-
 })
 
 priceChk02.addEventListener('click', function () {
@@ -530,8 +516,6 @@ priceChk02.addEventListener('click', function () {
     paging.innerHTML = ''
     nowPage = 0
     createPage(price02)
-
-
 })
 
 priceChk03.addEventListener('click', function () {
@@ -539,7 +523,6 @@ priceChk03.addEventListener('click', function () {
     paging.innerHTML = ''
     nowPage = 0
     createPage(price03)
-
 })
 
 priceChk04.addEventListener('click', function () {

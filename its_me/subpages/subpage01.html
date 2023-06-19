@@ -155,8 +155,10 @@
                             <div class="box_desc">
                                 <div class="box_desc">
                                     <p><span>설명</span></p>
-                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid qui magni atque
-                                        nemo consequuntur quaerat dolore pariatur quos facilis illo.</p>
+                                    <p>가격 낮은순과 인기순은 두 숫자의 차의 값을 리턴하는 함수를 sort() 함수의 파라미터로 전달하여 오름차순 으로 정렬하도록 하였습니다. 
+                                     <br/>반대로 가격이 높은순은 -1을 곱하여 내림차순으로 정렬하였습니다.<br/>
+                                     신상순은 new Date()를 호출하면 새로운 Date 객체가 만들어지고 <br/>getTime()함수를 사용하여 millisecond로 반환한 숫자의 차를 이용하여 정렬하였습니다. 
+                                    </p>
 
                                 </div>
                                 <!--box desc-->
@@ -178,7 +180,7 @@
 
                 <div class="secondBox filterbox">
                     <div class="box_tit">
-                        <h4><span>색상별 가격별 필터</span></h4>
+                        <h4><span>색상/가격/검색 필터</span></h4>
                     </div>
 
                     <div class="first_box">
@@ -195,8 +197,9 @@
 
                             <div class="box_desc">
                                 <p><span>설명</span></p>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid qui magni atque
-                                    nemo consequuntur quaerat dolore pariatur quos facilis illo.</p>
+                                <p>데이터에 filter()함수를 사용하고 조건에 맞는 컬러값을 리턴한 값을 변수에 담아서 서브페이지의 페이지를 구현 하는 함수에 매개변수로 넣어 구현하였습니다.<br/>
+                                검색필터는 filter()와 includes()함수를 사용하여 검색창의 Value값을 포함하는 상품을 찾아 필터링 시켜 출력시키게 구현하였습니다.
+                                </p>
 
                             </div>
                             <!--box desc-->
@@ -235,8 +238,11 @@
                             <div class="box_desc">
                                 <div class="box_desc">
                                     <p><span>설명</span></p>
-                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid qui magni atque
-                                        nemo consequuntur quaerat dolore pariatur quos facilis illo.</p>
+                                    <p>createElement와 appendChild를 사용하여 동적으로 DOM을 생성하는 방법으로 구현했습니다.
+                                        이미지 첨부는 html form태그의 post속성으로 폼 데이터를 첨부하여 서버로 전달하는 방식을 사용해 구현했습니다.
+                                        이미지의 src 경로는 URL.createObjectURL() 메소드의 주어진 객체를 가리키는 URL을 DOMString으로 변환하는 기능을 사용하였습니다.
+                                        현재날짜를 표시하기 위해 new Date()를 이용하여 현재 시간을 추출해서 toLocaleDatestring()을 사용하여 구현했습니다.
+                                    </p>
 
                                 </div>
                                 <!--box desc-->
@@ -278,9 +284,10 @@
                             <div class="box_desc">
                                 <div class="box_desc">
                                     <p><span>설명</span></p>
-                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid qui magni atque
-                                        nemo consequuntur quaerat dolore pariatur quos facilis illo.</p>
-
+                                    <p>createElement와 appendChild를 사용하여 동적으로 DOM을 생성하는 방법으로 구현했습니다.
+                                        removeChild()를 사용하여 부모요소가 자식요소를 삭제할 수 있게 문의삭제를 구현하였습니다. 
+                                    </p>
+                                    
                                 </div>
                                 <!--box desc-->
                                 <div class="code_btn btn04">
@@ -352,8 +359,8 @@
                 <!--close btn-->
                 <div class="codes_img">
 
-                    <img src="../img/vscodebackground.PNG" alt="img">
-                    <img src="../img/sub_filter.PNG" alt="img">
+                    <img src="../img/filter01.PNG" alt="img">
+                    <img src="../img/filter02.PNG" alt="img">
 
                 </div>
                 <!--codes img -->
@@ -380,6 +387,25 @@
         </div><!--pop wrap-->
 
     </div><!--popup03-->
+
+    <div class="popup_04">
+        <div class="popwrap">
+            <div class="close_btn cbtn04">
+                <i class="fas fa-times"></i>
+            </div>
+
+            <div class="code_img_wrap">
+                <img src="../img/notice01.PNG" alt="img">
+                <img src="../img/notice02.PNG" alt="img">
+                <img src="../img/notice03.PNG" alt="img">
+                <img src="../img/notice04.PNG" alt="img">
+            </div>
+
+
+        </div><!--pop wrap-->
+
+    </div><!--popup03-->
+
 
 
 

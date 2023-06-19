@@ -264,6 +264,10 @@ main{
 .secondBox .first_right{
     position: relative;
 }
+.secondBox .box_desc{
+    line-height: 40px;
+    font-size: 18px;
+}
 .code_btn{
     width: 150px;
     height: 50px;
@@ -272,7 +276,7 @@ main{
     text-align: center;
     line-height: 50px;
     position: absolute;
-    bottom: 100px;
+    bottom: 50px;
     left: 50%;
     transform: translateX(-50%);
     cursor: pointer;
@@ -295,24 +299,27 @@ main{
     position: fixed;
     top: 0;
     display: none;
+   z-index: 9999;
+
 }
 .codes{
     width: 100%;
     height: 100vh;
    background-color: rgba(0, 0, 0, 0.8);
    position: relative;
+
 }
 .close_btn{
     font-size: 50px;
     color: #fff;
     position: absolute;
-    right: 250px;
-    top: 120px;
+    right: 20px;
+    top: 10px;
     cursor: pointer;
 }
 .codes_wrap{
     position: absolute;
-    top: 50%;
+    top: 53%;
     left: 50%;
     transform: translate(-50%,-50%);
 
@@ -322,12 +329,16 @@ main{
     height: auto;
     margin: 0 auto;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 .codes_img img{
-    width: 50%;
-    /* height: 100%; */
+    width: 65%;
+    display: block;
     height: auto;
+    margin-right: 10px;
 }
 /* .codes_img img:nth-child(2){
     width: 50%;
@@ -344,7 +355,8 @@ main{
 
 
 /********popup03********/
-.popup_03{
+.popup_03,
+.popup_04{
     width: 100%;
     height: 100vh;
     position: fixed;
@@ -352,7 +364,7 @@ main{
     z-index: 99999;
     display: none;
 }
-.popup_03 .popwrap{
+.popwrap{
     width: 100%;
     height: 100vh;
    background-color: rgba(0, 0, 0, 0.7);
@@ -360,11 +372,13 @@ main{
 }
 .code_img_wrap{
     position: absolute;
-    top: 55%;
+    top: 53%;
     left: 50%;
     transform: translate(-50%,-50%);
     width: 1000px;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .code_img_wrap img{
     width: 50%;
