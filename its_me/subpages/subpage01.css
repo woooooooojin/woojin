@@ -374,14 +374,14 @@ main{
     top: 53%;
     left: 50%;
     transform: translate(-50%,-50%);
-    width: 1000px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .code_img_wrap img{
-    width: 50%;
-    height: 100%;
+    width: 350px;
+    height: auto;
     margin-right: 10px;
 }
 
