@@ -249,6 +249,7 @@ document.addEventListener('DOMContentLoaded', function () {
         numberSpan.setAttribute('class', 'review_txt')
         numberBox.appendChild(numberSpan)
 
+        //리뷰 순서 카운트
         let Rcnt = 1;
         const Lis = document.querySelectorAll('.review_inner')
 
@@ -288,26 +289,6 @@ document.addEventListener('DOMContentLoaded', function () {
         starBox.innerHTML = Rstars.innerHTML //별점 생성 
 
 
-
-        // 별
-        // const star1 = document.createElement('i')
-        // star1.setAttribute('class', 'far fa-star rstar')
-        // starBox.appendChild(star1)
-
-        // const star2 = document.createElement('i')
-        // star2.setAttribute('class', 'far fa-star rstar')
-        // starBox.appendChild(star2)
-        // const star3 = document.createElement('i')
-        // star3.setAttribute('class', 'far fa-star rstar')
-        // starBox.appendChild(star3)
-        // const star4 = document.createElement('i')
-        // star4.setAttribute('class', 'far fa-star rstar')
-        // starBox.appendChild(star4)
-        // const star5 = document.createElement('i')
-        // star5.setAttribute('class', 'far fa-star rstar')
-        // starBox.appendChild(star5)
-
-
         const txtBox = document.createElement('div')
         txtBox.setAttribute('class', 'inner_txt')
         Li.appendChild(txtBox)
@@ -317,7 +298,6 @@ document.addEventListener('DOMContentLoaded', function () {
         txtBox.appendChild(txtspan)
         txtspan.innerHTML = reviewTxt.value
         reviewTxt.value = ''
-
 
 
         const idBox = document.createElement('div')
@@ -352,24 +332,11 @@ document.addEventListener('DOMContentLoaded', function () {
         closeBox.appendChild(closeX)
 
 
-
-
-
-
-
-
-
         R_List.appendChild(Li)
 
         closeX.addEventListener('click', function () {
             R_List.removeChild(Li)
         })
-
-
-
-
-
-
 
     })
    
@@ -567,16 +534,11 @@ document.addEventListener('DOMContentLoaded', function () {
         noticeLi.appendChild(noticeRe)
 
 
-
-
         noticeList.appendChild(noticeLi)
 
         noticeClose.addEventListener('click', function () {
             noticeList.removeChild(noticeLi)
         })
-
-
-
 
 
 
@@ -600,13 +562,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const registBtn = document.getElementById('re_btn')
 
 
-
-
     registBtn.addEventListener('click', function () {
 
         const noticeLi = document.querySelector('.Re_list')
-
-
 
         const reply = document.createElement('li')
         reply.setAttribute('class', 'reply_box')
@@ -630,19 +588,11 @@ document.addEventListener('DOMContentLoaded', function () {
         noticeLi.appendChild(reply)
 
 
-
-
-
-
         replyDel.addEventListener('click', function () {
 
             noticeLi.removeChild(reply)
 
         }) ///자식제거
-
-
-
-
 
 
     })

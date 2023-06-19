@@ -355,7 +355,7 @@ createPage(subData)
 
 
 
-//////////////////select 필터////////////////////////////
+//////////////////select 필터 조건별 정렬////////////////////////////
 
 const selectBox = document.getElementById('select_sort'); //select box
 const sublist = document.querySelector('.sublist')
