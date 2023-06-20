@@ -132,7 +132,7 @@ const cardLis = document.querySelectorAll('.gsap01')
 gsap.to(aboutLeft, 0.5, {
     scrollTrigger: {
         trigger: section01,
-        start: 'bottom 50%',
+        start: 'bottom 30%',
     },
     translateY: 0,
     opacity: 1
@@ -141,7 +141,7 @@ gsap.to(aboutLeft, 0.5, {
 gsap.to(aboutRight, 0.5, {
     scrollTrigger: {
         trigger: section01,
-        start: 'bottom 50%',
+        start: 'bottom 30%',
     },
     translateY: 0,
     opacity: 1
@@ -159,7 +159,7 @@ cardLis.forEach((value) => {
     gsap.to(value, 0.8, {
         scrollTrigger: {
             trigger: section02,
-            start: 'bottom 50%',
+            start: 'bottom 30%',
         },
         translateX: 0,
         rotate: 360,
