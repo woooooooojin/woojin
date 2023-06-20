@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{list-style: none;}
+a{
+    color: #000;
+    text-decoration: none;
+}
+
+.head_wrap{
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.head_wrap .head_tit{
+    font-size: 30px;
+}
+
+.gnb{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.gnb li{
+    margin-left: 10px;
+}
+.gnb li:first-child{
+    margin-left: 0;
+}
