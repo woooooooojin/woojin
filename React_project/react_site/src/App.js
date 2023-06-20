@@ -12,6 +12,8 @@ import data from './pages/productData'
 import Header from './pages/Header';
 import About from './pages/About';
 import Detail from './pages/Detail';
+import Footer from './pages/Footer';
+
 
 
 function App() {
@@ -39,6 +41,8 @@ function App() {
 
 
 
+
+      
 
 
 
@@ -75,6 +79,9 @@ function App() {
 
       </Routes>
       
+
+
+      <Footer />
     </div>
   );
 }

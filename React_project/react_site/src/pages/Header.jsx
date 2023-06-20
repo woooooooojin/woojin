@@ -6,7 +6,10 @@ export default function Header() {
   return (
     <div>
         <div className='head_wrap'>
-            <h1 className='head_tit'>title</h1>
+
+          <div className="head_logo">
+            <img src={process.env.PUBLIC_URL + './images/best_01.png'} alt="img" />
+          </div>
 
             <ul className='gnb'>
                 <li><a href="#!">로그인</a></li>
