@@ -126,7 +126,7 @@ main{
     margin-top: 20px;
 }
 .main_wrap .first_box .first_left{
-    width: 50%;
+    width: 590px;
     height: 450px;
     /* border: 1px solid #ccc; */
     display: flex;
@@ -154,7 +154,7 @@ main{
 
 
 .main_wrap .first_box .first_right{
-    width: 50%;
+    width: 590px;
     /* border: 1px solid #ccc; */
     height: 450px;
 }
@@ -294,11 +294,18 @@ main{
     cursor: pointer;
     transition: .3s;
 }
+.code_btn a{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
 .code_btn:hover{
     background-color: #537188;
-    color: #fff;
     box-shadow: 0 0 10px black;
     border: 1px solid #537188;
+}
+.code_btn:hover a{
+    color: #fff;
 }
 
 
