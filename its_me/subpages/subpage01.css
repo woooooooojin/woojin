@@ -405,6 +405,47 @@ main{
     margin-right: 10px;
 }
 
+
+/*******scrollbox**********/
+
+.hide1{
+    transform: translateX(50px);
+}
+.hide2{
+    transform: translateX(-50px);
+}
+
+
+.scrollbox{
+    animation: scrollani 2.5s infinite ease-in-out;
+    position: fixed;
+    bottom: 5%;
+    transition: .3s;
+}
+.scrollbox i{
+    font-size: 25px;
+}
+.scrollbox p{
+    letter-spacing: 2px;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    margin-bottom: 10px;
+}
+
+
+@keyframes scrollani{
+
+    50%{
+        bottom: 13%;
+    }
+}
+.scroll_right{
+    right: 15px;
+}
+.scroll_left{
+    left: 15px;
+}
+
 /********footer*********/
 footer{
     margin-top: 100px;
