@@ -669,7 +669,7 @@ section .about_self .right h4 {
     top: 30%;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 28px;
+    font-size: 24px;
 }
 
 .portfolio_wrap .portfolio_box .hover_box .hover_wrap p {
@@ -677,7 +677,7 @@ section .about_self .right h4 {
     bottom: 30%;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 22px;
+    font-size: 20px;
 
 }
 
