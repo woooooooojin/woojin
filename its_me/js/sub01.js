@@ -130,16 +130,16 @@ gsap.from(swiperBox, 0.3, {
 // })
 
 
-const popup = document.querySelectorAll('.pop')
-const popBtn = document.querySelectorAll('.code_btn')
-const popClose = document.querySelectorAll('.close_btn')
+// const popup = document.querySelectorAll('.pop')
+// const popBtn = document.querySelectorAll('.code_btn')
+// const popClose = document.querySelectorAll('.close_btn')
 
-for(let i =0; i<popup.length; i++){
-    popBtn[i].addEventListener('click',function(){
-        popup[i].style.display = 'block'
-    })
-    popClose[i].addEventListener('click',function(){
-        popup[i].style.display='none'
+// for(let i =0; i<popup.length; i++){
+//     popBtn[i].addEventListener('click',function(){
+//         popup[i].style.display = 'block'
+//     })
+//     popClose[i].addEventListener('click',function(){
+//         popup[i].style.display='none'
 
-    })
-}
+//     })
+// }

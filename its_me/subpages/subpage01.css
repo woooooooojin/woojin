@@ -245,6 +245,18 @@ main{
     animation: wave 2.5s infinite ease-in;
     animation-delay: 1.8s;
 }
+.skills_tools ul li:nth-child(8){
+    animation: wave 2.5s infinite ease-in;
+    animation-delay: 2.1s;
+}
+.skills_tools ul li:nth-child(9){
+    animation: wave 2.5s infinite ease-in;
+    animation-delay: 2.4s;
+}
+.skills_tools ul li:nth-child(10){
+    animation: wave 2.5s infinite ease-in;
+    animation-delay: 2.7s;
+}
 
 
 @keyframes wave{

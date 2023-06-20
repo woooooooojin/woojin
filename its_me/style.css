@@ -14,6 +14,9 @@ a:visited {
     text-decoration: none;
 }
 
+body{
+    background-color: rgb(250, 250, 250);
+}
 
 
 .container {
@@ -563,6 +566,18 @@ section .about_self .right h4 {
     display: flex;
     flex-wrap: wrap;
     margin-top: 80px;
+    position: relative;
+}
+.portfolio_wrap .portfolio_box .click{
+    position: absolute;
+    top: -30px;
+    left: -50px;
+    z-index: 9999;
+    transform: rotate(-45deg);
+}
+.portfolio_wrap .portfolio_box .click span{
+    font-size: 18px;
+    letter-spacing: 5px;
 }
 
 .portfolio_wrap .portfolio_box {
