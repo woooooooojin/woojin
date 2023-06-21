@@ -10,7 +10,7 @@ export default function Header() {
 
           <div className="head_logo">
             <Link to='/'>
-              <img src="./img/logo_baskinrobbins.png" alt="logo" />
+              <img src={process.env.PUBLIC_URL + './img/logo_baskinrobbins.png'} alt="logo" />
             </Link>
             
           </div>

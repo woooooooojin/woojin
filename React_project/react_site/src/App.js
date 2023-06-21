@@ -9,7 +9,7 @@ import {useState} from 'react'
 
 
 import Header from './components/Header';
-import Footer from './pages/Footer';
+import Footer from './components/Footer';
 import Icecream from './pages/Icecream';
 import Cake from './pages/Cake';
 import Dessert from './pages/Dessert';
@@ -23,13 +23,12 @@ function App() {
   const navigate = useNavigate()
 
 
-
-
   return (
     <div className="App">
-
-
       <Header />
+      <div className='cont'>
+
+      
 
       <nav>
         <ul className='nav_wrap'>
@@ -54,6 +53,7 @@ function App() {
         </ul>
       </nav>
 
+
       
 
 
@@ -74,7 +74,9 @@ function App() {
 
       </Routes>
 
-      {/* <Footer /> */}
+      
+      </div>
+      <Footer />
     </div>
   );
 }
