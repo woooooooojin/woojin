@@ -1,6 +1,8 @@
 
 *{
-  text-align: center;
+  margin: 0;
+    padding: 0 ;
+    box-sizing: border-box;
 }
 .App{
   width: 1200px;
@@ -8,15 +10,17 @@
 }
 .nav_wrap{
   display: flex;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
 }
 .nav_wrap li{
-  width: 16.6666%;
+  width: 16%;
   height: 50px;
   line-height: 50px;
-  border-right: 1px solid #ccc;
+  border: 1px solid #ccc;
   text-align: center;
+  border-radius: 30px;
+  margin-right: 0.6%;
 }
 .nav_wrap li:last-child{
-  border-right: 0;
+  margin-right: 0;
 }

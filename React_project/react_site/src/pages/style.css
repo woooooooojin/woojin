@@ -27,16 +27,22 @@ a{
 
 
 
-/************Home component*************/
+/************Home*************/
 
 .box_wrap{
     position: relative;
-    background: url(../assets/img/bgc_position.png) center center no-repeat;
-    background-size: contain;
+    /* background: url(../assets/img/bg_menu.jpg) center center no-repeat; */
+    /* background-size: cover; */
     width: 100%;
-    height: 1000px;
-    margin-top: 50px;
+    height: 900px;
+    /* margin-top: 50px; */
 }
+
+.box{
+    box-shadow: 0 0 10px #ccc;
+    border-radius: 30px;
+}
+
 /*아이스크림*/
 .box1{
     width: 430px;
@@ -45,6 +51,7 @@ a{
     position: absolute;
     top: 50px;
     left: 292px;
+    
 } 
 /*케이크*/
 .box2{
@@ -61,8 +68,8 @@ a{
     height: 180px;
     border: 1px solid #ccc;
     position: absolute;
-    bottom: 50px;
-    left: 380px;
+    bottom: 140px;
+    right: 100px;
 }
 /*커피*/
 .box4{
@@ -70,7 +77,7 @@ a{
     height: 340px;
     border: 1px solid #ccc;
     position: absolute;
-    top: 377px;
+    top: 397px;
     left: 357px;
 }
 /*음료*/
@@ -83,8 +90,66 @@ a{
     left: 70px;
 }
 
+.main_box{
+    width: 100%;
+    height: 100%;
+}
+.box img{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    bottom: 0px;
+    right: -30px;
+    transform: rotate(45deg);
+}
+.box .corn{
+    width: 100px;
+    height: 100px;
+    left: 170px;
+    bottom: 10px;
+    z-index: -1;
+}
+
+.box_tit{
+    margin-top: 10px;
+    text-align: center;
+    color: #ff7c98;
+    font-size: 24px;
+}
+.box_desc{
+    margin-top: 30px;
+    margin-left: 20px;
+    font-size: 16px;
+}
 
 
+.box2 img{
+    left: 0;
+    bottom: 50px;
+    transform: rotate(0);
+}
+.box2 .box_desc{
+    text-align: center;
+    margin-left: 0;
+}
+.box3 img{
+    width: 150px;
+    height: 150px;
+    transform: rotate(0deg);
+    right: -15px;
+}
+.box4 img{
+    transform: rotate(0);
+}
+.box5 img{
+    transform: rotate(0) translateX(50%);
+    right: 50%;
+    
+}
+.box5 .box_desc{
+    text-align: center;
+    margin-left: 0;
+}
 /*****************/
 .foot_wrap{
     background-color: #ccc;

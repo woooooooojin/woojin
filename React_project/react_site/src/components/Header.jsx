@@ -1,6 +1,6 @@
 import React from 'react'
-import './style.css'
 import{Routes, Route, Link, useNavigate} from 'react-router-dom'; 
+import './components.css'
 
 
 export default function Header() {
@@ -9,7 +9,9 @@ export default function Header() {
         <div className='head_wrap'>
 
           <div className="head_logo">
-            <Link to='/'>베스킨라빈스</Link>
+            <Link to='/'>
+              <img src="./img/logo_baskinrobbins.png" alt="logo" />
+            </Link>
             
           </div>
 

@@ -8,7 +8,7 @@ import {Container, Nav, Navbar,Row,Col }from 'react-bootstrap';
 import {useState} from 'react'
 
 
-import Header from './pages/Header';
+import Header from './components/Header';
 import Footer from './pages/Footer';
 import Icecream from './pages/Icecream';
 import Cake from './pages/Cake';
@@ -64,12 +64,12 @@ function App() {
 
 
       <Routes>
-      <Route path='/' element={<Home />}></Route>
-        <Route path='/icecream' element={<Icecream />}></Route>
-        <Route path='/cake' element={<Cake />}></Route>
-        <Route path='/dessert' element={<Dessert />}></Route>
-        <Route path='/coffee' element={<Coffee />}></Route>
-        <Route path='/drink' element={<Drink />}></Route>
+        <Route path='/' element={<Home />}></Route>
+        <Route path='icecream' element={<Icecream />}></Route>
+        <Route path='cake' element={<Cake />}></Route>
+        <Route path='dessert' element={<Dessert />}></Route>
+        <Route path='coffee' element={<Coffee />}></Route>
+        <Route path='drink' element={<Drink />}></Route>
         
 
       </Routes>
