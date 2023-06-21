@@ -157,7 +157,7 @@ main{
     width: 590px;
     /* border: 1px solid #ccc; */
     height: 450px;
-    padding: 10px;
+    /* padding: 10px; */
 }
 .main_wrap .first_box .first_right .box_desc{}
 .main_wrap .first_box .first_right .box_desc p{
