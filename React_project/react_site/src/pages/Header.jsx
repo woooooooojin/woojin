@@ -1,5 +1,6 @@
 import React from 'react'
 import './style.css'
+import{Routes, Route, Link, useNavigate} from 'react-router-dom'; 
 
 
 export default function Header() {
@@ -8,14 +9,11 @@ export default function Header() {
         <div className='head_wrap'>
 
           <div className="head_logo">
-            <img src={process.env.PUBLIC_URL + './images/best_01.png'} alt="img" />
+            <Link to='/'>베스킨라빈스</Link>
+            
           </div>
 
-            <ul className='gnb'>
-                <li><a href="#!">로그인</a></li>
-                <li><a href="#!">회원가입</a></li>
-                <li><a href="#!">language</a></li>
-            </ul>
+           
         </div>
 
 
