@@ -17,11 +17,14 @@
   /* border: 1px solid #ccc; */
 }
 .nav_wrap li{
-  width: 16.6666%;
+  width:calc(16.6666% - 11.6666px);
   height: 50px;
   line-height: 50px;
-  border: 1px solid #ccc;
+  border: 1px solid #ffa0c5;
   text-align: center;
   border-radius: 30px;
+  margin-left: 10px;
 }
-.nav_wrap li:nth-child(6){}
+.nav_wrap li:nth-child(6){
+  margin-right: 10px;
+}

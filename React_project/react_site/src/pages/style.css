@@ -201,6 +201,7 @@ a{
     font-size: 12px;
     color: #837e7c;
     text-align: center;
+    margin-top: 10px;
 }
 
 .item_box .price{
@@ -208,6 +209,7 @@ a{
     font-size: 20px;
     color: #ffa94c;
     padding-right: 10px;
+    margin: 20px 0 10px 0;
 }
 .btn_wrap{
     padding: 0 10px;
