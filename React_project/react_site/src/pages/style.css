@@ -165,11 +165,51 @@ a{
 /**********icecream pages************/
 .item_wrap{
     display: flex;
+    flex-wrap: wrap;
+    margin: 50px 0;
 }
 .item_box{
-    width: 275px;
+    width: calc(25% - 25px);
     margin-left: 20px;
+    /* border: 1px solid #ccc; */
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px #888;
+    transition: .3s;
+}
+.item_box:hover{
+    box-shadow: 0 0 10px #ffa0c5;
 }
 .item_box:nth-child(4n){
-    margin-left: 20px;
+    margin-right: 20px;
 }
+.item_box .item_img_wrap{
+    width: 275px;
+    height: 300px;
+    background: url(../assets/img/corn.png) 50% 100% no-repeat;
+}
+.item_box img{
+    width: 100%;
+}
+.item_box h4{
+    text-align: center;
+    margin-top: 10px;
+    color: #f489a0;
+    font-size: 22px;
+}
+.item_box .tag{
+    font-size: 12px;
+    color: #837e7c;
+    text-align: center;
+}
+
+.item_box .price{
+    text-align: right;
+    font-size: 20px;
+    color: #ffa94c;
+    padding-right: 10px;
+}
+.btn_wrap{
+    padding: 0 10px;
+}
+
