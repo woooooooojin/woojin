@@ -159,3 +159,17 @@ a{
     text-align: center;
     margin-left: 0;
 }
+
+
+
+/**********icecream pages************/
+.item_wrap{
+    display: flex;
+}
+.item_box{
+    width: 275px;
+    margin-left: 20px;
+}
+.item_box:nth-child(4n){
+    margin-left: 20px;
+}

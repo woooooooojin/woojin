@@ -7,6 +7,7 @@ import {Container, Nav, Navbar,Row,Col }from 'react-bootstrap';
 
 import {useState} from 'react'
 
+// import iceData from './pages/iceData'
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -21,7 +22,7 @@ import Home from './pages/Home';
 function App() {
 
   const navigate = useNavigate()
-
+  // const [ices] = useState(iceData)
 
   return (
     <div className="App">
@@ -64,8 +65,9 @@ function App() {
 
 
       <Routes>
-        <Route path='/' element={<Home />}></Route>
-        <Route path='icecream' element={<Icecream />}></Route>
+        <Route path='/' element={<Home></Home>}/>
+
+        <Route path='icecream' element={<Icecream></Icecream>} />
         <Route path='cake' element={<Cake />}></Route>
         <Route path='dessert' element={<Dessert />}></Route>
         <Route path='coffee' element={<Coffee />}></Route>
