@@ -18,7 +18,7 @@ const Button1 = styled.button`
         color: #fff;
     }
     &:first-child{
-        margin-right: 10px;
+        margin-right: 20px;
     }
 `
 

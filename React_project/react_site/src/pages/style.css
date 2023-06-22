@@ -220,31 +220,40 @@ a{
 
 /***********Detail page**************/
 .detail_wrap{
-    display: flex;
+    margin-bottom: 50px; 
+}
+.top_img{
+    width: 100%;
+    margin-top: 30px;
+}
+.top_img img{
+    display: block;
+    margin: 0 auto;
 }
 .detail_right{
-    width: 50%;
+    width: 100%;
+    height: 400px;
     background: url(../assets/img/corn.png) 50% 100% no-repeat;
 }
 .detail_right img{
-    width: 60%;
+    width: 32%;
     display: block;
     margin: 0 auto;
     margin-bottom: 30px;
 }
 .detail_left{
-    width: 50%;
+    width: 100%;
     padding: 10px;
 }
 .detail_left .detail_tit{
-    margin-top: 20px;
     text-align: center;
-    font-size: 26px;
+    font-size: 30px;
 }
 .detail_left .detail_desc{
-    font-size: 20px;
+    font-size: 18px;
     color: #837e7c;
     margin-top: 20px;
+    text-align: center;
 }
 .detail_left .detail_price{
     font-size: 24px;
@@ -252,3 +261,27 @@ a{
     color: #ffa94c;
     margin-top: 30px;
 }
+.line_wrap{
+    position: relative;
+}
+
+.line{
+    width: 100%;
+    height: 2px;
+    background-color: #f56f98;
+}
+.line_btn{
+    width: 150px;
+    height: 50px;
+    border-radius: 30px;
+    text-align: center;
+    line-height: 50px;
+    background-color: #f56f98;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+}
+

@@ -25,6 +25,9 @@
   border-radius: 30px;
   margin-left: 10px;
 }
+.nav_wrap li a{
+
+}
 .nav_wrap li:nth-child(6){
   margin-right: 10px;
 }
