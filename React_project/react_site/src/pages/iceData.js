@@ -33,7 +33,7 @@ const iceData = [
   },
   {
     id: 'ice_05',
-    image: process.env.PUBLIC_URL+'/img/ice/ice02.png',
+    image: process.env.PUBLIC_URL+'/img/ice/ice05.png',
     desc: '딸기, 크림치즈 아이스크림에 핑크 마카롱과 치즈케이크 큐브가 어우러진 맛',
     title: '핑크스푼 비긴즈',
     tag : '#핑크스푼비긴즈 #스트로베리',

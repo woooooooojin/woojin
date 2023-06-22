@@ -2,12 +2,9 @@ import './App.css';
 
 import{Routes, Route, Link, useNavigate} from 'react-router-dom'; 
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-import {Container, Nav, Navbar,Row,Col }from 'react-bootstrap';
-
 import {useState} from 'react'
 
-// import iceData from './pages/iceData'
+import iceData from './pages/iceData'
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -17,12 +14,12 @@ import Dessert from './pages/Dessert';
 import Coffee from './pages/Coffee';
 import Drink from './pages/Drink';
 import Home from './pages/Home';
-
+import Detail from './pages/Detail'
 
 function App() {
 
-  const navigate = useNavigate()
-  // const [ices] = useState(iceData)
+  // const navigate = useNavigate()
+  const [ices] = useState(iceData)
 
   return (
     <div className="App">
@@ -37,7 +34,7 @@ function App() {
             <Link to='/'><p>Home</p></Link>
           </li>
           <li>
-            <Link to='/icecream'><p>아이스크림</p></Link>
+            <Link to='/icecream/*'><p>아이스크림</p></Link>
           </li>
           <li>
             <Link to='/cake'><p>케이크</p></Link>
@@ -65,13 +62,13 @@ function App() {
 
 
       <Routes>
-        <Route path='/' element={<Home></Home>}/>
-
-        <Route path='icecream' element={<Icecream></Icecream>} />
-        <Route path='cake' element={<Cake />}></Route>
-        <Route path='dessert' element={<Dessert />}></Route>
-        <Route path='coffee' element={<Coffee />}></Route>
-        <Route path='drink' element={<Drink />}></Route>
+        <Route path='/' element={<Home/>}/>
+        <Route path='icecream/*' element={<Icecream/>} />
+        <Route path='cake/*' element={<Cake />}></Route>
+        <Route path='dessert/*' element={<Dessert />}></Route>
+        <Route path='coffee/*' element={<Coffee />}></Route>
+        <Route path='drink/*' element={<Drink />}></Route>
+        <Route path='detail/:id' element={<Detail ices={ices}/>}></Route>
         
 
       </Routes>

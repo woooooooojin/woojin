@@ -213,3 +213,40 @@ a{
     padding: 0 10px;
 }
 
+
+
+
+/***********Detail page**************/
+.detail_wrap{
+    display: flex;
+}
+.detail_right{
+    width: 50%;
+    background: url(../assets/img/corn.png) 50% 100% no-repeat;
+}
+.detail_right img{
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+.detail_left{
+    width: 50%;
+    padding: 10px;
+}
+.detail_left .detail_tit{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 26px;
+}
+.detail_left .detail_desc{
+    font-size: 20px;
+    color: #837e7c;
+    margin-top: 20px;
+}
+.detail_left .detail_price{
+    font-size: 24px;
+    text-align: right;
+    color: #ffa94c;
+    margin-top: 30px;
+}
