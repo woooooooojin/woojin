@@ -12,7 +12,7 @@ export default function Header() {
 
           <div className="head_logo">
             <Link to='/'>
-              <img src={process.env.PUBLIC_URL + './img/logo_baskinrobbins.png'} alt="logo" />
+              <img src={process.env.PUBLIC_URL + '/img/logo_baskinrobbins.png'} alt="logo" />
             </Link>
             
           </div>
@@ -20,7 +20,7 @@ export default function Header() {
           
           <div className="cart_site">
             <Link to='cart'>
-            <img src={process.env.PUBLIC_URL + './img/icon_cart.png'} alt="cart" />
+            <img src={process.env.PUBLIC_URL + '/img/icon_cart.png'} alt="cart" />
             </Link>
           </div>
 

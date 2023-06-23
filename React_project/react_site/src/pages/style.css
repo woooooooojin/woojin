@@ -297,9 +297,16 @@ a{
 .option01 input,
 .option02 input{display: none;}
 
-#size01:checked ~ .size01label .label_wrap{
+#size01:checked ~ .size01label .label_wrap,
+#size02:checked ~ .size02label .label_wrap,
+#size03:checked ~ .size03label .label_wrap,
+#size04:checked ~ .size04label .label_wrap,
+#size05:checked ~ .size05label .label_wrap,
+#size06:checked ~ .size06label .label_wrap,
+#size07:checked ~ .size07label .label_wrap,
+#size08:checked ~ .size08label .label_wrap{
   border-radius: 20px;
-  border: 2px solid #f489a0;
+  border: 1px solid #f489a0;
 }
 
 .option01 ul,
@@ -353,4 +360,83 @@ label{
 }
 .label_wrap .li_right{
     width: 60%;
+}
+
+
+
+/**********cart**********/
+
+.cart_wrap{}
+.cart_wrap h4{
+    text-align: center;
+    font-size: 24px;
+    margin: 10px 0;
+}
+.cart_wrap ul{}
+.cart_wrap ul li{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+.cartlist{
+    border-bottom: 1px solid #ccc;
+
+}
+.cart_id{
+    width: 10%;
+}
+.cart_img{
+    width: 20%;
+}
+.cart_img img{
+    width: 50%;
+}
+.cart_title{
+    width: 20%;
+}
+.cart_price{
+    width: 20%;
+}
+.cart_count{
+    width: 10%;
+}
+.cart_btns{
+    width: 20%;
+}
+.cart_btns button{
+    width: 50px;
+    height: 20px;
+    border: 1px solid #ccc;
+    background-color: #eee;
+    margin-right: 5px;
+    font-size: 14px;
+}
+.cart_btns button:nth-child(3){
+    margin-right: 0;
+}
+.cart_tit{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #ccc;
+}
+.cart_tit li{
+    height: 30px;
+    border-right: 1px solid #ccc;
+}
+.cart_tit li:nth-child(1){
+    width: 10%;
+}
+.cart_tit li:nth-child(2){
+    width: 40%;
+}
+.cart_tit li:nth-child(3){
+    width: 20%;
+}
+.cart_tit li:nth-child(4){
+    width: 10%;
+}
+.cart_tit li:nth-child(5){
+    width: 20%;
 }

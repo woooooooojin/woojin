@@ -16,7 +16,7 @@ export default function Icecream() {
             ices.map((ice,index)=>{
               return(
               
-                <div className="item_box">
+                <div className="item_box" key={index}>
                     <Link to={`/detail/${index}`}>
                     
                       <div className="item_img_wrap">

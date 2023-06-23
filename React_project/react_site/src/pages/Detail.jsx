@@ -1,10 +1,15 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import './style.css'
+import {useDispatch, useSelector} from 'react-redux'
+import { addItem } from './store';
+
 
 export default function Detail(props) {
   const {ices} = props
   const {id} = useParams()
+  const dispatch = useDispatch()
+
   return (
     <div>
 
@@ -26,14 +31,14 @@ export default function Detail(props) {
 
           <div className="line_wrap">
             <div className="line"></div>
-            <div className="line_btn">장바구니</div>
+            <div className="line_btn" onClick={()=>{dispatch(addItem({id: ices[id].id, img: ices[id].image, title: ices[id].title, price : ices[id].price ,count: 1}))}}>장바구니</div>
           </div>
 
           <div className="option01">
             <div className="opt_tit"><h4>CONE & CUP</h4></div>
               <ul>
               <li>
-                  <input type="radio" id='size01' name='sizeRadio' htmlFor='size01' defaultChecked />
+                  <input type="radio" id='size01' name='sizeRadio' htmlFor='size01' defaultChecked value={3800} />
                   <label htmlFor="size01" className='size01label'>
                     <div className="label_wrap">
                       <div className="li_left">
@@ -49,7 +54,7 @@ export default function Detail(props) {
                 </li>
 
                 <li>
-                  <input type="radio" id='size02' name='sizeRadio' htmlFor='size02' />
+                  <input type="radio" id='size02' name='sizeRadio' htmlFor='size02' value={4500} />
                   <label htmlFor="size02" className='size02label'>
                     <div className="label_wrap">
                       <div className="li_left">
@@ -85,7 +90,7 @@ export default function Detail(props) {
                   <label htmlFor="size04" className='size04label'>
                     <div className="label_wrap">
                       <div className="li_left">
-                        <img className='c4' src={process.env.PUBLIC_URL + '../img/ico_c4.gif' } alt="img" />
+                        <img className='c4' src={process.env.PUBLIC_URL + '/img/ico_c4.gif' } alt="img" />
                       </div>
                       <div className="li_right">
                         <p>싱글레귤러</p>
@@ -108,7 +113,7 @@ export default function Detail(props) {
                   <label htmlFor="size05" className='size05label'>
                     <div className="label_wrap">
                       <div className="li_left">
-                        <img className='c1' src={process.env.PUBLIC_URL + '../img/ico_c1.gif' } alt="img" />
+                        <img className='c1' src={process.env.PUBLIC_URL + '/img/ico_c1.gif' } alt="img" />
                       </div>
                       <div className="li_right">
                         <p>싱글레귤러</p>
@@ -173,7 +178,9 @@ export default function Detail(props) {
           
 
           
-         
+          <div className="total_price">
+            <span></span>  
+          </div>         
 
         </div>
 
