@@ -15,6 +15,7 @@ import Coffee from './pages/Coffee';
 import Drink from './pages/Drink';
 import Home from './pages/Home';
 import Detail from './pages/Detail'
+import Cart from './pages/Cart';
 
 function App() {
 
@@ -23,9 +24,9 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      
       <div className='cont'>
-
+      <Header />
       
 
       <nav>
@@ -34,7 +35,7 @@ function App() {
             <Link to='/'><p>Home</p></Link>
           </li>
           <li>
-            <Link to='/icecream/*'><p>아이스크림</p></Link>
+            <Link to='/icecream'><p>아이스크림</p></Link>
           </li>
           <li>
             <Link to='/cake'><p>케이크</p></Link>
@@ -68,6 +69,7 @@ function App() {
         <Route path='dessert/*' element={<Dessert />}></Route>
         <Route path='coffee/*' element={<Coffee />}></Route>
         <Route path='drink/*' element={<Drink />}></Route>
+        <Route path='cart' element={<Cart />}></Route>
         <Route path='detail/:id' element={<Detail ices={ices}/>}></Route>
         
 

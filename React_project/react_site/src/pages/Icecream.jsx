@@ -42,9 +42,7 @@ export default function Icecream() {
         }
          </div>
 
-         <Routes>
-            <Route path='detail/:id' element={<Detail ices={ices}/>}></Route>
-         </Routes>
+        
       </div>
   )
 }

@@ -4,6 +4,9 @@
     width: 100%;
     height: 75px;
     margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .head_logo{
     width: 75px;
@@ -13,7 +16,17 @@
     width: 100%;
     height: 100%;
 }
+.blank{
+    width: 75px;
+}
+.cart_site{
+    width: 30px;
+}
+.cart_site img{
+    width: 100%;
+    text-align: right;
 
+}
 
 
 
