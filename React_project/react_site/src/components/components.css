@@ -7,24 +7,31 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
 }
 .head_logo{
-    width: 75px;
+    width: 33.3333%;
     height: 75px;
 }
 .head_logo img{
-    width: 100%;
+    width: 75px;
     height: 100%;
 }
 .blank{
-    width: 75px;
+    width: 33.3333%;
+}
+.blank button{
+    width: 80px;
+    height: 30px;
+    background-color: #fff;
+    border: 1px solid #b1adab;
+    border-radius: 20px;
 }
 .cart_site{
-    width: 30px;
+    width: 33.3333%;
 }
 .cart_site img{
-    width: 100%;
-    text-align: right;
+    width: 40px;
 
 }
 

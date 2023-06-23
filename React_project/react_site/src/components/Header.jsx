@@ -8,7 +8,9 @@ export default function Header() {
     <div>
         <div className='head_wrap'>
 
-          <div className="blank">  </div>
+          <div className="blank">
+            <button>BACK</button>
+          </div>
 
           <div className="head_logo">
             <Link to='/'>
@@ -20,7 +22,7 @@ export default function Header() {
           
           <div className="cart_site">
             <Link to='cart'>
-            <img src={process.env.PUBLIC_URL + '/img/icon_cart.png'} alt="cart" />
+            <img src={process.env.PUBLIC_URL + '/img/cart.png'} alt="cart" />
             </Link>
           </div>
 

@@ -9,6 +9,7 @@ export default function Detail(props) {
   const {ices} = props
   const {id} = useParams()
   const dispatch = useDispatch()
+  
 
   return (
     <div>
