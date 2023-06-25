@@ -28,6 +28,8 @@ export default function Detail(props) {
 
           <div className="detail_right">
             <img src={ices[id].image} alt='img'/>
+            <img src={process.env.PUBLIC_URL + '/img/corn.png' } alt="img" />
+
           </div>
 
           <div className="line_wrap">

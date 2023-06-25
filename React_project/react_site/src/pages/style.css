@@ -186,10 +186,18 @@ a{
 .item_box .item_img_wrap{
     width: 275px;
     height: 300px;
-    background: url(../assets/img/corn.png) 50% 100% no-repeat;
+    position: relative;
 }
 .item_box img{
     width: 100%;
+}
+.item_box img:nth-child(2){
+    width: 30%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
 }
 .item_box h4{
     text-align: center;
@@ -245,13 +253,22 @@ a{
 .detail_right{
     width: 100%;
     height: 400px;
-    background: url(../assets/img/corn.png) 50% 100% no-repeat;
+    position: relative;
 }
 .detail_right img{
     width: 32%;
     display: block;
     margin: 0 auto;
     margin-bottom: 30px;
+}
+.detail_right img:nth-child(2){
+    width: 100px;
+    height: auto;
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
 }
 .detail_left{
     width: 100%;

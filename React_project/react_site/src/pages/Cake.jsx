@@ -2,7 +2,7 @@ import React from 'react'
 import cakeData from './cakeData'
 import {useState} from 'react'
 import{Routes, Route, Link, useNavigate, useParams} from 'react-router-dom'; 
-import './style2.css'
+import './style.css'
 import Buttons from '../components/Buttons';
 import Detail from './Detail'
 import { useDispatch } from 'react-redux';

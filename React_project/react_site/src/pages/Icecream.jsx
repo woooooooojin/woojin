@@ -25,6 +25,7 @@ export default function Icecream() {
                     
                       <div className="item_img_wrap">
                         <img src={ice.image} alt='img'/>
+                        <img src={process.env.PUBLIC_URL + '/img/corn.png' } alt="img" />
                       </div>
                       <h4>{ice.title}</h4>
                       <p className='tag'>{ice.tag}</p>
