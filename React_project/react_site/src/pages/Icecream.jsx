@@ -1,14 +1,19 @@
 import React from 'react'
 import iceData from './iceData'
 import {useState} from 'react'
-import{Routes, Route, Link, useNavigate} from 'react-router-dom'; 
+import{Routes, Route, Link, useNavigate, useParams} from 'react-router-dom'; 
 import './style.css'
 import Buttons from '../components/Buttons';
 import Detail from './Detail'
+import { useDispatch } from 'react-redux';
+import { addItem } from './store';
 
 
 export default function Icecream() {
   const [ices] = useState(iceData)
+  // const {id} = useParams()
+  const dispatch = useDispatch()
+
   return (
     <div>
       <div className='item_wrap'>
@@ -28,7 +33,7 @@ export default function Icecream() {
                      
                     </Link>  
                     <div className="btn_wrap">
-                        <Buttons />
+                        <button className='cartBtn' onClick={()=>{dispatch(addItem({id: ice.id, img: ice.image, title: ice.title, price : ice.price ,count: 1}))}}>장바구니</button>
                       </div>
                 </div>
 

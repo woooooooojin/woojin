@@ -9,23 +9,15 @@ export default function Cart() {
     const state = useSelector((state)=>state)
     const dispatch = useDispatch()
 
-    //총합계 고민중,,
-//    const price = document.querySelectorAll('.cart_price')
-//    const totalPrice = document.querySelector('.total_price')
-//    let result = 0;
 
-//    for(let i =0; i<price.length; i++){
-//     result += parseInt(price[i].textContent)
-//     totalPrice.innerHTML = result + 3500
-//    }
 
-let result = 0;
- state.cart.map((val,idx)=>{
-    return(
-        
-        result += (state.cart[idx].price * state.cart[idx].count)
-    )
-})
+    let result = 0;
+    state.cart.map((val,idx)=>{
+        return(
+            
+            result += (state.cart[idx].price * state.cart[idx].count)
+        )
+    })
 
 
   return (

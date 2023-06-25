@@ -214,7 +214,19 @@ a{
 .btn_wrap{
     padding: 0 10px;
 }
-
+.cartBtn{
+    width: 200px;
+    height: 50px;
+    border: 1px solid #f56f98;
+    background-color: transparent;
+    border-radius: 20px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    color: #777;
+}
 
 
 
