@@ -4,6 +4,7 @@ import{Routes, Route, Link, useNavigate} from 'react-router-dom';
 import {useState} from 'react'
 
 import iceData from './pages/iceData'
+import cakeData from './pages/cakeData';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -15,12 +16,14 @@ import Drink from './pages/Drink';
 import Home from './pages/Home';
 import Detail from './pages/Detail'
 import Cart from './pages/Cart';
+import DetailCake from './pages/DetailCake';
 
 
 function App() {
 
   // const navigate = useNavigate()
   const [ices] = useState(iceData)
+  const [cakes] = useState(cakeData)
 
   return (
     <div className="App">
@@ -70,7 +73,9 @@ function App() {
         <Route path='coffee/*' element={<Coffee />}></Route>
         <Route path='drink/*' element={<Drink />}></Route>
         <Route path='cart' element={<Cart />}></Route>
+        
         <Route path='detail/:id' element={<Detail ices={ices}/>}></Route>
+        <Route path='detailcake/:id' element={<DetailCake cakes={cakes}/>}></Route>
         
 
       </Routes>
