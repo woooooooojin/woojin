@@ -1,15 +1,18 @@
 import React from 'react'
-import{Routes, Route, Link, useNavigate} from 'react-router-dom'; 
+import{Routes, Route, Link, useNavigate,} from 'react-router-dom'; 
 import './components.css'
 
 
 export default function Header() {
+
+  const navigate = useNavigate()
+
   return (
     <div>
         <div className='head_wrap'>
 
           <div className="blank">
-            <button>BACK</button>
+            <button onClick={()=>{navigate(-1)}}>BACK</button>
           </div>
 
           <div className="head_logo">
