@@ -471,3 +471,18 @@ label{
     color: #f489a0;
     text-align: right;
 }
+.order_btn{
+    width: 200px;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
+    background-color: transparent;
+    border: 1px solid #f489a0;
+    margin-bottom: 20px;
+    font-size: 20px;
+    transition: .3s;
+}
+.order_btn:hover{
+    box-shadow: 0 0 10px #ffa0c5;
+}

@@ -11,7 +11,6 @@ import { addItem } from './store';
 
 export default function Icecream() {
   const [ices] = useState(iceData)
-  // const {id} = useParams()
   const dispatch = useDispatch()
 
   return (

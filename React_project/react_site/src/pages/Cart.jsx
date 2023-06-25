@@ -19,6 +19,8 @@ export default function Cart() {
         )
     })
 
+   
+
 
   return (
     
@@ -67,6 +69,10 @@ export default function Cart() {
             
             <div>
                 <p className='total_price'>Total : {result.toLocaleString()}원</p>
+            </div>
+
+            <div>
+                <button className='order_btn' onClick={()=>{alert('주문금액은 ' + result.toLocaleString()+'원 입니다.')}}>주문하기</button>
             </div>
 
 
