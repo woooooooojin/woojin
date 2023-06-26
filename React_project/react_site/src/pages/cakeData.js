@@ -3,7 +3,7 @@ const cakeData = [
       id: 'cake_01',
       image: process.env.PUBLIC_URL+'/img/cake/cake01.png',
       desc: '찐한 카라멜과 짭쪼롬한 치즈가 어우려진 단짠의 조화!',
-      title: '딥~한 카라멜 치즈 케이크',
+      title: '카라멜 치즈 케이크',
       tag : '#이달의케이크 #카라멜치즈',
       price: 18000
     },
@@ -11,7 +11,7 @@ const cakeData = [
         id: 'cake_02',
         image: process.env.PUBLIC_URL+'/img/cake/cake02.png',
         desc: '부끄러운 웰시코기의 귀여운 뒷모습을 표현한 케이크!',
-        title: '수줍은 웰시코기의 숨바꼭질',
+        title: '웰시코기의 숨바꼭질',
         tag : '#웰시코기 #수줍은케이크',
         price: 18500
       },
@@ -19,7 +19,7 @@ const cakeData = [
         id: 'cake_03',
         image: process.env.PUBLIC_URL+'/img/cake/cake03.png',
         desc: '부끄러운 기린의 귀여운 뒷모습을 표현한 케이크!',
-        title: '수줍은 기린의 숨바꼭질',
+        title: '기린의 숨바꼭질',
         tag : '#기린 #수줍은케이크',
         price: 18500
       },

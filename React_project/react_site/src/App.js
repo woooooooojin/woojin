@@ -3,10 +3,11 @@ import{Routes, Route, Link, useNavigate} from 'react-router-dom';
 
 import {useState} from 'react'
 
-import iceData from './pages/iceData'
+import iceData from './pages/iceData';
 import cakeData from './pages/cakeData';
 import drinkData from './pages/drinkData';
 import coffeeData from './pages/coffeeData';
+import dessertData from './pages/dessertData';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -21,6 +22,7 @@ import Cart from './pages/Cart';
 import DetailCake from './pages/DetailCake';
 import DetailDrink from './pages/DetailDrink';
 import DetailCoffee from './pages/DetailCoffee';
+import DetailDessert from './pages/DetailDessert';
 
 
 function App() {
@@ -30,6 +32,7 @@ function App() {
   const [cakes] = useState(cakeData)
   const [drinks] =useState(drinkData)
   const [coffees] =useState(coffeeData)
+  const [desserts]=useState(dessertData)
 
   return (
     <div className="App">
@@ -84,6 +87,7 @@ function App() {
         <Route path='detailcake/:id' element={<DetailCake cakes={cakes}/>}></Route>
         <Route path='detaildrink/:id' element={<DetailDrink drinks={drinks}/>}></Route>
         <Route path='detailcoffee/:id' element={<DetailCoffee coffees={coffees}/>}></Route>
+        <Route path='detaildessert/:id' element={<DetailDessert desserts={desserts}/>}></Route>
         
 
       </Routes>

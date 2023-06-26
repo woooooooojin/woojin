@@ -3,7 +3,7 @@ const coffeeData= [
       id: 'coffee_01',
       image: process.env.PUBLIC_URL+'/img/coffee/coffee01.png',
       desc: '917ml로 즐기는 대용량 브리즈 사이즈 아메리카노',
-      title: '디카페인 917 아메리카노(ICED)',
+      title: '디카페인 917 아메리카노',
       tag : '#디카페인 #대용량커피',
       price: 4800
     },
@@ -11,7 +11,7 @@ const coffeeData= [
         id: 'coffee_02',
         image: process.env.PUBLIC_URL+'/img/coffee/coffee02.png',
         desc: '917ml로 즐기는 대용량 브리즈 사이즈 아메리카노',
-        title: '917 아메리카노(ICED)',
+        title: '917 아메리카노',
         tag : '#아이스아메리카노 #대용량커피',
         price: 4300
     },
@@ -19,7 +19,7 @@ const coffeeData= [
         id: 'coffee_03',
         image: process.env.PUBLIC_URL+'/img/coffee/coffee03.png',
         desc: '피스타치오와 에스프레소 샷의 풍미가 어우러진 라떼',
-        title: '피스타치오 초코 아몬드 라떼(HOT)',
+        title: '피스타치오 아몬드 라떼',
         tag : '#피스타치오 #초코핫라떼',
         price: 4800
     },
