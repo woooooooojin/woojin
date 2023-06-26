@@ -51,7 +51,7 @@ export default function Cart() {
                                 <img src={state.cart[i].img} alt="img"/> 
                             </div>
                             <div className="cart_title">{state.cart[i].title}</div>
-                            <div className="cart_price">{state.cart[i].price * state.cart[i].count}원</div>
+                            <div className="cart_price">{(state.cart[i].price * state.cart[i].count).toLocaleString('ko-KR')}원</div>
                             <div className="cart_count">{state.cart[i].count}개</div>
                             <div className="cart_btns">
                                 <button onClick={()=>dispatch(addCount(state.cart[i].id))}>+</button>
@@ -74,7 +74,7 @@ export default function Cart() {
             </div>
 
             <div>
-                <button className='order_btn' onClick={()=>{alert('주문금액은 ' + result.toLocaleString()+'원 입니다.')}}>주문하기</button>
+                <button className='order_btn' onClick={()=>{alert('주문금액은 ' + result.toLocaleString('ko-KR')+'원 입니다.')}}>주문하기</button>
             </div>
 
 
