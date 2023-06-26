@@ -30,10 +30,25 @@
 }
 .cart_site{
     width: 33.3333%;
+    position: relative;
 }
 .cart_site img{
     width: 40px;
 
+}
+.cart_cnt{
+    width: 20px;
+    height: 20px;
+    background-color: #f489a0;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    display: inline-block;
+    color: #fff;
+    position: absolute;
+    left: 49%;
+    transform: translateX(-50%);
+    bottom: -30%;
 }
 
 

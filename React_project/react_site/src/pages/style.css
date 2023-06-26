@@ -394,6 +394,23 @@ label{
 
 
 
+.detail_txt{
+    padding: 0 50px;
+}
+.detail_txt ul{
+    margin-top: 30px;
+}
+.detail_txt ul li{
+    margin-top: 10px;
+}
+.detail_txt ul li:nth-child(1){
+    font-size: 18px;
+    font-weight: bold;
+
+}
+
+
+
 /**********cart**********/
 
 .cart_wrap{}

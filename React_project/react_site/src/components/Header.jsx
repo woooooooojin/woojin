@@ -1,11 +1,18 @@
 import React from 'react'
 import{Routes, Route, Link, useNavigate,} from 'react-router-dom'; 
 import './components.css'
+// import {useDispatch, useSelector} from 'react-redux'
 
 
 export default function Header() {
 
   const navigate = useNavigate()
+  // const state = useSelector((state)=>state)
+  // const dispatch = useDispatch()
+
+
+
+ 
 
   return (
     <div>
@@ -26,6 +33,7 @@ export default function Header() {
           <div className="cart_site">
             <Link to='cart'>
             <img src={process.env.PUBLIC_URL + '/img/cart.png'} alt="cart" />
+            <span className='cart_cnt'></span>
             </Link>
           </div>
 
