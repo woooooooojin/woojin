@@ -1,4 +1,4 @@
-
+// import membership from "./membership.js"
 
 document.addEventListener('DOMContentLoaded', function () {
    
@@ -49,6 +49,27 @@ document.addEventListener('DOMContentLoaded', function () {
     const loginPopup2 = document.querySelector('.login_popup2')
     const loginPopup3 = document.querySelector('.login_popup3')
     let errcnt = 0
+
+    // membership.forEach((val,idx)=>{
+    //     if(JSON.stringify(val.id) === userPw.value){
+    //         if (val.pw === userPw.value) {
+    //             loginPopup.style.display = 'block'
+    //         }else {
+    //             loginPopup01.style.display = 'block'
+    //             errcnt++
+    //         }
+    //     }else {
+    //         loginPopup2.style.display = 'block'
+    //     }
+
+    //     if (errcnt >= 5) {
+    //         loginPopup3.style.display = 'block'
+    //     }
+
+    //     console.log(JSON.stringify(val.id))
+    // })
+
+    
     loginBtn.addEventListener('click', function () {
 
 
@@ -66,9 +87,6 @@ document.addEventListener('DOMContentLoaded', function () {
         if (errcnt >= 5) {
             loginPopup3.style.display = 'block'
         }
-
-
-
 
     })
 
