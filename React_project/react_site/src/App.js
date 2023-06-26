@@ -1,5 +1,5 @@
 import './App.css';
-import{Routes, Route, Link, useNavigate} from 'react-router-dom'; 
+import{Routes, Route, Link, useNavigate, NavLink} from 'react-router-dom'; 
 
 import {useState} from 'react'
 
@@ -34,6 +34,15 @@ function App() {
   const [coffees] =useState(coffeeData)
   const [desserts]=useState(dessertData)
 
+
+ 
+  const activeStyle = {
+      color:'#fff',
+      backgroundColor:'#ffa0c5',
+      fontWeight:'bold'
+    }
+  
+
   return (
     <div className="App">
       
@@ -44,22 +53,22 @@ function App() {
       <nav>
         <ul className='nav_wrap'>
           <li>
-            <Link to='/'><p>Home</p></Link>
+            <NavLink to='/'><p>Home</p></NavLink>
           </li>
           <li>
-            <Link to='/icecream'><p>아이스크림</p></Link>
+            <NavLink style={({isActive})=>(isActive ? activeStyle : {})} to='/icecream'><p>아이스크림</p></NavLink>
           </li>
           <li>
-            <Link to='/cake'><p>케이크</p></Link>
+            <NavLink style={({isActive})=>(isActive ? activeStyle : {})} to='/cake'><p>케이크</p></NavLink>
           </li>
           <li>
-            <Link to='/dessert'><p>디저트</p></Link>
+            <NavLink style={({isActive})=>(isActive ? activeStyle : {})} to='/dessert'><p>디저트</p></NavLink>
           </li>
           <li>
-            <Link to='/coffee'><p>커피</p></Link>
+            <NavLink style={({isActive})=>(isActive ? activeStyle : {})} to='/coffee'><p>커피</p></NavLink>
           </li>
           <li>
-            <Link to='/drink'><p>음료</p></Link>
+            <NavLink style={({isActive})=>(isActive ? activeStyle : {})} to='/drink'><p>음료</p></NavLink>
           </li>
         </ul>
       </nav>

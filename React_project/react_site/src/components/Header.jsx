@@ -9,6 +9,8 @@ export default function Header() {
   const navigate = useNavigate()
   const list = useSelector((state)=>state.cart)
 
+  
+
 
   return (
     <div>

@@ -155,7 +155,7 @@ const drinkData= [
       id: 'drink_20',
       image: process.env.PUBLIC_URL+'/img/drink/drink20.png',
       desc: '피스타치오 블라스트와 초코아몬드 토핑을 함께 즐기는 블라스트',
-      title: '피스타치오 초코아몬드 블라스트',
+      title: '피스타치오 아몬드 블라스트',
       tag : '#피스타치오 #초코아몬드',
       price: 5300
     },
