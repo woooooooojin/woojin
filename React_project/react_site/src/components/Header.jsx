@@ -1,14 +1,12 @@
 import React from 'react'
 import{Routes, Route, Link, useNavigate,} from 'react-router-dom'; 
 import './components.css'
-// import {useDispatch, useSelector} from 'react-redux'
 
 
 export default function Header() {
 
   const navigate = useNavigate()
-  // const state = useSelector((state)=>state)
-  // const dispatch = useDispatch()
+ 
 
 
 

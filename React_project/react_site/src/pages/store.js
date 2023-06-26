@@ -28,12 +28,14 @@ const cart = createSlice({
 
             }
         },
+      
+        
         
     }
 
 
 })
-export const {addItem,deleteItem,addCount,minCount,cartCount,} = cart.actions 
+export const {addItem,deleteItem,addCount,minCount} = cart.actions 
 //dispatch 
 
 
