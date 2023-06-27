@@ -53,7 +53,7 @@ function App() {
       <nav>
         <ul className='nav_wrap'>
           <li>
-            <NavLink to='/'><p>Home</p></NavLink>
+            <NavLink style={({isActive})=>(isActive ? activeStyle : {})} to='/'><p>Home</p></NavLink>
           </li>
           <li>
             <NavLink style={({isActive})=>(isActive ? activeStyle : {})} to='/icecream'><p>아이스크림</p></NavLink>
