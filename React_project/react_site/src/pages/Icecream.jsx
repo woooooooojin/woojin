@@ -57,9 +57,6 @@ export default function Icecream() {
 
 
 
-                
-            
-               
               )
             })
         }
