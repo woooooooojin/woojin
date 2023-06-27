@@ -28,15 +28,19 @@ const cart = createSlice({
 
             }
         },
-      
+        // inputVal: (state, action) => {
+        //     state.selectedOption = action.payload;
+        //   },
         
         
     }
 
 
 })
+
 export const {addItem,deleteItem,addCount,minCount} = cart.actions 
 //dispatch 
+
 
 
 export default configureStore({
@@ -45,3 +49,12 @@ export default configureStore({
     }
 })
 //useSelector
+
+
+
+
+
+
+
+
+
