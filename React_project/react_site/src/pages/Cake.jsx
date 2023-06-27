@@ -7,6 +7,7 @@ import Buttons from '../components/Buttons';
 import Detail from './Detail'
 import { useDispatch } from 'react-redux';
 import { addItem } from './store';
+import { easeIn, easeInOut, motion } from "framer-motion"
 
 export default function Cake() {
   const [cakes] = useState(cakeData)
@@ -21,7 +22,13 @@ export default function Cake() {
               cakes.map((cake,index)=>{
                 return(
                 
-                  <div className="item_box" key={index}>
+                  <motion.div className="item_box" key={index}
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{
+                    duration: 0.3,
+                    ease: easeInOut
+                }}>
                       <Link to={`/detailcake/${index}`}>
                       
                         <div className="item_img_wrap">
@@ -35,7 +42,7 @@ export default function Cake() {
                       <div className="btn_wrap">
                           <button className='cartBtn' onClick={()=>{dispatch(addItem({id: cake.id, img: cake.image, title: cake.title, price : cake.price ,count: 1}))}}>장바구니</button>
                         </div>
-                  </div>
+                  </motion.div>
 
 
 

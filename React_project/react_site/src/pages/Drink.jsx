@@ -8,18 +8,41 @@ import Detail from './Detail'
 import { useDispatch } from 'react-redux';
 import { addItem } from './store';
 
+import { easeIn, easeInOut, easeOut, motion } from "framer-motion"
+
 export default function Drink() {
   const [drinks] = useState(drinkData)
   const dispatch = useDispatch()
+
+  const list={
+    hidden: {
+      opacity: 0
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        when: "beforeChildren",
+        staggerChildren: 0.1
+      }
+    }
+  }
+  const item={
+    hidden: { opacity:0.5, scale:0.8 },
+    visible: { opacity:1, scale:1 },
+    ease:easeOut
+    
+  }
+
+  
   return (
     <div>
 
-      <div className='item_wrap'>
+      <motion.div className='item_wrap' variants={list} initial="hidden" animate="visible">
             {
                 drinks.map((drink,index)=>{
                   return(
                   
-                    <div className="item_box" key={index}>
+                    <motion.div className="item_box" key={index} variants={item}>
                         <Link to={`/detaildrink/${index}`}>
                         
                           <div className="item_img_wrap">
@@ -33,7 +56,7 @@ export default function Drink() {
                         <div className="btn_wrap">
                             <button className='cartBtn' onClick={()=>{dispatch(addItem({id: drink.id, img: drink.image, title: drink.title, price : drink.price ,count: 1}))}}>장바구니</button>
                           </div>
-                    </div>
+                    </motion.div>
 
 
 
@@ -43,7 +66,7 @@ export default function Drink() {
                   )
                 })
             }
-      </div>
+      </motion.div>
 
     </div>
   )

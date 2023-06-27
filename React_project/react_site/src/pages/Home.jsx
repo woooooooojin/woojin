@@ -1,13 +1,20 @@
 import React from 'react'
 import{Routes, Route, Link, useNavigate} from 'react-router-dom'; 
 import './style.css'
+import { easeIn, easeInOut, motion } from "framer-motion"
 
 
 export default function Home() {
   return (
     <div>
         <div className="box_wrap">
-            <div className="box1 box">
+            <motion.div className="box1 box" 
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{
+                  duration: 0.3,
+                  ease: easeInOut
+                }}>
                 <Link to='/icecream'>
                   <div className="main_box">
                     <div className="box_tit"><h4>ICECREAM</h4></div>
@@ -17,9 +24,15 @@ export default function Home() {
                   </div>
 
                 </Link>
-            </div>
+            </motion.div>
 
-            <div className="box2 box">
+            <motion.div className="box2 box" 
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{
+                  duration: 0.3,
+                  ease: easeInOut
+                }}>
               <Link to='/cake'>
                 <div className="main_box">
                     <div className="box_tit"><h4>ICECREAM CAKE</h4></div>
@@ -27,9 +40,15 @@ export default function Home() {
                     <img src={process.env.PUBLIC_URL + './img/cake01.png' } alt="img" />
                 </div>
               </Link>
-            </div>
+            </motion.div>
 
-            <div className="box3 box">
+            <motion.div className="box3 box" 
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{
+                  duration: 0.3,
+                  ease: easeInOut
+                }}>
               <Link to='/dessert'>
                 <div className="main_box">
                     <div className="box_tit"><h4>DESSERT</h4></div>
@@ -37,9 +56,15 @@ export default function Home() {
                     <img src={process.env.PUBLIC_URL + './img/dessert01.png' } alt="img" />
                 </div>
               </Link>
-            </div>
+            </motion.div>
 
-            <div className="box4 box">
+            <motion.div className="box4 box"  
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{
+                  duration: 0.3,
+                  ease: easeInOut
+                }}>
             <Link to='/coffee'>
                 <div className="main_box">
                     <div className="box_tit"><h4>COFFEE</h4></div>
@@ -47,9 +72,15 @@ export default function Home() {
                     <img src={process.env.PUBLIC_URL + './img/coffee01.png' } alt="img" />
                 </div>
             </Link>
-            </div>
+            </motion.div>
 
-            <div className="box5 box">
+            <motion.div className="box5 box" 
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{
+                  duration: 0.3,
+                  ease: easeInOut
+                }}>
             <Link to='/drink'>
                 <div className="main_box">
                     <div className="box_tit"><h4>BEVERAGE</h4></div>
@@ -57,7 +88,7 @@ export default function Home() {
                     <img src={process.env.PUBLIC_URL + './img/drink01.png' } alt="img" />
                 </div>
             </Link>
-            </div>
+            </motion.div>
 
         </div>
 
