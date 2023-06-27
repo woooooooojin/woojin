@@ -20,30 +20,29 @@ export default function Icecream() {
       opacity: 1,
       transition: {
         when: "beforeChildren",
-        staggerChildren: 0.1
+        staggerChildren: 0.2
       }
     }
   }
   const item={
-    hidden: { opacity:0.5, scale:0.8 },
-    visible: { opacity:1, scale:1 },
-    ease:easeOut
+    hidden: { opacity:0, scale:0.5, rotate:270},
+    visible: { opacity:1, scale:1, rotate:360 },
     
   }
 
 
   return (
     <div>
-      <motion.div className='item_wrap' variants={list} initial="hidden" animate="visible">
+      <div className='item_wrap'  >
         {
             ices.map((ice,index)=>{
               return(
               
-                <motion.div className="item_box" key={index} variants={item} >
+                <motion.div className="item_box" key={index} variants={list} initial="hidden" animate="visible">
                     <Link to={`/detail/${index}`}>
                     
                       <div className="item_img_wrap">
-                        <img src={ice.image} alt='img'/>
+                        <motion.img src={ice.image} alt='img' variants={item}/>
                         <img src={process.env.PUBLIC_URL + '/img/corn.png' } alt="img" />
                       </div>
                       <h4>{ice.title}</h4>
@@ -64,7 +63,7 @@ export default function Icecream() {
               )
             })
         }
-         </motion.div>
+         </div>
 
         
       </div>

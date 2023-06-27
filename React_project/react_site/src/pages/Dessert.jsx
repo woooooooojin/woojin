@@ -25,7 +25,7 @@ export default function Dessert() {
     }
   }
   const item={
-    hidden: { opacity:0.5, scale:0.8 },
+    hidden: { opacity:0.0, scale:0.5 },
     visible: { opacity:1, scale:1 },
     ease:easeOut
     
@@ -33,16 +33,16 @@ export default function Dessert() {
 
   return (
     <div>
-        <motion.div className='item_wrap' variants={list} initial="hidden" animate="visible">
+        <div className='item_wrap'>
             {
                 desserts.map((dessert,index)=>{
                   return(
                   
-                    <motion.div className="item_box" key={index} variants={item}>
+                    <motion.div className="item_box" key={index} variants={list} initial="hidden" animate="visible">
                         <Link to={`/detaildessert/${index}`}>
                         
                           <div className="item_img_wrap">
-                            <img src={dessert.image} alt='img'/>
+                            <motion.img src={dessert.image} alt='img' variants={item} />
                           </div>
                           <h4>{dessert.title}</h4>
                           <p className='tag'>{dessert.tag}</p>
@@ -62,7 +62,7 @@ export default function Dessert() {
                   )
                 })
             }
-      </motion.div>
+      </div>
     </div>
   )
 }

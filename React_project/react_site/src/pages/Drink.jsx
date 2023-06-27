@@ -22,31 +22,31 @@ export default function Drink() {
       opacity: 1,
       transition: {
         when: "beforeChildren",
-        staggerChildren: 0.1
+        staggerChildren: 0.3
       }
     }
   }
   const item={
-    hidden: { opacity:0.5, scale:0.8 },
+    hidden: { opacity:0, scale:0.5 },
     visible: { opacity:1, scale:1 },
     ease:easeOut
     
   }
 
-  
+
   return (
     <div>
 
-      <motion.div className='item_wrap' variants={list} initial="hidden" animate="visible">
+      <div className='item_wrap' >
             {
                 drinks.map((drink,index)=>{
                   return(
                   
-                    <motion.div className="item_box" key={index} variants={item}>
+                    <motion.div className="item_box" key={index} variants={list} initial="hidden" animate="visible">
                         <Link to={`/detaildrink/${index}`}>
                         
                           <div className="item_img_wrap">
-                            <img src={drink.image} alt='img'/>
+                            <motion.img src={drink.image} alt='img' variants={item}/>
                           </div>
                           <h4>{drink.title}</h4>
                           <p className='tag'>{drink.tag}</p>
@@ -66,7 +66,7 @@ export default function Drink() {
                   )
                 })
             }
-      </motion.div>
+      </div>
 
     </div>
   )
