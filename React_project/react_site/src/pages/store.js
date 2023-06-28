@@ -28,9 +28,7 @@ const cart = createSlice({
 
             }
         },
-        // inputVal: (state, action) => {
-        //     state.selectedOption = action.payload;
-        //   },
+       
         
         
     }

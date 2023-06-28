@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import './style.css'
 import {useDispatch, useSelector} from 'react-redux'
@@ -10,6 +10,16 @@ export default function Detail(props) {
   const {ices} = props
   const {id} = useParams()
   const dispatch = useDispatch()
+
+
+  const [selectedOption, setSelectedOption] = useState('');
+  const handleOptionChange = (event) => {setSelectedOption(event.target.value)}
+  const colorChange = (optionValue) => {
+      if (selectedOption === optionValue) {
+        return { backgroundColor: '#f489a0', color : '#fff'};
+      }
+      return {};
+  };
   
 
   return (
@@ -35,7 +45,7 @@ export default function Detail(props) {
 
           <div className="line_wrap">
             <div className="line"></div>
-            <div className="line_btn" onClick={()=>{dispatch(addItem({id: ices[id].id, img: ices[id].image, title: ices[id].title, price : ices[id].price ,count: 1}))}}>장바구니</div>
+            <div className="line_btn" onClick={()=>{dispatch(addItem({id: ices[id].id, img: ices[id].image, title: ices[id].title, price : (ices[id].price + parseInt(selectedOption)) ,count: 1}))}}>장바구니</div>
           </div>
 
 
@@ -57,8 +67,60 @@ export default function Detail(props) {
 
           </div>
 
+
           <div className="input_wrap">
-            <RadioBtn/>
+            {/* <RadioBtn/> */}
+
+            <label className='lab01' style={colorChange('0')}>
+            <input
+            className='opt01'
+            name="radio_opt"
+            type="radio"
+            value="0"
+            checked={selectedOption === '0'}
+            onChange={handleOptionChange}
+            defaultChecked={true}
+            />
+            싱글레귤러 + 0
+            </label>
+
+            <label className='lab02' style={colorChange('800')}>
+                <input
+                className='opt02'
+                name="radio_opt"
+                type="radio"
+                value="800"
+                checked={selectedOption === '800'}
+                onChange={handleOptionChange}
+                />
+                싱글킹 + 800
+            </label>
+
+            <label className='lab03' style={colorChange('1300')}>
+                <input
+                className='opt03'
+                name="radio_opt"
+                type="radio"
+                value="1300"
+                checked={selectedOption === '1300'}
+                onChange={handleOptionChange}
+                />
+                더블주니어 + 1300원
+            </label>
+
+            <label className='lab04' style={colorChange('3300')}>
+                <input
+                className='opt04'
+                name="radio_opt"
+                type="radio"
+                value="3300"
+                checked={selectedOption === '3300'}
+                onChange={handleOptionChange}
+                />
+                더블레귤러 + 3300 원
+            </label>
+
+            <p className='opt_price'>옵션가격 : +{selectedOption}원</p>
              
           </div>
 
