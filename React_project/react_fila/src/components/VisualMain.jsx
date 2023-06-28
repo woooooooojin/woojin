@@ -24,7 +24,7 @@ export default function VisualMain() {
           },
           {
             id: 'visual03',
-            image: process.env.PUBLIC_URL+'/img/main/visualmain/visualmain04.jpg',
+            image: process.env.PUBLIC_URL+'/img/main/visualmain/visualmain01.jpg',
             desc: 'descdesc',
             title: 'FILA FLOAT ELITE',
           },

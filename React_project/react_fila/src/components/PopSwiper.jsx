@@ -1,12 +1,17 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, A11y, Autoplay } from 'swiper';
+
+import { useDispatch } from 'react-redux';
+import { addItem } from '../pages/store';
+
 import 'swiper/css';
 import './components.css' 
 import styled from 'styled-components'
 
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+
 
 
 const Button = styled.button`
@@ -34,42 +39,44 @@ const Button = styled.button`
 
 
 export default function PopSwiper() {
+
+    const dispatch = useDispatch()
   
 
     const popData= [
         {
-          id: 'visual01',
+          id: 'pop01',
           image: process.env.PUBLIC_URL+'/img/main/recommand/01.jpg',
           price: 119000,
           title: 'FILA 자켓',
         },
         {
-            id: 'visual02',
+            id: 'pop02',
             image: process.env.PUBLIC_URL+'/img/main/recommand/02.jpg',
             price: 89000,
             title: 'FILA 로고 바람막이',
           },
           {
-            id: 'visual03',
+            id: 'pop03',
             image: process.env.PUBLIC_URL+'/img/main/recommand/03.jpg',
             price: 56000,
             title: 'FILA 크롭 후드티',
           },
           {
-            id: 'visual04',
+            id: 'pop04',
             image: process.env.PUBLIC_URL+'/img/main/recommand/04.jpg',
             price: 89000,
             title: 'FILA 로고 아노락',
           },
           {
-            id: 'visual05',
+            id: 'pop05',
             image: process.env.PUBLIC_URL+'/img/main/recommand/05.jpg',
             price: 119000,
             title: '스트링 조거팬츠',
           },
        
           {
-            id: 'visual06',
+            id: 'pop06',
             image: process.env.PUBLIC_URL+'/img/main/recommand/07.jpg',
             price: 129000,
             title: '베이직 로고 후드티',
@@ -100,7 +107,7 @@ export default function PopSwiper() {
                                 <p className='pop_tit'>{val.title}</p>
                                 <p className='pop_price'>{val.price.toLocaleString('kr-KR') + '원'}</p>
                                 <div className="btn_wrap">
-                                    <Button>장바구니</Button>
+                                    <Button onClick={()=>{dispatch(addItem({id:val.id, img:val.image, title:val.title, price:val.price , count:1}))}}>장바구니</Button>
                                     <Button>구매하기</Button>
                                 </div>
                                 

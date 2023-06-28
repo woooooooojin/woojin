@@ -5,6 +5,9 @@ import './style.css'
 import Magazine from '../components/Magazine'
 import Sns from '../components/Sns'
 
+import { useDispatch } from 'react-redux';
+import { addItem } from '../pages/store';
+
 
 export default function Home() {
   return (

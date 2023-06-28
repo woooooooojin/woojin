@@ -7,3 +7,127 @@
 .home_wrap{
     padding: 0 20px;
 }
+
+
+/***********cart*********/
+
+.cart_wrap{
+}
+.cart_wrap h4{
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0;
+    /* color: #f56f98; */
+}
+.cart_wrap ul{
+    
+}
+.cart_wrap ul li{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+.cartlist{
+    border-bottom: 1px solid #ccc;
+
+}
+.maplist{
+    margin-bottom: 50px;
+}
+
+.cart_id{
+    width: 10%;
+}
+.cart_img{
+    width: 20%;
+}
+.cart_img img{
+    width: 50%;
+}
+.cart_title{
+    width: 20%;
+    font-size: 20px;
+    letter-spacing: 10px;
+}
+.cart_price{
+    width: 20%;
+}
+.cart_count{
+    width: 10%;
+}
+.cart_btns{
+    width: 10%;
+}
+.cart_delete{
+    width: 10%;
+}
+.cart_wrap button{
+    width: 70px;
+    height: 35px;
+    border: 1px solid #ccc;
+    background-color: #eee;
+    margin-right: 5px;
+    font-size: 14px;
+    vertical-align: middle;
+    border-radius: 10px;
+    transition: .3s;
+}
+.cart_wrap button:hover{
+    background-color: #002053;
+    color: #fff;
+}
+.cart_wrap button:nth-child(2){margin-right: 0;}
+.cart_tit{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #ccc;
+}
+.cart_tit li{
+    height: 30px;
+    border-right: 1px solid #ccc;
+}
+.cart_tit li:nth-child(1){
+    width: 10%;
+}
+.cart_tit li:nth-child(2){
+    width: 40%;
+}
+.cart_tit li:nth-child(3){
+    width: 20%;
+}
+.cart_tit li:nth-child(4){
+    width: 10%;
+}
+.cart_tit li:nth-child(5){
+    width: 10%;
+}
+.cart_tit li:nth-child(6){
+    width: 10%;
+    border-right:  0;
+}
+
+.total_price{
+    font-size: 28px;
+    text-align: right;
+}
+.order_btn{
+    width: 200px;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
+    background-color: #002053;
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 20px;
+    transition: .3s;
+    border: 0;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+}
+.order_btn:hover{
+    box-shadow: 0 0 10px black;
+}
