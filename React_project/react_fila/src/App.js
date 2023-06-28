@@ -8,6 +8,7 @@ import Shoes from './pages/Shoes';
 import Tennis from './pages/Tennis';
 import Cart from './pages/Cart';
 import Home from './pages/Home';
+import VisualMain from './components/VisualMain';
 
 
 function App() {
