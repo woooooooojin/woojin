@@ -1,7 +1,8 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, A11y } from 'swiper';
+import { Navigation, Pagination, A11y, Autoplay } from 'swiper';
 import 'swiper/css';
+import './components.css' 
 
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -39,11 +40,9 @@ export default function VisualMain() {
         className='visual_swiper'
         // spaceBetween={50}
         slidesPerView={1}
-        modules={[Navigation, Pagination, A11y]}
-        navigation
+        modules={[Navigation, Pagination, A11y, Autoplay]}
         pagination={{ clickable: true }}
-        onSlideChange={() => console.log('slide change')}
-        onSwiper={(swiper) => console.log(swiper)}
+        autoplay={{ delay: 2000, disableOnInteraction: false }}
         >
             <div className="swiper_cont">
                 {
