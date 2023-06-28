@@ -8,7 +8,6 @@ import { useDispatch, useSelector } from 'react-redux';
 
 export default function RadioBtn() {
 
-
     const [selectedOption, setSelectedOption] = useState('');
     const handleOptionChange = (event) => {setSelectedOption(event.target.value)}
     const colorChange = (optionValue) => {
@@ -17,6 +16,7 @@ export default function RadioBtn() {
         }
         return {};
     };
+
 
   return (
     <div>
