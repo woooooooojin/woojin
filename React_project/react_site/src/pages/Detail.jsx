@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import './style.css'
 import {useDispatch, useSelector} from 'react-redux'
 import { addItem } from './store';
-import RadioBtn from '../components/RadioBtn';
+// import RadioBtn from '../components/RadioBtn';
 
 
 export default function Detail(props) {
