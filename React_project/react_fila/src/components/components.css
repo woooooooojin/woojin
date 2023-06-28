@@ -24,7 +24,7 @@ a{
     width: 33.333%;
 }
 .head_wrap .logo img{
-    width: 80px;
+    width: 95px;
     height: auto;
 }
 .head_wrap .cart{
@@ -190,4 +190,84 @@ a{
 }
 .sns_wrap img:hover{
     transform: scale(1);
+}
+
+
+/*******footer*****/
+
+.foot_wrap{
+    display: flex;
+    background-color: #eee;
+    padding: 30px 0px 30px 40px;
+    margin-top: 100px;
+}
+.foot_logo{
+    width: 10%;
+}
+.foot_desc{
+    width: 50%;
+}
+.desc_ul1{
+    display: flex;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.desc_ul1 li{
+    width: 20%;
+    border-right: 1px solid #ccc;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+.desc_ul1 li:last-child{
+    border-right: 0;
+}
+.foot_desc p{
+    font-size: 14px;
+    color: #777;
+    width: 600px;
+    padding: 0 45px;
+}
+
+.desc_ul2{
+    display: flex;
+    margin-top: 20px;
+    width: 600px;
+}
+.desc_ul2 li{
+    width: 33.3333%;
+    padding: 0 30px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.foot_cscenter{
+    width: 40%;
+}
+
+.cs_box{
+    width: 200px;
+    height: 40px;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 30px;
+    margin: 0 auto;
+}
+.cs_desc{
+    width: 300px;
+    margin: 0 auto;
+}
+.cs_desc p:nth-child(1){
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.cs_desc p:nth-child(2){
+    font-size: 14px;
+    color: #777;
+    margin-top: 20px;
 }

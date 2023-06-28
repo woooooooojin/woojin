@@ -9,6 +9,7 @@ import Tennis from './pages/Tennis';
 import Cart from './pages/Cart';
 import Home from './pages/Home';
 import VisualMain from './components/VisualMain';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
         
       </Routes>
 
+      <Footer/>
     </div>
   );
 }

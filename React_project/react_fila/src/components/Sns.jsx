@@ -81,7 +81,7 @@ export default function Sns() {
                 snsData.map((val,idx)=>{
                     return(
 
-                        <SnsBox>
+                        <SnsBox key={idx}>
                             <img src={val.image} alt="img" />
                         </SnsBox>
 
