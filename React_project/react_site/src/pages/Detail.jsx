@@ -20,7 +20,6 @@ export default function Detail(props) {
       }
       return {};
   };
-  
 
   return (
     <div>
@@ -81,7 +80,7 @@ export default function Detail(props) {
             onChange={handleOptionChange}
             defaultChecked={true}
             />
-            싱글레귤러 + 0
+            싱글레귤러
             </label>
 
             <label className='lab02' style={colorChange('800')}>
@@ -93,7 +92,7 @@ export default function Detail(props) {
                 checked={selectedOption === '800'}
                 onChange={handleOptionChange}
                 />
-                싱글킹 + 800
+                싱글킹
             </label>
 
             <label className='lab03' style={colorChange('1300')}>
@@ -105,7 +104,7 @@ export default function Detail(props) {
                 checked={selectedOption === '1300'}
                 onChange={handleOptionChange}
                 />
-                더블주니어 + 1300원
+                더블주니어
             </label>
 
             <label className='lab04' style={colorChange('3300')}>
@@ -117,7 +116,7 @@ export default function Detail(props) {
                 checked={selectedOption === '3300'}
                 onChange={handleOptionChange}
                 />
-                더블레귤러 + 3300 원
+                더블레귤러
             </label>
 
             <p className='opt_price'>옵션가격 : +{selectedOption}원</p>
