@@ -159,7 +159,6 @@ a{
 .mgz_wrap{
     display: flex;
     width: 100%;
-    margin-top: 100px;
 }
 .mgz_box{
     width: calc(25% - 25px);
@@ -175,4 +174,20 @@ a{
 .mgz_box p{
     text-align: center;
     font-size: 24px;
+}
+
+/*********sns********/
+
+.sns_wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+.sns_wrap img{
+    width: 100%;
+    height: 100%;
+    transform: scale(1.1);
+    transition: .5s;
+}
+.sns_wrap img:hover{
+    transform: scale(1);
 }
