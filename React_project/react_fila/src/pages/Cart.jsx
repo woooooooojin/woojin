@@ -41,7 +41,7 @@ export default function Cart() {
                   <div className="cart_img">
                     <img src={state.cart[i].img} alt="img"/> 
                   </div>
-                  <div className="cart_title">{state.cart[i].title}<br /><span> 옵션:{state.cart[i].option}</span></div>
+                  <div className="cart_title">{state.cart[i].title}<span>{state.cart[i].option}</span></div>
                   <div className="cart_price">{(state.cart[i].price * state.cart[i].count).toLocaleString('ko-KR')}원</div>
                   <div className="cart_count">{state.cart[i].count}</div>
                   <div className="cart_btns">

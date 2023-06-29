@@ -43,6 +43,38 @@ export default function DetailShirts(props) {
     return{};
   }
 
+  //댓글구현
+  const [userName, setUserName] = useState('') //유저이름
+  const [nameList, setNameList] = useState([])//이름리스트
+
+  const [userDesc, setUserDesc] = useState('') //리뷰내용
+  const [reviewList, setReviewList] = useState([])//리뷰리스트
+
+  let post = e =>{
+    const copyReviewList = [...reviewList] //리뷰리스트 내용 받아옴
+
+    copyReviewList.push(userDesc)// 유저리뷰내용을 푸시
+
+    setReviewList(copyReviewList) // 그 푸시된 내용을 setreviewlist로 변경
+
+    setUserDesc('')//리뷰내용칸 초기화
+
+
+    // const copyNameList = [...nameList]
+    // copyNameList.push(userName) 
+    // setNameList(copyNameList)
+    // setUserName('')
+  }
+
+  // const reviews = [nameList ,reviewList]
+
+
+  //삭제
+  // const delReview = e =>{
+  //   reviewList.concat(reviewList,1)
+  // }
+
+
 
   return (
     <div>
@@ -119,7 +151,100 @@ export default function DetailShirts(props) {
         </div>
 
 
+
+        
+
+
       </div>
+
+      <div className="category_tit">
+        <h2>Review</h2>
+      </div>
+      <div className="review_wrap">
+
+        <div className="review_box_img">
+          <img src={shirts[id].image} alt="img" />
+        </div>
+
+        <div className="review_box">
+
+          <div className="review_tit">
+            <input className="title_input"
+              type='text'
+                placeholder='제목'
+                name='title'
+              // onChange={e=>{
+              //   setUserName(e.target.value)
+              // }}
+              readOnly
+              value={shirts[id].title}
+            />
+          </div>
+
+          <div className="review_desc">
+            <textarea className="desc_input"
+                type='text'
+                placeholder='내용'
+                name='desc'
+                onChange={e=>{
+                  setUserDesc(e.target.value)
+                }}
+               
+                value={userDesc}
+
+                  
+            />
+          </div>
+
+
+
+        </div>
+
+          
+
+      </div>
+
+        <button className='review_submit' onClick={post} >리뷰등록</button>
+
+
+      <ul className='review_list_box'>
+        
+        {/* {
+          nameList.map((name,idx)=>{
+            return(
+              <div key={idx}>
+                <p>{name}</p>
+              </div>
+            )
+          })
+         
+        } */}
+        {
+          reviewList.map((review,idx)=>{
+            return(
+              <div key={idx}>
+                <p>{review}</p>
+                {/* <span onClick={delReview}>X</span> */}
+              </div>
+            )
+          })
+        }
+
+        {/* {
+          reviews.map((val,idx)=>{
+            return(
+              <li key={idx} className='asdf'>
+                <p className='r_list'>{val}</p>
+              </li>
+            )
+          })
+        } */}
+        
+       
+      </ul>
+
+
+
 
     </div>
   )
