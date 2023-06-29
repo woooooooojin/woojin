@@ -8,22 +8,27 @@ const cart = createSlice({
     reducers : {
         addItem(state,action){
             const index = state.findIndex((findId)=>{return findId.id === action.payload.id})
+            // const index = state.findIndex((findId)=>{return findId.id === action.payload.id && findId.option === action.payload.option})
             if(index>-1){
                 state[index].count++
             }else{
                 state.push(action.payload)
             }
+           
         },
         deleteItem(state,action){
             const index = state.findIndex((findId)=>{return findId.id === action.payload})
+            // const index = state.findIndex((findId)=>{return findId.option === action.payload})
             state.splice(index,1)
         },
         addCount(state,action){
             const index = state.findIndex((findId)=>{return findId.id === action.payload})
+            // const index = state.findIndex((findId)=>{return findId.option === action.payload})
             state[index].count++
         },
         minCount(state,action){
             const index = state.findIndex((findId)=>{return findId.id === action.payload})
+            // const index = state.findIndex((findId)=>{return findId.option === action.payload})
             if(state[index].count > 1){
                 state[index].count--
     

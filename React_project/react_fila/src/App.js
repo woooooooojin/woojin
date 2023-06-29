@@ -11,14 +11,17 @@ import Home from './pages/Home';
 import Footer from './components/Footer';
 
 import DetailShirts from './pages/DetailShirts'
+import DetailPants from './pages/DetailPants'
 
 import shirtsData from './pages/shirtsData'
+import pantsData from './pages/pantsData'
 import { useState } from 'react';
 
 
 function App() {
 
   const [shirts] = useState(shirtsData)
+  const [pants] = useState(pantsData)
   return (
     <div className="App">
       <Header/>
@@ -37,6 +40,7 @@ function App() {
          <Route path='cart' element={<Cart/>}></Route>
 
          <Route path='detailshirts/:id' element={<DetailShirts shirts={shirts}/>} ></Route>
+         <Route path='detailpants/:id' element={<DetailPants pants={pants}/>} ></Route>
         
       </Routes>
 

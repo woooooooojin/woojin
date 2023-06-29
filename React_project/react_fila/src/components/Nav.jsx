@@ -7,7 +7,6 @@ export default function Nav() {
     const activeColor= {
         color:'#fff',
         backgroundColor:'#002053',
-        fontWeight:'bold'
     }
 
   return (

@@ -3,7 +3,30 @@ import { useParams } from 'react-router-dom'
 import './style.css'
 import {useDispatch, useSelector} from 'react-redux'
 import { addItem } from './store';
-import Buttons from '../components/Buttons'
+import styled from 'styled-components'
+
+const Button = styled.button`
+
+    width: calc(50% - 30px);
+    margin-left: 20px;
+    height: 50px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    margin-top: 60px;
+    cursor: pointer;
+    font-size: 18px;
+    background-color: transparent;
+    transition: .3s;
+    &:hover{
+        background-color: #002053;
+        color:#fff;
+        box-shadow: 0 0 10px black;
+        border: 1px solid #002053;
+    }
+    &:nth-child(2){
+        margin-right: 20px;
+    }
+ `
 
 export default function DetailShirts(props) {
   const {shirts} = props
@@ -77,8 +100,8 @@ export default function DetailShirts(props) {
 
 
 
-          <Buttons/>
-
+          <Button onClick={()=>{dispatch(addItem({id: shirts[id].id, img: shirts[id].image, title: shirts[id].title, option: selectedOption,price : shirts[id].price ,count: 1}),alert('장바구니에 담겼습니다.'))}}>장바구니</Button>
+          <Button onClick={()=>{dispatch(addItem({id: shirts[id].id, img: shirts[id].image, title: shirts[id].title, option: selectedOption,price : shirts[id].price ,count: 1}),alert('장바구니를 확인해주세요.'))}}>구매하기</Button>
 
           <div className="delivery_desc">
             <ul>

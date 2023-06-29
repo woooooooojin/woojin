@@ -6,6 +6,7 @@ const shirtsData= [
       title: '퍼포먼스 그래픽 반팔티',
       tag : '#남성 #레귤러핏 #트레이닝',
       price: 49000
+      
     },
     {
         id: 'shirts_02',
@@ -14,6 +15,7 @@ const shirtsData= [
         title: '퍼포먼스 그래픽 반팔티',
         tag : '#남성 #레귤러핏 #트레이닝',
         price: 49000
+        
       },
       {
         id: 'shirts_03',
@@ -22,6 +24,7 @@ const shirtsData= [
         title: 'FILA ON BEACH 반팔티',
         tag : '#공용 #컴포트핏 #트레이닝',
         price: 59000
+        
       },
       {
         id: 'shirts_04',

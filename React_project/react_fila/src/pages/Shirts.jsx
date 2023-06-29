@@ -39,6 +39,8 @@ export default function Shirts() {
   const [shirts] = useState(shirtsData)
   const dispatch = useDispatch()
 
+  
+
   return (
     <div>
 
@@ -53,14 +55,18 @@ export default function Shirts() {
             return(
 
               <div className="item_box" key={idx}>
-                <Link to={`/detailshirts/${idx}`} target='_blank'>
+                <Link to={`/detailshirts/${idx}`}>
                   <div className="item_img_wrap">
                     <img src={shirt.image} alt="img"/>
                   </div>
                   <h4 className='item_tit'>{shirt.title}</h4>
                   <p className='item_tag'>{shirt.tag}</p>
-                  <p className='item_price'>{shirt.price}</p>
+                  <p className='item_price'>{(shirt.price).toLocaleString('ko-KR')}원</p>
                 </Link>
+
+                
+                
+                
                 <Button onClick={()=>{dispatch(addItem({id: shirt.id, img: shirt.image, title: shirt.title, price : shirt.price ,count: 1}), alert('장바구니에 담겼습니다.'))}}>장바구니</Button>
                 <Button onClick={()=>{dispatch(addItem({id: shirt.id, img: shirt.image, title: shirt.title, price : shirt.price ,count: 1}), alert('장바구니를 확인해주세요.'))}}>구매하기</Button>
               </div>
@@ -69,7 +75,7 @@ export default function Shirts() {
           })
         }
 
-
+          
 
 
 
