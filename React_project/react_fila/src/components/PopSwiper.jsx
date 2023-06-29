@@ -107,8 +107,8 @@ export default function PopSwiper() {
                                 <p className='pop_tit'>{val.title}</p>
                                 <p className='pop_price'>{val.price.toLocaleString('kr-KR') + '원'}</p>
                                 <div className="btn_wrap">
-                                    <Button onClick={()=>{dispatch(addItem({id:val.id, img:val.image, title:val.title, price:val.price , count:1}))}}>장바구니</Button>
-                                    <Button>구매하기</Button>
+                                    <Button onClick={()=>{dispatch(addItem({id:val.id, img:val.image, title:val.title, price:val.price , count:1}),alert('장바구니에 담았습니다.'))}}>장바구니</Button>
+                                    <Button onClick={()=>{dispatch(addItem({id:val.id, img:val.image, title:val.title, price:val.price , count:1}),alert('장바구니를 확인하세요.'))}}>구매하기</Button>
                                 </div>
                                 
                             </div>

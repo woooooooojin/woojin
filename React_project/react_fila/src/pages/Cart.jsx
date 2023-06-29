@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.css' 
 import {useDispatch, useSelector} from 'react-redux'
-import { addCount, deleteItem, minCount } from './store'
+import { addCount, deleteAll, deleteItem, minCount } from './store'
 
 export default function Cart() {
 
@@ -56,10 +56,11 @@ export default function Cart() {
 
 
         </ul>
+        
+        {/* <p className='all_del' onClick={()=>dispatch(deleteAll())}>전체삭제</p> */}
+        <p className='total_price'> 합계 :{result.toLocaleString('ko-KR')} 원</p>
 
-        <p className='total_price'> 합계 :{result.toLocaleString('kr-KR')} 원</p>
-
-        <div className='order_btn'>주문하기</div>
+        <div className='order_btn' onClick={()=>{alert('주문금액은 ' + result.toLocaleString('ko-KR')+'원 입니다.')}}>주문하기</div>
 
       </div>
 

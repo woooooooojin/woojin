@@ -31,7 +31,7 @@ const cart = createSlice({
         },
         deleteAll(state,action){
             const index = state.findIndex((findId)=>{return findId.id === action.payload})
-            state.splice(index,index)
+            state.splice(index,state[index])
         }
     }
 

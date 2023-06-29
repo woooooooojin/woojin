@@ -1,8 +1,12 @@
 import React from 'react'
 import{Routes, Route, Link} from 'react-router-dom';
 import './components.css' 
+import { useSelector } from 'react-redux';
 
 export default function Header() {
+
+    const list = useSelector ((state)=>state.cart)
+
   return (
     <div>
 
@@ -15,8 +19,11 @@ export default function Header() {
             </div>
             <div className="cart">
                 <Link to='/cart'>
-                 <img src={process.env.PUBLIC_URL + '/img/cart.png'} alt="cart" />
-
+                    <div className="cart_icon_wrap">
+                        <img src={process.env.PUBLIC_URL + '/img/cart.png'} alt="cart" />
+                        <p>{list.length}</p>
+                    </div>
+                   
                 </Link>
             </div>
         </div>

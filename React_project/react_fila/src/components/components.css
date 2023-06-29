@@ -10,6 +10,7 @@ a{
     text-decoration: none;
 }
 
+/*******header*******/
 .head_wrap{
     margin-top: 20px;
     display: flex;
@@ -36,6 +37,26 @@ a{
     height: auto;
     margin-right: 100px;
 }
+
+.cart_icon_wrap{
+    width: 100%;
+    position: relative;
+}
+.cart_icon_wrap p{
+    position: absolute;
+    top: 0;
+    right: 115px;
+    color: #fff;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #002053;
+    text-align: center;
+    line-height: 20px;
+}
+
+/********nav********/
 
 .nav_wrap{
     display: flex;
