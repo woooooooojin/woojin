@@ -24,7 +24,9 @@
   text-align: center;
   border-radius: 30px;
   margin-left: 10px;
-  background-color: transparent;
+  background-color: #ffa0c5;
+  font-weight: bold;
+
 }
 .nav_wrap li a{
   width: 100%;
@@ -32,6 +34,7 @@
   display: block;
   border-radius: 30px;
   transition: .3s;
+  color: #fff;
 }
 .nav_wrap li:nth-child(6){
   margin-right: 10px;

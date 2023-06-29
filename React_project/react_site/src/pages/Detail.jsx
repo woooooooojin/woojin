@@ -44,7 +44,7 @@ export default function Detail(props) {
 
           <div className="line_wrap">
             <div className="line"></div>
-            <div className="line_btn" onClick={()=>{dispatch(addItem({id: ices[id].id, img: ices[id].image, title: ices[id].title, price : (ices[id].price + parseInt(selectedOption)) ,count: 1}))}}>장바구니</div>
+            <div className="line_btn" onClick={()=>{dispatch(addItem({id: ices[id].id, img: ices[id].image, title: ices[id].title, price : (ices[id].price + parseInt(selectedOption)) ,count: 1}),alert('장바구니에 담았습니다.'))}}>장바구니</div>
           </div>
 
 

@@ -40,7 +40,7 @@ export default function Cake() {
                       
                       </Link>  
                       <div className="btn_wrap">
-                          <button className='cartBtn' onClick={()=>{dispatch(addItem({id: cake.id, img: cake.image, title: cake.title, price : cake.price ,count: 1}))}}>장바구니</button>
+                          <button className='cartBtn' onClick={()=>{dispatch(addItem({id: cake.id, img: cake.image, title: cake.title, price : cake.price ,count: 1}),alert('장바구니에 담겼습니다.'))}}>장바구니</button>
                         </div>
                   </motion.div>
 

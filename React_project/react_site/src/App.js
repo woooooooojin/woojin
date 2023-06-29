@@ -38,8 +38,8 @@ function App() {
 
  
   const activeStyle = {
-      color:'#fff',
-      backgroundColor:'#ffa0c5',
+      color:'#ffa0c5',
+      backgroundColor:'#fff',
       fontWeight:'bold'
     }
   

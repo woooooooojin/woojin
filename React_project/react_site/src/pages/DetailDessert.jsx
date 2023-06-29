@@ -32,7 +32,7 @@ export default function DetailDessert(props) {
 
           <div className="line_wrap">
             <div className="line"></div>
-            <div className="line_btn" onClick={()=>{dispatch(addItem({id: desserts[id].id, img: desserts[id].image, title: desserts[id].title, price : desserts[id].price ,count: 1}))}}>장바구니</div>
+            <div className="line_btn" onClick={()=>{dispatch(addItem({id: desserts[id].id, img: desserts[id].image, title: desserts[id].title, price : desserts[id].price ,count: 1}),alert('장바구니에 담았습니다.'))}}>장바구니</div>
           </div>
 
 

@@ -31,7 +31,7 @@ export default function DetailDrink(props3) {
 
             <div className="line_wrap">
                 <div className="line"></div>
-                <div className="line_btn" onClick={()=>{dispatch(addItem({id: drinks[id].id, img: drinks[id].image, title: drinks[id].title, price : drinks[id].price ,count: 1}))}}>장바구니</div>
+                <div className="line_btn" onClick={()=>{dispatch(addItem({id: drinks[id].id, img: drinks[id].image, title: drinks[id].title, price : drinks[id].price ,count: 1}),alert('장바구니에 담았습니다.'))}}>장바구니</div>
             </div>
 
 

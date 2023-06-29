@@ -38,7 +38,7 @@ export default function Coffee() {
                         
                         </Link>  
                         <div className="btn_wrap">
-                            <button className='cartBtn' onClick={()=>{dispatch(addItem({id: coffee.id, img: coffee.image, title: coffee.title, price : coffee.price ,count: 1}))}}>장바구니</button>
+                            <button className='cartBtn' onClick={()=>{dispatch(addItem({id: coffee.id, img: coffee.image, title: coffee.title, price : coffee.price ,count: 1}),alert('장바구니에 담겼습니다.'))}}>장바구니</button>
                           </div>
                     </motion.div>
 

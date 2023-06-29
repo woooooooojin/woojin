@@ -32,7 +32,7 @@ export default function DetailCake(props2) {
 
           <div className="line_wrap">
             <div className="line"></div>
-            <div className="line_btn" onClick={()=>{dispatch(addItem({id: cakes[id].id, img: cakes[id].image, title: cakes[id].title, price : cakes[id].price ,count: 1}))}}>장바구니</div>
+            <div className="line_btn" onClick={()=>{dispatch(addItem({id: cakes[id].id, img: cakes[id].image, title: cakes[id].title, price : cakes[id].price ,count: 1}),alert('장바구니에 담았습니다.'))}}>장바구니</div>
           </div>
 
 

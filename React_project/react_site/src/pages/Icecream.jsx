@@ -51,7 +51,7 @@ export default function Icecream() {
                      
                     </Link>  
                     <div className="btn_wrap">
-                        <button className='cartBtn' onClick={()=>{dispatch(addItem({id: ice.id, img: ice.image, title: ice.title, price : ice.price ,count: 1}))}}>장바구니</button>
+                        <button className='cartBtn' onClick={()=>{dispatch(addItem({id: ice.id, img: ice.image, title: ice.title, price : ice.price ,count: 1}),alert('장바구니에 담겼습니다.'))}}>장바구니</button>
                       </div>
                 </motion.div>
 
