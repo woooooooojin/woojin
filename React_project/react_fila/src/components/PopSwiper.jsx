@@ -1,6 +1,7 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, A11y, Autoplay } from 'swiper';
+// import { EffectCoverflow } from 'swiper';
 
 import { useDispatch } from 'react-redux';
 import { addItem } from '../pages/store';
@@ -81,6 +82,7 @@ export default function PopSwiper() {
             price: 129000,
             title: '베이직 로고 후드티',
           },
+          
        
        
         
@@ -96,6 +98,14 @@ export default function PopSwiper() {
         modules={[Navigation, A11y, Autoplay]}
         // autoplay={{ delay: 2000, disableOnInteraction: false }}
         // centeredSlides={true}
+        // effect={'coverflow'}
+        // coverflowEffect={{
+        //   rotate: 0,
+        //   stretch : 0,
+        //   depth: 50,
+        //   modifier: 1,
+        //   // slideShadows: true,
+        // }}
         >
             <div className="pop_swiper_cont">
                 {

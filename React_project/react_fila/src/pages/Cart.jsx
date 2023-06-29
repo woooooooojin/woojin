@@ -57,11 +57,13 @@ export default function Cart() {
 
         </ul>
         
-        {/* <p className='all_del' onClick={()=>dispatch(deleteAll())}>전체삭제</p> */}
+        <div className="total_btn_wrap">
+          <div className='all_del' onClick={()=>dispatch(deleteAll())}>전체삭제</div>
+          <div className='order_btn' onClick={()=>{alert('주문금액은 ' + result.toLocaleString('ko-KR')+'원 입니다.')}}>주문하기</div>
+        </div>
+        
         <p className='total_price'> 합계 :{result.toLocaleString('ko-KR')} 원</p>
-
-        <div className='order_btn' onClick={()=>{alert('주문금액은 ' + result.toLocaleString('ko-KR')+'원 입니다.')}}>주문하기</div>
-
+        
       </div>
 
     </div>

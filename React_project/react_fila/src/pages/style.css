@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .home_title{
     font-size: 26px;
     text-align: center;
@@ -117,12 +122,11 @@
 .total_price{
     font-size: 28px;
     text-align: right;
+    padding-right: 50px;
 }
 .order_btn{
     width: 200px;
     height: 50px;
-    display: block;
-    margin: 0 auto;
     border-radius: 20px;
     background-color: #002053;
     color: #fff;
@@ -134,8 +138,26 @@
     line-height: 50px;
     cursor: pointer;
 }
-.order_btn:hover{
-    box-shadow: 0 0 10px black;
+.order_btn:hover,
+.all_del:hover{
+    box-shadow: 0 0 20px #002053;
+}
+.all_del{
+    width: 200px;
+    height: 50px;
+    margin-right: 20px;
+    border-radius: 20px;
+    background-color: #002053;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    transition: .3s;
+}
+.total_btn_wrap{
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -151,6 +173,8 @@
     width: calc(20% - 24px);
     margin-left: 20px;
     margin-bottom: 50px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
 }
 
 .item_box:nth-child(5n){
@@ -159,6 +183,7 @@
 .item_img_wrap{
     overflow: hidden;
     border-radius: 20px;
+    font-size: 0;
 }
 .item_box img{
     width: 100%;
@@ -182,6 +207,79 @@
     text-align: right;
     font-size: 18px;
     margin-top: 10px;
+    padding-right: 10px;
 }
 
+/**********detail shirts**********/
+
+.detail_wrap{
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+}
+.detail_left{
+    width: 550px;
+    margin-right: 100px;
+    /* border: 1px solid #ccc; */
+}
+.detail_left img{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+.detail_right{
+    width: 550px;
+    padding: 0 20px;
+}
+.detail_tit{
+    text-align: center;
+    font-size: 28px;
+    margin-top: 20px;
+}
+.detail_desc{
+    font-size: 18px;
+    margin-top: 20px;
+    color: #666;
+}
+.detail_price{
+    text-align: right;
+    font-size: 22px;
+    margin-top: 30px;
+}
+.detail_option{
+    margin-top: 50px;
+}
+.opt_wrap{
+    display: flex;
+    justify-content: space-around;
+
+}
+.detail_option input{
+    display: none;
+}
+.detail_option label{
+    width: 130px;
+    height: 50px;
+    border: 1px solid #ccc;
+    transition: .5s;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 30px;
+}
+
+.delivery_desc{
+    font-size: 16px;
+    margin-top: 60px;
+}
+.delivery_desc li{
+    margin-bottom: 10px;
+    color: #666;
+}
+.delivery_desc li:nth-child(1){
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #000;
+}
 

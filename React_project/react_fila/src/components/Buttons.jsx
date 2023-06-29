@@ -6,10 +6,10 @@ const Button = styled.button`
 
     width: calc(50% - 30px);
     margin-left: 20px;
-    height: 40px;
+    height: 50px;
     border: 1px solid #ccc;
     border-radius: 30px;
-    margin-top: 20px;
+    margin-top: 60px;
     cursor: pointer;
     font-size: 18px;
     background-color: transparent;
@@ -17,6 +17,8 @@ const Button = styled.button`
     &:hover{
         background-color: #002053;
         color:#fff;
+        box-shadow: 0 0 10px black;
+        border: 1px solid #002053;
     }
     &:nth-child(2){
         margin-right: 20px;
