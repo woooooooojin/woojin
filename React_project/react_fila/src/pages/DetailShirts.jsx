@@ -50,7 +50,6 @@ export default function DetailShirts(props) {
   const [userDesc, setUserDesc] = useState('') //리뷰내용
   const [reviewList, setReviewList] = useState([])//리뷰리스트
 
-  let [isValid , setIsValid] = useState(false)
 
 
   let post = e =>{
@@ -205,9 +204,7 @@ export default function DetailShirts(props) {
                 onChange={e=>{
                   setUserDesc(e.target.value)
                 }}
-                onKeyUp={e=>{
-                  e.target.value.length > 0 ? setIsValid(true) : setIsValid(false)
-                }}
+               
                
                 value={userDesc}
 
@@ -223,7 +220,7 @@ export default function DetailShirts(props) {
 
       </div>
 
-        <button className={userDesc.length > 0 ? 'review_submit' : 'btn_disable'} onClick={post} disabled={isValid ? false : true} >리뷰등록</button>
+        <button className={userDesc.length > 0 ? 'review_submit' : 'btn_disable'} onClick={post} disabled={userDesc.length > 0 ? false : true} >리뷰등록</button>
 
 
       <ul className='review_list_box'>
