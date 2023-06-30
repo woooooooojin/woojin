@@ -151,7 +151,7 @@ a{
 
 .pop_swiper{
     width: 100%;
-    height: 600px;
+    /* height: 600px; */
 }
 .pop_slide{
     width: 30%;
@@ -219,6 +219,79 @@ a{
 }
 .sns_wrap img:hover{
     transform: scale(1);
+}
+
+
+
+/***********recommand***********/
+
+.recommand_wrap{
+    display: flex;
+}
+.rec_box{
+    width: calc(25% - 25px);
+    margin-left: 20px;
+    position: relative;
+}
+.rec_box:last-child{
+    margin-right: 20px;
+}
+.rec_box img{
+    width: 100%;
+}
+.rec_title{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+}
+.rec_price{
+    font-size: 18px;
+    text-align: right;
+    padding-right: 5px;
+}
+
+.hover_box{
+    width: 220px;
+    height: 130px;
+    border: 1px solid #ccc;
+    position: absolute;
+    top: 40%;
+    right: 40%;
+    background-color: #fff;
+    opacity: 0;
+    transition: .3s;
+    border-radius: 10px;
+    padding: 5px;
+}
+.hover_box p:nth-child(1){
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+}
+.hover_box p:nth-child(2){
+    font-size: 14px;
+    text-align: right;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+
+.circle{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #002053;
+    color: #fff;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    line-height: 22px;
+    position: absolute;
+    top: 35%;
+    right: 45%;
+}
+.hover_wrap:hover .hover_box{
+    opacity: 1;
 }
 
 

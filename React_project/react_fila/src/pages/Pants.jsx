@@ -41,7 +41,7 @@ export default function Pants() {
     <div>
 
 <div className="category_tit">
-        <h2>Shirts</h2>
+        <h2>Pants</h2>
       </div>
 
       <div className="itembox_wrap">

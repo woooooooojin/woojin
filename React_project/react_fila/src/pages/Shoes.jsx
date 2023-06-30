@@ -43,7 +43,7 @@ export default function Shoes() {
   return (
     <div>
 
-<div className="category_tit">
+      <div className="category_tit">
         <h2>Shoes</h2>
       </div>
 

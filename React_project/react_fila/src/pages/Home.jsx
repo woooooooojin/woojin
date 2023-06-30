@@ -7,6 +7,7 @@ import Sns from '../components/Sns'
 
 import { useDispatch } from 'react-redux';
 import { addItem } from '../pages/store';
+import Recommand from '../components/Recommand'
 
 
 export default function Home() {
@@ -27,13 +28,22 @@ export default function Home() {
           <h4>MAGAZINE</h4>
         </div>
 
-        <Magazine />
+        <Magazine /> 
+        
+        
+        <div className="home_title">
+          <h4>추천스타일</h4>
+        </div>
+        <Recommand/>
+
 
         <div className="home_title">
           <h4>SNS</h4>
         </div>
 
         <Sns/>
+
+       
 
       </div>
 
