@@ -13,6 +13,8 @@ import styled from 'styled-components'
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
+import { motion } from "framer-motion";
+
 
 
 const Button = styled.button`
@@ -112,8 +114,8 @@ export default function PopSwiper() {
                     popData.map((val,idx)=>{
                         return(
                         <SwiperSlide key={idx} className='pop_slide'>
-                            <div className="pop_box">
-                                <img src={val.image} alt="img" />
+                            <div className="pop_box" >
+                                <motion.img src={val.image} alt="img" whileHover={{ scale: 1.07 }} transition={{ type: "spring", damping: 3 }}  />
                                 <p className='pop_tit'>{val.title}</p>
                                 <p className='pop_price'>{val.price.toLocaleString('kr-KR') + '원'}</p>
                                 <div className="btn_wrap">

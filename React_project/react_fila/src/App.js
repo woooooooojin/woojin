@@ -21,6 +21,7 @@ import { useState } from 'react';
 import DetailShoes from './pages/DetailShoes';
 import DetailTennis from './pages/DetailTennis';
 
+import { motion } from "framer-motion"
 
 function App() {
 
@@ -28,8 +29,11 @@ function App() {
   const [pants] = useState(pantsData)
   const [shoes] = useState(shoesData)
   const [tennis] = useState(tennisData)
+
+
   return (
     <div className="App">
+      
       <Header/>
       <Nav/>
       
@@ -52,7 +56,9 @@ function App() {
 
       <Footer/>
 
-      <button 
+      <motion.button
+        animate={{ scale: [1, 1.2, 1] }}
+        transition={{ duration: 3, times: [0, 0.2, 1],repeat: Infinity}}
         className='top_btn'
         onClick={() => {
         window.scrollTo({
@@ -60,9 +66,8 @@ function App() {
           });
         }}>
         top
-      </button>
-
-
+      </motion.button>
+     
 
     </div>
   );

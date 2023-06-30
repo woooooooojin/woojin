@@ -1,6 +1,8 @@
 import React from 'react'
 import './components.css' 
 
+import { motion } from "framer-motion";
+
 
 
 
@@ -37,10 +39,12 @@ export default function Magazine() {
             {
                 mgzData.map((val,idx)=>{
                     return(
-                    <div className="mgz_box" key={idx}>
+                    <motion.div whileHover={{ scale: 1.06 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className='mgz_ex' key={idx}>
+                      <div className="mgz_box">
                         <img src={val.image} alt="img" />
                         <p>{val.title}</p>
-                    </div>
+                      </div>
+                    </motion.div>
                     )
                         
                 })

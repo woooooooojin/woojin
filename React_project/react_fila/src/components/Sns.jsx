@@ -2,7 +2,6 @@ import React from 'react'
 import './components.css' 
 import styled from 'styled-components'
 
-
 const SnsBox = styled.div`
 
     width: calc(20% - 24px);
@@ -71,6 +70,8 @@ export default function Sns() {
        
       ]
 
+
+   
 
   return (
     <div>

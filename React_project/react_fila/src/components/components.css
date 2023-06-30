@@ -152,11 +152,13 @@ a{
 .pop_swiper{
     width: 100%;
     /* height: 600px; */
+
 }
 .pop_slide{
     width: 30%;
 }
 .pop_box{
+
 }
 .pop_slide img{
     width: 100%;
@@ -188,11 +190,11 @@ a{
     display: flex;
     width: 100%;
 }
-.mgz_box{
+/* .mgz_box{
     width: calc(25% - 25px);
     margin-left: 20px;
     cursor: pointer;
-}
+} */
 .mgz_box:last-child{
     margin-right: 20px;
 }
@@ -202,6 +204,12 @@ a{
 .mgz_box p{
     text-align: center;
     font-size: 24px;
+}
+.mgz_ex{
+    width: calc(25% - 25px);
+    margin-left: 20px;
+    cursor: pointer;
+    overflow: hidden;
 }
 
 /*********sns********/
