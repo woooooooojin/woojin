@@ -7,7 +7,7 @@ import styled from 'styled-components'
 import { useDispatch } from 'react-redux';
 import { addItem } from '../pages/store';
 import shirtsData from './shirtsData';
-
+import { motion } from "framer-motion";
 
 const Button = styled.button`
 
@@ -39,7 +39,24 @@ export default function Shirts() {
   const [shirts] = useState(shirtsData)
   const dispatch = useDispatch()
 
-  
+  const list = {
+    hidden: {
+      opacity: 0
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        when: "beforeChildren",
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0 }
+  };
+
 
   return (
     <div>
@@ -48,13 +65,13 @@ export default function Shirts() {
         <h2>Shirts</h2>
       </div>
 
-      <div className="itembox_wrap">
+      <motion.div className="itembox_wrap" variants={list} initial="hidden" animate="visible">
 
         {
           shirts.map((shirt,idx) => {
             return(
 
-              <div className="item_box" key={idx}>
+              <motion.div className="item_box" key={idx} variants={item}>
                 <Link to={`/detailshirts/${idx}`}>
                   <div className="item_img_wrap">
                     <img src={shirt.image} alt="img"/>
@@ -69,7 +86,7 @@ export default function Shirts() {
                 
                 <Button onClick={()=>{dispatch(addItem({id: shirt.id, img: shirt.image, title: shirt.title, price : shirt.price ,count: 1}), alert('장바구니에 담겼습니다.'))}}>장바구니</Button>
                 <Button onClick={()=>{dispatch(addItem({id: shirt.id, img: shirt.image, title: shirt.title, price : shirt.price ,count: 1}), alert('장바구니를 확인해주세요.'))}}>구매하기</Button>
-              </div>
+              </motion.div>
 
             )
           })
@@ -79,7 +96,7 @@ export default function Shirts() {
 
 
 
-      </div>
+      </motion.div>
 
 
     </div>

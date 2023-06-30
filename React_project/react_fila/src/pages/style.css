@@ -317,7 +317,8 @@
     font-size: 0;
 }
 .review_box_img{
-    width: 30%
+    width: 30%;
+    font-size: 0;
 }
 .review_box_img img{
     width: 100%;
@@ -326,6 +327,7 @@
 .review_box{
     width: calc(70% - 20px);
     margin-left: 20px;
+    padding-right: 20px;
 }
 .review_box input{
     width: 100%;

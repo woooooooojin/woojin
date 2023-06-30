@@ -29,6 +29,8 @@ const Button = styled.button`
  `
 
 export default function DetailShirts(props) {
+
+
   const {shirts} = props
   const {id} = useParams()
   const dispatch = useDispatch()
