@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import './style.css'
 import {useDispatch, useSelector} from 'react-redux'
-import { addItem } from './store';
+import { addItem, deleteReivew } from './store';
 import styled from 'styled-components'
 
 const Button = styled.button`
@@ -44,11 +44,14 @@ export default function DetailShirts(props) {
   }
 
   //댓글구현
-  const [userName, setUserName] = useState('') //유저이름
-  const [nameList, setNameList] = useState([])//이름리스트
+  // const [userName, setUserName] = useState('') 
+  // const [nameList, setNameList] = useState([])
 
   const [userDesc, setUserDesc] = useState('') //리뷰내용
   const [reviewList, setReviewList] = useState([])//리뷰리스트
+
+  let [isValid , setIsValid] = useState(false)
+
 
   let post = e =>{
     const copyReviewList = [...reviewList] //리뷰리스트 내용 받아옴
@@ -66,14 +69,27 @@ export default function DetailShirts(props) {
     // setUserName('')
   }
 
-  // const reviews = [nameList ,reviewList]
 
 
-  //삭제
-  // const delReview = e =>{
-  //   reviewList.concat(reviewList,1)
-  // }
+  //리뷰삭제
+  const removeComment = (id) => {
+    return setReviewList(reviewList.filter((comment) => comment.id == id)) ;
+  };
+  // !== console로는 담기긴하는데,,,
+  //console.log(reviewList.filter((comment) => comment.id !== id))
 
+
+  //   // user.id와 id가 일치하지 않는 원소만 추출해서 새로운 배열을 만듬
+  //   // user.id === id인 원소만 제거함. true인 원소들만 반환,,,
+
+  // const onRemove = (id) => {
+  //   let remove = reviewList.filter((review) => review.id !== id);
+  //   setReviewList(remove)
+  // };
+
+ 
+
+ 
 
 
   return (
@@ -189,6 +205,9 @@ export default function DetailShirts(props) {
                 onChange={e=>{
                   setUserDesc(e.target.value)
                 }}
+                onKeyUp={e=>{
+                  e.target.value.length > 0 ? setIsValid(true) : setIsValid(false)
+                }}
                
                 value={userDesc}
 
@@ -204,7 +223,7 @@ export default function DetailShirts(props) {
 
       </div>
 
-        <button className='review_submit' onClick={post} >리뷰등록</button>
+        <button className={userDesc.length > 0 ? 'review_submit' : 'btn_disable'} onClick={post} disabled={isValid ? false : true} >리뷰등록</button>
 
 
       <ul className='review_list_box'>
@@ -222,10 +241,10 @@ export default function DetailShirts(props) {
         {
           reviewList.map((review,idx)=>{
             return(
-              <div key={idx}>
-                <p>{review}</p>
-                {/* <span onClick={delReview}>X</span> */}
-              </div>
+              <li key={idx}>
+                {idx + 1}) {review}<span className='li_span' onClick={removeComment}>X</span>
+                
+              </li>
             )
           })
         }

@@ -313,6 +313,8 @@
     display: flex;
     justify-content: center;
     margin-top: 50px;
+    border: 1px solid #ccc;
+    font-size: 0;
 }
 .review_box_img{
     width: 30%
@@ -350,10 +352,30 @@
     cursor: pointer;
     border-radius: 10px;
 }
-.asdf{
-    width: 50px;
+.btn_disable{
+    background-color: #ccc;
+    cursor:not-allowed;
+    width: 200px;
+    height: 40px;
+    border: 1px solid #ccc;
+    display: block;
+    border-radius: 10px; 
+    margin: 20px auto;
 }
-.r_list{
-    width: 50px;
-    height: 20px;
+.review_list_box{
+    width: 100%;
+    margin: 0 auto;
+
+}
+.review_list_box li{
+    width: 1000px;
+    margin: 0 auto;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    position: relative;
+    
+}
+.review_list_box li .li_span{
+    position: absolute;
+    right: 20px;
 }
