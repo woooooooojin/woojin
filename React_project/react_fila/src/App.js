@@ -29,8 +29,6 @@ function App() {
       
 
 
-
-
       <Routes>
         <Route path='/' element={<Home />}></Route>
          <Route path='shirts/*' element={<Shirts/>}></Route>
@@ -45,6 +43,19 @@ function App() {
       </Routes>
 
       <Footer/>
+
+      <button 
+        className='top_btn'
+        onClick={() => {
+        window.scrollTo({
+          top: 0,
+          });
+        }}>
+        top
+      </button>
+
+
+
     </div>
   );
 }
