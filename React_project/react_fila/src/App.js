@@ -15,13 +15,16 @@ import DetailPants from './pages/DetailPants'
 
 import shirtsData from './pages/shirtsData'
 import pantsData from './pages/pantsData'
+import shoesData from './pages/shoesData'
 import { useState } from 'react';
+import DetailShoes from './pages/DetailShoes';
 
 
 function App() {
 
   const [shirts] = useState(shirtsData)
   const [pants] = useState(pantsData)
+  const [shoes] = useState(shoesData)
   return (
     <div className="App">
       <Header/>
@@ -39,6 +42,7 @@ function App() {
 
          <Route path='detailshirts/:id' element={<DetailShirts shirts={shirts}/>} ></Route>
          <Route path='detailpants/:id' element={<DetailPants pants={pants}/>} ></Route>
+         <Route path='detailshoes/:id' element={<DetailShoes shoes={shoes}/>} ></Route>
         
       </Routes>
 
