@@ -61,7 +61,7 @@ export default function Login() {
         onClick={() => {
           let loginState = false;
         
-          members.forEach((member) => {
+          members.map((member) => {
             if (member.id === id && member.pw === pw) {
               loginState = true;
             }
