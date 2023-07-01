@@ -21,6 +21,20 @@ a{
 .head_wrap .blank{
     width: 33.333%;
 }
+.login{
+    width: 100px;
+    height: 40px;
+    border: 1px solid #ccc;
+    line-height: 40px;
+    border-radius: 20px;
+    margin-left: 100px;
+    cursor: pointer;
+    transition: .5s;
+}
+.login:hover{
+    background-color: #002053;
+    color: #fff;
+}
 .head_wrap .logo{
     width: 33.333%;
 }
@@ -293,7 +307,7 @@ a{
     font-weight: bold;
     font-size: 25px;
     text-align: center;
-    line-height: 22px;
+    line-height: 25px;
     position: absolute;
     top: 35%;
     right: 45%;
@@ -301,6 +315,41 @@ a{
 .hover_wrap:hover .hover_box{
     opacity: 1;
 }
+
+
+
+/*********login*******/
+.login_wrap{
+    width: 1200px;
+    margin: 0px auto;
+}
+.login_id{
+    display: block;
+    width: 300px;
+    height: 30px;
+    margin: 10px auto;
+    outline: none;
+}
+.login_pw{
+    display: block;
+    width: 300px;
+    height: 30px;
+    margin: 10px auto;
+    outline: none;
+}
+.loginButton{
+    width: 300px;
+    height: 30px;
+    border: 1px solid #ccc;
+    background-color: #002053;
+    color: #fff;
+    margin: 30px auto;
+    display: block;
+    cursor: pointer;
+}
+
+
+
 
 
 /*******footer*****/

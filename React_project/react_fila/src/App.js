@@ -9,6 +9,7 @@ import Tennis from './pages/Tennis';
 import Cart from './pages/Cart';
 import Home from './pages/Home';
 import Footer from './components/Footer';
+import Login from './pages/Login'
 
 import DetailShirts from './pages/DetailShirts'
 import DetailPants from './pages/DetailPants'
@@ -46,6 +47,7 @@ function App() {
          <Route path='shoes' element={<Shoes/>}></Route>
          <Route path='tennis' element={<Tennis/>}></Route>
          <Route path='cart' element={<Cart/>}></Route>
+         <Route path='login' element={<Login/>}></Route>
 
          <Route path='detailshirts/:id' element={<DetailShirts shirts={shirts}/>} ></Route>
          <Route path='detailpants/:id' element={<DetailPants pants={pants}/>} ></Route>

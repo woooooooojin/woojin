@@ -11,7 +11,11 @@ export default function Header() {
     <div>
 
         <div className="head_wrap">
-            <div className="blank"></div>
+            <div className="blank">
+                <Link to={'/login'}>
+                    <div className="login">로그인</div>
+                </Link>
+            </div>
             <div className="logo">
                 <Link to='/'>
                     <img src ={process.env.PUBLIC_URL + '/img/LOGO/logo02.png'} alt="img" />
