@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
-import { Link, Navigate } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 
 export default function Login() {
 
+  const navigate = useNavigate()
+  
   const members = [
     {
       id:'woojin',
@@ -23,7 +25,7 @@ export default function Login() {
   let [pw, setPw] = useState('')
 
   const goMain = () => {
-    Link('/home');
+    navigate('/');
   };
 
   let i 
@@ -31,11 +33,14 @@ export default function Login() {
   return (
     <div>
 
-      <div className="category_tit">
-        <h2>로그인</h2>
-      </div>
+     
 
       <div className="login_wrap">
+        <div className="category_tit">
+          <h2>로그인</h2>
+        </div>
+
+
         <input 
         type="text" 
         placeholder="아이디 입력"
@@ -69,6 +74,7 @@ export default function Login() {
         
           if (loginState) {
             alert('로그인 성공');
+            goMain()
           } else {
             alert('아이디 혹은 비밀번호가 일치하지 않습니다.');
           }
