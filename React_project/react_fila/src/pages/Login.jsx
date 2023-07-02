@@ -27,6 +27,9 @@ export default function Login() {
   const goMain = () => {
     navigate('/');
   };
+  const goJoin = () => {
+    navigate('/join');
+  };
 
   let i 
 
@@ -80,6 +83,13 @@ export default function Login() {
           }
         }}>
         로그인
+      </button>
+
+      <button
+        type='button'
+        className="loginButton joinbtn"
+        onClick={()=>{goJoin()}}>
+        회원가입
       </button>
       </div>
 

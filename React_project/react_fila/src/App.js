@@ -23,6 +23,7 @@ import DetailShoes from './pages/DetailShoes';
 import DetailTennis from './pages/DetailTennis';
 
 import { motion } from "framer-motion"
+import Join from './pages/Join';
 
 function App() {
 
@@ -48,6 +49,7 @@ function App() {
          <Route path='tennis' element={<Tennis/>}></Route>
          <Route path='cart' element={<Cart/>}></Route>
          <Route path='login' element={<Login/>}></Route>
+         <Route path='join' element={<Join/>}></Route>
 
          <Route path='detailshirts/:id' element={<DetailShirts shirts={shirts}/>} ></Route>
          <Route path='detailpants/:id' element={<DetailPants pants={pants}/>} ></Route>
