@@ -15,7 +15,9 @@ a:visited {
     color: black;
 }
 
-
+span.important{
+    color: #537188;
+}
 
 .container {
     width: 1200px;
