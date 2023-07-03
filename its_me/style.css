@@ -404,7 +404,7 @@ section .about_self .right h4 {
 }
 
 .cardflip ul li {
-    width: calc(100% - 75% - 25px);
+    width: calc(100% - 80% - 24px);
     height: 300px;
     margin-right: 20px;
     margin-bottom: 50px;
@@ -442,18 +442,29 @@ section .about_self .right h4 {
 .cardflip ul li:nth-child(8) {
     transform: translateX(700px);
 }
+.cardflip ul li:nth-child(9) {
+    transform: translateX(500px);
+}
+.cardflip ul li:nth-child(10) {
+    transform: translateX(300px);
+}
+
+
+
 
 .cardflip ul li:nth-child(1) {
     margin-left: 20px;
 }
 
-.cardflip ul li:nth-child(5) {
+.cardflip ul li:nth-child(6) {
     margin-left: 20px;
 }
 
-.cardflip ul li:nth-child(4n) {
+.cardflip ul li:nth-child(5n) {
     margin-right: 0;
 }
+
+
 
 .cardflip ul li .card_wrap {
     width: 100%;
@@ -667,6 +678,8 @@ section .about_self .right h4 {
 
 .portfolio_wrap .portfolio_box .hover_box .hover_wrap h4 {
     position: absolute;
+    width: 100%;
+    text-align: center;
     top: 30%;
     left: 50%;
     transform: translateX(-50%);
