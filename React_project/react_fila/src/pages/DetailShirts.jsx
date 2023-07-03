@@ -15,13 +15,14 @@ const Button = styled.button`
     margin-top: 60px;
     cursor: pointer;
     font-size: 18px;
-    background-color: transparent;
+    background-color:  #002053;
+    color: #fff;
     transition: .3s;
     &:hover{
-        background-color: #002053;
-        color:#fff;
+        background-color: #fff;
+        color:#002053;
         box-shadow: 0 0 10px black;
-        border: 1px solid #002053;
+        /* border: 1px solid #002053; */
     }
     &:nth-child(2){
         margin-right: 20px;
@@ -201,7 +202,7 @@ export default function DetailShirts(props) {
           <div className="review_desc">
             <textarea className="desc_input"
                 type='text'
-                placeholder='내용'
+                placeholder='리뷰를 입력하세요.'
                 name='desc'
                 onChange={e=>{
                   setUserDesc(e.target.value)
@@ -214,7 +215,7 @@ export default function DetailShirts(props) {
             />
           </div>
 
-
+          <button className={userDesc.length > 0 ? 'review_submit' : 'btn_disable'} onClick={post} disabled={userDesc.length > 0 ? false : true} >리뷰등록</button>
 
         </div>
 
@@ -222,7 +223,7 @@ export default function DetailShirts(props) {
 
       </div>
 
-        <button className={userDesc.length > 0 ? 'review_submit' : 'btn_disable'} onClick={post} disabled={userDesc.length > 0 ? false : true} >리뷰등록</button>
+        
 
 
       <ul className='review_list_box'>

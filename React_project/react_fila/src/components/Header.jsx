@@ -12,9 +12,9 @@ export default function Header() {
 
         <div className="head_wrap">
             <div className="blank">
-                <Link to={'/login'}>
+                {/* <Link to={'/login'}>
                     <div className="login">로그인</div>
-                </Link>
+                </Link> */}
             </div>
             <div className="logo">
                 <Link to='/'>
@@ -22,13 +22,13 @@ export default function Header() {
                 </Link>
             </div>
             <div className="cart">
-                <Link to='/cart'>
+                {/* <Link to='/cart'>
                     <div className="cart_icon_wrap">
                         <img src={process.env.PUBLIC_URL + '/img/cart.png'} alt="cart" />
                         <p>{list.length}</p>
                     </div>
                    
-                </Link>
+                </Link> */}
             </div>
         </div>
 

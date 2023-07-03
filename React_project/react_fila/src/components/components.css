@@ -79,27 +79,25 @@ a{
     margin-top: 20px;
 }
 .nav_wrap li{
-    width: calc(20% - 24px);
+    width: calc(14.2857% );
     text-align: center;
     height: 50px;
     line-height: 50px;
-    border-radius: 10px;
     margin-bottom: 20px;
-    margin-right: 20px;
+    background-color: #002053;
+    /* margin-right: 20px; */
 }
 .nav_wrap li a{
     display: block;
     width: 100%;
     height: 100%;
     transition: .5s;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    color: #002053;
-    font-size: 20px;
+    color: #fff;
+    font-size: 18px;
 }
-.nav_wrap li:first-child{
+/* .nav_wrap li:first-child{
     margin-left: 20px;
-}
+} */
 
 
 /**********swiper**********/
