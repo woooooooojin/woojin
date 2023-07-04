@@ -137,21 +137,27 @@ export default function Join() {
         onClick={() => {
           let joinState = false;
           if (
-            emailCheck ===true &&
-            pwCheck ===true &&
-            idCheck===true
+            emailCheck == true &&
+            pwCheck == true  &&
+            idCheck == true
           ) {
             joinState = true;
-          }else{
-            joinState = false;
-          }
-        
-          if (joinState) {
             alert('회원가입 성공');
             goLoin()
-          } else {
+          }else if( 
+            emailCheck == false ||
+            pwCheck == false  ||
+            idCheck == false){
+            joinState = false;
             alert('양식을 확인하세요.');
           }
+        
+          // if (joinState) {
+          //   alert('회원가입 성공');
+          //   goLoin()
+          // } else {
+          //   alert('양식을 확인하세요.');
+          // }
         }}>
         가입하기
       </button>
