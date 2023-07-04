@@ -448,6 +448,11 @@ main{
     left: 15px;
 }
 
+
+
+.main_wrap .first_box .first_left img:nth-child(2).br_main{
+    height: 300px;
+}
 /********footer*********/
 footer{
     margin-top: 100px;
