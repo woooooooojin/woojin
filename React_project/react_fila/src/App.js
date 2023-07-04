@@ -60,9 +60,7 @@ function App() {
 
       <Footer/>
 
-      <motion.button
-        animate={{ scale: [1, 1.2, 1] }}
-        transition={{ duration: 3, times: [0, 0.2, 1],repeat: Infinity}}
+      <button
         className='top_btn'
         onClick={() => {
         window.scrollTo({
@@ -70,7 +68,7 @@ function App() {
           });
         }}>
         top
-      </motion.button>
+      </button>
      
 
     </div>
