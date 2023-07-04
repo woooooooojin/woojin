@@ -517,6 +517,7 @@ section .about_self .right h4 {
     transform: rotateY(180deg);
     position: absolute;
     backface-visibility: hidden;
+    font-size: 14px;
 }
 
 .progress_wrap {}
