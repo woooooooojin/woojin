@@ -435,7 +435,7 @@ section .about_self .right h4 {
 }
 
 .cardflip ul li:nth-child(5) {
-    transform: translateX(1400px);
+    transform: translateX(-1400px);
 }
 
 .cardflip ul li:nth-child(6) {
