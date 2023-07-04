@@ -122,7 +122,6 @@ main button.download {
     border: 3px solid white;
     border-radius: 20px;
     padding: 15px 50px;
-    color: white;
     font-weight: bold;
     cursor: pointer;
     position: absolute;
@@ -130,6 +129,14 @@ main button.download {
     right: 50%;
     transform: translateX(50%);
     z-index: 10;
+    transition: .3s;
+}
+main button.download:hover{
+    box-shadow: 0 0 20px #fff;
+}
+main button.download a{
+    color: #fff;
+    font-size: 14px;
 }
 
 /* main .mouse{
