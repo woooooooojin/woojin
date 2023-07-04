@@ -41,7 +41,7 @@ export default function Join() {
 
 
     //id
-    const idCheck = (joinId) => {//형식에 맞을 경우, true 리턴
+    const idCheck = (joinId) => {
       return testId.test(joinId); 
     }
     const userIdCheck = (joinId) => {
@@ -57,7 +57,7 @@ export default function Join() {
 
 
     //passwd
-    const pwCheck = (joinPw) => {//형식에 맞을 경우, true 리턴
+    const pwCheck = (joinPw) => {
       return testPw.test(joinPw); 
     }
 
@@ -137,27 +137,23 @@ export default function Join() {
         onClick={() => {
           let joinState = false;
           if (
-            emailCheck == true &&
-            pwCheck == true  &&
-            idCheck == true
+            emailCheck(joinMail)===true &&
+            idCheck(joinId)===true &&
+            pwCheck(joinPw) === true 
           ) {
             joinState = true;
-            alert('회원가입 성공');
-            goLoin()
-          }else if( 
-            emailCheck == false ||
-            pwCheck == false  ||
-            idCheck == false){
+          }else{
+
             joinState = false;
-            alert('양식을 확인하세요.');
+
           }
         
-          // if (joinState) {
-          //   alert('회원가입 성공');
-          //   goLoin()
-          // } else {
-          //   alert('양식을 확인하세요.');
-          // }
+          if (joinState) {
+            alert('회원가입 성공');
+            goLoin()
+          } else {
+            alert('양식을 확인하세요.');
+          }
         }}>
         가입하기
       </button>
