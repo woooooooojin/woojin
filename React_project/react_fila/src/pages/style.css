@@ -381,4 +381,5 @@
 .review_list_box li .li_span{
     position: absolute;
     right: 20px;
+    cursor: pointer;
 }
