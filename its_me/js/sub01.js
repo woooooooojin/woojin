@@ -84,9 +84,10 @@ gsap.from(swiperBox, 0.3, {
 const scrollRight = document.querySelector('.scroll_right')
 const scrollLeft = document.querySelector('.scroll_left')
 
+let scrollBottom = document.body.scrollHeight - 1000;
 window.addEventListener('scroll', () => {
 
-    if(window.scrollY >= 3500){
+    if(window.scrollY >= scrollBottom){
         scrollRight.classList.add('hide1')
         scrollLeft.classList.add('hide2')
     }else{

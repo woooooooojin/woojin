@@ -421,7 +421,7 @@ main{
 .scrollbox{
     animation: scrollani 2.5s infinite ease-in-out;
     position: fixed;
-    bottom: 5%;
+    bottom: 20%;
     transition: .3s;
 }
 .scrollbox i{
@@ -473,7 +473,7 @@ footer{
     text-align: center;
     line-height: 40px;
     position: fixed;
-    bottom: 10px;
+    bottom: 35px;
     right: 10px;
     transition: .3s;
     z-index: 999;
