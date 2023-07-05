@@ -464,3 +464,21 @@ footer{
 }
 
 
+.top_btn{
+    width: 40px;
+    height: 40px;
+    background-color: #537188;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    transition: .3s;
+    z-index: 999;
+    cursor: pointer;
+}
+.top_btn.on{
+    right: -100px;
+}

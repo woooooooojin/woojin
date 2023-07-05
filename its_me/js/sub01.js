@@ -96,3 +96,28 @@ window.addEventListener('scroll', () => {
    
 
 })
+
+
+const topBtn = document.querySelector('.top_btn')
+
+window.addEventListener('scroll',()=>{
+    if(scrollY>200){
+        topBtn.classList.remove('on')
+    }else{
+        topBtn.classList.add('on')
+    }
+})
+
+
+
+
+$(function() {
+    $('.top_btn').click(function (e) {
+        e.preventDefault();
+
+        $('html, body').stop().animate({
+            scrollTop: 0,
+        }, 300)
+    })
+
+})
