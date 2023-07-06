@@ -34,8 +34,10 @@
       for(let i = 1; i<=10; i++){
          if(floor.includes(i)){
             output.push(i)
-            
          }
+      //    if(floor.indexOf(i) === -1){
+      //       output.push(i)
+      //   }
        
       }
 
