@@ -27,7 +27,6 @@
 
 
    let floor = [...new Set(input)] ///중복값제거,,,
-  
    console.log(floor)
 
     {{ 
