@@ -19,22 +19,31 @@
 
  function question(input)
  {
-   let output = []
-   input.sort((a,b)=>{ //오름차순으로 정렬,,,
-      return a - b;
-   })
+   let output=[];
+
+   input.sort(function(a,b){
+      return a-b;
+   }) // 오름차순,,,,
+
+
+   let floor = [...new Set(input)] ///중복값제거,,,
+  
+   console.log(floor)
 
     {{ 
 
-      for(let i =0; i<=10; i++){
-         if(input.includes(input[i])){
-            output.push(input[i])
+      for(let i = 1; i<=10; i++){
+         if(floor.includes(i)){
+            output.push(i)
+            
          }
+       
       }
 
-
+      
      }}
 
-    return output;
+ return output;
+
  }
- console.log(question([2,4,6,3,4]))
+ console.log(question([7,2,7,3,9]))
