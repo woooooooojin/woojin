@@ -20,7 +20,7 @@
 function question(input) {
    let output = [];
 
-   input.sort(function (a, b) {
+   output.sort(function (a, b) {
       return a - b;
    }) // 오름차순,,,,
 
@@ -28,20 +28,23 @@ function question(input) {
    let floor = [...new Set(input)] ///중복값제거,,,
    console.log(floor)
 
+
    {
       {
 
-         for (let i = 1; i <= 10; i++) {
+         for (let i = 0; i <= 9; i++) {
             if (floor.includes(i)) {
                output.push(i)
             }
 
+
          }
 
-         const sameNum = input.indexOf(floor === floor)
-         output.splice(sameNum,1)
 
-         console.log(output.splice(sameNum,1))
+         const sameNum = input.indexOf(input === input)
+         output.splice(sameNum)
+
+         console.log(output.splice(sameNum))
 
 
       }
@@ -50,4 +53,4 @@ function question(input) {
    return output;
 
 }
-console.log(question([7, 2, 7, 3, 9]))
+console.log(question([7,2,7,3,9]))
