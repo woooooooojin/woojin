@@ -17,34 +17,39 @@
  * {{ Code }} 부분에 코드를 작성해 주시면 됩니다.
  */
 
- function question(input)
- {
-   let output=[];
+function question(input) {
+   let output = [];
 
-   input.sort(function(a,b){
-      return a-b;
+   input.sort(function (a, b) {
+      return a - b;
    }) // 오름차순,,,,
 
 
    let floor = [...new Set(input)] ///중복값제거,,,
    console.log(floor)
 
-    {{ 
+   {
+      {
 
-      for(let i = 1; i<=10; i++){
-         if(floor.includes(i)){
-            output.push(i)
+         for (let i = 1; i <= 10; i++) {
+            if (floor.includes(i)) {
+               output.push(i)              
+            }
+
          }
-      //    if(floor.indexOf(i) === -1){
-      //       output.push(i)
-      //   }
+
+         
+         const sameNum = input.indexOf(input == input)
+         output.splice(sameNum)
+
+         console.log(output.splice(sameNum))
        
+       
+
       }
+   }
 
-      
-     }}
+   return output;
 
- return output;
-
- }
- console.log(question([7,2,7,3,9]))
+}
+console.log(question([7, 2, 7, 3, 9]))
