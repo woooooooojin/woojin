@@ -33,18 +33,17 @@ function question(input) {
 
          for (let i = 1; i <= 10; i++) {
             if (floor.includes(i)) {
-               output.push(i)              
+               output.push(i)
             }
 
          }
 
-         
-         const sameNum = input.indexOf(input == input)
-         output.splice(sameNum)
 
-         console.log(output.splice(sameNum))
-       
-       
+         const sameNum = input.indexOf(input === input)
+         output.splice(sameNum,1)
+
+         console.log(output.splice(sameNum,1))
+
 
       }
    }
