@@ -39,9 +39,9 @@ function question(input) {
          }
 
          const sameNum = input.indexOf(floor === floor)
-         floor.splice(sameNum,1)
+         output.splice(sameNum,1)
 
-         console.log(floor.splice(sameNum,1))
+         console.log(output.splice(sameNum,1))
 
 
       }
