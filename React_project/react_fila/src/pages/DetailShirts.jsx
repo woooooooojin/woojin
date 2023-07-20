@@ -82,7 +82,7 @@ export default function DetailShirts(props) {
     copyReviewList.splice(idx, 1);
      
     setReviewList(copyReviewList);
-    };
+  };
 
 
 
