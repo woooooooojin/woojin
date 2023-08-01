@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.wrap{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.wrap img{
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+.inner_wrap{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 10;
+}
+
+.hidden{
+    display: none;
+}
+
+.title{
+    margin-top: 50px;
+    margin-bottom: 70px;
+    font-size: 50px;
+}
+
+.clock{
+    text-align: center;
+    font-size: 22px;
+    margin-top: 20px;
+    position: absolute;
+    top: 0px;
+    right: 20px;
+
+}
+#greet{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 30px;
+}
+.login_input,
+.todo_input{
+    width: 350px;
+    height: 50px;
+    border: 0;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+    outline: none;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 24px;
+
+
+}
+.todo_input{
+    width: 350px;
+    font-size: 24px;
+}
+.todo_input::placeholder{
+    font-size: 24px;
+}
+.login_btn{
+    width: 50px;
+    height: 30px;
+    background-color: transparent;
+    border: 1px solid black;
+    margin-left: 10px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.login_wrap{
+    width: 350px;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+
+
+
+
+.quotes{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+}
+.first{
+    font-size: 22px;
+}
+.second{
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.backimg{
+    width: 100%;
+    height: 100%;
+}
+
+#todo_list{
+    
+}
+#todo_list li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    width: 350px;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding:  0 10px;
+
+}
+#todo_list li span{
+    font-size: 22px;
+}
+#todo_list li button{
+    margin-left: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+
+}

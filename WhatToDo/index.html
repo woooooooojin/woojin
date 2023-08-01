@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What To Do</title>
+    <link rel="stylesheet" href="./main.css">
+    <script src="./main.js" defer></script>
+    <script src="./quote.js" defer></script>
+    <!-- <script src="./weather.js" defer></script> -->
+</head>
+
+<body>
+
+    <div class="wrap">
+
+        <div class="inner_wrap">
+            <h1 class="title">What I To Do ?</h1>
+            <h2 class="clock">00:00</h2>
+
+            <form class="hidden" id="login_form">
+                <div class="login_wrap">
+                    <input class="login_input" type="text" required maxlength="15" placeholder="사용자 이름" />
+                    <button class="login_btn">로그인</button>
+                </div>
+
+            </form>
+
+
+            <h1 id="greet" class="hidden"></h1>
+
+            <form id="todo">
+                <input type="text" placeholder="오늘의 할일을 쓰세요 !" class="todo_input">
+            </form>
+
+            <ul id="todo_list"></ul>
+
+            <!--명언-->
+
+        </div>
+        <!--inner wrap-->
+        <div class="quotes">
+            <span class="first"></span><br />
+            <span class="second"></span>
+        </div>
+    </div>
+    <!--wrap-->
+
+
+
+</body>
+
+</html>
