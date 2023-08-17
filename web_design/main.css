@@ -12,7 +12,7 @@ a{
 }
 
 /* 가로슬라이드 */
-/* .wrap{
+.wrap{
     width: 1200px;
     margin: 0 auto;
 }
@@ -24,19 +24,20 @@ a{
 }
 .slide_wrap{
     width: 300%;
+    display: flex;
 }
 .slide{
-    float: left;
+    
 }
 .slide img{
     width: 100%;
     height: auto;
-} */
+}
 
 
 
 /* 세로슬라이드 */
-.wrap{
+/* .wrap{
     width: 1200px;
     margin: 0 auto;
 }
@@ -58,5 +59,31 @@ a{
 .slide img{
     width: 100%;
     height: auto;
+} */
+
+
+/*페이드*/
+/* .wrap{
+    width: 1200px;
+    margin: 0 auto;
 }
+
+.slide_cont{
+    border: 1px solid #ccc;
+}
+.slide_wrap{
+    position: relative;
+
+}
+.slide{
+    position: absolute;
+    top: 0;
+}
+
+.slide img{
+    width: 100%;
+    height: auto;
+}  */
+
+
 
