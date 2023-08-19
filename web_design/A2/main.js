@@ -8,6 +8,16 @@ $(function(){
         $('.sub_menu, .headbg').slideUp(300)
     })
 
+
+    setInterval(() => {
+        $('.slider_wrap').animate({'margin-top' : '-300px'},function(){
+            $('.slider:first').appendTo('.slider_wrap')
+            $('.slider_wrap').css({'margin-top' : '0'})
+        })
+    }, 2000);
+
+
+
 })
 
 // const mainMenu = document.querySelectorAll('.lnb .main_menu li a')
@@ -21,3 +31,4 @@ $(function(){
 //         mainMenu[i].classList.remove('on')
 //     })
 // }
+
