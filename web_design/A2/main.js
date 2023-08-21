@@ -16,6 +16,16 @@ $(function(){
         })
     }, 2000);
 
+  
+
+    // $('.slider:gt(0)').hide()
+    // setInterval(() => {
+    //     $('.slider:first').fadeOut(500).next().fadeIn(1500)
+    //     $('.slider:first').appendTo('.slider_wrap')
+    // }, 2000);
+
+   
+
 
 
 })
