@@ -1,12 +1,10 @@
 $(function(){
 
     $('.lnb_list li').mouseover(function(){
-        $(this).find('.sub_menu').css({'width':'100%'})
-        $(this).find('.sub_menu').css({'display':'block'})
+        $(this).find('.sub_menu').stop().fadeIn(500)
     })
     $('.lnb_list li').mouseleave(function(){
-        $('.sub_menu').css({'width':'0'})
-        $('.sub_menu').css({'display':'none'})
+        $(this).find('.sub_menu').stop().fadeOut(500)
         
     })
 
