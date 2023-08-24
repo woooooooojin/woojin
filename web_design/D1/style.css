@@ -55,10 +55,11 @@ header{
     top: 0;
     right: -150px;
     display: none;
-    background-color: rgba(0, 0, 0, 0.5);
+    
 }
 .sub_menu a{
     transition: .3s;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 .sub_menu li:hover a{
     background-color: black;
@@ -105,6 +106,85 @@ main{
     border: 1px solid #ccc;
 }
 
+.banner_box{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+.img_wrap{
+    width: 70px;
+    height: 70px;
+    border: 1px solid #ccc;
+}
+.banner_desc{
+    width: 280px;
+}
+.banner_icon{
+    width: 50px;
+}
+
+
+.notice_box{
+    width: 100%;
+    height: 235px;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+}
+.tab{
+    width: 60px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-bottom: 0;
+    text-align: center;
+    line-height: 40px;
+}
+.desc_box{
+    border: 1px solid #ccc;
+    width: 100%;
+    height: 160px;
+}
+.desc_box li{
+    display: flex;
+    padding: 0 10px;
+    height: 30px;
+    border-bottom: 1px solid #ccc;
+    line-height: 30px;
+}
+.notice_desc{
+    width: 70%;
+}
+.notice_day{
+    width: 30%;
+    text-align: right;
+}
+
+
+.gal_box{
+    width: 100%;
+    height: 235px;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+}
+.gal_box .desc_box{
+    height: 240px;
+}
+.gal_img{
+    height: 240px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.img{
+    width: 30%;
+    height: 100px;
+    border: 1px solid #ccc;
+}
+
+
+
 
 .slide_section{
     width: calc(100% - 600px);
@@ -125,10 +205,12 @@ main{
 .slide{
     width: 100%;
     height: 100%;
+
 }
 .slide img{
     width: 100%;
     height: 100%;
+
 }
 
 
@@ -137,4 +219,32 @@ footer{
     width: 100%;
     height: 100px;
     border: 1px solid #ccc;
+}
+
+
+.popup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+.pop_wrap{
+    background-color: #fff;
+    width: 500px;
+    height: 400px;
+    border: 1px solid #ccc;
+}
+.pop_desc{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.pop_desc button{
+    width: 50px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
 }

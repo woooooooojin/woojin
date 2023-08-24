@@ -16,3 +16,14 @@ $(function(){
     }, 2000);
 
 })
+
+const popBtn = document.querySelector('.first')
+const popup = document.querySelector('.popup')
+const closeBtn = document.querySelector('.close')
+
+popBtn.addEventListener('click',()=>{
+    popup.style.display = 'block'
+})
+closeBtn.addEventListener('click',()=>{
+    popup.style.display='none'
+})
