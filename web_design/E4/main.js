@@ -1,10 +1,9 @@
 $(function(){
 
-    setInterval(() => {
-        $('.slide_wrap').animate({"margin-top":'100%'},function(){
-            $('.slide:first').appendTo('.slide_wrap')
-            $('.slide_wrap').css({'margin-top':'0'})
-        })
-    }, 2500);
+  $('.slide:gt(0)').hide()
+  setInterval(() => {
+    $('.slide:first').fadeOut(500).next().fadeIn(1500)
+    $('.slide:first').appendTo('.slide_wrap')
+  }, 2500);
 
 })
