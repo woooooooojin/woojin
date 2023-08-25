@@ -51,8 +51,9 @@ aside{
 
 }
 .slide_wrap{
-    width: 100%;
+    width: 300%;
     height: 100%;
+    display: flex;
 
 }
 .slide{
