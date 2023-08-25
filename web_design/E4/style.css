@@ -44,6 +44,29 @@ aside{
     width: calc(100% - 600px);
     height: calc(100% - 120px);
 }
+.slide_cont{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+}
+.slide_wrap{
+    width: 100%;
+    height: 100%;
+
+}
+.slide{
+    width: 100%;
+    height: 100%;
+  
+}
+
+.slide img{
+    width: 100%;
+    height: 100%;
+}
+
+
 
 footer{
     width: 100%;
