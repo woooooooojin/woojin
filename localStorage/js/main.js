@@ -1,10 +1,14 @@
 const todoInput = document.getElementById('todo_input') // input
 const addBtn = document.querySelector('.add') //add btn
 const todoList = document.querySelector('.todo_list') // todo list
+const delAll = document.querySelector('.alldel')
 
+//event
 document.addEventListener('DOMContentLoaded', getLocal)
 
 addBtn.addEventListener('click', addToDo)
+todoList.addEventListener('click', toDoControl)
+delAll.addEventListener('click', allDelete)
 
 
 function addToDo(e) {
@@ -15,7 +19,7 @@ function addToDo(e) {
 
     const newTodo = document.createElement('li')
     newTodo.setAttribute('class', 'todo_desc')
-    newTodo.innerHTML = todoInput.value
+    newTodo.innerText = todoInput.value
    
     if (todoInput.value === '') {
         return [
@@ -33,13 +37,13 @@ function addToDo(e) {
     //완료버튼
     const compBtn = document.createElement('button')
     compBtn.setAttribute('class', 'complete')
-    compBtn.innerHTML = '완료'
+    compBtn.innerText = '완료'
     newDiv.appendChild(compBtn)
 
     //삭제버튼
     const delBtn = document.createElement('button')
     delBtn.setAttribute('class', 'delete')
-    delBtn.innerHTML = '삭제'
+    delBtn.innerText = '삭제'
     newDiv.appendChild(delBtn)
 
 
@@ -83,20 +87,20 @@ function getLocal() {
 
         const newTodo = document.createElement('li')
         newTodo.setAttribute('class', 'todo_desc')
-        newTodo.innerHTML = todo
+        newTodo.innerText = todo
 
         newDiv.appendChild(newTodo)
 
         //완료버튼
         const compBtn = document.createElement('button')
         compBtn.setAttribute('class', 'complete')
-        compBtn.innerHTML = '완료'
+        compBtn.innerText = '완료'
         newDiv.appendChild(compBtn)
 
         //삭제버튼
         const delBtn = document.createElement('button')
         delBtn.setAttribute('class', 'delete')
-        delBtn.innerHTML = '삭제'
+        delBtn.innerText = '삭제'
         newDiv.appendChild(delBtn)
 
 
@@ -106,3 +110,39 @@ function getLocal() {
     })
 
 } //저장된 키값을 가져오기
+
+
+
+function toDoControl(e){
+    const btnName = e.target.classList[0]
+    if(btnName === 'complete'){
+        const todo = e.target.parentElement // 클릭한것의 부모노드
+        todo.children[0].classList.toggle('done')
+    }else if(btnName === 'delete'){
+        const todo = e.target.parentElement
+        removeLocal(todo)
+        todo.remove()
+    }
+}
+
+function removeLocal(todo){
+    let todos;
+    if(localStorage.getItem('todos')===null){
+        todos = [];
+    }else{
+        todos = JSON.parse(localStorage.getItem('todos'))
+        
+    }
+
+    const index = todos.indexOf(todo.children[0].innerText)
+    todos.splice(index,1)
+    localStorage.setItem('todos',JSON.stringify(todos))
+
+}
+
+function allDelete(){
+   
+    window.localStorage.clear()
+    todoList.innerHTML = ''
+    
+}
