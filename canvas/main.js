@@ -16,8 +16,10 @@ const eraseBtn = document.getElementById('erase_btn')
 
 const canvas = document.querySelector('canvas')
 const ctx = canvas.getContext("2d")
-canvas.width = 800
-canvas.height = 800
+const cnavasWidth = 800
+const cavasHeight = 800
+canvas.width = cnavasWidth
+canvas.height = cavasHeight
 // ctx.lineWidth = lineWidth.value
 
 
@@ -90,13 +92,13 @@ function modeClick(){
 
 function canvasClick(e){
     if(isFilling){
-        ctx.fillRect(0,0,800,800)
+        ctx.fillRect(0,0,cnavasWidth,cavasHeight)
     }
 }//fill function
 
 function resetCanvas(){
     ctx.fillStyle = 'white'
-    ctx.fillRect(0,0,800,800)
+    ctx.fillRect(0,0,cnavasWidth,cavasHeight)
 }//reset funtcion
 
 function eraseClick(){
