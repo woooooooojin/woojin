@@ -3,8 +3,8 @@ const lineWidth = document.getElementById('line_width')
 const color = document.getElementById('color')
 
 //color options
-const colorOpt = Array.from(document.getElementsByClassName('color_opt'))
-// const colorOpt = document.querySelectorAll('color_opt')
+// const colorOpt = Array.from(document.getElementsByClassName('color_opt'))
+const colorOpt = document.querySelectorAll('.color_opt')
 
 //mode button
 const modeBtn = document.getElementById('mode_btn')
