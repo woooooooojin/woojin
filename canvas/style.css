@@ -11,3 +11,12 @@ canvas{
     margin: 0 auto;
     border: 2px solid #ccc;
 }
+
+.color_opt{
+    width: 50px;
+    height: 50px;
+}
+
+.color_wrap{
+    display: flex;
+}
