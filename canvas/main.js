@@ -20,8 +20,8 @@ const saveBtn = document.getElementById('save')
 
 const canvas = document.querySelector('canvas')
 const ctx = canvas.getContext("2d")
-const canvasWidth = 800
-const canvasHeight = 800
+const canvasWidth = 600
+const canvasHeight = 600
 canvas.width = canvasWidth
 canvas.height = canvasHeight
 ctx.lineCap='round'

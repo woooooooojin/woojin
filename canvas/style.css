@@ -3,20 +3,43 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-color: #fff;
+}
+.wrap{
+    display: flex;
+}
 
 canvas{
-    width: 800px;
-    height: 800px;
+    width: 600px;
+    height: 600px;
     display: block;
-    margin: 0 auto;
+    margin: 0px auto;
     border: 2px solid #ccc;
 }
 
 .color_opt{
     width: 50px;
     height: 50px;
+    border-radius: 50%;
+    transition: .5s;
 }
 
 .color_wrap{
     display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 20px;
+    margin-top: 30px;
+}
+.color_opt:hover{
+    transform: scale(1.2);
+}
+
+
+.left_box{
+    width: calc(50% - 300px);
+}
+.right_box{
+    width: calc(50% - 300px);
 }

@@ -10,30 +10,55 @@
 </head>
 
 <body>
+    <div class="wrap">
+        <div class="left_box">
+            <div class="color_wrap">
+                <div class="color_opt" style="background-color: #F8F0E5;" data-color="#F8F0E5"></div>
+                <div class="color_opt" style="background-color: #EADBC8;" data-color="#EADBC8"></div>
+                <div class="color_opt" style="background-color: #DFCCFB;" data-color="#DFCCFB"></div>
+                <div class="color_opt" style="background-color: #D0BFFF;" data-color="#D0BFFF"></div>
+                <div class="color_opt" style="background-color: #BEADFA;" data-color="#BEADFA"></div>
+                <div class="color_opt" style="background-color: #C4C1A4;" data-color="#C4C1A4"></div>
+                <div class="color_opt" style="background-color: #FDE5EC;" data-color="#FDE5EC"></div>
+                <div class="color_opt" style="background-color: #FBA1B7;" data-color="#FBA1B7"></div>
+                <div class="color_opt" style="background-color: #FFD1DA;" data-color="#FFD1DA"></div>
+            </div>
+        </div>
+        <!--left box-->
 
-    <canvas></canvas>
-    <input type="range" id="line_width" min="1" max="10" value="5">
-    <input type="color" id="color">
 
-    <div class="color_wrap">
-        <div class="color_opt" style="background-color: #F8F0E5;" data-color="#F8F0E5"></div>
-        <div class="color_opt" style="background-color: #EADBC8;" data-color="#EADBC8"></div>
-        <div class="color_opt" style="background-color: #DFCCFB;" data-color="#DFCCFB"></div>
-        <div class="color_opt" style="background-color: #D0BFFF;" data-color="#D0BFFF"></div>
-        <div class="color_opt" style="background-color: #BEADFA;" data-color="#BEADFA"></div>
-        <div class="color_opt" style="background-color: #C4C1A4;" data-color="#C4C1A4"></div>
-        <div class="color_opt" style="background-color: #FDE5EC;" data-color="#FDE5EC"></div>
-        <div class="color_opt" style="background-color: #FBA1B7;" data-color="#FBA1B7"></div>
-        <div class="color_opt" style="background-color: #FFD1DA;" data-color="#FFD1DA"></div>
+        <div class="middle_box">
+
+            <div class="middle_btn">
+                <input type="color" id="color">
+                <button id="save">저장하기</button>
+                <button id="reset_btn">Reset</button>
+            </div><!--middle btn-->
+
+
+            <canvas></canvas>
+
+        </div>
+        <!--middle box-->
+
+
+
+        <div class="right_box">
+            <input type="range" id="line_width" min="1" max="10" value="5">
+
+            <button id="mode_btn">채우기</button>
+            <button id="erase_btn">지우기</button>
+
+            <input type="file" accept="image/*" id="file">
+            <input type="text" placeholder="내용입력 후 더블클릭" id="text">
+        </div>
+        <!--right box-->
+
+
+
     </div>
+    <!--wrap-->
 
-    <button id="mode_btn">채우기</button>
-    <button id="reset_btn">Reset</button>
-    <button id="erase_btn">지우기</button>
-
-    <input type="file" accept="image/*" id="file">
-    <input type="text" placeholder="내용입력 후 더블클릭" id="text">
-    <button id="save">저장하기</button>
 </body>
 
 </html>
