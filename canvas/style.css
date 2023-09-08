@@ -1,45 +1,95 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    background-color: #fff;
+
+body {
+    background-color: aliceblue;
+
 }
-.wrap{
+
+.wrap {
     display: flex;
 }
 
-canvas{
+canvas {
     width: 600px;
     height: 600px;
     display: block;
     margin: 0px auto;
-    border: 2px solid #ccc;
+    border: 2px solid #91C8E4;
+    border-radius: 20px;
+    background-color: #fff;
 }
 
-.color_opt{
+.color_opt {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     transition: .5s;
+    margin-top: 15px;
 }
 
-.color_wrap{
+.color_wrap {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     margin-right: 20px;
-    margin-top: 30px;
+    margin-top: 90px;
 }
-.color_opt:hover{
+
+.color_opt:hover {
     transform: scale(1.2);
 }
 
 
-.left_box{
+.left_box {
     width: calc(50% - 300px);
 }
-.right_box{
+
+.right_box {
     width: calc(50% - 300px);
 }
+
+button {
+    border: 1px solid #91C8E4;
+    background-color: #91C8E4;
+    color: #fff;
+    border-radius: 10px;
+    display: block;
+}
+
+
+
+.middle_btn {
+    margin: 30px 0;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.colors {
+    width: 100px;
+    height: 50px;
+    border: none;
+}
+
+.save_btn {
+    width: 100px;
+    height: 50px;
+}
+
+.reset {
+    width: 100px;
+    height: 50px;
+}
+
+
+.right_box {}
+
+
+
+.m_btn {}
+
+.e_btn {}
